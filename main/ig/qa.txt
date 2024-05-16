@@ -1,0 +1,65 @@
+ExampleIG : Validation Results
+=========================================
+
+err = 17, warn = 18, info = 7
+IG Publisher Version: 1.6.7
+Generated Thu May 16 12:10:39 UTC 2024. FHIR version 4.0.1 for hl7.fhir.fr.example#0.1.0 (canonical = http://hl7.fr/fhir/fr/example)
+ Build Errors : 4 / 7 / 0
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.example : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Patient-frpatient-exemple : 0 / 0 / 1
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-patient : 1 / 0 / 2
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/input/examples/Binary-example : 3 / 0 / 1
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/input/examples/Library-example : 2 / 2 / 3
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/input/examples/Observation-example : 6 / 7 / 6
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/input/examples/Patient-example : 1 / 1 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Binary/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: package.tgz: Error converting pacakge to R4B: Error processing example/Binary-example.json: 
+ERROR: /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/output/Binary-example.change.history.html#/html/body/script at Line 208, column 4: The <script> containing the javascript 'try {       var curr'... is illegal and not allowed on the HL7 cibuild - put the script in a  .js file in a trusted template (also in 13 other files)
+ERROR: /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/output/Binary-example.change.history.html#/html/body/script at Line 231, column 4: The <script> containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - put the script in a  .js file in a trusted template (also in 43 other files)
+ERROR: /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/output/Binary-example.change.history.html#/html/body/script at Line 273, column 4: The <script> containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - put the script in a  .js file in a trusted template (also in 43 other files)
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.example.json ==
+WARNING: ImplementationGuide.jurisdiction: The resource should declare its jurisdiction to match the package id (hl7.fhir.fr.example, jurisdiction = urn:iso:std:iso:3166#FR instead of or as well as [null]) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#FR "null"')
+== fsh-generated/resources/Patient-frpatient-exemple.json ==
+== fsh-generated/resources/StructureDefinition-fr-patient.json ==
+INFORMATION: StructureDefinition/fr-patient: StructureDefinition.snapshot.element[30].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+ERROR: StructureDefinition.jurisdiction: The resource must declare its jurisdiction to match the package id (hl7.fhir.fr.example, jurisdiction = urn:iso:std:iso:3166#FR) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#FR "null"')
+== input/examples/Binary-example.json ==
+ERROR: Binary: Unable to find Adjunct Binary example.pdf
+ERROR: Binary/example: Binary: Binary.contentType: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Binary|4.0.1)
+ERROR: Binary/example: Binary.data: The value 'ig-loader-example.pdf' is not a valid Base64 value
+== input/examples/Library-example.json ==
+ERROR: Library.content{0]: Error Loading example.cql: Cannot invoke "org.hl7.fhir.r5.model.Attachment.getData()" because "a" is null
+INFORMATION: Library/example: Library.type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/library-type|4.0.1
+WARNING: Library/example: Library.subject.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'hl7.org/fhir/resource-types' could not be found, so the code cannot be validated
+ERROR: Library/example: Library.subject.ofType(CodeableConcept).coding[0].system: Coding.system must be an absolute reference, not a local reference
+WARNING: Library.jurisdiction: The resource should declare its jurisdiction to match the package id (hl7.fhir.fr.example, jurisdiction = urn:iso:std:iso:3166#FR) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#FR "null"')
+INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== input/examples/Observation-example.xml ==
+INFORMATION: Observation/example: Observation.code.coding[0].system: A definition for CodeSystem 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake' could not be found, so the code cannot be validated
+INFORMATION: Observation/example: Observation.code.coding[1]: A definition for CodeSystem 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake' could not be found, so the code cannot be validated
+INFORMATION: Observation/example: Observation.code.coding[2]: A definition for CodeSystem 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake' could not be found, so the code cannot be validated
+INFORMATION: Observation/example: Observation.code.coding[4]: A definition for CodeSystem 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake' could not be found, so the code cannot be validated
+WARNING: Observation/example: Observation: Best Practice Recommendation: In general, all observations should have a subject
+WARNING: Observation/example: Observation: Best Practice Recommendation: In general, all observations should have a performer
+WARNING: Observation/example: Observation: Best Practice Recommendation: In general, all observations should have an effective[x] ()
+ERROR: Observation/example: Observation: Observation.category: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/bp|4.0.1)
+ERROR: Observation/example: Observation: Slice 'Observation.category:VSCat': a matching slice is required, but not found (from http://hl7.org/fhir/StructureDefinition/bp|4.0.1). Note that other slices are allowed in addition to this required slice
+ERROR: Observation/example: Observation: Observation.subject: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/bp|4.0.1)
+ERROR: Observation/example: Observation: Observation.effective[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/bp|4.0.1)
+WARNING: Observation/example: Observation.code.coding[0]: A definition for CodeSystem 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake' could not be found, so the code cannot be validated
+WARNING: Observation/example: Observation.component[0].value.ofType(Quantity): Resolved system http://unitsofmeasure.org, but the definition is not complete, so assuming value set include is correct
+ERROR: Observation/example: Observation.component[0].value.ofType(Quantity): Observation.component:SystolicBP.value[x]:valueQuantity.unit: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/bp|4.0.1)
+WARNING: Observation/example: Observation.component[1].value.ofType(Quantity): Resolved system http://unitsofmeasure.org, but the definition is not complete, so assuming value set include is correct
+ERROR: Observation/example: Observation.component[1].value.ofType(Quantity): Observation.component:DiastolicBP.value[x]:valueQuantity.unit: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/bp|4.0.1)
+WARNING: Observation/example: Observation.meta.profile[0]: Profile reference 'http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+== input/examples/Patient-example.xml ==
+ERROR: Patient/example: Patient.extension[0]: The extension http://somewhere.org/fhir/uv/myig/StructureDefinition/ext-myExtension could not be found so is not allowed here
+WARNING: Patient/example: Patient.meta.profile[0]: Profile reference 'http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
