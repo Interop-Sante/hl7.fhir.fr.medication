@@ -1,0 +1,30 @@
+@startuml
+set namespaceSeparator ?
+hide circle
+hide class fields
+
+package IG #DDDDDD{
+
+     package Profiles #DDDDDD{
+
+        class FrPatient{
+
+             Patient.identifier => [None..None]
+         }
+
+     }
+     package extension #paleturquoise {
+
+
+         }
+     }
+     package valueset #PaleVioletRed{
+       }
+
+package "Ressources de base" #palegreen {
+
+ class "Patient" as  class01122a97dca927210827560cb7d76af8 
+
+    class01122a97dca927210827560cb7d76af8 --> FrPatient
+}
+@enduml
