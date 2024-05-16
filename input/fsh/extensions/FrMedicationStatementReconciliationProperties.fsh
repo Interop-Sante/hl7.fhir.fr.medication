@@ -1,9 +1,10 @@
 Extension: FrMedicationStatementReconciliationProperties
 Id: FrMedicationStatementReconciliationProperties
 Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)"
-* ^purpose = "Propiétés spécifiques de la ligne de médicament ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)"
+
 * ^context.type = #element
 * ^context.expression = "MedicationStatement"
+
 * . 1..1
 * . ^short = "Propriétés de conciliation d'une ligne de traitement médicamenteux"
 * . ^definition = "Propriétés de conciliation d'une ligne de traitement médicamenteux dans une Fiche de Conciliation des Traitements médicamenteux (FCT)"
@@ -91,7 +92,8 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[isDiscrepant].extension ^slicing.discriminator.path = "url"
 * extension[isDiscrepant].extension ^slicing.rules = #open
 
-* extension[isDiscrepant].extension[value].extension contains
+
+* extension[isDiscrepant].extension contains
     value 1..*
 
 * extension[isDiscrepant].extension[value] ^short = "valeur booléenne de la propriété *isDiscrepant*"
@@ -268,17 +270,24 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[type].extension ^slicing.discriminator.type = #value
 * extension[type].extension ^slicing.discriminator.path = "url"
 * extension[type].extension ^slicing.rules = #open
+
+* extension[type].extension contains
+    value 1..*
+
 * extension[type].extension[value] ^short = "valeur codée de la propriété *type*"
 * extension[type].extension[value] ^definition = "valeur codée (coding) de la propriété *type* de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, avec ses propriétés d'édition *edStatut*\\, *date*\\, *author*\\(s)."
 * extension[type].extension[value] ^comment = "Cardinalité [1..\\*] car la valeur de la propriété *status* peut évoluer et ses propriétés d'édition *edStatus* et *author* à *date* donnée aussi."
 * extension[type].extension[value] ^requirements = "Qualifier le type d'écart/erreur sur la ligne de traitement la Fiche de Conciliation des Traitements médicamenteux par une valeur codée tirée d'un jeu de valeurs contraint."
+
 * extension[type].extension[value].extension ^slicing.discriminator.type = #value
 * extension[type].extension[value].extension ^slicing.discriminator.path = "url"
 * extension[type].extension[value].extension ^slicing.rules = #open
 * extension[type].extension[value].extension contains
     code 1..1 and
     date 0..1 and
-    edStatus 0..1
+    edStatus 0..1 and
+    author 0..*
+
 * extension[type].extension[value].extension[code] ^short = "valeur codée de la propriété *type*"
 * extension[type].extension[value].extension[code] ^definition = "valeur codée (coding) de la propriété *type* de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux avec ses propriétés d'édition edStatut, date, author(s)."
 * extension[type].extension[value].extension[code] ^comment = "La valeur codée de la propriété *type* de la ligne de traitement la Fiche de Conciliation des Traitements médicamenteux est obligatoire."
@@ -294,6 +303,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[type].extension[value].extension[date] ^meaningWhenMissing = "date de la fiche de Conciliation, propriété *date* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche (composition editing time)"
 * extension[type].extension[value].extension[date].value[x] 1..
 * extension[type].extension[value].extension[date].value[x] only dateTime
+
 * extension[type].extension[value].extension[edStatus] ^short = "statut éditorial (codé) de la propriété *type*"
 * extension[type].extension[value].extension[edStatus] ^definition = "statut éditorial (code) de l'information portée par l'élément *type* de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, à la date d'édition *date* définie par son ou ses auteurs *author* dans son cycle d'édition"
 * extension[type].extension[value].extension[edStatus] ^comment = "Facultatif si ce niveau de finesse n'est pas requis. Par défaut, pas de gestion du statut éditorial de la valeur de la propriété *type* de la ligne de médicament dans la Fiche de Conciliation des Traitements médicamenteux."
@@ -302,7 +312,8 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[type].extension[value].extension[edStatus].value[x] 1..
 * extension[type].extension[value].extension[edStatus].value[x] only code
 * extension[type].extension[value].extension[edStatus].value[x] from FrEditorialStatus (required)
-* extension[type].extension[value].extension[edStatus].value[x] ^binding.description = "fr-editorial-status"
+
+
 * extension[type].extension[value].extension[author] ^short = "auteur(s) de la propriété *type*"
 * extension[type].extension[value].extension[author] ^definition = "auteur(s) de l'information portée par l'élément *type* de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *edStatus* et à la date d'édition *date* définis par son ou ses auteurs dans son cycle d'édition."
 * extension[type].extension[value].extension[author] ^comment = "Facultatif si ce niveau de finesse n'est pas requis. Par défaut, les auteurs de la Fiche de Conciliation des Traitements médicamenteux, cf. ressource Composition.author"
@@ -317,9 +328,16 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[outcome] ^short = "gravité estimée de la divergence identifiée sur la ligne de traitement"
 * extension[outcome] ^definition = "gravité estimée de la divergence, intitulé « Gravité de l’erreur » dans [le guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante) : { mineure ; significative ; majeure ; critique ; catastrophique }"
 * extension[outcome] ^comment = "Cette propriété pourrait ne pas être limitée aux seules DNI (divergences non-intensionnelles)"
+
 * extension[outcome].extension ^slicing.discriminator.type = #value
 * extension[outcome].extension ^slicing.discriminator.path = "url"
 * extension[outcome].extension ^slicing.rules = #open
+
+* extension[outcome].extension contains
+    value 1..*
+
+
+
 * extension[outcome].extension[value] ^short = "valeur codée de la propriété *outcome*"
 * extension[outcome].extension[value] ^definition = "valeur codée (coding) de la propriété *outcome* de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, avec ses propriétés d'édition *edStatut*\\, *date*\\, *author*\\(s)."
 * extension[outcome].extension[value] ^comment = "Cardinalité [1..\\*] car la valeur de la propriété *status* peut évoluer et ses propriétés d'édition *edStatus* et *author* à *date* donnée aussi."
@@ -330,7 +348,9 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[outcome].extension[value].extension contains
     code 1..1 and
     date 0..1 and
-    edStatus 0..1
+    edStatus 0..1 and
+    author 0..*
+
 * extension[outcome].extension[value].extension[code] ^short = "valeur codée de la propriété *outcome*"
 * extension[outcome].extension[value].extension[code] ^definition = "valeur codée (coding) de la propriété *outcome* de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux avec ses propriétés d'édition edStatut, date, author(s)."
 * extension[outcome].extension[value].extension[code] ^comment = "La valeur codée de la propriété *outcome* de la ligne de traitement la Fiche de Conciliation des Traitements médicamenteux est obligatoire."
@@ -355,6 +375,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[outcome].extension[value].extension[edStatus].value[x] only code
 * extension[outcome].extension[value].extension[edStatus].value[x] from FrEditorialStatus (required)
 * extension[outcome].extension[value].extension[edStatus].value[x] ^binding.description = "fr-editorial-status"
+
 * extension[outcome].extension[value].extension[author] ^short = "auteur(s) de la propriété *outcome*"
 * extension[outcome].extension[value].extension[author] ^definition = "auteur(s) de l'information portée par l'élément *outcome* de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *edStatus* et à la date d'édition *date* définis par son ou ses auteurs dans son cycle d'édition."
 * extension[outcome].extension[value].extension[author] ^comment = "Facultatif si ce niveau de finesse n'est pas requis. Par défaut, les auteurs de la Fiche de Conciliation des Traitements médicamenteux, cf. ressource Composition.author"
@@ -373,6 +394,10 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[resolution].extension ^slicing.discriminator.path = "url"
 * extension[resolution].extension ^slicing.rules = #open
 
+* extension[resolution].extension contains
+    value 1..*
+
+
 * extension[resolution].extension[value] ^short = "valeur codée de la propriété *resolution*"
 * extension[resolution].extension[value] ^definition = "valeur codée (coding) de la propriété *resolution* de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, avec ses propriétés d'édition (statut, date, auteur(s))."
 * extension[resolution].extension[value] ^comment = "Cardinalité [1..\\*] car la valeur de la propriété *status* peut évoluer et ses propriétés d'édition *edStatus* et *author* à *date* donnée aussi."
@@ -380,10 +405,13 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[resolution].extension[value].extension ^slicing.discriminator.type = #value
 * extension[resolution].extension[value].extension ^slicing.discriminator.path = "url"
 * extension[resolution].extension[value].extension ^slicing.rules = #open
+
 * extension[resolution].extension[value].extension contains
     code 1..1 and
     date 0..1 and
-    edStatus 0..1
+    edStatus 0..1 and
+    author 0..*
+
 * extension[resolution].extension[value].extension[code] ^short = "valeur codée de la propriété *resolution*"
 * extension[resolution].extension[value].extension[code] ^definition = "valeur codée (coding) de la propriété *resolution* de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux avec ses propriétés d'édition *edStatut*\\, *date*\\, *author*\\(s)."
 * extension[resolution].extension[value].extension[code] ^comment = "La valeur codée de la propriété *resolution* de la ligne de traitement la Fiche de Conciliation des Traitements médicamenteux est obligatoire."

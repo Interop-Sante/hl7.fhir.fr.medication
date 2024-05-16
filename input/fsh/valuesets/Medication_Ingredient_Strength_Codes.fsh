@@ -1,8 +1,7 @@
-ValueSet: Medication_Ingredient_Strength_Codes
+ValueSet: MedicationIngredientStrengthCodes
 Id: medication-ingredient-strength-codes
 Description: "Medication Ingredient Strength Codes"
-* ^name = "Medication Ingredient Strength Codes"
-* ^meta.lastUpdated = "2021-04-15T12:25:09.461+10:00"
+
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #phx

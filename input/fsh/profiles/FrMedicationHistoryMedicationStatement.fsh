@@ -3,20 +3,15 @@ Parent: MedicationStatement
 Id: FrMedicationHistoryMedicationStatement
 Description: """Profil de la ressource *MedicationStatement* du Bilan médicamenteux.
 Medication History MedicationStatement resource profile"""
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationHistoryMedicationStatement"
-* ^version = "0.2.0"
-* ^status = #draft
-* ^date = "2021-06-24"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
+
 * ^purpose = "Ce profil est utilisé pour les ressources MedicationStatement figurant dans un bilan médicamenteux. Chaque ressource MeciationStatement y représente une ligne de médicament du Bilan."
-* ^copyright = "InterOp'Santé 2021"
+
+
 * . MS
 * . ^short = "Ligne de traitement médicamenteux du Bilan Médicamenteux"
 * . ^definition = "Ligne de traitement médicamenteux du Bilan Médicamenteux, avec son *sourcing* (liste des sources concordantes attanchées à cette ligne)."
 * . ^comment = "Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\r1. MedicationStatement.status + MedicationStatement.wasNotTaken\r2. Status=Active + NotTaken=T = Not currently taking\r3. Status=Completed + NotTaken=T = Not taken in the past\r4. Status=Intended + NotTaken=T = No intention of taking\r5. Status=Active + NotTaken=F = Taking, but not as prescribed\r6. Status=Active + NotTaken=F = Taking\r7. Status=Intended +NotTaken= F = Will be taking (not started)\r8. Status=Completed + NotTaken=F = Taken in past\r9. Status=In Error + NotTaken=N/A = In Error."
-* meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrMedicationHistoryMedicationStatement" (exactly)
+
 * meta.tag ..0
 * meta.tag ^requirements = "applications are not required to consider the tags when interpreting the meaning of a resource"
 * implicitRules ..0
@@ -25,10 +20,13 @@ Medication History MedicationStatement resource profile"""
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains $FrMedicationHistorySources named statementSourcing 0..* MS
+
+* extension contains fr-medication-history-sources named statementSourcing 0..* MS
+
 * extension[statementSourcing] ^short = "Sourcing de la ligne de traitement"
 * extension[statementSourcing] ^definition = "Sourcing de la ligne de traitement du Bilan Médicamenteux : nombre de sources ET liste des sources"
 * extension[statementSourcing] ^comment = "Nombre de sources concordantes pour cette ligne de traitement (quel que soit leur nombre), supérieur à zéro ET la liste de ces sources, au moins une."
+
 * status MS
 * medication[x] only Reference(FrMedication)
 * medication[x] MS

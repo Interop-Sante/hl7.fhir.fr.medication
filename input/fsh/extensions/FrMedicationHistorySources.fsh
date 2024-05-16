@@ -1,5 +1,5 @@
 Extension: FrMedicationHistorySources
-Id: FrMedicationHistorySources
+Id: fr-medication-history-sources
 Description: "Sources des lignes du Bilan Médicamenteux que représente la ressource *Composition* ou de chacune de ses lignes que représente la ressource *MedicationStatement* référencée par l'élément *entry* de la ressource *Composition* (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)"
 
 * ^purpose = "propriétés du sourcing de la ressource MedicationStatement définies selon les règles de gestion du Bilan Médicamenteux"

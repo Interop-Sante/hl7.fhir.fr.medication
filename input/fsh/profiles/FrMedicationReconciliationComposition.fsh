@@ -2,13 +2,6 @@ Profile: FrMedicationReconciliationComposition
 Parent: Composition
 Id: FrMedicationReconciliationComposition
 Description: "Profil de la ressource *Composition* la Fiche de Conciliation des Traitements médicamenteux (FCT)."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationReconciliationComposition"
-* ^version = "0.2.0"
-* ^status = #draft
-* ^date = "2021-06-24"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT)*\\."
 * ^copyright = "InterOp'Santé 2021"
 * . MS
@@ -20,9 +13,9 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * status MS
 * status ^comment = "1. Une FCT ne peut être au statut final que si elle est complète, à la fois du point de vue de la documentation des lignes de traitement médicamenteux conciliées (cf. les propriétés de conciliation de chacune de ses lignes de traitement) et du point de vue des auteurs qui assument ces contenus (cf. élément <*author*\\> de cette *Composition*\\).\r\n2. Une FCT peut être produite en plusieurs étapes pouvant mettre à disposition des versions intermédiaires, préliminaires, précédant la version finale. Cet élément <*status*\\> de la *Composition* permet alors de rendre compte de ces contenus intermédiaires  préliminaires.\r\n3. Le projet d'établissement et ses choix d'intégration inter applications peut légitimement se limiter à ne partager que la FCT à l'état final, les éventuelles versions intermédiaires préliminaires ne sortant pas du module qui en a la charge."
 * type MS
-* type from http://interopsante.org/fhir/ValueSet/fr-medication-reconciliation-document-type (extensible)
+* type from fr-medication-reconciliation-document-type (extensible)
 * subject 1..
-* subject only Reference(http://interopsante.org/fhir/StructureDefinition/FrPatient)
+* subject only Reference($FrCorePatient)
 * subject MS
 * subject ^short = "Le patient"
 * subject ^definition = "Le patient auquel se rapporte ce document FCT (Fiche de Conciliation des Traitements médicamenteux)."
@@ -38,7 +31,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * author ^meaningWhenMissing = "Au moins un auteur obligatoire."
 * author.type = "PractitionerRole"
 * attester.party 1..
-* attester.party only Reference(http://interopsante.org/fhir/StructureDefinition/FrPractitionerRoleProfession)
+* attester.party only Reference($FrCorePractitionerRoleProfession)
 * attester.party.reference 1..
 * attester.party.type = "Practitioner"
 * attester.party.identifier ..0
@@ -49,7 +42,9 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section ^comment = "3 sections, prédéfinies et ces 3 sections seulement"
 * section ^requirements = "Structure de la FCT française conforme au du [guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante)."
 * section ^meaningWhenMissing = "Les 3 sections prédéfinies sont obligatoires"
-* section contains MedicationHistory 1..1 MS
+
+* section contains MedicationHistory 1..1 MS and CurrentMedication 1..1 MS and Reconciliation 1..1 MS
+
 * section[MedicationHistory] ^short = "Bilan Médicamenteux"
 * section[MedicationHistory] ^definition = "Le Bilan Médicamenteux auquel se réfère la FCT (Fiche de Conciliation des Traitements médicamenteux)."
 * section[MedicationHistory] ^comment = "Une FCT (Fiche de Conciliation des Traitements médicamenteux) doit se référer à un Bilan Médicamenteux. Cette section n'a qu'une seule <*entry*\\> qui référence une ressource *Composition* profilée *fr-medication-history-Composition* portant le Bilan Médicamenteux attaché à la FCT."
@@ -57,7 +52,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[MedicationHistory] ^meaningWhenMissing = "Bilan Médicamenteux obligatoire."
 * section[MedicationHistory].title 1..
 * section[MedicationHistory].title = "Bilan Médicamenteux" 
-* section[MedicationHistory].code = "http://loinc.org"#10160-0
+* section[MedicationHistory].code = http://loinc.org#10160-0
 * section[MedicationHistory].author ..0 MS
 * section[MedicationHistory].author ^comment = "L'auteur du Bilan Médicamenteux est celui du Bilan référencé par l'élément <*entry*\\>.\r\nL'auteur de l'inclusion de ce bilan dans la fiche de conciliation est celui de la *Composition*\\."
 * section[MedicationHistory].author ^requirements = "L'auteur du Bilan Médicamenteux est celui du Bilan référencé par l'élément <*entry*\\>.\r\nL'auteur de l'inclusion de ce bilan dans cette fiche de conciliation est celui de la *Composition*\\."
@@ -72,12 +67,13 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[MedicationHistory].mode ^requirements = "Contraindre une gestion univoque de cette liste représentant le Bilan Médicamenteux."
 * section[MedicationHistory].orderedBy ^comment = "Non concerné car il n'y a qu'une seule <*entry*\\> dans cette <*section*\\>. L'ordre des lignes du Bilan Médicamenteux attaché, sera porté par l'élément  *orderedBy* de la seule <*section*\\> de la *Composition* référencée."
 * section[MedicationHistory].entry 1..1 MS 
-* section[MedicationHistory].entry only FrMedicationHistoryComposition
+* section[MedicationHistory].entry only Reference(FrMedicationHistoryComposition)
 * section[MedicationHistory].entry ^short = "La référence à la ressource *Composition* du Bilan Médicamenteux. Ce Bilan peut être vide si le patient ne prend pas de médicament en dehors de l'hospitalisation au titre de laquelle la Conciliation est réalisée."
 * section[MedicationHistory].entry ^comment = "Un Bilan Médicamenteux, même vide si la patient ne prenait pas de médicament avant son hospitalisation, doit être attaché à la FCT (Fiche de Concimaition des Traitements médicamenteux)."
 * section[MedicationHistory].section ..0 MS
 * section[MedicationHistory].section ^requirements = "pas de sous-section dans le bilan médicamenteux (toutes les lignes de traitement sont au même niveau)"
-* section contains CurrentMedication 1..1 MS
+
+
 * section[CurrentMedication] ^short = "Traitement Médicamenteux Courant"
 * section[CurrentMedication] ^definition = "La liste des traitements médicamenteux courants du patient hospitalisé, confrontée au Bilan Médicamenteux et qui l'objet de la conciliation des traitements."
 * section[CurrentMedication] ^comment = "Formellement, cette liste peut être vide."
@@ -98,12 +94,12 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[CurrentMedication].mode ^requirements = "Contraindre une gestion univoque de cette liste représentant le Traitement Médicamenteux Courant."
 * section[CurrentMedication].orderedBy ^comment = "Non concerné car il n'y a qu'une seule <*entry*\\> dans cette <*section*\\>. L'ordre des lignes du Traitement Médicamenteux Courant attaché, sera porté par l'élément  *orderedBy* de la seule <*section*\\> de la *Composition* référencée."
 * section[CurrentMedication].entry 1..1 MS 
-* section[CurrentMedication].entry only FrCurrentMedicationComposition
+* section[CurrentMedication].entry only Reference(FrCurrentMedicationComposition)
 * section[CurrentMedication].entry ^short = "La référence à la ressource *Composition* du Traitement Médicamenteux Courant. Ce Traitement peut, formellement, être vide si le patient ne prend pas de médicament lors de son hospitalisation."
 * section[CurrentMedication].entry ^comment = "Un Traitement Médicamenteux Courant, même vide si la patient ne prend aucun médicament lors de son hospitalisation, doit être attaché à la FCT (Fiche de Concimaition des Traitements médicamenteux)."
 * section[CurrentMedication].section ..0 MS
 * section[CurrentMedication].section ^requirements = "pas de sous-section dans le traitement médicamenteux courant (toutes les lignes de traitement sont au même niveau)"
-* section contains Reconciliation 1..1 MS
+
 * section[Reconciliation] ^short = "Conciliation proprement dite"
 * section[Reconciliation] ^definition = "Conciliation proprement dite : synthèse des médicaments du Bilan Médicamenteux et du Traitement médicamenteux courant avec documentation des écarts"
 * section[Reconciliation] ^requirements = "décrire la conciliation proprement dite, à ses différentes étapes de réalisation"
@@ -130,7 +126,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[Reconciliation].entry ^requirements = "Décrire chaque ligne de traitement médicamenteux à concilier, avec ses propriétés de conciliation"
 * section[Reconciliation].entry ^meaningWhenMissing = "Pas de médicament dans le Bilan Médicaenteux ET pas de médicament prescrit à l'admission : TRES PEU PROBABLE"
 
-* section[Reconciliation].entry.resource only FrMedicationReconciliationMedicationStatement 
+* section[Reconciliation].entry only Reference(FrMedicationReconciliationMedicationStatement)
 
 * section[Reconciliation].section ..0 MS
 * section[Reconciliation].section ^requirements = "pas de sous-section dans la fiche de conciliation (toutes les lignes de traitement conciliées sont au même niveau)"
