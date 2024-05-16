@@ -1,0 +1,142 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/MedicationRequest/14640> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "14640"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"14640\"> </a><a name=\"hc14640\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceMedicationRequest &quot;14640&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-FrInpatientMedicationRequest.html\">French Inpatient MedicationRequest</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: <a name=\"hcmed-201\"> </a></p><blockquote><p/><p><a name=\"med-201\"> </a></p><p><a name=\"hcmed-201\"> </a></p><p><b>code</b>: PARACETAMOL <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#777067000 &quot;médicament contenant seulement paracétamol&quot;)</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style=\"display: none\">*</td><td>PARACETAMOL <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#387517004 &quot;paracétamol&quot;)</span></td><td>true</td></tr></table></blockquote><p><b>subject</b>: <a href=\"Patient/phast-14602\">Patient/phast-14602</a></p><p><b>authoredOn</b>: 2021-08-12 11:59:40+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>additionalInstruction</b>: Délais minimum entre 2 prises : 4h <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><p><b>timing</b>: Starting 2021-08-12 11:59:00+0000 , Once, Until 2021-08-17 11:58:59+0000 </p><p><b>asNeeded</b>: Si douleurs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#22253000 &quot;douleur&quot;)</span></p><p><b>route</b>: Voie orale <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#26643006)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote><p><b>maxDosePerPeriod</b>: 3 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code g = 'g')</span>/24 h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code h = 'h')</span></p><p><b>maxDosePerAdministration</b>: 1 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code g = 'g')</span></p></blockquote><hr/><blockquote><p><b>Generated Narrative: Medication #med-201</b><a name=\"med-201\"> </a><a name=\"hcmed-201\"> </a></p><p><b>code</b>: PARACETAMOL <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#777067000 &quot;médicament contenant seulement paracétamol&quot;)</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style=\"display: none\">*</td><td>PARACETAMOL <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#387517004 &quot;paracétamol&quot;)</span></td><td>true</td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-201" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:777067000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777067000" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement paracétamol" ]
+       ] ) ;
+       fhir:text [ fhir:v "PARACETAMOL" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:387517004 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "387517004" ] ;
+           fhir:display [ fhir:v "paracétamol" ]
+         ] ) ;
+         fhir:text [ fhir:v "PARACETAMOL" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:reference [ fhir:v "#med-201" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Patient/phast-14602> ;
+     fhir:reference [ fhir:v "Patient/phast-14602" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2021-08-12T11:59:40.552Z"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Practitioner/smart-Practitioner-71482713> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v "1"^^xsd:integer ] ;
+     fhir:additionalInstruction ( [
+       fhir:text [ fhir:v "Délais minimum entre 2 prises : 4h" ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2021-08-12T11:59:00Z"^^xsd:dateTime ] ;
+           fhir:end [ fhir:v "2021-08-17T11:58:59Z"^^xsd:dateTime ]
+         ]
+       ]
+     ] ;
+     fhir:asNeeded [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:22253000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "22253000" ] ;
+         fhir:display [ fhir:v "douleur" ]
+       ] ) ;
+       fhir:text [ fhir:v "Si douleurs" ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ] ;
+         fhir:display [ fhir:v "Voie orale" ]
+       ] ) ;
+       fhir:text [ fhir:v "Voie orale" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ordered" ] ;
+           fhir:display [ fhir:v "Ordered" ]
+         ] ) ;
+         fhir:text [ fhir:v "Ordered" ]
+       ] ;
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] ) ;
+     fhir:maxDosePerPeriod [
+       fhir:numerator [
+         fhir:value [ fhir:v "3"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "g" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "g" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "24"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "h" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "h" ]
+       ]
+     ] ;
+     fhir:maxDosePerAdministration [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "g" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "g" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

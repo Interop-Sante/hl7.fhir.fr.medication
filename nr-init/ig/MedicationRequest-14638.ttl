@@ -1,0 +1,289 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/MedicationRequest/14638> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "14638"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"14638\"> </a><a name=\"hc14638\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceMedicationRequest &quot;14638&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-FrInpatientMedicationRequest.html\">French Inpatient MedicationRequest</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: <a name=\"hcmed-1\"> </a></p><blockquote><p/><p><a name=\"med-1\"> </a></p><p><a name=\"hcmed-1\"> </a></p><p><b>code</b>: G5 1L + NaCl 3g + KCl 2g <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: #med-2</p><p><b>isActive</b>: true</p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: #med-3</p><p><b>isActive</b>: true</p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: #med-4</p><p><b>isActive</b>: true</p></blockquote></blockquote><p><b>subject</b>: <a href=\"Patient/phast-14602\">Patient/phast-14602</a></p><p><b>authoredOn</b>: 2021-08-02 15:26:27+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Starting 2021-07-02 15:26:00+0000 , Once, Until 2021-07-07 15:25:59+0000 </p><p><b>route</b>: Voie intraveineuse <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#47625008)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><hr/><blockquote><p><b>Generated Narrative: Medication #med-2</b><a name=\"med-2\"> </a><a name=\"hcmed-2\"> </a></p><p><b>code</b>: GLUCOSE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#776119003 &quot;médicament contenant seulement glucose&quot;)</span></p><p><b>form</b>: solution pour perfusion <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#385229008)</span></p><p><b>amount</b>: 1 L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code L = 'L')</span>/1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code 1 = '1')</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td>GLUCOSE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#67079006 &quot;glucose&quot;)</span></td><td>true</td><td>50 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mg = 'mg')</span>/ mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></td></tr></table></blockquote><hr/><blockquote><p><b>Generated Narrative: Medication #med-3</b><a name=\"med-3\"> </a><a name=\"hcmed-3\"> </a></p><p><b>code</b>: SODIUM CHLORURE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#777553004 &quot;médicament contenant seulement clhorure de sodium&quot;)</span></p><p><b>form</b>: solution injectable <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#385219001)</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td>SODIUM CHLORURE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#387390002 &quot;chlorure de sodium&quot;)</span></td><td>true</td><td>3 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code g = 'g')</span>/1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code 1 = '1')</span></td></tr></table></blockquote><hr/><blockquote><p><b>Generated Narrative: Medication #med-4</b><a name=\"med-4\"> </a><a name=\"hcmed-4\"> </a></p><p><b>code</b>: POTASSIUM CHLORURE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#777274002 &quot;médicament contenant seulement chlorure de potassium&quot;)</span></p><p><b>form</b>: solution injectable <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#385219001)</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td>POTASSIUM CHLORURE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOWMED CT</a>#8631001 &quot;chlorure de potassium&quot;)</span></td><td>true</td><td>2 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code g = 'g')</span>/1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code 1 = '1')</span></td></tr></table></blockquote><hr/><blockquote><p><b>Generated Narrative: Medication #med-1</b><a name=\"med-1\"> </a><a name=\"hcmed-1\"> </a></p><p><b>code</b>: G5 1L + NaCl 3g + KCl 2g <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: #med-2</p><p><b>isActive</b>: true</p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: #med-3</p><p><b>isActive</b>: true</p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: #med-4</p><p><b>isActive</b>: true</p></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-2" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:776119003 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "776119003" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement glucose" ]
+       ] ) ;
+       fhir:text [ fhir:v "GLUCOSE" ]
+     ] ;
+     fhir:form [
+       fhir:coding ( [
+         a sct:385229008 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "385229008" ] ;
+         fhir:display [ fhir:v "solution pour perfusion" ]
+       ] ) ;
+       fhir:text [ fhir:v "solution pour perfusion" ]
+     ] ;
+     fhir:amount [
+       fhir:numerator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "L" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "L" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ]
+       ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:67079006 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "67079006" ] ;
+           fhir:display [ fhir:v "glucose" ]
+         ] ) ;
+         fhir:text [ fhir:v "GLUCOSE" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:strength [
+         fhir:numerator [
+           fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mg" ]
+         ] ;
+         fhir:denominator [
+           fhir:unit [ fhir:v "mL" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mL" ]
+         ]
+       ]
+     ] )
+  ] [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-3" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:777553004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777553004" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement clhorure de sodium" ]
+       ] ) ;
+       fhir:text [ fhir:v "SODIUM CHLORURE" ]
+     ] ;
+     fhir:form [
+       fhir:coding ( [
+         a sct:385219001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "385219001" ] ;
+         fhir:display [ fhir:v "solution injectable" ]
+       ] ) ;
+       fhir:text [ fhir:v "solution injectable" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:387390002 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "387390002" ] ;
+           fhir:display [ fhir:v "chlorure de sodium" ]
+         ] ) ;
+         fhir:text [ fhir:v "SODIUM CHLORURE" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:strength [
+         fhir:numerator [
+           fhir:value [ fhir:v "3"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "g" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "g" ]
+         ] ;
+         fhir:denominator [
+           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ]
+         ]
+       ]
+     ] )
+  ] [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-4" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:777274002 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777274002" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement chlorure de potassium" ]
+       ] ) ;
+       fhir:text [ fhir:v "POTASSIUM CHLORURE" ]
+     ] ;
+     fhir:form [
+       fhir:coding ( [
+         a sct:385219001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "385219001" ] ;
+         fhir:display [ fhir:v "solution injectable" ]
+       ] ) ;
+       fhir:text [ fhir:v "solution injectable" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:8631001 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "8631001" ] ;
+           fhir:display [ fhir:v "chlorure de potassium" ]
+         ] ) ;
+         fhir:text [ fhir:v "POTASSIUM CHLORURE" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:strength [
+         fhir:numerator [
+           fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "g" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "g" ]
+         ] ;
+         fhir:denominator [
+           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ]
+         ]
+       ]
+     ] )
+  ] [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-1" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrMedicationCompound"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrMedicationCompound>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:text [ fhir:v "G5 1L + NaCl 3g + KCl 2g" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#med-2" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:item [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#med-3" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:item [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#med-4" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:reference [ fhir:v "#med-1" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Patient/phast-14602> ;
+     fhir:reference [ fhir:v "Patient/phast-14602" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2021-08-02T15:26:27.603Z"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Practitioner/smart-Practitioner-71482713> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v "1"^^xsd:integer ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2021-07-02T15:26:00Z"^^xsd:dateTime ] ;
+           fhir:end [ fhir:v "2021-07-07T15:25:59Z"^^xsd:dateTime ]
+         ] ;
+         fhir:timeOfDay ( [ fhir:v "10:00:00"^^xsd:time ] [ fhir:v "22:00:00"^^xsd:time ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:47625008 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "47625008" ] ;
+         fhir:display [ fhir:v "Voie intraveineuse" ]
+       ] ) ;
+       fhir:text [ fhir:v "Voie intraveineuse" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ordered" ] ;
+           fhir:display [ fhir:v "Ordered" ]
+         ] ) ;
+         fhir:text [ fhir:v "Ordered" ]
+       ] ;
+       fhir:rate [
+         a fhir:Ratio ;
+         fhir:numerator [
+           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ]
+         ] ;
+         fhir:denominator [
+           fhir:value [ fhir:v "12"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "h" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "h" ]
+         ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
