@@ -1,0 +1,50 @@
+Profile: FrMedication2unique
+Parent: Medication
+Id: FrMedication2unique
+Description: "ressource Medication unique regroupant les 4 profils en 1 (ucd, ucd-part, non-proprietary-name et compound)"
+* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedication2unique"
+* ^version = "0.1.0"
+* ^status = #draft
+* ^experimental = true
+* ^date = "2021-12-09"
+* obeys frmed-med-1
+
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "coding.system"
+* code.coding ^slicing.description = "3 slices: 1. for branded medication ; 2. for non-proprietary named medication ; 3.  for compound medication. Induces 2 constrains on ingredient element: 1. for non-compound medication, ingredient element SHALL be a substance ; for compound medication, ingredient element SHALL be a branded or non-proprietary named medication."
+* code.coding ^slicing.rules = #open
+* code.coding contains
+    ucdCode 0..1 MS and
+    snomedMedicinalProductCode 0..1 MS and
+    otherMedicationCode 0..1 MS
+
+* code.coding[ucdCode] from $SIPh-CIO_UCD (required)
+* code.coding[ucdCode] ^short = "Codes that identify this branded medication"
+* code.coding[ucdCode] ^definition = "Codes that identify this branded medication"
+* code.coding[ucdCode] ^binding.description = "UCD code"
+* code.coding[ucdCode].system = "^http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD$"
+* code.coding[ucdCode].system ^short = "UCD codeSystem"
+* code.coding[ucdCode].system ^definition = "The UCD code system (under the responsibility of the Club Inter Pharmaceutique (CIP)"
+* code.coding[ucdCode].system ^comment = "In the absence of a uri defined by the Club Interpharceutique or the competent government authorities, the uri defined by PHAST is used."
+* code.coding[ucdCode].system ^requirements = "The code system SHALL be the UCD code system"
+* code.coding[ucdCode].code ^binding.description = "code UCD valide"
+
+
+* code.coding[snomedMedicinalProductCode] from FrMedicinalProductOnly (required)
+* code.coding[snomedMedicinalProductCode].system = "^http:\\/\\/snomed\\.info\\/sct$"
+* code.coding[snomedMedicinalProductCode].system ^short = "SNOMED CT codeSystem"
+* code.coding[snomedMedicinalProductCode].system ^requirements = "The code system SHALL be the SNOMED CT code system"
+* code.coding[snomedMedicinalProductCode].code ^binding.description = "MP sctid valide"
+
+* code.coding[otherMedicationCode] obeys frmed-med-2 and frmed-med-3 and frmed-med-4
+* code.coding[otherMedicationCode] ^short = "Generaly no code for compound medicinal product"
+* code.coding[otherMedicationCode] ^definition = "A code identifing the compound medicinal product. Generaly none : no code defined for G5 1L + NaCl 3g + KCl 2g."
+// * code.coding[otherMedicationCode].system = "^((?!http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD|http:\\/\\/snomed\\.info\\/sct).)*$" //TODO
+
+* code.text MS
+* code.text ^comment = "If there is no code (usually not available for a compound drug or must be local if available), a name SHALL be provided."
+
+* ingredient 1.. MS
+* ingredient.item[x] only FrMPSubstance2Active or Reference(FrMedication2unique)
+* ingredient.item[x] MS
+* ingredient.item[x] ^definition = "The actual ingredient - either a substance (simple medication's ingredient) or another medication (compound medciation's ingredient)."
