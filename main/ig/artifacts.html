@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HL7.FHIR.FR.EXAMPLE\Artifacts Summary - FHIR v4.0.1</title>
+    <title>Artifacts Summary - Guide d&#39;implémentation du médicament v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -19,6 +19,7 @@
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7fr.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,20 +40,21 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
+</div>
+
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
-  </div>
-  <div id="is-nav">
-    <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
-  </div>
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Exemple d&#39;IG Français</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d&#39;implémentation du médicament</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
 
@@ -78,45 +80,32 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li><a href="index.html">IG Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="background.html">Background</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="spec.html">Detailed Specification</a>
-      </li>
-    </ul>
-  </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
-      </li>
-      <li>
-        <a href="downloads.html">Downloads</a>
-      </li>
-    </ul>
-  </li>
-</ul>      
+              <!-- menu.xml  -->
 
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.fr">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -148,12 +137,12 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Exemple d'IG Français - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/example/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
   
-  <!--DO NOT EDIT THIS FILE - It is generated and any changes made will be overwritten--><div xmlns:html="http://www.w3.org/1999/xhtml"
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns:html="http://www.w3.org/1999/xhtml"
      xmlns="http://www.w3.org/1999/xhtml"
      xmlns:f="http://hl7.org/fhir"
      class="markdown-toc">
@@ -163,7 +152,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#2">Example: Example Instances</a>
+         <a href="#2">Structures: Data Type Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -173,77 +174,760 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
    <h3>Structures: Resource Profiles </h3>
-   <p>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-fr-patient.html"
-                     title="StructureDefinition/fr-patient">Patient français</a>
-               </td>
-               <td>
-<p>Description du patient français</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrCurrentMedicationComposition.html"
+                  title="StructureDefinition/FrCurrentMedicationComposition">FrCurrentMedicationComposition</a>
+            </td>
+            <td>
+<p>Profil de la ressource Composition du traitement médicamenteux courant.</p>
 </td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrCurrentMedicationMedicationStatement.html"
+                  title="StructureDefinition/FrCurrentMedicationMedicationStatement">FrCurrentMedicationMedicationStatement</a>
+            </td>
+            <td>
+<p>Profil de la ressource <em>MedicationStatement</em> du traitement médicamenteux courant.
+Current Medication MedicationStatement resource profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrInpatientMedicationDispense.html"
+                  title="StructureDefinition/FrInpatientMedicationDispense">FrInpatientMedicationDispense</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrInpatientMedicationRequest2.html"
+                  title="StructureDefinition/FrInpatientMedicationRequest2">FrInpatientMedicationRequest2</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedication.html"
+                  title="StructureDefinition/FrMedication">FrMedication</a>
+            </td>
+            <td>
+<p>profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp’Santé</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedication2unique.html"
+                  title="StructureDefinition/FrMedication2unique">FrMedication2unique</a>
+            </td>
+            <td>
+<p>ressource Medication unique regroupant les 4 profils en 1 (ucd, ucd-part, non-proprietary-name et compound)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationHistoryComposition.html"
+                  title="StructureDefinition/FrMedicationHistoryComposition">FrMedicationHistoryComposition</a>
+            </td>
+            <td>
+<p>Profil de la ressource Composition du Bilan Médicamenteux.
+Medication Assessment Composition resource profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationHistoryMedicationStatement.html"
+                  title="StructureDefinition/FrMedicationHistoryMedicationStatement">FrMedicationHistoryMedicationStatement</a>
+            </td>
+            <td>
+<p>Profil de la ressource <em>MedicationStatement</em> du Bilan médicamenteux.
+Medication History MedicationStatement resource profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationReconciliationComposition.html"
+                  title="StructureDefinition/FrMedicationReconciliationComposition">FrMedicationReconciliationComposition</a>
+            </td>
+            <td>
+<p>Profil de la ressource <em>Composition</em> la Fiche de Conciliation des Traitements médicamenteux (FCT).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationReconciliationMedicationStatement.html"
+                  title="StructureDefinition/FrMedicationReconciliationMedicationStatement">FrMedicationReconciliationMedicationStatement</a>
+            </td>
+            <td>
+<p>Profil de la ressource <em>MedicationStatement</em> référencée dans la ressource <em>Composition</em> de la Fiche de Conciliation des Traitements médicamenteux (FCT).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html"
+                  title="StructureDefinition/FrOnAdmissionMedicationComposition">FrOnAdmissionMedicationComposition</a>
+            </td>
+            <td>
+<p>Profil de la ressource <em>Composition</em> du traitement médicamenteux prescrit à l’admmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html"
+                  title="StructureDefinition/FrOnAdmissionRetroactiveMedicationReconciliationComposition">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a>
+            </td>
+            <td>
+<p>Profil de la ressource <em>Composition</em> de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d’admission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrInpatientMedicationRequest.html"
+                  title="StructureDefinition/FrInpatientMedicationRequest">French Inpatient MedicationRequest</a>
+            </td>
+            <td>
+<p>French inpatient medication request profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationUcdPart.html"
+                  title="StructureDefinition/FrMedicationUcdPart">French Ucd Part Medication</a>
+            </td>
+            <td>
+<p>Part of a multipart branded medication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationUcd.html"
+                  title="StructureDefinition/FrMedicationUcd">French branded name Medication</a>
+            </td>
+            <td>
+<p>French prescribed, dispensed or used medication expressed as branded medication composed of one to many substances. The code the french UCD (Unité Commune de Dispensation).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationCompound.html"
+                  title="StructureDefinition/FrMedicationCompound">French compound Medication</a>
+            </td>
+            <td>
+<p>A complex medication composed of two to many simple médication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-1.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationNonproprietaryName.html"
+                  title="StructureDefinition/FrMedicationNonproprietaryName">French non proprietary name Medication</a>
+            </td>
+            <td>
+<p>Simple prescribed, dispensed, administered or used medication expressed in non proprietary name composed of one to many substances. If composed of many substance, the strengh SHALL be defined.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
    <a name="2"> </a>
+   <h3>Structures: Data Type Profiles </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMPSubstance2Active.html"
+                  title="StructureDefinition/FrMPSubstance2Active">FrMPSubstance2Active</a>
+            </td>
+            <td>
+<p>code for the medicinal product substance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMPSubstanceActive.html"
+                  title="StructureDefinition/FrMPSubstanceActive">French Active Substance of a Medicinal Product</a>
+            </td>
+            <td>
+<p>code for the medicinal product substance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrRangeUcum.html"
+                  title="StructureDefinition/FrRangeUcum">Range with UCUM quantity units</a>
+            </td>
+            <td>
+<p>Range with low and high unit UCUM encoded</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrRatioUcum.html"
+                  title="StructureDefinition/FrRatioUcum">Ratio with UCUM quantity units</a>
+            </td>
+            <td>
+<p>Ratio with numerator and denominator unit UCUM encoded</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrSimpleQuantityUcum.html"
+                  title="StructureDefinition/FrSimpleQuantityUcum">SimpleQuantity with UCUM quantity unit</a>
+            </td>
+            <td>
+<p>simple quantity datatype requiring a UCUM unit</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-medication-history-sources.html"
+                  title="StructureDefinition/fr-medication-history-sources">FrMedicationHistorySources</a>
+            </td>
+            <td>
+<p>Sources des lignes du Bilan Médicamenteux que représente la ressource <em>Composition</em> ou de chacune de ses lignes que représente la ressource <em>MedicationStatement</em> référencée par l’élément <em>entry</em> de la ressource <em>Composition</em> (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrMedicationStatementReconciliationProperties.html"
+                  title="StructureDefinition/FrMedicationStatementReconciliationProperties">FrMedicationStatementReconciliationProperties</a>
+            </td>
+            <td>
+<p>Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrBasisOfDoseComponent.html"
+                  title="StructureDefinition/FrBasisOfDoseComponent">Medication component Basis of dose</a>
+            </td>
+            <td>
+<p>When the medication element of the resource in which a dose applies is compound, this extension references the Medication resource component of the medication element which is the Basis of the dose quantity or volume.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrIsVehicle.html"
+                  title="StructureDefinition/FrIsVehicle">Medication component which is the vehicle of the compound Medication</a>
+            </td>
+            <td>
+<p>Medication component which is the vehicle of the compound Medication</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrDrugCharacteristic.html"
+                  title="StructureDefinition/FrDrugCharacteristic">Medication descriptive properties</a>
+            </td>
+            <td>
+<p>Specifies descriptive properties of the medicine</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrTeatmentIntent.html"
+                  title="StructureDefinition/FrTeatmentIntent">MedicationRequest overall treatment intent</a>
+            </td>
+            <td>
+<p>The overall intention of the treatment</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FrStrengthCodeableConcept.html"
+                  title="StructureDefinition/FrStrengthCodeableConcept">Strength CodeableConcept</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicinalProductOnly.html"
+                  title="ValueSet/FrMedicinalProductOnly">French Medicinal Product only</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>code</em> de la ressource <em>FrMedicationNonproprietaryName</em>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMpSubstanceActive.html"
+                  title="ValueSet/FrMpSubstanceActive">French Medicinal product Active substance</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>ingredient.itemCodeableConcept</em> des ressources <em>FrMedicationUcd</em>, <em>FrMedicationUcdPart</em> et <em>FrMedicationNonproprietaryName</em>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMpDoseForm.html" title="ValueSet/FrMpDoseForm">French Medicinal product Dose form</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>doseForm</em> des ressources <em>FrMedicationUcd</em>, <em>FrMedicationUcdPart</em> ou <em>FrMedicationNonProprietaryName</em>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMpUnitOfPresentation.html"
+                  title="ValueSet/FrMpUnitOfPresentation">French Medicinal product Unit of Presentation</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’unité de présentation de la dose.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMethodOfAdministration.html"
+                  title="ValueSet/FrMethodOfAdministration">French Method Of Administration</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>dosageInstruction.method</em> de la ressource <em>FrMedicationRequest</em>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrRouteOfAdministration.html"
+                  title="ValueSet/FrRouteOfAdministration">French Route of Administration</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>dosageInstruction.route</em> de la ressource <em>FrMedicationRequest</em>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrTreatmentIntent.html"
+                  title="ValueSet/FrTreatmentIntent">French overall intention of the treatment</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>treatmentIntent</em> de la ressource <em>FrInpatientMedicationRequest</em>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medication-ingredient-strength-codes.html"
+                  title="ValueSet/medication-ingredient-strength-codes">MedicationIngredientStrengthCodes</a>
+            </td>
+            <td>
+<p>Medication Ingredient Strength Codes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicationReconciliationOutcome.html"
+                  title="ValueSet/FrMedicationReconciliationOutcome">value set InterOp'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder la gravité de l’erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicationReconciliationResolution.html"
+                  title="ValueSet/FrMedicationReconciliationResolution">value set InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicationReconciliationStatus.html"
+                  title="ValueSet/FrMedicationReconciliationStatus">value set InterOp'Santé - Statut d'une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder le statut d’une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrEditorialStatus.html"
+                  title="ValueSet/FrEditorialStatus">value set InterOp'Santé - Statut éditorial d'une valeur</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder le statut éditorial d’une valeur.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicationReconciliationType.html"
+                  title="ValueSet/FrMedicationReconciliationType">value set InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder le type d’écart/erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicationReconciliationQualifiedDiscrepancy.html"
+                  title="ValueSet/FrMedicationReconciliationQualifiedDiscrepancy">value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrCurrentMedicationDocumentType.html"
+                  title="ValueSet/FrCurrentMedicationDocumentType">value set InterOp'Santé - type de document de la ressource Composition d'une FCT</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder le type de document de la ressource <em>Composition</em> d’une liste des Traitements Médicamenteux Courants.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-fr-medication-reconciliation-document-type.html"
+                  title="ValueSet/fr-medication-reconciliation-document-type">value set InterOp'Santé - type de document de la ressource Composition d'une FCT</a>
+            </td>
+            <td>
+<p>Le jeu de valeurs à utiliser pour coder le type de document de la ressource <em>Composition</em> d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-FrMedicationHistorySourceType.html"
+                  title="ValueSet/FrMedicationHistorySourceType">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a>
+            </td>
+            <td>
+<p>Un jeu de valeurs à utiliser pour coder les sources d’un Bilan Médicamenteux.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-medication-ingredient-strength-codes.html"
+                  title="CodeSystem/medication-ingredient-strength-codes">Medication_Ingredient_Strength_Codes</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationReconciliationOutcome.html"
+                  title="CodeSystem/FrMedicationReconciliationOutcome">code system InterOp'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le système de codage de la gravité de l’erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationReconciliationResolution.html"
+                  title="CodeSystem/FrMedicationReconciliationResolution">code system InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le système de codage de la résolution d’une divergence sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationReconciliationStatus.html"
+                  title="CodeSystem/FrMedicationReconciliationStatus">code system InterOp'Santé - Statut d'une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le système de codage du statut d’une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationReconciliationType.html"
+                  title="CodeSystem/FrMedicationReconciliationType">code system InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le système de codage du type d’écart/erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationHistorySourceType.html"
+                  title="CodeSystem/FrMedicationHistorySourceType">code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux</a>
+            </td>
+            <td>
+<p>Le système de codage des sources d’un Bilan Médicamenteux.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrEditorialStatus.html"
+                  title="CodeSystem/FrEditorialStatus">code system Interop'Santé - Statut éditorial d'une valeur</a>
+            </td>
+            <td>
+<p>Le système de codage du statut éditorial d’une valeur.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-fr-document-type.html"
+                  title="CodeSystem/fr-document-type">code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy</a>
+            </td>
+            <td>
+<p>Le système de codage SIPh du type de document d’une ressource <em>Composition</em> du domaine Pharmacy</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationReconciliationDiscrepancy.html"
+                  title="CodeSystem/FrMedicationReconciliationDiscrepancy">code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT</a>
+            </td>
+            <td>
+<p>Le système de codage de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
    <h3>Example: Example Instances </h3>
-   <p>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Library-example.html" title="Library/example">Example CQL Library</a>
-               </td>
-               <td>
-<p>Some example library</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Binary-example.html" title="Binary/example">example</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-example.html" title="Observation/example">example</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Patient-example.html" title="Patient/example">example</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Patient-frpatient-exemple.html" title="Patient/frpatient-exemple">frpatient-exemple</a>
-               </td>
-               <td>
-<p>Exemple d’un patient français</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14618.html" title="MedicationRequest/14618">14618</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14619.html" title="MedicationRequest/14619">14619</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14620.html" title="MedicationRequest/14620">14620</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14621.html" title="MedicationRequest/14621">14621</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14622.html" title="MedicationRequest/14622">14622</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14624.html" title="MedicationRequest/14624">14624</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14625.html" title="MedicationRequest/14625">14625</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14626.html" title="MedicationRequest/14626">14626</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14627.html" title="MedicationRequest/14627">14627</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14628.html" title="MedicationRequest/14628">14628</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14629.html" title="MedicationRequest/14629">14629</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14630.html" title="MedicationRequest/14630">14630</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14631.html" title="MedicationRequest/14631">14631</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14637.html" title="MedicationRequest/14637">14637</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14637u.html" title="MedicationRequest/14637u">14637u</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14638.html" title="MedicationRequest/14638">14638</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14639.html" title="MedicationRequest/14639">14639</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14640.html" title="MedicationRequest/14640">14640</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14641.html" title="MedicationRequest/14641">14641</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14642.html" title="MedicationRequest/14642">14642</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14643.html" title="MedicationRequest/14643">14643</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14644.html" title="MedicationRequest/14644">14644</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14645.html" title="MedicationRequest/14645">14645</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14646.html" title="MedicationRequest/14646">14646</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14647.html" title="MedicationRequest/14647">14647</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14648.html" title="MedicationRequest/14648">14648</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14649.html" title="MedicationRequest/14649">14649</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14650.html" title="MedicationRequest/14650">14650</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14651.html" title="MedicationRequest/14651">14651</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14651-30.html"
+                  title="MedicationRequest/14651-30">14651-30</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14652.html" title="MedicationRequest/14652">14652</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14654.html" title="MedicationRequest/14654">14654</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14656.html" title="MedicationRequest/14656">14656</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14657.html" title="MedicationDispense/14657">14657</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14658.html" title="MedicationDispense/14658">14658</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14659.html" title="MedicationRequest/14659">14659</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-14660.html" title="MedicationRequest/14660">14660</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14661.html" title="MedicationDispense/14661">14661</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14662.html" title="MedicationDispense/14662">14662</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14663.html" title="MedicationDispense/14663">14663</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14664.html" title="MedicationDispense/14664">14664</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-14665.html" title="MedicationDispense/14665">14665</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 </div>
@@ -255,25 +939,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.example#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 16, 2024 12:10+0000">2024-05-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 8, 2024 14:38+0000">2024-07-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-                      Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/example/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7.fr/fhir/fr/medication/history.html">Historique des versions </a>
                  
                 
 
@@ -297,16 +979,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
   <!-- Analytics Below
   ================================================== -->
   </body>

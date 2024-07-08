@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/CodeSystem/FrMedicationReconciliationDiscrepancy> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FrMedicationReconciliationDiscrepancy"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2021-06-23T08:40:00Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem FrMedicationReconciliationDiscrepancy</b></p><a name=\"FrMedicationReconciliationDiscrepancy\"> </a><a name=\"hcFrMedicationReconciliationDiscrepancy\"> </a><a name=\"hcFrMedicationReconciliationDiscrepancy-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2021-06-23 08:40:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>isQualified</td><td>isQualified</td><td>boolean</td><td>Une divergence peut ne pas être qualifiée. Une absence de divergence n'a pas à être qualifiée.</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-discrepancy</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>isQualified</b></td></tr><tr><td style=\"white-space:nowrap\">10000001<a name=\"FrMedicationReconciliationDiscrepancy-10000001\"> </a></td><td>Pas de divergence</td><td>Pas de divergence entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000002<a name=\"FrMedicationReconciliationDiscrepancy-10000002\"> </a></td><td>Divergence non qualifiée</td><td>Divergence identifiée mais non qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000003<a name=\"FrMedicationReconciliationDiscrepancy-10000003\"> </a></td><td>Divergence intentionnelle</td><td>Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Le Bilan Médicamenteux a été pris en compte par le prescripteur dans le Traitement Courant.</td><td>true</td></tr><tr><td style=\"white-space:nowrap\">10000004<a name=\"FrMedicationReconciliationDiscrepancy-10000004\"> </a></td><td>Divergence non-intentionnelle</td><td>Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Méconnaissance, par le prescripteur, du Bilan Médicamenteux dans le Traitement Courant.</td><td>true</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-discrepancy"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrMedicationReconciliationDiscrepancy"] ; # 
+  fhir:title [ fhir:v "code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2021-06-23T08:40:00Z"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le système de codage de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "isQualified" ] ;
+     fhir:description [ fhir:v "Une divergence peut ne pas être qualifiée. Une absence de divergence n'a pas à être qualifiée." ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "10000001" ] ;
+     fhir:display [ fhir:v "Pas de divergence" ] ;
+     fhir:definition [ fhir:v "Pas de divergence entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isQualified" ] ;
+       fhir:value [ fhir:v "false"^^xsd:boolean ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000002" ] ;
+     fhir:display [ fhir:v "Divergence non qualifiée" ] ;
+     fhir:definition [ fhir:v "Divergence identifiée mais non qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isQualified" ] ;
+       fhir:value [ fhir:v "false"^^xsd:boolean ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000003" ] ;
+     fhir:display [ fhir:v "Divergence intentionnelle" ] ;
+     fhir:definition [ fhir:v "Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Le Bilan Médicamenteux a été pris en compte par le prescripteur dans le Traitement Courant." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isQualified" ] ;
+       fhir:value [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000004" ] ;
+     fhir:display [ fhir:v "Divergence non-intentionnelle" ] ;
+     fhir:definition [ fhir:v "Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Méconnaissance, par le prescripteur, du Bilan Médicamenteux dans le Traitement Courant." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isQualified" ] ;
+       fhir:value [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/ValueSet/FrMedicationReconciliationOutcome> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FrMedicationReconciliationOutcome"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2021-06-23T09:15:00Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet FrMedicationReconciliationOutcome</b></p><a name=\"FrMedicationReconciliationOutcome\"> </a><a name=\"hcFrMedicationReconciliationOutcome\"> </a><a name=\"hcFrMedicationReconciliationOutcome-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2021-06-23 09:15:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include all codes defined in <code>http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-outcome</code></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://interopsante.org/fhir/ValueSet/fr-medication-reconciliation-outcome"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrMedicationReconciliationOutcome"] ; # 
+  fhir:title [ fhir:v "value set InterOp'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2021-06-23T09:15:00Z"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder la gravité de l'erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."] ; # 
+  fhir:immutable [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-outcome"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "0.2.0" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
