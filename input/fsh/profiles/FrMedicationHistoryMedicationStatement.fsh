@@ -39,7 +39,7 @@ Medication History MedicationStatement resource profile"""
 * medication[x].type = "Medication" (exactly)
 * medication[x].identifier ..0
 * medication[x].identifier ^requirements = "Identification du *médicament* uniquement par référence à une ressource *Medication* profilée *fr-medication*\\."
-* subject only Reference($FrCorePatient)
+* subject only Reference($FrCorePatientProfile)
 * subject MS
 * subject ^definition = "Le patient qui prend cette ligne de traitement médicamenteux."
 * subject ^comment = "Obligatoire dans la ressource FHIR *MedicationStatement* originelle, donc DOIT ABSOLUMENT être identique au patient identifé dans la ressource *Composition* du Bilan Médicamenteux. Cf. *Composition.subjet*\\."
