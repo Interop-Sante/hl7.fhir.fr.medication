@@ -230,7 +230,7 @@
         
           Draft
           
-            as of 2024-07-09
+            as of 2024-07-11
           
         
       </td>
@@ -955,7 +955,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Composition.modifierExtension, Composition.section.modifierExtension, Composition.section:MedicationHistory.modifierExtension, Composition.section:CurrentMedication.modifierExtension, Composition.section:Reconciliation.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Composition.subject, Composition.author, Composition.section.entry, Composition.section:MedicationHistory.entry, Composition.section:CurrentMedication.entry, Composition.section:Reconciliation.entry</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
 
@@ -1770,7 +1770,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Composition.extension, Composition.modifierExtension, Composition.subject.extension, Composition.author.extension, Composition.attester.extension, Composition.attester.modifierExtension, Composition.attester.party.extension, Composition.relatesTo.extension, Composition.relatesTo.modifierExtension, Composition.event.extension, Composition.event.modifierExtension, Composition.section.extension, Composition.section.modifierExtension, Composition.section:MedicationHistory.extension, Composition.section:MedicationHistory.modifierExtension, Composition.section:CurrentMedication.extension, Composition.section:CurrentMedication.modifierExtension, Composition.section:Reconciliation.extension, Composition.section:Reconciliation.modifierExtension, Composition.section:Reconciliation.author.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>Composition.event.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Composition.subject, Composition.encounter, Composition.author, Composition.attester.party, Composition.custodian, Composition.event.detail, Composition.section.author, Composition.section.focus, Composition.section.entry, Composition.section:MedicationHistory.entry, Composition.section:CurrentMedication.entry, Composition.section:Reconciliation.entry</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
@@ -2606,7 +2606,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Composition.modifierExtension, Composition.section.modifierExtension, Composition.section:MedicationHistory.modifierExtension, Composition.section:CurrentMedication.modifierExtension, Composition.section:Reconciliation.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Composition.subject, Composition.author, Composition.section.entry, Composition.section:MedicationHistory.entry, Composition.section:CurrentMedication.entry, Composition.section:Reconciliation.entry</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
 
@@ -3421,7 +3421,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Composition.extension, Composition.modifierExtension, Composition.subject.extension, Composition.author.extension, Composition.attester.extension, Composition.attester.modifierExtension, Composition.attester.party.extension, Composition.relatesTo.extension, Composition.relatesTo.modifierExtension, Composition.event.extension, Composition.event.modifierExtension, Composition.section.extension, Composition.section.modifierExtension, Composition.section:MedicationHistory.extension, Composition.section:MedicationHistory.modifierExtension, Composition.section:CurrentMedication.extension, Composition.section:CurrentMedication.modifierExtension, Composition.section:Reconciliation.extension, Composition.section:Reconciliation.modifierExtension, Composition.section:Reconciliation.author.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>Composition.event.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Composition.subject, Composition.encounter, Composition.author, Composition.attester.party, Composition.custodian, Composition.event.detail, Composition.section.author, Composition.section.focus, Composition.section.entry, Composition.section:MedicationHistory.entry, Composition.section:CurrentMedication.entry, Composition.section:Reconciliation.entry</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
@@ -3640,7 +3640,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 9, 2024 15:20+0000">2024-07-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 12:30+0000">2024-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
