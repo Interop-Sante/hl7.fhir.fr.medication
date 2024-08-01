@@ -6,8 +6,6 @@ Usage: #definition
 * status = #draft
 * publisher = "Interop'Santé"
 * description = "ConceptMap pour la conversion d'un patient sans INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"
-* juridiction[0].code = $ISO3166#FRA
-* juridiction[0].display = "France"
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema
 * targetUri = $FrCorePatient

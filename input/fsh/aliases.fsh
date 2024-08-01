@@ -25,7 +25,7 @@ Alias: $FrCorePractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-
 Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins
 
 // Mapping PN13 aliases
-Alias: $PN13Schema = "https://interopsante.org/pn13/xsd"
-Alias: $ISO3166 = "urn:iso:std:iso:3166"
-Alias: $FhirGender = "http://hl7.org/fhir/ValueSet/administrative-gender"
-Alias: $PN13Gender = "https://interopsante.org/pn13/SIPh_sexe"
+Alias: $PN13Schema = https://interopsante.org/pn13/xsd
+Alias: $ISO3166 = urn:iso:std:iso:3166
+Alias: $FhirGender = http://hl7.org/fhir/ValueSet/administrative-gender
+Alias: $PN13Gender = https://interopsante.org/pn13/SIPh_sexe
