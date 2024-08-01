@@ -1,9 +1,9 @@
 Instance: fr-PN13-FHIR-gender-conceptmap
 InstanceOf: ConceptMap
-* version: "0.1"
+Usage: #definition
+* status: #draft
 * name: "FrPN13FHIRGenderConceptMap"
 * title: "Conversion PN13 FHIR des code de sexe administratif"
-* status: "draft"
 * publisher: "Interop'Santé"
 * description: "ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR"
 * juridiction[0].coding[0].code: "FRA"

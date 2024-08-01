@@ -1,9 +1,9 @@
 Instance: fr-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap
 InstanceOf: ConceptMap
-* version: "0.1"
+Usage: #definition
 * name: "FrPN13FHIRMedicationPrescriptionPatientINSConceptMap"
 * title: "Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments"
-* status: "draft"
+* status: #draft
 * publisher: "Interop'Santé"
 * description: "ConceptMap pour la conversion d'un patient avec INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"
 * juridiction[0].coding[0].code: "FRA"
