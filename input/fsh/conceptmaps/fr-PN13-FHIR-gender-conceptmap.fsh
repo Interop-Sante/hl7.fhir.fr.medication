@@ -1,6 +1,5 @@
 Instance: fr-PN13-FHIR-gender-conceptmap
 InstanceOf: ConceptMap
-* url: "https://hl7.fr/ig/fhir/medication/ConceptMap/fr-PN13-FHIR-gender-conceptmap"
 * version: "0.1"
 * name: "FrPN13FHIRGenderConceptMap"
 * title: "Conversion PN13 FHIR des code de sexe administratif"

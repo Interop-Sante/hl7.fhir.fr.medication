@@ -1,6 +1,5 @@
 Instance: fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap
 InstanceOf: ConceptMap
-* url: "https://hl7.fr/ig/fhir/medication/ConceptMap/fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap"
 * version: "0.1"
 * name: "FrPN13FHIRMedicationPrescriptionPatientINSConceptMap"
 * title: "Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments"
