@@ -1,3 +1,4 @@
-### Introduction
+
+# Introduction
 
 Introduction IG Médicament
