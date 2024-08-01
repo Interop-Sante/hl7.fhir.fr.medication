@@ -6,15 +6,13 @@ Usage: #definition
 * status = #draft
 * publisher = "Interop'Santé"
 * description = "ConceptMap pour la conversion d'un patient avec INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"
-* juridiction[0].coding[0].code = $ISO3166#FRA
-* juridiction[0].coding[0].display = "France"
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema
 * targetUri = $FrCorePatientINS
 * group[0].element[0].code = $PN13Schema#M_prescription_médicaments/Patient/Ipp
 * group[0].element[0].target[0].code = $FrCorePatientINS#Patient.identifier.value
 * group[0].element[0].target[0].equivalence = #equal
-* group[0].element[0].target[0].produt[0].property = "Patient.identfier.use"
+* group[0].element[0].target[0].product[0].property = "Patient.identfier.use"
 * group[0].element[0].target[0].product[0].value = "usual"
 * group[0].element[1].code = $PN13Schema#M_prescription_médicaments/Patient/DI
 * group[0].element[1].target[0].code = $FrCorePatientINS#Patient.identifier.system
