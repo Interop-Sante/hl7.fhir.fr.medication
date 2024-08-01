@@ -1,11 +1,11 @@
 Instance: fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
-* name: "FrPN13FHIRMedicationPrescriptionPatientINSConceptMap"
-* title: "Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments"
-* status: #draft
-* publisher: "Interop'Santé"
-* description: "ConceptMap pour la conversion d'un patient sans INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"
+* ^name: "FrPN13FHIRMedicationPrescriptionPatientINSConceptMap"
+* ^title: "Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments"
+* ^status: #draft
+* ^publisher: "Interop'Santé"
+* ^description: "ConceptMap pour la conversion d'un patient sans INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"
 * juridiction[0].coding[0].code: "FRA"
 * juridiction[0].coding[0].display: "France"
 * juridiction[0].coding[0].system: "urn:iso:std:iso:3166"
