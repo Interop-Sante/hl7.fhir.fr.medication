@@ -1,0 +1,201 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/ConceptMap/fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap</b></p><a name=\"fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap\"> </a><a name=\"hcfr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap\"> </a><a name=\"fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap-en-US\"> </a><p>Mapping from https://interopsante.org/pn13/xsd to <a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html\">FR Core Patient Profile</a></p><p>DRAFT. Published on 2024-08-02 08:10:46+0000 by Interop'Santé  (Interop'Santé: <a href=\"http://interopsante.org/\">http://interopsante.org/</a>). </p><div><p>ConceptMap pour la conversion d'un patient sans INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR</p>\n</div><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"3\"><b>Target Concept Details</b></td><td><b>Comment</b></td><td colspan=\"3\"><b>Properties</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from </td><td/><td colspan=\"2\"><b>Codes</b> from </td><td><b>Patient.identfier.use</b></td><td/></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Ipp</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.identifier.value</td><td style=\"border-left-width: 0px\"></td><td>usual</td><td/></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/DI</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.identifier.system</td><td style=\"border-left-width: 0px\"></td><td/><td>Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"4\"><b>Target Concept Details</b></td><td colspan=\"4\"><b>Properties</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from </td><td/><td colspan=\"2\"><b>Codes</b> from </td><td><b>Patient.name.extension.url</b></td><td><b>Patient.name.use</b></td></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Nom_naissance</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.name.family</td><td style=\"border-left-width: 0px\"></td><td/><td>official</td></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Premier_prénom</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.name.given</td><td style=\"border-left-width: 0px\"></td><td/><td/></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Prénoms</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.name.extension.valueString</td><td style=\"border-left-width: 0px\"></td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name</td><td/></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"3\"><b>Target Concept Details</b></td><td colspan=\"3\"><b>Properties</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from </td><td/><td colspan=\"2\"><b>Codes</b> from </td><td><b>Patient.name.use</b></td></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Nom_usuel</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.name.family</td><td style=\"border-left-width: 0px\"></td><td>usual</td></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Prénom_usuel</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.name.given</td><td style=\"border-left-width: 0px\"></td><td/></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>M_prescription_médicaments/Patient/Date_naissance</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.birthDate</td><td>La date doit être transformée du format AAAAMMJJ[HH[MM[SS]]] au format YYYY-MM-DDTHH:MM:SS+ZZ:ZZ. L'offset de fuseau horaire n'est à intégrer que si au moin une heure est fournie.</td></tr><tr><td>M_prescription_médicaments/Patient/Sexe</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.gender</td><td>le code est à traduire en utilisant la ConceptMap fr-PN13-FHIR-gender-conceptmap</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"4\"><b>Target Concept Details</b></td><td><b>Comment</b></td><td colspan=\"4\"><b>Properties</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from </td><td/><td colspan=\"2\"><b>Codes</b> from </td><td><b>Patient.extension.url</b></td><td><b>Patient.extension.valueAddress.extension.url</b></td><td/></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Lieu_naissance</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.extension.valueAddress.extension.valueCoding.code</td><td style=\"border-left-width: 0px\"></td><td>http://hl7.org/fhir/StructureDefinition/patient-birthPlace</td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code</td><td>L'élément FHIR Patient.extension.valueAddress.extension.valueCoding.system dépend de la valeur du code. Pour les codes commençant par 99, le system est https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R13-Pays ; pour le code 01 https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire; pour les autres codes le system est est https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune</td></tr></table><hr/><p><b>Group 6 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"5\"><b>Target Concept Details</b></td><td colspan=\"5\"><b>Properties</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from </td><td/><td colspan=\"2\"><b>Codes</b> from </td><td><b>Patient.extension.url</b></td><td><b>Patient.extension.extension.valueCoding.system</b></td><td><b>Patient.extension.extension.url</b></td></tr><tr><td style=\"border-right-width: 0px\">M_prescription_médicaments/Patient/Statut_idpat</td><td style=\"border-left-width: 0px\"></td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">Patient.extension.extension.valueCoding.code</td><td style=\"border-left-width: 0px\"></td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445</td><td>identityStatus</td></tr></table><hr/><p><b>Group 7 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>M_prescription_médicaments/Patient/Date_lunaire</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/ConceptMap/fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrPN13FHIRMedicationPrescriptionPatientSansINSConceptMap"] ; # 
+  fhir:title [ fhir:v "Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-08-02T08:10:46+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ConceptMap pour la conversion d'un patient sans INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"] ; # 
+  fhir:source [ fhir:v "https://interopsante.org/pn13/xsd"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Ipp" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.identifier.value" ] ;
+         fhir:equivalence [ fhir:v "equal" ] ;
+         fhir:product ( [
+           fhir:property [ fhir:v "Patient.identfier.use"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "usual" ]
+         ] )
+       ] )
+     ] [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/DI" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.identifier.system" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:" ]
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Nom_naissance" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.name.family" ] ;
+         fhir:equivalence [ fhir:v "equal" ] ;
+         fhir:product ( [
+           fhir:property [ fhir:v "Patient.name.use"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "official" ]
+         ] )
+       ] )
+     ] [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Premier_prénom" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.name.given" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Prénoms" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.name.extension.valueString" ] ;
+         fhir:equivalence [ fhir:v "equal" ] ;
+         fhir:product ( [
+           fhir:property [ fhir:v "Patient.name.extension.url"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name" ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Nom_usuel" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.name.family" ] ;
+         fhir:equivalence [ fhir:v "equal" ] ;
+         fhir:product ( [
+           fhir:property [ fhir:v "Patient.name.use"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "usual" ]
+         ] )
+       ] )
+     ] [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Prénom_usuel" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.name.given" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Date_naissance" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.birthDate" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "La date doit être transformée du format AAAAMMJJ[HH[MM[SS]]] au format YYYY-MM-DDTHH:MM:SS+ZZ:ZZ. L'offset de fuseau horaire n'est à intégrer que si au moin une heure est fournie." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Sexe" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.gender" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "le code est à traduire en utilisant la ConceptMap fr-PN13-FHIR-gender-conceptmap" ]
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Lieu_naissance" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.extension.valueAddress.extension.valueCoding.code" ] ;
+         fhir:equivalence [ fhir:v "equal" ] ;
+         fhir:comment [ fhir:v "L'élément FHIR Patient.extension.valueAddress.extension.valueCoding.system dépend de la valeur du code. Pour les codes commençant par 99, le system est https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R13-Pays ; pour le code 01 https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire; pour les autres codes le system est est https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune" ] ;
+         fhir:product ( [
+           fhir:property [ fhir:v "Patient.extension.url"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace" ]
+         ] [
+           fhir:property [ fhir:v "Patient.extension.valueAddress.extension.url"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code" ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Statut_idpat" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Patient.extension.extension.valueCoding.code" ] ;
+         fhir:equivalence [ fhir:v "equal" ] ;
+         fhir:product ( [
+           fhir:property [ fhir:v "Patient.extension.url"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability" ]
+         ] [
+           fhir:property [ fhir:v "Patient.extension.extension.url"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "identityStatus" ]
+         ] [
+           fhir:property [ fhir:v "Patient.extension.extension.valueCoding.system"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445" ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "M_prescription_médicaments/Patient/Date_lunaire" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
