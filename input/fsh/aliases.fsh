@@ -29,3 +29,5 @@ Alias: $PN13Schema = https://interopsante.org/pn13/xsd
 Alias: $ISO3166 = urn:iso:std:iso:3166
 Alias: $FhirGender = http://hl7.org/fhir/ValueSet/administrative-gender
 Alias: $PN13Gender = https://interopsante.org/pn13/SIPh_sexe
+// A valider et le cas échéant mettre à jour avec l'url du profil
+Alias: $FrInpatientMedicationRequest = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrInpatientMedicationRequest
