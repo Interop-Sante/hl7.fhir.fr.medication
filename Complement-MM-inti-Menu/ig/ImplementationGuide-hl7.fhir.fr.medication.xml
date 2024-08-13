@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2024-08-02T08:10:46+00:00"/>
+  <date value="2024-08-13T13:54:51+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -960,7 +960,18 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/fr-PN13-FHIR-gender-conceptmap"/>
+        <reference value="ConceptMap/PN13-FHIR-TypoComposant-conceptmap"/>
+      </reference>
+      <name value="Conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR"/>
+      <description value="ConceptMap pour la conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-gender-conceptmap"/>
       </reference>
       <name value="Conversion PN13 FHIR des code de sexe administratif"/>
       <description value="ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR"/>
@@ -971,10 +982,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/fr-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap"/>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap"/>
       </reference>
-      <name value="Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments"/>
-      <description value="ConceptMap pour la conversion d'un patient avec INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"/>
+      <name value="Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'une ligne de prescription d'une prescritpion de médicament"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -982,10 +993,54 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap"/>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec d'autres éléments qu'uniquement l'identifiant"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-practitioner-id-seule-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec uniquement un identifiant fourni"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un patient avec INS qualifiée d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-patient-sans-INS-conceptmap"/>
       </reference>
       <name value="Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments"/>
-      <description value="ConceptMap pour la conversion d'un patient sans INS qualifiée d'une prescritpion de médicament entre PN13 et FHIR"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un patient sans INS qualifiée d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un séjour d'une prescritpion de médicament"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1292,6 +1347,17 @@
       </reference>
       <name value="FrOnAdmissionRetroactiveMedicationReconciliationComposition"/>
       <description value="Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/FrMedicationIGMedicationProfileList"/>
+      </reference>
+      <name value="Liste des profils définis par l'IG Medication pour la ressource Medication"/>
+      <description value="Liste des noms associés aux titres"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

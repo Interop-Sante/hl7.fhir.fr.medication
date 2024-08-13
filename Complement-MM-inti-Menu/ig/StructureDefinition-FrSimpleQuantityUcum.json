@@ -10,7 +10,7 @@
   "name" : "FrSimpleQuantityUcum",
   "title" : "SimpleQuantity with UCUM quantity unit",
   "status" : "draft",
-  "date" : "2024-08-02T08:10:46+00:00",
+  "date" : "2024-08-13T13:54:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -65,7 +65,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit"
+        "source" : "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
       },
       {
         "key" : "sqty-1",
@@ -163,7 +163,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
