@@ -13,10 +13,10 @@ Usage: #definition
 * sourceUri = $PN13Schema
 // Pour éviter de définir des éléments obligatoirs dans le profil FrCoreEncounter qui ne sont pas présents dans PN13, il a été choisi de ne faire la référence que par l'identifier
 * targetUri = $FrInpatientMedicationRequest
-* group[0].element[0].code = $PN13Schema#M_prescription_médicaments/Séjour/Id_séjour
+* group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Séjour/Id_séjour
 * group[0].element[0].target[0].code = $FrCoreEncounter#MedicationRequest.encounter.identifier.value
 * group[0].element[0].target[0].equivalence = #equal
-* group[0].element[1].code = $PN13Schema#M_prescription_médicaments/Séjour/DI_séjour
+* group[0].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Séjour/DI_séjour
 * group[0].element[1].target[0].code = $FrCoreEncounter#MedicationRequest.encounter.identifier.system
 * group[0].element[1].target[0].equivalence = #equivalent
 * group[0].element[1].target[0].comment = "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:"

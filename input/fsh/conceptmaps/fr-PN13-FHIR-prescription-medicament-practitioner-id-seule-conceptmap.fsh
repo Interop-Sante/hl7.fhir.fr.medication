@@ -13,10 +13,10 @@ Usage: #definition
 * sourceUri = $PN13Schema
 // A valider Pour prendre en compte la différence entre Id_prescripteur et Identification_prescripteur deux mapping sont fourni, un partant sur une référence par identifier, un autre permettant de créer la ressource Practitioner
 * targetUri = $FrInpatientMedicationRequest
-* group[0].element[0].code = $PN13Schema#M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur
+* group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur
 * group[0].element[0].target[0].code = $FrCoreEncounter#MedicationRequest.requester.identifier.value
 * group[0].element[0].target[0].equivalence = #equal
-* group[0].element[1].code = $PN13Schema#M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur@Phast-uri_nomenclature
+* group[0].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur@Phast-uri_nomenclature
 * group[0].element[1].target[0].code = $FrCoreEncounter#MedicationRequest.encounter.identifier.system
 // l'hypothèse est prise que l'attribut Phast-uri_nomenclature est toujours renseigné avec un uri valide dans le cas de id_prescripteur. Si ce n'est pas le cas, l'option de passer par une référence sur identifier est moins intéressante mais fonctionne toujours
 * group[0].element[1].target[0].equivalence = #equal
