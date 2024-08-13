@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.fr.medication",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication-en-US\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><a name=\"hl7.fhir.fr.medication-en-US\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
   },
   "url" : "https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication",
   "version" : "0.1.0",
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2024-07-11T12:41:29+00:00",
+  "date" : "2024-08-13T14:32:33+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -30,7 +30,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.5.0"
+    "version" : "6.0.2"
   },
   {
     "id" : "hl7ext",
@@ -1164,6 +1164,102 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-TypoComposant-conceptmap"
+      },
+      "name" : "Conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR",
+      "description" : "ConceptMap pour la conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-gender-conceptmap"
+      },
+      "name" : "Conversion PN13 FHIR des code de sexe administratif",
+      "description" : "ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'une ligne de prescription d'une prescritpion de médicament",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec d'autres éléments qu'uniquement l'identifiant",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-practitioner-id-seule-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec uniquement un identifiant fourni",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un patient avec INS qualifiée d'une prescritpion de médicament",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-patient-sans-INS-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un patient sans INS qualifiée d'une prescritpion de médicament",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un séjour d'une prescritpion de médicament",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1498,6 +1594,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/FrMedicationIGMedicationProfileList"
+      },
+      "name" : "Liste des profils définis par l'IG Medication pour la ressource Medication",
+      "description" : "Liste des noms associés aux titres",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1736,6 +1844,24 @@
         }],
         "nameUrl" : "index.html",
         "title" : "Accueil",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "conciliation.html"
+        }],
+        "nameUrl" : "conciliation.html",
+        "title" : "La conciliation",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "transformationPN13-FHIR.html"
+        }],
+        "nameUrl" : "transformationPN13-FHIR.html",
+        "title" : "Transformation de PN13 en FHIR",
         "generation" : "markdown"
       },
       {

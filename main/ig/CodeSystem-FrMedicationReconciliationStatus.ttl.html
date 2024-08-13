@@ -41,9 +41,10 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"3.51"}
-    h3,h4,h5,h6{--heading-prefix:"3.51"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.51"}
+    h3,h4,h5,h6{--heading-prefix:"5.51"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -87,6 +88,12 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="conciliation.html">Conciliation</a>
+  </li>
+  <li>
+    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -222,7 +229,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem FrMedicationReconciliationStatus&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;FrMedicationReconciliationStatus\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcFrMedicationReconciliationStatus\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcFrMedicationReconciliationStatus-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Last updated: 2021-06-23 08:40:00+0000&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://hl7.org/fhir/R4/shareablecodesystem.html\&quot;&gt;Shareable CodeSystem&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;This  code system &lt;code&gt;http://interop.org/CodeSystem/fr-medication-reconciliation-status&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000001&lt;a name=\&quot;FrMedicationReconciliationStatus-10000001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Continué&lt;/td&gt;&lt;td&gt;La spécialité et la posologie de la ligne du Traitement Courant sont identiques à celles de la ligne du traitement antérieur (Bilan Médicamenteux).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000002&lt;a name=\&quot;FrMedicationReconciliationStatus-10000002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Équivalence&lt;/td&gt;&lt;td&gt;La ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie dans le Traitement Courant, mais avec un médicament équivalent. Il s'agit souvent de substituer la spécialité du traitement antérieur par la spécialité au Livret de l'établissement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000003&lt;a name=\&quot;FrMedicationReconciliationStatus-10000003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arrêté&lt;/td&gt;&lt;td&gt;La ligne de traitement antérieur (Bilan Médicamenteux) ne figure pas dans le Traitement Courant. Cette ligne de traitement a donc été arrêtée.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000004&lt;a name=\&quot;FrMedicationReconciliationStatus-10000004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Modifié&lt;/td&gt;&lt;td&gt;L'intention thérapeutique de la ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie mais avec modification du principe actif et/ou de la forme galénique et/ou de la voie d'adminisitration et/ou des modialités d'administration et/ou de la posologie.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000005&lt;a name=\&quot;FrMedicationReconciliationStatus-10000005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Initié&lt;/td&gt;&lt;td&gt;La ligne du traitement courant ne figure pas dans le traitement antérieur (Bilan Médicamenteux). Cette ligne de traitement a donc été initiée/démarrée.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem FrMedicationReconciliationStatus&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;FrMedicationReconciliationStatus\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcFrMedicationReconciliationStatus\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;FrMedicationReconciliationStatus-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Last updated: 2021-06-23 08:40:00+0000&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://hl7.org/fhir/R4/shareablecodesystem.html\&quot;&gt;Shareable CodeSystem&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;This  code system &lt;code&gt;http://interop.org/CodeSystem/fr-medication-reconciliation-status&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000001&lt;a name=\&quot;FrMedicationReconciliationStatus-10000001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Continué&lt;/td&gt;&lt;td&gt;La spécialité et la posologie de la ligne du Traitement Courant sont identiques à celles de la ligne du traitement antérieur (Bilan Médicamenteux).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000002&lt;a name=\&quot;FrMedicationReconciliationStatus-10000002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Équivalence&lt;/td&gt;&lt;td&gt;La ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie dans le Traitement Courant, mais avec un médicament équivalent. Il s'agit souvent de substituer la spécialité du traitement antérieur par la spécialité au Livret de l'établissement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000003&lt;a name=\&quot;FrMedicationReconciliationStatus-10000003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arrêté&lt;/td&gt;&lt;td&gt;La ligne de traitement antérieur (Bilan Médicamenteux) ne figure pas dans le Traitement Courant. Cette ligne de traitement a donc été arrêtée.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000004&lt;a name=\&quot;FrMedicationReconciliationStatus-10000004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Modifié&lt;/td&gt;&lt;td&gt;L'intention thérapeutique de la ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie mais avec modification du principe actif et/ou de la forme galénique et/ou de la voie d'adminisitration et/ou des modialités d'administration et/ou de la posologie.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;10000005&lt;a name=\&quot;FrMedicationReconciliationStatus-10000005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Initié&lt;/td&gt;&lt;td&gt;La ligne du traitement courant ne figure pas dans le traitement antérieur (Bilan Médicamenteux). Cette ligne de traitement a donc été initiée/démarrée.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interop.org/CodeSystem/fr-medication-reconciliation-status&quot;^^xsd:anyURI] ; # 
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.1.0&quot;] ; # 
@@ -288,7 +295,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 12:41+0000">2024-07-11</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 13, 2024 14:32+0000">2024-08-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -311,7 +318,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -322,7 +329,6 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

@@ -39,9 +39,10 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"3"}
-    h3,h4,h5,h6{--heading-prefix:"3.0"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -85,6 +86,12 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="conciliation.html">Conciliation</a>
+  </li>
+  <li>
+    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -164,7 +171,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#5">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#6">Example: Example Instances</a>
+         <a href="#6">Terminology: Concept Maps</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -628,6 +638,15 @@ Medication History MedicationStatement resource profile</p>
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-FrMedicationIGMedicationProfileList.html"
+                  title="CodeSystem/FrMedicationIGMedicationProfileList">Liste des profils définis par l'IG Medication pour la ressource Medication</a>
+            </td>
+            <td>
+<p>Liste des noms associés aux titres</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-medication-ingredient-strength-codes.html"
                   title="CodeSystem/medication-ingredient-strength-codes">Medication_Ingredient_Strength_Codes</a>
             </td>
@@ -710,6 +729,86 @@ Medication History MedicationStatement resource profile</p>
       </tbody>
    </table>
    <a name="6"> </a>
+   <h3>Terminology: Concept Maps </h3>
+    <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-gender-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-gender-conceptmap">Conversion PN13 FHIR des code de sexe administratif</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap">Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR d’une ligne de prescription d’une prescritpion de médicament</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap">Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d’une prescritpion de médicament avec d’autres éléments qu’uniquement l’identifiant</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-prescmed-practitioner-id-seule-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-prescmed-practitioner-id-seule-conceptmap">Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d’une prescritpion de médicament avec uniquement un identifiant fourni</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap">Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR d’un patient avec INS qualifiée d’une prescritpion de médicament</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-prescmed-patient-sans-INS-conceptmap">Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR d’un patient sans INS qualifiée d’une prescritpion de médicament</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-prescmed-encounter-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap">Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR d’un séjour d’une prescritpion de médicament</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-TypoComposant-conceptmap.html"
+                  title="ConceptMap/PN13-FHIR-TypoComposant-conceptmap">Conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -946,7 +1045,7 @@ Medication History MedicationStatement resource profile</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 12:41+0000">2024-07-11</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 13, 2024 14:32+0000">2024-08-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -969,7 +1068,7 @@ Medication History MedicationStatement resource profile</p>
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -980,7 +1079,6 @@ Medication History MedicationStatement resource profile</p>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

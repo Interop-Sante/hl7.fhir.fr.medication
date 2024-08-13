@@ -10,14 +10,14 @@
   fhir:id [ fhir:v "hl7.fhir.fr.medication"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication-en-US\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><a name=\"hl7.fhir.fr.medication-en-US\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
   ] ; # 
   fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-11T12:41:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-13T14:32:33+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -40,7 +40,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "5.5.0" ]
+     fhir:version [ fhir:v "6.0.2" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1204,6 +1204,102 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-TypoComposant-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-TypoComposant-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-gender-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-gender-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 FHIR des code de sexe administratif" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'une ligne de prescription d'une prescritpion de médicament" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec d'autres éléments qu'uniquement l'identifiant" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-practitioner-id-seule-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-practitioner-id-seule-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec uniquement un identifiant fourni" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un patient avec INS qualifiée d'une prescritpion de médicament" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-sans-INS-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-patient-sans-INS-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un patient sans INS qualifiée d'une prescritpion de médicament" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un séjour d'une prescritpion de médicament" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -1538,6 +1634,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/CodeSystem/FrMedicationIGMedicationProfileList> ;
+         fhir:reference [ fhir:v "CodeSystem/FrMedicationIGMedicationProfileList" ]
+       ] ;
+       fhir:name [ fhir:v "Liste des profils définis par l'IG Medication pour la ressource Medication" ] ;
+       fhir:description [ fhir:v "Liste des noms associés aux titres" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:extension" ]
        ] ) ;
        fhir:reference [
@@ -1777,6 +1885,22 @@
          ] ) ;
          fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Accueil" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "conciliation.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "conciliation.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "La conciliation" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "transformationPN13-FHIR.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "transformationPN13-FHIR.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Transformation de PN13 en FHIR" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
