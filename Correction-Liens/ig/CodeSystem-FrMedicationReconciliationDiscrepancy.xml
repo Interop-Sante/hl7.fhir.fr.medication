@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="FrMedicationReconciliationDiscrepancy"/>
+  <meta>
+    <lastUpdated value="2021-06-23T08:40:00Z"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem FrMedicationReconciliationDiscrepancy</b></p><a name="FrMedicationReconciliationDiscrepancy"> </a><a name="hcFrMedicationReconciliationDiscrepancy"> </a><a name="FrMedicationReconciliationDiscrepancy-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2021-06-23 08:40:00+0000</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>isQualified</td><td>isQualified</td><td>boolean</td><td>Une divergence peut ne pas être qualifiée. Une absence de divergence n'a pas à être qualifiée.</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-discrepancy</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>isQualified</b></td></tr><tr><td style="white-space:nowrap">10000001<a name="FrMedicationReconciliationDiscrepancy-10000001"> </a></td><td>Pas de divergence</td><td>Pas de divergence entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant</td><td>false</td></tr><tr><td style="white-space:nowrap">10000002<a name="FrMedicationReconciliationDiscrepancy-10000002"> </a></td><td>Divergence non qualifiée</td><td>Divergence identifiée mais non qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant</td><td>false</td></tr><tr><td style="white-space:nowrap">10000003<a name="FrMedicationReconciliationDiscrepancy-10000003"> </a></td><td>Divergence intentionnelle</td><td>Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Le Bilan Médicamenteux a été pris en compte par le prescripteur dans le Traitement Courant.</td><td>true</td></tr><tr><td style="white-space:nowrap">10000004<a name="FrMedicationReconciliationDiscrepancy-10000004"> </a></td><td>Divergence non-intentionnelle</td><td>Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Méconnaissance, par le prescripteur, du Bilan Médicamenteux dans le Traitement Courant.</td><td>true</td></tr></table></div>
+  </text>
+  <url value="http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-discrepancy"/>
+  <version value="0.1.0"/>
+  <name value="FrMedicationReconciliationDiscrepancy"/>
+  <title value="code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2021-06-23T08:40:00Z"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <description value="Le système de codage de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+  <content value="complete"/>
+  <count value="4"/>
+  <property>
+    <code value="isQualified"/>
+    <description value="Une divergence peut ne pas être qualifiée. Une absence de divergence n'a pas à être qualifiée."/>
+    <type value="boolean"/>
+  </property>
+  <concept>
+    <code value="10000001"/>
+    <display value="Pas de divergence"/>
+    <definition value="Pas de divergence entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant"/>
+    <property>
+      <code value="isQualified"/>
+      <valueBoolean value="false"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="10000002"/>
+    <display value="Divergence non qualifiée"/>
+    <definition value="Divergence identifiée mais non qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant"/>
+    <property>
+      <code value="isQualified"/>
+      <valueBoolean value="false"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="10000003"/>
+    <display value="Divergence intentionnelle"/>
+    <definition value="Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Le Bilan Médicamenteux a été pris en compte par le prescripteur dans le Traitement Courant."/>
+    <property>
+      <code value="isQualified"/>
+      <valueBoolean value="true"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="10000004"/>
+    <display value="Divergence non-intentionnelle"/>
+    <definition value="Divergence identifiée et qualifiée, entre la ligne de traitement du Bilan Médicamenteux et celle du Traitement Courant. Méconnaissance, par le prescripteur, du Bilan Médicamenteux dans le Traitement Courant."/>
+    <property>
+      <code value="isQualified"/>
+      <valueBoolean value="true"/>
+    </property>
+  </concept>
+</CodeSystem>
