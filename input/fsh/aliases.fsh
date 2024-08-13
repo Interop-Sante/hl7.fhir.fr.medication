@@ -22,3 +22,14 @@ Alias: $FrCorePractitionerRoleProfession = https://hl7.fr/ig/fhir/core/Structure
 Alias: $FrCoreRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person
 Alias: $FrCorePractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role
 Alias: $FrCorePractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner
+Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins
+
+// Mapping PN13 aliases
+Alias: $PN13Schema = https://interopsante.org/pn13/xsd
+Alias: $ISO3166 = urn:iso:std:iso:3166
+Alias: $FhirGender = http://hl7.org/fhir/administrative-gender
+Alias: $PN13Gender = https://interopsante.org/pn13/SIPh_sexe
+// A valider et le cas échéant mettre à jour avec l'url du profil
+Alias: $FrInpatientMedicationRequest = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrInpatientMedicationRequest
+Alias: $PN13TypeComposant = https://interopsante.org/pn13/SIPh_TypeComposant
+Alias: $FrMedicationProfileList = https://hl7.fr/ig/fhir/Medication/CodeSystem/fr-medication-profil-list
