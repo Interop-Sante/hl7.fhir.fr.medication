@@ -1,4 +1,4 @@
-Instance: fr-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap
+Instance: PN13-FHIR-prescmed-patient-avec-INS-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "FrPN13FHIRMedicationPrescriptionPatientINSConceptMap"
@@ -28,8 +28,8 @@ Usage: #definition
 * group[1].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Patient/INS
 * group[1].element[0].target[0].code = $FrCorePatientINS#Patient.identifier.value
 * group[1].element[0].target[0].equivalence = #equal
-* group[1].element[0].target[0].dependOn[0].property = "M_prescription_médicaments/Patient/INS_OID"
-* group[1].element[0].target[0].dependOn[0].value = "1.2.250.1.213.1.4.8"
+* group[1].element[0].target[0].dependsOn[0].property = "M_prescription_médicaments/Patient/INS_OID"
+* group[1].element[0].target[0].dependsOn[0].value = "1.2.250.1.213.1.4.8"
 * group[1].element[0].target[0].product[0].property = "Patient.identfier.use"
 * group[1].element[0].target[0].product[0].value = "official"
 * group[1].element[0].target[0].product[1].property = "Patient.identifier.type.coding.code"
@@ -41,8 +41,8 @@ Usage: #definition
 * group[2].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Patient/INS
 * group[2].element[0].target[0].code = $FrCorePatientINS#Patient.identifier.value
 * group[2].element[0].target[0].equivalence = #equal
-* group[2].element[0].target[0].dependOn[0].property = "M_prescription_médicaments/Patient/INS_OID"
-* group[2].element[0].target[0].dependOn[0].value = "1.2.250.1.213.1.4.9"
+* group[2].element[0].target[0].dependsOn[0].property = "M_prescription_médicaments/Patient/INS_OID"
+* group[2].element[0].target[0].dependsOn[0].value = "1.2.250.1.213.1.4.9"
 * group[2].element[0].target[0].product[0].property = "Patient.identfier.use"
 * group[2].element[0].target[0].product[0].value = "official"
 * group[2].element[0].target[0].product[1].property = "Patient.identifier.type.coding.code"

@@ -1,4 +1,4 @@
-Instance: fr-PN13-FHIR-gender-conceptmap
+Instance: PN13-FHIR-gender-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * status = #draft

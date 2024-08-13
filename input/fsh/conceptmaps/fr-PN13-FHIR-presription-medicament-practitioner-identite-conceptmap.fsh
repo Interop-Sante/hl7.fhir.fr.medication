@@ -1,4 +1,4 @@
-Instance: fr-PN13-FHIR-prescription-medicament-practitioner-identite-conceptmap
+Instance: PN13-FHIR-prescmed-practitioner-identite-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "FrPN13FHIRMedicationPrescriptionPractitionerIdentiteConceptMap"
@@ -20,28 +20,28 @@ Usage: #definition
 * group[0].element[1].target[0].equivalence = #equivalent
 * group[0].element[1].target[0].comment = "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:"
 * group[1].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Nom_usage
-* group[1].element[0].target[0].code = $FrCorePractioner#Practioner.name.family
+* group[1].element[0].target[0].code = $FrCorePractitioner#Practitioner.name.family
 * group[1].element[0].target[0].equivalence = #equal
 * group[1].element[0].target[0].product[0].property = "Practitioner.name.use"
 * group[1].element[0].target[0].product[0].value = "usual"
 * group[1].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Prénom_usage
-* group[1].element[1].target[0].code = $FrCorePractioner#Practioner.name.given
+* group[1].element[1].target[0].code = $FrCorePractitioner#Practitioner.name.given
 * group[1].element[1].target[0].equivalence = #equal
 * group[1].element[2].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Civilité
-* group[1].element[2].target[0].code = $FrCorePractioner#Practioner.name.prefix
+* group[1].element[2].target[0].code = $FrCorePractitioner#Practitioner.name.prefix
 * group[1].element[2].target[0].equivalence = #equivalent
 * group[1].element[2].target[0].comment = "Les civilités sont libres dans PN13 alors qu'elles proviennent d'un jeu de valeurs extensible dans le profil FrCorePractitioner"
 * group[1].element[3].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Titre
-* group[1].element[3].target[0].code = $FrCorePractioner#Practioner.name.suffix
+* group[1].element[3].target[0].code = $FrCorePractitioner#Practitioner.name.suffix
 * group[1].element[3].target[0].equivalence = #equivalent
 * group[1].element[3].target[0].comment = "Les titres sont libres dans PN13 alors qu'ils proviennent d'un jeu de valeurs extensible dans le profil FrCorePractitioner"
 * group[2].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Nom_famille
-* group[2].element[0].target[0].code = $FrCorePractioner#Practioner.name.family
+* group[2].element[0].target[0].code = $FrCorePractitioner#Practitioner.name.family
 * group[2].element[0].target[0].equivalence = #equal
 * group[2].element[0].target[0].product[0].property = "Practitioner.name.use"
 * group[2].element[0].target[0].product[0].value = "official"
 * group[2].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Prénoms
-* group[2].element[1].target[0].code = $FrCorePractioner#Practioner.name.given
+* group[2].element[1].target[0].code = $FrCorePractitioner#Practitioner.name.given
 * group[2].element[1].target[0].equivalence = #equivalent
 * group[2].element[1].target[0].comment = "L'élément PN13 contient une liste de prénoms difficile à parser pour en extraire les différents prénoms à mettre dans une répétition de given en FHIR"
 * group[3].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Initiales

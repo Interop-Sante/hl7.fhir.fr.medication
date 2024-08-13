@@ -1,4 +1,4 @@
-Instance: fr-PN13-FHIR-prescription-medicament-practitioner-id-seule-conceptmap
+Instance: PN13-FHIR-prescmed-practitioner-id-seule-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "FrPN13FHIRMedicationPrescriptionPractitionerIdSeuleConceptMap"

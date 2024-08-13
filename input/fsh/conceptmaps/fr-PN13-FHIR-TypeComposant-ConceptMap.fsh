@@ -1,4 +1,4 @@
-Instance: fr-PN13-FHIR-TypoComposant-conceptmap
+Instance: PN13-FHIR-TypoComposant-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "FrPN13FHIRTypeComposantConceptMap"
