@@ -22,7 +22,7 @@ Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'évén
 
 ### Les 3 documents supports de la conciliation
 
-![DocumentsSupportsConciliation](/input/imapes-source/Conciliation1.jpg)
+![DocumentsSupportsConciliation](/input/images-source/Conciliation1.jpg)
 
 ### Les ressources profilée par Interop'Santé
 
@@ -33,11 +33,11 @@ La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux 
 
 ### Dépendance des ressources profilés par Interop'Santé
 
-![IGMedicationDependanceRessourcesProfilees](/input/imapes-source/Conciliation2.jpg)
+![IGMedicationDependanceRessourcesProfilees](/input/images-source/Conciliation2.jpg)
 
 Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrOnAdmissionRetroactiveMedicationReconciliationComposition.fsh) contraint le profil général [FrMedicationReconciliationComposition](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrMedicationReconciliationComposition.fsh) pour répondre au cas particulier de la **conciliation rétroactive d'admission**. Il référence un cas particulier de *traitement médicamenteux courant*, l'**ordonnance médicale d'admission (OMA)**, ordonnance adressée par le profil [FrOnAdmissionMedicationComposition](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrOnAdmissionMedicationComposition.fsh) qui contraint le profil général [FrCurrentMedicationComposition](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrCurrentMedicationComposition.fsh).
 
-![Conciliation-ConciliationRetroactiveALAdmissiones](/input/imapes-source/Conciliation3.jpg)
+![Conciliation-ConciliationRetroactiveALAdmissiones](/input/images-source/Conciliation3.jpg)
 
 ## Cas d’usage
 
