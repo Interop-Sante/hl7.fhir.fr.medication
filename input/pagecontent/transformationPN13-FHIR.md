@@ -31,9 +31,9 @@ Les "ressources de contexte" qui sont à référencer par la prescription FHIR (
 
 La ConceptMap à utiliser dépend de la qualification de l'Identité Nationale de Santé du patient:
 
-- Si l'INS est qualifiée (i.e. présence du matricule INS et 'Statut_idpat' à 'VALI' dans le fichier PN13): [FR-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap](StructureDefinition-Fr-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap.html)
+- Si l'INS est qualifiée (i.e. présence du matricule INS et 'Statut_idpat' à 'VALI' dans le fichier PN13): [FR-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap](ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.html)
 
-- Dans le cas contraire: [FR-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap](StructureDefinition-Fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap.html)
+- Dans le cas contraire: [FR-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap](ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap.html)
 
 ### Type de prescription
 
