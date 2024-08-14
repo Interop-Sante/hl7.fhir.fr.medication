@@ -222,18 +222,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>bilan médicamenteux : voir profil <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
-  <li>fiche de conciliation des traitements médicamenteux (FCT) : voir profil <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
+  <li>fiche de conciliation des traitements médicamenteux (FCT) : voir profil <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
 </ul>
 
-<p>La FCT fait référence au <em>bilan médicamenteux</em> (le traitement médicamenteux du patient avant hospitalisation) et au <em>traitement médicamenteux courant</em> (le traitement médicamenteux en cours lors de l’hospitalisation). De ce fait, le profil <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a> a été défini pour rendre compte de ce <em>traitement médicamenteux courant</em>.</p>
+<p>La FCT fait référence au <em>bilan médicamenteux</em> (le traitement médicamenteux du patient avant hospitalisation) et au <em>traitement médicamenteux courant</em> (le traitement médicamenteux en cours lors de l’hospitalisation). De ce fait, le profil <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a> a été défini pour rendre compte de ce <em>traitement médicamenteux courant</em>.</p>
 
 <h3 id="dépendance-des-ressources-profilés-par-interopsanté">Dépendance des ressources profilés par Interop’Santé</h3>
 
-<p><a name="l453">​</a><img src="/input/images-source/Conciliation2.jpg" alt="IGMedicationDependanceRessourcesProfilees"/></p>
+<p><a name="l453">​</a><img src="/images-source/Conciliation2.jpg" alt="IGMedicationDependanceRessourcesProfilees"/></p>
 
-<p>Le profil <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a> contraint le profil général <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a> pour répondre au cas particulier de la <strong>conciliation rétroactive d’admission</strong>. Il référence un cas particulier de <em>traitement médicamenteux courant</em>, l’<strong>ordonnance médicale d’admission (OMA)</strong>, ordonnance adressée par le profil <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a> qui contraint le profil général <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a>.</p>
+<p>Le profil <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a> contraint le profil général <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a> pour répondre au cas particulier de la <strong>conciliation rétroactive d’admission</strong>. Il référence un cas particulier de <em>traitement médicamenteux courant</em>, l’<strong>ordonnance médicale d’admission (OMA)</strong>, ordonnance adressée par le profil <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a> qui contraint le profil général <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a>.</p>
 
-<p><a name="l480">​</a><img src="/input/images-source/Conciliation3.jpg" alt="Conciliation-ConciliationRetroactiveALAdmissiones"/></p>
+<p><a name="l480">​</a><img src="./images-source/Conciliation3.jpg" alt="Conciliation-ConciliationRetroactiveALAdmissiones"/></p>
 
 <h2 id="cas-dusage">Cas d’usage</h2>
 
@@ -252,16 +252,16 @@ C’est un non-choix par défaut de temps disponible …</p>
 <p>Selon le document, la composition du <em>Bundle</em> est</p>
 
 <ul>
-  <li>pour le <strong>Bilan Médicamenteux</strong>, une ressource <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
-  <li>pour le <strong>Traitement Médicamenteux courant</strong>, une ressource <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a></li>
-  <li>pour la <strong>Fiche de Conciliation des Traitements (FCT)</strong>, une ressource <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
+  <li>pour le <strong>Bilan Médicamenteux</strong>, une ressource <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
+  <li>pour le <strong>Traitement Médicamenteux courant</strong>, une ressource <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a></li>
+  <li>pour la <strong>Fiche de Conciliation des Traitements (FCT)</strong>, une ressource <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
 </ul>
 
 <p>Pour la conciliation rétroactive d’admission,</p>
 
 <ul>
-  <li>Le <strong>Traitement Médicamenteux courant</strong> est l’<strong>Ordonnance Médicamenteuse d’Admission</strong> représentée par la composition <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a></li>
-  <li>La <strong>Fiche de Conciliation des Traitements (FCT)</strong> est la <strong>Fiche de Conciliation rétroactive des Traitements à l’admission</strong> représentée par la composition <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a></li>
+  <li>Le <strong>Traitement Médicamenteux courant</strong> est l’<strong>Ordonnance Médicamenteuse d’Admission</strong> représentée par la composition <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a></li>
+  <li>La <strong>Fiche de Conciliation des Traitements (FCT)</strong> est la <strong>Fiche de Conciliation rétroactive des Traitements à l’admission</strong> représentée par la composition <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a></li>
 </ul>
 
 <h2 id="exemples">Exemples</h2>
@@ -292,7 +292,7 @@ C’est un non-choix par défaut de temps disponible …</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 14, 2024 14:25+0000">2024-08-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 14, 2024 14:41+0000">2024-08-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
