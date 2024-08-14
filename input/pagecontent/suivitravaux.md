@@ -53,85 +53,85 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
 
 ### Version 1.0
 
-Alicia Bel-Létoile - Synapse Médecine
-Clément Berard - OpenXtrem
-Thomas Blanchard - Malta Informatique
-Raphaël Boeve - Evolucare
-Olivier Boux - PHAST
-Jean-Christophe Cauvin - Dedalus
-Frédéric Dechanet - Maincare
-David Delforge-Trollet - Malta Informatique
-David Deslauriers - SIB
-Baptiste Durand-Bret - Snapse Médecine
-Jérôme Duvernois - eSanté Solution
-Olivier Gescuena - Computer Engineering
-Isabelle Gibaud - PHAST
-Mathieu Grivois - Dedalus
-Eric Guessant - SIB
-Gwenaël Guiriec - SIB
-Cassandre Huc - MIPIH
-François Macary - PHAST
-Nicolas Maschpy - Computer Engineering
-Thierry Mitouard - Vidal
-Julien Olivier - Evolucare
-Zoé Phalippou - MaPUI
-Victor Pigeon - MaPUI
-Pierre Pilven - Keen Turtle
-Yohann Poiron - OpenXtrem
-Pierre Renaudin - Bimedoc
-Clara Subts - Dedalus
-Clotaire Thocquenne - Evolucare
+- Alicia Bel-Létoile - Synapse Médecine
+- Clément Berard - OpenXtrem
+- Thomas Blanchard - Malta Informatique
+- Raphaël Boeve - Evolucare
+- Olivier Boux - PHAST
+- Jean-Christophe Cauvin - Dedalus
+- Frédéric Dechanet - Maincare
+- David Delforge-Trollet - Malta Informatique
+- David Deslauriers - SIB
+- Baptiste Durand-Bret - Snapse Médecine
+- Jérôme Duvernois - eSanté Solution
+- Olivier Gescuena - Computer Engineering
+- Isabelle Gibaud - PHAST
+- Mathieu Grivois - Dedalus
+- Eric Guessant - SIB
+- Gwenaël Guiriec - SIB
+- Cassandre Huc - MIPIH
+- François Macary - PHAST
+- Nicolas Maschpy - Computer Engineering
+- Thierry Mitouard - Vidal
+- Julien Olivier - Evolucare
+- Zoé Phalippou - MaPUI
+- Victor Pigeon - MaPUI
+- Pierre Pilven - Keen Turtle
+- Yohann Poiron - OpenXtrem
+- Pierre Renaudin - Bimedoc
+- Clara Subts - Dedalus
+- Clotaire Thocquenne - Evolucare
 
 ### Version 1.1
 
-Pascal André - Cegisanté
-Guillaume Arras - PHAST
-Michel Blondel - PHAST
-Aymeric Boffa - Bimedoc
-Abdellali Boussadi - ANS
-Yann Briand - ANS
-Loïc Brotons - Galeon
-Christophe Brucker - Nammu Lab
-Mathilde Carca - Pharmia
-Georges-Alexandre Chastin - Enovacom
-Jean-Christophe Cauvin - Dedalus
-Frédéric Dechanet Maincare
-Denis Delamarre - CHU Rennes
-Emmanuel Delvas - Maincaire
-Cloé Demars - Vidal
-Catherine Duclos - APHP
-Eric Dufour - Selic
-Jean-Michel Estrade - Evolucare
-Alexandre Frerot - Vidal
-Nawra Georgi - MaPUI
-Isabelle Gibaud - ANS
-Mathieu Grivois - Dedalus
-Alexandre Grosbois - Xperis
-Maxime Guerreiro - Ordoclic
-Baptiste Guilbert - CHU Rennes
-Thomas Haquet - Normand’e-Santé
-Lucy Laporte - Collective Thinking
-Frédéric Laurent - CHU Rennes
-Nolwenn Le Buhan - Kereval
-Sarah Leroy - Kereval
-Pierre Liot - HAS
-Pierre Luce - Posos
-François Macary - Use&Share
-Anne Maheust - Use&Share
-Patrick Mazaud - CNOP
-Manuel Metz - Lifen
-Thierry Mitouard - Vidal
-Mirojane Mohammad - HAS
-Malek Mouazer - APHP
-Julien Monteuil - PHAST
-Thierry Morvand - Santé Service Bayonne
-Alexandre Petit - Bowmedical
-Alain Perie - ANS
-Cassandre Piraud - Magellan Consulting
-Yohann Poiron - Xtrem Santé puis ANS
-Alain Ribault - Kereval
-Tristan Rieu - Kereval
-Nicolas Riss - ANS
-Fanny Serre Kereval
-Benoit Tissot - APHP
-Eliott Tourtois - Posos
+- Pascal André - Cegisanté
+- Guillaume Arras - PHAST
+- Michel Blondel - PHAST
+- Aymeric Boffa - Bimedoc
+- Abdellali Boussadi - ANS
+- Yann Briand - ANS
+- Loïc Brotons - Galeon
+- Christophe Brucker - Nammu Lab
+- Mathilde Carca - Pharmia
+- Georges-Alexandre Chastin - Enovacom
+- Jean-Christophe Cauvin - Dedalus
+- Frédéric Dechanet Maincare
+- Denis Delamarre - CHU Rennes
+- Emmanuel Delvas - Maincaire
+- Cloé Demars - Vidal
+- Catherine Duclos - APHP
+- Eric Dufour - Selic
+- Jean-Michel Estrade - Evolucare
+- Alexandre Frerot - Vidal
+- Nawra Georgi - MaPUI
+- Isabelle Gibaud - ANS
+- Mathieu Grivois - Dedalus
+- Alexandre Grosbois - Xperis
+- Maxime Guerreiro - Ordoclic
+- Baptiste Guilbert - CHU Rennes
+- Thomas Haquet - Normand’e-Santé
+- Lucy Laporte - Collective Thinking
+- Frédéric Laurent - CHU Rennes
+- Nolwenn Le Buhan - Kereval
+- Sarah Leroy - Kereval
+- Pierre Liot - HAS
+- Pierre Luce - Posos
+- François Macary - Use&Share
+- Anne Maheust - Use&Share
+- Patrick Mazaud - CNOP
+- Manuel Metz - Lifen
+- Thierry Mitouard - Vidal
+- Mirojane Mohammad - HAS
+- Malek Mouazer - APHP
+- Julien Monteuil - PHAST
+- Thierry Morvand - Santé Service Bayonne
+- Alexandre Petit - Bowmedical
+- Alain Perie - ANS
+- Cassandre Piraud - Magellan Consulting
+- Yohann Poiron - Xtrem Santé puis ANS
+- Alain Ribault - Kereval
+- Tristan Rieu - Kereval
+- Nicolas Riss - ANS
+- Fanny Serre Kereval
+- Benoit Tissot - APHP
+- Eliott Tourtois - Posos

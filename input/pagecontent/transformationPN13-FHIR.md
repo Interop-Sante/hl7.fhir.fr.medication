@@ -11,7 +11,7 @@ Prévu pour une version ultérieure de ce guide
 La traduction d'une prescription PN13 en FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l'aide des ressources ConceptMapt fournies dans ce guide  ***A mettre à jour une fois les ConceptMap correspondantes réalisées***:
 
 - 1 resourcce XXX ***A préciser après décision de comment on représente la prescription, soit ce sont des ressources contained soit ce sont des ressources dans un Bundle***
-- 1 à n ressource(s) MedicationRequest suivant le profil [FrInpatientMedicationRequest](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrInpatientMedicationRequest.fsh). Leur alimentation à partir des données PN13 est documenté dans FR-PN13-FHIR-prescription-medicament-medicationrequest-conceptmap. Chaque ressource MedicationRequest référence:
+- 1 à n ressource(s) MedicationRequest suivant le profil [FrInpatientMedicationRequest](StructureDefinition-FrInpatientMedicationRequest.html). Leur alimentation à partir des données PN13 est documenté dans FR-PN13-FHIR-prescription-medicament-medicationrequest-conceptmap. Chaque ressource MedicationRequest référence:
 -- 1 ressource Patient cf. section **Existence préalable des ressources référecées** pour la ressource ConceptMap à éventuellement utiliser (si la ressource Patient référencée n'existe pas déjà)
 -- 1 ressource Encounter cf. section **Existence préalable des ressources référecées** pour la ressource ConceptMap à utiliser (si la ressource Encounter référencée n'existe pas déjà)
 -- 1 ressource Practitioner cf. section **Existence préalable des ressources référecées** pour la ressource ConceptMap à utiliser (si la ressource Practitioner référencée n'existe pas déjà)
@@ -31,9 +31,9 @@ Les "ressources de contexte" qui sont à référencer par la prescription FHIR (
 
 La ConceptMap à utiliser dépend de la qualification de l'Identité Nationale de Santé du patient:
 
-- Si l'INS est qualifiée (i.e. présence du matricule INS et 'Statut_idpat' à 'VALI' dans le fichier PN13): [FR-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/conceptmaps/Fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap.fsh)
+- Si l'INS est qualifiée (i.e. présence du matricule INS et 'Statut_idpat' à 'VALI' dans le fichier PN13): [FR-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap](StructureDefinition-Fr-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap.html)
 
-- Dans le cas contraire: [FR-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap](https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/conceptmaps/Fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap.fsh)
+- Dans le cas contraire: [FR-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap](StructureDefinition-Fr-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap.html)
 
 ### Type de prescription
 

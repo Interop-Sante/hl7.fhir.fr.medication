@@ -35,7 +35,7 @@ La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux 
 
 ### Dépendance des ressources profilés par Interop'Santé
 
-![IGMedicationDependanceRessourcesProfilees](/images-source/Conciliation2.jpg)
+![IGMedicationDependanceRessourcesProfilees](HL7.FHIR.FR.MEDICATION/input/images-source/Conciliation2.jpg)
 
 Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html) contraint le profil général [FrMedicationReconciliationComposition](StructureDefinition-FrMedicationReconciliationComposition.html) pour répondre au cas particulier de la **conciliation rétroactive d'admission**. Il référence un cas particulier de *traitement médicamenteux courant*, l'**ordonnance médicale d'admission (OMA)**, ordonnance adressée par le profil [FrOnAdmissionMedicationComposition](StructureDefinition-FrOnAdmissionMedicationComposition.html) qui contraint le profil général [FrCurrentMedicationComposition](StructureDefinition-FrCurrentMedicationComposition.html).
 
