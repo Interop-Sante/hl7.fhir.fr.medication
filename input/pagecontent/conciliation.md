@@ -22,13 +22,13 @@ Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'évén
 
 ### Les 3 documents supports de la conciliation
 
-![DocumentsSupportsConciliation](/input/images-source/Conciliation1.png)
+![DocumentsSupportsConciliation](Conciliation1.png)
 
 ### Les ressources profilée par Interop'Santé
 
 Le profilage de ces ressources répond aux recommandations du [guide méthodologique de mise en œuvre de la conciliation médicamenteuse](https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante) publié par la Haute Autorité de Santé.
 
-- bilan médicamenteux : voir profil [FrMedicationHistoryComposition](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrMedicationHistoryComposition.html)
+- bilan médicamenteux : voir profil [FrMedicationHistoryComposition](StructureDefinition-FrMedicationHistoryComposition.html)
 - fiche de conciliation des traitements médicamenteux (FCT) : voir profil [FrMedicationReconciliationComposition](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrMedicationReconciliationComposition.html)
 
 La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux du patient avant hospitalisation) et au *traitement médicamenteux courant* (le traitement médicamenteux en cours lors de l'hospitalisation). De ce fait, le profil [FrCurrentMedicationComposition](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/StructureDefinition-FrCurrentMedicationComposition.html) a été défini pour rendre compte de ce *traitement médicamenteux courant*.
