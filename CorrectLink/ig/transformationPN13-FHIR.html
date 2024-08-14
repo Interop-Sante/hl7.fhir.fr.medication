@@ -188,15 +188,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="la-prescritpion">La prescritpion</h2>
 
-<p>La traduction d’une prescription PN13 en FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l’aide des ressources ConceptMapt fournies dans ce guide  <strong><em>A mettre à jour une fois les ConceptMap correspondantes réalisées</em></strong>:</p>
+<p>La traduction d’une prescription PN13 en FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l’aide des ressources ConceptMapt fournies dans ce guide:</p>
 
 <ul>
-  <li>1 resourcce XXX <strong><em>A préciser après décision de comment on représente la prescription, soit ce sont des ressources contained soit ce sont des ressources dans un Bundle</em></strong></li>
-  <li>1 à n ressource(s) MedicationRequest suivant le profil <a href="StructureDefinition-FrInpatientMedicationRequest.html">FrInpatientMedicationRequest</a>. Leur alimentation à partir des données PN13 est documenté dans FR-PN13-FHIR-prescription-medicament-medicationrequest-conceptmap. Chaque ressource MedicationRequest référence:
-– 1 ressource Patient cf. section <strong>Existence préalable des ressources référecées</strong> pour la ressource ConceptMap à éventuellement utiliser (si la ressource Patient référencée n’existe pas déjà)
-– 1 ressource Encounter cf. section <strong>Existence préalable des ressources référecées</strong> pour la ressource ConceptMap à utiliser (si la ressource Encounter référencée n’existe pas déjà)
-– 1 ressource Practitioner cf. section <strong>Existence préalable des ressources référecées</strong> pour la ressource ConceptMap à utiliser (si la ressource Practitioner référencée n’existe pas déjà)
-– 1 à n ressource(s) Medication cf. section <strong>Type de prescription</strong></li>
+  <li>1 ressource XXX <strong><em>A préciser après décision de comment on représente la prescription, soit ce sont des ressources contained soit ce sont des ressources dans un Bundle</em></strong></li>
+  <li>1 à n ressource(s) MedicationRequest suivant le profil <a href="StructureDefinition-FrInpatientMedicationRequest.html">FrInpatientMedicationRequest</a>. Leur alimentation à partir des données PN13 est documenté dans <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">PN13-FHIR-prescmed-medicationrequest-conceptmap</a>. Chaque ressource MedicationRequest référence:
+    <ul>
+      <li>1 ressource Patient cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource ConceptMap à éventuellement utiliser (si la ressource Patient référencée n’existe pas déjà)</li>
+      <li>0 à 1 ressource Encounter cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource ConceptMap à utiliser (si la ressource Encounter référencée n’existe pas déjà)</li>
+      <li>0 à 1 ressource Practitioner cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource ConceptMap à utiliser (si la ressource Practitioner référencée n’existe pas déjà)</li>
+      <li>1 à n ressource(s) Medication cf. section <strong>Type de prescription</strong></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="existence-préalable-des-ressources-référencées">Existence préalable des ressources référencées</h3>
@@ -204,11 +207,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Les “ressources de contexte” qui sont à référencer par la prescription FHIR (i.e. Patient, Practitioner et Encounter) peuvent déjà exister dans le serveur FHIR:</p>
 
 <ul>
-  <li>Si une “ressource de contexte”, il convient d’éviter de créer des doublons et récupérer les id FHIR de ces ressources pour créer les références. A cette occasion, un point de vigilance particulier est bien sûr à apporter à l’identification de la ressource Patient.</li>
-  <li>Si une “ressource de contexte” n’existe pas, il convient soit de la créer sur le serveur, soit de la créer pour l’intégrer à la préscription <strong><em>A préciser après décision de comment on représente la prescription, soit ce sont des ressources contained soit ce sont des ressources dans un Bundle</em></strong>. Les ConceptMap à utiliser pour cette création sont:
-– Pour les ressources Patient: cf. section <em>cas particulier du niveau de qualitication des identités patients</em>
-– Pour les ressources Practitioner: FR-PN13-FHIR-prescription-medicament-practitioner-conceptmap <strong><em>Mettre le lien vers la ConceptMap</em></strong>
-– Pour les ressources Encounter: FR-PN13-FHIR-prescription-medicament-encounter-conceptmap <strong><em>Mettre le lien vers la ConceptMap</em></strong></li>
+  <li>Si des “ressources de contexte” existent déjà, il convient d’éviter de créer des doublons et d’utiliser les id FHIR de ces ressources existantes afin de créer les références. A cette occasion, un point de vigilance particulier est bien sûr à apporter à l’identification de la ressource Patient en particulier si l’INS n’est pas qualifiée.</li>
+  <li>Si une “ressource de contexte” n’existe pas, il convient soit de la créer sur le serveur, soit de la créer pour l’intégrer à la préscription <strong><em>A préciser après décision de comment on représente la prescription, soit ce sont des ressources contained soit ce sont des ressources dans un Bundle</em></strong>. Les ConceptMaps à utiliser pour ces créations sont:
+    <ul>
+      <li>Pour les ressources Patient: cf. section <em>cas particulier du niveau de qualitication des identités patients</em></li>
+      <li>Pour les ressources Encounter: <a href="ConceptMap-PN13-FHIR-prescmed-encounter-conceptmap.html">PN13-FHIR-prescmed-encounter-conceptmap</a></li>
+      <li>Pour les ressources Practitioner:
+        <ul>
+          <li>Si le professionnel est identifié uniquemant par son identifiant: <a href="ConceptMap-PN13-FHIR-prescmed-practitioner-id-seule-conceptmap.html">PN13-FHIR-prescmed-practitioner-id-seule-conceptmap</a></li>
+          <li>Si le professionnel est identifié par des traits d’identité (avec ou sans identifiant): <a href="ConceptMap-PN13-FHIR-prescmed-practitioner-id-seule-conceptmap.html">PN13-FHIR-prescmed-practitioner-identite-conceptmap</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h4 id="cas-particulier-du-niveau-de-qualification-des-identités-patients">Cas particulier du niveau de qualification des identités patients</h4>
@@ -217,10 +228,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>
-    <p>Si l’INS est qualifiée (i.e. présence du matricule INS et ‘Statut_idpat’ à ‘VALI’ dans le fichier PN13): <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.html">FR-PN13-FHIR-prescription-medicament-patient-avec-INS-conceptmap</a></p>
+    <p>Si l’INS est qualifiée (i.e. présence du matricule INS et ‘Statut_idpat’ à ‘VALI’ dans le fichier PN13): <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.html">PN13-FHIR-prescmed-patient-avec-INS-conceptmap</a></p>
   </li>
   <li>
-    <p>Dans le cas contraire: <a href="ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap.html">FR-PN13-FHIR-prescription-medicament-patient-sans-INS-conceptmap</a></p>
+    <p>Dans le cas contraire: <a href="ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap.html">PN13-FHIR-prescmed-patient-sans-INS-conceptmap</a></p>
   </li>
 </ul>
 
@@ -251,7 +262,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 14, 2024 15:47+0000">2024-08-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 14, 2024 16:13+0000">2024-08-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
