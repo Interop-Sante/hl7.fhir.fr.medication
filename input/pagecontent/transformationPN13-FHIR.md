@@ -27,7 +27,7 @@ Les "ressources de contexte" qui sont à référencer par la prescription FHIR (
   - Pour les ressources Encounter: [PN13-FHIR-prescmed-encounter-conceptmap](ConceptMap-PN13-FHIR-prescmed-encounter-conceptmap.html)
   - Pour les ressources Practitioner:
     - Si le professionnel est identifié uniquemant par son identifiant: [PN13-FHIR-prescmed-practitioner-id-seule-conceptmap](ConceptMap-PN13-FHIR-prescmed-practitioner-id-seule-conceptmap.html)
-    - Si le professionnel est identifié par des traits d'identité (avec ou sans identifiant): [PN13-FHIR-prescmed-practitioner-identite-conceptmap](ConceptMap-PN13-FHIR-prescmed-practitioner-id-seule-conceptmap.html)
+    - Si le professionnel est identifié par des traits d'identité (avec ou sans identifiant): [PN13-FHIR-prescmed-practitioner-identite-conceptmap](ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.html)
 
 #### Cas particulier du niveau de qualification des identités patients
 
