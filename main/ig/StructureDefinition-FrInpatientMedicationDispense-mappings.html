@@ -224,7 +224,7 @@
         
           Draft
           
-            as of 2024-08-13
+            as of 2024-09-03
           
         
       </td>
@@ -259,49 +259,46 @@
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>FrInpatientMedicationDispense</b></td></tr>
  <tr><td>MedicationDispense</td><td>Entity. Role, or Act, Supply[moodCode=EVN]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;language</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>n/a, N/A, Act.text?</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>Entity. Role, or Act, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>n/a, II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT], .id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .outboundRelationship[typeCode=COMP]/target[classCode=PROC,moodCode=EVN]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>n/a, .statusCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;statusReason[x]</td><td>n/a, .outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=&quot;not done reason&quot;].value</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>n/a, CD, .inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;type of medication dispense&quot;].value</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>n/a, .participation[typeCode=PRD].role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .participation[typeCode=SBJ].role[classCode=PAT]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN, code=&quot;type of encounter or episode&quot;]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .outboundRelationship[typeCode=PERT].target[A_SupportingClinicalStatement CMET minimal with many different choices of classCodes(ORG, ENC, PROC, SPLY, SBADM, OBS) and each of the act class codes draws from one or more of the following moodCodes (EVN, DEF, INT PRMS, RQO, PRP, APT, ARQ, GOL)]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>n/a, .participation[typeCode=PRF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>.outboundRelationship[typeCode=COMP]/target[classCode=PROC,moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>.statusCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason[x]</td><td>.outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=&quot;not done reason&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>.inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;type of medication dispense&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>.participation[typeCode=PRD].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=SBJ].role[classCode=PAT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>.inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN, code=&quot;type of encounter or episode&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td>.outboundRelationship[typeCode=PERT].target[A_SupportingClinicalStatement CMET minimal with many different choices of classCodes(ORG, ENC, PROC, SPLY, SBADM, OBS) and each of the act class codes draws from one or more of the following moodCodes (EVN, DEF, INT PRMS, RQO, PRP, APT, ARQ, GOL)]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PRF]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>n/a, CD, participation[typeCode=PRF].functionCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .participation[typeCode=LOC].role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;authorizingPrescription</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .outboundRelationship[typeCode=FLFS].target[moodCode=RQO]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>n/a, CD, .code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;quantity</td><td>n/a, PQ, IVL&lt;PQ&gt;, MO, CO, depending on the values, .quantity</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;daysSupply</td><td>n/a, PQ, IVL&lt;PQ&gt;, MO, CO, depending on the values, effectiveUseTime</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;whenPrepared</td><td>n/a, .effectiveTime[xmi:type=IVL_TS].low</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;whenHandedOver</td><td>n/a, .effectiveTime[xmi:type=IVL_TS].high</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;destination</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .participation[typeCode=DST].role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;receiver</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .participation[typeCode=RCV].role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>n/a, Act, .inboundRelationship[typeCode=SUBJ]/source[classCode=ACT,moodCode=EVN]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;dosageInstruction</td><td>n/a, .outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;substitution</td><td>n/a, .outboundRelationship[typeCode=COMP].target[classCode=SUBST, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>participation[typeCode=PRF].functionCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>.participation[typeCode=LOC].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authorizingPrescription</td><td>.outboundRelationship[typeCode=FLFS].target[moodCode=RQO]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;quantity</td><td>.quantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;daysSupply</td><td>effectiveUseTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;whenPrepared</td><td>.effectiveTime[xmi:type=IVL_TS].low</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;whenHandedOver</td><td>.effectiveTime[xmi:type=IVL_TS].high</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;destination</td><td>.participation[typeCode=DST].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;receiver</td><td>.participation[typeCode=RCV].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship[typeCode=SUBJ]/source[classCode=ACT,moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosageInstruction</td><td>.outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;substitution</td><td>.outboundRelationship[typeCode=COMP].target[classCode=SUBST, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wasSubstituted</td><td>n/a, .actionNegationInd</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>n/a, CD, .code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reason</td><td>n/a, CD, .reasonCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;responsibleParty</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .participation[typeCode=PFM].role[classCode=ASSIGN]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;detectedIssue</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .inboundRelationship[typeCode=SUBJ]/source[classCode=ALRT,moodCode=EVN].value</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wasSubstituted</td><td>.actionNegationInd</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reason</td><td>.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;responsibleParty</td><td>.participation[typeCode=PFM].role[classCode=ASSIGN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;detectedIssue</td><td>.inboundRelationship[typeCode=SUBJ]/source[classCode=ALRT,moodCode=EVN].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td>.inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]</td> </tr>
 </table>
 <a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
  <tr><td colspan="3"><b>FrInpatientMedicationDispense</b></td></tr>
@@ -333,23 +330,18 @@
 <a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>FrInpatientMedicationDispense</b></td></tr>
  <tr><td>MedicationDispense</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>CX / EI (occasionally, more often EI maps to a resource id or a URL)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>CE/CNE/CWE</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>RXD-2-Dispense/Give Code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3-Patient ID List</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>CE/CNE/CWE</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authorizingPrescription</td><td>ORC-2 Placer Order Number</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>CE/CNE/CWE, RXD-33-Dispense Type</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;quantity</td><td>SN (see also Range) or CQ, RXD-4-Actual Dispense Amount / RXD-5.1-Actual Dispense Units.code / RXD-5.3-Actual Dispense Units.name of coding system</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;daysSupply</td><td>SN (see also Range) or CQ, TQ1.6 Timing/Quantity Segment Service Duration.Prior to v2.5, ORC.7.3 Common Order Segment / Quantity/Timing / Duration component.  This is a formatted string, first character for the time unit (e.g., D=days), followed by the value.  For example, “D14” represents “14 days supply”From v2.5 on, TQ1.6 Timing/Quantity Segment / Service Duration.  This is a CQ data type (&lt;Quantity (NM)&gt; ^ &lt;Units (CWE)&gt;), thus for days supply, assuming the unit of measure is “days”, the numeric value is TQ1.6.1 (…|14^For backwards compatibility, ORC.7 was permitted through v2.6.  Both forms (field and segment) may be present in v2.5, v2.5.1, and v2.6</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>RXD-33-Dispense Type</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;quantity</td><td>RXD-4-Actual Dispense Amount / RXD-5.1-Actual Dispense Units.code / RXD-5.3-Actual Dispense Units.name of coding system</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;daysSupply</td><td>TQ1.6 Timing/Quantity Segment Service Duration.Prior to v2.5, ORC.7.3 Common Order Segment / Quantity/Timing / Duration component.  This is a formatted string, first character for the time unit (e.g., D=days), followed by the value.  For example, “D14” represents “14 days supply”From v2.5 on, TQ1.6 Timing/Quantity Segment / Service Duration.  This is a CQ data type (&lt;Quantity (NM)&gt; ^ &lt;Units (CWE)&gt;), thus for days supply, assuming the unit of measure is “days”, the numeric value is TQ1.6.1 (…|14^For backwards compatibility, ORC.7 was permitted through v2.6.  Both forms (field and segment) may be present in v2.5, v2.5.1, and v2.6</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;whenPrepared</td><td>RXD-3-Date/Time Dispensed</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;whenHandedOver</td><td>RXD-3-Date/Time Dispensed</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;destination</td><td>RXD-13 Dispense-to Location; RXD-30 Dispense to Pharmacy; RXD-31 Dispense to Pharmacy Address</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>N/A, RXD-9 Dispense Notes</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>RXD-9 Dispense Notes</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;substitution</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>CE/CNE/CWE, RXO-9-Allow Substitutions / RXE-9-Substitution Status</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reason</td><td>CE/CNE/CWE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>RXO-9-Allow Substitutions / RXE-9-Substitution Status</td> </tr>
 </table>
 
 
@@ -377,7 +369,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 13, 2024 14:32+0000">2024-08-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 3, 2024 11:48+0000">2024-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

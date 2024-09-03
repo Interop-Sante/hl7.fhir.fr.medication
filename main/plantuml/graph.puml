@@ -60,6 +60,7 @@ package IG #DDDDDD{
 
         class FrInpatientMedicationRequest{
 
+             MedicationRequest.extension => [None..None]
              MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
              MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
              MedicationRequest.medication[x] => [None..None]
@@ -162,6 +163,7 @@ package IG #DDDDDD{
              Composition.attester.party.reference => [1..None]
              Composition.attester.party.identifier => [None..0]
              Composition.section => [1..1]
+             Composition.section.extension => [None..None]
              Composition.section.extension:compositionSourcing => <&plus>[0..*]
              Composition.section.title => [None..None]
              Composition.section.code.coding => [None..None]
@@ -178,6 +180,7 @@ package IG #DDDDDD{
              MedicationStatement.meta.tag => [None..0]
              MedicationStatement.implicitRules => [None..0]
              MedicationStatement.language => [None..None]
+             MedicationStatement.extension => [None..None]
              MedicationStatement.extension:statementSourcing => <&plus>[0..*]
              MedicationStatement.status => [None..None]
              MedicationStatement.medication[x] => [None..None]
@@ -197,6 +200,7 @@ package IG #DDDDDD{
 
         class FrMedicationNonproprietaryName{
 
+             Medication.extension => [None..None]
              Medication.extension:drugCharacteristic => <&plus>[0..*]
              Medication.code => [1..None]
              Medication.code.text => [None..None]
@@ -257,6 +261,7 @@ package IG #DDDDDD{
              MedicationStatement.meta.profile => [None..None]
              MedicationStatement.meta.tag => [None..0]
              MedicationStatement.implicitRules => [None..0]
+             MedicationStatement.extension => [None..None]
              MedicationStatement.extension:reconciliation => <&plus>[0..*]
              MedicationStatement.status => [None..None]
              MedicationStatement.medication[x] => [None..None]
