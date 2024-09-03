@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "FrPN13FHIRMedicationPrescriptionPractitionerIdSeuleConceptMap"] ; # 
   fhir:title [ fhir:v "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-14T16:30:57+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-09-03T11:41:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -32,21 +32,13 @@
   fhir:group ( [
      fhir:element ( [
        fhir:code [ fhir:v "Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.requester.identifier.value" ] ;
          fhir:equivalence [ fhir:v "equal" ]
        ] )
      ] [
        fhir:code [ fhir:v "Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur@Phast-uri_nomenclature" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.encounter.identifier.system" ] ;
          fhir:equivalence [ fhir:v "equal" ]
        ] )

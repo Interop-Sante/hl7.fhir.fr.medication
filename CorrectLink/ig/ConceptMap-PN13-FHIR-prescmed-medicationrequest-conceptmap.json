@@ -10,7 +10,7 @@
   "name" : "FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap",
   "title" : "Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2024-08-14T16:30:57+00:00",
+  "date" : "2024-09-03T11:41:37+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -26,10 +26,6 @@
     "element" : [{
       "code" : "Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr",
       "target" : [{
-        "modifierExtension" : [{
-          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
-          "valueCode" : "equal"
-        }],
         "code" : "MedicationRequest.identifier.value",
         "equivalence" : "equal"
       }]
@@ -37,10 +33,6 @@
     {
       "code" : "Messages@Phast-id_message",
       "target" : [{
-        "modifierExtension" : [{
-          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
-          "valueCode" : "equivalent"
-        }],
         "code" : "MedicationRequest.identifier.system",
         "equivalence" : "equivalent",
         "comment" : "S'il existe, l'identifiant de message PN13 est à transformer en un uri respectant les contraintes FHIR (par exemple constituant une url unique à partir de l'identifiant). S'il n'est pas renseigné, une autre manière de produire un uri pour le message PN13 traduit est à mettre en oeuvre"
@@ -51,10 +43,6 @@
     "element" : [{
       "code" : "Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Type_élément_prescr",
       "target" : [{
-        "modifierExtension" : [{
-          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
-          "valueCode" : "inexact"
-        }],
         "code" : "MedicationRequest.medicationReference.reference",
         "equivalence" : "inexact",
         "comment" : "Type_élément_precsr permet de déterminer le profil de la ressource Medication référencée par MedicationRequest.medicationReference.reference. La conceptMap fr-PN13-FHIR-TypeComposant-ConceptMap"

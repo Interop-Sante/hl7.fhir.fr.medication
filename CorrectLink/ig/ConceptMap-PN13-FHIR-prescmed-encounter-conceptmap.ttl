@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "FrPN13FHIRMedicationPrescriptionEncounterConceptMap"] ; # 
   fhir:title [ fhir:v "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-14T16:30:57+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-09-03T11:41:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -32,21 +32,13 @@
   fhir:group ( [
      fhir:element ( [
        fhir:code [ fhir:v "Messages/M_prescription_médicaments/Séjour/Id_séjour" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.encounter.identifier.value" ] ;
          fhir:equivalence [ fhir:v "equal" ]
        ] )
      ] [
        fhir:code [ fhir:v "Messages/M_prescription_médicaments/Séjour/DI_séjour" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.encounter.identifier.system" ] ;
          fhir:equivalence [ fhir:v "equivalent" ] ;
          fhir:comment [ fhir:v "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:" ]

@@ -10,7 +10,7 @@
   "name" : "FrPN13FHIRMedicationPrescriptionEncounterConceptMap",
   "title" : "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2024-08-14T16:30:57+00:00",
+  "date" : "2024-09-03T11:41:37+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -26,10 +26,6 @@
     "element" : [{
       "code" : "Messages/M_prescription_médicaments/Séjour/Id_séjour",
       "target" : [{
-        "modifierExtension" : [{
-          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
-          "valueCode" : "equal"
-        }],
         "code" : "MedicationRequest.encounter.identifier.value",
         "equivalence" : "equal"
       }]
@@ -37,10 +33,6 @@
     {
       "code" : "Messages/M_prescription_médicaments/Séjour/DI_séjour",
       "target" : [{
-        "modifierExtension" : [{
-          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
-          "valueCode" : "equivalent"
-        }],
         "code" : "MedicationRequest.encounter.identifier.system",
         "equivalence" : "equivalent",
         "comment" : "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:"

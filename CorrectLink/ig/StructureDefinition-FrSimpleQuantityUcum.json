@@ -10,7 +10,7 @@
   "name" : "FrSimpleQuantityUcum",
   "title" : "SimpleQuantity with UCUM quantity unit",
   "status" : "draft",
-  "date" : "2024-08-14T16:30:57+00:00",
+  "date" : "2024-09-03T11:41:37+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -65,7 +65,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Quantity"
       },
       {
         "key" : "sqty-1",
@@ -109,6 +109,8 @@
         }],
         "code" : "http://hl7.org/fhirpath/System.String"
       }],
+      "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -116,14 +118,6 @@
     },
     {
       "id" : "Quantity.extension",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode" : "normative"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode" : "4.0.0"
-      }],
       "path" : "Quantity.extension",
       "slicing" : {
         "discriminator" : [{
@@ -148,7 +142,6 @@
       "type" : [{
         "code" : "Extension"
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -162,16 +155,14 @@
         "severity" : "error",
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
-        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
+      "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
-      },
-      {
-        "identity" : "rim",
-        "map" : "N/A"
       }]
     },
     {
@@ -191,7 +182,6 @@
       "type" : [{
         "code" : "decimal"
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -200,12 +190,9 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
         "map" : "SN.2  / CQ - N/A"
       },
@@ -219,7 +206,6 @@
       "path" : "Quantity.comparator",
       "short" : "< | <= | >= | > - how to understand the value",
       "definition" : "Not allowed to be used in this context",
-      "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "requirements" : "Need a framework for handling measures where the value is <5ug/L or >400mg/L due to the limitations of measuring methodology.",
       "min" : 0,
       "max" : "0",
@@ -232,7 +218,6 @@
         "code" : "code"
       }],
       "meaningWhenMissing" : "If there is no comparator, then there is no modification of the value",
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -254,10 +239,6 @@
         "valueSet" : "http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1"
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
         "map" : "SN.1  / CQ.1"
       },
@@ -275,7 +256,6 @@
       "path" : "Quantity.unit",
       "short" : "Unit representation",
       "definition" : "A human-readable form of the unit.",
-      "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "requirements" : "There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms.",
       "min" : 0,
       "max" : "1",
@@ -287,7 +267,6 @@
       "type" : [{
         "code" : "string"
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -296,12 +275,9 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
         "map" : "(see OBX.6 etc.) / CQ.2"
       },
@@ -315,7 +291,6 @@
       "path" : "Quantity.system",
       "short" : "System that defines coded unit form",
       "definition" : "UCUM requiered for the identification of the system that provides the coded form of the unit.",
-      "comment" : "see http://en.wikipedia.org/wiki/Uniform_resource_identifier",
       "requirements" : "UCUM requiered.",
       "min" : 1,
       "max" : "1",
@@ -328,8 +303,7 @@
         "code" : "uri"
       }],
       "fixedUri" : "http://unitsofmeasure.org",
-      "condition" : ["ele-1",
-      "qty-3"],
+      "condition" : ["qty-3"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -339,12 +313,9 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mustSupport" : true,
+      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
         "map" : "(see OBX.6 etc.) / CQ.2"
       },
@@ -370,7 +341,6 @@
       "type" : [{
         "code" : "code"
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -379,12 +349,9 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
         "map" : "(see OBX.6 etc.) / CQ.2"
       },

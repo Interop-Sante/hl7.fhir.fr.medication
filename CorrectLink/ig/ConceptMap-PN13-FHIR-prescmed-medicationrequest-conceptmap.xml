@@ -10,7 +10,7 @@
   <name value="FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap"/>
   <title value="Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments"/>
   <status value="draft"/>
-  <date value="2024-08-14T16:30:57+00:00"/>
+  <date value="2024-09-03T11:41:37+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -26,9 +26,6 @@
     <element>
       <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr"/>
       <target>
-        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
-          <valueCode value="equal"/>
-        </modifierExtension>
         <code value="MedicationRequest.identifier.value"/>
         <equivalence value="equal"/>
       </target>
@@ -36,9 +33,6 @@
     <element>
       <code value="Messages@Phast-id_message"/>
       <target>
-        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
-          <valueCode value="equivalent"/>
-        </modifierExtension>
         <code value="MedicationRequest.identifier.system"/>
         <equivalence value="equivalent"/>
         <comment value="S'il existe, l'identifiant de message PN13 est à transformer en un uri respectant les contraintes FHIR (par exemple constituant une url unique à partir de l'identifiant). S'il n'est pas renseigné, une autre manière de produire un uri pour le message PN13 traduit est à mettre en oeuvre"/>
@@ -49,9 +43,6 @@
     <element>
       <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Type_élément_prescr"/>
       <target>
-        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
-          <valueCode value="inexact"/>
-        </modifierExtension>
         <code value="MedicationRequest.medicationReference.reference"/>
         <equivalence value="inexact"/>
         <comment value="Type_élément_precsr permet de déterminer le profil de la ressource Medication référencée par MedicationRequest.medicationReference.reference. La conceptMap fr-PN13-FHIR-TypeComposant-ConceptMap"/>

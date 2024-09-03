@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap"] ; # 
   fhir:title [ fhir:v "Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-14T16:30:57+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-09-03T11:41:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -32,21 +32,13 @@
   fhir:group ( [
      fhir:element ( [
        fhir:code [ fhir:v "Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.identifier.value" ] ;
          fhir:equivalence [ fhir:v "equal" ]
        ] )
      ] [
        fhir:code [ fhir:v "Messages@Phast-id_message" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.identifier.system" ] ;
          fhir:equivalence [ fhir:v "equivalent" ] ;
          fhir:comment [ fhir:v "S'il existe, l'identifiant de message PN13 est à transformer en un uri respectant les contraintes FHIR (par exemple constituant une url unique à partir de l'identifiant). S'il n'est pas renseigné, une autre manière de produire un uri pour le message PN13 traduit est à mettre en oeuvre" ]
@@ -55,11 +47,7 @@
   ] [
      fhir:element ( [
        fhir:code [ fhir:v "Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Type_élément_prescr" ] ;
-       fhir:_target ( [
-         fhir:modifierExtension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "inexact" ]
-         ] ) ;
+       fhir:target ( [
          fhir:code [ fhir:v "MedicationRequest.medicationReference.reference" ] ;
          fhir:equivalence [ fhir:v "inexact" ] ;
          fhir:comment [ fhir:v "Type_élément_precsr permet de déterminer le profil de la ressource Medication référencée par MedicationRequest.medicationReference.reference. La conceptMap fr-PN13-FHIR-TypeComposant-ConceptMap" ]

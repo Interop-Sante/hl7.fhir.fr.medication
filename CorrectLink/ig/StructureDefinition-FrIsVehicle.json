@@ -10,7 +10,7 @@
   "name" : "FrIsVehicle",
   "title" : "Medication component which is the vehicle of the compound Medication",
   "status" : "draft",
-  "date" : "2024-08-14T16:30:57+00:00",
+  "date" : "2024-09-03T11:41:37+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -68,7 +68,8 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }]
+      }],
+      "isModifier" : false
     },
     {
       "id" : "Extension.id",
@@ -90,6 +91,8 @@
         }],
         "code" : "http://hl7.org/fhirpath/System.String"
       }],
+      "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -118,7 +121,6 @@
       "type" : [{
         "code" : "Extension"
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -132,9 +134,11 @@
         "severity" : "error",
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
-        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
-      }]
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false
     },
     {
       "id" : "Extension.url",
@@ -158,6 +162,8 @@
         "code" : "http://hl7.org/fhirpath/System.String"
       }],
       "fixedUri" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/FrIsVehicle",
+      "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
         "map" : "N/A"
@@ -179,7 +185,6 @@
         "code" : "boolean"
       }],
       "fixedBoolean" : true,
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -188,11 +193,9 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "isModifier" : false,
+      "isSummary" : false,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "rim",
         "map" : "N/A"
       }]
