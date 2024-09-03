@@ -102,6 +102,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
         <a href="downloads.html">Téléchargements et usages</a>
       </li>
       <li>
@@ -191,36 +194,46 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>la situation par rapport à la prescription que l’on réconcilie
-– proactive : la conciliation est réalisée en amont de la prescription, qui de ce fait, la prend en compte
-– rétroactive : la conciliation est réalisée après que la prescription ait été formulée voire exécutée en tout ou partie. Elle implique alors d’éventuelles actions correctives dont la nature est noté dans la FCT mais dont l’exécution proprement dite relève du domaine de la prescription.</li>
+    <ul>
+      <li>proactive : la conciliation est réalisée en amont de la prescription, qui de ce fait, la prend en compte</li>
+      <li>rétroactive : la conciliation est réalisée après que la prescription ait été formulée voire exécutée en tout ou partie. Elle implique alors d’éventuelles actions correctives dont la nature est noté dans la FCT mais dont l’exécution proprement dite relève du domaine de la prescription.</li>
+    </ul>
+  </li>
   <li>l’événement présentant un risque de rupture de la continuité de la prise en charge médicamenteuse du patient
-– admission
-– sortie
-– transfert
-– mutation
-–etc.</li>
+    <ul>
+      <li>admission</li>
+      <li>sortie</li>
+      <li>transfert</li>
+      <li>mutation</li>
+      <li>etc.</li>
+    </ul>
+  </li>
 </ul>
 
 <p>Ainsi, par exemple, la combinaison de la situation <em>rétroactive</em> et de l’événement <em>admission</em> définit la <strong>conciliation rétroactive d’admission</strong>.</p>
 
 <h3 id="les-3-documents-supports-de-la-conciliation">Les 3 documents supports de la conciliation</h3>
 
-<p><a name="l377">​</a><img src="/input/imapes-source/Conciliation1.jpg" alt="DocumentsSupportsConciliation"/></p>
+<p><a name="l410">​</a><img src="Conciliation1.png" alt="DocumentsSupportsConciliation"/></p>
 
 <h3 id="les-ressources-profilée-par-interopsanté">Les ressources profilée par Interop’Santé</h3>
 
-<p>Le profilage de ces ressources répond aux recommandations du <a href="https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante">guide méthodologique de mise en œuvre de la conciliation médicamenteuse</a> publié par la Haute Autorité de Santé.
-bilan médicamenteux : voir profil <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrMedicationHistoryComposition.fsh">FrMedicationHistoryComposition</a>
-fiche de conciliation des traitements médicamenteux (FCT) : voir profil <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrMedicationReconciliationComposition.fsh">FrMedicationReconciliationComposition</a>
-La FCT fait référence au <em>bilan médicamenteux</em> (le traitement médicamenteux du patient avant hospitalisation) et au <em>traitement médicamenteux courant</em> (le traitement médicamenteux en cours lors de l’hospitalisation). De ce fait, le profil <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrCurrentMedicationComposition.fsh">FrCurrentMedicationComposition</a> a été défini pour rendre compte de ce <em>traitement médicamenteux courant</em>.</p>
+<p>Le profilage de ces ressources répond aux recommandations du <a href="https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante">guide méthodologique de mise en œuvre de la conciliation médicamenteuse</a> publié par la Haute Autorité de Santé.</p>
+
+<ul>
+  <li>bilan médicamenteux : voir profil <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
+  <li>fiche de conciliation des traitements médicamenteux (FCT) : voir profil <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
+</ul>
+
+<p>La FCT fait référence au <em>bilan médicamenteux</em> (le traitement médicamenteux du patient avant hospitalisation) et au <em>traitement médicamenteux courant</em> (le traitement médicamenteux en cours lors de l’hospitalisation). De ce fait, le profil <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a> a été défini pour rendre compte de ce <em>traitement médicamenteux courant</em>.</p>
 
 <h3 id="dépendance-des-ressources-profilés-par-interopsanté">Dépendance des ressources profilés par Interop’Santé</h3>
 
-<p><a name="l410">​</a><img src="/input/imapes-source/Conciliation2.jpg" alt="IGMedicationDependanceRessourcesProfilees"/></p>
+<p><a name="l453">​</a><img src="HL7.FHIR.FR.MEDICATION/input/images-source/Conciliation2.jpg" alt="IGMedicationDependanceRessourcesProfilees"/></p>
 
-<p>Le profil <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrOnAdmissionRetroactiveMedicationReconciliationComposition.fsh">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a> contraint le profil général <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrMedicationReconciliationComposition.fsh">FrMedicationReconciliationComposition</a> pour répondre au cas particulier de la <strong>conciliation rétroactive d’admission</strong>. Il référence un cas particulier de <em>traitement médicamenteux courant</em>, l’<strong>ordonnance médicale d’admission (OMA)</strong>, ordonnance adressée par le profil <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrOnAdmissionMedicationComposition.fsh">FrOnAdmissionMedicationComposition</a> qui contraint le profil général <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrCurrentMedicationComposition.fsh">FrCurrentMedicationComposition</a>.</p>
+<p>Le profil <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a> contraint le profil général <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a> pour répondre au cas particulier de la <strong>conciliation rétroactive d’admission</strong>. Il référence un cas particulier de <em>traitement médicamenteux courant</em>, l’<strong>ordonnance médicale d’admission (OMA)</strong>, ordonnance adressée par le profil <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a> qui contraint le profil général <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a>.</p>
 
-<p><a name="l437">​</a><img src="/input/imapes-source/Conciliation3.jpg" alt="Conciliation-ConciliationRetroactiveALAdmissiones"/></p>
+<p><a name="l480">​</a><img src="./images-source/Conciliation3.jpg" alt="Conciliation-ConciliationRetroactiveALAdmissiones"/></p>
 
 <h2 id="cas-dusage">Cas d’usage</h2>
 
@@ -236,20 +249,29 @@ C’est un non-choix par défaut de temps disponible …</p>
 
 <p>Les 3 documents de la conciliation sont implémentés chacun sous forme d’une ressource <em>Bundle</em> de type <em>document</em>.</p>
 
-<p>Selon le document, la composition du <em>Bundle</em> est
-pour le <strong>Bilan Médicamenteux</strong>, une ressource <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrMedicationHistoryComposition.fsh">FrMedicationHistoryComposition</a>
-pour le <strong>Traitement Médicamenteux courant</strong>, une ressource <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrCurrentMedicationComposition.fsh">FrCurrentMedicationComposition</a>
-pour la <strong>Fiche de Conciliation des Traitements (FCT)</strong>, une ressource <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrMedicationReconciliationComposition.fsh">FrMedicationReconciliationComposition</a></p>
+<p>Selon le document, la composition du <em>Bundle</em> est</p>
 
-<p>Pour la conciliation rétroactive d’admission,
-Le <strong>Traitement Médicamenteux courant</strong> est l’<strong>Ordonnance Médicamenteuse d’Admission</strong> représentée par la composition <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrOnAdmissionMedicationComposition.fsh">FrOnAdmissionMedicationComposition</a>
-La <strong>Fiche de Conciliation des Traitements (FCT)</strong> est la <strong>Fiche de Conciliation rétroactive des Traitements à l’admission</strong> représentée par la composition <a href="https://github.com/Interop-Sante/hl7.fhir.fr.medication/blob/main/input/fsh/profiles/FrOnAdmissionRetroactiveMedicationReconciliationComposition.fsh">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a></p>
+<ul>
+  <li>pour le <strong>Bilan Médicamenteux</strong>, une ressource <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
+  <li>pour le <strong>Traitement Médicamenteux courant</strong>, une ressource <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a></li>
+  <li>pour la <strong>Fiche de Conciliation des Traitements (FCT)</strong>, une ressource <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
+</ul>
+
+<p>Pour la conciliation rétroactive d’admission,</p>
+
+<ul>
+  <li>Le <strong>Traitement Médicamenteux courant</strong> est l’<strong>Ordonnance Médicamenteuse d’Admission</strong> représentée par la composition <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a></li>
+  <li>La <strong>Fiche de Conciliation des Traitements (FCT)</strong> est la <strong>Fiche de Conciliation rétroactive des Traitements à l’admission</strong> représentée par la composition <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a></li>
+</ul>
 
 <h2 id="exemples">Exemples</h2>
 
-<p>Aucun exemple
-Les exemples de ressources tirés du cas d’usage conducteur ne sont pas (encore) publiés dans ce guide.
-C’est un non-choix par défaut de temps disponible pour les finaliser …</p>
+<p>Aucun exemple</p>
+
+<ul>
+  <li>Les exemples de ressources tirés du cas d’usage conducteur ne sont pas (encore) publiés dans ce guide.</li>
+  <li>C’est un non-choix par défaut de temps disponible pour les finaliser …</li>
+</ul>
 
 
 
@@ -270,7 +292,7 @@ C’est un non-choix par défaut de temps disponible pour les finaliser …</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 3, 2024 11:48+0000">2024-09-03</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 3, 2024 12:38+0000">2024-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
