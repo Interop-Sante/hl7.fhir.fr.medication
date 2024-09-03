@@ -16,7 +16,7 @@ Le contexte est défini selon 2 axes:
   - sortie
   - transfert
   - mutation
-  - etc.
+ - etc.
 
 Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'événement *admission* définit la **conciliation rétroactive d'admission**.
 
