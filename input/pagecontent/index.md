@@ -6,7 +6,7 @@ Trois cas d'usage sont pris en compte dans la version actuelle de cet IG:
 
 1. [La concilation](conciliation.html)
 1. La prescription
-1. La dispensation
+1. [La dispensation](dispensation.html)
 
 Ce domaine est pris en charge par le GT Pharmacie d'HL7 France au sein de l'association [Interop’Santé](https://www.interopsante.org/) après une première version développée au sein de la communauté SIPh. L'historique des versions et des travaux est détaillé dans la page de [suivi des travaux](suivitravaux.html).
 
