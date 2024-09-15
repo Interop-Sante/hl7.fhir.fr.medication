@@ -1,0 +1,52 @@
+# Cas d'usage
+
+## La ligne de prescription intiale
+
+En situation réelle, n'émettre que des lignes de prescription initiales est rarement suffisant. Néanmoins, c'est la base qui permet d'explorer la complexité de la prescription selon deux axes, le médicament prescrit et la posologie.
+
+La complexité du *médicament prescrit*
+
+- Une spécialité
+  - monosubstance dosée en quantité sous forme comprimé
+  - bisubstance dosées en quantité sous forme comprimé
+  - monosubstance dosée en concentration et prescrite en dose-kg
+  - monosubstance dosée en concentration et prescrite en application
+  - monosubstance patch dosée en quantité sur durée du patch
+  - monosubstance patch dosée en quantité horaire
+  - trisubstance en perfusion prête à l'emploi
+- En DC
+  - on retrouve le pendant des prescriptions en spécialité
+  - mais en ne spécifiant que les contraintes du prescripteur
+    - la DC
+    - dans certains cas, la forme, le dosage
+- Extemporané
+  - Ce sont des médicaments fabriqués à la demande
+    - par assemblage de médicaments simples
+    - spécifiés soit en spécialité soit en DC
+  - Les cas d'usage sont les perfusions ou le seringies électriques
+    - avec un ou plusieurs médicaments
+    - dilués dans un soluté.
+- Préparations magistrales et préparations officinales
+  - Elles sont définies dans le Code de la santé publique
+    - préparation magistrale : « tout médicament préparé au vu de la prescription destinée à un patient déterminé... » ;
+    - préparation officinale : « tout médicament préparé en pharmacie, inscrit à la pharmacopée ou au formulaire national... ».
+  - Elles ne sont pas couvertes par ce guide d'implémentation
+
+*La complexité de la posologie*:
+
+- 4 axes de complexité de la posologie
+  - la fréquence
+  - l'horaire
+  - la durée d'administration
+  - la dose
+- Un premier niveau de complexité est adressé par les cas d'usage :
+  - fréquence : journaliére ou tout les 3 j
+  - horaires : fixes
+  - durée d'administration : négligeable (assimilée à nulle) ou déterminée
+  - dose : exprimée en nombre d'unités de médicament prescrit (comprimé, dose-kg , application, patch, flacon) ou quantité de principe actif (mg, g)
+
+## Les différentes variations de la ligne de prescription initiale
+
+On entend par variation de la ligne prescription toute évolution de celle-ci **prescrite** par le médecin.
+
+Il s'agit donc d'une prescription, mais qui succède à la prescription ayant créé la ligne de prescription initiale et qui la reprend en en modifiant potentiellemnt tous les paramètres horsmis la composition du médicament prescrit.
