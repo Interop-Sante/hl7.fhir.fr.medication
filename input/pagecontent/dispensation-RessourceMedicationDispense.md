@@ -28,6 +28,6 @@ Le chapitre Prescription couvre les médicaments composés et illustre comment i
 
 ## Diagramme d'état de la propiété ==**status**==
 
-![Dispendation-DiagrammeEtat](../images/Dispensation1.png)
+![Dispendation-DiagrammeEtat](Dispensation1.png)
 
 *hypothèse* faite à partir des [libellés des codes](https://hl7.org/fhir/R4/valueset-medicationdispense-status.html) (qui seraient à traduire). HL7 ne spécifie pas ce diagramme d'état.

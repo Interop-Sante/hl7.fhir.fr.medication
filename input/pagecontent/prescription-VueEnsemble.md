@@ -17,7 +17,7 @@ le **médicament prescrit** est représenté par trois variantes de ressource *M
 
 Dépendance des ressources profilées par Interop'Santé
 
-![IGMedicationDependanceRessourcesProfileesPrescription](../images/Prescription1.jpg)
+![IGMedicationDependanceRessourcesProfileesPrescription](Prescription1.jpg)
 
 Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationUcd* si c'est une spécialité ou une ressource *FrMedicationNonProprietaryName* si c'est une DC.
 Ex: *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047*
@@ -97,13 +97,13 @@ Pour garantir qu'une prescription de, par exemple, 3 doses par jour pendant 5 jo
 *Illustration*
 Date de fin prescrite exclue : 15 doses (3/j x 5j = 15)
 
-![IllustrationDateFinPrescriteExclue](../images/Prescription2.jpg)
+![IllustrationDateFinPrescriteExclue](Prescription2.jpg)
 
 En effet, si la date de début prescrite est égale à la date de début de la premiére dose, un intervalle fermé incluant de la date de fin prescrite conduira à la prescription de 16 doses.
 
 *Illustration*
 Si la date de fin prescrite était incluse : 16 doses (3/j x 5j = 16) !
-![IllustrationDateFinPrescriteIncluse](../images/Prescription3.jpg)
+![IllustrationDateFinPrescriteIncluse](Prescription3.jpg)
 
 **Note**:
 Dans FHIR, le type *Period*, utilisé pour porter le couple (*date de début*, *date de fin*), stipule que les bornes, *start* et *end*, sont incluses. L'interval est *fermé*.
@@ -134,7 +134,7 @@ ou
 
 Ces deux dates ne figurent pas dans *MedicationRequest* R4.
 Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément *effectiveDosePeriod* conçu pour accueillir ces deux dates a été ajouté.
-![EffectiveDosePeriodR5](../images/Prescription4.jpg)
+![EffectiveDosePeriodR5](Prescription4.jpg)
 
 **Note PN13**:
 
@@ -147,7 +147,7 @@ Les règles de gestion suivantes doivent être appliquées pour définir ces deu
 
 *Illustration*
 1 comprimé 3 fois par jour (7h, 12h, 18h) pendant 5 jours, prescrit à 10h30, à partir de maintenant (10h30), donc 1ère dose à 12h.
-![DateEffective1](../images/Prescription5.jpg)
+![DateEffective1](Prescription5.jpg)
 
 Notes
 
@@ -161,7 +161,7 @@ Notes
 
 *Illustration*
 G5 1L sur 12h, 2 fois par jour (10h, 22h) pendant 5 jours, prescrit à 9h30, à partir de maintenant (9h30), donc 1ère dose à 10h.
-![DateEffective2](../images/Prescription6.jpg)
+![DateEffective2](Prescription6.jpg)
 
 Note
 Dans cet exemple

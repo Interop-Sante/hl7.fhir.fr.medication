@@ -18,7 +18,7 @@ Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'évén
 
 ## Les 3 documents supports de la conciliation
 
-![DocumentsSupportsConciliation](../images/Conciliation1.png)
+![DocumentsSupportsConciliation](Conciliation1.png)
 
 ## Les ressources profilée par Interop'Santé
 
@@ -31,8 +31,8 @@ La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux 
 
 ## Dépendance des ressources profilés par Interop'Santé
 
-![IGMedicationDependanceRessourcesProfileesConciliation](../images/Conciliation2.jpg)
+![IGMedicationDependanceRessourcesProfileesConciliation](Conciliation2.jpg)
 
 Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html) contraint le profil général [FrMedicationReconciliationComposition](StructureDefinition-FrMedicationReconciliationComposition.html) pour répondre au cas particulier de la **conciliation rétroactive d'admission**. Il référence un cas particulier de *traitement médicamenteux courant*, l'**ordonnance médicale d'admission (OMA)**, ordonnance adressée par le profil [FrOnAdmissionMedicationComposition](StructureDefinition-FrOnAdmissionMedicationComposition.html) qui contraint le profil général [FrCurrentMedicationComposition](StructureDefinition-FrCurrentMedicationComposition.html).
 
-![Conciliation-ConciliationRetroactiveALAdmissiones](../images/Conciliation3.jpg)
+![Conciliation-ConciliationRetroactiveALAdmissiones](Conciliation3.jpg)
