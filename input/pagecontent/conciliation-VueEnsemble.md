@@ -18,7 +18,7 @@ Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'évén
 
 ## Les 3 documents supports de la conciliation
 
-![DocumentsSupportsConciliation](Conciliation1.png)
+![DocumentsSupportsConciliation](Conciliation1.jpg)
 
 ## Les ressources profilée par Interop'Santé
 
