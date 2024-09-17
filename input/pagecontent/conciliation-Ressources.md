@@ -62,7 +62,7 @@
 
 ## Extensions
 
-- [*FrMedicationHistorySources*](StructureDefinition-FrMedicationHistorySources.html)
+- [*FrMedicationHistorySources*](StructureDefinition-fr-medication-history-sources.html)
   - Type: *complex*
   - Sourcing du **Bilan Médicamenteux** et de la **ligne du Bilan Médicamenteux**
     - Nombre de sources (quel que soit leur nombre)
@@ -89,7 +89,7 @@
 
 - [*FrCurrentMedicationDocumentType*](ValueSet-FrCurrentMedicationDocumentType.html)
   Le type de document d'une ressource FrCurrentMedicationComposition (Traitement Médicamenteux Courant)
-- [*FrMedicationReconciliationDocumentType*](ValueSet-FrMedicationReconciliationDocumentType.html)
+- [*FrMedicationReconciliationDocumentType*](ValueSet-fr-medication-reconciliation-document-type.html)
   Le type de document d'une ressource FrMedicationReconciliationComposition (FCT)
 - [*FrEditorialStatus*](ValueSet-FrEditorialStatus.html)
   Le statut éditorial d'une valeur
@@ -106,19 +106,19 @@
 
 ## CodeSystems
 
-- [*FrDocumentType*](CodeSystems-FrDocumentType.html)
+- [*FrDocumentType*](CodeSystem-fr-document-type.html)
   Le type de document, avec leur catégorie
 - [*FrEditorialStatus*](CodeSystems-FrEditorialStatus.html)
   Le statut éditorial d'une valeur
-- [*FrMedicationHistorySource*](CodeSystems-FrMedicationHistorySource.html)
+- [*FrMedicationHistorySourceType*](CodeSystem-FrMedicationHistorySourceType.html)
   La source d'un Bilan Médicamenteux
-- [*FrMedicationReconciliationStatus*](CodeSystems-FrMedicationReconciliationStatus.html)
+- [*FrMedicationReconciliationStatus*](CodeSystem-FrMedicationReconciliationStatus.html)
   Le statut d'une ligne de traitement d'une FCT
-- [*FrMedicationReconciliationDiscrepancy*](CodeSystems-FrMedicationReconciliationDiscrepancy.html)
+- [*FrMedicationReconciliationDiscrepancy*](CodeSystem-FrMedicationReconciliationDiscrepancy.html)
   La qualification de la divergence identifiée sur une ligne de traitement d'une FCT
-- [*FrMedicationReconciliationType*](CodeSystems-FrMedicationReconciliationType.html)
+- [*FrMedicationReconciliationType*](CodeSystem-FrMedicationReconciliationType.html)
   Le type d'écart/erreur sur une ligne de traitement d'une FCT
-- [*FrMedicationReconciliationOutcome*](CodeSystems-FrMedicationReconciliationOutcome.html)
+- [*FrMedicationReconciliationOutcome*](CodeSystem-FrMedicationReconciliationOutcome.html)
   La gravité de l'erreur sur une ligne de traitement d'une FCT
-- [*FrMedicationReconciliationResolution*](CodeSystems-FrMedicationReconciliationResolution.html)
+- [*FrMedicationReconciliationResolution*](CodeSystem-FrMedicationReconciliationResolution.html)
   La résolution d'une divergence sur une ligne de traitement d'une FCT

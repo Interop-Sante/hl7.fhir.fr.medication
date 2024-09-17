@@ -17,7 +17,7 @@ par un seul profil slicé.
 
 ## Ressources
 
-[*FrInpationtMedicationRequest2*](StructureDefinition-FrInpationtMedicationRequest2.html)
+[*FrInpatientMedicationRequest2*](StructureDefinition-FrInpatientMedicationRequest2.html)
 
 - Type: *MedicationRequest*
 - Une ligne de prescription
@@ -64,7 +64,7 @@ Mais les médicaments simples définis en DC ont leur ==**codesystem**== exclusi
 
 Laisser ouvert le ==**codesystem**== du médicament simple en DC, quand bien même SNOMED serait *préferé*, ne permet pas de le discriminer d'un éventuel ==**codesystem**== utilisé pour les médicaments composites. Cette situation de slicing sur un ==**discriminant**== ambigu n'est pas valide (elle ne passe pas le [validateur HL7](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Runningthevalidator)).
 
-Néanmoins, en maintenant ces contraintes de binding exclusif pour les tranches spécialité et DC, les messages d'erreur retournés sur la validation de [MD_0003noExt_ (doliprane 500mg gél 16_2j)](Instances-14665.html) stipule que le slicing est incongru (donc interdit) sur an element that does not repeat. Il s'agit de l'élément ==**Medication.code**==. Ce ==**coding**== est effectivement unique pour une instance de *Medication*. La multiplicité est ailleurs, dans le type de médicament que représente cette *Medication*, une spécialité, un médicament simple en DC ou un médicament composé.
+Néanmoins, en maintenant ces contraintes de binding exclusif pour les tranches spécialité et DC, les messages d'erreur retournés sur la validation de [MD_0003noExt_ (doliprane 500mg gél 16_2j)](MedicationDispense-14665.html) stipule que le slicing est incongru (donc interdit) sur an element that does not repeat. Il s'agit de l'élément ==**Medication.code**==. Ce ==**coding**== est effectivement unique pour une instance de *Medication*. La multiplicité est ailleurs, dans le type de médicament que représente cette *Medication*, une spécialité, un médicament simple en DC ou un médicament composé.
 
 ## Conclusion
 

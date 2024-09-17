@@ -2,7 +2,7 @@
 
 ## Profiles
 
-- [*FrInpationtMedicationRequest*](StructureDefinition-FrInpationtMedicationRequest.html)
+- [*FrInpatientMedicationRequest*](StructureDefinition-FrInpatientMedicationRequest.html)
   - Type: *MedicationRequest*
   - Une ligne de prescription
   - En fonction de la nature du médicament prescrit, référence
@@ -20,7 +20,7 @@
   - Une partie de l'UCD (ex. *comprimé bleu*)
   - Ces parties discriminant des unités de composition différentes d'une même UCD, n'ont pas de code propre. Elles sont donc dépendantes de l'UCD à laquelle elles sont rattachées.
   - Pour cette raison, cette ressource **ne peut être utilisée seule**. Elle doit être explicitement rattachée à une ressource *FrMedicationUcd*.
-- [*FrMedicationNonProprietaryName*](StructureDefinition-FrMedicationNonProprietaryName.html)
+- [*FrMedicationNonProprietaryName*](StructureDefinition-FrMedicationNonproprietaryName.html)
   - Type: *Medication*
   - Un médicament prescrit en DC
   - Référence un à plusieurs éléments *ingredient* qui ne peuvent pas être que des ressources *FrSnomedMPSubstanceActive*
