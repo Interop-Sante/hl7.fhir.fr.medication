@@ -1,6 +1,6 @@
 # Ressources
 
-## Profiles
+## Profils
 
 - [*FrMedicationHistoryComposition*](StructureDefinition-FrMedicationHistoryComposition.html)
   - Type: *Composition*
