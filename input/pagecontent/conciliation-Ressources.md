@@ -14,7 +14,7 @@
   - Ligne du **Bilan Médicamenteux**
   - Référence
     - l'extension *FrMedicationHistorySource* pour décrire le sourcing de la ligne
-    - la ressource *FrMedication* pour décrire le médicamnent impliqué dans la ligne
+    - la ressource *FrMedication* pour décrire le médicament impliqué dans la ligne
   - Est référence par
     - *FrMedicationHistoryComposition*
     - *FrMedicationReconciliationMedicationStatement*
