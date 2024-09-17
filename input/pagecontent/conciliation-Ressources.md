@@ -35,7 +35,7 @@
   - *Composition* du *Bundle* portant le document FHIR Fiche de **Conciliation des Traitements (FCT)**
   - Référence
     - la ressource *FrMedicationReconciliationMedicationStatement* pour décrire chaque ligne de la fiche
-    - la ressource *FrMedicationHistoryComposition* pour décrire pour décrire le bilan médicamenteux objet de la conciliation
+    - la ressource *FrMedicationHistoryComposition* pour décrire le bilan médicamenteux objet de la conciliation
     - la ressource *FrCurrentMedicationComposition* pour décrire pour décrire le traitement médicamenteux hospitalier courant objet de la conciliation
   - Est référencé par le *Bundle* du type *document* portant la **FCT**
 - [*FrMedicationReconciliationMedicationStatement*](StructureDefinition-FrMedicationReconciliationComposition.html)
