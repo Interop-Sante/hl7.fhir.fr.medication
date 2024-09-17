@@ -1,6 +1,6 @@
 # Vue d'ensemble
 
-La prescription est un ensemble du **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrInpatientMedicationRequest*.
+La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrInpatientMedicationRequest*.
 
 La prescription en tant que telle (le regroupement de lignes de prescription), n'a pas été étudiée. Voir la rubrique [Implémentation](prescription-Implementation.html) pour une première ébauche.
 
