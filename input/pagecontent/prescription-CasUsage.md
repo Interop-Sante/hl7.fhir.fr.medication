@@ -49,4 +49,4 @@ La complexité du *médicament prescrit*
 
 On entend par variation de la ligne prescription toute évolution de celle-ci **prescrite** par le médecin.
 
-Il s'agit donc d'une prescription, mais qui succède à la prescription ayant créé la ligne de prescription initiale et qui la reprend en en modifiant potentiellemnt tous les paramètres horsmis la composition du médicament prescrit.
+Il s'agit donc d'une prescription, mais qui succède à la prescription ayant créé la ligne de prescription initiale et qui la reprend en en modifiant potentiellement tous les paramètres hormis la composition du médicament prescrit.

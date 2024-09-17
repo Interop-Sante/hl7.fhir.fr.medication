@@ -366,5 +366,5 @@ Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseA
 Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Instances-14652.html)
 
 **Note**:
-Il est est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la ==**surface corporelle**== (1,85 m²), voire seulement de la ==**taille**== (1,75 m) et du ==**poids**== (70 kg) du patient.
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la ==**surface corporelle**== (1,85 m²), voire seulement de la ==**taille**== (1,75 m) et du ==**poids**== (70 kg) du patient.
 Mais c'est un autre cas d'usage, qui, quand bien même il déboucherait sur la même délivrance, *capécitabine 1800 mg*, laisserait au pharmacien l'arbitrage de l'arrondi par rapport à la dose prescrite. C'est un cas d'usage différent parce que l'acteur et le temps où se fait l'arrondi ne sont pas les mêmes.

@@ -1,6 +1,6 @@
 # Ressources
 
-## Profiles
+## Profils
 
 - [*FrMedicationHistoryComposition*](StructureDefinition-FrMedicationHistoryComposition.html)
   - Type: *Composition*
@@ -14,7 +14,7 @@
   - Ligne du **Bilan Médicamenteux**
   - Référence
     - l'extension *FrMedicationHistorySource* pour décrire le sourcing de la ligne
-    - la ressource *FrMedication* pour décrire le médicamnent impliqué dans la ligne
+    - la ressource *FrMedication* pour décrire le médicament impliqué dans la ligne
   - Est référence par
     - *FrMedicationHistoryComposition*
     - *FrMedicationReconciliationMedicationStatement*
@@ -35,7 +35,7 @@
   - *Composition* du *Bundle* portant le document FHIR Fiche de **Conciliation des Traitements (FCT)**
   - Référence
     - la ressource *FrMedicationReconciliationMedicationStatement* pour décrire chaque ligne de la fiche
-    - la ressource *FrMedicationHistoryComposition* pour décrire pour décrire le bilan médicamenteux objet de la conciliation
+    - la ressource *FrMedicationHistoryComposition* pour décrire le bilan médicamenteux objet de la conciliation
     - la ressource *FrCurrentMedicationComposition* pour décrire pour décrire le traitement médicamenteux hospitalier courant objet de la conciliation
   - Est référencé par le *Bundle* du type *document* portant la **FCT**
 - [*FrMedicationReconciliationMedicationStatement*](StructureDefinition-FrMedicationReconciliationComposition.html)
