@@ -33,7 +33,7 @@ Cette information est portée indivuellement par chaque ligne de prescription, c
 
 - date de début : *.dosageInstruction.timing.repeat.boundsPeriod.start*
 - date de fin : *.dosageInstruction.timing.repeat.boundsPeriod.end*
-- durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu'au niveau l'IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.
+- durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu'au niveau de l'IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.
 
 Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments *.validityPeriode* et *.expectedSupplyDuration* de l'élément *.dispensationRequest*.
 
