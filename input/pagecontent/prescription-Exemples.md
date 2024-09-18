@@ -88,37 +88,37 @@ Il n'y a pas d'exemple, pour l'instant.
 ### Ex: LASILIX 20 mg, sol inj amp 2 mL, XX à 7h et 18h IV, pendant 5j
 
 - **unité de médicament prescrit** ➟ *MedicationRequest.medication*
-  - ==**LASILIX**== → marque ➟ dans le *.text* du *.coding* de la spécialité
-  - ==**furosémide**== → principe actif ➟ *.ingredient().item\[x\]*
-  - ==**20 mg**== → dosage ➟ *.ingredient().strength*
-  - ==**sol inj**== → forme ➟ *.form*
-  - ==**amp**== → présentation ➟ en annotation ==**{amp}**== de l'unité de dénombrement UCUM
-  - ==**2 mL**== → volume ➟ *.amount*
+  - `LASILIX` → marque ➟ dans le *.text* du *.coding* de la spécialité
+  - `furosémide` → principe actif ➟ *.ingredient().item\[x\]*
+  - `20 mg` → dosage ➟ *.ingredient().strength*
+  - `sol inj` → forme ➟ *.form*
+  - `amp` → présentation ➟ en annotation `{amp}` de l'unité de dénombrement UCUM
+  - `2 mL` → volume ➟ *.amount*
 - dose prescrite → *MedicationRequest.dosageInstruction*
-  - ==**XX**== → quantité ➟ *.doseAndRate*
-  - ==**à 7h et 18h**== → horaire de prise ➟ *.timing.repeat.timeOfDay()*
-  - ==**per os**== → voie d'administration ➟ *.route*
-  - ==**pendant 5j**== → début (maintenant) et fin (début + 5j) ➟ *.timing.boundsPeriod*
-- La quantité ==**XX**== de la dose prescrite peut s'exprimer de 3 façons différentes, par exemple :
-  - ==**1**== (unité \[de présentation de l'unité de médicament prescrit\] = ampoule contenant 20 mg de furosémide)
-  - ==**20 mg**== (de principe actif = furosémide)
-  - ==**2 mL**== (de produit = solution injectable contenant 20 mg de furosémide)
+  - `XX` → quantité ➟ *.doseAndRate*
+  - `à 7h et 18h` → horaire de prise ➟ *.timing.repeat.timeOfDay()*
+  - `per os` → voie d'administration ➟ *.route*
+  - `pendant 5j` → début (maintenant) et fin (début + 5j) ➟ *.timing.boundsPeriod*
+- La quantité `XX` de la dose prescrite peut s'exprimer de 3 façons différentes, par exemple :
+  - `1` (unité \[de présentation de l'unité de médicament prescrit\] = ampoule contenant 20 mg de furosémide)
+  - `20 mg` (de principe actif = furosémide)
+  - `2 mL` (de produit = solution injectable contenant 20 mg de furosémide)
 
 Ces 3 expressions permettent de déterminer la quantité de(s) principe(s) actif(s) à partir de caratéristiques du médicament prescrit
 
 ### Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j
 
 - **unité de médicament prescrit** ➟ *MedicationRequest.medication*
-  - ==**FUROSEMIDE**== → médicament en DC ➟ dans le *.text* du *.coding* du médicament en DC
-  - ==**furosémide**== → principe actif ➟ *.ingredient().item\[x\]*
+  - `FUROSEMIDE` → médicament en DC ➟ dans le *.text* du *.coding* du médicament en DC
+  - `furosémide` → principe actif ➟ *.ingredient().item\[x\]*
   - les autres caractéristiques ne sont pas contraintes par le prescripteur
 - **dose prescrite** → *MedicationRequest.dosageInstruction*
   - caractéristiques identiques à celles de l'exemple de ligne de prescription en spécialité
-- La **quantité** ==**XX**== de la dose prescrite ne peut plus s'exprimer que d'1 façon :
-  - ==**20 mg**== (de principe actif = furosémide)
+- La **quantité** `XX` de la dose prescrite ne peut plus s'exprimer que d'1 façon :
+  - `20 mg` (de principe actif = furosémide)
 - Les 2 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
-  - ==**1**== (unité [de présentation de l'unité de médicament prescrit] = furosémide en quantité non définie)
-  - ==**2 mL**== (de produit = un produit qui contient du furosémide en concentration non définie)
+  - `1` (unité [de présentation de l'unité de médicament prescrit] = furosémide en quantité non définie)
+  - `2 mL` (de produit = un produit qui contient du furosémide en concentration non définie)
 
 ### Contraintes
 
@@ -214,8 +214,8 @@ ou
 **Note**:
 Il y deux façons d'exprimer un débit dans une dose FHIR :
 
-- une unité UCUM de temps (ex: ==**min**==) au dénominateur (==**deniminator.code**==) dans un type de donnée *ratio* (==**rateRatio**==)
-- une unité UCUM de débit (ex: ==**ug/min**==) dans un type de donnée *quantity* (==**rateQuantity**==)
+- une unité UCUM de temps (ex: `min`) au dénominateur (`deniminator.code`) dans un type de donnée *ratio* (`rateRatio`)
+- une unité UCUM de débit (ex: `ug/min`) dans un type de donnée *quantity* (`rateQuantity`)
 
 La seconde implique une **interprétation du code UCUM par le logiciel** pour avoir connaissance de la notion de débit (savoir reconnaitre une unité de débit UCUM).
 
@@ -367,5 +367,5 @@ Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseA
 Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](MedicationRequest-14652.html)
 
 **Note**:
-Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la ==**surface corporelle**== (1,85 m²), voire seulement de la ==**taille**== (1,75 m) et du ==**poids**== (70 kg) du patient.
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la `surface corporelle` (1,85 m²), voire seulement de la `taille` (1,75 m) et du `poids` (70 kg) du patient.
 Mais c'est un autre cas d'usage, qui, quand bien même il déboucherait sur la même délivrance, *capécitabine 1800 mg*, laisserait au pharmacien l'arbitrage de l'arrondi par rapport à la dose prescrite. C'est un cas d'usage différent parce que l'acteur et le temps où se fait l'arrondi ne sont pas les mêmes.
