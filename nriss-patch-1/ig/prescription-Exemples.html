@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>La prescription - Exemples - Guide d'implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
+</div>
+
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Ressources.html">Ressources</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="prescription-Ressources.html">Ressources</a>
+      </li>
+      <li>
+        <a href="prescription-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+      <li>
+        <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource *MedicationDispense*</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>La prescription - Exemples</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>La prescription - Exemples</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#exemples" id="markdown-toc-exemples">Exemples</a>    <ul>
+      <li><a href="#exemples-généraux" id="markdown-toc-exemples-généraux">Exemples généraux</a>        <ul>
+          <li><a href="#la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit" id="markdown-toc-la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit">La ligne de prescription initiale, complexité du médicament prescrit</a></li>
+          <li><a href="#la-prescription-inititale-complexité-de-la-posologie" id="markdown-toc-la-prescription-inititale-complexité-de-la-posologie">La prescription inititale, complexité de la posologie</a></li>
+          <li><a href="#les-modifcations-de-la-ligne-prescription-initiale" id="markdown-toc-les-modifcations-de-la-ligne-prescription-initiale">Les modifcations de la ligne prescription initiale</a></li>
+        </ul>
+      </li>
+      <li><a href="#médicament-prescrit-et-doses" id="markdown-toc-médicament-prescrit-et-doses">Médicament prescrit et dose(s)</a>        <ul>
+          <li><a href="#ex-lasilix-20-mg-sol-inj-amp-2-ml-xx-à-7h-et-18h-iv-pendant-5j" id="markdown-toc-ex-lasilix-20-mg-sol-inj-amp-2-ml-xx-à-7h-et-18h-iv-pendant-5j">Ex: LASILIX 20 mg, sol inj amp 2 mL, XX à 7h et 18h IV, pendant 5j</a></li>
+          <li><a href="#ex-furosemide-xx-à-7h-et-18h-iv-pendant-5j" id="markdown-toc-ex-furosemide-xx-à-7h-et-18h-iv-pendant-5j">Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j</a></li>
+          <li><a href="#contraintes" id="markdown-toc-contraintes">Contraintes</a></li>
+        </ul>
+      </li>
+      <li><a href="#durée-dadministration" id="markdown-toc-durée-dadministration">Durée d’administration</a>        <ul>
+          <li><a href="#cas-particuliers" id="markdown-toc-cas-particuliers">Cas particuliers</a></li>
+        </ul>
+      </li>
+      <li><a href="#perfusions-et-seringues-électriques" id="markdown-toc-perfusions-et-seringues-électriques">Perfusions et seringues électriques</a>        <ul>
+          <li><a href="#bodc-basis-of-dose-component" id="markdown-toc-bodc-basis-of-dose-component">BoDC (Basis of Dose Component)</a></li>
+          <li><a href="#isvehicle" id="markdown-toc-isvehicle">IsVehicle</a></li>
+          <li><a href="#qsp-quantité-suffisante-pour-" id="markdown-toc-qsp-quantité-suffisante-pour-">Q.S.P. (quantité suffisante pour …)</a></li>
+        </ul>
+      </li>
+      <li><a href="#patches" id="markdown-toc-patches">Patches</a>        <ul>
+          <li><a href="#propriétés-du-patch" id="markdown-toc-propriétés-du-patch">Propriétés du patch</a></li>
+          <li><a href="#propriété-de-la-dose" id="markdown-toc-propriété-de-la-dose">Propriété de la dose</a></li>
+        </ul>
+      </li>
+      <li><a href="#dose-calculée--dose-prescrite" id="markdown-toc-dose-calculée--dose-prescrite">Dose calculée / dose prescrite</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="exemples">Exemples</h1>
+
+<h2 id="exemples-généraux">Exemples généraux</h2>
+
+<h3 id="la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit">La ligne de prescription initiale, complexité du médicament prescrit</h3>
+
+<h4 id="médicament-simple-en-spécilialité">Médicament simple en spécilialité</h4>
+
+<ul>
+  <li><a href="MedicationRequest-14624.html">EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14625.html">CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h par os, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14626.html">DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14627.html">DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14628.html">NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</a></li>
+  <li><a href="MedicationRequest-14629.html">MATRIFEN 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j</a></li>
+  <li><a href="MedicationRequest-14630.html">BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j</a></li>
+</ul>
+
+<h4 id="médicament-simple-en-dc">Médicament simple en DC</h4>
+
+<ul>
+  <li><a href="MedicationRequest-14618.html">paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14619.html">paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14620.html">bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14621.html">nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</a></li>
+  <li><a href="MedicationRequest-14622.html">fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j</a></li>
+  <li><a href="MedicationRequest-14631.html">glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j</a>
+    <ul>
+      <li>Note : Il s’agit de la prescription d’une perfusion préfabriquée, prête à l’emploi, d’un médicament associant deux électrolytes à du glucose 5%. C’est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="médicament-composé">Médicament composé</h4>
+
+<ul>
+  <li><a href="MedicationRequest-14637.html">Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j</a></li>
+  <li><a href="MedicationRequest-14638.html">Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j</a></li>
+  <li>marquer l’un des médicaments composant comme étant le soluté du médicament composé
+    <ul>
+      <li>marqueur sur <em>Medication composant</em> : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
+      <li>marqueur sur <em>.ingredient</em> de <em>Medication composé</em> : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
+      <li><a name="l644">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+    </ul>
+  </li>
+  <li><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
+</ul>
+
+<h3 id="la-prescription-inititale-complexité-de-la-posologie">La prescription inititale, complexité de la posologie</h3>
+
+<p>Un premier niveau de complexité est adressé par les cas d’usage précédents.
+Les niveaux de complexité supplémentaires adressent</p>
+
+<ul>
+  <li>les doses rationnelles
+    <ul>
+      <li><a href="MedicationRequest-14646.html">BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendent 1 semaine</a></li>
+      <li>Dans FHIR, les nombres rationnels sont traduit en type decimal, avec des règles concernant la gestion de la <em>précision</em></li>
+      <li>En pratique, pour l’expression de la dose, les nombres rationnels impliqués se limitent à 1/4, 1/3, 1/2, 2/3 et 3/4</li>
+      <li>Ce guide recommande de représenter les rationnels à la 6ème décimal. Ainsi
+        <ul>
+          <li>1/4 : 0.25</li>
+          <li>1/3 : 0.333333</li>
+          <li>1/2 : 0.5</li>
+          <li>2/3 : 0.666667</li>
+          <li>3/4 : 0.75</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>des doses différentes entre horaires
+    <ul>
+      <li><a href="MedicationRequest-14641.html">CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j</a></li>
+      <li><a href="MedicationRequest-14642.html">paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j</a></li>
+    </ul>
+  </li>
+  <li>les fréquences inférieurs à la journée
+    <ul>
+      <li><a href="MedicationRequest-14643.html">CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j</a></li>
+      <li><a href="MedicationRequest-14644.html">paracétamol, 500 mg toutes les 6 h per os, pendant 5j</a></li>
+    </ul>
+  </li>
+  <li>les fréquences calendaires
+    <ul>
+      <li><a href="MedicationRequest-14645.html">CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois</a></li>
+      <li>Le type complexe <em>Timing</em> ne permet pas le codage des situations suivantes
+        <ul>
+          <li><em>tous les 05 du mois</em></li>
+          <li><em>tous les derniers vendredis du mois</em></li>
+        </ul>
+      </li>
+      <li>Le type complexe <em>Timing</em> est normatif, il est en pratique impossible de le faire évoluer.
+        <ul>
+          <li>Faut-il créer les extensions <em>dayOfMonth</em> et <em>weekdayOfMonth</em> ?</li>
+          <li>Note: l’extension standard <a href="https://hl7.org/fhir/R4/extension-timing-dayofmonth.html">dayOfMonth</a> existe !! (maturité 1).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>les prescriptions conditionnelles simple
+    <ul>
+      <li><a href="MedicationRequest-14639.html">CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
+      <li><a href="MedicationRequest-14640.html">paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
+      <li>Le concept de délais <em>minimum</em> entre deux prises n’est pas codable.
+        <ul>
+          <li>Il apparait en tant que consigne complémentaire en texte libre dans un élément <em>additionalInstruction</em>.</li>
+          <li>Faut-il créer un extension ?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>les doses progessives ou dégressives par palier
+    <ul>
+      <li><a href="MedicationRequest-14647.html">méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j</a></li>
+      <li>Qu’apporte l’élément <em>dosageInstruction.sequence</em> de chaque palier par rapport l’élément <em>dosageInstruction.timing.repeat.boundsPeriod</em> indispensable ?</li>
+      <li>L’élément <em>dosageInstruction.sequence</em> est facultatif. Ne serait-il pas préferable le supprimer ?</li>
+    </ul>
+  </li>
+  <li>l’expression de la quantité d’une dose se référant à l’un des médicaments composant du médicament composé prescrit
+    <ul>
+      <li><a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
+      <li><a name="l853">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
+    </ul>
+  </li>
+  <li>l’expression d’une dose réelle pertinente à partir d’une dose théorique fonction de paramètres patient
+    <ul>
+      <li><a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="les-modifcations-de-la-ligne-prescription-initiale">Les modifcations de la ligne prescription initiale</h3>
+
+<p>Il n’y a pas d’exemple, pour l’instant.</p>
+
+<h2 id="médicament-prescrit-et-doses">Médicament prescrit et dose(s)</h2>
+
+<h3 id="ex-lasilix-20-mg-sol-inj-amp-2-ml-xx-à-7h-et-18h-iv-pendant-5j">Ex: LASILIX 20 mg, sol inj amp 2 mL, XX à 7h et 18h IV, pendant 5j</h3>
+
+<ul>
+  <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
+    <ul>
+      <li>==<strong>LASILIX</strong>== → marque ➟ dans le <em>.text</em> du <em>.coding</em> de la spécialité</li>
+      <li>==<strong>furosémide</strong>== → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li>==<strong>20 mg</strong>== → dosage ➟ <em>.ingredient().strength</em></li>
+      <li>==<strong>sol inj</strong>== → forme ➟ <em>.form</em></li>
+      <li>==<strong>amp</strong>== → présentation ➟ en annotation ==<strong>{amp}</strong>== de l’unité de dénombrement UCUM</li>
+      <li>==<strong>2 mL</strong>== → volume ➟ <em>.amount</em></li>
+    </ul>
+  </li>
+  <li>dose prescrite → <em>MedicationRequest.dosageInstruction</em>
+    <ul>
+      <li>==<strong>XX</strong>== → quantité ➟ <em>.doseAndRate</em></li>
+      <li>==<strong>à 7h et 18h</strong>== → horaire de prise ➟ <em>.timing.repeat.timeOfDay()</em></li>
+      <li>==<strong>per os</strong>== → voie d’administration ➟ <em>.route</em></li>
+      <li>==<strong>pendant 5j</strong>== → début (maintenant) et fin (début + 5j) ➟ <em>.timing.boundsPeriod</em></li>
+    </ul>
+  </li>
+  <li>La quantité ==<strong>XX</strong>== de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
+    <ul>
+      <li>==<strong>1</strong>== (unité [de présentation de l’unité de médicament prescrit] = ampoule contenant 20 mg de furosémide)</li>
+      <li>==<strong>20 mg</strong>== (de principe actif = furosémide)</li>
+      <li>==<strong>2 mL</strong>== (de produit = solution injectable contenant 20 mg de furosémide)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ces 3 expressions permettent de déterminer la quantité de(s) principe(s) actif(s) à partir de caratéristiques du médicament prescrit</p>
+
+<h3 id="ex-furosemide-xx-à-7h-et-18h-iv-pendant-5j">Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j</h3>
+
+<ul>
+  <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
+    <ul>
+      <li>==<strong>FUROSEMIDE</strong>== → médicament en DC ➟ dans le <em>.text</em> du <em>.coding</em> du médicament en DC</li>
+      <li>==<strong>furosémide</strong>== → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li>les autres caractéristiques ne sont pas contraintes par le prescripteur</li>
+    </ul>
+  </li>
+  <li><strong>dose prescrite</strong> → <em>MedicationRequest.dosageInstruction</em>
+    <ul>
+      <li>caractéristiques identiques à celles de l’exemple de ligne de prescription en spécialité</li>
+    </ul>
+  </li>
+  <li>La <strong>quantité</strong> ==<strong>XX</strong>== de la dose prescrite ne peut plus s’exprimer que d’1 façon :
+    <ul>
+      <li>==<strong>20 mg</strong>== (de principe actif = furosémide)</li>
+    </ul>
+  </li>
+  <li>Les 2 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
+    <ul>
+      <li>==<strong>1</strong>== (unité [de présentation de l’unité de médicament prescrit] = furosémide en quantité non définie)</li>
+      <li>==<strong>2 mL</strong>== (de produit = un produit qui contient du furosémide en concentration non définie)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="contraintes">Contraintes</h3>
+
+<p>entre</p>
+
+<ul>
+  <li>propriétés de l’<strong>unité de médicament prescrit</strong></li>
+  <li>expression de la <strong>quantité de la dose prescrite</strong></li>
+</ul>
+
+<h4 id="objectif">Objectif</h4>
+
+<ul>
+  <li>La quantité de principes actifs de la dose doit être déterminée,</li>
+  <li>Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminé.</li>
+</ul>
+
+<h4 id="contrainte-sur-le-médicament-prescrit-medicationrequestmedication">Contrainte sur le Médicament prescrit (<em>MedicationRequest.medication</em>)</h4>
+
+<p>Le dosage (<em>.ingredient[].strength</em>) est exigé quand le médicament prescrit est</p>
+
+<ul>
+  <li>une association de principes actifs (ex : paracétamol + codéine)</li>
+  <li>un médicament extemporané (ex : perfusion composée de plusieurs médicaments)</li>
+</ul>
+
+<h4 id="contraintes-sur-lunité-de-la-dose-prescrite-medicationrequestdosageinstructiondoseandrate">Contraintes sur l’Unité de la dose prescrite (<em>MedicationRequest.dosageInstruction.doseAndRate</em>)</h4>
+
+<p>L’unité est pertinente (donc autorisée), en fonction de son type,</p>
+
+<ul>
+  <li><strong>unité de quantité</strong> de principe actif, si le médicament prescrit n’est composé que d’<strong>un seul principe actif</strong> ;</li>
+  <li><strong>unité de volume</strong> du médicament prescrit, si le médicament prescrit a un <strong>dosage en concentration</strong> défini ;</li>
+  <li><strong>unité de dénombrement</strong> du médicament prescrit, si le médicament prescrit a un <strong>dosage en quantité</strong> défini.</li>
+</ul>
+
+<p>On inclut dans définie, la possibilité de calcul à partir des propriétés connues.
+Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concentration est définie, 10 mg/mL et que l’unité mL pour exprimer la quantité de la dose, par exemple 3 mL, est pertinente parce qu’elle détermine sa quantité de principe actif, 30 mg.</p>
+
+<h2 id="durée-dadministration">Durée d’administration</h2>
+
+<p>Quand elle n’est pas négligeable, sa valeur exprimée <strong>DOIT</strong> figurer au dénominateur de la dose prescrite.</p>
+
+<p>Cf. <a href="https://hl7.org/fhir/R4/dosage-definitions.html#Dosage.doseAndRate.rate_x_">Requirements</a> de l’élément <em>MedicationRequest.dosageInstruction.doseAndRate.rateRatio</em></p>
+
+<p>Si une durée d’administration n’est pas spécifiée par le prescripteur, cela siginifie qu’elle est négilgeable. Par exemple pour l’administration d’un comprimé ou l’injection direct d’une solution.</p>
+
+<h3 id="cas-particuliers">Cas particuliers</h3>
+
+<h4 id="ivl-intraveineuse-lente--ivd-intraveineuse-directe">IVL (intraveineuse lente) / IVD (intraveineuse directe)</h4>
+
+<p>Intraveineuse lente et intraveineuse directe ne sont pas des voies d’administration, quand bien même ces concepts s’y invitent régulièrement dans les listes locales des voies d’administration. Ce sont des méthodes, dont la principale différence porte sur la durée d’administration, qui n’est dans ce cas pas quantifée mais simplement qualifiée.</p>
+
+<p>Si le prescripteur souhaite ne pas donner une durée d’administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l’élément <em>method</em> de la ressource <em>MedicationRequest</em>. La voie d’administration, élément <em>route</em>, prend dans les deux cas la valeur voie intraveineuse.</p>
+
+<p>Ni l’EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d’administration <em>injection</em>.</p>
+
+<h4 id="injection-continue">Injection continue</h4>
+
+<p>Les injections continues sans mention de durée d’administration parce qu’elle est indéterminée au moment de la prescription sans pour autant être négligeable, se traduisent par une expression de la dose en débit, sans mention de quantité, ni de durée d’administration.</p>
+
+<p>Elles se distinguent des expressions de doses à durée d’administration négligeable par l’absence de quantité.</p>
+
+<p>exemple</p>
+
+<p>… json
+“doseAndRate”: [
+  {
+     …
+     “rateRatio”: {
+      “value”: 700,
+      “unit”: “µg”
+      “system”: “http://unitsofmeasure.org”,
+      “code”: “ug”
+    },
+    “denominator”: {
+      “unit”: “min”,
+      “system”: “http://unitsofmeasure.org”,
+      “code”: “min”
+    }
+  }
+]
+…
+ou</p>
+
+<p>… json
+“doseAndRate”: [
+  {
+    …
+    “rateQuantity”: {
+      “value”: 700,
+      “unit”: “µg/min”
+      “system”: “http://unitsofmeasure.org”,
+      “code”: “ug/min”
+    }
+  }
+]
+…</p>
+
+<p><strong>Note</strong>:
+Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
+
+<ul>
+  <li>une unité UCUM de temps (ex: ==<strong>min</strong>==) au dénominateur (==<strong>deniminator.code</strong>==) dans un type de donnée <em>ratio</em> (==<strong>rateRatio</strong>==)</li>
+  <li>une unité UCUM de débit (ex: ==<strong>ug/min</strong>==) dans un type de donnée <em>quantity</em> (==<strong>rateQuantity</strong>==)</li>
+</ul>
+
+<p>La seconde implique une <strong>interprétation du code UCUM par le logiciel</strong> pour avoir connaissance de la notion de débit (savoir reconnaitre une unité de débit UCUM).</p>
+
+<h2 id="perfusions-et-seringues-électriques">Perfusions et seringues électriques</h2>
+
+<p>Elles présentent la particularité d’avoir un médicament prescrit composé de plusieurs médicaments simples, exprimés en spécialité et/ou en DC.</p>
+
+<p>De ce fait, le rapport entre les caractéristiques du médicament prescrit composé et l’expression de la quantité des doses prescrites présente quelques particularités.</p>
+
+<h3 id="bodc-basis-of-dose-component">BoDC (Basis of Dose Component)</h3>
+
+<p>Dans un médicament composé, permet d’exprimer à quel médicament composant, quelle ressource Medication, se réferre l’expression de la dose.</p>
+
+<p>Ex: Permet de rapporter l’expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
+
+<p>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <em>doseAndRate</em> du type complex <em>Dosage</em> qui s’applique à l’élément <em>dosageInstruction</em> de la ressource <em>MedicationRequest</em>.</p>
+
+<p>Voir exemple <a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
+
+<p>Note PN13:</p>
+
+<ul>
+  <li>Dans PN13, c’est le <em>COMPOSANT PRESCRIT</em> qui est marqué comme <em>est_Référent_poso</em>, et non pas les <em>ELEMENT DE POSOLOGIE</em> qui doivent tenir compte de ce marquage d’un <em>COMPOSANT PRESCRIT</em>.</li>
+  <li>Dans FHIR, c’est l’élément <em>dosageInstruction</em> qui est marqué par la référence à la ressources <em>Medication</em> sur laquelle se fonde l’expression de la quantité du dosage.</li>
+</ul>
+
+<h3 id="isvehicle">IsVehicle</h3>
+
+<p>Dans un médicament composé, permet d’exprimer quel composant, quelle ressource <em>Medication</em>, est le soluté.</p>
+
+<p>Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
+
+<p>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.
+Cette extension est appliquée</p>
+
+<ul>
+  <li>soit à la ressource <em>Medication</em> composant qui est référencée par l’élément ingredient de la ressource <em>Medication</em> composée,</li>
+  <li>soit à l’élément <em>ingredient</em> de la ressource <em>Medication</em> composée.</li>
+</ul>
+
+<p>Voir les deux variantes de l’exemple</p>
+
+<ol>
+  <li>sur Medication composant : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
+  <li>sur .ingredient de Medication composé : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
+</ol>
+
+<p>Ces <strong>deux variantes</strong> transmettent strictement la même information et <strong>sont soumises à concertation</strong>.
+Dans le version 1 finalisé du guide, <strong>une seule sera retenue</strong> et le contexte d’application de l’extension <em>IsVehicule</em> sera réduit en conséquence.</p>
+
+<p>Note PN13:</p>
+
+<ul>
+  <li>Dans PN13, le marqueur <em>est_véhicule</em> est porté par le <em>COMPOSANT PRESCRIT</em>.</li>
+  <li>Dans PN13, l’alernative proposée n’est pas possible parce que la collection de <em>COMPOSANT PRESCRIT</em> est directement portée par l’<em>ELEMENT DE PRESCRIPTION</em>, l’équivalent de la ressource <em>MedicationRequest</em>. Il n’y a pas d’élément XML container intermédiaire équivalent de la ressource <em>Medication</em> composé (profil <em>FrMedicationCompound</em>).</li>
+</ul>
+
+<h3 id="qsp-quantité-suffisante-pour-">Q.S.P. (quantité suffisante pour …)</h3>
+
+<p>Cette expression est utilisé dans la prescription des injectables en seringue électrique pour déclarer le volume de soluté composant le médicament prescrit en <em>quantité suffisante pour</em> atteindre le volume du médicament composé, c’est-à-dire le volume final de la seringue.</p>
+
+<p>L’application de la règle suivante répond à ce cas d’usage :</p>
+
+<ul>
+  <li>repérer l’<em>ingredient</em> représentant le médicament composant qui joue le rôle de soluté avec l’extension <em>IsVehicule</em> ;</li>
+  <li>ne pas mettre de volume à ce médicament composant jouant le rôle de soluté (absence d’élément amount dans la ressource Medication représentant le médicament soluté) ;</li>
+  <li>mettre le volume cible dans l’élément amount de la ressource Medication représentant le médicament composé.</li>
+</ul>
+
+<p>Cette règle impose l’utilisation de l’extension <em>IsVehicule</em>.
+Voir exemple <a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></p>
+
+<p>En <a href="https://hl7.org/fhir/medication.html">R5</a>, le ressource <em>Medication</em> voit l’élément <em>ingredient.strength</em> passer de type exclusivement <em>Ratio</em> en type alternatif <em>Ratio</em>, <em>Quantity</em> ou <em>CodeableConcept</em> avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).</p>
+
+<ul>
+  <li>En mettant dans
+    <ul>
+      <li><em>.totalVolume</em> : le volume cible de la seringue,</li>
+      <li><em>.ingredient[soluté].strengthCodeableConcept</em> : le code qs
+il est prescrit explicitement que le soluté est en Q.S.P. le volume cible de la seringue.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Note</strong>:
+En R5 l’élément amount est renommé <strong>totalVolume</strong> pour lever toute ambiguité avec les volumes pouvant figurer dans les <em>ingredient.strength[x]</em>.</p>
+
+<h2 id="patches">Patches</h2>
+
+<h3 id="propriétés-du-patch">Propriétés du patch</h3>
+
+<p>Un patch est un médicament incluant un dispositif intégré garantissant</p>
+
+<ul>
+  <li>une durée maximale de diffusion (ex: 16h, 72h)</li>
+  <li>et
+    <ul>
+      <li>une quantité (15 mg)
+ ou</li>
+      <li>un débit (75 ug/h)
+délivré de principe(s) actif(s).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ces informations sont des propriétés du médicament prescrit.</p>
+
+<p>Elles s’expriment dans la ressource Medication référencée par l’élément medication qui décrit l’unité de médicament prescrit dans la ressource MedicationRequest.</p>
+
+<h3 id="propriété-de-la-dose">Propriété de la dose</h3>
+
+<p>La durée d’administration du patch est un choix du prescipteur.</p>
+
+<p>Il <strong>DOIT</strong> être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est idenitique à la durée maximal garantie par le dispositif intégré.</p>
+
+<p>Le guide d’implémentation n’assigne à la durée d’administration, aucune valeur par défaut qui serait particulière aux patches.</p>
+
+<h2 id="dose-calculée--dose-prescrite">Dose calculée / dose prescrite</h2>
+
+<p>Il arrive que la dose prescrite découle d’un dose de référence formulée en quantité de principe actif par unité de poids ou de surface corporelle. La dose effectivement prescrite est arrondie à une valeur réalisable.</p>
+
+<p>Ex: capécitabime 1000 mg/m².</p>
+
+<ul>
+  <li>Pour un patient de 1,85 m² (1,75 m et 70 kg), la dose calculée est 1850 mg.</li>
+  <li>Les formes orales sèches disponibles ont un dosage de 150 mg ou 500 mg.</li>
+  <li>Le médecin prescrit une dose effective de 1800 mg.</li>
+</ul>
+
+<p>Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseAndRate distingués par leur type</p>
+
+<p>… json
+“doseAndRate”: [
+   {
+      “type”: {
+         “coding”: [
+            {
+               “system”: “http://terminology.hl7.org/CodeSystem/dose-rate-type”,
+               “code”: “calculated”,
+               “display”: “Calculated”
+            }
+         ]
+      },
+      “doseQuantity”: {
+         “value”: 1000,
+         “unit”: “mg/m²”,
+         “system”: “http://unitsofmeasure.org”,
+         “code”: “mg/m2”
+      }
+   },
+   {
+      “type”: {
+         “coding”: [
+            {
+               “system”: “http://terminology.hl7.org/CodeSystem/dose-rate-type”,
+               “code”: “ordered”,
+               “display”: “Ordered”
+            }
+         ]
+      },
+      “doseQuantity”: {
+         “value”: 1800,
+         “unit”: “mg”,
+         “system”: “http://unitsofmeasure.org”,
+         “code”: “mg”
+      }
+   }
+]
+…</p>
+
+<p>Voir exemple <a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></p>
+
+<p><strong>Note</strong>:
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la ==<strong>surface corporelle</strong>== (1,85 m²), voire seulement de la ==<strong>taille</strong>== (1,75 m) et du ==<strong>poids</strong>== (70 kg) du patient.
+Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur la même délivrance, <em>capécitabine 1800 mg</em>, laisserait au pharmacien l’arbitrage de l’arrondi par rapport à la dose prescrite. C’est un cas d’usage différent parce que l’acteur et le temps où se fait l’arrondi ne sont pas les mêmes.</p>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 09:12+0000">2024-09-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/fhir/fr/medication/history.html" target="_blank">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "PN13-FHIR-prescmed-encounter-conceptmap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap PN13-FHIR-prescmed-encounter-conceptmap</b></p><a name=\"PN13-FHIR-prescmed-encounter-conceptmap\"> </a><a name=\"hcPN13-FHIR-prescmed-encounter-conceptmap\"> </a><a name=\"PN13-FHIR-prescmed-encounter-conceptmap-en-US\"> </a><p>Mapping from https://interopsante.org/pn13/xsd to https://hl7.fr/ig/fhir/medication/StructureDefinition/FrInpatientMedicationRequest</p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Séjour/Id_séjour</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>MedicationRequest.encounter.identifier.value</td><td/></tr><tr><td>Messages/M_prescription_médicaments/Séjour/DI_séjour</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationRequest.encounter.identifier.system</td><td>Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:</td></tr></table></div>"
+  },
+  "url" : "https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap",
+  "version" : "0.1.0",
+  "name" : "FrPN13FHIRMedicationPrescriptionEncounterConceptMap",
+  "title" : "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments",
+  "status" : "draft",
+  "date" : "2024-09-18T09:12:00+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un séjour d'une prescritpion de médicament",
+  "sourceUri" : "https://interopsante.org/pn13/xsd",
+  "targetUri" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrInpatientMedicationRequest",
+  "group" : [{
+    "element" : [{
+      "code" : "Messages/M_prescription_médicaments/Séjour/Id_séjour",
+      "target" : [{
+        "code" : "MedicationRequest.encounter.identifier.value",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "Messages/M_prescription_médicaments/Séjour/DI_séjour",
+      "target" : [{
+        "code" : "MedicationRequest.encounter.identifier.system",
+        "equivalence" : "equivalent",
+        "comment" : "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:"
+      }]
+    }]
+  }]
+}
