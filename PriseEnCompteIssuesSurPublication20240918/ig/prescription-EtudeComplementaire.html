@@ -244,7 +244,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>Le binding ‘exclusive’ à SNOMED CT</li>
-  <li>L’usage de profils multiples de la ressource Medication plutôt qu’un seul profil avec des ==<strong>slice</strong>== par type de médicament (spécialité, DC, coumpound)</li>
+  <li>L’usage de profils multiples de la ressource Medication plutôt qu’un seul profil avec des <code class="language-plaintext highlighter-rouge">slice</code> par type de médicament (spécialité, DC, coumpound)</li>
 </ul>
 
 <h2 id="objectif">Objectif</h2>
@@ -284,28 +284,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<p>Le ==<strong>code</strong>== est slicé, ==<strong>discriminant</strong>== sur le système de codage</p>
+<p>Le <code class="language-plaintext highlighter-rouge">code</code> est slicé, <code class="language-plaintext highlighter-rouge">discriminant</code> sur le système de codage</p>
 
 <ul>
-  <li>==<strong>ucdCode</strong>==
+  <li><code class="language-plaintext highlighter-rouge">ucdCode</code>
     <ul>
-      <li>==<strong>discriminant</strong>==:==<strong>coding.codesystem</strong>== = [http://phast.fr/fhir/ValueSet/Pharmacy/CIOdc/SIPh-CIO_UCD]</li>
+      <li><code class="language-plaintext highlighter-rouge">discriminant</code>:<code class="language-plaintext highlighter-rouge">coding.codesystem</code> = [http://phast.fr/fhir/ValueSet/Pharmacy/CIOdc/SIPh-CIO_UCD]</li>
       <li>binding requis sur le jeu de valeurs des codes UCD (SIPh-CIO_UCD)</li>
     </ul>
   </li>
-  <li>==<strong>snomedMedicinalProductCode</strong>==
+  <li><code class="language-plaintext highlighter-rouge">snomedMedicinalProductCode</code>
     <ul>
-      <li>==<strong>discriminant</strong>==:==<strong>coding.codesystem</strong>== = [http://snomed.info/sct]</li>
+      <li><code class="language-plaintext highlighter-rouge">discriminant</code>:<code class="language-plaintext highlighter-rouge">coding.codesystem</code> = [http://snomed.info/sct]</li>
       <li>avec binding requis sur le jeu de valeurs des codes <em>Medicinal Product</em> SNOMED CT (<a href="ValueSet-FrMedicinalProductOnly.html">FrMedicinalProductOnly</a>)</li>
     </ul>
   </li>
-  <li>==<strong>otherMedicationCode</strong>== : pour tout système de codage autre que SIPh-CIO_UCD et SNOMED CT
+  <li><code class="language-plaintext highlighter-rouge">otherMedicationCode</code> : pour tout système de codage autre que SIPh-CIO_UCD et SNOMED CT
     <ul>
       <li>
         <table>
           <tbody>
             <tr>
-              <td>==<strong>discriminant</strong>==:==<strong>coding.codesystem</strong>== != [http://phast.fr/fhir/ValueSet/Pharmacy/CIOdc/SIPh-CIO_UCD]</td>
+              <td><code class="language-plaintext highlighter-rouge">discriminant</code>: <code class="language-plaintext highlighter-rouge">coding.codesystem</code> != [http://phast.fr/fhir/ValueSet/Pharmacy/CIOdc/SIPh-CIO_UCD]</td>
               <td>[http://snomed.info/sct]</td>
             </tr>
           </tbody>
@@ -322,7 +322,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Une substance active des Medical Product SNOMED CT</li>
 </ul>
 
-<p>Le slicing du ==<strong>coding</strong>== permet le codage de la substance selon</p>
+<p>Le slicing du <code class="language-plaintext highlighter-rouge">coding</code> permet le codage de la substance selon</p>
 
 <ul>
   <li>le jeu de valeurs requis des substances de Medicinal Product SNOMED CT
@@ -332,14 +332,14 @@ et/ou</li>
 
 <h2 id="analyse">Analyse</h2>
 
-<p>Le slicing du ==<strong>code</strong>== du médicament (profil <em>FrMedication2unique</em> de la ressource <em>Medication</em>) en trois tranches, une par type de médicament, est fait sur son système de codage. Pour que ces alternatives soient exclusives, deux doivent être fixées et différentes et la troisième ouverte à l’exclusion des deux précédentes.</p>
+<p>Le slicing du <code class="language-plaintext highlighter-rouge">code</code> du médicament (profil <em>FrMedication2unique</em> de la ressource <em>Medication</em>) en trois tranches, une par type de médicament, est fait sur son système de codage. Pour que ces alternatives soient exclusives, deux doivent être fixées et différentes et la troisième ouverte à l’exclusion des deux précédentes.</p>
 
-<p>Ainsi, les médicaments définis en tant que spécialité ont un ==<strong>code</strong>== exclusivement dans le ==<strong>codesystem</strong>== UCD. Ça tombe plutôt bien.
-Mais les médicaments simples définis en DC ont leur ==<strong>codesystem</strong>== exclusivement SNOMED CT. Ce qui est contraire à la demande des éditeurs de relâcher la contrainte de ==<strong>binding</strong>== ‘exclusive’ sur SNOMED CT.</p>
+<p>Ainsi, les médicaments définis en tant que spécialité ont un <code class="language-plaintext highlighter-rouge">code</code> exclusivement dans le <code class="language-plaintext highlighter-rouge">codesystem</code> UCD. Ça tombe plutôt bien.
+Mais les médicaments simples définis en DC ont leur <code class="language-plaintext highlighter-rouge">codesystem</code> exclusivement SNOMED CT. Ce qui est contraire à la demande des éditeurs de relâcher la contrainte de <code class="language-plaintext highlighter-rouge">binding</code> ‘exclusive’ sur SNOMED CT.</p>
 
-<p>Laisser ouvert le ==<strong>codesystem</strong>== du médicament simple en DC, quand bien même SNOMED serait <em>préferé</em>, ne permet pas de le discriminer d’un éventuel ==<strong>codesystem</strong>== utilisé pour les médicaments composites. Cette situation de slicing sur un ==<strong>discriminant</strong>== ambigu n’est pas valide (elle ne passe pas le <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Runningthevalidator">validateur HL7</a>).</p>
+<p>Laisser ouvert le <code class="language-plaintext highlighter-rouge">codesystem</code> du médicament simple en DC, quand bien même SNOMED serait <em>préferé</em>, ne permet pas de le discriminer d’un éventuel <code class="language-plaintext highlighter-rouge">codesystem</code> utilisé pour les médicaments composites. Cette situation de slicing sur un <code class="language-plaintext highlighter-rouge">discriminant</code> ambigu n’est pas valide (elle ne passe pas le <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Runningthevalidator">validateur HL7</a>).</p>
 
-<p>Néanmoins, en maintenant ces contraintes de binding exclusif pour les tranches spécialité et DC, les messages d’erreur retournés sur la validation de <a href="MedicationDispense-14665.html">MD_0003noExt_ (doliprane 500mg gél 16_2j)</a> stipule que le slicing est incongru (donc interdit) sur an element that does not repeat. Il s’agit de l’élément ==<strong>Medication.code</strong>==. Ce ==<strong>coding</strong>== est effectivement unique pour une instance de <em>Medication</em>. La multiplicité est ailleurs, dans le type de médicament que représente cette <em>Medication</em>, une spécialité, un médicament simple en DC ou un médicament composé.</p>
+<p>Néanmoins, en maintenant ces contraintes de binding exclusif pour les tranches spécialité et DC, les messages d’erreur retournés sur la validation de <a href="MedicationDispense-14665.html">MD_0003noExt_ (doliprane 500mg gél 16_2j)</a> stipule que le slicing est incongru (donc interdit) sur an element that does not repeat. Il s’agit de l’élément <code class="language-plaintext highlighter-rouge">Medication.code</code>. Ce <code class="language-plaintext highlighter-rouge">coding</code> est effectivement unique pour une instance de <em>Medication</em>. La multiplicité est ailleurs, dans le type de médicament que représente cette <em>Medication</em>, une spécialité, un médicament simple en DC ou un médicament composé.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -364,7 +364,7 @@ Mais les médicaments simples définis en DC ont leur ==<strong>codesystem</stro
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 14:07+0000">2024-09-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 15:06+0000">2024-09-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

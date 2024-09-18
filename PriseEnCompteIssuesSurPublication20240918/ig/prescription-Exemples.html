@@ -413,27 +413,27 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
     <ul>
-      <li>==<strong>LASILIX</strong>== → marque ➟ dans le <em>.text</em> du <em>.coding</em> de la spécialité</li>
-      <li>==<strong>furosémide</strong>== → principe actif ➟ <em>.ingredient().item[x]</em></li>
-      <li>==<strong>20 mg</strong>== → dosage ➟ <em>.ingredient().strength</em></li>
-      <li>==<strong>sol inj</strong>== → forme ➟ <em>.form</em></li>
-      <li>==<strong>amp</strong>== → présentation ➟ en annotation ==<strong>{amp}</strong>== de l’unité de dénombrement UCUM</li>
-      <li>==<strong>2 mL</strong>== → volume ➟ <em>.amount</em></li>
+      <li><code class="language-plaintext highlighter-rouge">LASILIX</code> → marque ➟ dans le <em>.text</em> du <em>.coding</em> de la spécialité</li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> → dosage ➟ <em>.ingredient().strength</em></li>
+      <li><code class="language-plaintext highlighter-rouge">sol inj</code> → forme ➟ <em>.form</em></li>
+      <li><code class="language-plaintext highlighter-rouge">amp</code> → présentation ➟ en annotation <code class="language-plaintext highlighter-rouge">{amp}</code> de l’unité de dénombrement UCUM</li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> → volume ➟ <em>.amount</em></li>
     </ul>
   </li>
   <li>dose prescrite → <em>MedicationRequest.dosageInstruction</em>
     <ul>
-      <li>==<strong>XX</strong>== → quantité ➟ <em>.doseAndRate</em></li>
-      <li>==<strong>à 7h et 18h</strong>== → horaire de prise ➟ <em>.timing.repeat.timeOfDay()</em></li>
-      <li>==<strong>per os</strong>== → voie d’administration ➟ <em>.route</em></li>
-      <li>==<strong>pendant 5j</strong>== → début (maintenant) et fin (début + 5j) ➟ <em>.timing.boundsPeriod</em></li>
+      <li><code class="language-plaintext highlighter-rouge">XX</code> → quantité ➟ <em>.doseAndRate</em></li>
+      <li><code class="language-plaintext highlighter-rouge">à 7h et 18h</code> → horaire de prise ➟ <em>.timing.repeat.timeOfDay()</em></li>
+      <li><code class="language-plaintext highlighter-rouge">per os</code> → voie d’administration ➟ <em>.route</em></li>
+      <li><code class="language-plaintext highlighter-rouge">pendant 5j</code> → début (maintenant) et fin (début + 5j) ➟ <em>.timing.boundsPeriod</em></li>
     </ul>
   </li>
-  <li>La quantité ==<strong>XX</strong>== de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
+  <li>La quantité <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
     <ul>
-      <li>==<strong>1</strong>== (unité [de présentation de l’unité de médicament prescrit] = ampoule contenant 20 mg de furosémide)</li>
-      <li>==<strong>20 mg</strong>== (de principe actif = furosémide)</li>
-      <li>==<strong>2 mL</strong>== (de produit = solution injectable contenant 20 mg de furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">1</code> (unité [de présentation de l’unité de médicament prescrit] = ampoule contenant 20 mg de furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> (de principe actif = furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> (de produit = solution injectable contenant 20 mg de furosémide)</li>
     </ul>
   </li>
 </ul>
@@ -445,8 +445,8 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
     <ul>
-      <li>==<strong>FUROSEMIDE</strong>== → médicament en DC ➟ dans le <em>.text</em> du <em>.coding</em> du médicament en DC</li>
-      <li>==<strong>furosémide</strong>== → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li><code class="language-plaintext highlighter-rouge">FUROSEMIDE</code> → médicament en DC ➟ dans le <em>.text</em> du <em>.coding</em> du médicament en DC</li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <em>.ingredient().item[x]</em></li>
       <li>les autres caractéristiques ne sont pas contraintes par le prescripteur</li>
     </ul>
   </li>
@@ -455,15 +455,15 @@ Les niveaux de complexité supplémentaires adressent</p>
       <li>caractéristiques identiques à celles de l’exemple de ligne de prescription en spécialité</li>
     </ul>
   </li>
-  <li>La <strong>quantité</strong> ==<strong>XX</strong>== de la dose prescrite ne peut plus s’exprimer que d’1 façon :
+  <li>La <strong>quantité</strong> <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite ne peut plus s’exprimer que d’1 façon :
     <ul>
-      <li>==<strong>20 mg</strong>== (de principe actif = furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> (de principe actif = furosémide)</li>
     </ul>
   </li>
   <li>Les 2 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
     <ul>
-      <li>==<strong>1</strong>== (unité [de présentation de l’unité de médicament prescrit] = furosémide en quantité non définie)</li>
-      <li>==<strong>2 mL</strong>== (de produit = un produit qui contient du furosémide en concentration non définie)</li>
+      <li><code class="language-plaintext highlighter-rouge">1</code> (unité [de présentation de l’unité de médicament prescrit] = furosémide en quantité non définie)</li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> (de produit = un produit qui contient du furosémide en concentration non définie)</li>
     </ul>
   </li>
 </ul>
@@ -569,8 +569,8 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <ul>
-  <li>une unité UCUM de temps (ex: ==<strong>min</strong>==) au dénominateur (==<strong>deniminator.code</strong>==) dans un type de donnée <em>ratio</em> (==<strong>rateRatio</strong>==)</li>
-  <li>une unité UCUM de débit (ex: ==<strong>ug/min</strong>==) dans un type de donnée <em>quantity</em> (==<strong>rateQuantity</strong>==)</li>
+  <li>une unité UCUM de temps (ex: <code class="language-plaintext highlighter-rouge">min</code>) au dénominateur (<code class="language-plaintext highlighter-rouge">deniminator.code</code>) dans un type de donnée <em>ratio</em> (<code class="language-plaintext highlighter-rouge">rateRatio</code>)</li>
+  <li>une unité UCUM de débit (ex: <code class="language-plaintext highlighter-rouge">ug/min</code>) dans un type de donnée <em>quantity</em> (<code class="language-plaintext highlighter-rouge">rateQuantity</code>)</li>
 </ul>
 
 <p>La seconde implique une <strong>interprétation du code UCUM par le logiciel</strong> pour avoir connaissance de la notion de débit (savoir reconnaitre une unité de débit UCUM).</p>
@@ -744,7 +744,7 @@ délivré de principe(s) actif(s).</li>
 <p>Voir exemple <a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></p>
 
 <p><strong>Note</strong>:
-Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la ==<strong>surface corporelle</strong>== (1,85 m²), voire seulement de la ==<strong>taille</strong>== (1,75 m) et du ==<strong>poids</strong>== (70 kg) du patient.
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la <code class="language-plaintext highlighter-rouge">surface corporelle</code> (1,85 m²), voire seulement de la <code class="language-plaintext highlighter-rouge">taille</code> (1,75 m) et du <code class="language-plaintext highlighter-rouge">poids</code> (70 kg) du patient.
 Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur la même délivrance, <em>capécitabine 1800 mg</em>, laisserait au pharmacien l’arbitrage de l’arrondi par rapport à la dose prescrite. C’est un cas d’usage différent parce que l’acteur et le temps où se fait l’arrondi ne sont pas les mêmes.</p>
 
 
@@ -766,7 +766,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 14:07+0000">2024-09-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 15:06+0000">2024-09-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
