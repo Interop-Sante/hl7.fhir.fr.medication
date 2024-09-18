@@ -532,39 +532,38 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 
 <p>exemple</p>
 
-<p>… json
-“doseAndRate”: [
-  {
-     …
-     “rateRatio”: {
-      “value”: 700,
-      “unit”: “µg”
-      “system”: “http://unitsofmeasure.org”,
-      “code”: “ug”
-    },
-    “denominator”: {
-      “unit”: “min”,
-      “system”: “http://unitsofmeasure.org”,
-      “code”: “min”
-    }
-  }
-]
-…
-ou</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"doseAndRate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+     </span><span class="err">...</span><span class="w">
+     </span><span class="nl">"rateRatio"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"µg"</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ug"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"denominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"min"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"min"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
-<p>… json
-“doseAndRate”: [
-  {
-    …
-    “rateQuantity”: {
-      “value”: 700,
-      “unit”: “µg/min”
-      “system”: “http://unitsofmeasure.org”,
-      “code”: “ug/min”
-    }
-  }
-]
-…</p>
+<p>ou</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"doseAndRate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="nl">"rateQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"µg/min"</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ug/min"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p><strong>Note</strong>:
 Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
@@ -704,44 +703,43 @@ délivré de principe(s) actif(s).</li>
 
 <p>Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseAndRate distingués par leur type</p>
 
-<p>… json
-“doseAndRate”: [
-   {
-      “type”: {
-         “coding”: [
-            {
-               “system”: “http://terminology.hl7.org/CodeSystem/dose-rate-type”,
-               “code”: “calculated”,
-               “display”: “Calculated”
-            }
-         ]
-      },
-      “doseQuantity”: {
-         “value”: 1000,
-         “unit”: “mg/m²”,
-         “system”: “http://unitsofmeasure.org”,
-         “code”: “mg/m2”
-      }
-   },
-   {
-      “type”: {
-         “coding”: [
-            {
-               “system”: “http://terminology.hl7.org/CodeSystem/dose-rate-type”,
-               “code”: “ordered”,
-               “display”: “Ordered”
-            }
-         ]
-      },
-      “doseQuantity”: {
-         “value”: 1800,
-         “unit”: “mg”,
-         “system”: “http://unitsofmeasure.org”,
-         “code”: “mg”
-      }
-   }
-]
-…</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"doseAndRate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/dose-rate-type"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calculated"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calculated"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"doseQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg/m²"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg/m2"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/dose-rate-type"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ordered"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ordered"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"doseQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1800</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p>Voir exemple <a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></p>
 
@@ -768,7 +766,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 12:55+0000">2024-09-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 14:07+0000">2024-09-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
