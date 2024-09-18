@@ -176,7 +176,7 @@ Elles se distinguent des expressions de doses à durée d'administration néglig
 
 exemple
 
-... json
+```json
 "doseAndRate": [
   {
      ...
@@ -193,10 +193,11 @@ exemple
     }
   }
 ]
-...
+```
+
 ou
 
-... json
+```json
 "doseAndRate": [
   {
     ...
@@ -208,7 +209,7 @@ ou
     }
   }
 ]
-...
+```
 
 **Note**:
 Il y deux façons d'exprimer un débit dans une dose FHIR :
@@ -324,7 +325,7 @@ Ex: capécitabime 1000 mg/m².
 
 Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseAndRate distingués par leur type
 
-... json
+```json
 "doseAndRate": [
    {
       "type": {
@@ -361,7 +362,7 @@ Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseA
       }
    }
 ]
-...
+```
 
 Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](MedicationRequest-14652.html)
 

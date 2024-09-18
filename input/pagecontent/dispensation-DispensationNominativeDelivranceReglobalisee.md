@@ -32,12 +32,14 @@ Exemple:
 
 L'usage de l'extension standard *event-basedOn* est discutable: elle ne s'applique qu'à un élément *Condition*
 
-... json
-  "context" : [{
-    "type" : "element",
-    "expression" : "Condition"
-  }],
-  ...
+```json
+"context": [
+  {
+    "type": "element",
+    "expression": "Condition"
+  }
+]
+```
 
 Une autre option est de référencer les dispensations nominatives dans l'élément répétable ==**supportingInformation**==. Cette solution est nativement conforme au schéma de la ressource *MedicationDispense*. [Voir cette alternative](MedicationDispense-14665.html).
 
