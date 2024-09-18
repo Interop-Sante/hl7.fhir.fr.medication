@@ -13,6 +13,7 @@
     <sch:title>f:MedicationStatement</sch:title>
     <sch:rule context="f:MedicationStatement">
       <sch:assert test="count(f:implicitRules) &lt;= 0">implicitRules: maximum cardinality of 'implicitRules' is 0</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-history-sources']) &lt;= 1">extension with URL = 'https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-history-sources': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:informationSource) &lt;= 0">informationSource: maximum cardinality of 'informationSource' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
