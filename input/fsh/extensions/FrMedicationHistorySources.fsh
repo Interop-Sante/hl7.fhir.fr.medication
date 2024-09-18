@@ -8,8 +8,6 @@ Description: "Sources des lignes du Bilan Médicamenteux que représente la ress
 * ^context[+].type = #element
 * ^context[=].expression = "Composition"
 
-* . 1..1
-
 * . ^short = "Sourcing"
 * . ^definition = "Sourcing du Bilan Médicamenteux ou de la ligne de traitement du Bilan Médicamenteux"
 * . ^comment = "Nombre de sources (quel que soit leur nombre) ET la liste de ces sources définies par leur type et, éventuellement, leur auteur identifié ès qualités et, de préférence, également nominativement."
