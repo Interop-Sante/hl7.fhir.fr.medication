@@ -2,7 +2,7 @@ Instance: PN13-FHIR-prescmed-medicationrequest-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap"
-* title = "Conversion PN13 vers FHIR pour la ligne de prescription d'une prescription de médicaments"
+* title = "Conversion PN13 vers FHIR pour la ligne de prescrption d'une prescription de médicaments"
 * status = #draft
 * version = "0.1"
 * publisher = "Interop'Santé"
