@@ -21,7 +21,7 @@ Medication History MedicationStatement resource profile"""
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 
-* extension contains fr-medication-history-sources named statementSourcing 0..* MS
+* extension contains fr-medication-history-sources named statementSourcing 0..1 MS
 
 * extension[statementSourcing] ^short = "Sourcing de la ligne de traitement"
 * extension[statementSourcing] ^definition = "Sourcing de la ligne de traitement du Bilan Médicamenteux : nombre de sources ET liste des sources"
