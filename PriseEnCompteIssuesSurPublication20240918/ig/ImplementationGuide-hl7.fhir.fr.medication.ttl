@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-09-18T15:06:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-21T12:37:12+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1260,6 +1260,42 @@
        ] ;
        fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni" ] ;
        fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec uniquement un identifiant fourni" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-medicationComp-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-medicationComp-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un médicament composé d'une prescritpion de médicament" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-medicationNonProp-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-medicationNonProp-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour un médicament en DC d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un médicament en DC d'une prescritpion de médicament" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-medicationUCD-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-prescmed-medicationUCD-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour un médicament UCD d'une prescription de médicaments" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un médicament UCD d'une prescritpion de médicament" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
