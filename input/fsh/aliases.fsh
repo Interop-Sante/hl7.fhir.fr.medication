@@ -34,4 +34,5 @@ Alias: $FrInpatientMedicationRequest = https://hl7.fr/ig/fhir/medication/Structu
 Alias: $PN13TypeComposant = https://interopsante.org/pn13/SIPh_TypeComposant
 Alias: $FrMedicationProfileList = https://hl7.fr/ig/fhir/Medication/CodeSystem/fr-medication-profil-list
 Alias: $FrMedicationUCD = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrMecicationUcd
-Alias: $FrInpatientMedicationNonproprietaryName = https://hl7.fr/ig/fhir/medication/StructureDefinition/FeMedicationNonproprietaryName
+Alias: $FrMedicationNonproprietaryName = https://hl7.fr/ig/fhir/medication/StructureDefinition/FeMedicationNonproprietaryName
+Alias: $FrMedicationCompound = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrMecicationCompound
