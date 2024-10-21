@@ -26,7 +26,7 @@ Toute remarque, commentaire ou suggestion est bienvenu sur la [mailing list PN13
     - Le binding à SNOMED CT est relaché : 'extensible'
     - Une étude est réalisée pour remplacer les 3 profils de la ressource Medication par un seul profil slicé
   - Le 31 janvier 2022, la version draft finalel est publiée.
-    - L'étude d'un seul profil slicé de la ressource Medication n'a pas abouti à une solution valide. **Lien à fournir**
+    - L'étude d'un seul profil slicé de la ressource Medication n'a pas abouti à une solution valide (voir la page [Etude complémentaire](prescription-EtudeComplementaire.html)).
 
 ### La dispensation v1.0
 
