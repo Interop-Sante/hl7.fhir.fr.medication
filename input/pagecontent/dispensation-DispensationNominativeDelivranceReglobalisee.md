@@ -25,24 +25,26 @@ Exemple:
 
         - [14 gélules](MedicationDispense-14664.html)
         - l'usage de l'extension standard [event-basedOn](https://hl7.org/fhir/R4/extension-event-basedon.html) référence les dispensations nominatives à l'origine de la délivrance reglobalisée
-        - une ressource **Group** de ==**type**== **person** est constituée pour référencer les patients ==**subject**== de la délivrance reglobalisée
-        - il n'y a pas de posologie globale (pas de ==**dosageInstruction**==) pour cette délivrance reglobalisée.
+        - une ressource **Group** de `type` **person** est constituée pour référencer les patients `subject` de la délivrance reglobalisée
+        - il n'y a pas de posologie globale (pas de `dosageInstruction`) pour cette délivrance reglobalisée.
 
 ## Limites
 
 L'usage de l'extension standard *event-basedOn* est discutable: elle ne s'applique qu'à un élément *Condition*
 
-... json
-  "context" : [{
-    "type" : "element",
-    "expression" : "Condition"
-  }],
-  ...
+```json
+"context": [
+  {
+    "type": "element",
+    "expression": "Condition"
+  }
+]
+```
 
-Une autre option est de référencer les dispensations nominatives dans l'élément répétable ==**supportingInformation**==. Cette solution est nativement conforme au schéma de la ressource *MedicationDispense*. [Voir cette alternative](MedicationDispense-14665.html).
+Une autre option est de référencer les dispensations nominatives dans l'élément répétable `supportingInformation`. Cette solution est nativement conforme au schéma de la ressource *MedicationDispense*. [Voir cette alternative](MedicationDispense-14665.html).
 
 Une ressource *MedicationDispense* globale comme agrégateur de *MedicationDispense* individualisées est discutable : une ressource *SupplyDelivery* ne serait-elle pas plus appropriée ?
 
-Le problème est qu'il n'y a **pas de moyen de relier cette ressource *SupplyDelivery* à la collection de ressources *MedicationRequest*** qu'elle honore : son élément ==**basedOn**== est contraint de référencer une ressource *SupplyRequest*. Par contre la période couverte par la délivrance peut être décrite dans l'élément ==**occurence\[x\]:occurrencePeriod**==.
+Le problème est qu'il n'y a **pas de moyen de relier cette ressource *SupplyDelivery* à la collection de ressources *MedicationRequest*** qu'elle honore : son élément `basedOn` est contraint de référencer une ressource *SupplyRequest*. Par contre la période couverte par la délivrance peut être décrite dans l'élément `occurence[x]:occurrencePeriod`.
 
-Notons qu'en pratique intrahospitalière, ==**daysSupply**== gagnerait à bénéficier d'un alternative ==**periodSupply**== pour pouvoir mentionner plus précisément quelle est la période couverte par cette occurence de délivrance dans le cas d'une délivrance fractionnée.
+Notons qu'en pratique intrahospitalière, `daysSupply` gagnerait à bénéficier d'une alternative `periodSupply` pour pouvoir mentionner plus précisément quelle est la période couverte par cette occurence de délivrance dans le cas d'une délivrance fractionnée.
