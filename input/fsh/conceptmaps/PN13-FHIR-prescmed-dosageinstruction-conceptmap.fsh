@@ -16,11 +16,11 @@ Usage: #definition
 * group[0].target = $FhirDosage
 * group[0].element[0].code = $PN13Schema-Posologie#Elément_posologie/Fréquence
 * group[0].element[0].target[0].code = $FhirDosage#Dosage.timing.frequency
-* group[0].element[0].target[0].equivalence = #relatedTo
+* group[0].element[0].target[0].equivalence = #relatedto
 * group[0].element[0].target[0].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
 * group[0].element[0].target[1].code = $FhirDosage#Dosage.timing.period
-* group[0].element[0].target[1].equivalence = #retatedTo
+* group[0].element[0].target[1].equivalence = #retatedto
 * group[0].element[0].target[1].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
 * group[0].element[0].target[2].code = $FhirDosage#Dosage.timing.periodUnit
-* group[0].element[0].target[2].equivalence = #retatedTo
+* group[0].element[0].target[2].equivalence = #retatedto
 * group[0].element[0].target[2].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
