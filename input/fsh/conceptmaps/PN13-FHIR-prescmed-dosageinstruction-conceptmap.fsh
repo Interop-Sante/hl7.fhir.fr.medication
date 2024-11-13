@@ -10,8 +10,8 @@ Usage: #definition
 * jurisdiction[0].coding[0].code = $ISO3166#FRA
 * jurisdiction[0].coding[0].display = "France"
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
-* sourceUri = $PN13Schema
-* targetUri = $FrInpatientMedicationRequest
+* sourceUri = $PN13Schema-Posologie
+* targetUri = $FhirDosage
 * group[0].source = $PN13Schema-Posologie
 * group[0].target = $FhirDosage
 * group[0].element[0].source = $PN13Schema-Posologie#Elément_posologie/Fréquence
