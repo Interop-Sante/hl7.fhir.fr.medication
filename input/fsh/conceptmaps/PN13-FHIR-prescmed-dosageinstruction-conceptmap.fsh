@@ -14,7 +14,7 @@ Usage: #definition
 * targetUri = $FhirDosage
 * group[0].source = $PN13Schema-Posologie
 * group[0].target = $FhirDosage
-* group[0].element[0].source = $PN13Schema-Posologie#Elément_posologie/Fréquence
+* group[0].element[0].source = $PN13Schema-Posologie#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Fréquence
 * group[0].element[0].target[0].code = $FhirDosage#Dosage.timing.frequency
 * group[0].element[0].target[0].equivalence = #relatedTo
 * group[0].element[0].target[0].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
