@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/MedicationRequest/14651> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "14651"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest 14651</b></p><a name=\"14651\"> </a><a name=\"hc14651\"> </a><a name=\"14651-en-US\"> </a><p><b>org/fhir/StructureDefinition/FrTreatmentIntent</b>: <span title=\"Codes:{http://snomed.info/sct 129428001}\">traitement préventif</span></p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href=\"#hc14651/med-311\">Medication médicament contenant seulement énoxaparine</a></p><p><b>subject</b>: <a href=\"Patient/phast-14602\">Patient/phast-14602</a></p><p><b>authoredOn</b>: 2021-10-14 15:38:27+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 34206005}\">Voie sous-cutanée</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>2000 [anti(Xa)U]<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[anti(Xa)U] = '[anti(Xa)U]')</span></td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Medication  #med-311</b></p><a name=\"14651/med-311\"> </a><a name=\"hc14651/med-311\"> </a><a name=\"14651/med-311-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 775768002}\">ENOXAPARINE</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 372562003}\">ENOXAPARINE</span></td><td>true</td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-311" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:775768002 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "775768002" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement énoxaparine" ]
+       ] ) ;
+       fhir:text [ fhir:v "ENOXAPARINE" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:372562003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "372562003" ] ;
+           fhir:display [ fhir:v "énoxaparine" ]
+         ] ) ;
+         fhir:text [ fhir:v "ENOXAPARINE" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] ) ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://interopsante.org/fhir/StructureDefinition/FrTreatmentIntent"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:129428001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "129428001" ] ;
+         fhir:display [ fhir:v "procédure préventive" ]
+       ] ) ;
+       fhir:text [ fhir:v "traitement préventif" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:reference [ fhir:v "#med-311" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Patient/phast-14602> ;
+     fhir:reference [ fhir:v "Patient/phast-14602" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2021-10-14T15:38:27.726Z"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Practitioner/smart-Practitioner-71482713> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v "1"^^xsd:integer ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2021-10-14T15:38:00Z"^^xsd:dateTime ] ;
+           fhir:end [ fhir:v "2021-10-24T15:37:59Z"^^xsd:dateTime ]
+         ] ;
+         fhir:timeOfDay ( [ fhir:v "08:00:00"^^xsd:time ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Voie sous-cutanée" ]
+       ] ) ;
+       fhir:text [ fhir:v "Voie sous-cutanée" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ordered" ] ;
+           fhir:display [ fhir:v "Ordered" ]
+         ] ) ;
+         fhir:text [ fhir:v "Ordered" ]
+       ] ;
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "2000"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[anti(Xa)U]" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
