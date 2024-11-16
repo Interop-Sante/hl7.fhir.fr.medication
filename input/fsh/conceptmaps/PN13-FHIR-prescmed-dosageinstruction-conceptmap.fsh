@@ -24,3 +24,11 @@ Usage: #definition
 * group[0].element[0].target[2].code = $FhirDosage#Dosage.timing.periodUnit
 * group[0].element[0].target[2].equivalence = #relatedto
 * group[0].element[0].target[2].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
+* group[0].element[1].code = $PN13Schema-Posologie#Elément_posologie
+* group[0].element[1].target[0].code = $FhirDosage#Dosage.timing
+* group[0].element[1].target[0].equivalence = #relatedto
+* group[0].element[1].target[0].comment = "en l'absence de Fréquence et Fréquence_structurée la fréquence par défaut est d'une fois par jour"
+* group[0].element[1].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence
+* group[0].element[1].target[0].dependsOn[0].value = "<Null>"
+* group[0].element[1].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée
+* group[0].element[1].target[0].dependsOn[1].value = "<Null>"

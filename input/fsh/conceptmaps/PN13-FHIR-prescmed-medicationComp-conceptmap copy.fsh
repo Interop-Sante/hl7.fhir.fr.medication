@@ -18,7 +18,6 @@ Usage: #definition
 * group[0].element[0].target[0].comment = "L'équivalence est donnée par le mapping à fournir par PHAST"
 * group[0].element[0].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme@Phast-nomenclature
 * group[0].element[0].target[0].dependsOn[0].value = "SIPh-CIO_Forme"
-* group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme
 * group[0].element[0].target[1].code = $FrMedicationCompound#Medication.form.coding.code
 * group[0].element[0].target[1].equivalence = #equivalent
 * group[0].element[0].target[1].comment = "L'équivalence est donnée par le mapping à fournir par PHAST"
