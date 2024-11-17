@@ -67,7 +67,7 @@ Usage: #definition
 * group[1].element[0].target[3].dependsOn[1].value = "<Null>"
 * group[1].element[0].target[3].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[1].element[0].target[3].product[0].value = "d"
-* group[1].element[4].target[4].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[1].element[0].target[4].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[1].element[0].target[4].equivalence = #equivalent
 * group[1].element[0].target[4].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[1].element[0].target[4].dependsOn[0].value = "5"
