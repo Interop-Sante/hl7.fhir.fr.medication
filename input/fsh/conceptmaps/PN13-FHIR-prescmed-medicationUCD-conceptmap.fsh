@@ -31,6 +31,6 @@ Usage: #definition
 * group[0].element[2].target[0].product[0].property = $FrMedicationUCD#Medication.form.coding.system
 * group[0].element[2].target[0].product[0].value = "http://standardterms.edqm.eu"
 * group[0].element[3].target[0].code = $FrMedicationUCD#Medication.form.coding.code
-* group[0].element[3].target[0].equivalence = #unmatched
+* group[0].element[3].target[0].equivalence = #relatedto
 * group[0].element[3].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme@Phast-nomenclature
 * group[0].element[3].target[0].dependsOn[0].value = "SIPh-Forme"
