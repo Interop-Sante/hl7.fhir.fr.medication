@@ -12,8 +12,6 @@ Usage: #definition
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema-Posologie
 * targetUri = $FhirDosage
-* group[0].source = $PN13Schema-Posologie
-* group[0].target = $FhirDosage
 * group[0].element[0].code = $PN13Schema-Posologie#Elément_posologie
 * group[0].element[0].target[0].code = $FhirDosage#Dosage.timing
 * group[0].element[0].target[0].equivalence = #relatedto
@@ -109,8 +107,8 @@ Usage: #definition
 * group[1].element[2].target[0].equivalence = #equivalent
 * group[1].element[2].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_multiplicité
 * group[1].element[2].target[0].dependsOn[0].value = "<Null>"
-* group[1].element[2].target[6].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_filtre
-* group[1].element[2].target[6].dependsOn[1].value = "<Null>"
+* group[1].element[2].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_filtre
+* group[1].element[2].target[0].dependsOn[1].value = "<Null>"
 * group[1].element[2].target[0].product[0].property = $FhirDosage#Dosage.timing.repeat.frequency
 * group[1].element[2].target[0].product[0].value = "1"
 * group[1].element[2].target[1].code = $FhirDosage#Dosage.timing.repeat.frequency
