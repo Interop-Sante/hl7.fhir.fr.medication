@@ -35,4 +35,4 @@ Usage: #definition
 * group[0].element[1].target[0].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[0].element[1].target[0].product[0].value = "d"
 * group[0].element[1].target[0].product[1].property = $FhirDosage#Dosage.timing.repeat.period
-* group[0].element[1].terget[0].product[1].value = 1
+* group[0].element[1].target[0].product[1].value = 1
