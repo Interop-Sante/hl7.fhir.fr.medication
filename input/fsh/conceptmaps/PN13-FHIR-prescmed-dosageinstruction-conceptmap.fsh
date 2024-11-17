@@ -32,3 +32,7 @@ Usage: #definition
 * group[0].element[1].target[0].dependsOn[0].value = "<Null>"
 * group[0].element[1].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée
 * group[0].element[1].target[0].dependsOn[1].value = "<Null>"
+* group[0].element[1].target[0].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[0].element[1].target[0].product[0].value = "d"
+* group[0].element[1].target[0].product[1].property = $FhirDosage#Dosage.timing.repeat.period
+* group[0].element[1].terget[0].product[1].value = 1
