@@ -179,6 +179,6 @@ Usage: #definition
 * group[3].element[1].target[0].dependsOn[0].value = "EDQM"
 * group[3].element[1].target[0].product[0].property = $FhirDosage#Dosage.doseAndRate.doseQuantity.system
 * group[3].element[1].target[0].product[0].value = "http://data.esante.gouv.fr/coe/standardterms"
-* group[3].element[1].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[3].element[1].target[0].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.unité
-* group[3].element[1].target[0].equivalence = #relatedto
+* group[3].element[2].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
+* group[3].element[2].target[0].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.unité
+* group[3].element[2].target[0].equivalence = #relatedto

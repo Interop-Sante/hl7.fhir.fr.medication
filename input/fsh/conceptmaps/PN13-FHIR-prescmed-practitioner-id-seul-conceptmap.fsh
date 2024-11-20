@@ -1,7 +1,7 @@
-Instance: PN13-FHIR-prescmed-practitioner-id-seule-conceptmap
+Instance: PN13-FHIR-prescmed-practitioner-id-seul-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
-* name = "FrPN13FHIRMedicationPrescriptionPractitionerIdSeuleConceptMap"
+* name = "FrPN13FHIRMedicationPrescriptionPractitionerIdSeulConceptMap"
 * title = "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni"
 * status = #draft
 * version = "0.1"
@@ -14,9 +14,11 @@ Usage: #definition
 // A valider Pour prendre en compte la différence entre Id_prescripteur et Identification_prescripteur deux mapping sont fourni, un partant sur une référence par identifier, un autre permettant de créer la ressource Practitioner
 * targetUri = $FrInpatientMedicationRequest
 * group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur
-* group[0].element[0].target[0].code = $FrCoreEncounter#MedicationRequest.requester.identifier.value
+* group[0].element[0].target[0].code = $FrInpatientMedicationRequest#MedicationRequest.requester.identifier.value
 * group[0].element[0].target[0].equivalence = #equal
+* group[0].element[0].target[0].product[0].property = $FrInpatientMedicationRequest#MedicationRequest.requester.type
+* group[0].element[0].target[0].product[0].value = "Practitioner"
 * group[0].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur@Phast-uri_nomenclature
-* group[0].element[1].target[0].code = $FrCoreEncounter#MedicationRequest.encounter.identifier.system
+* group[0].element[1].target[0].code = $FrInpatientMedicationRequest#MedicationRequest.encounter.identifier.system
 // l'hypothèse est prise que l'attribut Phast-uri_nomenclature est toujours renseigné avec un uri valide dans le cas de id_prescripteur. Si ce n'est pas le cas, l'option de passer par une référence sur identifier est moins intéressante mais fonctionne toujours
 * group[0].element[1].target[0].equivalence = #equal
