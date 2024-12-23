@@ -1,11 +1,10 @@
 Extension: FrMedicationStatementReconciliationProperties
-Id: FrMedicationStatementReconciliationProperties
+Id: fr-medicationstatement-reconciliation-properties
 Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)"
 
 * ^context.type = #element
 * ^context.expression = "MedicationStatement"
 
-* . 1..1
 * . ^short = "Propriétés de conciliation d'une ligne de traitement médicamenteux"
 * . ^definition = "Propriétés de conciliation d'une ligne de traitement médicamenteux dans une Fiche de Conciliation des Traitements médicamenteux (FCT)"
 * . ^comment = "Ces propriétés sont documentées par le pharmacien puis par le prescripteur. C'est la raison pour laquelle chacune a son propre lot de propriétés d'édition (date, statut et auteur(s)). Ces propriétés d'édition sont facultatives pour supporter les cas d'usage qui n'ont pas besoin de ce niveau de finesse. Par exemple, transmettre une fiche de conciliation complète et validée, cosignée du pharmacien et du prescripteur, d'un logiciel de conciliation au DPI sans qu'il n'y ait de dialogue entre les deux logiciels.\r\nUne ligne de Fiche de Conciliation des Traitements médicamenteux doit être crée avec au moins les deux propriétés *status* et *isDiscrepant* renseignées, cardinalité minimale 2. Le nombre de *comment* est indéterminé, cardinalité maximale *."

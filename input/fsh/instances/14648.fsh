@@ -17,8 +17,7 @@ Usage: #example
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.route = $sct#47625008 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
-* dosageInstruction.doseAndRate.extension.url = "http://interopsante.org/fhir/StructureDefinition/FrBasisOfDoseComponent"
-* dosageInstruction.doseAndRate.extension.valueReference.reference = "#med-282"
+* dosageInstruction.doseAndRate.extension[fr-basis-of-dose-component].valueReference.reference = "#med-282"
 * dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate.type.text = "Ordered"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 4 'g' "g"

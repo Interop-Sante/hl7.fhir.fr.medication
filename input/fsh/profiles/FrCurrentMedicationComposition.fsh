@@ -11,7 +11,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
 * type MS
-* type from http://interopsante.org/fhir/ValueSet/fr-current-medication-document-type (extensible)
+* type from fr-current-medication-document-type (extensible)
 * type ^short = "Type de liste des Traitements Médicamenteux Courants"
 * type ^definition = "Le contexte de la liste des Traitements Médicamenteux Courants (sans précision, OMA, sortie, transfert) ; jeu de valeurs extensible"
 * type ^comment = "Tous les types de liste des Traitements Médicamenteux Courants n'ont pas de code LOINC. Le contexte de la liste des Traitements médicamenteux Courant peut dépasser le périmètre du jeu de valeurs associé, binding *extensible*\\."

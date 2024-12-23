@@ -1,5 +1,5 @@
 Extension: FrDrugCharacteristic
-Id: FrDrugCharacteristic
+Id: fr-drug-characteristic
 Title: "Medication descriptive properties"
 Description: "Specifies descriptive properties of the medicine"
 * ^context.type = #element

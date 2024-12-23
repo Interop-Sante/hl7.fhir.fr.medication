@@ -11,7 +11,7 @@ Current Medication MedicationStatement resource profile"""
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
 * status MS
-* medication[x] only Reference(http://interopsante.org/fhir/StructureDefinition/FrMedication)
+* medication[x] only Reference(fr-medication)
 * medication[x] MS
 * medication[x] ^short = "Le médicament constitutif de cette ligne"
 * medication[x] ^definition = "Identifie le médicament constitutif de cette ligne. C'est le lien vers une ressource *Medication* qui décrit ce médicament."
