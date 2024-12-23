@@ -1,8 +1,7 @@
 Profile: FrOnAdmissionRetroactiveMedicationReconciliationComposition
 Parent: FrMedicationReconciliationComposition
-Id: FrOnAdmissionRetroactiveMedicationReconciliationComposition
+Id: fr-on-admission-retroactive-medication-reconciliation-composition
 Description: "Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrOnAdmissionRetroactiveMedicationReconciliationComposition"
 * ^status = #draft
 * ^purpose = "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission*\\."
 * . ^short = "Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission"

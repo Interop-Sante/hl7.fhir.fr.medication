@@ -1,12 +1,8 @@
 Profile: FrOnAdmissionMedicationComposition
 Parent: FrCurrentMedicationComposition
-Id: FrOnAdmissionMedicationComposition
+Id: fr-on-admission-medication-composition
 Description: "Profil de la ressource *Composition* du traitement médicamenteux prescrit à l'admmission."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrOnAdmissionMedicationComposition"
 * ^status = #draft
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^purpose = "Ce profil est utilisé pour la ressource *Composition* du document FHIR *Ordonnance Médicale d'Admission* (OMA) résultant de la prescription d'admission."
-* ^copyright = "InterOp'Santé 2021"
 * . ^short = "Ordonnace médicale d'admission (OMA)"
 * . ^definition = "Traitements Médicamenteux prescrits à l'admission (Ordonnance Médicale d'Admission - OMA)."
 * type = $fr-document-type#10000009 "OMA" (exactly)

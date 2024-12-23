@@ -1,6 +1,6 @@
 Profile: FrMedicationUcdPart
 Parent: Medication
-Id: FrMedicationUcdPart
+Id: fr-medication-ucd-part
 Title: "French Ucd Part Medication"
 Description: "Part of a multipart branded medication."
 * ^status = #draft

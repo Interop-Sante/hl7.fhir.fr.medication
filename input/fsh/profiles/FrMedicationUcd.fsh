@@ -1,6 +1,6 @@
 Profile: FrMedicationUcd
 Parent: Medication
-Id: FrMedicationUcd
+Id: fr-medication-ucd
 Title: "French branded name Medication"
 Description: "French prescribed, dispensed or used medication expressed as branded medication composed of one to many substances. The code the french UCD (Unité Commune de Dispensation)."
 * ^status = #draft

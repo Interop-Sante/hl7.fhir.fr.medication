@@ -1,6 +1,6 @@
 Profile: FrMPSubstance2Active
 Parent: CodeableConcept
-Id: FrMPSubstance2Active
+Id: fr-mp-substance-2-active
 Description: "code for the medicinal product substance"
 * ^status = #draft
 * ^experimental = false

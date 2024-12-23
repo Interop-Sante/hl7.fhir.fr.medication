@@ -1,8 +1,7 @@
 Instance: med-293
 InstanceOf: FrMedicationNonproprietaryName
 Usage: #inline
-* extension.url = "http://interopsante.org/fhir/StructureDefinition/FrIsVehicle"
-* extension.valueBoolean = true
+* extension[fr-is-vehicle].valueBoolean = true
 * code = $sct#776119003 "médicament contenant seulement glucose"
 * code.text = "GLUCOSE"
 * form = $sct#385229008 "solution pour perfusion"

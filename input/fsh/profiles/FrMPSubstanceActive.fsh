@@ -1,6 +1,6 @@
 Profile: FrMPSubstanceActive
 Parent: CodeableConcept
-Id: FrMPSubstanceActive
+Id: fr-mp-substance-active
 Title: "French Active Substance of a Medicinal Product"
 Description: "code for the medicinal product substance"
 * ^version = "1.0.0"

@@ -1,6 +1,6 @@
 Profile: FrMedicationHistoryMedicationStatement
 Parent: MedicationStatement
-Id: FrMedicationHistoryMedicationStatement
+Id: fr-medication-history-medicationstatement
 Description: """Profil de la ressource *MedicationStatement* du Bilan médicamenteux.
 Medication History MedicationStatement resource profile"""
 

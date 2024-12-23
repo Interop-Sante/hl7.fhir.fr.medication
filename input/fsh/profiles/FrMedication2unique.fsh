@@ -1,12 +1,10 @@
 Profile: FrMedication2unique
 Parent: Medication
-Id: FrMedication2unique
+Id: fr-medication-2-unique
 Description: "ressource Medication unique regroupant les 4 profils en 1 (ucd, ucd-part, non-proprietary-name et compound)"
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedication2unique"
-* ^version = "0.1.0"
 * ^status = #draft
 * ^experimental = true
-* ^date = "2021-12-09"
+
 * obeys frmed-med-1
 
 * code.coding ^slicing.discriminator.type = #pattern

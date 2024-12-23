@@ -1,6 +1,6 @@
 Profile: FrMedicationReconciliationMedicationStatement
 Parent: MedicationStatement
-Id: FrMedicationReconciliationMedicationStatement
+Id: fr-medication-reconciliation-statement
 Description: "Profil de la ressource *MedicationStatement* référencée dans la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT)."
 * ^status = #draft
 * . ^short = "Ligne de traitement médicamenteux de la FCT (Fiche de Conciliation ds Traitements médicamenteux)"

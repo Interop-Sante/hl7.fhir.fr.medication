@@ -1,7 +1,6 @@
 Profile: FrInpatientMedicationRequest2
 Parent: MedicationRequest
-Id: FrInpatientMedicationRequest2
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrInpatientMedicationRequest2"
+Id: fr-inpatient-medicationrequest-2
 * ^status = #draft
 * medication[x] only CodeableConcept or Reference(FrMedication2unique)
 * subject only Reference($FrCorePatient)
