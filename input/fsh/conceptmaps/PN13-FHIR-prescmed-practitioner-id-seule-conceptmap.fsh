@@ -12,7 +12,7 @@ Usage: #definition
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema
 // A valider Pour prendre en compte la différence entre Id_prescripteur et Identification_prescripteur deux mapping sont fourni, un partant sur une référence par identifier, un autre permettant de créer la ressource Practitioner
-* targetUri = $FrInpatientMedicationRequest
+* targetUri = Canonical(fr-inpatient-medicationrequest)
 * group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur
 * group[0].element[0].target[0].code = $FrCoreEncounter#MedicationRequest.requester.identifier.value
 * group[0].element[0].target[0].equivalence = #equal
