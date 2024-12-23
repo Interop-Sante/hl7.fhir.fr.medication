@@ -6,7 +6,7 @@
   <p>
     <b>Note</b>
     <br>
-    Ce guide d'implémentation contient des terminologies non standard qui ont vocation à être remplacées par le référentiel unique d'interopérabilité du médicament (RUIM) dans un futur proche.
+    Dans un futur proche, le référentiel unique d'interopérabilité du médicament (RUIM) remplacera les terminologies non standard présentes dans ce guide d'implémentation.
   </p>
 </blockquote>
 
