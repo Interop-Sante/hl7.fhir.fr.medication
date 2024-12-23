@@ -5,7 +5,7 @@ Usage: #example
 * status = #active
 * intent = #order
 * medicationReference.reference = "#med-21"
-* subject.reference = "Patient/phast-14602"
+* subject.reference = "Patient/14602"
 * authoredOn = "2021-07-28T14:52:40.936Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.sequence = 1

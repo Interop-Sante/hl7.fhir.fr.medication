@@ -20,7 +20,7 @@ Description: "ressource Medication unique regroupant les 4 profils en 1 (ucd, uc
 * code.coding[ucdCode] ^short = "Codes that identify this branded medication"
 * code.coding[ucdCode] ^definition = "Codes that identify this branded medication"
 * code.coding[ucdCode] ^binding.description = "UCD code"
-* code.coding[ucdCode].system = "^http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD$"
+// * code.coding[ucdCode].system = "^http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD$" //TODO : remplacer avec le système FHIR d'UCD
 * code.coding[ucdCode].system ^short = "UCD codeSystem"
 * code.coding[ucdCode].system ^definition = "The UCD code system (under the responsibility of the Club Inter Pharmaceutique (CIP)"
 * code.coding[ucdCode].system ^comment = "In the absence of a uri defined by the Club Interpharceutique or the competent government authorities, the uri defined by PHAST is used."
@@ -37,7 +37,7 @@ Description: "ressource Medication unique regroupant les 4 profils en 1 (ucd, uc
 * code.coding[otherMedicationCode] obeys frmed-med-2 and frmed-med-3 and frmed-med-4
 * code.coding[otherMedicationCode] ^short = "Generaly no code for compound medicinal product"
 * code.coding[otherMedicationCode] ^definition = "A code identifing the compound medicinal product. Generaly none : no code defined for G5 1L + NaCl 3g + KCl 2g."
-// * code.coding[otherMedicationCode].system = "^((?!http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD|http:\\/\\/snomed\\.info\\/sct).)*$" //TODO
+// * code.coding[otherMedicationCode].system = "^((?!http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD|http:\\/\\/snomed\\.info\\/sct).)*$" 
 
 * code.text MS
 * code.text ^comment = "If there is no code (usually not available for a compound drug or must be local if available), a name SHALL be provided."
