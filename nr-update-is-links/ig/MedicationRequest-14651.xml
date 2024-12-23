@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="14651"/>
+  <meta>
+    <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationRequest 14651</b></p><a name="14651"> </a><a name="hc14651"> </a><a name="14651-en-US"> </a><p><b>org/fhir/StructureDefinition/FrTreatmentIntent</b>: <span title="Codes:{http://snomed.info/sct 129428001}">traitement préventif</span></p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href="#hc14651/med-311">Medication médicament contenant seulement énoxaparine</a></p><p><b>subject</b>: <a href="Patient/phast-14602">Patient/phast-14602</a></p><p><b>authoredOn</b>: 2021-10-14 15:38:27+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-71482713">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title="Codes:{http://snomed.info/sct 34206005}">Voie sous-cutanée</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}">Ordered</span></td><td>2000 [anti(Xa)U]<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[anti(Xa)U] = '[anti(Xa)U]')</span></td></tr></table></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Medication #med-311</b></p><a name="14651/med-311"> </a><a name="hc14651/med-311"> </a><a name="14651/med-311-en-US"> </a><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 775768002}">ENOXAPARINE</span></p><h3>Ingredients</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 372562003}">ENOXAPARINE</span></td><td>true</td></tr></table></blockquote></div>
+  </text>
+  <contained>
+    <Medication>
+      <id value="med-311"/>
+      <meta>
+        <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/FrMedicationNonproprietaryName"/>
+      </meta>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="775768002"/>
+          <display value="médicament contenant seulement énoxaparine"/>
+        </coding>
+        <text value="ENOXAPARINE"/>
+      </code>
+      <ingredient>
+        <itemCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="372562003"/>
+            <display value="énoxaparine"/>
+          </coding>
+          <text value="ENOXAPARINE"/>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+      </ingredient>
+    </Medication>
+  </contained>
+  <extension url="http://interopsante.org/fhir/StructureDefinition/FrTreatmentIntent">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="129428001"/>
+        <display value="procédure préventive"/>
+      </coding>
+      <text value="traitement préventif"/>
+    </valueCodeableConcept>
+  </extension>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationReference>
+    <reference value="#med-311"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/phast-14602"/>
+  </subject>
+  <authoredOn value="2021-10-14T15:38:27.726Z"/>
+  <requester>
+    <reference value="Practitioner/smart-Practitioner-71482713"/>
+  </requester>
+  <dosageInstruction>
+    <sequence value="1"/>
+    <timing>
+      <repeat>
+        <boundsPeriod>
+          <start value="2021-10-14T15:38:00Z"/>
+          <end value="2021-10-24T15:37:59Z"/>
+        </boundsPeriod>
+        <timeOfDay value="08:00:00"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="34206005"/>
+        <display value="Voie sous-cutanée"/>
+      </coding>
+      <text value="Voie sous-cutanée"/>
+    </route>
+    <doseAndRate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+          <code value="ordered"/>
+          <display value="Ordered"/>
+        </coding>
+        <text value="Ordered"/>
+      </type>
+      <doseQuantity>
+        <value value="2000"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="[anti(Xa)U]"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

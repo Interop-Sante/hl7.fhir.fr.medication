@@ -1,0 +1,96 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "14659",
+  "meta" : {
+    "profile" : ["http://interopsante.org/fhir/StructureDefinition/FrInpatientMedicationRequest2"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest 14659</b></p><a name=\"14659\"> </a><a name=\"hc14659\"> </a><a name=\"14659-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href=\"#hc14659/med-361\">Medication médicament contenant seulement paracétamol</a></p><p><b>subject</b>: <a href=\"Patient/phast-14603\">Patient/phast-14603</a></p><p><b>authoredOn</b>: 2021-07-14 09:07:28+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 26643006}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Medication #med-361</b></p><a name=\"14659/med-361\"> </a><a name=\"hc14659/med-361\"> </a><a name=\"14659/med-361-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 777067000}, {http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC 1263254}\">PARACETAMOL</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 387517004}, {http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant 5865}\">PARACETAMOL</span></td><td>true</td></tr></table></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Medication",
+    "id" : "med-361",
+    "meta" : {
+      "profile" : ["http://interopsante.org/fhir/StructureDefinition/FrMedication2unique"]
+    },
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "777067000",
+        "display" : "médicament contenant seulement paracétamol"
+      },
+      {
+        "system" : "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC",
+        "code" : "1263254",
+        "display" : "PARACETAMOL"
+      }],
+      "text" : "PARACETAMOL"
+    },
+    "ingredient" : [{
+      "itemCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "387517004",
+          "display" : "paracétamol"
+        },
+        {
+          "system" : "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant",
+          "code" : "5865",
+          "display" : "paracétamol"
+        }],
+        "text" : "PARACETAMOL"
+      },
+      "isActive" : true
+    }]
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "medicationReference" : {
+    "reference" : "#med-361"
+  },
+  "subject" : {
+    "reference" : "Patient/phast-14603"
+  },
+  "authoredOn" : "2021-07-14T09:07:28.914Z",
+  "requester" : {
+    "reference" : "Practitioner/smart-Practitioner-71482713"
+  },
+  "dosageInstruction" : [{
+    "sequence" : 1,
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2021-07-14T09:07:00Z",
+          "end" : "2021-07-17T09:06:59Z"
+        },
+        "timeOfDay" : ["07:00:00",
+        "18:00:00"]
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "26643006",
+        "display" : "Voie orale"
+      }],
+      "text" : "Voie orale"
+    },
+    "doseAndRate" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+          "code" : "ordered",
+          "display" : "Ordered"
+        }],
+        "text" : "Ordered"
+      },
+      "doseQuantity" : {
+        "value" : 500,
+        "unit" : "mg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      }
+    }]
+  }]
+}
