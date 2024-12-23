@@ -60,7 +60,7 @@ Description: "Sources des lignes du Bilan Médicamenteux que représente la ress
 * extension[source].extension[author] ^requirements = "Identification explicite de l'auteur, notamment s'il est identifié nominativement."
 * extension[source].extension[author] ^meaningWhenMissing = "L'auteur ès qualités est implicite du type de la source. L'auteur n'est pas nominativement identifié."
 * extension[source].extension[author].value[x] 1..
-* extension[source].extension[author].value[x] only Reference($FrCorePatient or $FrCorePractitionerRoleProfession or $FrCoreRelatedPerson)
+* extension[source].extension[author].value[x] only Reference($FrCorePatient or $FrCorePractitionerRole or $FrCoreRelatedPerson)
 * extension[source].extension[author].value[x] ^short = "identification de l'auteur de la source"
 * extension[source].extension[author].value[x] ^definition = "Identification de l'auteur par référence à une ressource fr-patient, fr-pratitioner-role ou fr-relatedPerson"
 * extension[source].extension[author].value[x] ^comment = "Si un auteur est identifié, il doit l'être par référence à une ressource fr-patient, fr-pratitioner-role ou fr-relatedPerson"

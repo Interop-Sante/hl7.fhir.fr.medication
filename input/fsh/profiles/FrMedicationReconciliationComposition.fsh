@@ -20,7 +20,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * subject ^comment = "Une FCT (Fiche de Conciliation des Traitements médicamenteux) se rapporte obligatoirement à un patient, référencé en tant que ressource *Patient* profilée *fr-patient*\\."
 * subject ^requirements = "Identifier le patient auquel se rapporte obligatoirement une FCT (Fiche de Conciliation des Traitements médicamenteux), patient référencé en tant que ressource *Patient* profilée *fr-patient*\\."
 * subject.type = "Patient"
-* author only Reference($FrCorePractitionerRoleProfession)
+* author only Reference($FrCorePractitionerRole)
 * author MS
 * author ^short = "Le ou les auteurs"
 * author ^definition = "Le ou les auteurs de cette FCT (Fiche de Conciliation des Traitements médicamenteux), défini ès qualités (ressource *PractitionerRole* profilée *fr-practitioner-role-profession*\\) ET, de préférence, aussi nominativement (la ressource *PractionerRole* profilée *fr-practitioner-role* instanciée réfère une instance de ressource *Practioner* profilée *fr-practitioner*\\)."
@@ -29,7 +29,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * author ^meaningWhenMissing = "Au moins un auteur obligatoire."
 * author.type = "PractitionerRole"
 * attester.party 1..
-* attester.party only Reference($FrCorePractitionerRoleProfession)
+* attester.party only Reference($FrCorePractitionerRole)
 * attester.party.reference 1..
 * attester.party.type = "Practitioner"
 * attester.party.identifier ..0

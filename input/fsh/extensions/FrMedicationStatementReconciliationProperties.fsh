@@ -78,7 +78,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[status].extension[value].extension[author] ^requirements = "discriminer les auteurs de chacune des propriétés de la Fiche de Conciliation des Traitements médicamenteux"
 * extension[status].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la Fiche de Conciliation des Traitements médicamenteux"
 * extension[status].extension[value].extension[author].value[x] 1..
-* extension[status].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[status].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[status].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[status].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 * extension[status].extension[value].extension[author].value[x] ^comment = "PrationerRole avec référence à Practioner (si pas de practioner référencé --> identification ès qualités du professionnel de santé -que par son rôle)"
@@ -140,7 +140,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[isDiscrepant].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche"
 
 * extension[isDiscrepant].extension[value].extension[author].value[x] 1..
-* extension[isDiscrepant].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[isDiscrepant].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[isDiscrepant].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[isDiscrepant].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 
@@ -200,7 +200,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[discrepancy].extension[value].extension[author] ^requirements = "discriminer les auteurs de chacune des propriétés de la Fiche de Conciliation des Traitements médicamenteux"
 * extension[discrepancy].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche"
 * extension[discrepancy].extension[value].extension[author].value[x] 1..
-* extension[discrepancy].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[discrepancy].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[discrepancy].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[discrepancy].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 * extension[discrepancy].extension[value].extension[author].value[x] ^comment = "PrationerRole avec référence à Practioner (si pas de practioner référencé --> identification ès qualités du professionnel de santé -que par son rôle)"
@@ -259,7 +259,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[comment].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche"
 
 * extension[comment].extension[value].extension[author].value[x] 1..
-* extension[comment].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[comment].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[comment].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[comment].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 
@@ -320,7 +320,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[type].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche"
 
 * extension[type].extension[value].extension[author].value[x] 1..
-* extension[type].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[type].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[type].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[type].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 * extension[type].extension[value].extension[author].value[x] ^comment = "PrationerRole avec référence à Practioner (si pas de practioner référencé --> identification ès qualités du professionnel de santé -que par son rôle)"
@@ -381,7 +381,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[outcome].extension[value].extension[author] ^requirements = "discriminer les auteurs de chacune des propriétés de la Fiche de Conciliation des Traitements médicamenteux"
 * extension[outcome].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche"
 * extension[outcome].extension[value].extension[author].value[x] 1..
-* extension[outcome].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[outcome].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[outcome].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[outcome].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 * extension[outcome].extension[value].extension[author].value[x] ^comment = "PrationerRole avec référence à Practioner (si pas de practioner référencé --> identification ès qualités du professionnel de santé -que par son rôle)"
@@ -441,7 +441,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[resolution].extension[value].extension[author] ^requirements = "discriminer les auteurs de chacune des propriétés de la Fiche de Conciliation des Traitements médicamenteux"
 * extension[resolution].extension[value].extension[author] ^meaningWhenMissing = "auteurs de la fiche de Conciliation, propriété *author* de la ressource Composition qui aggrège les lignes (ressources MedicationStatement) de la fiche"
 * extension[resolution].extension[value].extension[author].value[x] 1..
-* extension[resolution].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRoleProfession)
+* extension[resolution].extension[value].extension[author].value[x] only Reference($FrCorePractitionerRole)
 * extension[resolution].extension[value].extension[author].value[x] ^short = "identité de l'auteur par son rôle et, de préférence, aussi sa personne"
 * extension[resolution].extension[value].extension[author].value[x] ^definition = "identité de l'auteur avec son rôle (pharmacien ou médecin) et, de préférence, aussi sa personne (Dr UNTEL)."
 * extension[resolution].extension[value].extension[author].value[x] ^comment = "PrationerRole avec référence à Practioner (si pas de practioner référencé --> identification ès qualités du professionnel de santé -que par son rôle)"

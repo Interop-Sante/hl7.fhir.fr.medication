@@ -31,7 +31,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * date ^short = "Date de détermination du Traitement Médicamenteux Courant"
 * date ^definition = "Date de détermination du Traitementeux Courant par son auteur (cf. element *author*\\).  //The composition editing time, when the composition was last logically changed by the author."
 * author ..1
-* author only Reference($FrCorePractitionerRoleProfession)
+* author only Reference($FrCorePractitionerRole)
 * author MS
 * author ^short = "Le prescripteur"
 * author ^definition = "Le prescripteur de ce Traitement Médicamenteux Courant, défini ès qualités (ressource *PractitionerRole* profilée *fr-practitioner-role*\\) ET, de préférence, aussi nominativement (la ressource *PractionerRole* profilée *fr-practitioner-role-profession* instanciée réfère une instance de ressource *Practioner* profilée *fr-practitioner*\\)."
@@ -39,7 +39,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * author ^requirements = "Identifier le prescriteur."
 * author ^meaningWhenMissing = "Auteur obligatoire"
 * title = "Traitement Médicamenteux Courant"
-* attester.party only Reference($FrCorePractitionerRoleProfession)
+* attester.party only Reference($FrCorePractitionerRole)
 * section 1..1
 * section MS
 * section ^short = "Liste des médicaments prescrits"

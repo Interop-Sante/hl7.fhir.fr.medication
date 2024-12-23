@@ -15,7 +15,7 @@ Alias: $medication-ingredientstrength_1 = http://hl7.org/fhir/ValueSet/medicatio
 // FrCore aliases
 Alias: $FrCoreEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter
 Alias: $FrCorePatient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient
-Alias: $FrCorePractitionerRoleProfession = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role-profession
+Alias: $FrCorePractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role
 Alias: $FrCoreRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person
 Alias: $FrCorePractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role
 Alias: $FrCorePractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner

@@ -25,7 +25,7 @@ Medication Assessment Composition resource profile."""
 * date MS
 * date ^short = "Date de réalisation du Bilan Médicamenteux"
 * date ^definition = "Date de réalisation du Bilan Médicamenteux par son auteur. //The composition editing time, when the composition was last logically changed by the author."
-* author only Reference($FrCorePractitionerRoleProfession)
+* author only Reference($FrCorePractitionerRole)
 * author MS
 * author ^short = "Auteur du Bilan Médicamenteux"
 * author ^definition = "Auteur du Bilan Médicamenteux, défini ès qualités (ressource *FrPractionerRoleProfession*\\) ET, de préférence, aussi nominativement (la ressource *FrPractionerRoleProfession* instanciée réfère une instance de ressource *FrPractioner*\\)."
@@ -35,7 +35,7 @@ Medication Assessment Composition resource profile."""
 * title ^requirements = "titre de ce document en français"
 * attester 1..1
 * attester.party 1..
-* attester.party only Reference($FrCorePractitionerRoleProfession)
+* attester.party only Reference($FrCorePractitionerRole)
 * attester.party ^definition = "Professionnel de santé défini ès qualités (ressource *FrPractionerRoleProfession*\\) ET, de préférence, aussi nominativement (la ressource *FrPractionerRoleProfession* instanciée réfère une instance de ressource *FrPractioner*\\)."
 * attester.party.reference 1..
 * attester.party.identifier ..0
