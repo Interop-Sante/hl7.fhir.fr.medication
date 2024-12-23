@@ -77,6 +77,14 @@ package IG #DDDDDD{
              MedicationDispense.receiver => [None..None]
         } 
 
+        class FrInpatientMedicationRequest2{
+
+             MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.subject => [None..None]
+             MedicationRequest.encounter => [None..None]
+             MedicationRequest.requester => [1..None]
+        } 
+
         class FrInpatientMedicationRequest{
 
              MedicationRequest.extension => [None..None]
@@ -102,14 +110,6 @@ package IG #DDDDDD{
              MedicationRequest.dispenseRequest.quantity => [None..0]
              MedicationRequest.dispenseRequest.expectedSupplyDuration.comparator => [None..0]
              MedicationRequest.dispenseRequest.performer => [None..0]
-        } 
-
-        class FrInpatientMedicationRequest2{
-
-             MedicationRequest.medication[x] => [None..None]
-             MedicationRequest.subject => [None..None]
-             MedicationRequest.encounter => [None..None]
-             MedicationRequest.requester => [1..None]
         } 
 
         class FrMedication2unique{
@@ -724,11 +724,11 @@ package "Ressources de base" #palegreen {
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
-    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest2
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
-    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest2
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
