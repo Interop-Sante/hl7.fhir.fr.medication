@@ -4,10 +4,7 @@ Id: FrOnAdmissionMedicationComposition
 Description: "Profil de la ressource *Composition* du traitement médicamenteux prescrit à l'admmission."
 * ^url = "http://interopsante.org/fhir/StructureDefinition/FrOnAdmissionMedicationComposition"
 * ^status = #draft
-* ^date = "2021-06-24"
 * ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "Ce profil est utilisé pour la ressource *Composition* du document FHIR *Ordonnance Médicale d'Admission* (OMA) résultant de la prescription d'admission."
 * ^copyright = "InterOp'Santé 2021"
 * . ^short = "Ordonnace médicale d'admission (OMA)"

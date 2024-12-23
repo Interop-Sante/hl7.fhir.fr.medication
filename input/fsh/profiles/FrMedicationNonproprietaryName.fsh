@@ -3,16 +3,9 @@ Parent: Medication
 Id: FrMedicationNonproprietaryName
 Title: "French non proprietary name Medication"
 Description: "Simple prescribed, dispensed, administered or used medication expressed in non proprietary name composed of one to many substances. If composed of many substance, the strengh SHALL be defined."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationNonproprietaryName"
-* ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-10-18"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "Simple medication description, include those composed of many substances."
-* ^copyright = "InterOp&#39;Sant&#233; 2021"
 * . ^short = "Simple nonproprietary name Medication of MRQ, MDP or MUS"
 * . ^definition = "This ressource is profiled for describing a simple medicament (vs compound medication) in the presription line represented by a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement)."
 * . ^comment = "A simple medication is made of one single component made of one to many substances.\r\nOptionality of doseForm, amount and strehgth attributes supports different levels of granularity.\r\nThe coarser level only defines the substances it's made of. For instance, contaning only paracetamol or containing only glucose.\r\nThe finest level is the defines the composition and the dose form. For instance, paracetamol 500 mg tablet or  500 mL glucose 5% (50 mg/mL) solution for injection."

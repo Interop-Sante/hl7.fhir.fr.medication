@@ -3,14 +3,8 @@ Parent: Medication
 Id: FrMedicationCompound
 Title: "French compound Medication"
 Description: "A complex medication composed of two to many simple médication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-1."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationCompound"
-* ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-10-18"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "Compound medication description"
 * ^copyright = "InterOp&#39;Sant&#233; 2021"
 * . ^short = "Definition of a Medication compound of a MedicinalRequest, Dispense or Usage"

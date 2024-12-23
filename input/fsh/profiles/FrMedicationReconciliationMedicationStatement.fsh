@@ -2,18 +2,9 @@ Profile: FrMedicationReconciliationMedicationStatement
 Parent: MedicationStatement
 Id: FrMedicationReconciliationMedicationStatement
 Description: "Profil de la ressource *MedicationStatement* référencée dans la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT)."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationReconciliationMedicationStatement"
-* ^version = "0.2.0"
 * ^status = #draft
-* ^date = "2021-06-24"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
-* ^copyright = "InterOp'Santé 2021"
-* . MS
 * . ^short = "Ligne de traitement médicamenteux de la FCT (Fiche de Conciliation ds Traitements médicamenteux)"
 * . ^definition = "Ligne de traitement médicamenteux de la FCT (Fiche de Conciliation ds Traitements médicamenteux), avec ses propriétés de documentation de la conciliation."
-* meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrMedicationReconciliationMedicationStatement" (exactly)
 * meta.tag ..0
 * implicitRules ..0
 * extension ^slicing.discriminator.type = #value

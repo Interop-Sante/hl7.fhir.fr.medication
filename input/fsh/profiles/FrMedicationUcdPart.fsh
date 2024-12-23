@@ -3,16 +3,9 @@ Parent: Medication
 Id: FrMedicationUcdPart
 Title: "French Ucd Part Medication"
 Description: "Part of a multipart branded medication."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationUcdPart"
-* ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-10-18"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "Description of each multipart proprietary named medication part."
-* ^copyright = "InterOp'Santé 2021"
 * . ^short = "Definition of a branded Medication part"
 * . ^definition = "This resource is primarily used for the identification and definition of a branded medication part for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use."
 * code ^short = "Short text that identifies this branded medication part"

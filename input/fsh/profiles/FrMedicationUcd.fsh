@@ -3,14 +3,8 @@ Parent: Medication
 Id: FrMedicationUcd
 Title: "French branded name Medication"
 Description: "French prescribed, dispensed or used medication expressed as branded medication composed of one to many substances. The code the french UCD (Unité Commune de Dispensation)."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedicationUcd"
-* ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-10-18"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "French UCD identifying a medication. May be composed of many substances. May be compound."
 * ^copyright = "InterOp&#39;Sant&#233; 2021"
 * . ^short = "Definition of the branded Medication of MRQ, MDP, MAD or MUS"

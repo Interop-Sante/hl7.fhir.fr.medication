@@ -6,11 +6,8 @@ Alias: $dose-rate-type = http://terminology.hl7.org/CodeSystem/dose-rate-type
 Alias: $SIPh-CIO_DC = http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC
 Alias: $DC_Composant = http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant
 Alias: $unitsofmeasure = http://unitsofmeasure.org
-Alias: $fr-document-type = http://interopsante.org/fhir/CodeSystem/fr-document-type
-Alias: $FrPractitioner = http://interopsante.org/fhir/StructureDefinition/FrPractitioner
 
-Alias: $FrMedicationHistorySources = http://interopsante.org/fhir/StructureDefinition/FrMedicationHistorySources
-
+Alias: $fr-document-type = https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type
 
 Alias: $medicationknowledge-characteristic = http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic
 Alias: $medication-ingredientstrength_1 = http://hl7.org/fhir/ValueSet/medication-ingredientstrength

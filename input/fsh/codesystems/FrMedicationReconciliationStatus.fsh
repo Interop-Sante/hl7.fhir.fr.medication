@@ -1,17 +1,10 @@
 CodeSystem: FrMedicationReconciliationStatus
-Id: FrMedicationReconciliationStatus
+Id: fr-medication-reconciliation-status
 Title: "code system InterOp'Santé - Statut d'une ligne de traitement d'une FCT"
 Description: "Le système de codage du statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."
-* ^meta.lastUpdated = "2021-06-23T08:40:00Z"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "http://interop.org/CodeSystem/fr-medication-reconciliation-status"
-* ^version = "0.2.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-06-23T08:40:00Z"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^content = #complete
 * ^count = 5
 * #10000001 "Continué" "La spécialité et la posologie de la ligne du Traitement Courant sont identiques à celles de la ligne du traitement antérieur (Bilan Médicamenteux)."

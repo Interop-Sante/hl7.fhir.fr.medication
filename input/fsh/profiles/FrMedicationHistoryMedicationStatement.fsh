@@ -5,9 +5,6 @@ Description: """Profil de la ressource *MedicationStatement* du Bilan médicamen
 Medication History MedicationStatement resource profile"""
 
 * ^purpose = "Ce profil est utilisé pour les ressources MedicationStatement figurant dans un bilan médicamenteux. Chaque ressource MeciationStatement y représente une ligne de médicament du Bilan."
-
-
-* . MS
 * . ^short = "Ligne de traitement médicamenteux du Bilan Médicamenteux"
 * . ^definition = "Ligne de traitement médicamenteux du Bilan Médicamenteux, avec son *sourcing* (liste des sources concordantes attanchées à cette ligne)."
 * . ^comment = "Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\r1. MedicationStatement.status + MedicationStatement.wasNotTaken\r2. Status=Active + NotTaken=T = Not currently taking\r3. Status=Completed + NotTaken=T = Not taken in the past\r4. Status=Intended + NotTaken=T = No intention of taking\r5. Status=Active + NotTaken=F = Taking, but not as prescribed\r6. Status=Active + NotTaken=F = Taking\r7. Status=Intended +NotTaken= F = Will be taking (not started)\r8. Status=Completed + NotTaken=F = Taken in past\r9. Status=In Error + NotTaken=N/A = In Error."
