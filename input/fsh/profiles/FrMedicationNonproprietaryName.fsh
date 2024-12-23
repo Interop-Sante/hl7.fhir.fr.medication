@@ -1,6 +1,6 @@
 Profile: FrMedicationNonproprietaryName
 Parent: Medication
-Id: fr-medication-non-proprietary-name
+Id: fr-medication-nonproprietary-name
 Title: "French non proprietary name Medication"
 Description: "Simple prescribed, dispensed, administered or used medication expressed in non proprietary name composed of one to many substances. If composed of many substance, the strengh SHALL be defined."
 * ^status = #draft
