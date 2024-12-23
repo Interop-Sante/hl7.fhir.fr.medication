@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="14627"/>
+  <meta>
+    <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/FrInpatientMedicationRequest"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationRequest 14627</b></p><a name="14627"> </a><a name="hc14627"> </a><a name="14627-en-US"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href="#hc14627/med-91">Medication DIPROSONE 0.05%, crème, tube 30 g</a></p><p><b>subject</b>: <a href="Patient/phast-14602">Patient/phast-14602</a></p><p><b>authoredOn</b>: 2021-07-29 13:04:23+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-71482713">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title="Codes:{http://snomed.info/sct 448598008}">Voie cutanée</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}">Ordered</span></td><td>1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></td></tr></table></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Medication #med-91</b></p><a name="14627/med-91"> </a><a name="hc14627/med-91"> </a><a name="14627/med-91-en-US"> </a><p><b>code</b>: <span title="Codes:{http://phast.fr/fhir/ValueSet/Pharmacy/CIOdc/SIPh-CIO_UCD 3400890277334}">DIPROSONE 0.05%, crème, tube 30 g</span></p><p><b>form</b>: <span title="Codes:{http://snomed.info/sct 385099005}">crème</span></p><p><b>amount</b>: 1 appln<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{appln} = '{appln}')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><h3>Ingredients</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 116571008}">BETAMETHASONE</span></td><td>true</td><td>0.5 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/ g<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeg = 'g')</span></td></tr></table></blockquote></div>
+  </text>
+  <contained>
+    <Medication>
+      <id value="med-91"/>
+      <meta>
+        <profile value="http://interopsante.org/fhir/StructureDefinition/FrMedicationUcd"/>
+      </meta>
+      <code>
+        <coding>
+          <system value="http://phast.fr/fhir/ValueSet/Pharmacy/CIOdc/SIPh-CIO_UCD"/>
+          <code value="3400890277334"/>
+          <display value="DIPROSONE 0.05%, crème, tube 30 g"/>
+        </coding>
+        <text value="DIPROSONE 0.05%, crème, tube 30 g"/>
+      </code>
+      <form>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="385099005"/>
+          <display value="crème"/>
+        </coding>
+        <text value="crème"/>
+      </form>
+      <amount>
+        <numerator>
+          <value value="1"/>
+          <unit value="appln"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="{appln}"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="1"/>
+        </denominator>
+      </amount>
+      <ingredient>
+        <itemCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="116571008"/>
+            <display value="bêtaméthasone"/>
+          </coding>
+          <text value="BETAMETHASONE"/>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <strength>
+          <numerator>
+            <value value="0.5"/>
+            <unit value="mg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg"/>
+          </numerator>
+          <denominator>
+            <unit value="g"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="g"/>
+          </denominator>
+        </strength>
+      </ingredient>
+    </Medication>
+  </contained>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationReference>
+    <reference value="#med-91"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/phast-14602"/>
+  </subject>
+  <authoredOn value="2021-07-29T13:04:23.435Z"/>
+  <requester>
+    <reference value="Practitioner/smart-Practitioner-71482713"/>
+  </requester>
+  <dosageInstruction>
+    <sequence value="1"/>
+    <timing>
+      <repeat>
+        <boundsPeriod>
+          <start value="2021-07-29T13:04:00Z"/>
+          <end value="2021-08-03T13:03:59Z"/>
+        </boundsPeriod>
+        <timeOfDay value="08:00:00"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="448598008"/>
+        <display value="Voie cutanée"/>
+      </coding>
+      <text value="Voie cutanée"/>
+    </route>
+    <doseAndRate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+          <code value="ordered"/>
+          <display value="Ordered"/>
+        </coding>
+        <text value="Ordered"/>
+      </type>
+      <doseQuantity>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

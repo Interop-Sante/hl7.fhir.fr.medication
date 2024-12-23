@@ -1,0 +1,601 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conversion PN13 vers FHIR pour un patient avec INS qualifiée d&#39;une prescription de médicaments - XML Representation - Guide d&#39;implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7fr.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"23.65"}
+    h3,h4,h5,h6{--heading-prefix:"23.65"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
+</div>
+
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d&#39;implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d&apos;ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d&apos;usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Ressources.html">Ressources</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d&apos;ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d&apos;usage</a>
+      </li>
+      <li>
+        <a href="prescription-Ressources.html">Ressources</a>
+      </li>
+      <li>
+        <a href="prescription-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+      <li>
+        <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource *MedicationDispense*</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.fr">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Conversion PN13 vers FHIR pour un patient avec INS qualifiée d&#39;une prescription de médicaments - XML Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2024-12-23
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.xml" no-download="true">Raw xml</a> | <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">ConceptMap</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PN13-FHIR-prescmed-patient-avec-INS-conceptmap&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap PN13-FHIR-prescmed-patient-avec-INS-conceptmap&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;PN13-FHIR-prescmed-patient-avec-INS-conceptmap&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcPN13-FHIR-prescmed-patient-avec-INS-conceptmap&quot;&gt; &lt;/a&gt;&lt;a name=&quot;PN13-FHIR-prescmed-patient-avec-INS-conceptmap-en-US&quot;&gt; &lt;/a&gt;&lt;p&gt;Mapping from https://interopsante.org/pn13/xsd to &lt;a href=&quot;https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient-ins.html&quot;&gt;FR Core Patient INS Profile&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.type.coding.code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identfier.use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.type.coding.system&lt;/b&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Ipp&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.identifier.value&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;PI&lt;/td&gt;&lt;td&gt;usual&lt;/td&gt;&lt;td&gt;http://terminology.hl7.org/CodeSystem/v2-0203&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/DI&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.identifier.system&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;td/&gt;&lt;td&gt;Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;INS_OID&lt;/b&gt;&lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.system&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.type.coding.code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identfier.use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.type.coding.system&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/INS&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;1.2.250.1.213.1.4.8&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.identifier.value&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;urn:oid:1.2.250.1.213.1.4.8&lt;/td&gt;&lt;td&gt;INS-NIR&lt;/td&gt;&lt;td&gt;official&lt;/td&gt;&lt;td&gt;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 3 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;INS_OID&lt;/b&gt;&lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.system&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.type.coding.code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identfier.use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.identifier.type.coding.system&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/INS&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;1.2.250.1.213.1.4.9&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.identifier.value&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;urn:oid:1.2.250.1.213.1.4.9&lt;/td&gt;&lt;td&gt;INS-NIA&lt;/td&gt;&lt;td&gt;official&lt;/td&gt;&lt;td&gt;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 4 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;4&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;4&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.name.extension.url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.name.use&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Nom_naissance&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.name.family&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;official&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Premier_prénom&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.name.given&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Prénoms&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.name.extension.valueString&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 5 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.name.use&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Nom_usuel&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.name.family&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;usual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Prénom_usuel&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.name.given&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 6 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Messages/M_prescription_médicaments/Patient/Date_naissance&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Patient.birthDate&lt;/td&gt;&lt;td&gt;La date doit être transformée du format AAAAMMJJ[HH[MM[SS]]] au format YYYY-MM-DDTHH:MM:SS+ZZ:ZZ. L'offset de fuseau horaire n'est à intégrer que si au moin une heure est fournie.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Messages/M_prescription_médicaments/Patient/Sexe&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Patient.gender&lt;/td&gt;&lt;td&gt;le code est à traduire en utilisant MedicationRequest.medicationReference.reference&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 7 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;4&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;4&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.extension.url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.extension.valueAddress.extension.url&lt;/b&gt;&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Lieu_naissance&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.extension.valueAddress.extension.valueCoding.code&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;http://hl7.org/fhir/StructureDefinition/patient-birthPlace&lt;/td&gt;&lt;td&gt;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code&lt;/td&gt;&lt;td&gt;L'élément FHIR Patient.extension.valueAddress.extension.valueCoding.system dépend de la valeur du code. Pour les codes commençant par 99, le system est https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R13-Pays ; pour le code 01 https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire; pour les autres codes le system est est https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 8 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from &lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.extension.url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.extension.extension.valueCoding.system&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Patient.extension.extension.url&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Messages/M_prescription_médicaments/Patient/Statut_idpat&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equal&quot; title=&quot;equal&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;Patient.extension.extension.valueCoding.code&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;&gt;&lt;/td&gt;&lt;td&gt;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability&lt;/td&gt;&lt;td&gt;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445&lt;/td&gt;&lt;td&gt;identityStatus&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 9 &lt;/b&gt;Mapping from &lt;code&gt;unspecified code system&lt;/code&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Messages/M_prescription_médicaments/Patient/Date_lunaire&lt;/td&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FrPN13FHIRMedicationPrescriptionPatientINSConceptMap&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a>
+         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-12-23T13:12:16+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Interop'Santé&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Interop'Santé&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://interopsante.org/&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;ConceptMap pour la conversion PN13 vers FHIR d'un patient avec INS qualifiée d'une prescritpion de médicament&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source[x]">sourceUri</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interopsante.org/pn13/xsd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target[x]">targetUri</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Ipp&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.identifier.value&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identfier.use&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;usual&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.type.coding.code&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PI&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.type.coding.system&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/DI&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.identifier.system&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/INS&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.identifier.value&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn">dependsOn</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;M_prescription_médicaments/Patient/INS_OID&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1.2.250.1.213.1.4.8&quot;/&gt;
+        &lt;/dependsOn&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identfier.use&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;official&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.type.coding.code&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;INS-NIR&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.type.coding.system&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.system&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:oid:1.2.250.1.213.1.4.8&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/INS&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.identifier.value&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn">dependsOn</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;M_prescription_médicaments/Patient/INS_OID&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1.2.250.1.213.1.4.9&quot;/&gt;
+        &lt;/dependsOn&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identfier.use&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;official&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.type.coding.code&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;INS-NIA&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.type.coding.system&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.identifier.system&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:oid:1.2.250.1.213.1.4.9&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Nom_naissance&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.name.family&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.name.use&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;official&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Premier_prénom&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.name.given&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Prénoms&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.name.extension.valueString&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.name.extension.url&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Nom_usuel&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.name.family&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.name.use&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;usual&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Prénom_usuel&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.name.given&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Date_naissance&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.birthDate&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;La date doit être transformée du format AAAAMMJJ[HH[MM[SS]]] au format YYYY-MM-DDTHH:MM:SS+ZZ:ZZ. L'offset de fuseau horaire n'est à intégrer que si au moin une heure est fournie.&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Sexe&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.gender&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;le code est à traduire en utilisant MedicationRequest.medicationReference.reference&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Lieu_naissance&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.extension.valueAddress.extension.valueCoding.code&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;L'élément FHIR Patient.extension.valueAddress.extension.valueCoding.system dépend de la valeur du code. Pour les codes commençant par 99, le system est https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R13-Pays ; pour le code 01 https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire; pour les autres codes le system est est https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.extension.url&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/patient-birthPlace&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.extension.valueAddress.extension.url&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Statut_idpat&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient.extension.extension.valueCoding.code&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equal&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.extension.url&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.extension.extension.url&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;identityStatus&quot;/&gt;
+        &lt;/product&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.product">product</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.property">property</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient.extension.extension.valueCoding.system&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.dependsOn.value">value</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445&quot;/&gt;
+        &lt;/product&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Messages/M_prescription_médicaments/Patient/Date_lunaire&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Les dates luanires ne sont pas à indiquer dans les ressources FHIR&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+&lt;/ConceptMap&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 23, 2024 13:12+0000">2024-12-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7.fr/fhir/fr/medication/history.html">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
