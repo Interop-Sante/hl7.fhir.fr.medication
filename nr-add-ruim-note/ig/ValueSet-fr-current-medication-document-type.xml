@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="fr-current-medication-document-type"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet fr-current-medication-document-type</b></p><a name="fr-current-medication-document-type"> </a><a name="hcfr-current-medication-document-type"> </a><a name="fr-current-medication-document-type-en-US"> </a><ul><li>Include codes from<a href="CodeSystem-fr-document-type.html"><code>https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type</code></a> where isCurrentMedication  = true</li></ul></div>
+  </text>
+  <url value="https://hl7.fr/fhir/fr/medication/ValueSet/fr-current-medication-document-type"/>
+  <version value="0.1.0"/>
+  <name value="FrCurrentMedicationDocumentType"/>
+  <title value="value set InterOp'Santé - type de document de la ressource Composition d'une FCT"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-12-26T09:59:36+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <description value="Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une liste des Traitements Médicamenteux Courants."/>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type"/>
+      <filter>
+        <property value="isCurrentMedication"/>
+        <op value="="/>
+        <value value="true"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -13,61 +13,6 @@
       "ValueSet-medication-ingredient-strength-codes.html" : "MedicationIngredientStrengthCodes"
     },
     {
-      "url" : "http://interopsante.org/fhir/CodeSystem/fr-editorial-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrEditorialStatus",
-      "title" : "code system Interop'Santé - Statut éditorial d'une valeur",
-      "description" : "Le système de codage du statut éditorial d'une valeur.",
-      "uses" : {
-      },
-      "ValueSet-FrEditorialStatus.html" : "value set InterOp'Santé - Statut éditorial d'une valeur"
-    },
-    {
-      "url" : "http://interopsante.org/fhir/CodeSystem/fr-medication-history-source-type",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrMedicationHistorySourceType",
-      "title" : "code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux",
-      "description" : "Le système de codage des sources d'un Bilan Médicamenteux.",
-      "uses" : {
-      },
-      "ValueSet-FrMedicationHistorySourceType.html" : "value set SIPh - Nature des sources d'un Bilan Médicamenteux"
-    },
-    {
-      "url" : "http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-discrepancy",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrMedicationReconciliationDiscrepancy",
-      "title" : "code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT",
-      "description" : "Le système de codage de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
-      "uses" : {
-      },
-      "ValueSet-FrMedicationReconciliationQualifiedDiscrepancy.html" : "value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT"
-    },
-    {
-      "url" : "http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-resolution",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrMedicationReconciliationResolution",
-      "title" : "code system InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
-      "description" : "Le système de codage de la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
-      "uses" : {
-      },
-      "ValueSet-FrMedicationReconciliationResolution.html" : "value set InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"
-    },
-    {
-      "url" : "http://interopsante.org/fhir/CodeSystem/fr-medication-reconciliation-type",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrMedicationReconciliationType",
-      "title" : "code system InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
-      "description" : "Le système de codage du type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
-      "uses" : {
-      },
-      "ValueSet-FrMedicationReconciliationType.html" : "value set InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT"
-    },
-    {
       "url" : "http://snomed.info/sct",
       "version" : null,
       "status" : "active",
@@ -77,13 +22,13 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-FrRouteOfAdministration.html" : "French Route of Administration",
-      "ValueSet-FrMpSubstanceActive.html" : "French Medicinal product Active substance",
+      "ValueSet-fr-mp-unit-of-presentation.html" : "French Medicinal product Unit of Presentation",
+      "ValueSet-fr-mp-dose-form.html" : "French Medicinal product Dose form",
       "ValueSet-FrMedicinalProductOnly.html" : "French Medicinal Product only",
+      "ValueSet-fr-route-of-administration.html" : "French Route of Administration",
+      "ValueSet-fr-treatment-intent.html" : "French overall intention of the treatment",
       "ValueSet-FrMethodOfAdministration.html" : "French Method Of Administration",
-      "ValueSet-FrMpDoseForm.html" : "French Medicinal product Dose form",
-      "ValueSet-FrTreatmentIntent.html" : "French overall intention of the treatment",
-      "ValueSet-FrMpUnitOfPresentation.html" : "French Medicinal product Unit of Presentation"
+      "ValueSet-fr-mp-substance-active.html" : "French Medicinal product Active substance"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic",
@@ -96,6 +41,95 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-medicationknowledge-characteristic.html" : "Medication knowledge  characteristic  codes"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrDocumentType",
+      "title" : "code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy",
+      "description" : "Le système de codage SIPh du type de document d'une ressource *Composition* du domaine Pharmacy",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-reconciliation-document-type.html" : "value set InterOp'Santé - type de document de la ressource Composition d'une FCT",
+      "ValueSet-fr-current-medication-document-type.html" : "value set InterOp'Santé - type de document de la ressource Composition d'une FCT"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-editorial-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrEditorialStatus",
+      "title" : "code system Interop'Santé - Statut éditorial d'une valeur",
+      "description" : "Le système de codage du statut éditorial d'une valeur.",
+      "uses" : {
+      },
+      "ValueSet-fr-editorial-status.html" : "value set InterOp'Santé - Statut éditorial d'une valeur"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-history-source-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationHistorySourceType",
+      "title" : "code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux",
+      "description" : "Le système de codage des sources d'un Bilan Médicamenteux.",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-history-source-type.html" : "value set SIPh - Nature des sources d'un Bilan Médicamenteux"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-discrepancy",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationReconciliationDiscrepancy",
+      "title" : "code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT",
+      "description" : "Le système de codage de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-reconciliation-qualified-discrepancy.html" : "value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-outcome",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationReconciliationOutcome",
+      "title" : "code system InterOp'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT",
+      "description" : "Le système de codage de la gravité de l'erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-reconciliation-outcome.html" : "value set Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-resolution",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationReconciliationResolution",
+      "title" : "code system InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
+      "description" : "Le système de codage de la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-reconciliation-resolution.html" : "value set InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationReconciliationStatus",
+      "title" : "code system InterOp'Santé - Statut d'une ligne de traitement d'une FCT",
+      "description" : "Le système de codage du statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-reconciliation-status.html" : "value set InterOp'Santé - Statut d'une ligne de traitement d'une FCT"
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationReconciliationType",
+      "title" : "code system InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
+      "description" : "Le système de codage du type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+      "uses" : {
+      },
+      "ValueSet-fr-medication-reconciliation-type.html" : "value set InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT"
     }
   ]
 }
