@@ -1,0 +1,38 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "fr-medication-reconciliation-qualified-discrepancy",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet fr-medication-reconciliation-qualified-discrepancy</b></p><a name=\"fr-medication-reconciliation-qualified-discrepancy\"> </a><a name=\"hcfr-medication-reconciliation-qualified-discrepancy\"> </a><a name=\"fr-medication-reconciliation-qualified-discrepancy-en-US\"> </a><ul><li>Include codes from<a href=\"CodeSystem-fr-medication-reconciliation-discrepancy.html\"><code>https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-discrepancy</code></a> where isQualified  = true</li></ul></div>"
+  },
+  "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-qualified-discrepancy",
+  "version" : "0.1.0",
+  "name" : "FrMedicationReconciliationQualifiedDiscrepancy",
+  "title" : "value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-12-26T15:31:22+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-discrepancy",
+      "filter" : [{
+        "property" : "isQualified",
+        "op" : "=",
+        "value" : "true"
+      }]
+    }]
+  }
+}
