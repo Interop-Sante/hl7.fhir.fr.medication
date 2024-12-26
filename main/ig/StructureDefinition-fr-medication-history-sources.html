@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/hl7fr.css" rel="stylesheet"/>
 
@@ -41,10 +42,11 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"23.23"}
-    h3,h4,h5,h6{--heading-prefix:"23.23"}</style>
+    <style type="text/css">h2{--heading-prefix:"25.23"}
+    h3,h4,h5,h6{--heading-prefix:"25.23"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
   <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
@@ -162,8 +164,21 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -301,7 +316,7 @@
         
           Draft
           
-            as of 2024-11-13
+            as of 2024-12-26
           
         
       </td>
@@ -341,7 +356,7 @@
   <p><b>Usage info</b></p>
   <p><b>Usage:</b></p>
 <ul>
- <li>Use this Extension: <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a> and <a href="StructureDefinition-FrMedicationHistoryMedicationStatement.html">FrMedicationHistoryMedicationStatement</a></li>
+ <li>Use this Extension: <a href="StructureDefinition-fr-medication-history-composition.html">FrMedicationHistoryComposition</a> and <a href="StructureDefinition-fr-medication-history-medicationstatement.html">FrMedicationHistoryMedicationStatement</a></li>
 </ul>
 
 
@@ -353,9 +368,6 @@
   </p>
   <div id="tabs">
     <ul>
-      <li>
-        <a href="#tabs-summ">Text Summary</a>
-      </li>
       <li>
         <a href="#tabs-diff">Differential Table</a>
       </li>
@@ -378,27 +390,12 @@
       </li>-->
 
       <li>
+        <a href="#tabs-summ">Statistics/References</a>
+      </li>
+      <li>
         <a href="#tabs-all">All</a>
       </li>
     </ul>
-    <a name="tabs-summ"> </a>
-    <div id="tabs-summ">
-      <div id="tbl-summ">
-        <p>This structure is derived from <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>
-        </p>
-        <div id="tbl-summ-inner">
-          <a name="summary"> </a>
-          <a name="s-summary"> </a>
-<p><b>
-Summary
-</b></p>
-<p>Complex Extension: Sources des lignes du Bilan Médicamenteux que représente la ressource <em>Composition</em> ou de chacune de ses lignes que représente la ressource <em>MedicationStatement</em> référencée par l'élément <em>entry</em> de la ressource <em>Composition</em> (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)</p><ul><li>number: positiveInt: Nombre de sources consultées  du Bilan Médicamenteux / Nombre de sources condordantes  de chaque ligne du Bilan Médicamenteux.</li>
-<li>type: Coding: Type (coding) de la source retenue. Jeu de valeurs ouvert (<em>extensible</em>), d'après <a href="https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante">le guide de la HAS</a>.</li>
-<li>author: Reference: Auteur de la source d'informations retenue, le patient, un profesionnel de santé ou une personne en relation avec le patient.</li>
-</ul>
-        </div>
-      </div>
-    </div>
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
@@ -488,7 +485,7 @@ Summary
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-FrMedicationHistorySourceType.html" title="http://interopsante.org/fhir/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-fr-medication-history-source-type.html" title="https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbbb"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12525.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end_slicer-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author" title="Slice author: Auteur de la source d'informations retenue, le patient, un profesionnel de santé ou une personne en relation avec le patient.">extension:author</a><a name="d-Extension.extension.extension.5"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -511,7 +508,7 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="abbbbc"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author.value[x]" title="Identification de l'auteur par référence à une ressource fr-patient, fr-pratitioner-role ou fr-relatedPerson">value[x]</a><a name="d-Extension.extension.extension.value_x_.2"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-practitioner-role-profession.html">FR Core Practitioner Role Profession</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html">FR Core Practitioner Role</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">identification de l'auteur de la source</td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1250.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.url">url</a><a name="d-Extension.extension.url.2"> </a></td>
@@ -641,7 +638,7 @@ Summary
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-FrMedicationHistorySourceType.html" title="http://interopsante.org/fhir/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-fr-medication-history-source-type.html" title="https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbbb"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12525.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end_slicer-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author" title="Slice author: Auteur de la source d'informations retenue, le patient, un profesionnel de santé ou une personne en relation avec le patient.">extension:author</a><a name="Extension.extension.extension.4"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -670,7 +667,7 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbbbd"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author.value[x]" title="Identification de l'auteur par référence à une ressource fr-patient, fr-pratitioner-role ou fr-relatedPerson">value[x]</a><a name="Extension.extension.extension.value_x_.2"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-practitioner-role-profession.html">FR Core Practitioner Role Profession</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html">FR Core Practitioner Role</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">identification de l'auteur de la source</td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="abbc"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.url" title="Source of the definition for the extension code - a logical name or a URL.">url</a><a name="Extension.extension.url.2"> </a></td>
@@ -736,13 +733,14 @@ Not handled yet: complex extension null
       </div>
     </div>-->
 
-    <a name="tabs-all"> </a>
-    <div id="tabs-all">
-      <div id="all-summ">
+    <a name="tabs-summ"> </a>
+    <div id="tabs-summ">
+      <div id="tbl-summ">
         <p>This structure is derived from <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>
         </p>
-        <div id="all-summ-inner">
-          <a name="a-summary"> </a>
+        <div id="tbl-summ-inner">
+          <a name="summary"> </a>
+          <a name="s-summary"> </a>
 <p><b>
 Summary
 </b></p>
@@ -752,6 +750,9 @@ Summary
 </ul>
         </div>
       </div>
+    </div>
+    <a name="tabs-all"> </a>
+    <div id="tabs-all">
       <div id="all-tbl-diff">
         <p>
           <b>Differential View</b>
@@ -842,7 +843,7 @@ Summary
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-FrMedicationHistorySourceType.html" title="http://interopsante.org/fhir/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-fr-medication-history-source-type.html" title="https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbbb"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12525.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end_slicer-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author" title="Slice author: Auteur de la source d'informations retenue, le patient, un profesionnel de santé ou une personne en relation avec le patient.">extension:author</a><a name="da-Extension.extension.extension.5"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -865,7 +866,7 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="abbbbc"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author.value[x]" title="Identification de l'auteur par référence à une ressource fr-patient, fr-pratitioner-role ou fr-relatedPerson">value[x]</a><a name="da-Extension.extension.extension.value_x_.2"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-practitioner-role-profession.html">FR Core Practitioner Role Profession</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html">FR Core Practitioner Role</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">identification de l'auteur de la source</td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1250.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.url">url</a><a name="da-Extension.extension.url.2"> </a></td>
@@ -995,7 +996,7 @@ Summary
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-FrMedicationHistorySourceType.html" title="http://interopsante.org/fhir/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">valeur codée du type de source<br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-fr-medication-history-source-type.html" title="https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-history-source-type">value set SIPh - Nature des sources d'un Bilan Médicamenteux</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): fr-medication-history-source-type<br/><br/></td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbbb"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12525.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end_slicer-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author" title="Slice author: Auteur de la source d'informations retenue, le patient, un profesionnel de santé ou une personne en relation avec le patient.">extension:author</a><a name="sa-Extension.extension.extension.4"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1024,7 +1025,7 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="abbbbd"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.extension:author.value[x]" title="Identification de l'auteur par référence à une ressource fr-patient, fr-pratitioner-role ou fr-relatedPerson">value[x]</a><a name="sa-Extension.extension.extension.value_x_.2"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-practitioner-role-profession.html">FR Core Practitioner Role Profession</a> | <a href="https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html">FR Core Practitioner Role</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-related-person.html">FR Core Related Person Profile</a>)</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">identification de l'auteur de la source</td></tr>
 
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="abbc"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-medication-history-sources-definitions.html#Extension.extension:source.url" title="Source of the definition for the extension code - a logical name or a URL.">url</a><a name="sa-Extension.extension.url.2"> </a></td>
@@ -1089,6 +1090,20 @@ Not handled yet: complex extension null
         </div>
       </div>-->
 
+      <div id="all-summ">
+        <p>This structure is derived from <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>
+        </p>
+        <div id="all-summ-inner">
+          <a name="a-summary"> </a>
+<p><b>
+Summary
+</b></p>
+<p>Complex Extension: Sources des lignes du Bilan Médicamenteux que représente la ressource <em>Composition</em> ou de chacune de ses lignes que représente la ressource <em>MedicationStatement</em> référencée par l'élément <em>entry</em> de la ressource <em>Composition</em> (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)</p><ul><li>number: positiveInt: Nombre de sources consultées  du Bilan Médicamenteux / Nombre de sources condordantes  de chaque ligne du Bilan Médicamenteux.</li>
+<li>type: Coding: Type (coding) de la source retenue. Jeu de valeurs ouvert (<em>extensible</em>), d'après <a href="https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante">le guide de la HAS</a>.</li>
+<li>author: Reference: Auteur de la source d'informations retenue, le patient, un profesionnel de santé ou une personne en relation avec le patient.</li>
+</ul>
+        </div>
+      </div>
     </div>
   </div>
   <p>&#160;</p>
@@ -1099,7 +1114,7 @@ Not handled yet: complex extension null
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>Extension.extension:source.extension:type.value[x]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="fr-medication-history-source-type"><a style="opacity: 1.0" href="ValueSet-FrMedicationHistorySourceType.html">FrMedicationHistorySourceType</a> (a valid code from <a href="CodeSystem-FrMedicationHistorySourceType.html">code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux</a>)<div><code>http://interopsante.org/fhir/ValueSet/fr-medication-history-source-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://interopsante.org/fhir/ValueSet/fr-medication-history-source-type"></button></div><div>from this IG</div></td></tr>
+<tr><td>Extension.extension:source.extension:type.value[x]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="fr-medication-history-source-type"><a style="opacity: 1.0" href="ValueSet-fr-medication-history-source-type.html">FrMedicationHistorySourceType</a> (a valid code from <a href="CodeSystem-fr-medication-history-source-type.html">code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux</a>)<div><code>https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-history-source-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-history-source-type"></button></div><div>from this IG</div></td></tr>
 </table>
 
 
@@ -1141,7 +1156,7 @@ Not handled yet: complex extension null
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 13, 2024 15:16+0000">2024-11-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 26, 2024 13:24+0000">2024-12-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
