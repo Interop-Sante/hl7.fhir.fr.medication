@@ -28,8 +28,12 @@ Alias: $PN13Gender = https://interopsante.org/pn13/SIPh_sexe
 
 // A valider et le cas échéant mettre à jour avec l'url du profil
 Alias: $PN13TypeComposant = https://interopsante.org/pn13/SIPh_TypeComposant
+Alias: $PN13Schema-Posologie = https://interopsante.org/pn13/xsd/M_prescription_medicaments/Prescription/Element_prescr_medic/Element_posologie
+Alias: $FhirDosage = https://hl7.org/fhir/R4/dosage
+
 // Alias: $FrMedicationProfileList = https://hl7.fr/ig/fhir/Medication/CodeSystem/fr-medication-profil-list
 // Alias: $FrMedicationUCD = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrMecicationUcd
 // Alias: $FrMedicationNonproprietaryName = https://hl7.fr/ig/fhir/medication/StructureDefinition/FeMedicationNonproprietaryName
 // Alias: $FrMedicationCompound = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrMecicationCompound
 // Alias: $FrInpatientMedicationRequest = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrInpatientMedicationRequest
+

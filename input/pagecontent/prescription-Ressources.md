@@ -9,13 +9,13 @@
     - soit une ressource *FrMedicationUCD*,
     - soit une ressource *FrMedicationNonProprietaryName*,
     - soit une ressource *FrMedicationCompound*
-- [*FrMedicationUcd](StructureDefinition-FrMedicationUcd.html)
+- [*FrMedicationUcd*](StructureDefinition-FrMedicationUcd.html)
   - Type: *Medication*
   - Un médicatment prescrit en spécialité (UCD)
   - Référence un à plusieurs éléments *ingredient* qui peuvent être
     - soit une ressource *FrSnomedMPSubstanceActive*
     - soit, exceptionnellement, une ressource *FrMedicationUcdPart* pour les UCD comportant des unités de composition différentes
-- [*FrMedicationUcdPart](StructureDefinition-FrMedicationUcdPart.html)
+- [*FrMedicationUcdPart*](StructureDefinition-FrMedicationUcdPart.html)
   - Type: *Medication*
   - Une partie de l'UCD (ex. *comprimé bleu*)
   - Ces parties discriminant des unités de composition différentes d'une même UCD, n'ont pas de code propre. Elles sont donc dépendantes de l'UCD à laquelle elles sont rattachées.
@@ -24,13 +24,13 @@
   - Type: *Medication*
   - Un médicament prescrit en DC
   - Référence un à plusieurs éléments *ingredient* qui ne peuvent pas être que des ressources *FrSnomedMPSubstanceActive*
-- [*FrMedicationCompound](StructureDefinition-FrMedicationCompound.html)
+- [*FrMedicationCompound*](StructureDefinition-FrMedicationCompound.html)
   - Type: *Medication*
   - Un médicament prescrit composé de spécialités et/ou de médicament en DC
   - Référence un à plusieurs composants qui peuvent être, indépendamment,
     - soit une ressource *FrMedicationUCD*,
     - soit une ressource *FrMedicationNonProprietaryName*.
-- [*FrMPSubstanceActive](StructureDefinition-FrMPSubstanceActive.html)
+- [*FrMPSubstanceActive*](StructureDefinition-FrMPSubstanceActive.html)
   - Type: *CodeableConcept*
   - Une substance active des *Medical Product* SNOMED CT
 

@@ -6,7 +6,7 @@ Sont hors champ
 - les prescriptions hospitalières exécutables en ville (PHEV);
 - les prescriptions de médecine de ville.
 
-## Cas d'usage
+## Détail
 
 - [Vue d'ensemble](prescription-VueEnsemble.html)
 - [Cas d'usage](prescription-CasUsage.html)
