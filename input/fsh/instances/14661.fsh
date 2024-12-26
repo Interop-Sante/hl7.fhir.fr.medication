@@ -4,7 +4,7 @@ Usage: #example
 * contained = med-381
 * status = #completed
 * medicationReference.reference = "#med-381"
-* subject.reference = "Patient/phast-14602"
+* subject.reference = "Patient/14602"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
 * authorizingPrescription.reference = "MedicationRequest/14654"
 * type = $v3-ActCode#RFP "Refill - Part"

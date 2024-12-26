@@ -1,10 +1,8 @@
 Profile: FrMedicationReconciliationComposition
 Parent: Composition
-Id: FrMedicationReconciliationComposition
+Id: fr-medication-reconciliation-composition
 Description: "Profil de la ressource *Composition* la Fiche de Conciliation des Traitements médicamenteux (FCT)."
 * ^purpose = "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT)*\\."
-* ^copyright = "InterOp'Santé 2021"
-* . MS
 * . ^short = "Fiche de Conciliation des Traitements médicamenteux (FCT)"
 * . ^definition = "Fiche de Conciliation des Traitements médicamenteux (FCT) : Liste des traitements médicamenteux conciliés à partir du Bilan Médicamenteux (traitements avant l'hospitalisation) et du Traitement Médicamenteux Courant, conforme aux recommandations du [guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante).\r\n- référence le Bilan Médicamenteux ;\r\n- référence le Traitement Médicamenteux Courant ;\r\n- liste des lignes de traitement conciliées avec, pour chacune,\r\n  - la référence à la ligne de traitement médicamenteux du Bilan Médicamenteux si elle existe,\r\n  - la référence à la ligne de traitement médicamenteux du Traitement Médicamenteux Courant si elle existe,\r\n  - au moins une de ces deux lignes doit exister et être référencée,\r\n  - ses propriétés de conciliation."
 * . ^comment = "Cette *Composition* comporte 3 <*section*\\> et 3 seulement :\r\n1. La référence au Bilan Médicamenteux, une ressource *Composition* profilée *fr-medication-history-composition*\r\n2. La référence au Traitement Médicamenteux Courant, une ressource *Composition* profilée *fr-current-medication-composition*\r\n3.  La liste des traitements médicamenteux conciliés avec chacune ses propriétés de conciliation, une <*entry*\\> (de cette 3ème section) par ligne de traitement référençant une ressource *MedicationStatement* profilée *fr-medication-reconciliation-medication-statement*"
@@ -22,7 +20,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * subject ^comment = "Une FCT (Fiche de Conciliation des Traitements médicamenteux) se rapporte obligatoirement à un patient, référencé en tant que ressource *Patient* profilée *fr-patient*\\."
 * subject ^requirements = "Identifier le patient auquel se rapporte obligatoirement une FCT (Fiche de Conciliation des Traitements médicamenteux), patient référencé en tant que ressource *Patient* profilée *fr-patient*\\."
 * subject.type = "Patient"
-* author only Reference($FrCorePractitionerRoleProfession)
+* author only Reference($FrCorePractitionerRole)
 * author MS
 * author ^short = "Le ou les auteurs"
 * author ^definition = "Le ou les auteurs de cette FCT (Fiche de Conciliation des Traitements médicamenteux), défini ès qualités (ressource *PractitionerRole* profilée *fr-practitioner-role-profession*\\) ET, de préférence, aussi nominativement (la ressource *PractionerRole* profilée *fr-practitioner-role* instanciée réfère une instance de ressource *Practioner* profilée *fr-practitioner*\\)."
@@ -31,7 +29,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * author ^meaningWhenMissing = "Au moins un auteur obligatoire."
 * author.type = "PractitionerRole"
 * attester.party 1..
-* attester.party only Reference($FrCorePractitionerRoleProfession)
+* attester.party only Reference($FrCorePractitionerRole)
 * attester.party.reference 1..
 * attester.party.type = "Practitioner"
 * attester.party.identifier ..0

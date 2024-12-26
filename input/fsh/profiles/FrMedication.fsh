@@ -1,16 +1,9 @@
 Profile: FrMedication
 Parent: Medication
-Id: FrMedication
+Id: fr-medication
 Description: "profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp'Santé"
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrMedication"
-* ^version = "0.2.0"
 * ^status = #draft
-* ^date = "2021-06-24"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "décrit le médicament figurant dans une ressource InterOp'Santé (fr) MedicationStatement (Bilan Médicamenteux, Conciliation) ou MedicationRequest (prescription)"
-* ^copyright = "InterOp'Santé 2021"
 * meta.profile MS
 * meta.profile ^label = "Medication"
 * meta.profile ^requirements = "description du médicament figurant dans un InterOp'Santé (fr) MedicationStatement ou MedicationRequest"

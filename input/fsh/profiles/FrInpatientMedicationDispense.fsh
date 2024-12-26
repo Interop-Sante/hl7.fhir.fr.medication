@@ -1,6 +1,6 @@
 Profile: FrInpatientMedicationDispense
 Parent: MedicationDispense
-Id: FrInpatientMedicationDispense
+Id: fr-inpatient-medication-dispense
 * ^status = #draft
 * medication[x] only CodeableConcept or Reference(FrMedication2unique)
 * subject only Reference(Group or $FrCorePatient)

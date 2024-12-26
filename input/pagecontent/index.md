@@ -13,3 +13,12 @@ Ce domaine est pris en charge par le GT Pharmacie d'HL7 France au sein de l'asso
 Cet IG est en développement continu. Certaines sections n’ont pas encore été complètement développées dans cette version. Ces sections sont néanmoins identifiées pour référence.
 
 L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformationPN13-FHIR.html) et inversement.
+
+
+### Dépendances
+
+{% include dependency-table.xhtml %}
+
+### Propriété intellectuelle
+
+{% include ip-statements.xhtml %}

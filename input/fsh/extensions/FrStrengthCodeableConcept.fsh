@@ -1,5 +1,5 @@
 Extension: FrStrengthCodeableConcept
-Id: FrStrengthCodeableConcept
+Id: fr-strength-codeableconcept
 Title: "Strength CodeableConcept"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient.strength"
@@ -8,4 +8,3 @@ Title: "Strength CodeableConcept"
 
 * value[x] only CodeableConcept
 * value[x] from $medication-ingredientstrength_1
-* value[x] ^binding.description = "medication-ingredient strength"
