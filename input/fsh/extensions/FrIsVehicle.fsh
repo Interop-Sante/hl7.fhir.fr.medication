@@ -1,5 +1,5 @@
 Extension: FrIsVehicle
-Id: FrIsVehicle
+Id: fr-is-vehicle
 Title: "Medication component which is the vehicle of the compound Medication"
 Description: "Medication component which is the vehicle of the compound Medication"
 
@@ -7,8 +7,6 @@ Description: "Medication component which is the vehicle of the compound Medicati
 * ^context[=].expression = "Medication"
 * ^context[+].type = #element
 * ^context[=].expression = "Medication.ingredient"
-* . ..1
-* value[x] 1..
+
 * value[x] only boolean
-* value[x] = true (exactly)
-* value[x] ^short = "true"
+* value[x] = true

@@ -12,7 +12,7 @@ Usage: #definition
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema
 // Seul l'élément IPP est mappé étant entendu que s'il y a un matricule INS ça veut dire que l'identité nationale de santé du patient est qualifiée et donc que d'autres traits d'identité doivent être fournis (ex. nom de famille)
-* targetUri = $FrInpatientMedicationRequest
+* targetUri = Canonical(fr-inpatient-medicationrequest)
 * group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Patient/IPP
 * group[0].element[0].target[0].code = $FrCoreEncounter#MedicationRequest.subject.identifier.value
 * group[0].element[0].target[0].equivalence = #equal

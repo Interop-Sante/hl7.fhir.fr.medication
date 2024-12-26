@@ -1,24 +1,17 @@
 Profile: FrCurrentMedicationComposition
 Parent: Composition
-Id: FrCurrentMedicationComposition
+Id: fr-current-medication-composition
 Description: "Profil de la ressource Composition du traitement médicamenteux courant."
-* ^url = "http://interopsante.org/fhir/StructureDefinition/FrCurrentMedicationComposition"
-* ^version = "0.2.0"
 * ^status = #draft
-* ^date = "2021-06-24"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^purpose = "Ce profil est utilisé pour la ressource *Composition* de tout document FHIR *Traitement médicamenteux courant*\\. Par exemple, celui résultant de la prescription d'admission intitulé *Ordonnance Médicale d'Admission* (OMA)."
 * ^copyright = "InterOp'Santé 2021"
-* . MS
 * . ^short = "Traitement Médicamenteux Courant"
 * . ^definition = "Traitement Médicamenteux Courant : liste des lignes de traitement médicamenteux courant hospitalier."
 * . ^comment = "En général, une ligne par médicament prescrit en cours. Des différences de construction des lignes peuvent exister d'un logiciel à un autre, liées à la structuration de la posologie (nombre de doses unitaires par période, quantité des doses unitaires, horaire des doses unitaires). Le jeu de tests de prescriptions intiales de référence permet l'évaluation de la capacité des logiciels à supporter la structuration de posologies complexes."
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
 * type MS
-* type from http://interopsante.org/fhir/ValueSet/fr-current-medication-document-type (extensible)
+* type from fr-current-medication-document-type (extensible)
 * type ^short = "Type de liste des Traitements Médicamenteux Courants"
 * type ^definition = "Le contexte de la liste des Traitements Médicamenteux Courants (sans précision, OMA, sortie, transfert) ; jeu de valeurs extensible"
 * type ^comment = "Tous les types de liste des Traitements Médicamenteux Courants n'ont pas de code LOINC. Le contexte de la liste des Traitements médicamenteux Courant peut dépasser le périmètre du jeu de valeurs associé, binding *extensible*\\."
@@ -38,7 +31,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * date ^short = "Date de détermination du Traitement Médicamenteux Courant"
 * date ^definition = "Date de détermination du Traitementeux Courant par son auteur (cf. element *author*\\).  //The composition editing time, when the composition was last logically changed by the author."
 * author ..1
-* author only Reference($FrCorePractitionerRoleProfession)
+* author only Reference($FrCorePractitionerRole)
 * author MS
 * author ^short = "Le prescripteur"
 * author ^definition = "Le prescripteur de ce Traitement Médicamenteux Courant, défini ès qualités (ressource *PractitionerRole* profilée *fr-practitioner-role*\\) ET, de préférence, aussi nominativement (la ressource *PractionerRole* profilée *fr-practitioner-role-profession* instanciée réfère une instance de ressource *Practioner* profilée *fr-practitioner*\\)."
@@ -46,7 +39,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * author ^requirements = "Identifier le prescriteur."
 * author ^meaningWhenMissing = "Auteur obligatoire"
 * title = "Traitement Médicamenteux Courant"
-* attester.party only Reference($FrCorePractitionerRoleProfession)
+* attester.party only Reference($FrCorePractitionerRole)
 * section 1..1
 * section MS
 * section ^short = "Liste des médicaments prescrits"
