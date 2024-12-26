@@ -35,7 +35,7 @@ Usage: #definition
 * group[1].element[0].target[2].equivalence = #relatedto
 * group[1].element[0].target[2].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
 * group[2].element[0].code = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
-* group[2].element[0].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[0].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[0].equivalence = #equivalent
 * group[2].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[0].dependsOn[0].value = "1"
@@ -43,7 +43,7 @@ Usage: #definition
 * group[2].element[0].target[0].dependsOn[1].value = "<Null>"
 * group[2].element[0].target[0].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[2].element[0].target[0].product[0].value = "s"
-* group[2].element[0].target[1].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[1].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[1].equivalence = #equivalent
 * group[2].element[0].target[1].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[1].dependsOn[0].value = "2"
@@ -51,7 +51,7 @@ Usage: #definition
 * group[2].element[0].target[1].dependsOn[1].value = "<Null>"
 * group[2].element[0].target[1].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[2].element[0].target[1].product[0].value = "min"
-* group[2].element[0].target[2].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[2].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[2].equivalence = #equivalent
 * group[2].element[0].target[2].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[2].dependsOn[0].value = "3"
@@ -59,7 +59,7 @@ Usage: #definition
 * group[2].element[0].target[2].dependsOn[1].value = "<Null>"
 * group[2].element[0].target[2].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[2].element[0].target[2].product[0].value = "h"
-* group[2].element[0].target[3].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[3].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[3].equivalence = #equivalent
 * group[2].element[0].target[3].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[3].dependsOn[0].value = "4"
@@ -67,7 +67,7 @@ Usage: #definition
 * group[2].element[0].target[3].dependsOn[1].value = "<Null>"
 * group[2].element[0].target[3].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[2].element[0].target[3].product[0].value = "d"
-* group[2].element[0].target[4].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[4].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[4].equivalence = #equivalent
 * group[2].element[0].target[4].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[4].dependsOn[0].value = "5"
@@ -75,7 +75,7 @@ Usage: #definition
 * group[2].element[0].target[4].dependsOn[1].value = "<Null>"
 * group[2].element[0].target[4].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[2].element[0].target[4].product[0].value = "wk"
-* group[2].element[0].target[5].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[5].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[5].equivalence = #equivalent
 * group[2].element[0].target[5].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[5].dependsOn[0].value = "6"
@@ -83,7 +83,7 @@ Usage: #definition
 * group[2].element[0].target[5].dependsOn[1].value = "<Null>"
 * group[2].element[0].target[5].product[0].property = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[2].element[0].target[5].product[0].value = "mo"
-* group[2].element[0].target[6].code = $FhirDosage#Dosage.timing.repeat.periodUnit
+* group[2].element[0].target[6].code = $FhirDosage#Dosage.timing.repeat
 * group[2].element[0].target[6].equivalence = #equivalent
 * group[2].element[0].target[6].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
 * group[2].element[0].target[6].dependsOn[0].value = "7"
