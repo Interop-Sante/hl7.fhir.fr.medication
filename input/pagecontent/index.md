@@ -24,3 +24,10 @@ Cet IG est en développement continu. Certaines sections n’ont pas encore ét�
 
 L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformationPN13-FHIR.html) et inversement.
 
+### Dépendances
+
+{% include dependency-table.xhtml %}
+
+### Propriété intellectuelle
+
+{% include ip-statements.xhtml %}

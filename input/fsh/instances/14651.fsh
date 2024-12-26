@@ -2,13 +2,12 @@ Instance: 14651
 InstanceOf: FrInpatientMedicationRequest
 Usage: #example
 * contained = med-311
-* extension.url = "http://interopsante.org/fhir/StructureDefinition/FrTreatmentIntent"
-* extension.valueCodeableConcept = $sct#129428001 "procédure préventive"
-* extension.valueCodeableConcept.text = "traitement préventif"
+* extension[treatmentIntent].valueCodeableConcept = $sct#129428001 "procédure préventive"
+* extension[treatmentIntent].valueCodeableConcept.text = "traitement préventif"
 * status = #active
 * intent = #order
 * medicationReference.reference = "#med-311"
-* subject.reference = "Patient/phast-14602"
+* subject.reference = "Patient/14602"
 * authoredOn = "2021-10-14T15:38:27.726Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.sequence = 1

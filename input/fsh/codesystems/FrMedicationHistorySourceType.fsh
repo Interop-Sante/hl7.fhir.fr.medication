@@ -1,17 +1,10 @@
 CodeSystem: FrMedicationHistorySourceType
-Id: FrMedicationHistorySourceType
+Id: fr-medication-history-source-type
 Title: "code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux"
 Description: "Le système de codage des sources d'un Bilan Médicamenteux."
-* ^meta.lastUpdated = "2021-06-23T08:40:00Z"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "http://interopsante.org/fhir/CodeSystem/fr-medication-history-source-type"
-* ^version = "0.2.0"
 * ^status = #draft
 * ^experimental = false
-* ^date = "2021-06-23T08:40:00Z"
-* ^publisher = "InterOp'Santé - FRANCE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@interopsante.org"
 * ^content = #complete
 * ^count = 18
 * #10000001 "Entretien avec le patient"
