@@ -251,7 +251,7 @@ Usage: #definition
 * group[19].element[1].target[0].equivalence = #equivalent
 * group[19].element[1].target[0].comment = "offset est à calculer à partir de Int_temps_év_début/Nombre et Int_temps_év_début/Unité pour avoir un offset en minute"
 //* group[20].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré/Evt_objet/Evt_activité/Evt_activité_code
-//* group[20].element[0].target[0].code = $FhirDosage#Dosage.timing.repeat.extension().code
+//* group[20].element[0].target[0].code = $FhirDosage#Dosage.timing.repeat.extension(fr-additional-when-values).code
 //* group[X].element[0].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
 //* group[X].element[0].target[0].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.value
 //* group[X].element[0].target[0].equivalence = #equal
