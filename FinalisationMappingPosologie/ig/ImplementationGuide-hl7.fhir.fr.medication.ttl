@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-27T10:41:44+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-31T09:40:44+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1108,6 +1108,30 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-additional-when-values" ]
+       ] ;
+       fhir:name [ fhir:v "Additional values for when element" ] ;
+       fhir:description [ fhir:v "Additional values for Timing.repeat.when" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/CodeSystem/fr-additional-when-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/fr-additional-when-codes" ]
+       ] ;
+       fhir:name [ fhir:v "code system Interop'Santé - Codes additionnels pour l'élément when" ] ;
+       fhir:description [ fhir:v "Le système de codage pour des périodes d'occurrence qui ne sont pas définies dans FHIR." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -1827,6 +1851,18 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-additional-when-codes> ;
+         fhir:reference [ fhir:v "ValueSet/fr-additional-when-codes" ]
+       ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Codes additionnels pour l'élément when" ] ;
+       fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder des périodes d'occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-outcome> ;
          fhir:reference [ fhir:v "ValueSet/fr-medication-reconciliation-outcome" ]
        ] ;
@@ -1842,7 +1878,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-qualified-discrepancy> ;
          fhir:reference [ fhir:v "ValueSet/fr-medication-reconciliation-qualified-discrepancy" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1854,7 +1890,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-resolution> ;
          fhir:reference [ fhir:v "ValueSet/fr-medication-reconciliation-resolution" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT" ] ;
        fhir:description [ fhir:v "Un jeu de valeurs à utiliser pour coder la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1866,7 +1902,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-status> ;
          fhir:reference [ fhir:v "ValueSet/fr-medication-reconciliation-status" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - Statut d'une ligne de traitement d'une FCT" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Statut d'une ligne de traitement d'une FCT" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1878,7 +1914,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-editorial-status> ;
          fhir:reference [ fhir:v "ValueSet/fr-editorial-status" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - Statut éditorial d'une valeur" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Statut éditorial d'une valeur" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le statut éditorial d'une valeur." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1890,7 +1926,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-type> ;
          fhir:reference [ fhir:v "ValueSet/fr-medication-reconciliation-type" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1902,7 +1938,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-current-medication-document-type> ;
          fhir:reference [ fhir:v "ValueSet/fr-current-medication-document-type" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - type de document de la ressource Composition d'une FCT" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - type de document de la ressource Composition d'une FCT" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une liste des Traitements Médicamenteux Courants." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1914,7 +1950,7 @@
          fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-reconciliation-document-type> ;
          fhir:reference [ fhir:v "ValueSet/fr-medication-reconciliation-document-type" ]
        ] ;
-       fhir:name [ fhir:v "value set InterOp'Santé - type de document de la ressource Composition d'une FCT" ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - type de document de la ressource Composition d'une FCT" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [

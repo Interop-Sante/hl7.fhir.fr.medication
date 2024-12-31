@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2024-12-27T10:41:44+00:00",
+  "date" : "2024-12-31T09:40:44+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -1068,6 +1068,30 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-additional-when-values"
+      },
+      "name" : "Additional values for when element",
+      "description" : "Additional values for Timing.repeat.when",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/fr-additional-when-codes"
+      },
+      "name" : "code system Interop'Santé - Codes additionnels pour l'élément when",
+      "description" : "Le système de codage pour des périodes d'occurrence qui ne sont pas définies dans FHIR.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1787,6 +1811,18 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
+        "reference" : "ValueSet/fr-additional-when-codes"
+      },
+      "name" : "value set Interop'Santé - Codes additionnels pour l'élément when",
+      "description" : "Le jeu de valeurs à utiliser pour coder des périodes d'occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
         "reference" : "ValueSet/fr-medication-reconciliation-outcome"
       },
       "name" : "value set Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT",
@@ -1801,7 +1837,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-medication-reconciliation-qualified-discrepancy"
       },
-      "name" : "value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
+      "name" : "value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "exampleBoolean" : false
     },
@@ -1813,7 +1849,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-medication-reconciliation-resolution"
       },
-      "name" : "value set InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
+      "name" : "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
       "description" : "Un jeu de valeurs à utiliser pour coder la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "exampleBoolean" : false
     },
@@ -1825,7 +1861,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-medication-reconciliation-status"
       },
-      "name" : "value set InterOp'Santé - Statut d'une ligne de traitement d'une FCT",
+      "name" : "value set Interop'Santé - Statut d'une ligne de traitement d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "exampleBoolean" : false
     },
@@ -1837,7 +1873,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-editorial-status"
       },
-      "name" : "value set InterOp'Santé - Statut éditorial d'une valeur",
+      "name" : "value set Interop'Santé - Statut éditorial d'une valeur",
       "description" : "Le jeu de valeurs à utiliser pour coder le statut éditorial d'une valeur.",
       "exampleBoolean" : false
     },
@@ -1849,7 +1885,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-medication-reconciliation-type"
       },
-      "name" : "value set InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
+      "name" : "value set Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "exampleBoolean" : false
     },
@@ -1861,7 +1897,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-current-medication-document-type"
       },
-      "name" : "value set InterOp'Santé - type de document de la ressource Composition d'une FCT",
+      "name" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une liste des Traitements Médicamenteux Courants.",
       "exampleBoolean" : false
     },
@@ -1873,7 +1909,7 @@
       "reference" : {
         "reference" : "ValueSet/fr-medication-reconciliation-document-type"
       },
-      "name" : "value set InterOp'Santé - type de document de la ressource Composition d'une FCT",
+      "name" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "exampleBoolean" : false
     },

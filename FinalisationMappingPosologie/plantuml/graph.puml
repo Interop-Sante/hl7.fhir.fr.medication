@@ -351,6 +351,12 @@ package IG #DDDDDD{
      FrMedicationNonproprietaryName -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
 
+        class FrAdditionalWhenValues{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class FrBasisOfDoseComponent{
 
           Extension.extension => [None..0]
@@ -586,6 +592,10 @@ package IG #DDDDDD{
          }
      }
      package valueset #PaleVioletRed{
+
+        class FrAdditionalWhenCodes  
+
+     FrAdditionalWhenValues -[#black,dotted,thickness=2]-> FrAdditionalWhenCodes
 
         class FrCurrentMedicationDocumentType  
 
