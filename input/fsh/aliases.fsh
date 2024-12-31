@@ -11,7 +11,9 @@ Alias: $fr-document-type = https://hl7.fr/fhir/fr/medication/CodeSystem/fr-docum
 
 Alias: $medicationknowledge-characteristic = http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic
 Alias: $medication-ingredientstrength_1 = http://hl7.org/fhir/ValueSet/medication-ingredientstrength
-Alias: $fr-additional-when-codes = https://hl7.fr/fhir/fr/medication/CodeSystem/fr-additional-when-codes
+Alias: $fr-additional-when-codes = https://hl7.fr/fhir/fr/medication/ValueSet/fr-additional-when-codes
+
+Alias: $fr-additional-when-values = https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values
 
 // FrCore aliases
 Alias: $FrCoreEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter
