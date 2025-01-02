@@ -956,7 +956,7 @@ Usage: #definition
 * group[60].element[4].target[0].product[0].value = "NIGHT"
 * group[61].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré/Evt_objet/Evt_clinique
 * group[61].element[0].target[0].equivalence = #disjoint
-* group[61].element[0].target[0].comment = "A priori le événement clinique ne sont utilisables que pour des Type_événement_début "3". A confirmer dans une version ultérieure de ce guide"
+* group[61].element[0].target[0].comment = "A priori le événement clinique ne sont utilisables que pour des Type_événement_début 3. A confirmer dans une version ultérieure de ce guide"
 * group[61].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré/Evt_objet/Evt_nature
 * group[61].element[0].target[0].dependsOn[0].value = "1"
 * group[61].element[0].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début

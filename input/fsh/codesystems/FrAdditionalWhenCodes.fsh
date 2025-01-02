@@ -6,7 +6,7 @@ Description: "Le système de codage pour des périodes d'occurrence qui ne sont 
 * ^status = #draft
 * ^experimental = false
 * ^content = #complete
-* ^count = 13
+* ^count = 16
 * #AGU "L'événement se produit avant [offset] le levé / event occurs [offset] before getting up"
 * #PGU "L'événement se produit après [offset] le levé / event occurs [offset] after getting up"
 * #AT "L'événement se produit avant [offset] la toilette / event occurs [offset] before toilette (self grooming/washing)"
