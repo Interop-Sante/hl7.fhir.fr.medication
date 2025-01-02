@@ -953,7 +953,7 @@ Usage: #definition
 * group[60].element[4].target[0].product[0].property = $FhirDosage#Dosage.timing.repeat.when
 * group[60].element[4].target[0].product[0].value = "NIGHT"
 * group[61].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré/Evt_objet/Evt_clinique
-* group[61].element[0].target[0].equivalence = #unmatched
+* group[61].element[0].target[0].equivalence = #disjoint
 * group[61].element[0].target[0].comment = "Prévu pour une version ultérieure de ce guide"
 * group[61].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré/Evt_objet/Evt_nature
 * group[61].element[0].target[0].dependsOn[0].value = "1"
