@@ -962,13 +962,13 @@ Usage: #definition
 * group[62].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré
 * group[62].element[0].target[0].equivalence = #unmatched
 * group[62].element[0].target[0].comment = "Prévu pour une version ultérieure de ce guide"
-* group[62].element[0].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
-* group[62].element[0].target[0].dependsOn[1].value = "3"
+* group[62].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
+* group[62].element[0].target[0].dependsOn[0].value = "3"
 * group[63].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_structuré
 * group[63].element[0].target[0].equivalence = #unmatched
 * group[63].element[0].target[0].comment = "Prévu pour une version ultérieure de ce guide"
-* group[63].element[0].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
-* group[63].element[0].target[0].dependsOn[1].value = "4"
+* group[63].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
+* group[63].element[0].target[0].dependsOn[0].value = "4"
 * group[64].element[0].code =  $PN13Schema-Posologie#Elément_posologie/Type_événement2_début
 * group[64].element[0].target[0].equivalence = #unmatched
 * group[64].element[0].target[0].comment = "L'élément Type_événement2_début (ainsi que Evt_structuré2_début ou Evénement2_début) utilisent exactement le même mapping que l'élément Type_événement_début (ainsi que Evt_structuré2_début ou Evénement2_début). Il fait l'objet d'une occurence de MedicationRequest.dosageInstruction différente de celle traduisant l'élément Type_événement_début et les éléments associés"
