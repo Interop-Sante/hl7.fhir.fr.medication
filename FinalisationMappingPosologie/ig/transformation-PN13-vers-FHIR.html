@@ -283,16 +283,18 @@ La manière dont les ressources FHIR résultantes sont mises à disposition dép
 
 <h3 id="la-notion-de-prescription-multiligne">La notion de prescription multiligne</h3>
 
-<p>Il n’existe pas de ressource FHIR pour représenter l’objet prescription. Beaucoup d’implémentations internationales ne traitent que de prescription monoligne pour lesquels la notion de prescription et la notion de ligne de prescription est confondu dans la ressource FHIR <em>MedicationRequest</em>. Les groupes de travail FHIR au niveau international, interrogés sur la question des prescriptions multilignes, ont fournis des recommandations d’utiliser l’élément ‘groupIdentifier’ comme lien entre les différentes lignes de prescritpion d’une prescription. Une évolution est en cours pour permettre l’interrogation d’un serveur FHIR de manière indiscriminée sur les éléments ‘identifier’ et ‘groupIdentifier’ afin d’obtenir tous les composants d’une prescription que celle-ci soit monoligne ou multiligne.
-Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivité entre une ligne de prescription et une autre) une ressource <em>RequestGroup</em> en FHIR R4 ou <em>RequestOrchestration</em> en FHIR R5 est utilisées pour représenter ces liens. Elle porte également le même ‘groupIdentifier’ que les ressources <em>MedicationRequest</em> qui représentent les lignes de prescription.</p>
+<p>Il n’existe pas de ressource FHIR pour représenter l’objet prescription. Beaucoup d’implémentations internationales ne traitent que de prescriptions monolignes pour lesquelles la notion de prescription et la notion de ligne de prescription sont confondues dans la ressource FHIR <em>MedicationRequest</em>. Les groupes de travail FHIR au niveau international, interrogés sur la question des prescriptions multilignes, ont fournis des recommandations d’utiliser l’élément ‘groupIdentifier’ comme lien entre les différentes lignes de prescritpion d’une prescription multiligne. Une évolution est en cours pour permettre l’interrogation d’un serveur FHIR de manière indiscriminée sur les éléments ‘identifier’ et ‘groupIdentifier’ afin d’obtenir tous les composants d’une prescription que celle-ci soit monoligne ou multiligne.
+Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivité entre une ligne de prescription et une autre) une ressource <em>RequestGroup</em> en FHIR R4 ou <em>RequestOrchestration</em> en FHIR R5 peut être utilisée pour représenter ces liens. Elle porte également le même ‘groupIdentifier’ que les ressources <em>MedicationRequest</em> qui représentent les lignes de prescription.</p>
 
 <h3 id="ressources-fhir-créées-par-la-transformation-dun-flux-pn13-de-prescription-en-fhir">Ressources FHIR créées par la transformation d’un flux PN13 de prescription en FHIR</h3>
 
 <ul>
-  <li><a name="l538">​</a>1 à n ressource(s) <em>MedicationRequest</em> suivant le profil <a href="StructureDefinition-FrInpatientMedicationRequest.html">FrInpatientMedicationRequest</a>. Leur alimentation à partir des données PN13 est documentée dans <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">PN13-FHIR-prescmed-medicationrequest-conceptmap</a> et dans <a href="PN13-FHIR-prescmed-dosageinstruction.conceptmap.html">PN13-FHIR-prescmed-dosageinstruction.conceptmap</a>. Chaque ressource <em>MedicationRequest</em> référence:
+  <li>1 ressource <em>Bundle</em> d’un type adapté à l’usage parmis message, document et searchset (pour les exemples, le type searchset est utilisé)</li>
+  <li><a name="l544">​</a>1 à n ressource(s) <em>MedicationRequest</em> suivant le profil <a href="StructureDefinition-FrInpatientMedicationRequest.html">FrInpatientMedicationRequest</a>. Leur alimentation à partir des données PN13 est documentée dans <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">PN13-FHIR-prescmed-medicationrequest-conceptmap</a> et dans <a href="PN13-FHIR-prescmed-dosageinstruction.conceptmap.html">PN13-FHIR-prescmed-dosageinstruction.conceptmap</a>. Chaque ressource <em>MedicationRequest</em> référence:
     <ul>
-      <li>1 ressource <em>Patient</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource Patient référencée n’existe pas déjà)</li>
-      <li>0 à 1 ressource <em>Practitioner</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource Practitioner référencée n’existe pas déjà)</li>
+      <li>1 ressource <em>Patient</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Patient</em> référencée n’existe pas déjà)</li>
+      <li>0 à 1 ressource <em>Practitioner</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Practitioner</em> référencée n’existe pas déjà)</li>
+      <li>0 ressource <em>Encounter</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Encounter</em> référencée n’existe pas déjà)</li>
       <li>1 à n ressource(s) <em>Medication</em> cf. section <strong>Type de prescription</strong></li>
     </ul>
   </li>
@@ -309,21 +311,19 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
     <ul>
       <li>si seul l’identifiant est fourni dans le flux PN13, d’utiliser une référence via ‘identifier’
         <ul>
-          <li><a name="l620">​</a>pour un patient, le mapping est documenté dans <a href="PN13-FHIR-Prescmed-patient-id-seul-conceptmap.html">PN13-FHIR-Prescmed-patient-id-seul-conceptmap</a></li>
-          <li><a name="l625">​</a>pour un professionnel, le mapping est documenté dans <a href="PN13-FHIR-prescmed-practitioner-id-seul-conceptmap.html">PN13-FHIR-prescmed-practitioner-id-seul-conceptmap</a></li>
-          <li><a name="l630">​</a>pour un séjour, le mapping est documenté dans <a href="PN13-FHIR-prescmed-encounter-concepmap.html">PN13-FHIR-prescmed-encounter-concepmap</a></li>
+          <li><a name="l647">​</a>pour un patient, le mapping est documenté dans <a href="PN13-FHIR-Prescmed-patient-id-seul-conceptmap.html">PN13-FHIR-Prescmed-patient-id-seul-conceptmap</a></li>
+          <li><a name="l652">​</a>pour un professionnel, le mapping est documenté dans <a href="PN13-FHIR-prescmed-practitioner-id-seul-conceptmap.html">PN13-FHIR-prescmed-practitioner-id-seul-conceptmap</a></li>
+          <li><a name="l657">​</a>pour un séjour, le mapping est documenté dans <a href="PN13-FHIR-prescmed-encounter-concepmap.html">PN13-FHIR-prescmed-encounter-concepmap</a>. En PN13 les données fournies pour les séjours sont limitées à l’identifiant et éventuellement le system de cet identifiant, ils font donc toujours l’objet d’une référence.</li>
         </ul>
       </li>
-      <li>si des éléments complémentaires sont fournis dans le flux PN13, de créer la ressource correspondante sur le serveur.</li>
+      <li>si des éléments complémentaires sont fournis dans le flux PN13, de créer la ressource correspondante sur le serveur en utilisant les ressources <em>ConceptMap</em> suivantes:
+        <ul>
+          <li>Pour les ressources <em>Patient</em>: cf. section <em>cas particulier du niveau de qualitication des identités patients</em></li>
+          <li>Pour les ressources <em>Practitioner</em>: <a href="ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.html">PN13-FHIR-prescmed-practitioner-identite-conceptmap</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-</ul>
-
-<p>Les ConceptMaps à utiliser pour la création de ressources sont:</p>
-
-<ul>
-  <li>Pour les ressources Patient: cf. section <em>cas particulier du niveau de qualitication des identités patients</em></li>
-  <li>Pour les ressources Practitioner: <a href="ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.html">PN13-FHIR-prescmed-practitioner-identite-conceptmap</a></li>
 </ul>
 
 <h4 id="cas-particulier-du-niveau-de-qualification-des-identités-patients">Cas particulier du niveau de qualification des identités patients</h4>
@@ -345,11 +345,18 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
 
 <h3 id="processus-de-traduction">Processus de traduction</h3>
 
-<p><a name="l696">​</a>Pour chaque élément ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic’ créer une ressource <em>MedicationRequest</em> en utilisant le mapping <a href="PN13-FHIR-prescmed-medicationrequest-conceptmap.html">PN13-FHIR-prescmed-medicationrequest-conceptmap</a> et en utilisant les références ou création de ressources pour les ressources de contexte (cf. sections précédentes).</p>
+<p><a name="l730">​</a>Pour chaque élément ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic’ créer une ressource <em>MedicationRequest</em> en utilisant le mapping <a href="PN13-FHIR-prescmed-medicationrequest-conceptmap.html">PN13-FHIR-prescmed-medicationrequest-conceptmap</a> et en utilisant les références ou création de ressources pour les ressources de contexte (cf. sections précédentes).</p>
 
-<p><a name="l705">​</a>Pour chaque élément ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie’ faire une instance de ‘MedicationRequest.dosageInstruction’ en utilisant le mapping <a href="PN13-FHIR-prescmed-dosageinstruction-conceptmap.html">PN13-FHIR-prescmed-dosageinstruction-conceptmap</a></p>
+<p><a name="l739">​</a>Pour chaque élément ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie’ faire une instance de ‘MedicationRequest.dosageInstruction’ en utilisant le mapping <a href="PN13-FHIR-prescmed-dosageinstruction-conceptmap.html">PN13-FHIR-prescmed-dosageinstruction-conceptmap</a></p>
 
-<p><strong><em>A mettre à jour pour les liens entre lignes de prescription et la création d’une ressource RequestGroup</em></strong></p>
+<p>Pour les éléments ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit’:</p>
+
+<ul>
+  <li>s’il n’y a qu’un élément ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit’ dans ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic’ faire une instance de <em>Medication</em> suiant le profil <strong><em>A mettre à jour quand les profils seront finalisés</em></strong></li>
+  <li>s’il y a plusieurs éléments ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit’ dans ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic’ faire une instance de <em>Medication</em> suiant le profil <strong><em>A mettre à jour quand les profils seront finalisés</em></strong></li>
+</ul>
+
+<p>Pour chaque élément ‘Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié’ faire une instance de ‘RequestGroup.action’ d’une ressource <em>RequestGroup</em> unique liant les deux ressources <em>MedicationRequest</em> liées <strong><em>A mettre à jour pour les liens entre lignes de prescription et la création d’une ressource RequestGroup</em></strong></p>
 
 <h2 id="la-dispensation">La dispensation</h2>
 
@@ -374,7 +381,7 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 15:15+0000">2025-01-02</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 3, 2025 16:55+0000">2025-01-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
