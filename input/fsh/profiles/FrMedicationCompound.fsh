@@ -17,7 +17,7 @@ Description: "A complex medication composed of two to many simple médication. T
 * code.coding ^definition = "A code identifing the compound medicinal product. Generaly none : no code defined for G5 1L + NaCl 3g + KCl 2g."
 * code.coding ^comment = "Codes may be defined very casually in enumerations."
 * code.text 1..
-* code.text ^requirements = "Although a code is genraly unavailable for a compoud medicinal product, there is alway a denomination for it."
+* code.text ^requirements = "Although a code is generally unavailable for a compoud medicinal product, there is alway a denomination for it."
 * form from FrMpDoseForm (extensible)
 * amount only FrRatioUcum
 * amount ^definition = "Specific amount in Medication defined by the element collection. For instance 1 L for the amount of the compound Glucose 5% of an infusion Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g. Or 3 g for the amount of compound Sodium chloride of the same infusion. SHALL be 1 (without unit, ie. code = 1 in UCUM system) when there is multiple ingredient element with at least the strenght element of two of them expressed in asbolute quantity (ie. simple quantity)."

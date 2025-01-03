@@ -13,14 +13,16 @@ La manière dont les ressources FHIR résultantes sont mises à disposition dép
 
 ### La notion de prescription multiligne
 
-Il n'existe pas de ressource FHIR pour représenter l'objet prescription. Beaucoup d'implémentations internationales ne traitent que de prescription monoligne pour lesquels la notion de prescription et la notion de ligne de prescription est confondu dans la ressource FHIR *MedicationRequest*. Les groupes de travail FHIR au niveau international, interrogés sur la question des prescriptions multilignes, ont fournis des recommandations d'utiliser l'élément 'groupIdentifier' comme lien entre les différentes lignes de prescritpion d'une prescription. Une évolution est en cours pour permettre l'interrogation d'un serveur FHIR de manière indiscriminée sur les éléments 'identifier' et 'groupIdentifier' afin d'obtenir tous les composants d'une prescription que celle-ci soit monoligne ou multiligne.
-Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivité entre une ligne de prescription et une autre) une ressource *RequestGroup* en FHIR R4 ou *RequestOrchestration* en FHIR R5 est utilisées pour représenter ces liens. Elle porte également le même 'groupIdentifier' que les ressources *MedicationRequest* qui représentent les lignes de prescription.
+Il n'existe pas de ressource FHIR pour représenter l'objet prescription. Beaucoup d'implémentations internationales ne traitent que de prescriptions monolignes pour lesquelles la notion de prescription et la notion de ligne de prescription sont confondues dans la ressource FHIR *MedicationRequest*. Les groupes de travail FHIR au niveau international, interrogés sur la question des prescriptions multilignes, ont fournis des recommandations d'utiliser l'élément 'groupIdentifier' comme lien entre les différentes lignes de prescritpion d'une prescription multiligne. Une évolution est en cours pour permettre l'interrogation d'un serveur FHIR de manière indiscriminée sur les éléments 'identifier' et 'groupIdentifier' afin d'obtenir tous les composants d'une prescription que celle-ci soit monoligne ou multiligne.
+Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivité entre une ligne de prescription et une autre) une ressource *RequestGroup* en FHIR R4 ou *RequestOrchestration* en FHIR R5 peut être utilisée pour représenter ces liens. Elle porte également le même 'groupIdentifier' que les ressources *MedicationRequest* qui représentent les lignes de prescription.
 
 ### Ressources FHIR créées par la transformation d'un flux PN13 de prescription en FHIR
 
+- 1 ressource *Bundle* d'un type adapté à l'usage parmis message, document et searchset (pour les exemples, le type searchset est utilisé)
 - 1 à n ressource(s) *MedicationRequest* suivant le profil [FrInpatientMedicationRequest](StructureDefinition-FrInpatientMedicationRequest.html). Leur alimentation à partir des données PN13 est documentée dans [PN13-FHIR-prescmed-medicationrequest-conceptmap](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html) et dans [PN13-FHIR-prescmed-dosageinstruction.conceptmap](PN13-FHIR-prescmed-dosageinstruction.conceptmap.html). Chaque ressource *MedicationRequest* référence:
-  - 1 ressource *Patient* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource Patient référencée n'existe pas déjà)
-  - 0 à 1 ressource *Practitioner* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource Practitioner référencée n'existe pas déjà)
+  - 1 ressource *Patient* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Patient* référencée n'existe pas déjà)
+  - 0 à 1 ressource *Practitioner* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Practitioner* référencée n'existe pas déjà)
+  - 0 ressource *Encounter* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Encounter* référencée n'existe pas déjà)
   - 1 à n ressource(s) *Medication* cf. section **Type de prescription**
 - 0 à 1 ressource *RequestGroup* (ou *RequestOrchestration* en FHIR R5). Son alimentation à partir des données PN13 sera documenté dans un mapping à venir dans une version ultérieur de cet IG.
 
@@ -33,14 +35,11 @@ Les "ressources de contexte" qui sont à référencer par la prescription FHIR (
   - si seul l'identifiant est fourni dans le flux PN13, d'utiliser une référence via 'identifier'
     - pour un patient, le mapping est documenté dans [PN13-FHIR-Prescmed-patient-id-seul-conceptmap](PN13-FHIR-Prescmed-patient-id-seul-conceptmap.html)
     - pour un professionnel, le mapping est documenté dans [PN13-FHIR-prescmed-practitioner-id-seul-conceptmap](PN13-FHIR-prescmed-practitioner-id-seul-conceptmap.html)
-    - pour un séjour, le mapping est documenté dans [PN13-FHIR-prescmed-encounter-concepmap](PN13-FHIR-prescmed-encounter-concepmap.html)
-  - si des éléments complémentaires sont fournis dans le flux PN13, de créer la ressource correspondante sur le serveur.
+    - pour un séjour, le mapping est documenté dans [PN13-FHIR-prescmed-encounter-concepmap](PN13-FHIR-prescmed-encounter-concepmap.html). En PN13 les données fournies pour les séjours sont limitées à l'identifiant et éventuellement le system de cet identifiant, ils font donc toujours l'objet d'une référence.
+  - si des éléments complémentaires sont fournis dans le flux PN13, de créer la ressource correspondante sur le serveur en utilisant les ressources *ConceptMap* suivantes:
+    - Pour les ressources *Patient*: cf. section *cas particulier du niveau de qualitication des identités patients*
+    - Pour les ressources *Practitioner*: [PN13-FHIR-prescmed-practitioner-identite-conceptmap](ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.html)
   
-Les ConceptMaps à utiliser pour la création de ressources sont:
-
-- Pour les ressources Patient: cf. section *cas particulier du niveau de qualitication des identités patients*
-- Pour les ressources Practitioner: [PN13-FHIR-prescmed-practitioner-identite-conceptmap](ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.html)
-
 #### Cas particulier du niveau de qualification des identités patients
 
 La ConceptMap à utiliser dépend de la qualification de l'Identité Nationale de Santé du patient:
@@ -59,7 +58,12 @@ Pour chaque élément 'Message/M_Prescription_médicaments/Prescription/Elément
 
 Pour chaque élément 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie' faire une instance de 'MedicationRequest.dosageInstruction' en utilisant le mapping [PN13-FHIR-prescmed-dosageinstruction-conceptmap](PN13-FHIR-prescmed-dosageinstruction-conceptmap.html)
 
-***A mettre à jour pour les liens entre lignes de prescription et la création d'une ressource RequestGroup***
+Pour les éléments 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit':
+
+- s'il n'y a qu'un élément 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit' dans 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic' faire une instance de *Medication* suiant le profil ***A mettre à jour quand les profils seront finalisés***
+- s'il y a plusieurs éléments 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit' dans 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic' faire une instance de *Medication* suiant le profil ***A mettre à jour quand les profils seront finalisés***
+
+Pour chaque élément 'Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié' faire une instance de 'RequestGroup.action' d'une ressource *RequestGroup* unique liant les deux ressources *MedicationRequest* liées ***A mettre à jour pour les liens entre lignes de prescription et la création d'une ressource RequestGroup***
 
 ## La dispensation
 
