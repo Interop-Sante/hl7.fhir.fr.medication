@@ -1,0 +1,38 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "fr-mp-substance-active",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet fr-mp-substance-active</b></p><a name=\"fr-mp-substance-active\"> </a><a name=\"hcfr-mp-substance-active\"> </a><a name=\"fr-mp-substance-active-en-US\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where constraint  = ((&lt; 763158003 |Medicinal product (product)|) . 127489000 |Has active ingredient (attribute)|) or ((&lt; 763158003 |Medicinal product (product)|) . 762949000 |Has precise active ingredient (attribute)|)</li></ul></div>"
+  },
+  "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-mp-substance-active",
+  "version" : "0.1.0",
+  "name" : "FrMpSubstanceActive",
+  "title" : "French Medicinal product Active substance",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-01-03T17:44:15+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "Le jeu de valeurs à utiliser pour coder l'élément *ingredient.itemCodeableConcept* des ressources *FrMedicationUcd*, *FrMedicationUcdPart* et *FrMedicationNonproprietaryName*.",
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "((< 763158003 |Medicinal product (product)|) . 127489000 |Has active ingredient (attribute)|) or ((< 763158003 |Medicinal product (product)|) . 762949000 |Has precise active ingredient (attribute)|)"
+      }]
+    }]
+  }
+}

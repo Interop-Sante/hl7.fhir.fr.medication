@@ -1,0 +1,38 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "FrMethodOfAdministration",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet FrMethodOfAdministration</b></p><a name=\"FrMethodOfAdministration\"> </a><a name=\"hcFrMethodOfAdministration\"> </a><a name=\"FrMethodOfAdministration-en-US\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where constraint  = &lt; 736665006 |Dose form administration method (administration method)| minus &gt; (&lt; 736665006 |Dose form administration method (administration method)|)</li></ul></div>"
+  },
+  "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/FrMethodOfAdministration",
+  "version" : "0.1.0",
+  "name" : "FrMethodOfAdministration",
+  "title" : "French Method Of Administration",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-01-03T17:44:15+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FrMedicationRequest*.",
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "< 736665006 |Dose form administration method (administration method)| minus > (< 736665006 |Dose form administration method (administration method)|)"
+      }]
+    }]
+  }
+}

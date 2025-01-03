@@ -1,0 +1,38 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "fr-treatment-intent",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet fr-treatment-intent</b></p><a name=\"fr-treatment-intent\"> </a><a name=\"hcfr-treatment-intent\"> </a><a name=\"fr-treatment-intent-en-US\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where constraint  = &lt; 363675004 |Intents (nature of procedure values) (qualifier value)|</li></ul></div>"
+  },
+  "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-treatment-intent",
+  "version" : "0.1.0",
+  "name" : "FrTreatmentIntent",
+  "title" : "French overall intention of the treatment",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-01-03T17:44:15+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FrInpatientMedicationRequest*.",
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "< 363675004 |Intents (nature of procedure values) (qualifier value)|"
+      }]
+    }]
+  }
+}
