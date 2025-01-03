@@ -11,6 +11,24 @@
 </blockquote>
 
 
+```xml
+{{include includes/pn13-example.xml}}
+```
+
+
+
+```xml
+<person>
+  <name>John Doe</name>
+  <age>30</age>
+  <isMarried>false</isMarried>
+  <children>
+    <child>Alice</child>
+    <child>Bob</child>
+  </children>
+</person>
+```
+
 Ce guide d'implémentation (IG) a pour vocation à spécifier les flux d'information autour du médicament pour un patient dans un contexte hospitalier dans un premier temps.
 Trois cas d'usage sont pris en compte dans la version actuelle de cet IG:
 
