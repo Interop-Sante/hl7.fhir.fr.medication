@@ -6,6 +6,9 @@ Alias: $dose-rate-type = http://terminology.hl7.org/CodeSystem/dose-rate-type
 Alias: $SIPh-CIO_DC = http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC
 Alias: $DC_Composant = http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant
 Alias: $unitsofmeasure = http://unitsofmeasure.org
+Alias: $UCD = http://data.esante.gouv.fr/ansm/medicament/UCD
+Alias: $SMS = http://data.esante.gouv.fr/ansm/medicament/codeSMS
+Alias: $TechANSM = http://data.esante.gouv.fr/ansm/medicament/substance
 
 Alias: $fr-document-type = https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type
 
