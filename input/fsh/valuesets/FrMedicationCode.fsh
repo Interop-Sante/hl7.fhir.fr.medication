@@ -5,4 +5,6 @@ Description: "Le jeu de valeurs à utiliser pour indiquer le médicament dans Me
 * ^status = #draft
 * ^experimental = false
 * ^immutable = false
-* include codes from system $UCD and $SMS and $TechANSM
+* include codes from system $UCD
+* include codes from system $SMS
+* include codes from system $TechANSM

@@ -28,7 +28,7 @@ Description: "Simple prescribed, dispensed, administered or used medication comp
 * code.coding contains
     nonCompoundCode 1..1 MS
 
-* code.coding[nonCompoundCode] from FrMedicationCode (required)
+* code.coding[nonCompoundCode] from fr-medication-code (required)
 * code.coding[nonCompoundCode] ^short = "Codes that identify this simple medication"
 * code.coding[nonCompoundCode] ^definition = "Codes that identify this simple medication"
 * code.coding[nonCompoundCode] ^binding.description = "UCD, SMS or ANSM code"
