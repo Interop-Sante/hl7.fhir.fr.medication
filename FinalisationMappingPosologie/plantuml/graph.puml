@@ -191,6 +191,22 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
+        class FrMedicationNonCompound{
+
+             Medication.extension => [None..None]
+             Medication.extension:drugCharacteristic => <&plus>[0..*]
+             Medication.code => [1..None]
+             Medication.code.coding => [1..None]
+             Medication.code.coding:nonCompoundCode => [1..1]
+             Medication.code.text => [None..None]
+             Medication.form => [None..None]
+             Medication.amount => [None..None]
+             Medication.ingredient => [None..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.strength => [None..None]
+             Medication.batch => [None..None]
+        } 
+
         class FrMedicationNonproprietaryName{
 
              Medication.extension => [None..None]
@@ -348,6 +364,7 @@ package IG #DDDDDD{
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FrMedicationHistoryComposition -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
+     FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationNonproprietaryName -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
 
@@ -621,6 +638,14 @@ package IG #DDDDDD{
 
      FrMedicationHistorySources -[#black,dotted,thickness=2]-> FrMedicationHistorySourceType
 
+        class FrMedicationCodes  
+
+     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMedicationCodes
+
+        class FrMpDoseForm  
+
+     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
+
         class FrMedicinalProductOnly  
 
      FrMedicationNonproprietaryName -[#black,dotted,thickness=2]-> FrMedicinalProductOnly
@@ -755,6 +780,10 @@ package "Ressources de base" #palegreen {
  class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
 
     class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationHistoryMedicationStatement
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationNonCompound
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 

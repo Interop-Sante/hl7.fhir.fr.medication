@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-01-03T16:55:47+00:00"/>
+  <date value="2025-01-07T16:15:18+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -1257,6 +1257,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/fr-medication-noncompound"/>
+      </reference>
+      <name value="French Non Compound Medication"/>
+      <description value="Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-medication-nonproprietary-name"/>
       </reference>
       <name value="French non proprietary name Medication"/>
@@ -1565,6 +1576,17 @@
       </reference>
       <name value="value set Interop'Santé - Codes additionnels pour l'élément when"/>
       <description value="Le jeu de valeurs à utiliser pour coder des périodes d'occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-code"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes identifiant les médicaments"/>
+      <description value="Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
