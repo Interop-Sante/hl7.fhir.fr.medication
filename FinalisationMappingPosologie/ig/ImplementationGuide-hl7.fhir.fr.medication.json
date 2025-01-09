@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-01-07T16:15:18+00:00",
+  "date" : "2025-01-09T16:21:14+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -1095,6 +1095,18 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
+        "reference" : "CodeSystem/fr-uf-type-codes"
+      },
+      "name" : "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient",
+      "description" : "Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
         "reference" : "CodeSystem/fr-medication-reconciliation-discrepancy"
       },
       "name" : "code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT",
@@ -1419,6 +1431,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-medication-compound2"
+      },
+      "name" : "French compound Medication",
+      "description" : "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-inpatient-medicationrequest"
       },
       "name" : "French Inpatient MedicationRequest",
@@ -1531,6 +1555,18 @@
       },
       "name" : "French Route of Administration",
       "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.route* de la ressource *FrMedicationRequest*.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-mp-substance"
+      },
+      "name" : "French Substance of a Medicinal Product",
+      "description" : "code for the medicinal product substance",
       "exampleBoolean" : false
     },
     {
@@ -1702,6 +1738,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-prescription-bundle-for-example"
+      },
+      "name" : "FrPrescriptionBunbleForExample",
+      "description" : "Profil de la ressource Bundle pour la constitution d'exemples de prescription.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1785,6 +1833,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-for-prescription"
+      },
+      "name" : "Observation for prescription",
+      "description" : "Observation provided as context of the prescription (ex. weight, height...)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
@@ -1804,6 +1864,18 @@
       },
       "name" : "Ratio with UCUM quantity units",
       "description" : "Ratio with numerator and denominator unit UCUM encoded",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-requestgroup-for-prescription"
+      },
+      "name" : "RequestGroup for prescription",
+      "description" : "RequestGroup for expressing links between lines of a prescription",
       "exampleBoolean" : false
     },
     {
@@ -1851,6 +1923,18 @@
       },
       "name" : "value set Interop'Santé - Codes identifiant les médicaments",
       "description" : "Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-substance-code"
+      },
+      "name" : "value set Interop'Santé - Codes identifiant les substances",
+      "description" : "Le jeu de valeurs à utiliser pour indiquer un ingrédient composant un médicament dans Medication.ingredient.itemCodeableConcept.coding.code",
       "exampleBoolean" : false
     },
     {

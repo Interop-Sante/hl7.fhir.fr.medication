@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "French Non Compound Medication"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2025-01-07T16:15:18+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-09T16:21:14+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1105,7 +1105,7 @@
        fhir:path [ fhir:v "Medication.ingredient.item[x]" ] ;
        fhir:short [ fhir:v "Substance" ] ;
        fhir:definition [ fhir:v "The actual substance (simple ingredient) of the simple medication (ie. made of single component)." ] ;
-       fhir:requirements [ fhir:v "The composition of the medication for this ingredient has to be defined" ] ;
+       fhir:requirements [ fhir:v "The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication" ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1182,6 +1182,7 @@
        fhir:short [ fhir:v "Quantity of ingredient present" ] ;
        fhir:definition [ fhir:v "Specifies how much of the items there are in this Medication" ] ;
        fhir:comment [ fhir:v "The quantity of this igredient defining the medication. For instance, 50 mg/mL defining the glucose quantity for the glucose 5% or 500 mg medicine and 30 mg respectively defining the paracetamol and the codeine quantity for the paracetamol+codeine 500 mg+30 mg medicine." ] ;
+       fhir:requirements [ fhir:v "In cas of virtual medication strength SHALL be provided" ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1562,7 +1563,7 @@
        fhir:path [ fhir:v "Medication.ingredient.item[x]" ] ;
        fhir:short [ fhir:v "Substance" ] ;
        fhir:definition [ fhir:v "The actual substance (simple ingredient) of the simple medication (ie. made of single component)." ] ;
-       fhir:requirements [ fhir:v "The composition of the medication for this ingredient has to be defined" ] ;
+       fhir:requirements [ fhir:v "The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ] ;
          fhir:profile ( [
@@ -1575,6 +1576,7 @@
        fhir:path [ fhir:v "Medication.ingredient.strength" ] ;
        fhir:definition [ fhir:v "Specifies how much of the items there are in this Medication" ] ;
        fhir:comment [ fhir:v "The quantity of this igredient defining the medication. For instance, 50 mg/mL defining the glucose quantity for the glucose 5% or 500 mg medicine and 30 mg respectively defining the paracetamol and the codeine quantity for the paracetamol+codeine 500 mg+30 mg medicine." ] ;
+       fhir:requirements [ fhir:v "In cas of virtual medication strength SHALL be provided" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "Ratio"^^xsd:anyURI ] ;
          fhir:profile ( [

@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-01-07T16:15:18+00:00"/>
+  <date value="2025-01-09T16:21:14+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -894,6 +894,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/fr-uf-type-codes"/>
+      </reference>
+      <name value="code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient"/>
+      <description value="Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/fr-medication-reconciliation-discrepancy"/>
       </reference>
       <name value="code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT"/>
@@ -1191,6 +1202,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/fr-medication-compound2"/>
+      </reference>
+      <name value="French compound Medication"/>
+      <description value="A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-inpatient-medicationrequest"/>
       </reference>
       <name value="French Inpatient MedicationRequest"/>
@@ -1294,6 +1316,17 @@
       </reference>
       <name value="French Route of Administration"/>
       <description value="Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.route* de la ressource *FrMedicationRequest*."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-mp-substance"/>
+      </reference>
+      <name value="French Substance of a Medicinal Product"/>
+      <description value="code for the medicinal product substance"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1450,6 +1483,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-prescription-bundle-for-example"/>
+      </reference>
+      <name value="FrPrescriptionBunbleForExample"/>
+      <description value="Profil de la ressource Bundle pour la constitution d'exemples de prescription."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1526,6 +1570,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-observation-for-prescription"/>
+      </reference>
+      <name value="Observation for prescription"/>
+      <description value="Observation provided as context of the prescription (ex. weight, height...)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:complex-type"/>
       </extension>
       <reference>
@@ -1544,6 +1599,17 @@
       </reference>
       <name value="Ratio with UCUM quantity units"/>
       <description value="Ratio with numerator and denominator unit UCUM encoded"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-requestgroup-for-prescription"/>
+      </reference>
+      <name value="RequestGroup for prescription"/>
+      <description value="RequestGroup for expressing links between lines of a prescription"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1587,6 +1653,17 @@
       </reference>
       <name value="value set Interop'Santé - Codes identifiant les médicaments"/>
       <description value="Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-substance-code"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes identifiant les substances"/>
+      <description value="Le jeu de valeurs à utiliser pour indiquer un ingrédient composant un médicament dans Medication.ingredient.itemCodeableConcept.coding.code"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

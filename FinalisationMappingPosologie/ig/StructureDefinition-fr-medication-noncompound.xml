@@ -24,7 +24,7 @@
   <title value="French Non Compound Medication"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2025-01-07T16:15:18+00:00"/>
+  <date value="2025-01-09T16:21:14+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -1017,7 +1017,7 @@
       <path value="Medication.ingredient.item[x]"/>
       <short value="Substance"/>
       <definition value="The actual substance (simple ingredient) of the simple medication (ie. made of single component)."/>
-      <requirements value="The composition of the medication for this ingredient has to be defined"/>
+      <requirements value="The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication"/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1087,6 +1087,7 @@
       <short value="Quantity of ingredient present"/>
       <definition value="Specifies how much of the items there are in this Medication"/>
       <comment value="The quantity of this igredient defining the medication. For instance, 50 mg/mL defining the glucose quantity for the glucose 5% or 500 mg medicine and 30 mg respectively defining the paracetamol and the codeine quantity for the paracetamol+codeine 500 mg+30 mg medicine."/>
+      <requirements value="In cas of virtual medication strength SHALL be provided"/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -1435,7 +1436,7 @@
       <path value="Medication.ingredient.item[x]"/>
       <short value="Substance"/>
       <definition value="The actual substance (simple ingredient) of the simple medication (ie. made of single component)."/>
-      <requirements value="The composition of the medication for this ingredient has to be defined"/>
+      <requirements value="The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication"/>
       <type>
         <code value="CodeableConcept"/>
         <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-mp-substance-active"/>
@@ -1445,6 +1446,7 @@
       <path value="Medication.ingredient.strength"/>
       <definition value="Specifies how much of the items there are in this Medication"/>
       <comment value="The quantity of this igredient defining the medication. For instance, 50 mg/mL defining the glucose quantity for the glucose 5% or 500 mg medicine and 30 mg respectively defining the paracetamol and the codeine quantity for the paracetamol+codeine 500 mg+30 mg medicine."/>
+      <requirements value="In cas of virtual medication strength SHALL be provided"/>
       <type>
         <code value="Ratio"/>
         <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/FrRatioUcum"/>

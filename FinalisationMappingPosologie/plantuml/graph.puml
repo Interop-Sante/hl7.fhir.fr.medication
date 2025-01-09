@@ -140,6 +140,19 @@ package IG #DDDDDD{
              Medication.batch => [None..0]
         } 
 
+        class FrMedicationCompound2{
+
+             Medication.code => [1..None]
+             Medication.code.coding => [None..None]
+             Medication.code.text => [1..None]
+             Medication.form => [None..None]
+             Medication.amount => [None..None]
+             Medication.ingredient => [1..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.strength => [None..0]
+             Medication.batch => [None..0]
+        } 
+
         class FrMedicationHistoryComposition{
 
              Composition.implicitRules => [None..0]
@@ -344,6 +357,16 @@ package IG #DDDDDD{
              CodeableConcept.coding => [None..None]
         } 
 
+        class FrMPSubstance{
+
+             CodeableConcept.coding => [None..None]
+        } 
+
+        class FrObservationForPrescription{
+
+             Observation.subject => [1..None]
+        } 
+
         class FrOnAdmissionMedicationComposition{
 
              Composition => [None..None]
@@ -356,6 +379,18 @@ package IG #DDDDDD{
              Composition.type => [None..None]
              Composition.section:CurrentMedication => [None..None]
              Composition.section:CurrentMedication.entry => [None..None]
+        } 
+
+        class FrPrescriptionBunbleForExample{
+
+             Bundle.implicitRules => [None..0]
+             Bundle.language => [None..None]
+             Bundle.type => [None..None]
+        } 
+
+        class FrRequestGroupForPrescription{
+
+             RequestGroup.groupIdentifier => [1..None]
          }
 
      }
@@ -634,6 +669,10 @@ package IG #DDDDDD{
 
      FrMedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
 
+        class FrMpDoseForm  
+
+     FrMedicationCompound2 -[#black,dotted,thickness=2]-> FrMpDoseForm
+
         class FrMedicationHistorySourceType  
 
      FrMedicationHistorySources -[#black,dotted,thickness=2]-> FrMedicationHistorySourceType
@@ -722,6 +761,10 @@ package IG #DDDDDD{
 
      FrMPSubstanceActive -[#black,dotted,thickness=2]-> FrMpSubstanceActive
 
+        class FrSubstanceCode  
+
+     FrMPSubstance -[#black,dotted,thickness=2]-> FrSubstanceCode
+
         class MedicationIngredientStrengthCodes  
 
      FrStrengthCodeableConcept -[#black,dotted,thickness=2]-> MedicationIngredientStrengthCodes
@@ -773,6 +816,10 @@ package "Ressources de base" #palegreen {
 
     class353bd6f65060d17097c3b03141e79cce --> FrMedicationCompound
 
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationCompound2
+
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
     class53eff24a355b7ae55f0aa2bef39bb24c --> FrMedicationHistoryComposition
@@ -817,6 +864,14 @@ package "Ressources de base" #palegreen {
 
     class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstanceActive
 
+ class "CodeableConcept" as  class3521d6f1ff87d9b962b1c77766470bb9 
+
+    class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstance
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationForPrescription
+
  class "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-current-medication-composition" as  class44d5564388cfbe90dd708eba4c3d00ce 
 
     class44d5564388cfbe90dd708eba4c3d00ce --> FrOnAdmissionMedicationComposition
@@ -824,5 +879,13 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-reconciliation-composition" as  class85154736f5ad608ac6ce5fbbc96fe1bd 
 
     class85154736f5ad608ac6ce5fbbc96fe1bd --> FrOnAdmissionRetroactiveReconciliationComposition
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> FrPrescriptionBunbleForExample
+
+ class "RequestGroup" as  class55f9b414b19c569dcbf60f6417255621 
+
+    class55f9b414b19c569dcbf60f6417255621 --> FrRequestGroupForPrescription
 }
 @enduml
