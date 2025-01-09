@@ -18,7 +18,7 @@ Description: "Profil de la ressource Bundle pour la constitution d'exemples de p
     Practitioner 0..1 MS and
     MedicationRequest 1.. MS and
     MedicationNonCompound 1.. MS and
-    MedicationCompound 0.. MS
+    MedicationCompound 0.. MS and
     RequestGroupForPrescription 0..1 MS and
     Observation 0.. MS
 * entry.resource[Patient] from $FrCorePatient
