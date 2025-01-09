@@ -9,7 +9,7 @@ Prévu pour une version ultérieure de ce guide
 ## La prescritpion
 
 La traduction d'un flux de prescription PN13 en ressource FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l'aide des ressources ConceptMapt fournies dans ce guide.
-La manière dont les ressources FHIR résultantes sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de '_include' et de '_revInclude'). Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d'une recherche de prescription par identifiant (i.e. élément groupIndentifier cf. section suivante)
+La manière dont les ressources FHIR résultantes sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de '_include' et de '_revInclude'). Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d'une recherche de prescription par identifiant (i.e. élément groupIndentifier cf. section suivante) sous forme de Bundle de type searchset
 
 ### La notion de prescription multiligne
 

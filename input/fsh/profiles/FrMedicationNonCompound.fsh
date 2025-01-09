@@ -46,9 +46,10 @@ Description: "Simple prescribed, dispensed, administered or used medication comp
 * ingredient.item[x] only FrMPSubstanceActive
 * ingredient.item[x] ^short = "Substance"
 * ingredient.item[x] ^definition = "The actual substance (simple ingredient) of the simple medication (ie. made of single component)."
-* ingredient.item[x] ^requirements = "The composition of the medication for this ingredient has to be defined"
+* ingredient.item[x] ^requirements = "The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication"
 * ingredient.strength only FrRatioUcum
 * ingredient.strength ^definition = "Specifies how much of the items there are in this Medication"
 * ingredient.strength ^comment = "The quantity of this igredient defining the medication. For instance, 50 mg/mL defining the glucose quantity for the glucose 5% or 500 mg medicine and 30 mg respectively defining the paracetamol and the codeine quantity for the paracetamol+codeine 500 mg+30 mg medicine."
+* ingredient.strength ^requirements = "In cas of virtual medication strength SHALL be provided"
 * batch ^definition = "This applies for the proprietary named medication involved in a MedicationDispense, MedicationAdministration or a MedicationUse."
 * batch ^comment = "WARNING: it is the batch number of the part.\r\nIf it is not discerned for each part, it SHALL NOT be provided here but at the grouping level where it is defined, most often the UCD."
