@@ -26,6 +26,10 @@ Alias: $FrCorePatient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-
 Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins
 Alias: $FrCoreRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person
 
+// FHIR resources aliases
+Alias: $RequestGroup = 
+
+
 // Mapping PN13 aliases
 Alias: $PN13Schema = https://interopsante.org/pn13/xsd
 Alias: $ISO3166 = urn:iso:std:iso:3166

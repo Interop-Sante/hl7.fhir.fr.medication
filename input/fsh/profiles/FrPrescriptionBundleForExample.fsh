@@ -31,7 +31,7 @@ Description: "Profil de la ressource Bundle pour la constitution d'exemples de p
 * entry.resource[MedicationNonCompound] ^short = "Simple medication either prescribed directly or referenced by a compound medication"
 * entry.resource[MedicationCompound] from fr-medication-compound2
 * entry.resource[MedicationCompound] ^short = "Prescribed compound medication"
-* entry.resource[RequestGroup] from RequestGroup
+* entry.resource[RequestGroup] from fr-requestgroup-for-prescription
 * entry.resource[RequestGroup] ^short = "Relation between lines of prescription (ex. exclusive: one or the other)"
-* entry.resource[Observation] from Observation
+* entry.resource[Observation] from fr-observation-for-prescription
 * entry.resource[Observation] ^short = "Observation provided as context of the prescription (ex. weight, height...)"
