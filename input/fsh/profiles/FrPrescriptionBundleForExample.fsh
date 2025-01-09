@@ -9,29 +9,29 @@ Description: "Profil de la ressource Bundle pour la constitution d'exemples de p
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
 * type ^defaultValueCode = #searchset
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "entry.resource"  
-* entry ^slicing.description = "6 slices: 1. for Patient 2. for Practitioner 3. for MedicationRequest 4. for Medication 5. for RequestGroup 6. for Observation"
-* entry ^slicing.rules = #open
-* entry contains
-    Patient 0..1 MS and
-    Practitioner 0..1 MS and
-    MedicationRequest 1.. MS and
-    MedicationNonCompound 1.. MS and
-    MedicationCompound 0.. MS and
-    RequestGroupForPrescription 0..1 MS and
-    Observation 0.. MS
-* entry.resource[Patient] from $FrCorePatient
-* entry.resource[Patient] ^short = "Patient for whom the medication is requested"
-* entry.resource[Practioner] from $FrCorePractitioner
-* entry.resource[Practioner] ^short = "Requester of the medication request"
-* entry.resource[MedicationRequest] from fr-inpatient-medicationrequest
-* entry.resource[MedicationRequest] ^short = "Line of presciption"
-* entry.resource[MedicationNonCompound] from fr-medication-noncompound
-* entry.resource[MedicationNonCompound] ^short = "Simple medication either prescribed directly or referenced by a compound medication"
-* entry.resource[MedicationCompound] from fr-medication-compound2
-* entry.resource[MedicationCompound] ^short = "Prescribed compound medication"
-* entry.resource[RequestGroupForPrescription] from fr-requestgroup-for-prescription
-* entry.resource[RequestGroupForPrescription] ^short = "Relation between lines of prescription (ex. exclusive: one or the other)"
-* entry.resource[Observation] from fr-observation-for-prescription
-* entry.resource[Observation] ^short = "Observation provided as context of the prescription (ex. weight, height...)"
+// * entry ^slicing.discriminator.type = #profile
+// * entry ^slicing.discriminator.path = "entry.resource"  
+// * entry ^slicing.description = "6 slices: 1. for Patient 2. for Practitioner 3. for MedicationRequest 4. for Medication 5. for RequestGroup 6. for Observation"
+// * entry ^slicing.rules = #open
+// * entry contains
+//     Patient 0..1 MS and
+//     Practitioner 0..1 MS and
+//     MedicationRequest 1.. MS and
+//     MedicationNonCompound 1.. MS and
+//     MedicationCompound 0.. MS and
+//     RequestGroupForPrescription 0..1 MS and
+//     Observation 0.. MS
+// * entry.resource[Patient] from $FrCorePatient 
+// * entry.resource[Patient].resolve() ^short = "Patient for whom the medication is requested"
+// * entry.resource[Practioner] from $FrCorePractitioner
+// * entry.resource[Practioner] ^short = "Requester of the medication request"
+// * entry.resource[MedicationRequest] from fr-inpatient-medicationrequest
+// * entry.resource[MedicationRequest] ^short = "Line of presciption"
+// * entry.resource[MedicationNonCompound] from fr-medication-noncompound
+// * entry.resource[MedicationNonCompound] ^short = "Simple medication either prescribed directly or referenced by a compound medication"
+// * entry.resource[MedicationCompound] from fr-medication-compound2
+// * entry.resource[MedicationCompound] ^short = "Prescribed compound medication"
+// * entry.resource[RequestGroupForPrescription] from fr-requestgroup-for-prescription
+// * entry.resource[RequestGroupForPrescription] ^short = "Relation between lines of prescription (ex. exclusive: one or the other)"
+// * entry.resource[Observation] from fr-observation-for-prescription
+// * entry.resource[Observation] ^short = "Observation provided as context of the prescription (ex. weight, height...)"
