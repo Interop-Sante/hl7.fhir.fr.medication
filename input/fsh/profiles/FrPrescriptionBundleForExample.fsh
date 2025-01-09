@@ -8,7 +8,7 @@ Description: "Profil de la ressource Bundle pour la constitution d'exemples de p
 * . ^definition = "Exemple de prescription contenant l'ensemble des ressources issus d'une traduction d'un message PN13 de prescription en FHIR"
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
-* type #searchset
+* type ^defaultValueCode = #searchset
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "entry.resource"  
 * entry ^slicing.description = "6 slices: 1. for Patient 2. for Practitioner 3. for MedicationRequest 4. for Medication 5. for RequestGroup 6. for Observation"
