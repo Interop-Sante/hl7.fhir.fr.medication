@@ -71,7 +71,6 @@ Usage: #example
 // Pas sûr de comment on fait du XHTML
 // * entry[=].resource.text.div = "<div> PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) 
 // A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours </div>"
-// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
 * entry[=].resource.identifier[0].value = "31626"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
@@ -83,7 +82,7 @@ Usage: #example
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.encounter.identifier.value = "70101274"
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
-* entry[=].resource.supportingInformation[0].extension[UFRole].Code = #UFMED
+* entry[=].resource.supportingInformation[0].extension[UFRole].valueCode = #UFMED
 * entry[=].resource.supportingInformation[=].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-1"
