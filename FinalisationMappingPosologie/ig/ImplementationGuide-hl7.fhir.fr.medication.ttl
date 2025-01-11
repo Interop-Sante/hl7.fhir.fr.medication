@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-09T16:21:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-11T17:10:04+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1120,6 +1120,34 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/bundle-20001> ;
+         fhir:reference [ fhir:v "Bundle/bundle-20001" ]
+       ] ;
+       fhir:name [ fhir:v "bundle-20001" ] ;
+       fhir:example [
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/bundle-21001> ;
+         fhir:reference [ fhir:v "Bundle/bundle-21001" ]
+       ] ;
+       fhir:name [ fhir:v "bundle-21001" ] ;
+       fhir:example [
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -1135,8 +1163,8 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://hl7.fr/fhir/fr/medication/CodeSystem/fr-uf-type-codes> ;
-         fhir:reference [ fhir:v "CodeSystem/fr-uf-type-codes" ]
+         fhir:link <https://hl7.fr/fhir/fr/medication/CodeSystem/fr-uf-role-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/fr-uf-role-codes" ]
        ] ;
        fhir:name [ fhir:v "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient" ] ;
        fhir:description [ fhir:v "Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient." ] ;
@@ -1488,6 +1516,18 @@
        ] ;
        fhir:name [ fhir:v "French Inpatient MedicationRequest" ] ;
        fhir:description [ fhir:v "French inpatient medication request profile" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-inpatient-medicationrequest3" ]
+       ] ;
+       fhir:name [ fhir:v "French Inpatient MedicationRequest 3" ] ;
+       fhir:description [ fhir:v "French inpatient medication request profile 3" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1944,6 +1984,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-uf-role" ]
+       ] ;
+       fhir:name [ fhir:v "UF Role" ] ;
+       fhir:description [ fhir:v "Caracterization of the role of a functionnal unit for the patient encounter" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -2072,6 +2124,18 @@
        ] ;
        fhir:name [ fhir:v "value set Interop'Santé - type de document de la ressource Composition d'une FCT" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-uf-role-code-for-prescription> ;
+         fhir:reference [ fhir:v "ValueSet/fr-uf-role-code-for-prescription" ]
+       ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Types de rôle d’une UF par rapport à un séjour patient dans une prescription" ] ;
+       fhir:description [ fhir:v "Le jeu de valeurs à utiliser dans l'extension pour indiquer le type d'UF référencée dans Medication.supportingInfo" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

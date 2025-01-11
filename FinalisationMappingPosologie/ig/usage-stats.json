@@ -992,6 +992,13 @@
       "types": [
         "CodeableConcept"
       ]
+    },
+    {
+      "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role",
+      "title": "UF Role",
+      "types": [
+        "code"
+      ]
     }
   ],
   "profiles": {
@@ -1025,6 +1032,10 @@
       {
         "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-2",
         "title": "FrInpatientMedicationRequest2"
+      },
+      {
+        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3",
+        "title": "French Inpatient MedicationRequest 3"
       }
     ],
     "Medication": [
@@ -1107,6 +1118,9 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
+    "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values": [
+      "MedicationRequest.dosageInstruction.timing.repeat"
+    ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-basis-of-dose-component": [
       "MedicationRequest.dosageInstruction.doseAndRate"
     ],
@@ -1114,6 +1128,7 @@
       "Medication"
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-is-vehicle": [
+      "Medication.ingredient",
       "MedicationRequest.contained",
       "MedicationRequest.contained.ingredient"
     ],
@@ -1126,6 +1141,9 @@
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-treatment-intent": [
       "MedicationRequest"
+    ],
+    "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role": [
+      "MedicationRequest.supportingInformation"
     ]
   }
 }

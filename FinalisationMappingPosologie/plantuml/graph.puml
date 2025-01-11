@@ -112,6 +112,36 @@ package IG #DDDDDD{
              MedicationRequest.dispenseRequest.performer => [None..0]
         } 
 
+        class FrInpatientMedicationRequest3{
+
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
+             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
+             MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.subject => [None..None]
+             MedicationRequest.encounter => [None..None]
+             MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
+             MedicationRequest.requester => [1..None]
+             MedicationRequest.dosageInstruction => [1..None]
+             MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.route => [None..None]
+             MedicationRequest.dosageInstruction.method => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.extension:BasisOfDoseComponent => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerAdministration => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerLifetime => [None..None]
+             MedicationRequest.dispenseRequest.initialFill => [None..0]
+             MedicationRequest.dispenseRequest.dispenseInterval => [None..0]
+             MedicationRequest.dispenseRequest.validityPeriod.start => [1..None]
+             MedicationRequest.dispenseRequest.validityPeriod.end => [None..None]
+             MedicationRequest.dispenseRequest.quantity => [None..0]
+             MedicationRequest.dispenseRequest.expectedSupplyDuration.comparator => [None..0]
+             MedicationRequest.dispenseRequest.performer => [None..0]
+        } 
+
         class FrMedication2unique{
 
              Medication.code.coding => [None..None]
@@ -148,6 +178,8 @@ package IG #DDDDDD{
              Medication.form => [None..None]
              Medication.amount => [None..None]
              Medication.ingredient => [1..None]
+             Medication.ingredient.extension => [None..None]
+             Medication.ingredient.extension:IsVehicle => <&plus>[0..1]
              Medication.ingredient.item[x] => [None..None]
              Medication.ingredient.strength => [None..0]
              Medication.batch => [None..0]
@@ -397,6 +429,11 @@ package IG #DDDDDD{
      package extension #paleturquoise {
 
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrUFRole
+     FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
+     FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
+     FrMedicationCompound2 -[#black,dashed,thickness=2]-> FrIsVehicle
      FrMedicationHistoryComposition -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
@@ -641,6 +678,12 @@ package IG #DDDDDD{
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class FrUFRole{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
          }
      }
      package valueset #PaleVioletRed{
@@ -660,6 +703,14 @@ package IG #DDDDDD{
         class FrMethodOfAdministration  
 
      FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
+
+        class FrRouteOfAdministration  
+
+     FrInpatientMedicationRequest3 -[#black,dotted,thickness=2]-> FrRouteOfAdministration
+
+        class FrMethodOfAdministration  
+
+     FrInpatientMedicationRequest3 -[#black,dotted,thickness=2]-> FrMethodOfAdministration
 
         class FrMedicinalProductOnly  
 
@@ -772,6 +823,10 @@ package IG #DDDDDD{
         class FrTreatmentIntent  
 
      FrTeatmentIntent -[#black,dotted,thickness=2]-> FrTreatmentIntent
+
+        class FrUfRoleCodesForPrescriptionValueSet  
+
+     FrUFRole -[#black,dotted,thickness=2]-> FrUfRoleCodesForPrescriptionValueSet
        }
 
 package "Ressources de base" #palegreen {
@@ -807,6 +862,10 @@ package "Ressources de base" #palegreen {
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
     class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest3
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 

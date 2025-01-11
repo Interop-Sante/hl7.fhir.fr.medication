@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-01-09T16:21:14+00:00",
+  "date" : "2025-01-11T17:10:04+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -1080,6 +1080,28 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bundle-20001"
+      },
+      "name" : "bundle-20001",
+      "exampleCanonical" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bundle-21001"
+      },
+      "name" : "bundle-21001",
+      "exampleCanonical" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1095,7 +1117,7 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/fr-uf-type-codes"
+        "reference" : "CodeSystem/fr-uf-role-codes"
       },
       "name" : "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient",
       "description" : "Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient.",
@@ -1447,6 +1469,18 @@
       },
       "name" : "French Inpatient MedicationRequest",
       "description" : "French inpatient medication request profile",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-inpatient-medicationrequest3"
+      },
+      "name" : "French Inpatient MedicationRequest 3",
+      "description" : "French inpatient medication request profile 3",
       "exampleBoolean" : false
     },
     {
@@ -1904,6 +1938,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-uf-role"
+      },
+      "name" : "UF Role",
+      "description" : "Caracterization of the role of a functionnal unit for the patient encounter",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -2031,6 +2077,18 @@
       },
       "name" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-uf-role-code-for-prescription"
+      },
+      "name" : "value set Interop'Santé - Types de rôle d’une UF par rapport à un séjour patient dans une prescription",
+      "description" : "Le jeu de valeurs à utiliser dans l'extension pour indiquer le type d'UF référencée dans Medication.supportingInfo",
       "exampleBoolean" : false
     },
     {

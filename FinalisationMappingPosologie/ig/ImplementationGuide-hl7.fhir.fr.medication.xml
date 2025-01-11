@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-01-09T16:21:14+00:00"/>
+  <date value="2025-01-11T17:10:04+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -880,6 +880,26 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bundle-20001"/>
+      </reference>
+      <name value="bundle-20001"/>
+      <exampleCanonical value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bundle-21001"/>
+      </reference>
+      <name value="bundle-21001"/>
+      <exampleCanonical value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -894,7 +914,7 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/fr-uf-type-codes"/>
+        <reference value="CodeSystem/fr-uf-role-codes"/>
       </reference>
       <name value="code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient"/>
       <description value="Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient."/>
@@ -1217,6 +1237,17 @@
       </reference>
       <name value="French Inpatient MedicationRequest"/>
       <description value="French inpatient medication request profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-inpatient-medicationrequest3"/>
+      </reference>
+      <name value="French Inpatient MedicationRequest 3"/>
+      <description value="French inpatient medication request profile 3"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1635,6 +1666,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-uf-role"/>
+      </reference>
+      <name value="UF Role"/>
+      <description value="Caracterization of the role of a functionnal unit for the patient encounter"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -1752,6 +1794,17 @@
       </reference>
       <name value="value set Interop'Santé - type de document de la ressource Composition d'une FCT"/>
       <description value="Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-uf-role-code-for-prescription"/>
+      </reference>
+      <name value="value set Interop'Santé - Types de rôle d’une UF par rapport à un séjour patient dans une prescription"/>
+      <description value="Le jeu de valeurs à utiliser dans l'extension pour indiquer le type d'UF référencée dans Medication.supportingInfo"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
