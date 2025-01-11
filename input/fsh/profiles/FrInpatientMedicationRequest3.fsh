@@ -1,4 +1,4 @@
-Profile: FrInpatientMedicationRequest
+Profile: FrInpatientMedicationRequest3
 Parent: MedicationRequest
 Id: fr-inpatient-medicationrequest3
 Title: "French Inpatient MedicationRequest 3"

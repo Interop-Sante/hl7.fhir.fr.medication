@@ -8,7 +8,7 @@ Usage: #example
 * entry[=].resource.meta.profile[0] = $FrCorePatient
 * entry[=].resource.identifier[0].use = #usual
 * entry[=].resource.identifier[=].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* entry[=].resource.identifier[=].type.coding[=].code = "PI"
+* entry[=].resource.identifier[=].type.coding[=].code = #PI
 * entry[=].resource.identifier[=].type.coding[=].display = "Patient internal identifier"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/IPP"
 * entry[=].resource.identifier[=].value = "5000001820"
@@ -17,7 +17,7 @@ Usage: #example
 * entry[=].resource.name[+].use = #official
 * entry[=].resource.name[=].family = "AVION"
 * entry[=].resource.name[=].given = "JAUNE"
-* entry[=].resource.birthDate ="1961-11-25"
+* entry[=].resource.birthDate = "1961-11-25"
 * entry[+].resource.resourceType = "Practitioner"
 * entry[=].resource.id = "Practitioner-20001"
 * entry[=].resource.meta.profile[0] = $FrCorePractitioner
