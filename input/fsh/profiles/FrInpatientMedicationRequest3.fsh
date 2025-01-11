@@ -14,7 +14,7 @@ Description: "French inpatient medication request profile 3"
 * medication[x] only Reference(fr-medication-noncompound or fr-medication-compound2)
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
-* supportingInformation.extension contains fr-uf-role named UfRole 0..1
+* supportingInformation.extension contains fr-uf-role named UFRole 0..1
 * requester 1..
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"
