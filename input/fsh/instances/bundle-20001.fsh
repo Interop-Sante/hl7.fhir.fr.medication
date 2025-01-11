@@ -32,9 +32,9 @@ Usage: #example
 * entry[=].resource.name[=].family = "LUIGGI"
 * entry[=].resource.name[=].given = "DENIS"
 * entry[+].resource.resourceType = "Medication"
-* entry[+].resource.id = "med-20001"
+* entry[=].resource.id = "med-20001"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
-* entry[=].resource.meta.profile[0] = $fr-medication-noncompound
+* entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $UCD#3400890006262 "PARACETAMOL VIC 1000MG CPR"
 * entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
 * entry[=].resource.form = $EDQM#10219000 "Comprimé"
@@ -83,7 +83,7 @@ Usage: #example
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.encounter.identifier.value = "70101274"
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
-* entry[=].resource.supportingInformation[0].extension[UFRole] = #UFMED
+* entry[=].resource.supportingInformation[0].extension[UFRole].valueCode = #UFMED
 * entry[=].resource.supportingInformation[=].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-1"
