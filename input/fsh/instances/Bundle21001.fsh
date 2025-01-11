@@ -62,20 +62,21 @@ Usage: #example
 * entry[=].resource.id = "Obs-210001-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
 * entry[=].resource.status = #final
-* entry[=].resource.category.coding.code = "vital-signs"
+* entry[=].resource.category.coding.code = #vital-signs
 * entry[=].resource.category.coding.systme = "http://terminology.hl7.org/CodeSystem/observation-category"
-* entry[=].resource.code.coding.code = "29463-7"
+* entry[=].resource.code.coding.code = #29463-7
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.effectiveDateTime = "2018-06-21T16:05:10+02:00"
-* entry[=].resource.valueQuantity.value = "120.0"
+* entry[=].resource.valueQuantity.value = 120.0
 * entry[=].resource.valueQuantity.unit = "kg"
 * entry[=].resource.valueQuantity.system = $unitsofmeasure
-* entry[+].resource.valueQuantity.code = "kg"
+* entry[+].resource.valueQuantity.code = #kg
 * entry[+].resource.resourceType = "MedicationRequest"
 * entry[=].resource.text.status = #additional
-* entry[=].resource.text.div = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale)
-A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
+// Je ne sais pas comment convertir en XHTML
+//* entry[=].resource.text.div = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale)
+// A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 //* entry[=].resource.meta.profile[0] = fr-inpatient-medicationrequest3
 * entry[=].resource.identifier[0].value = "31626"
@@ -99,11 +100,11 @@ A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pen
 * entry[=].resource.groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * entry[=].resource.dosageInstruction[0].timing.repeat.boundsPeriod.start = "2022-04-12T06:00:00+02:00"
 * entry[=].resource.dosageInstruction[=].timing.repeat.boundsPeriod.stop = "2022-04-15T00:00:00+02:00"
-* entry[=].resource.dosageInstruction[=].timing.repeat.frequencyMax = "1"
-* entry[=].resource.dosageInstruction[=].timing.repeat.period = "6"
+* entry[=].resource.dosageInstruction[=].timing.repeat.frequencyMax = 1
+* entry[=].resource.dosageInstruction[=].timing.repeat.period = 6
 * entry[=].resource.dosageInstruction[=].timing.repeat.periodUnit = #h
-* entry[=].resource.dosageInstruction[=].asNeededBoolean = "true"
-* entry[=].resource.dosageInstruction[=].doseAndRate[0].doseQuantity.value = "1000.0"
+* entry[=].resource.dosageInstruction[=].asNeededBoolean = true
+* entry[=].resource.dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1000.0
 * entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "dose"
-* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.value = "4000.0"
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.value = 4000.0
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.unit = "dose"

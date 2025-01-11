@@ -35,25 +35,22 @@ Usage: #example
 * entry[+].resource.id = "med-20001"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 //* entry[=].resource.meta.profile[0] = fr-medication-noncompound
-* entry[=].resource.code.coding[0].code = #3400890006262
-* entry[=].resource.code.coding[=].system = $UCD
-* entry[=].resource.code.coding[=].display = "PARACETAMOL VIC 1000MG CPR"
-* entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
-* entry[=].resource.form.codableConcept = $EDQM#10219000 "Comprimé"
+* entry[=].resource.code.codeableConcept = $UCD#3400890006262 "PARACETAMOL VIC 1000MG CPR"
+* entry[=].resource.code.codeableConcept.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
+* entry[=].resource.form.codeableConcept = $EDQM#10219000 "Comprimé"
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-200001-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * entry[=].resource.status = #final
 * entry[=].resource.category.coding.code = #vital-signs
-* entry[=].resource.category.coding.systme = "http://terminology.hl7.org/CodeSystem/observation-category"
+* entry[=].resource.category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * entry[=].resource.code.coding.code = #8302-2
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.effectiveDateTime = "2018-10-25T11:06:06+02:00"
 * entry[=].resource.valueQuantity.value = 189.0
 * entry[=].resource.valueQuantity.unit = "cm"
-* entry[=].resource.valueQuantity.system = $unitsofmeasure
-* entry[+].resource.valueQuantity.code = #cm
+* entry[+].resource.valueQuantity.code = $unitsofmeasure#cm
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-200001-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
@@ -85,7 +82,7 @@ Usage: #example
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.encounter.identifier.value = "70101274"
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
-* entry[=].resource.supportingInformation[0].extension[UFRole].code = #UFMED
+* entry[=].resource.supportingInformation[0].extension[UFRole].valueCode = #UFMED
 * entry[=].resource.supportingInformation[=].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-1"
@@ -95,7 +92,7 @@ Usage: #example
 * entry[=].resource.groupIdentifier.value = "10723"
 * entry[=].resource.groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * entry[=].resource.dosageInstruction[0].timing.repeat.boundsPeriod.start = "2022-04-12T06:00:00+02:00"
-* entry[=].resource.dosageInstruction[=].timing.repeat.boundsPeriod.stop = "2022-04-15T00:00:00+02:00"
+* entry[=].resource.dosageInstruction[=].timing.repeat.boundsPeriod.end = "2022-04-15T00:00:00+02:00"
 * entry[=].resource.dosageInstruction[=].timing.repeat.frequencyMax = 1
 * entry[=].resource.dosageInstruction[=].timing.repeat.period = 6
 * entry[=].resource.dosageInstruction[=].timing.repeat.periodUnit = #h
