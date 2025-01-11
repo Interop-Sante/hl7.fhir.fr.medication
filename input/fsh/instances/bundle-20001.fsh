@@ -34,7 +34,7 @@ Usage: #example
 * entry[+].resource.resourceType = "Medication"
 * entry[+].resource.id = "med-20001"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
-//* entry[=].resource.meta.profile[0] = fr-medication-noncompound
+* entry[=].resource.meta.profile[0] = fr-medication-noncompound
 * entry[=].resource.code = $UCD#3400890006262 "PARACETAMOL VIC 1000MG CPR"
 * entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
 * entry[=].resource.form = $EDQM#10219000 "Comprimé"
@@ -48,9 +48,8 @@ Usage: #example
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.effectiveDateTime = "2018-10-25T11:06:06+02:00"
-* entry[=].resource.valueQuantity.value = 189.0
+* entry[=].resource.valueQuantity.value = 189.0 $unitsofmeasure#cm
 * entry[=].resource.valueQuantity.unit = "cm"
-* entry[+].resource.valueQuantity = $unitsofmeasure#cm
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-200001-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
@@ -71,7 +70,7 @@ Usage: #example
 // * entry[=].resource.text.div = "<div> PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) 
 // A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours </div>"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
-//* entry[=].resource.meta.profile[0] = fr-inpatient-medicationrequest3
+* entry[=].resource.meta.profile[0] = fr-inpatient-medicationrequest3
 * entry[=].resource.identifier[0].value = "31626"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * entry[=].resource.status = #active
