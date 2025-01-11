@@ -22,7 +22,7 @@ Usage: #example
 * entry[=].resource.id = "Practitioner-21001"
 * entry[=].resource.meta.profile[0] = $FrCorePractitioner
 * entry[=].resource.identifier[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* entry[=].resource.identifier[=].type.coding[=].code = "EI"
+* entry[=].resource.identifier[=].type.coding[=].code = #EI
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/EI"
 * entry[=].resource.identifier[=].value = "P082443"
 * entry[=].resource.name[0].use = #usual
@@ -35,31 +35,29 @@ Usage: #example
 * entry[+].resource.id = "med-21001"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 //* entry[=].resource.meta.profile[0] = fr-medication-noncompound
-* entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
-* entry[=].resource.code.coding[0].code = "3400890006262"
+* entry[=].resource.code.coding[0].code = #3400890006262
 * entry[=].resource.code.coding[=].system = $UCD
 * entry[=].resource.code.coding[=].display = "PARACETAMOL VIC 1000MG CPR"
-* entry[=].resource.form.coding[0].code = "10219000"
-* entry[=].resource.form.coding[=].system = $EDQM
-* entry[=].resource.form.coding[=].display = "Comprimé"
+* entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
+* entry[=].resource.form.codableConcept = $EDQM#10219000 "Comprimé"
 // ATTENTION utilisation de amount pas en accord avec la définition FHIR
-* entry[=].resource.amount.numerator.value = "1"
+* entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $unitsofmeasure
-* entry[=].resource.amount.numerator.code = "mg"
+* entry[=].resource.amount.numerator.code = #mg
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-210001-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * entry[=].resource.status = #final
-* entry[=].resource.category.coding.code = "vital-signs"
+* entry[=].resource.category.coding.code = #vital-signs
 * entry[=].resource.category.coding.systme = "http://terminology.hl7.org/CodeSystem/observation-category"
-* entry[=].resource.code.coding.code = "8302-2"
+* entry[=].resource.code.coding.code = #8302-2
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.effectiveDateTime = "2018-10-25T11:06:06+02:00"
-* entry[=].resource.valueQuantity.value = "189.0"
+* entry[=].resource.valueQuantity.value = 189.0
 * entry[=].resource.valueQuantity.unit = "cm"
 * entry[=].resource.valueQuantity.system = $unitsofmeasure
-* entry[+].resource.valueQuantity.code = "cm"
+* entry[+].resource.valueQuantity.code = #cm
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-210001-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"

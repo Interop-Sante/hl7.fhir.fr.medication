@@ -15,7 +15,6 @@ Description: "French inpatient medication request profile 3"
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
 * supportingInformation.extension contains fr-uf-role named UfRole 0..1
-* supportingInformation.extension[UFRole] ^short = "Functional Unit role in the encounter" 
 * requester 1..
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"
