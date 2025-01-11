@@ -108,3 +108,6 @@ Usage: #example
 * entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "dose"
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.value = 4000.0
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.unit = "dose"
+* entry[=].resource.dosageInstruction[=].maxDoseParPeriod.denominator.value = 1
+* entry[=].resource.dosageInstruction[=].maxDoseParPeriod.denominator.system = $unitsofmeasure
+* entry[=].resource.dosageInstruction[=].maxDoseParPeriod.denominator.code = #d
