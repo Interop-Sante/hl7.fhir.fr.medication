@@ -32,9 +32,9 @@ Usage: #example
 * entry[=].resource.name[=].family = "LUIGGI"
 * entry[=].resource.name[=].given = "DENIS"
 * entry[+].resource.resourceType = "Medication"
-* entry[+].resource.id = "med-21001"
+* entry[=].resource.id = "med-21001"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
-//* entry[=].resource.meta.profile[0] = fr-medication-noncompound
+* entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code.coding[0].code = #3400890006262
 * entry[=].resource.code.coding[=].system = $UCD
 * entry[=].resource.code.coding[=].display = "PARACETAMOL VIC 1000MG CPR"
@@ -57,7 +57,7 @@ Usage: #example
 * entry[=].resource.valueQuantity.value = 189.0
 * entry[=].resource.valueQuantity.unit = "cm"
 * entry[=].resource.valueQuantity.system = $unitsofmeasure
-* entry[+].resource.valueQuantity.code = #cm
+* entry[=].resource.valueQuantity.code = #cm
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-210001-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
@@ -99,7 +99,7 @@ Usage: #example
 * entry[=].resource.groupIdentifier.value = "10723"
 * entry[=].resource.groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * entry[=].resource.dosageInstruction[0].timing.repeat.boundsPeriod.start = "2022-04-12T06:00:00+02:00"
-* entry[=].resource.dosageInstruction[=].timing.repeat.boundsPeriod.stop = "2022-04-15T00:00:00+02:00"
+* entry[=].resource.dosageInstruction[=].timing.repeat.boundsPeriod.end = "2022-04-15T00:00:00+02:00"
 * entry[=].resource.dosageInstruction[=].timing.repeat.frequencyMax = 1
 * entry[=].resource.dosageInstruction[=].timing.repeat.period = 6
 * entry[=].resource.dosageInstruction[=].timing.repeat.periodUnit = #h

@@ -83,7 +83,7 @@ Usage: #example
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.encounter.identifier.value = "70101274"
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
-* entry[=].resource.supportingInformation[0].extension[UFRole].valueCode = #UFMED
+* entry[=].resource.supportingInformation[0].extension[UFRole].Code = #UFMED
 * entry[=].resource.supportingInformation[=].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-1"
