@@ -84,7 +84,8 @@ Usage: #example
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
 * entry[=].resource.supportingInformation[0].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
-* entry[=].resource.supportingInformation[=].extension[UFRole].valueCode = #UFMED
+// Je ne comprends pas comment on référence une extension, ça fait toujours une erreur à la compilation
+//* entry[=].resource.supportingInformation[=].extension[UFRole].valueCode = #UFMED
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-1"
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-2"
 * entry[=].resource.authoredOn = "2022-04-11T16:42:53+02:00"
