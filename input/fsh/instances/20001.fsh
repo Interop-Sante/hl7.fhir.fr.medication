@@ -106,6 +106,6 @@ Usage: #example
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.system = $unitsofmeasure
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.code = #mg
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.unit = "mg"
-* entry[=].resource.dosageInstruction[=].maxDoseParPeriod.denominator.value = 1
-* entry[=].resource.dosageInstruction[=].maxDoseParPeriod.denominator.system = $unitsofmeasure
-* entry[=].resource.dosageInstruction[=].maxDoseParPeriod.denominator.code = #d
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.value = 1
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.system = $unitsofmeasure
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.code = #d
