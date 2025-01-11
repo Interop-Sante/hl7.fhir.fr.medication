@@ -35,9 +35,9 @@ Usage: #example
 * entry[+].resource.id = "med-20001"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 //* entry[=].resource.meta.profile[0] = fr-medication-noncompound
-* entry[=].resource.code.codeableConcept = $UCD#3400890006262 "PARACETAMOL VIC 1000MG CPR"
-* entry[=].resource.code.codeableConcept.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
-* entry[=].resource.form.codeableConcept = $EDQM#10219000 "Comprimé"
+* entry[=].resource.code = $UCD#3400890006262 "PARACETAMOL VIC 1000MG CPR"
+* entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
+* entry[=].resource.form = $EDQM#10219000 "Comprimé"
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-200001-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
@@ -50,7 +50,7 @@ Usage: #example
 * entry[=].resource.effectiveDateTime = "2018-10-25T11:06:06+02:00"
 * entry[=].resource.valueQuantity.value = 189.0
 * entry[=].resource.valueQuantity.unit = "cm"
-* entry[+].resource.valueQuantity.code = $unitsofmeasure#cm
+* entry[+].resource.valueQuantity = $unitsofmeasure#cm
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-200001-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
@@ -82,7 +82,7 @@ Usage: #example
 * entry[=].resource.subject.reference = "#Patient-20001"
 * entry[=].resource.encounter.identifier.value = "70101274"
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
-* entry[=].resource.supportingInformation[0].extension[UFRole].valueCode = #UFMED
+* entry[=].resource.supportingInformation[0].extension[UFRole] = #UFMED
 * entry[=].resource.supportingInformation[=].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * entry[=].resource.supportingInformation[+].reference = "#Obs-20001-1"
