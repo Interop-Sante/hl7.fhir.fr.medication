@@ -9,6 +9,7 @@ Alias: $unitsofmeasure = http://unitsofmeasure.org
 Alias: $UCD = http://data.esante.gouv.fr/ansm/medicament/UCD
 Alias: $SMS = http://data.esante.gouv.fr/ansm/medicament/codeSMS
 Alias: $TechANSM = http://data.esante.gouv.fr/ansm/medicament/substance
+Alias: $EDQM = http://standardterms.edqm.eu
 
 Alias: $fr-document-type = https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type
 

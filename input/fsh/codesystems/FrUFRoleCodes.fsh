@@ -1,5 +1,5 @@
-CodeSystem: FrUFTypeCodes
-Id: fr-uf-type-codes
+CodeSystem: FrUFRoleCodes
+Id: fr-uf-role-codes
 Title: "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient"
 Description: "Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
