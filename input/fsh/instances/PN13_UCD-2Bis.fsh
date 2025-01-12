@@ -1,10 +1,10 @@
-Instance: bundle-21001
+Instance: bundle-UCD-2Bis
 InstanceOf: fr-prescription-bundle-for-example
-// exemple de traduction de UCD-2.pn13 
+// exemple de traduction de UCD-2Bis 
 Usage: #example
 * type = #searchset
 * entry[0].resource.resourceType = "Patient"
-* entry[=].resource.id = "Patient-21001"
+* entry[=].resource.id = "Patient-UCD-2Bis"
 * entry[=].resource.meta.profile[0] = $FrCorePatient
 * entry[=].resource.identifier[0].use = #usual
 * entry[=].resource.identifier[=].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -19,7 +19,7 @@ Usage: #example
 * entry[=].resource.name[=].given = "JAUNE"
 * entry[=].resource.birthDate = "1961-11-25"
 * entry[+].resource.resourceType = "Practitioner"
-* entry[=].resource.id = "Practitioner-21001"
+* entry[=].resource.id = "Practitioner-UCD-2Bis"
 * entry[=].resource.meta.profile[0] = $FrCorePractitioner
 * entry[=].resource.identifier[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * entry[=].resource.identifier[=].type.coding[=].code = #EI
@@ -32,41 +32,35 @@ Usage: #example
 * entry[=].resource.name[=].family = "LUIGGI"
 * entry[=].resource.name[=].given = "DENIS"
 * entry[+].resource.resourceType = "Medication"
-* entry[=].resource.id = "med-21001"
+* entry[=].resource.id = "med-UCD-2Bis"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
-* entry[=].resource.code.coding[0].code = #3400890006262
-* entry[=].resource.code.coding[=].system = $UCD
-* entry[=].resource.code.coding[=].display = "PARACETAMOL VIC 1000MG CPR"
+* entry[=].resource.code = $UCD#3400890006262 "PARACETAMOL VIC 1000MG CPR"
 * entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
 * entry[=].resource.form = $EDQM#10219000 "Comprimé"
-// ATTENTION utilisation de amount pas en accord avec la définition FHIR
-* entry[=].resource.amount.numerator.value = 1
-* entry[=].resource.amount.numerator.system = $unitsofmeasure
-* entry[=].resource.amount.numerator.code = #mg
 * entry[+].resource.resourceType = "Observation"
-* entry[=].resource.id = "Obs-210001-1"
+* entry[=].resource.id = "Obs-UCD-2Bis-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * entry[=].resource.status = #final
 * entry[=].resource.category.coding.code = #vital-signs
 * entry[=].resource.category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * entry[=].resource.code.coding.code = #8302-2
 * entry[=].resource.code.coding.system = "http://loinc.org"
-* entry[=].resource.subject.reference = "#Patient-20001"
+* entry[=].resource.subject.reference = "#Patient-UCD-2Bis"
 * entry[=].resource.effectiveDateTime = "2018-10-25T11:06:06+02:00"
 * entry[=].resource.valueQuantity.value = 189.0
 * entry[=].resource.valueQuantity.unit = "cm"
 * entry[=].resource.valueQuantity.system = $unitsofmeasure
 * entry[=].resource.valueQuantity.code = #cm
 * entry[+].resource.resourceType = "Observation"
-* entry[=].resource.id = "Obs-210001-2"
+* entry[=].resource.id = "Obs-UCD-2Bis-2"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
 * entry[=].resource.status = #final
 * entry[=].resource.category.coding.code = #vital-signs
 * entry[=].resource.category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * entry[=].resource.code.coding.code = #29463-7
 * entry[=].resource.code.coding.system = "http://loinc.org"
-* entry[=].resource.subject.reference = "#Patient-20001"
+* entry[=].resource.subject.reference = "#Patient-UCD-2Bis"
 * entry[=].resource.effectiveDateTime = "2018-06-21T16:05:10+02:00"
 * entry[=].resource.valueQuantity.value = 120.0
 * entry[=].resource.valueQuantity.unit = "kg"
@@ -74,28 +68,28 @@ Usage: #example
 * entry[=].resource.valueQuantity.code = #kg
 * entry[+].resource.resourceType = "MedicationRequest"
 * entry[=].resource.text.status = #additional
-// Je ne sais pas comment convertir en XHTML
-//* entry[=].resource.text.div = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale)
-// A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
-* entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
+// Pas sûr de comment on fait du XHTML
+// * entry[=].resource.text.div = "<div> PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) 
+// A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours </div>"
+* entry[=].resource.meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
 * entry[=].resource.identifier[0].value = "31626"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #order
 * entry[=].resource.priority = #routine
 * entry[=].resource.note[0].text = "Test paracetamol 2 (à la demande)"
-* entry[=].resource.medicationReference.reference = "#med-21001"
-* entry[=].resource.subject.reference = "#Patient-21001"
+* entry[=].resource.medicationReference.reference = "#med-UCD-2Bis"
+* entry[=].resource.subject.reference = "#Patient-UCD-2Bis"
 * entry[=].resource.encounter.identifier.value = "70101274"
 * entry[=].resource.encounter.identifier.system = "https://somehospital.fr/Sejour"
 * entry[=].resource.supportingInformation[0].identifier.value = "2571"
 * entry[=].resource.supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 // Je ne comprends pas comment on référence une extension, ça fait toujours une erreur à la compilation
 //* entry[=].resource.supportingInformation[=].extension[UFRole].valueCode = #UFMED
-* entry[=].resource.supportingInformation[+].reference = "#Obs-21001-1"
-* entry[=].resource.supportingInformation[+].reference = "#Obs-21001-2"
+* entry[=].resource.supportingInformation[+].reference = "#Obs-UCD-2Bis-1"
+* entry[=].resource.supportingInformation[+].reference = "#Obs-UCD-2Bis-2"
 * entry[=].resource.authoredOn = "2022-04-11T16:42:53+02:00"
-* entry[=].resource.requester.reference = "#Practitioner-21001"
+* entry[=].resource.requester.reference = "#Practitioner-UCD-2Bis"
 * entry[=].resource.groupIdentifier.value = "10723"
 * entry[=].resource.groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * entry[=].resource.dosageInstruction[0].timing.repeat.boundsPeriod.start = "2022-04-12T06:00:00+02:00"
@@ -104,10 +98,15 @@ Usage: #example
 * entry[=].resource.dosageInstruction[=].timing.repeat.period = 6
 * entry[=].resource.dosageInstruction[=].timing.repeat.periodUnit = #h
 * entry[=].resource.dosageInstruction[=].asNeededBoolean = true
-* entry[=].resource.dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1000.0
-* entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "dose"
-* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.value = 4000.0
-* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.unit = "dose"
+* entry[=].resource.dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
+* entry[=].resource.dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1
+* entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.system = $EDQM
+* entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.code = #10219000
+* entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "Comprimé"
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.value = 4
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.system = $EDQM
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.code = #10219000
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.unit = "Comprimé"
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.value = 1
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.system = $unitsofmeasure
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.code = #d
