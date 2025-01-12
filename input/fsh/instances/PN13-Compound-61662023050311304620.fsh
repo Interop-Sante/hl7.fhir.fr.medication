@@ -31,17 +31,6 @@ Usage: #example
 * entry[=].resource.name[+].use = #official
 * entry[=].resource.name[=].given = "Charles"
 * entry[+].resource.resourceType = "Medication"
-* entry[=].resource.id = "med-Compound-61662023050311304620-C"
-// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
-* entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound2"
-// l'élément text est obligatoire selon le profil, mais la traduction automatique est compliquée
-* entry[=].resource.code.text = "NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)"
-* entry[=].resource.ingredient[0].itemReference = "#med-Compound-61662023050311304620-1"
-* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-2"
-* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-3"
-* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-4"
-* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-5"
-* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-6"
 * entry[+].resource.resourceType = "Medication"
 * entry[=].resource.id = "med-Compound-61662023050311304620-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
@@ -90,6 +79,17 @@ Usage: #example
 * entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $EDQM
 * entry[=].resource.amount.numerator.code = #15005000
+* entry[=].resource.id = "med-Compound-61662023050311304620-C"
+// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
+* entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound2"
+// l'élément text est obligatoire selon le profil, mais la traduction automatique est compliquée
+* entry[=].resource.code.text = "NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)"
+* entry[=].resource.ingredient[0].itemReference = "#med-Compound-61662023050311304620-1"
+* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-2"
+* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-3"
+* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-4"
+* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-5"
+* entry[=].resource.ingredient[+].itemReference = "#med-Compound-61662023050311304620-6"
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-Compound-61662023050311304620-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
@@ -158,7 +158,7 @@ Usage: #example
 * entry[=].resource.dosageInstruction[=].timing.repeat.frequency = 1
 * entry[=].resource.dosageInstruction[=].timing.repeat.period = 12
 * entry[=].resource.dosageInstruction[=].timing.repeat.periodUnit = #h
-* entry[=].resource.dosageInstruction[=].timing.repeat.timeOfDay = "10:00"
+* entry[=].resource.dosageInstruction[=].timing.repeat.timeOfDay = "10:00:00"
 * entry[=].resource.dosageInstruction[=].route = $EDQM#20045000 "Voie intraveineuse"
 * entry[=].resource.dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1
 * entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "dose"

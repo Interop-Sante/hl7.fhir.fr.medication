@@ -35,7 +35,7 @@ Usage: #example
 * entry[=].resource.id = "med-DC-2"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
-* entry[=].resource.code = $SDS#100000090270 "paracétamol"
+* entry[=].resource.code = $SMS#100000090270 "paracétamol"
 * entry[=].resource.code.text = "PARACETAMOL"
 * entry[+].resource.resourceType = "Observation"
 * entry[=].resource.id = "Obs-DC-2-1"
@@ -102,7 +102,7 @@ Usage: #example
 * entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.code = #mg
 * entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "mg"
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.value = 4
-* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.system = $$unitsofmeasure
+* entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.system = $unitsofmeasure
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.code = #mg
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.numerator.unit = "mg"
 * entry[=].resource.dosageInstruction[=].maxDosePerPeriod.denominator.value = 1

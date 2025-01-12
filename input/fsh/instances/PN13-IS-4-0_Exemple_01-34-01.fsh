@@ -1,9 +1,10 @@
-Instance: Bundle-Exemple_01-34-01
+Instance: Bundle-Exemple-01-34-01
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de PN13-IS.4.0.Exemples_01.34.01 sans interpretation du code de fréquence
 Usage: #example
 * type = #searchset
-* entry[0].resource.id = "med-01-34-01"
+* entry[0].resource.resourceType = "Medication"
+* entry[=].resource.id = "med-01-34-01"
 // Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $UCD#3400892169026 "DOLIPRANE 1000MG CPR EFFV"
@@ -35,7 +36,7 @@ Usage: #example
 * entry[=].resource.groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * entry[=].resource.dosageInstruction[0].timing.repeat.boundsPeriod.start = "2007-12-28T07:00:00+01:00"
 * entry[=].resource.dosageInstruction[=].timing.repeat.boundsPeriod.end = "2007-12-30T18:00:00+01:00"
-* entry[=].resource.dosageInstruction[=].timing.code = "https://CH-Biorel.fr/Frequence"#3 "Trois fois par jour"
+* entry[=].resource.dosageInstruction[=].timing.code = https://CH-Biorel.fr/Frequence#3 "Trois fois par jour"
 * entry[=].resource.dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * entry[=].resource.dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1
 * entry[=].resource.dosageInstruction[=].doseAndRate[=].doseQuantity.system = $EDQM
