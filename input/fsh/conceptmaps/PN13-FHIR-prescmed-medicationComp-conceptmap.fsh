@@ -11,7 +11,7 @@ Usage: #definition
 * jurisdiction[0].coding[0].display = "France"
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema
-* targetUri = Canonical(fr-medication-compound)
+* targetUri = Canonical(fr-medication-compound2)
 * group[0].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme
 * group[0].element[0].target[0].code = #Medication.form.coding.code
 * group[0].element[0].target[0].equivalence = #equivalent
@@ -22,7 +22,7 @@ Usage: #definition
 * group[0].element[1].target[0].equivalence = #equivalent
 * group[0].element[1].target[0].comment = "L'équivalence est donnée par le mapping à fournir par PHAST"
 * group[0].element[1].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme@Phast-nomenclature
-* group[0].element[1].target[0].dependsOn[0].value = "<Null>"
+* group[0].element[1].target[0].dependsOn[0].value = "{Absent}"
 // verifier comment exprimer l'absence de valeur dans un concept map
 * group[0].element[2].target[0].code = #Medication.form.coding.code
 * group[0].element[2].target[0].equivalence = #equal

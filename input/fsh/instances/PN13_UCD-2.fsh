@@ -33,14 +33,13 @@ Usage: #example
 * entry[=].resource.name[=].given = "DENIS"
 * entry[+].resource.resourceType = "Medication"
 * entry[=].resource.id = "med-UCD-2"
-// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code.coding[0].code = #3400890006262
 * entry[=].resource.code.coding[=].system = $UCD
 * entry[=].resource.code.coding[=].display = "PARACETAMOL VIC 1000MG CPR"
 * entry[=].resource.code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
 * entry[=].resource.form = $EDQM#10219000 "Comprimé"
-// ATTENTION utilisation de amount pas en accord avec la définition FHIR
+// ATTENTION utilisation de amount ne semble pas en accord avec la définition FHIR
 * entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $unitsofmeasure
 * entry[=].resource.amount.numerator.code = #mg
@@ -73,17 +72,16 @@ Usage: #example
 * entry[=].resource.valueQuantity.system = $unitsofmeasure
 * entry[=].resource.valueQuantity.code = #kg
 * entry[+].resource.resourceType = "MedicationRequest"
-* entry[=].resource.text.status = #additional
-// Je ne sais pas comment convertir en XHTML
-//* entry[=].resource.text.div = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale)
-// A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
 * entry[=].resource.identifier[0].value = "31626"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #order
 * entry[=].resource.priority = #routine
-* entry[=].resource.note[0].text = "Test paracetamol 2 (à la demande)"
+// Extension à faire pour qualifier note
+* entry[=].resource.note[0].text = "Prescription textuelle: PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
+* entry[=].resource.note[+].text = "Indication: Si douleur"
+* entry[=].resource.note[+].text = "Commentaire: Test paracetamol 2 (à la demande)"
 * entry[=].resource.medicationReference.reference = "#med-UCD-2"
 * entry[=].resource.subject.reference = "#Patient-UCD-2"
 * entry[=].resource.encounter.identifier.value = "70101274"

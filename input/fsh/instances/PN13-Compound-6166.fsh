@@ -31,12 +31,11 @@ Usage: #example
 * entry[=].resource.name[+].use = #official
 * entry[=].resource.name[=].given = "Charles"
 * entry[+].resource.resourceType = "Medication"
-* entry[+].resource.resourceType = "Medication"
 * entry[=].resource.id = "med-Compound-6166-1"
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $UCD#3400894061175 "NUTRYELT PERF AMP10ML"
 * entry[=].resource.code.text = "NUTRYELT, sol à diluer pr perf, amp 10 mL"
-* entry[=].resource.amount.numerator.value = 10
+* entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $EDQM
 * entry[=].resource.amount.numerator.code = #15002000
 * entry[+].resource.resourceType = "Medication"
@@ -44,7 +43,7 @@ Usage: #example
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $UCD#3400892834719 "POTASSIUM 10% CPF AB10ML"
 * entry[=].resource.code.text = "POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL"
-* entry[=].resource.amount.numerator.value = 2
+* entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $EDQM
 * entry[=].resource.amount.numerator.code = #15002000
 * entry[+].resource.resourceType = "Medication"
@@ -60,7 +59,7 @@ Usage: #example
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $UCD#3400893149416 "CALCIUM LEV.ZEN 25MG/2,5ML FL"
 * entry[=].resource.code.text = "LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL"
-* entry[=].resource.amount.numerator.value = 25
+* entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $EDQM
 * entry[=].resource.amount.numerator.code = #15060000
 * entry[+].resource.resourceType = "Medication"
@@ -79,10 +78,9 @@ Usage: #example
 * entry[=].resource.amount.numerator.value = 1
 * entry[=].resource.amount.numerator.system = $EDQM
 * entry[=].resource.amount.numerator.code = #15005000
+* entry[+].resource.resourceType = "Medication"
 * entry[=].resource.id = "med-Compound-6166-C"
-// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound2"
-// l'élément text est obligatoire selon le profil, mais la traduction automatique est compliquée
 * entry[=].resource.code.text = "NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)"
 * entry[=].resource.ingredient[0].itemReference.reference = "#med-Compound-6166-1"
 * entry[=].resource.ingredient[+].itemReference.reference = "#med-Compound-6166-2"
@@ -132,15 +130,14 @@ Usage: #example
 * entry[=].resource.valueQuantity.system = $unitsofmeasure
 * entry[=].resource.valueQuantity.code = #umol/L
 * entry[+].resource.resourceType = "MedicationRequest"
-* entry[=].resource.text.status = #additional
-// Pas sûr de comment on fait du XHTML
-// * entry[=].resource.text.div = "<div> 1 préparation en continu sur 12h00 par jour </div>"
 * entry[=].resource.meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
 * entry[=].resource.identifier[0].value = "6166"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #order
 * entry[=].resource.priority = #routine
+// Extension à faire pour qualifier note
+* entry[=].resource.note[0].text = "Prescription textuelle: 1 préparation en continu sur 12h00 par jour"
 * entry[=].resource.medicationReference.reference = "#med-med-Compound-6166-C"
 * entry[=].resource.subject.reference = "#Patient-Compound-6166"
 * entry[=].resource.encounter.identifier.value = "3"

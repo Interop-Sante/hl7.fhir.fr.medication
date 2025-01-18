@@ -1,7 +1,6 @@
 
 # Introduction
 
-
 <blockquote class="stu-note">
   <p>
     <b>Note</b>
@@ -9,7 +8,6 @@
     Dans un futur proche, le référentiel unique d'interopérabilité du médicament (RUIM) remplacera les terminologies non standard présentes dans ce guide d'implémentation.
   </p>
 </blockquote>
-
 
 Ce guide d'implémentation (IG) a pour vocation à spécifier les flux d'information autour du médicament pour un patient dans un contexte hospitalier dans un premier temps.
 Trois cas d'usage sont pris en compte dans la version actuelle de cet IG:
@@ -24,10 +22,10 @@ Cet IG est en développement continu. Certaines sections n’ont pas encore ét�
 
 L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformationPN13-FHIR.html) et inversement.
 
-### Dépendances
+## Dépendances
 
 {% include dependency-table.xhtml %}
 
-### Propriété intellectuelle
+## Propriété intellectuelle
 
 {% include ip-statements.xhtml %}

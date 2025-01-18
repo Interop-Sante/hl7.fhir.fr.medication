@@ -33,7 +33,6 @@ Usage: #example
 * entry[=].resource.name[=].given = "DENIS"
 * entry[+].resource.resourceType = "Medication"
 * entry[=].resource.id = "med-DC-2"
-// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $SMS#100000090270 "paracétamol"
 * entry[=].resource.code.text = "PARACETAMOL"
@@ -67,15 +66,16 @@ Usage: #example
 * entry[=].resource.valueQuantity.code = #kg
 * entry[+].resource.resourceType = "MedicationRequest"
 * entry[=].resource.text.status = #additional
-// Pas sûr de comment on fait du XHTML
-// * entry[=].resource.text.div = "<div> PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours </div>"
 * entry[=].resource.meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
 * entry[=].resource.identifier[0].value = "31626"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #order
 * entry[=].resource.priority = #routine
-* entry[=].resource.note[0].text = "Test paracetamol DC 2 (à la demande)"
+// Extension à faire pour qualifier note
+* entry[=].resource.note[0].text = "Prescription textuelle: PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
+* entry[=].resource.note[+].text = "Indication: En cas de douleur"
+* entry[=].resource.note[+].text = "Commentaire: Test paracetamol DC 2 (à la demande)"
 * entry[=].resource.medicationReference.reference = "#med-DC-2"
 * entry[=].resource.subject.reference = "#Patient-DC-2"
 * entry[=].resource.encounter.identifier.value = "70101274"

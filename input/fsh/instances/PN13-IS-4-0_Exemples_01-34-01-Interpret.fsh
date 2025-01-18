@@ -5,20 +5,18 @@ Usage: #example
 * type = #searchset
 * entry[0].resource.resourceType = "Medication"
 * entry[=].resource.id = "med-01-34-01"
-// Pas sûr de comment on référence un profil qui est créé dans le cadre de l'IG
 * entry[=].resource.meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * entry[=].resource.code = $UCD#3400892169026 "DOLIPRANE 1000MG CPR EFFV"
 * entry[=].resource.code.text = "DOLIPRANE 1 000 mg, cpr efferv"
 * entry[+].resource.resourceType = "MedicationRequest"
-* entry[=].resource.text.status = #additional
-// Pas sûr de comment on fait du XHTML
-// * entry[=].resource.text.div = "<div> Doliprane cpr 3x1g/j x 3j </div>"
 * entry[=].resource.meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
 * entry[=].resource.identifier[0].value = "id1"
 * entry[=].resource.identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #order
 * entry[=].resource.priority = #routine
+// Extension à faire pour qualifier note
+* entry[=].resource.note[0].text = "Prescription textuelle: Doliprane cpr 3x1g/j x 3j"
 * entry[=].resource.medicationReference.reference = "#med-01-34-01"
 * entry[=].resource.subject.identifier.value = "123456"
 * entry[=].resource.subject.identifier.system = "https://somehospital.fr/IPP"
