@@ -1145,14 +1145,14 @@ Usage: #definition
 * group[69].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[69].element[0].target[0].dependsOn[0].value = "{Absent}/{Valeur différente de 4}"
 * group[69].element[1].code = $PN13Schema-Posologie#Elément_posologie/Durée/Nombre
-* group[69].element[1].target[0].code = $$FhirDosage#Dosage.timing.repeat.durationMax
+* group[69].element[1].target[0].code = $FhirDosage#Dosage.timing.repeat.durationMax
 * group[69].element[1].target[0].equivalence = #equal
 * group[69].element[1].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[69].element[1].target[0].dependsOn[0].value = "4"
 * group[69].element[1].target[0].dependsOn[1].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_param_poso_cond
 * group[69].element[1].target[0].dependsOn[1].value = "6"
 * group[69].element[2].code = $PN13Schema-Posologie#Elément_posologie/Durée/Nombre
-* group[69].element[2].target[0].code = $$FhirDosage#Dosage.timing.repeat.durationMax
+* group[69].element[2].target[0].code = $FhirDosage#Dosage.timing.repeat.durationMax
 * group[69].element[2].target[0].equivalence = #equal
 * group[69].element[2].target[0].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3"
 * group[69].element[2].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
