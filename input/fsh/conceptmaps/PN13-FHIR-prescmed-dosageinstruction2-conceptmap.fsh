@@ -389,7 +389,7 @@ Usage: #definition
 * group[17].element[1].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[17].element[1].target[0].dependsOn[2].value = "UCUM"
 * group[17].element[1].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[17].element[1].target[0].dependsOn[3].value = "{Valeur parmi s/min/h/d/wk/mo/a}"
+* group[17].element[1].target[0].dependsOn[3].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[17].element[1].target[0].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
 * group[17].element[1].target[0].product[0].value = "1"
 * group[17].element[2].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
@@ -403,7 +403,7 @@ Usage: #definition
 * group[17].element[2].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[17].element[2].target[0].dependsOn[2].value = "UCUM"
 * group[17].element[2].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[17].element[2].target[0].dependsOn[3].value = "{Valeur différente de s/min/h/d/wk/mo/a}"
+* group[17].element[2].target[0].dependsOn[3].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[17].element[2].target[0].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
 * group[17].element[2].target[0].product[0].value = "1"
 * group[17].element[3].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
@@ -456,7 +456,7 @@ Usage: #definition
 * group[18].element[0].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[18].element[0].target[0].dependsOn[2].value = "UCUM"
 * group[18].element[0].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[18].element[0].target[0].dependsOn[3].value = "{Valeur parmi s/min/h/d/wk/mo/a}"
+* group[18].element[0].target[0].dependsOn[3].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[18].element[0].target[0].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
 * group[18].element[0].target[0].product[0].value = "1"
 * group[18].element[1].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
@@ -470,7 +470,7 @@ Usage: #definition
 * group[18].element[1].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[18].element[1].target[0].dependsOn[2].value = "UCUM"
 * group[18].element[1].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[18].element[1].target[0].dependsOn[3].value = "{Valeur différente de s/min/h/d/wk/mo/a}"
+* group[18].element[1].target[0].dependsOn[3].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[18].element[1].target[0].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
 * group[18].element[1].target[0].product[0].value = "1"
 * group[18].element[2].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
@@ -549,7 +549,7 @@ Usage: #definition
 * group[19].element[3].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_param_poso_cond
 * group[19].element[3].target[0].dependsOn[2].value = "1"
 * group[19].element[3].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[19].element[3].target[0].dependsOn[3].value = "{Valeur parmi s/min/h/d/wk/mo/a}"
+* group[19].element[3].target[0].dependsOn[3].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[19].element[4].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[19].element[4].target[0].code = $FhirDosage#Dosage.timing.periodUnit
 * group[19].element[4].target[0].equivalence = #equivalent
@@ -561,7 +561,7 @@ Usage: #definition
 * group[19].element[4].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_param_poso_cond
 * group[19].element[4].target[0].dependsOn[2].value = "1"
 * group[19].element[4].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[19].element[4].target[0].dependsOn[3].value = "{Valeur différente de s/min/h/d/wk/mo/a}"
+* group[19].element[4].target[0].dependsOn[3].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[19].element[5].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[19].element[5].target[0].code = $FhirDosage#Dosage.timing.periodUnit
 * group[19].element[5].target[0].equivalence = #equivalent
@@ -673,7 +673,7 @@ Usage: #definition
 * group[20].element[0].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Evt_début
 * group[20].element[0].target[0].dependsOn[2].value = "1"
 * group[20].element[0].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[20].element[0].target[0].dependsOn[3].value = "{Valeur parmi s/min/h/d/wk/mo/a}"
+* group[20].element[0].target[0].dependsOn[3].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[20].element[1].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[20].element[1].target[0].code = $FhirDosage#Dosage.timing.periodUnit
 * group[20].element[1].target[0].equivalence = #equivalent
@@ -685,7 +685,7 @@ Usage: #definition
 * group[20].element[1].target[0].dependsOn[2].property = $PN13Schema-Posologie#Elément_posologie/Evt_début
 * group[20].element[1].target[0].dependsOn[2].value = "1"
 * group[20].element[1].target[0].dependsOn[3].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[20].element[1].target[0].dependsOn[3].value = "{Valeur différente de s/min/h/d/wk/mo/a}"
+* group[20].element[1].target[0].dependsOn[3].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[20].element[2].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[20].element[2].target[0].code = $FhirDosage#Dosage.timing.periodUnit
 * group[20].element[2].target[0].equivalence = #equivalent
