@@ -838,4 +838,4 @@ Usage: #definition
 * group[54].element[4].code = $PN13Schema-Posologie#Elément_posologie/Débit/Unité
 * group[54].element[4].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.unit
 * group[54].element[4].target[0].equivalence = #relatedto
-* group[54].element[4].target[0].comment = "Si Débit/Unité n'est pas exprimé en UCUM, il est recommander, si possible, de la traduire en UCUM et d'utiliser rateQuantity.code ou de référencer la terminologie utilisée dans rateQuantity.system. Si ce n'est pas possible, doseQuantity.unit peut être utilisé."
+// * group[54].element[4].target[0].comment = "Si Débit/Unité n'est pas exprimé en UCUM, il est recommander, si possible, de la traduire en UCUM et d'utiliser rateQuantity.code ou de référencer la terminologie utilisée dans rateQuantity.system. Si ce n'est pas possible, doseQuantity.unit peut être utilisé."
