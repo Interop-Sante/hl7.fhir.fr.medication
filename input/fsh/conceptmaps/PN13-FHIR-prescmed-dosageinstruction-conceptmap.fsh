@@ -835,7 +835,7 @@ Usage: #definition
 * group[54].element[3].target[0].dependsOn[1].value = "{Absent}/{Valeur différente de 4}"
 * group[54].element[3].target[0].product[0].property = $FhirDosage#Dosage.doseAndRate.rateQuantity.system
 * group[54].element[3].target[0].product[0].value = "http://unitsofmeasure.org"
-* group[54].element[4].code = $PN13Schema-Posologie#Elément_posologie/Débit/Unité
-* group[54].element[4].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.unit
-* group[54].element[4].target[0].equivalence = #relatedto
+// * group[54].element[4].code = $PN13Schema-Posologie#Elément_posologie/Débit/Unité
+// * group[54].element[4].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.unit
+// * group[54].element[4].target[0].equivalence = #relatedto
 // * group[54].element[4].target[0].comment = "Si Débit/Unité n'est pas exprimé en UCUM, il est recommander, si possible, de la traduire en UCUM et d'utiliser rateQuantity.code ou de référencer la terminologie utilisée dans rateQuantity.system. Si ce n'est pas possible, doseQuantity.unit peut être utilisé."
