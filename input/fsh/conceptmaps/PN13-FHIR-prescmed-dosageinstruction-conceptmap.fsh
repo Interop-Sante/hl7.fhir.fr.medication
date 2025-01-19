@@ -807,11 +807,11 @@ Usage: #definition
 * group[53].element[0].target[0].product[1].property = $FhirDosage#Dosage.timing.repeat.offset
 * group[53].element[0].target[0].product[1].value = "0"
 // debug JSON erreur
-* group[54].element[0].code = $PN13Schema-Posologie#Elément_posologie/Débit/Nombre
-* group[54].element[0].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.value
-* group[54].element[0].target[0].equivalence = #equal
-* group[54].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
-* group[54].element[0].target[0].dependsOn[0].value = "{Absent}/{Valeur différente de 4}"
+// * group[54].element[0].code = $PN13Schema-Posologie#Elément_posologie/Débit/Nombre
+// * group[54].element[0].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.value
+// * group[54].element[0].target[0].equivalence = #equal
+// * group[54].element[0].target[0].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
+// * group[54].element[0].target[0].dependsOn[0].value = "{Absent}/{Valeur différente de 4}"
 // * group[54].element[1].code = $PN13Schema-Posologie#Elément_posologie/Débit/Nombre
 // * group[54].element[1].target[0].equivalence = #disjoint
 // * group[54].element[1].target[0].comment = "Le débit maximal n'est pas mappé en FHIR"
