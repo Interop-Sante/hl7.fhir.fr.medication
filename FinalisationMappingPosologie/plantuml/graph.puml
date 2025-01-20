@@ -175,7 +175,6 @@ package IG #DDDDDD{
              Medication.code => [1..None]
              Medication.code.coding => [None..None]
              Medication.code.text => [1..None]
-             Medication.form => [None..None]
              Medication.amount => [None..None]
              Medication.ingredient => [1..None]
              Medication.ingredient.extension => [None..None]
@@ -244,7 +243,6 @@ package IG #DDDDDD{
              Medication.code.coding => [1..None]
              Medication.code.coding:nonCompoundCode => [1..1]
              Medication.code.text => [None..None]
-             Medication.form => [None..None]
              Medication.amount => [None..None]
              Medication.ingredient => [None..None]
              Medication.ingredient.item[x] => [None..None]
@@ -720,10 +718,6 @@ package IG #DDDDDD{
 
      FrMedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
 
-        class FrMpDoseForm  
-
-     FrMedicationCompound2 -[#black,dotted,thickness=2]-> FrMpDoseForm
-
         class FrMedicationHistorySourceType  
 
      FrMedicationHistorySources -[#black,dotted,thickness=2]-> FrMedicationHistorySourceType
@@ -731,10 +725,6 @@ package IG #DDDDDD{
         class FrMedicationCodes  
 
      FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMedicationCodes
-
-        class FrMpDoseForm  
-
-     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
 
         class FrMedicinalProductOnly  
 
