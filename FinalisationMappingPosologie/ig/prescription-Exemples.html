@@ -180,6 +180,28 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l337">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
@@ -328,7 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <ul>
       <li>marqueur sur <em>Medication composant</em> : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
       <li>marqueur sur <em>.ingredient</em> de <em>Medication composé</em> : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l669">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+      <li><a name="l710">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
     </ul>
   </li>
   <li><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
@@ -407,7 +429,7 @@ Les niveaux de complexité supplémentaires adressent</p>
   <li>l’expression de la quantité d’une dose se référant à l’un des médicaments composant du médicament composé prescrit
     <ul>
       <li><a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l878">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
+      <li><a name="l919">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
     </ul>
   </li>
   <li>l’expression d’une dose réelle pertinente à partir d’une dose théorique fonction de paramètres patient
@@ -602,7 +624,7 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de rapporter l’expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1560">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <em>doseAndRate</em> du type complex <em>Dosage</em> qui s’applique à l’élément <em>dosageInstruction</em> de la ressource <em>MedicationRequest</em>.</p>
+<p><a name="l1601">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <em>doseAndRate</em> du type complex <em>Dosage</em> qui s’applique à l’élément <em>dosageInstruction</em> de la ressource <em>MedicationRequest</em>.</p>
 
 <p>Voir exemple <a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
 
@@ -619,7 +641,7 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1626">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.
+<p><a name="l1667">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.
 Cette extension est appliquée</p>
 
 <ul>
@@ -781,7 +803,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Jan 12, 2025 18:13+0000">2025-01-12</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 20, 2025 08:50+0000">2025-01-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

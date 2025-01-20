@@ -180,6 +180,28 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l337">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
@@ -288,17 +310,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Le profilage de ces ressources répond aux recommandations du <a href="https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante">guide méthodologique de mise en œuvre de la conciliation médicamenteuse</a> publié par la Haute Autorité de Santé.</p>
 
 <ul>
-  <li><a name="l526">​</a>bilan médicamenteux : voir profil <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
-  <li><a name="l531">​</a>fiche de conciliation des traitements médicamenteux (FCT) : voir profil <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
+  <li><a name="l567">​</a>bilan médicamenteux : voir profil <a href="StructureDefinition-FrMedicationHistoryComposition.html">FrMedicationHistoryComposition</a></li>
+  <li><a name="l572">​</a>fiche de conciliation des traitements médicamenteux (FCT) : voir profil <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a></li>
 </ul>
 
-<p><a name="l537">​</a>La FCT fait référence au <em>bilan médicamenteux</em> (le traitement médicamenteux du patient avant hospitalisation) et au <em>traitement médicamenteux courant</em> (le traitement médicamenteux en cours lors de l’hospitalisation). De ce fait, le profil <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a> a été défini pour rendre compte de ce <em>traitement médicamenteux courant</em>.</p>
+<p><a name="l578">​</a>La FCT fait référence au <em>bilan médicamenteux</em> (le traitement médicamenteux du patient avant hospitalisation) et au <em>traitement médicamenteux courant</em> (le traitement médicamenteux en cours lors de l’hospitalisation). De ce fait, le profil <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a> a été défini pour rendre compte de ce <em>traitement médicamenteux courant</em>.</p>
 
 <h2 id="dépendance-des-ressources-profilés-par-interopsanté">Dépendance des ressources profilés par Interop’Santé</h2>
 
 <p><img src="Conciliation2.jpg" alt="IGMedicationDependanceRessourcesProfileesConciliation"/></p>
 
-<p><a name="l558">​</a>Le profil <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a> contraint le profil général <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a> pour répondre au cas particulier de la <strong>conciliation rétroactive d’admission</strong>. Il référence un cas particulier de <em>traitement médicamenteux courant</em>, l’<strong>ordonnance médicale d’admission (OMA)</strong>, ordonnance adressée par le profil <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a> qui contraint le profil général <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a>.</p>
+<p><a name="l599">​</a>Le profil <a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html">FrOnAdmissionRetroactiveMedicationReconciliationComposition</a> contraint le profil général <a href="StructureDefinition-FrMedicationReconciliationComposition.html">FrMedicationReconciliationComposition</a> pour répondre au cas particulier de la <strong>conciliation rétroactive d’admission</strong>. Il référence un cas particulier de <em>traitement médicamenteux courant</em>, l’<strong>ordonnance médicale d’admission (OMA)</strong>, ordonnance adressée par le profil <a href="StructureDefinition-FrOnAdmissionMedicationComposition.html">FrOnAdmissionMedicationComposition</a> qui contraint le profil général <a href="StructureDefinition-FrCurrentMedicationComposition.html">FrCurrentMedicationComposition</a>.</p>
 
 <p><img src="Conciliation3.jpg" alt="Conciliation-ConciliationRetroactiveALAdmissiones"/></p>
 
@@ -321,7 +343,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Jan 12, 2025 18:13+0000">2025-01-12</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 20, 2025 08:50+0000">2025-01-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

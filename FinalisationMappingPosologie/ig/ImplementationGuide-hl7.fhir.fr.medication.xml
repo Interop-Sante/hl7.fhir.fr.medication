@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-01-12T18:13:34+00:00"/>
+  <date value="2025-01-20T08:50:22+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -1053,17 +1053,6 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/PN13-FHIR-TypoComposant-conceptmap"/>
-      </reference>
-      <name value="Conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR"/>
-      <description value="ConceptMap pour la conversion des types de composants prescrits en PN13 vers les profiles de la ressource Medication en FHIR"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
         <reference value="ConceptMap/PN13-FHIR-gender-conceptmap"/>
       </reference>
       <name value="Conversion PN13 FHIR des code de sexe administratif"/>
@@ -1087,6 +1076,17 @@
       </extension>
       <reference>
         <reference value="ConceptMap/PN13-FHIR-prescmed-dosageinstruction-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour la posologie d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'une posologie d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-dosageinstruction2-conceptmap"/>
       </reference>
       <name value="Conversion PN13 vers FHIR pour la posologie d'une prescription de médicaments"/>
       <description value="ConceptMap pour la conversion PN13 vers FHIR d'une posologie d'une prescritpion de médicament"/>
@@ -1130,6 +1130,17 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/PN13-FHIR-observation-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour les renseignements complémentaires d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un renseignement complémentare d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/PN13-FHIR-prescmed-medicationComp-conceptmap"/>
       </reference>
       <name value="Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments"/>
@@ -1141,32 +1152,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/PN13-FHIR-prescmed-medication-conceptmap"/>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationnoncompound-conceptmap"/>
       </reference>
-      <name value="Conversion PN13 vers FHIR pour un médicament d'une prescription de médicaments"/>
-      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament d'une prescritpion de médicament"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationNonProp-conceptmap"/>
-      </reference>
-      <name value="Conversion PN13 vers FHIR pour un médicament en DC d'une prescription de médicaments"/>
-      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament en DC d'une prescritpion de médicament"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationUCD-conceptmap"/>
-      </reference>
-      <name value="Conversion PN13 vers FHIR pour un médicament UCD d'une prescription de médicaments"/>
-      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament UCD d'une prescritpion de médicament"/>
+      <name value="Conversion PN13 vers FHIR pour un médicament non composé d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament non composé d'une prescritpion de médicament"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1561,17 +1550,6 @@
       </reference>
       <name value="FrPrescriptionBunbleForExample"/>
       <description value="Profil de la ressource Bundle pour la constitution d'exemples de prescription."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/fr-medication-profile-list"/>
-      </reference>
-      <name value="Liste des profils définis par l'IG Medication pour la ressource Medication"/>
-      <description value="Liste des noms associés aux titres"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2039,6 +2017,46 @@
         </extension>
         <nameUrl value="transformation-FHIR-vers-PN13.html"/>
         <title value="Transformation de FHIR vers PN13"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-exemples-intro.html"/>
+        </extension>
+        <nameUrl value="PN13-exemples-intro.html"/>
+        <title value="Exemples PN13 - Introduction"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-DC.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-DC.html"/>
+        <title value="Prescription PN13 médicament simple en DC"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-specialite.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-specialite.html"/>
+        <title value="Prescription PN13 médicament simple en spécialité"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-compound.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-compound.html"/>
+        <title value="Prescription PN13 médicament composite"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-MV.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-MV.html"/>
+        <title value="Prescritpion PN13 médicament virtuel"/>
         <generation value="markdown"/>
       </page>
       <page>
