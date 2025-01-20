@@ -1134,7 +1134,7 @@ Usage: #definition
 * group[65].element[0].target[0].dependsOn[0].value = "4"
 * group[66].element[0].code =  $PN13Schema-Posologie#Elément_posologie/Type_événement2_début
 * group[66].element[0].target[0].equivalence = #disjoint
-* group[66].element[0].target[0].comment = "L'élément Type_événement2_début (ainsi que Evt_structuré2_début ou Evénement2_début) utilisent exactement le même mapping que l'élément Type_événement_début (ainsi que Evt_structuré2_début ou Evénement2_début). Il fait l'objet d'une occurence de MedicationRequest.dosageInstruction différente de celle traduisant l'élément Type_événement_début et les éléments associés"
+* group[66].element[0].target[0].comment = "L'élément Type_événement2_début (ainsi que Evt_structuré2_début ou Evénement2_début) utilisent exactement le même mapping que l'élément Type_événement_début (ainsi que Evt_structuré2_début ou Evénement2_début). Il est à appliquer sur la même occurence de MedicationRequest.dosageInstruction que celle traduisant l'élément Type_événement_début et les éléments associés"
 * group[67].element[0].code =  $PN13Schema-Posologie#Elément_posologie/Type_événement_fin
 * group[67].element[0].target[0].equivalence = #unmatched
 * group[68].element[0].code =  $PN13Schema-Posologie#Elément_posologie/Type_événement2_fin
