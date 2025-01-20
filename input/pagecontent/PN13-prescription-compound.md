@@ -2,7 +2,7 @@
 
 ## Compound-6166 (perfusion sur 12h par jour)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-Compound-6166]($bundle-Compound-6166)
+Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-Compound-6166](bundle-Compound-6166)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
