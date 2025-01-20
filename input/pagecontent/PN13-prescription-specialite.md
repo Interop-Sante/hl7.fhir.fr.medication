@@ -2,7 +2,7 @@
 
 ## UCD-2 (PARACETAMOL MYLAN CONSEIL 1000 MG en cas de douleur)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-UDC-2]($bundle-UCD-2). Elle utilise la possibilité PN13 de référencer une dose définie au niveau du médicament. La validité de cette traduction est en cours d'évaluation.
+Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-UDC-2](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-bundle-UCD-2.html). Elle utilise la possibilité PN13 de référencer une dose définie au niveau du médicament. La validité de cette traduction est en cours d'évaluation.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -115,7 +115,7 @@ A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pen
 
 ## UCD-2Bis (PARACETAMOL MYLAN CONSEIL 1000 MG en cas de douleur)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-UDC-2Bis]($bundle-UCD-2Bis).
+Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-UDC-2Bis](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-bundle-UCD-2Bis.html).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -228,7 +228,7 @@ A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pen
 
 ## 01-34-01 (Doliprane 3x/j)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [Bundle-Exemple-01-34-01]($Bundle-Exemple-01-34-01) sans interpétation de la terminologie locale de fréquence et dans l'instance [Bundle-Exemple-01-34-01-Interpret]($Bundle-Exemple-01-34-01-Interpret) avec interprétation de la terminologie locale de fréquence.
+Cette prescription PN13 est traduite en FHIR dans l'instance [Bundle-Exemple-01-34-01](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Bundle-Exemple-01-34-01.html) sans interpétation de la terminologie locale de fréquence et dans l'instance [Bundle-Exemple-01-34-01-Interpret](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Bundle-Exemple-01-34-01-Interpret.html) avec interprétation de la terminologie locale de fréquence.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
