@@ -1,7 +1,7 @@
 Profile: FrMedicationCompound2
 Parent: Medication
 Id: fr-medication-compound2
-Title: "French compound Medication"
+Title: "French compound Medication 2"
 Description: "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."
 * ^status = #draft
 * ^experimental = false
@@ -16,7 +16,6 @@ Description: "A complex medication composed of two to many simple medication. Th
 * code.coding ^definition = "A code identifing the compound medicinal product. Generaly none : no code defined for G5 1L + NaCl 3g + KCl 2g. May exist as local code for magistral preparation or hospital preparation. May exist as a medication database code for virtual medication"
 * code.text 1..
 * code.text ^requirements = "Although a code might not be available for a compoud medicinal product, there is alway a denomination for it."
-* form from FrMpDoseForm (extensible)
 * amount only FrRatioUcum
 * amount ^definition = "Specific amount in Medication defined by the element collection. For instance 1 L for the amount of the compound Glucose 5% of an infusion Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g. Or 3 g for the amount of compound Sodium chloride of the same infusion. SHALL be 1 (without unit, ie. code = 1 in UCUM system) when there is multiple ingredient element with at least the strenght element of two of them expressed in asbolute quantity (ie. simple quantity)."
 * amount ^comment = "The Ratio datatype is limited to numerator value, leading back to the SimpleQuantity datatype."

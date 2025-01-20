@@ -32,8 +32,6 @@ Description: "Simple prescribed, dispensed, administered or used medication comp
 * code.coding[nonCompoundCode] ^short = "Codes that identify this simple medication"
 * code.coding[nonCompoundCode] ^definition = "Codes that identify this simple medication"
 * code.coding[nonCompoundCode] ^binding.description = "UCD, SMS or ANSM code"
-// A faire modifier FrMpDoseForm pour prendre en compte le mapping fourni par PHAST
-* form from FrMpDoseForm (extensible)
 * amount only FrRatioUcum
 * amount ^short = "Amount of drug in the MRequest, MDispense or MUsage"
 * amount ^definition = "The quantity of the only substance or the volume (liquid) or mass (ointment) in the Medication of the MedicationRequest, Dispense or Use (pka MedicationStatement)."
