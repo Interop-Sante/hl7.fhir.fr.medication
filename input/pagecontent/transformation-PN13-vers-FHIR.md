@@ -19,8 +19,8 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
 ### Ressources FHIR créées par la transformation d'un flux PN13 de prescription en FHIR
 
 - Optionnellement 1 ressource *Bundle* d'un type adapté à l'usage parmi message, document et searchset (pour les exemples, le type searchset est utilisé). Selon les omplémentations, cette ressource n'est pas nécessaire. Elle est utilisée pour les exemples à des fins de simplification de mise à disposition de toutes les ressources concernées par une prescription dans le même fichier d'exemple.
-- 1 à n ressource(s) *MedicationRequest* suivant le profil [FrInpatientMedicationRequest3](fr-inpatient-medicationrequest3.html).  Chaque ressource *MedicationRequest* référence:
-  - 1 ressource *Patient* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Patient* référencée n'existe pas déjà). 
+- 1 à n ressource(s) *MedicationRequest* suivant le profil [FrInpatientMedicationRequest3].  Chaque ressource *MedicationRequest* référence:
+  - 1 ressource *Patient* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Patient* référencée n'existe pas déjà).
   - 1 ressource *Encounter* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Encounter* référencée n'existe pas déjà).
   - 0 à n ressource(s) *Observation* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Observation* référencée n'existe pas déjà).
   - 1 ressource *Practitioner* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Practitioner* référencée n'existe pas déjà).
