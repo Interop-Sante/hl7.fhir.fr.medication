@@ -100,5 +100,3 @@ La définition de la ressource *ConceptMap* correspondante est prévue pour une 
 ## La dispensation
 
 Prévu pour une version ultérieure de ce guide.
-
-{% include markdown-link-references.md %}
