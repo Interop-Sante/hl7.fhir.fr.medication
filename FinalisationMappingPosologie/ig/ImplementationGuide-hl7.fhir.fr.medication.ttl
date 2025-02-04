@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-20T14:47:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-04T14:42:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -40,7 +40,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.1.0" ]
+     fhir:version [ fhir:v "6.2.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1219,6 +1219,18 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/CodeSystem/fr-note-scope-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/fr-note-scope-codes" ]
+       ] ;
+       fhir:name [ fhir:v "code system Interop'Santé - Codes pour le périmètre des notes" ] ;
+       fhir:description [ fhir:v "Le système de codage pour la qualification du périmètre des notes en FHIR." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://hl7.fr/fhir/fr/medication/CodeSystem/fr-uf-role-codes> ;
          fhir:reference [ fhir:v "CodeSystem/fr-uf-role-codes" ]
        ] ;
@@ -1981,6 +1993,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medicationrequest-note-scope" ]
+       ] ;
+       fhir:name [ fhir:v "Scope for note element in MedicationRequest" ] ;
+       fhir:description [ fhir:v "Scope of a note associated in a MedicationRequest resource" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:complex-type" ]
        ] ) ;
        fhir:reference [
@@ -2048,6 +2072,18 @@
        ] ;
        fhir:name [ fhir:v "value set Interop'Santé - Codes identifiant les substances" ] ;
        fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour indiquer un ingrédient composant un médicament dans Medication.ingredient.itemCodeableConcept.coding.code" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/ValueSet/fr-note-scope-codes-vs> ;
+         fhir:reference [ fhir:v "ValueSet/fr-note-scope-codes-vs" ]
+       ] ;
+       fhir:name [ fhir:v "value set Interop'Santé - Codes pour le périmètre des notes" ] ;
+       fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour coder le périmètre des notes par exemple lors de la transformation de message PN13 en ressources FHIR" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

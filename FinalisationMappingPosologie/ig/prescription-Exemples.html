@@ -348,9 +348,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="MedicationRequest-14638.html">Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j</a></li>
   <li>marquer l’un des médicaments composant comme étant le soluté du médicament composé
     <ul>
-      <li>marqueur sur <em>Medication composant</em> : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-      <li>marqueur sur <em>.ingredient</em> de <em>Medication composé</em> : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l710">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+      <li>marqueur sur Medication composant : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
+      <li>marqueur sur <code class="language-plaintext highlighter-rouge">.ingredient</code> de <em>Medication composé</em> : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
+      <li><a name="l707">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
     </ul>
   </li>
   <li><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
@@ -422,14 +422,14 @@ Les niveaux de complexité supplémentaires adressent</p>
   <li>les doses progessives ou dégressives par palier
     <ul>
       <li><a href="MedicationRequest-14647.html">méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j</a></li>
-      <li>Qu’apporte l’élément <em>dosageInstruction.sequence</em> de chaque palier par rapport l’élément <em>dosageInstruction.timing.repeat.boundsPeriod</em> indispensable ?</li>
-      <li>L’élément <em>dosageInstruction.sequence</em> est facultatif. Ne serait-il pas préferable le supprimer ?</li>
+      <li>Qu’apporte l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction.sequence</code> de chaque palier par rapport l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction.timing.repeat.boundsPeriod</code> indispensable ?</li>
+      <li>L’élément <code class="language-plaintext highlighter-rouge">dosageInstruction.sequence</code> est facultatif. Ne serait-il pas préferable le supprimer ?</li>
     </ul>
   </li>
   <li>l’expression de la quantité d’une dose se référant à l’un des médicaments composant du médicament composé prescrit
     <ul>
       <li><a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l919">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
+      <li><a name="l916">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
     </ul>
   </li>
   <li>l’expression d’une dose réelle pertinente à partir d’une dose théorique fonction de paramètres patient
@@ -448,22 +448,22 @@ Les niveaux de complexité supplémentaires adressent</p>
 <h3 id="ex-lasilix-20-mg-sol-inj-amp-2-ml-xx-à-7h-et-18h-iv-pendant-5j">Ex: LASILIX 20 mg, sol inj amp 2 mL, XX à 7h et 18h IV, pendant 5j</h3>
 
 <ul>
-  <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
+  <li><strong>unité de médicament prescrit</strong> ➟ <code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">LASILIX</code> → marque ➟ dans le <em>.text</em> du <em>.coding</em> de la spécialité</li>
-      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <em>.ingredient().item[x]</em></li>
-      <li><code class="language-plaintext highlighter-rouge">20 mg</code> → dosage ➟ <em>.ingredient().strength</em></li>
-      <li><code class="language-plaintext highlighter-rouge">sol inj</code> → forme ➟ <em>.form</em></li>
+      <li><code class="language-plaintext highlighter-rouge">LASILIX</code> → marque ➟ dans le <code class="language-plaintext highlighter-rouge">.text</code> du <code class="language-plaintext highlighter-rouge">.coding</code> de la spécialité</li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <code class="language-plaintext highlighter-rouge">.ingredient().item\[x\]</code></li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> → dosage ➟ <code class="language-plaintext highlighter-rouge">.ingredient().strength</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sol inj</code> → forme ➟ <code class="language-plaintext highlighter-rouge">.form</code></li>
       <li><code class="language-plaintext highlighter-rouge">amp</code> → présentation ➟ en annotation <code class="language-plaintext highlighter-rouge">{amp}</code> de l’unité de dénombrement UCUM</li>
-      <li><code class="language-plaintext highlighter-rouge">2 mL</code> → volume ➟ <em>.amount</em></li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> → volume ➟ <code class="language-plaintext highlighter-rouge">.amount</code></li>
     </ul>
   </li>
-  <li>dose prescrite → <em>MedicationRequest.dosageInstruction</em>
+  <li>dose prescrite → <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction</code>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">XX</code> → quantité ➟ <em>.doseAndRate</em></li>
-      <li><code class="language-plaintext highlighter-rouge">à 7h et 18h</code> → horaire de prise ➟ <em>.timing.repeat.timeOfDay()</em></li>
-      <li><code class="language-plaintext highlighter-rouge">per os</code> → voie d’administration ➟ <em>.route</em></li>
-      <li><code class="language-plaintext highlighter-rouge">pendant 5j</code> → début (maintenant) et fin (début + 5j) ➟ <em>.timing.boundsPeriod</em></li>
+      <li><code class="language-plaintext highlighter-rouge">XX</code> → quantité ➟ <code class="language-plaintext highlighter-rouge">.doseAndRate</code></li>
+      <li><code class="language-plaintext highlighter-rouge">à 7h et 18h</code> → horaire de prise ➟ <code class="language-plaintext highlighter-rouge">.timing.repeat.timeOfDay()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">per os</code> → voie d’administration ➟ <code class="language-plaintext highlighter-rouge">.route</code></li>
+      <li><code class="language-plaintext highlighter-rouge">pendant 5j</code> → début (maintenant) et fin (début + 5j) ➟ <code class="language-plaintext highlighter-rouge">.timing.boundsPeriod</code></li>
     </ul>
   </li>
   <li>La quantité <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
@@ -480,14 +480,14 @@ Les niveaux de complexité supplémentaires adressent</p>
 <h3 id="ex-furosemide-xx-à-7h-et-18h-iv-pendant-5j">Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j</h3>
 
 <ul>
-  <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
+  <li><strong>unité de médicament prescrit</strong> ➟ <code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">FUROSEMIDE</code> → médicament en DC ➟ dans le <em>.text</em> du <em>.coding</em> du médicament en DC</li>
-      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li><code class="language-plaintext highlighter-rouge">FUROSEMIDE</code> → médicament en DC ➟ dans le <code class="language-plaintext highlighter-rouge">.text</code> du <code class="language-plaintext highlighter-rouge">.coding</code> du médicament en DC</li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <code class="language-plaintext highlighter-rouge">.ingredient().item\[x\]</code></li>
       <li>les autres caractéristiques ne sont pas contraintes par le prescripteur</li>
     </ul>
   </li>
-  <li><strong>dose prescrite</strong> → <em>MedicationRequest.dosageInstruction</em>
+  <li><strong>dose prescrite</strong> → <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction</code>
     <ul>
       <li>caractéristiques identiques à celles de l’exemple de ligne de prescription en spécialité</li>
     </ul>
@@ -521,16 +521,16 @@ Les niveaux de complexité supplémentaires adressent</p>
   <li>Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminé.</li>
 </ul>
 
-<h4 id="contrainte-sur-le-médicament-prescrit-medicationrequestmedication">Contrainte sur le Médicament prescrit (<em>MedicationRequest.medication</em>)</h4>
+<h4 id="contrainte-sur-le-médicament-prescrit-medicationrequestmedication">Contrainte sur le Médicament prescrit (<code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>)</h4>
 
-<p>Le dosage (<em>.ingredient[].strength</em>) est exigé quand le médicament prescrit est</p>
+<p>Le dosage (<code class="language-plaintext highlighter-rouge">.ingredient[].strength</code>) est exigé quand le médicament prescrit est</p>
 
 <ul>
   <li>une association de principes actifs (ex : paracétamol + codéine)</li>
   <li>un médicament extemporané (ex : perfusion composée de plusieurs médicaments)</li>
 </ul>
 
-<h4 id="contraintes-sur-lunité-de-la-dose-prescrite-medicationrequestdosageinstructiondoseandrate">Contraintes sur l’Unité de la dose prescrite (<em>MedicationRequest.dosageInstruction.doseAndRate</em>)</h4>
+<h4 id="contraintes-sur-lunité-de-la-dose-prescrite-medicationrequestdosageinstructiondoseandrate">Contraintes sur l’Unité de la dose prescrite (<code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code>)</h4>
 
 <p>L’unité est pertinente (donc autorisée), en fonction de son type,</p>
 
@@ -547,7 +547,7 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 
 <p>Quand elle n’est pas négligeable, sa valeur exprimée <strong>DOIT</strong> figurer au dénominateur de la dose prescrite.</p>
 
-<p>Cf. <a href="https://hl7.org/fhir/R4/dosage-definitions.html#Dosage.doseAndRate.rate_x_">Requirements</a> de l’élément <em>MedicationRequest.dosageInstruction.doseAndRate.rateRatio</em></p>
+<p>Cf. <a href="https://hl7.org/fhir/R4/dosage-definitions.html#Dosage.doseAndRate.rate_x_">Requirements</a> de l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate.rateRatio</code></p>
 
 <p>Si une durée d’administration n’est pas spécifiée par le prescripteur, cela siginifie qu’elle est négilgeable. Par exemple pour l’administration d’un comprimé ou l’injection direct d’une solution.</p>
 
@@ -557,7 +557,7 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 
 <p>Intraveineuse lente et intraveineuse directe ne sont pas des voies d’administration, quand bien même ces concepts s’y invitent régulièrement dans les listes locales des voies d’administration. Ce sont des méthodes, dont la principale différence porte sur la durée d’administration, qui n’est dans ce cas pas quantifée mais simplement qualifiée.</p>
 
-<p>Si le prescripteur souhaite ne pas donner une durée d’administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l’élément <em>method</em> de la ressource <em>MedicationRequest</em>. La voie d’administration, élément <em>route</em>, prend dans les deux cas la valeur voie intraveineuse.</p>
+<p>Si le prescripteur souhaite ne pas donner une durée d’administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l’élément <code class="language-plaintext highlighter-rouge">method</code> de la ressource <em>MedicationRequest</em>. La voie d’administration, élément <code class="language-plaintext highlighter-rouge">route</code>, prend dans les deux cas la valeur voie intraveineuse.</p>
 
 <p>Ni l’EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d’administration <em>injection</em>.</p>
 
@@ -620,11 +620,11 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <h3 id="bodc-basis-of-dose-component">BoDC (Basis of Dose Component)</h3>
 
-<p>Dans un médicament composé, permet d’exprimer à quel médicament composant, quelle ressource Medication, se réferre l’expression de la dose.</p>
+<p>Dans un médicament composé, permet d’exprimer à quel médicament composant, quelle ressource <em>Medication</em>, se réferre l’expression de la dose.</p>
 
 <p>Ex: Permet de rapporter l’expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1601">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <em>doseAndRate</em> du type complex <em>Dosage</em> qui s’applique à l’élément <em>dosageInstruction</em> de la ressource <em>MedicationRequest</em>.</p>
+<p><a name="l1601">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <code class="language-plaintext highlighter-rouge">doseAndRate</code> du type complex <em>Dosage</em> qui s’applique à l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code>* de la ressource <em>MedicationRequest</em>.</p>
 
 <p>Voir exemple <a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
 
@@ -646,7 +646,7 @@ Cette extension est appliquée</p>
 
 <ul>
   <li>soit à la ressource <em>Medication</em> composant qui est référencée par l’élément ingredient de la ressource <em>Medication</em> composée,</li>
-  <li>soit à l’élément <em>ingredient</em> de la ressource <em>Medication</em> composée.</li>
+  <li>soit à l’élément <code class="language-plaintext highlighter-rouge">ingredient</code> de la ressource <em>Medication</em> composée.</li>
 </ul>
 
 <p>Voir les deux variantes de l’exemple</p>
@@ -681,20 +681,20 @@ Dans le version 1 finalisé du guide, <strong>une seule sera retenue</strong> et
 <p>Cette règle impose l’utilisation de l’extension <em>IsVehicule</em>.
 Voir exemple <a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></p>
 
-<p>En <a href="https://hl7.org/fhir/medication.html">R5</a>, le ressource <em>Medication</em> voit l’élément <em>ingredient.strength</em> passer de type exclusivement <em>Ratio</em> en type alternatif <em>Ratio</em>, <em>Quantity</em> ou <em>CodeableConcept</em> avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).</p>
+<p>En <a href="https://hl7.org/fhir/medication.html">R5</a>, le ressource <em>Medication</em> voit l’élément <code class="language-plaintext highlighter-rouge">ingredient.strength</code> passer de type exclusivement <em>Ratio</em> en type alternatif <em>Ratio</em>, <em>Quantity</em> ou <em>CodeableConcept</em> avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).</p>
 
 <ul>
   <li>En mettant dans
     <ul>
-      <li><em>.totalVolume</em> : le volume cible de la seringue,</li>
-      <li><em>.ingredient[soluté].strengthCodeableConcept</em> : le code qs
+      <li><code class="language-plaintext highlighter-rouge">.totalVolume</code> : le volume cible de la seringue,</li>
+      <li><code class="language-plaintext highlighter-rouge">.ingredient\[soluté\].strengthCodeableConcept</code> : le code qs
 il est prescrit explicitement que le soluté est en Q.S.P. le volume cible de la seringue.</li>
     </ul>
   </li>
 </ul>
 
 <p><strong>Note</strong>:
-En R5 l’élément amount est renommé <strong>totalVolume</strong> pour lever toute ambiguité avec les volumes pouvant figurer dans les <em>ingredient.strength[x]</em>.</p>
+En R5 l’élément amount est renommé <strong>totalVolume</strong> pour lever toute ambiguité avec les volumes pouvant figurer dans les <code class="language-plaintext highlighter-rouge">ingredient.strength\[x\]</code>.</p>
 
 <h2 id="patches">Patches</h2>
 
@@ -803,7 +803,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 20, 2025 14:47+0000">2025-01-20</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 4, 2025 14:42+0000">2025-02-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

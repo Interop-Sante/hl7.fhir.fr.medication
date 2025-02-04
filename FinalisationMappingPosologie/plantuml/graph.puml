@@ -122,6 +122,7 @@ package IG #DDDDDD{
              MedicationRequest.encounter => [None..None]
              MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
              MedicationRequest.requester => [1..None]
+             MedicationRequest.note.extension:NoteScope => <&plus>[0..1]
              MedicationRequest.dosageInstruction => [1..None]
              MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
              MedicationRequest.dosageInstruction.route => [None..None]
@@ -429,6 +430,7 @@ package IG #DDDDDD{
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrUFRole
+     FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
      FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
      FrInpatientMedicationRequest3 -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
      FrMedicationCompound2 -[#black,dashed,thickness=2]-> FrIsVehicle
@@ -490,6 +492,12 @@ package IG #DDDDDD{
           Extension.extension:source.value[x] => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
+        } 
+        class FrMedicationRequestNoteScope{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
         } 
         class FrMedicationStatementReconciliationProperties{
 
@@ -745,6 +753,10 @@ package IG #DDDDDD{
         class FrMpDoseForm  
 
      FrMedicationUcd -[#black,dotted,thickness=2]-> FrMpDoseForm
+
+        class FrNoteScopeCodeValueSet  
+
+     FrMedicationRequestNoteScope -[#black,dotted,thickness=2]-> FrNoteScopeCodeValueSet
 
         class FrMedicationReconciliationStatus  
 

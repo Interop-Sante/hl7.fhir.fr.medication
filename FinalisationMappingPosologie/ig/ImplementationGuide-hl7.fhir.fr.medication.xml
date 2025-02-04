@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-01-20T14:47:39+00:00"/>
+  <date value="2025-02-04T14:42:57+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -28,7 +28,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.1.0"/>
+    <version value="6.2.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -954,6 +954,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/fr-note-scope-codes"/>
+      </reference>
+      <name value="code system Interop'Santé - Codes pour le périmètre des notes"/>
+      <description value="Le système de codage pour la qualification du périmètre des notes en FHIR."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/fr-uf-role-codes"/>
       </reference>
       <name value="code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient"/>
@@ -1652,6 +1663,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medicationrequest-note-scope"/>
+      </reference>
+      <name value="Scope for note element in MedicationRequest"/>
+      <description value="Scope of a note associated in a MedicationRequest resource"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:complex-type"/>
       </extension>
       <reference>
@@ -1713,6 +1735,17 @@
       </reference>
       <name value="value set Interop'Santé - Codes identifiant les substances"/>
       <description value="Le jeu de valeurs à utiliser pour indiquer un ingrédient composant un médicament dans Medication.ingredient.itemCodeableConcept.coding.code"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-note-scope-codes-vs"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes pour le périmètre des notes"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le périmètre des notes par exemple lors de la transformation de message PN13 en ressources FHIR"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

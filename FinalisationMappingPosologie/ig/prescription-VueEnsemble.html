@@ -283,7 +283,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Chaque <strong>ligne de prescription</strong> est composée d’un <strong>médicament prescrit</strong> et de sa <strong>posologie</strong>.</p>
 
-<p>Le <strong>médicament prescrit</strong> est représenté par <em>l’élément medication[x](1..1)</em> de la ressource <em>FrInpatientMedicationRequest</em> qui le contraint à faire référence à une ressource <em>Medication</em>.</p>
+<p>Le <strong>médicament prescrit</strong> est représenté par l’élément <code class="language-plaintext highlighter-rouge">medication\[x\]</code> (1..1) de la ressource <em>FrInpatientMedicationRequest</em> qui le contraint à faire référence à une ressource <em>Medication</em>.</p>
 
 <p>Selon que ce médicament prescrit est un <strong>médicament simple</strong> ou un <strong>médicament composé</strong> de plusieurs médicaments simples et que le médicament simple est exprimé en <strong>DC</strong> (dénomination commune) ou en <strong>spécialité</strong>,
 le <strong>médicament prescrit</strong> est représenté par trois variantes de ressource <em>Medication</em>:</p>
@@ -302,23 +302,23 @@ le <strong>médicament prescrit</strong> est représenté par trois variantes de
 Ex: <em>CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047</em>
 Ex: <em>paracétamol+codéine 500 mg+30 mg</em></p>
 
-<p>La <strong>posologie</strong> est représentée par l’élément dosageInstruction de la ressource <em>FrInpatientMedicationRequest</em>.</p>
+<p>La <strong>posologie</strong> est représentée par l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de la ressource <em>FrInpatientMedicationRequest</em>.</p>
 
 <p><strong>Date de début, date de fin</strong> et <strong>durée de prescription</strong></p>
 
 <p>Elles traduisent la période d’exécution de la prescription.</p>
 
-<p>Cette information est portée indivuellement par chaque ligne de prescription, c’est à dire au niveau de la ressource <em>MedcationRequest</em> profilée par <em>FrInpatientMedicationRequest</em>, comme paramètre de la posologie prescrite, dans l’élément <em>dosageInstruction</em> de type <em>Dosage</em>, sous-élément <em>timing</em> de type <em>Timing</em></p>
+<p>Cette information est portée indivuellement par chaque ligne de prescription, c’est à dire au niveau de la ressource <em>MedcationRequest</em> profilée par <em>FrInpatientMedicationRequest</em>, comme paramètre de la posologie prescrite, dans l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de type <em>Dosage</em>, sous-élément <code class="language-plaintext highlighter-rouge">timing</code> de type <em>Timing</em></p>
 
 <ul>
-  <li>date de début : <em>.dosageInstruction.timing.repeat.boundsPeriod.start</em></li>
-  <li>date de fin : <em>.dosageInstruction.timing.repeat.boundsPeriod.end</em></li>
+  <li>date de début : <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsPeriod.start</code></li>
+  <li>date de fin : <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsPeriod.end</code></li>
   <li>durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu’au niveau de l’IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.</li>
 </ul>
 
-<p>Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments <em>.validityPeriode</em> et <em>.expectedSupplyDuration</em> de l’élément <em>.dispensationRequest</em>.</p>
+<p>Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments <code class="language-plaintext highlighter-rouge">.validityPeriod</code> et <code class="language-plaintext highlighter-rouge">.expectedSupplyDuration</code> de l’élément <code class="language-plaintext highlighter-rouge">.dispensationRequest</code>.</p>
 
-<p>En prescription intrahospitalière, il n’y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n’y a donc généralement pas usage de l’élément <em>.dispensationRequest</em>.</p>
+<p>En prescription intrahospitalière, il n’y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n’y a donc généralement pas usage de l’élément <code class="language-plaintext highlighter-rouge">.dispensationRequest</code>.</p>
 
 <h2 id="précisions-sur-dates-et-durée-de-prescription">Précisions sur dates et durée de prescription</h2>
 
@@ -352,7 +352,7 @@ Ex: <em>paracétamol+codéine 500 mg+30 mg</em></p>
 
 <ul>
   <li>celle dont la date/heure de début d’administration est <em>immédiatement inférieure à la date/heure de fin prescrite</em></li>
-  <li>calculée à partir de la <em>date/heure de fin prescrite</em>, en fonction de la posologie définie par la collection <em>dosageInstruction</em></li>
+  <li>calculée à partir de la <em>date/heure de fin prescrite</em>, en fonction de la posologie définie par la collection <code class="language-plaintext highlighter-rouge">dosageInstruction</code></li>
 </ul>
 
 <p>La <em>date/heure de fin d’administration</em> de la dernière dose (sa date/heure de début + sa durée d’administration) peut être supérieure à <em>date/heure de fin prescrite</em>.</p>
@@ -435,7 +435,7 @@ Dans FHIR les horaires sont données à la seconde près : format <em>hh:mn:ss</
 <p><strong>Date/heure de début effective et Date/heure de fin effective de la ligne de prescription</strong>:</p>
 
 <p>Ces deux dates ne figurent pas dans <em>MedicationRequest</em> R4.
-Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un élément <em>effectiveDosePeriod</em> conçu pour accueillir ces deux dates a été ajouté.
+Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un élément <code class="language-plaintext highlighter-rouge">effectiveDosePeriod</code> conçu pour accueillir ces deux dates a été ajouté.
 <img src="Prescription4.jpg" alt="EffectiveDosePeriodR5"/></p>
 
 <p><strong>Note PN13</strong>:</p>
@@ -444,11 +444,11 @@ Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un éléme
   <li>Ces deux dates figurent dans l’objet ELEMENT DE PRESCRIPTION, éléments <em>Dh_début</em> et <em>Dh_fin</em>.</li>
 </ul>
 
-<p>Les règles de gestion suivantes doivent être appliquées pour définir ces deux dates en fonction de la collection de dosageInstruction associée au <em>MedicationRequest</em>. Elles reprennent celles de PN13 et sont conformes à la <a href="https://hl7.org/fhir/medicationrequest.html">définition de la R5</a>.</p>
+<p>Les règles de gestion suivantes doivent être appliquées pour définir ces deux dates en fonction de la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code> associée au <em>MedicationRequest</em>. Elles reprennent celles de PN13 et sont conformes à la <a href="https://hl7.org/fhir/medicationrequest.html">définition de la R5</a>.</p>
 
 <ol>
-  <li>La Date/heure de début effective doit être égale à la date/heure de début d’administration de la première dose décrite par la collection de <em>dosageInstruction</em>.</li>
-  <li>La Date/heure de fin effective doit être égale à la date/heure de fin d’administration de la dernière dose décrite par la collection de <em>dosageInstruction</em>.</li>
+  <li>La Date/heure de début effective doit être égale à la date/heure de début d’administration de la première dose décrite par la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code>.</li>
+  <li>La Date/heure de fin effective doit être égale à la date/heure de fin d’administration de la dernière dose décrite par la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code>.</li>
 </ol>
 
 <p><em>Illustration</em>
@@ -467,8 +467,8 @@ Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un éléme
       <li>la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la lilgne de prescription à J6 7h.</li>
     </ul>
   </li>
-  <li>Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de <em>dosageInstruction</em> doit ajouter la durée de l’administration, <em>dosageInstruction.doseAndRate.RateRatio.denominator</em>, à la date/heure de début d’administration de cette dernière dose.</li>
-  <li>Pour les posologies complexes, impliquant une description au travers d’une collection d’éléments <em>dosageInstruction</em> rattachés à <em>MedicationRequest</em>, c’est l’interprétation de la collection de <em>dosageInstruction</em> qui doit conduire au calcul de ces dates/heures début/fin effectives de <em>MedicationRequest</em> (fonction min() pour les dates de début, fonction max() pour les date de fin).</li>
+  <li>Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de <em>dosageInstruction</em> doit ajouter la durée de l’administration, <code class="language-plaintext highlighter-rouge">dosageInstruction.doseAndRate.RateRatio.denominator</code>, à la date/heure de début d’administration de cette dernière dose.</li>
+  <li>Pour les posologies complexes, impliquant une description au travers d’une collection d’éléments <code class="language-plaintext highlighter-rouge">dosageInstruction</code> rattachés à <em>MedicationRequest</em>, c’est l’interprétation de la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code> qui doit conduire au calcul de ces dates/heures début/fin effectives de <em>MedicationRequest</em> (fonction min() pour les dates de début, fonction max() pour les date de fin).</li>
 </ol>
 
 <p><em>Illustration</em>
@@ -510,7 +510,7 @@ Dans cet exemple</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 20, 2025 14:47+0000">2025-01-20</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 4, 2025 14:42+0000">2025-02-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
