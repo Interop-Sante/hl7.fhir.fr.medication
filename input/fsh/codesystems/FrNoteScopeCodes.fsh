@@ -1,5 +1,5 @@
 CodeSystem: FrNoteScopeCodes
-Id: fr-note-scope-code
+Id: fr-note-scope-codes
 Title: "code system Interop'Santé - Codes pour le périmètre des notes"
 Description: "Le système de codage pour la qualification du périmètre des notes en FHIR."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
