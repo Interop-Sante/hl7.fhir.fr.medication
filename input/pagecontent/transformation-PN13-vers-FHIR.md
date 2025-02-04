@@ -19,7 +19,7 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
 ### Ressources FHIR créées par la transformation d'un flux PN13 de prescription en FHIR
 
 - Optionnellement 1 ressource *Bundle* d'un type adapté à l'usage parmi message, document et searchset (pour les exemples, le type searchset est utilisé). Selon les omplémentations, cette ressource n'est pas nécessaire. Elle est utilisée pour les exemples à des fins de simplification de mise à disposition de toutes les ressources concernées par une prescription dans le même fichier d'exemple.
-- 1 à n ressource(s) *MedicationRequest* suivant le profil [FrInpatientMedicationRequest3]($fr-inpatient-medicationrequest3).  Chaque ressource *MedicationRequest* référence:
+- 1 à n ressource(s) *MedicationRequest* suivant le profil [FrInpatientMedicationRequest3](fr-inpatient-medicationrequest3.html).  Chaque ressource *MedicationRequest* référence:
   - 1 ressource *Patient* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Patient* référencée n'existe pas déjà). 
   - 1 ressource *Encounter* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Encounter* référencée n'existe pas déjà).
   - 0 à n ressource(s) *Observation* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Observation* référencée n'existe pas déjà).
@@ -87,7 +87,9 @@ Créer une ressource *MedicationRequest* suivant le profil [fr-inpatient-medicat
 
 Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie` ne comportant pas d'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début` valorisé à `4`, créer une instance de `MedicationRequest.dosageInstruction` en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-dosageinstruction-conceptmap]($PN13-FHIR-prescmed-dosageinstruction-conceptmap).
 
-Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie` ne comportant pas d'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début` valorisé à `4` utiliser la ressource *ConceptMap* [PN13-FHIR-prescmed-dosageinstruction-conceptmap]($PN13-FHIR-prescmed-dosageinstruction-conceptmap) pour mettre à jour toutes les instances de `MedicationRequest.dosageInstruction` précédemment créées.
+Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie` comportant un élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début` valorisé à `4` ET un autre élément (utilisation de `Type_événement_début` et de `Type_événement2_début`), créer une instance de `MedicationRequest.dosageInstruction` en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-dosageinstruction-conceptmap]($PN13-FHIR-prescmed-dosageinstruction-conceptmap).
+
+Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie` comportant uniquement un (ou deux) élément(s) `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début` valorisé(s) à `4` utiliser la ressource *ConceptMap* [PN13-FHIR-prescmed-dosageinstruction-conceptmap]($PN13-FHIR-prescmed-dosageinstruction-conceptmap) pour mettre à jour toutes les instances de `MedicationRequest.dosageInstruction` précédemment créées.
 
 #### RequestGroup
 

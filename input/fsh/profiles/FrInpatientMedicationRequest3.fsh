@@ -19,6 +19,10 @@ Description: "French inpatient medication request profile 3"
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"
 * requester ^definition = "The prescriber that initiated the request and has responsibility for its activation."
+* note.extension contains fr-medicationrequest-note-scope named NoteScope 0..1 MS
+* note.extension[NoteScope] ^short = "Périmètre de la note"
+* note.extension[NoteScope] ^definition = "Périmètre indiquant la portée de la note"
+* note.extension[NoteScope] ^comment = "Extension utilisée pour le traduction de message PN13 en FHIR afin de donner le périmètre de la note pour éviter la concatenation d'élément textuel en une seule note difficile à comprendre"
 * dosageInstruction 1..
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)

@@ -29,8 +29,8 @@
 - [Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14637.html)
 - [Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14638.html)
 - marquer l'un des médicaments composant comme étant le soluté du médicament composé
-  - marqueur sur *Medication composant* : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14649.html)
-  - marqueur sur *.ingredient* de *Medication composé* : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html)
+  - marqueur sur Medication composant : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14649.html)
+  - marqueur sur `.ingredient` de *Medication composé* : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html)
   - Ces deux variantes sont **soumises à concertation : une seule sera retenue**. Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques), § concacré à l'extension *IsVehicle*
 - [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-14651.html)
 
@@ -71,8 +71,8 @@ Les niveaux de complexité supplémentaires adressent
     - Faut-il créer un extension ?
 - les doses progessives ou dégressives par palier
   - [méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j](MedicationRequest-14647.html)
-  - Qu'apporte l'élément *dosageInstruction.sequence* de chaque palier par rapport l'élément *dosageInstruction.timing.repeat.boundsPeriod* indispensable ?
-  - L'élément *dosageInstruction.sequence* est facultatif. Ne serait-il pas préferable le supprimer ?
+  - Qu'apporte l'élément `dosageInstruction.sequence` de chaque palier par rapport l'élément `dosageInstruction.timing.repeat.boundsPeriod` indispensable ?
+  - L'élément `dosageInstruction.sequence` est facultatif. Ne serait-il pas préferable le supprimer ?
 - l'expression de la quantité d'une dose se référant à l'un des médicaments composant du médicament composé prescrit
   - [céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j](MedicationRequest-14648.html)
   - Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques) § concacré à l'extension *Basis of Dose Component*.
@@ -87,18 +87,18 @@ Il n'y a pas d'exemple, pour l'instant.
 
 ### Ex: LASILIX 20 mg, sol inj amp 2 mL, XX à 7h et 18h IV, pendant 5j
 
-- **unité de médicament prescrit** ➟ *MedicationRequest.medication*
-  - `LASILIX` → marque ➟ dans le *.text* du *.coding* de la spécialité
-  - `furosémide` → principe actif ➟ *.ingredient().item\[x\]*
-  - `20 mg` → dosage ➟ *.ingredient().strength*
-  - `sol inj` → forme ➟ *.form*
+- **unité de médicament prescrit** ➟ `MedicationRequest.medication`
+  - `LASILIX` → marque ➟ dans le `.text` du `.coding` de la spécialité
+  - `furosémide` → principe actif ➟ `.ingredient().item\[x\]`
+  - `20 mg` → dosage ➟ `.ingredient().strength`
+  - `sol inj` → forme ➟ `.form`
   - `amp` → présentation ➟ en annotation `{amp}` de l'unité de dénombrement UCUM
-  - `2 mL` → volume ➟ *.amount*
-- dose prescrite → *MedicationRequest.dosageInstruction*
-  - `XX` → quantité ➟ *.doseAndRate*
-  - `à 7h et 18h` → horaire de prise ➟ *.timing.repeat.timeOfDay()*
-  - `per os` → voie d'administration ➟ *.route*
-  - `pendant 5j` → début (maintenant) et fin (début + 5j) ➟ *.timing.boundsPeriod*
+  - `2 mL` → volume ➟ `.amount`
+- dose prescrite → `MedicationRequest.dosageInstruction`
+  - `XX` → quantité ➟ `.doseAndRate`
+  - `à 7h et 18h` → horaire de prise ➟ `.timing.repeat.timeOfDay()`
+  - `per os` → voie d'administration ➟ `.route`
+  - `pendant 5j` → début (maintenant) et fin (début + 5j) ➟ `.timing.boundsPeriod`
 - La quantité `XX` de la dose prescrite peut s'exprimer de 3 façons différentes, par exemple :
   - `1` (unité \[de présentation de l'unité de médicament prescrit\] = ampoule contenant 20 mg de furosémide)
   - `20 mg` (de principe actif = furosémide)
@@ -108,11 +108,11 @@ Ces 3 expressions permettent de déterminer la quantité de(s) principe(s) actif
 
 ### Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j
 
-- **unité de médicament prescrit** ➟ *MedicationRequest.medication*
-  - `FUROSEMIDE` → médicament en DC ➟ dans le *.text* du *.coding* du médicament en DC
-  - `furosémide` → principe actif ➟ *.ingredient().item\[x\]*
+- **unité de médicament prescrit** ➟ `MedicationRequest.medication`
+  - `FUROSEMIDE` → médicament en DC ➟ dans le `.text` du `.coding` du médicament en DC
+  - `furosémide` → principe actif ➟ `.ingredient().item\[x\]`
   - les autres caractéristiques ne sont pas contraintes par le prescripteur
-- **dose prescrite** → *MedicationRequest.dosageInstruction*
+- **dose prescrite** → `MedicationRequest.dosageInstruction`
   - caractéristiques identiques à celles de l'exemple de ligne de prescription en spécialité
 - La **quantité** `XX` de la dose prescrite ne peut plus s'exprimer que d'1 façon :
   - `20 mg` (de principe actif = furosémide)
@@ -132,14 +132,14 @@ entre
 - La quantité de principes actifs de la dose doit être déterminée,
 - Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminé.
 
-#### Contrainte sur le Médicament prescrit (*MedicationRequest.medication*)
+#### Contrainte sur le Médicament prescrit (`MedicationRequest.medication`)
 
-Le dosage (*.ingredient[].strength*) est exigé quand le médicament prescrit est
+Le dosage (`.ingredient[].strength`) est exigé quand le médicament prescrit est
 
 - une association de principes actifs (ex : paracétamol + codéine)
 - un médicament extemporané (ex : perfusion composée de plusieurs médicaments)
 
-#### Contraintes sur l’Unité de la dose prescrite (*MedicationRequest.dosageInstruction.doseAndRate*)
+#### Contraintes sur l’Unité de la dose prescrite (`MedicationRequest.dosageInstruction.doseAndRate`)
 
 L'unité est pertinente (donc autorisée), en fonction de son type,
 
@@ -154,7 +154,7 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 
 Quand elle n'est pas négligeable, sa valeur exprimée **DOIT** figurer au dénominateur de la dose prescrite.
 
-Cf. [Requirements](https://hl7.org/fhir/R4/dosage-definitions.html#Dosage.doseAndRate.rate_x_) de l'élément *MedicationRequest.dosageInstruction.doseAndRate.rateRatio*
+Cf. [Requirements](https://hl7.org/fhir/R4/dosage-definitions.html#Dosage.doseAndRate.rate_x_) de l'élément `MedicationRequest.dosageInstruction.doseAndRate.rateRatio`
 
 Si une durée d'administration n'est pas spécifiée par le prescripteur, cela siginifie qu'elle est négilgeable. Par exemple pour l'administration d'un comprimé ou l'injection direct d'une solution.
 
@@ -164,7 +164,7 @@ Si une durée d'administration n'est pas spécifiée par le prescripteur, cela s
 
 Intraveineuse lente et intraveineuse directe ne sont pas des voies d'administration, quand bien même ces concepts s'y invitent régulièrement dans les listes locales des voies d'administration. Ce sont des méthodes, dont la principale différence porte sur la durée d'administration, qui n'est dans ce cas pas quantifée mais simplement qualifiée.
 
-Si le prescripteur souhaite ne pas donner une durée d'administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l'élément *method* de la ressource *MedicationRequest*. La voie d'administration, élément *route*, prend dans les deux cas la valeur voie intraveineuse.
+Si le prescripteur souhaite ne pas donner une durée d'administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l'élément `method` de la ressource *MedicationRequest*. La voie d'administration, élément `route`, prend dans les deux cas la valeur voie intraveineuse.
 
 Ni l'EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d'administration *injection*.
 
@@ -227,11 +227,11 @@ De ce fait, le rapport entre les caractéristiques du médicament prescrit compo
 
 ### BoDC (Basis of Dose Component)
 
-Dans un médicament composé, permet d'exprimer à quel médicament composant, quelle ressource Medication, se réferre l'expression de la dose.
+Dans un médicament composé, permet d'exprimer à quel médicament composant, quelle ressource *Medication*, se réferre l'expression de la dose.
 
 Ex: Permet de rapporter l'expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.
 
-Cette information est portée par l'extension [*FrBasisOfDoseComponent*](StructureDefinition-FrBasisOfDoseComponent.html) de l'élément *doseAndRate* du type complex *Dosage* qui s'applique à l'élément *dosageInstruction* de la ressource *MedicationRequest*.
+Cette information est portée par l'extension [*FrBasisOfDoseComponent*](StructureDefinition-FrBasisOfDoseComponent.html) de l'élément `doseAndRate` du type complex *Dosage* qui s'applique à l'élément `dosageInstruction`* de la ressource *MedicationRequest*.
 
 Voir exemple [céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14648.html)
 
@@ -250,7 +250,7 @@ Cette information est portée par l'extension [*FrIsVehicle*](StructureDefinitio
 Cette extension est appliquée
 
 - soit à la ressource *Medication* composant qui est référencée par l'élément ingredient de la ressource *Medication* composée,
-- soit à l'élément *ingredient* de la ressource *Medication* composée.
+- soit à l'élément `ingredient` de la ressource *Medication* composée.
 
 Voir les deux variantes de l'exemple
 
@@ -278,15 +278,15 @@ L'application de la règle suivante répond à ce cas d'usage :
 Cette règle impose l'utilisation de l'extension *IsVehicule*.
 Voir exemple [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-14651.html)
 
-En [R5](https://hl7.org/fhir/medication.html), le ressource *Medication* voit l'élément *ingredient.strength* passer de type exclusivement *Ratio* en type alternatif *Ratio*, *Quantity* ou *CodeableConcept* avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).
+En [R5](https://hl7.org/fhir/medication.html), le ressource *Medication* voit l'élément `ingredient.strength` passer de type exclusivement *Ratio* en type alternatif *Ratio*, *Quantity* ou *CodeableConcept* avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).
 
 - En mettant dans
-  - *.totalVolume* : le volume cible de la seringue,
-  - *.ingredient\[soluté\].strengthCodeableConcept* : le code qs
+  - `.totalVolume` : le volume cible de la seringue,
+  - `.ingredient\[soluté\].strengthCodeableConcept` : le code qs
   il est prescrit explicitement que le soluté est en Q.S.P. le volume cible de la seringue.
 
 **Note**:
-En R5 l'élément amount est renommé **totalVolume** pour lever toute ambiguité avec les volumes pouvant figurer dans les *ingredient.strength\[x\]*.
+En R5 l'élément amount est renommé **totalVolume** pour lever toute ambiguité avec les volumes pouvant figurer dans les `ingredient.strength\[x\]`.
 
 ## Patches
 

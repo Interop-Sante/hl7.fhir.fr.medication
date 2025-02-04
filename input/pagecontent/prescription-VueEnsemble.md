@@ -6,7 +6,7 @@ La prescription en tant que telle (le regroupement de lignes de prescription), n
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
-Le **médicament prescrit** est représenté par *l'élément medication\[x\](1..1)* de la ressource *FrInpatientMedicationRequest* qui le contraint à faire référence à une ressource *Medication*.
+Le **médicament prescrit** est représenté par l'élément `medication\[x\]` (1..1) de la ressource *FrInpatientMedicationRequest* qui le contraint à faire référence à une ressource *Medication*.
 
 Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples et que le médicament simple est exprimé en **DC** (dénomination commune) ou en **spécialité**,
 le **médicament prescrit** est représenté par trois variantes de ressource *Medication*:
@@ -23,21 +23,21 @@ Noter qu'un médicament simple peut être une association de plusieurs principes
 Ex: *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047*
 Ex: *paracétamol+codéine 500 mg+30 mg*
 
-La **posologie** est représentée par l'élément dosageInstruction de la ressource *FrInpatientMedicationRequest*.
+La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FrInpatientMedicationRequest*.
 
 **Date de début, date de fin** et **durée de prescription**
 
 Elles traduisent la période d'exécution de la prescription.
 
-Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedcationRequest* profilée par *FrInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément *dosageInstruction* de type *Dosage*, sous-élément *timing* de type *Timing*
+Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedcationRequest* profilée par *FrInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
 
-- date de début : *.dosageInstruction.timing.repeat.boundsPeriod.start*
-- date de fin : *.dosageInstruction.timing.repeat.boundsPeriod.end*
+- date de début : `.dosageInstruction.timing.repeat.boundsPeriod.start`
+- date de fin : `.dosageInstruction.timing.repeat.boundsPeriod.end`
 - durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu'au niveau de l'IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.
 
-Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments *.validityPeriode* et *.expectedSupplyDuration* de l'élément *.dispensationRequest*.
+Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments `.validityPeriod` et `.expectedSupplyDuration` de l'élément `.dispensationRequest`.
 
-En prescription intrahospitalière, il n'y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n'y a donc généralement pas usage de l'élément *.dispensationRequest*.
+En prescription intrahospitalière, il n'y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n'y a donc généralement pas usage de l'élément `.dispensationRequest`.
 
 ## Précisions sur dates et durée de prescription
 
@@ -66,7 +66,7 @@ Définit la date/heure de fin exprimée par le médecin lors de sa prescription.
 **La dernière dose prescrite**:
 
 - celle dont la date/heure de début d’administration est *immédiatement inférieure à la date/heure de fin prescrite*
-- calculée à partir de la *date/heure de fin prescrite*, en fonction de la posologie définie par la collection *dosageInstruction*
+- calculée à partir de la *date/heure de fin prescrite*, en fonction de la posologie définie par la collection `dosageInstruction`
 
 La *date/heure de fin d’administration* de la dernière dose (sa date/heure de début + sa durée d'administration) peut être supérieure à *date/heure de fin prescrite*.
 
@@ -133,17 +133,17 @@ ou
 **Date/heure de début effective et Date/heure de fin effective de la ligne de prescription**:
 
 Ces deux dates ne figurent pas dans *MedicationRequest* R4.
-Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément *effectiveDosePeriod* conçu pour accueillir ces deux dates a été ajouté.
+Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément `effectiveDosePeriod` conçu pour accueillir ces deux dates a été ajouté.
 ![EffectiveDosePeriodR5](Prescription4.jpg)
 
 **Note PN13**:
 
 - Ces deux dates figurent dans l'objet ELEMENT DE PRESCRIPTION, éléments *Dh_début* et *Dh_fin*.
 
-Les règles de gestion suivantes doivent être appliquées pour définir ces deux dates en fonction de la collection de dosageInstruction associée au *MedicationRequest*. Elles reprennent celles de PN13 et sont conformes à la [définition de la R5](https://hl7.org/fhir/medicationrequest.html).
+Les règles de gestion suivantes doivent être appliquées pour définir ces deux dates en fonction de la collection de `dosageInstruction` associée au *MedicationRequest*. Elles reprennent celles de PN13 et sont conformes à la [définition de la R5](https://hl7.org/fhir/medicationrequest.html).
 
-1. La Date/heure de début effective doit être égale à la date/heure de début d’administration de la première dose décrite par la collection de *dosageInstruction*.
-1. La Date/heure de fin effective doit être égale à la date/heure de fin d’administration de la dernière dose décrite par la collection de *dosageInstruction*.
+1. La Date/heure de début effective doit être égale à la date/heure de début d’administration de la première dose décrite par la collection de `dosageInstruction`.
+1. La Date/heure de fin effective doit être égale à la date/heure de fin d’administration de la dernière dose décrite par la collection de `dosageInstruction`.
 
 *Illustration*
 1 comprimé 3 fois par jour (7h, 12h, 18h) pendant 5 jours, prescrit à 10h30, à partir de maintenant (10h30), donc 1ère dose à 12h.
@@ -156,8 +156,8 @@ Notes
     - la Date/heure début prescrite est J1 10h30 ;
     - la Date/heure fin prescrite est J6 10h30 (J1 10h30 + 5j = J6 10h30) ;
     - la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la lilgne de prescription à J6 7h.
-1. Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de *dosageInstruction* doit ajouter la durée de l’administration, *dosageInstruction.doseAndRate.RateRatio.denominator*, à la date/heure de début d’administration de cette dernière dose.
-1. Pour les posologies complexes, impliquant une description au travers d’une collection d’éléments *dosageInstruction* rattachés à *MedicationRequest*, c’est l’interprétation de la collection de *dosageInstruction* qui doit conduire au calcul de ces dates/heures début/fin effectives de *MedicationRequest* (fonction min() pour les dates de début, fonction max() pour les date de fin).
+1. Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de *dosageInstruction* doit ajouter la durée de l’administration, `dosageInstruction.doseAndRate.RateRatio.denominator`, à la date/heure de début d’administration de cette dernière dose.
+1. Pour les posologies complexes, impliquant une description au travers d’une collection d’éléments `dosageInstruction` rattachés à *MedicationRequest*, c’est l’interprétation de la collection de `dosageInstruction` qui doit conduire au calcul de ces dates/heures début/fin effectives de *MedicationRequest* (fonction min() pour les dates de début, fonction max() pour les date de fin).
 
 *Illustration*
 G5 1L sur 12h, 2 fois par jour (10h, 22h) pendant 5 jours, prescrit à 9h30, à partir de maintenant (9h30), donc 1ère dose à 10h.

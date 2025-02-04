@@ -1,6 +1,6 @@
 # Implémentation
 
-Les 3 documents de la conciliation sont implémentés chacun sous forme d'une ressource *Bundle* de type *document*.
+Les 3 documents de la conciliation sont implémentés chacun sous forme d'une ressource *Bundle* de type `document`.
 
 Selon le document, la composition du *Bundle* est
 
