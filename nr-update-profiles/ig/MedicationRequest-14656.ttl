@@ -1,0 +1,147 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/MedicationRequest/14656> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "14656"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-2"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-2>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest 14656</b></p><a name=\"14656\"> </a><a name=\"hc14656\"> </a><a name=\"14656-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href=\"#hc14656/med-353\">Medication médicament contenant seulement paracétamol</a></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-13 08:48:39+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 26643006}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>1 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span></td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Medication #med-354</b></p><a name=\"14656/med-354\"> </a><a name=\"hc14656/med-354\"> </a><a name=\"14656/med-354-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 777067000}, {http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC 1263254}\">PARACETAMOL</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 387517004}, {http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant 5865}\">PARACETAMOL</span></td><td>true</td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Medication #med-353</b></p><a name=\"14656/med-353\"> </a><a name=\"hc14656/med-353\"> </a><a name=\"14656/med-353-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 777067000}, {http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC 1263254}\">PARACETAMOL</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"#hc14656/med-354\">Medication médicament contenant seulement paracétamol</a></td><td>true</td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-354" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-2-unique"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-2-unique>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:777067000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777067000" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement paracétamol" ]
+       ] [
+         fhir:system [ fhir:v "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1263254" ] ;
+         fhir:display [ fhir:v "PARACETAMOL" ]
+       ] ) ;
+       fhir:text [ fhir:v "PARACETAMOL" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:387517004 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "387517004" ] ;
+           fhir:display [ fhir:v "paracétamol" ]
+         ] [
+           fhir:system [ fhir:v "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "5865" ] ;
+           fhir:display [ fhir:v "paracétamol" ]
+         ] ) ;
+         fhir:text [ fhir:v "PARACETAMOL" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med-353" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-2-unique"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-2-unique>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:777067000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777067000" ] ;
+         fhir:display [ fhir:v "médicament contenant seulement paracétamol" ]
+       ] [
+         fhir:system [ fhir:v "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1263254" ] ;
+         fhir:display [ fhir:v "PARACETAMOL" ]
+       ] ) ;
+       fhir:text [ fhir:v "PARACETAMOL" ]
+     ] ;
+     fhir:ingredient ( [
+       fhir:item [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#med-354" ]
+       ] ;
+       fhir:isActive [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:reference [ fhir:v "#med-353" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Patient/14602> ;
+     fhir:reference [ fhir:v "Patient/14602" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2021-07-13T08:48:39.825Z"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <https://hl7.fr/fhir/fr/medication/Practitioner/smart-Practitioner-71482713> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v "1"^^xsd:integer ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2021-07-13T08:48:00Z"^^xsd:dateTime ] ;
+           fhir:end [ fhir:v "2021-07-18T08:47:59Z"^^xsd:dateTime ]
+         ] ;
+         fhir:timeOfDay ( [ fhir:v "07:00:00"^^xsd:time ] [ fhir:v "12:00:00"^^xsd:time ] [ fhir:v "18:00:00"^^xsd:time ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ] ;
+         fhir:display [ fhir:v "Voie orale" ]
+       ] ) ;
+       fhir:text [ fhir:v "Voie orale" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ordered" ] ;
+           fhir:display [ fhir:v "Ordered" ]
+         ] ) ;
+         fhir:text [ fhir:v "Ordered" ]
+       ] ;
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "g" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "g" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

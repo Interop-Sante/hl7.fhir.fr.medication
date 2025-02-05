@@ -1,0 +1,298 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/Bundle/bundle-DC-2> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bundle-DC-2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Patient ;
+       fhir:id [ fhir:v "Patient-DC-2" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Patient-DC-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient-DC-2</b></p><a name=\"Patient-DC-2\"> </a><a name=\"hcPatient-DC-2\"> </a><a name=\"Patient-DC-2-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">AVION  (no stated gender), DoB: 1961-11-25 ( Patient internal identifier: 5000001820 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">JAUNE AVION (Official)</td></tr></table></div>"
+       ] ;
+       fhir:identifier ( [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "PI" ] ;
+             fhir:display [ fhir:v "Patient internal identifier" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "https://somehospital.fr/IPP"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "5000001820" ]
+       ] ) ;
+       fhir:name ( [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:family [ fhir:v "AVION" ]
+       ] [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:family [ fhir:v "AVION" ] ;
+         fhir:given ( [ fhir:v "JAUNE" ] )
+       ] ) ;
+       fhir:birthDate [ fhir:v "1961-11-25"^^xsd:date ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:Practitioner ;
+       fhir:id [ fhir:v "Practitioner-DC-2" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_Practitioner-DC-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Practitioner-DC-2</b></p><a name=\"Practitioner-DC-2\"> </a><a name=\"hcPractitioner-DC-2\"> </a><a name=\"Practitioner-DC-2-en-US\"> </a><p><b>identifier</b>: Employee number/P082443</p><p><b>name</b>: DENIS LUIGGI , DENIS LUIGGI (Official)</p></div>"
+       ] ;
+       fhir:identifier ( [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "EI" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "https://somehospital.fr/EI"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "P082443" ]
+       ] ) ;
+       fhir:name ( [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:family [ fhir:v "LUIGGI" ] ;
+         fhir:given ( [ fhir:v "DENIS" ] )
+       ] [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:family [ fhir:v "LUIGGI" ] ;
+         fhir:given ( [ fhir:v "DENIS" ] )
+       ] )
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "med-DC-2" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_med-DC-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication med-DC-2</b></p><a name=\"med-DC-2\"> </a><a name=\"hcmed-DC-2\"> </a><a name=\"med-DC-2-en-US\"> </a><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000090270}\">PARACETAMOL</span></p></div>"
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "100000090270" ] ;
+           fhir:display [ fhir:v "paracétamol" ]
+         ] ) ;
+         fhir:text [ fhir:v "PARACETAMOL" ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:Observation ;
+       fhir:id [ fhir:v "Obs-DC-2-1" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_Obs-DC-2-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation Obs-DC-2-1</b></p><a name=\"Obs-DC-2-1\"> </a><a name=\"hcObs-DC-2-1\"> </a><a name=\"Obs-DC-2-1-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8302-2}\">Body height</span></p><p><b>subject</b>: <code>#Patient-DC-2</code></p><p><b>effective</b>: 2018-10-25 11:06:06+0200</p><p><b>value</b>: 189 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p></div>"
+       ] ;
+       fhir:status [ fhir:v "final" ] ;
+       fhir:category ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "vital-signs" ]
+         ] )
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           a loinc:8302-2 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "8302-2" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:reference [ fhir:v "#Patient-DC-2" ]
+       ] ;
+       fhir:effective [ fhir:v "2018-10-25T11:06:06+02:00"^^xsd:dateTime ] ;
+       fhir:value [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "189"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "cm" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "cm" ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:Observation ;
+       fhir:id [ fhir:v "Obs-DC-2-2" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_Obs-DC-2-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation Obs-DC-2-2</b></p><a name=\"Obs-DC-2-2\"> </a><a name=\"hcObs-DC-2-2\"> </a><a name=\"Obs-DC-2-2-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29463-7}\">Body weight</span></p><p><b>subject</b>: <code>#Patient-DC-2</code></p><p><b>effective</b>: 2018-06-21 16:05:10+0200</p><p><b>value</b>: 120 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p></div>"
+       ] ;
+       fhir:status [ fhir:v "final" ] ;
+       fhir:category ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "vital-signs" ]
+         ] )
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           a loinc:29463-7 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "29463-7" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:reference [ fhir:v "#Patient-DC-2" ]
+       ] ;
+       fhir:effective [ fhir:v "2018-06-21T16:05:10+02:00"^^xsd:dateTime ] ;
+       fhir:value [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "120"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "kg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "kg" ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><p><b>identifier</b>: <code>https://somehospital.fr/PrescrptionLine-ID</code>/31626</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#med-DC-2</code></p><p><b>subject</b>: <code>#Patient-DC-2</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/70101274</p><p><b>supportingInformation</b>: </p><ul><li>Identifier: <code>https://somehospital.fr/UF</code>/2571</li><li><code>#Obs-DC-2-1</code></li><li><code>#Obs-DC-2-2</code></li></ul><p><b>authoredOn</b>: 2022-04-11 16:42:53+0200</p><p><b>requester</b>: <code>#Practitioner-DC-2</code></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/10723</p><p><b>note</b>: Prescription textuelle: PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours, Indication: En cas de douleur, Commentaire: Test paracetamol DC 2 (à la demande)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 6 hours</p><p><b>asNeeded</b>: true</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1000 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 4 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/1 d<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p></blockquote></div>"
+       ] ;
+       fhir:identifier ( [
+         fhir:system [ fhir:v "https://somehospital.fr/PrescrptionLine-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "31626" ]
+       ] ) ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#med-DC-2" ]
+       ] ;
+       fhir:subject [
+         fhir:reference [ fhir:v "#Patient-DC-2" ]
+       ] ;
+       fhir:encounter [
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/Sejour"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "70101274" ]
+         ]
+       ] ;
+       fhir:supportingInformation ( [
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/UF"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "2571" ]
+         ]
+       ] [
+         fhir:reference [ fhir:v "#Obs-DC-2-1" ]
+       ] [
+         fhir:reference [ fhir:v "#Obs-DC-2-2" ]
+       ] ) ;
+       fhir:authoredOn [ fhir:v "2022-04-11T16:42:53+02:00"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:reference [ fhir:v "#Practitioner-DC-2" ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "10723" ]
+       ] ;
+       fhir:note ( [
+         fhir:text [ fhir:v "Prescription textuelle: PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours" ]
+       ] [
+         fhir:text [ fhir:v "Indication: En cas de douleur" ]
+       ] [
+         fhir:text [ fhir:v "Commentaire: Test paracetamol DC 2 (à la demande)" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2022-04-12T06:00:00+02:00"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2022-04-15T00:00:00+02:00"^^xsd:dateTime ]
+             ] ;
+             fhir:frequencyMax [ fhir:v "1"^^xsd:positiveInteger ] ;
+             fhir:period [ fhir:v "6"^^xsd:decimal ] ;
+             fhir:periodUnit [ fhir:v "h" ]
+           ]
+         ] ;
+         fhir:asNeeded [ fhir:v "true"^^xsd:boolean ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20053000" ] ;
+             fhir:display [ fhir:v "Voie orale" ]
+           ] )
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "1000"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ] ) ;
+         fhir:maxDosePerPeriod [
+           fhir:numerator [
+             fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "d" ]
+           ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
