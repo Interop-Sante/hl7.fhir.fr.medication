@@ -29,7 +29,7 @@ Description: "Profil de la ressource *MedicationStatement* référencée dans la
 * subject ^requirements = "La Fiche de Conciliation des Traitements médicamenteux ne s'applique qu'à un patient"
 * subject.reference 1.. MS
 * subject.reference ^requirements = "référence la ressource Patient selon la profile fr-patient défini par Interop'Santé"
-* subject.type = "Patient" (exactly)
+* subject.type = "Patient"
 * subject.identifier ..0
 * subject.identifier ^requirements = "Identification du patient exclusivement par référence à une ressource Patient selon le profil fr-patient défini par Interop'Santé"
 * informationSource ..0 MS

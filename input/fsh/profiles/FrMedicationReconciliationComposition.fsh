@@ -78,7 +78,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[CurrentMedication] ^requirements = "Référencer le Traitement Médicamenteux Courant qui fait l'objet de cette conciliation des traitements."
 * section[CurrentMedication] ^meaningWhenMissing = "La liste des Traitements Médicamenteux Courants est obligatoire (même vide). C'est l'objet même de la conciliation des traitements."
 * section[CurrentMedication].title 1..
-* section[CurrentMedication].title = "Traitement Médicamenteux Courant" (exactly)
+* section[CurrentMedication].title = "Traitement Médicamenteux Courant"
 * section[CurrentMedication].author ..0 MS
 * section[CurrentMedication].author ^requirements = "L'auteur du Traitement Médicamenteux Courant est celui du document référencé par l'élément <*entry*\\>.\r\nL'auteur de l'inclusion de ce document dans cette fiche de conciliation est celui de la *Composition*\\."
 * section[CurrentMedication].author ^meaningWhenMissing = "Pas d'auteur spécifique de cette section de la composition."
@@ -87,7 +87,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[CurrentMedication].focus ^requirements = "Le Traitement Médicamenteux Courant ne peut concerner que le patient déclaré comme sujet de cette Conciliation Médicamenteuse (voir element *subject* de la *Composition*\\)."
 * section[CurrentMedication].mode 1.. MS
 * section[CurrentMedication].mode ^short = "Liste courante exhaustive à sa date de réalisation (cf. element *date*\\) par son auteur (cf. element *author*\\)."
-* section[CurrentMedication].mode = #working (exactly)
+* section[CurrentMedication].mode = #working
 * section[CurrentMedication].mode ^comment = "This element is labeled as a modifier because a change list must not be misunderstood as a complete list. **Dans ce profil**\\, sa valeur est fixée à ***working***\\."
 * section[CurrentMedication].mode ^requirements = "Contraindre une gestion univoque de cette liste représentant le Traitement Médicamenteux Courant."
 * section[CurrentMedication].orderedBy ^comment = "Non concerné car il n'y a qu'une seule <*entry*\\> dans cette <*section*\\>. L'ordre des lignes du Traitement Médicamenteux Courant attaché, sera porté par l'élément  *orderedBy* de la seule <*section*\\> de la *Composition* référencée."

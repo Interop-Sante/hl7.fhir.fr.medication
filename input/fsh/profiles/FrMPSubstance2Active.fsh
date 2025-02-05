@@ -21,5 +21,5 @@ Description: "code for the medicinal product substance"
     otherCoding 0..*
 * coding[snomedSubstanceCoding] from FrMpSubstanceActive (required)
 * coding[snomedSubstanceCoding] ^binding.description = "Medicinal product Substance"
-* coding[snomedSubstanceCoding].system = "http://snomed.info/sct" (exactly)
+* coding[snomedSubstanceCoding].system = $sct
 * coding[otherCoding].system = "^((?!http:\\/\\/snomed\\.info\\/sct).)*$"

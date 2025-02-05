@@ -3,7 +3,6 @@ Parent: CodeableConcept
 Id: fr-mp-substance-active
 Title: "French Active Substance of a Medicinal Product"
 Description: "code for the medicinal product substance"
-* ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
 * ^date = "2021-10-18"

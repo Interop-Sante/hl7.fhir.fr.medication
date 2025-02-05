@@ -16,17 +16,22 @@ Description: "A complex medication composed of two to many simple medication. Th
 * code.coding ^definition = "A code identifing the compound medicinal product. Generaly none : no code defined for G5 1L + NaCl 3g + KCl 2g. May exist as local code for magistral preparation or hospital preparation. May exist as a medication database code for virtual medication"
 * code.text 1..
 * code.text ^requirements = "Although a code might not be available for a compoud medicinal product, there is alway a denomination for it."
+
 * amount only FrRatioUcum
 * amount ^definition = "Specific amount in Medication defined by the element collection. For instance 1 L for the amount of the compound Glucose 5% of an infusion Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g. Or 3 g for the amount of compound Sodium chloride of the same infusion. SHALL be 1 (without unit, ie. code = 1 in UCUM system) when there is multiple ingredient element with at least the strenght element of two of them expressed in asbolute quantity (ie. simple quantity)."
 * amount ^comment = "The Ratio datatype is limited to numerator value, leading back to the SimpleQuantity datatype."
+
 * ingredient 1..
 * ingredient ^short = "Medication component of compound medication"
 * ingredient ^definition = "Identifies a medicinal component of the compound medicinal product"
 * ingredient ^comment = "The Medication SHALL contain ALL the items of the item element list AND ONLY the items of the item element list."
+
 * ingredient.extension contains fr-is-vehicle named IsVehicle 0..1
 * ingredient.item[x] only Reference(fr-medication-noncompound)
 * ingredient.item[x] ^short = "The actual compound"
 * ingredient.item[x] ^definition = "The actual compound, either nonproprietary named medication or branded named medication identified by a UCD code."
+
 * ingredient.strength ..0
 * ingredient.strength ^requirements = "The amount and strength of the medication component are described in the item element referencing a Medication ressource profiled fr-medication-non-compound."
+
 * batch ..0
