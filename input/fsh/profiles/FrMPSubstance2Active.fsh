@@ -3,7 +3,6 @@ Parent: CodeableConcept
 Id: fr-mp-substance-2-active
 Description: "code for the medicinal product substance"
 * ^status = #draft
-* ^experimental = false
 * . ^short = "SNOMED CT Medicinal Product Substance"
 * . ^example[0].label = "Glucose"
 * . ^example[=].valueCodeableConcept = $sct#67079006 "glucose (substance)"

@@ -4,7 +4,6 @@ Id: fr-medication-ucd-part
 Title: "French Ucd Part Medication"
 Description: "Part of a multipart branded medication."
 * ^status = #draft
-* ^experimental = false
 * ^purpose = "Description of each multipart proprietary named medication part."
 * . ^short = "Definition of a branded Medication part"
 * . ^definition = "This resource is primarily used for the identification and definition of a branded medication part for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use."
@@ -38,6 +37,7 @@ Description: "Part of a multipart branded medication."
 * ingredient.item[x] ^definition = "The actual substance or sub-part of the part of the branded medication."
 * ingredient.item[x] ^comment = "Most of the few multi-part branded medication have a single level of parts with no sub-parts. For instance, a white tablet and a bue tablet. The item[x].refeence(FrMedicationUcdPart) is intende to describe the very few more complex multipart branded medications."
 * ingredient.item[x] ^requirements = "Support of french multi-part branded medication identfied by a code UDC."
+
 * ingredient.strength only FrRatioUcum
 * ingredient.strength ^definition = "Specifies how much subtance of the item[x]:codeableConcept(snomedSubstance) or how many of the item[x]:refernce(FrMedciationUcdPart) there are in this FrMedicationUcdPart"
 * ingredient.strength ^comment = "The quantity of this ingredient defining the medication. For instance, 50 mg/mL defining the glucose quantity for the glucose 5% or 500 mg medicine and 30 mg respectively defining the paracetamol and the codeine quantity for the association paracetamol+codeine 500 mg+30 mg medicine."

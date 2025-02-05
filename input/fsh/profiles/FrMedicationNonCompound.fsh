@@ -4,7 +4,6 @@ Id: fr-medication-noncompound
 Title: "French Non Compound Medication"
 Description: "Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."
 * ^status = #draft
-* ^experimental = false
 * ^purpose = "Simple medication description, include those composed of many substances."
 * . ^short = "Simple Medication"
 * . ^definition = "This ressource is profiled for describing a simple medication (vs compound medication) in the presription line represented by a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement)."

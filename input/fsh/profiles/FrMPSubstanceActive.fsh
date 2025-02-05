@@ -4,8 +4,6 @@ Id: fr-mp-substance-active
 Title: "French Active Substance of a Medicinal Product"
 Description: "code for the medicinal product substance"
 * ^status = #draft
-* ^experimental = false
-* ^date = "2021-10-18"
 * . ^short = "SNOMED CT Medicinal Product Substance"
 * . ^example[0].label = "Glucose"
 * . ^example[=].valueCodeableConcept = $sct#67079006 "glucose (substance)"

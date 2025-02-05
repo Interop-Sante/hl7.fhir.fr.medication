@@ -4,7 +4,6 @@ Id: fr-medication-compound2
 Title: "French compound Medication 2"
 Description: "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."
 * ^status = #draft
-* ^experimental = false
 * ^purpose = "Compound medication description"
 * . ^short = "Definition of a Medication compound of a MedicinalRequest, Dispense or Usage"
 * . ^definition = "Medication compound of a Medication representing the composition of a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement). For instance, Glucose 5% 1L part of an infusion made of 3 compounds, Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g."

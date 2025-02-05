@@ -1,17 +1,19 @@
 Profile: FrMedicationReconciliationComposition
 Parent: Composition
 Id: fr-medication-reconciliation-composition
-Description: "Profil de la ressource *Composition* la Fiche de Conciliation des Traitements médicamenteux (FCT)."
-* ^purpose = "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT)*\\."
+Description: "Profil de la ressource *Composition* représentant la Fiche de Conciliation des Traitements médicamenteux (FCT)."
 * . ^short = "Fiche de Conciliation des Traitements médicamenteux (FCT)"
 * . ^definition = "Fiche de Conciliation des Traitements médicamenteux (FCT) : Liste des traitements médicamenteux conciliés à partir du Bilan Médicamenteux (traitements avant l'hospitalisation) et du Traitement Médicamenteux Courant, conforme aux recommandations du [guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante).\r\n- référence le Bilan Médicamenteux ;\r\n- référence le Traitement Médicamenteux Courant ;\r\n- liste des lignes de traitement conciliées avec, pour chacune,\r\n  - la référence à la ligne de traitement médicamenteux du Bilan Médicamenteux si elle existe,\r\n  - la référence à la ligne de traitement médicamenteux du Traitement Médicamenteux Courant si elle existe,\r\n  - au moins une de ces deux lignes doit exister et être référencée,\r\n  - ses propriétés de conciliation."
 * . ^comment = "Cette *Composition* comporte 3 <*section*\\> et 3 seulement :\r\n1. La référence au Bilan Médicamenteux, une ressource *Composition* profilée *fr-medication-history-composition*\r\n2. La référence au Traitement Médicamenteux Courant, une ressource *Composition* profilée *fr-current-medication-composition*\r\n3.  La liste des traitements médicamenteux conciliés avec chacune ses propriétés de conciliation, une <*entry*\\> (de cette 3ème section) par ligne de traitement référençant une ressource *MedicationStatement* profilée *fr-medication-reconciliation-medication-statement*"
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
+
 * status MS
 * status ^comment = "1. Une FCT ne peut être au statut final que si elle est complète, à la fois du point de vue de la documentation des lignes de traitement médicamenteux conciliées (cf. les propriétés de conciliation de chacune de ses lignes de traitement) et du point de vue des auteurs qui assument ces contenus (cf. élément <*author*\\> de cette *Composition*\\).\r\n2. Une FCT peut être produite en plusieurs étapes pouvant mettre à disposition des versions intermédiaires, préliminaires, précédant la version finale. Cet élément <*status*\\> de la *Composition* permet alors de rendre compte de ces contenus intermédiaires  préliminaires.\r\n3. Le projet d'établissement et ses choix d'intégration inter applications peut légitimement se limiter à ne partager que la FCT à l'état final, les éventuelles versions intermédiaires préliminaires ne sortant pas du module qui en a la charge."
+
 * type MS
 * type from fr-medication-reconciliation-document-type (extensible)
+
 * subject 1..
 * subject only Reference($FrCorePatient)
 * subject MS
@@ -20,6 +22,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * subject ^comment = "Une FCT (Fiche de Conciliation des Traitements médicamenteux) se rapporte obligatoirement à un patient, référencé en tant que ressource *Patient* profilée *fr-patient*\\."
 * subject ^requirements = "Identifier le patient auquel se rapporte obligatoirement une FCT (Fiche de Conciliation des Traitements médicamenteux), patient référencé en tant que ressource *Patient* profilée *fr-patient*\\."
 * subject.type = "Patient"
+
 * author only Reference($FrCorePractitionerRole)
 * author MS
 * author ^short = "Le ou les auteurs"
@@ -85,16 +88,20 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[CurrentMedication].focus ..0 MS
 * section[CurrentMedication].focus ^comment = "Le Traitement Médicamenteux Courant ne peut concerner que le patient déclaré comme sujet de cette Conciliation Médicamenteuse (voir element *subject* de la *Composition*\\)."
 * section[CurrentMedication].focus ^requirements = "Le Traitement Médicamenteux Courant ne peut concerner que le patient déclaré comme sujet de cette Conciliation Médicamenteuse (voir element *subject* de la *Composition*\\)."
+
 * section[CurrentMedication].mode 1.. MS
 * section[CurrentMedication].mode ^short = "Liste courante exhaustive à sa date de réalisation (cf. element *date*\\) par son auteur (cf. element *author*\\)."
 * section[CurrentMedication].mode = #working
 * section[CurrentMedication].mode ^comment = "This element is labeled as a modifier because a change list must not be misunderstood as a complete list. **Dans ce profil**\\, sa valeur est fixée à ***working***\\."
 * section[CurrentMedication].mode ^requirements = "Contraindre une gestion univoque de cette liste représentant le Traitement Médicamenteux Courant."
+
 * section[CurrentMedication].orderedBy ^comment = "Non concerné car il n'y a qu'une seule <*entry*\\> dans cette <*section*\\>. L'ordre des lignes du Traitement Médicamenteux Courant attaché, sera porté par l'élément  *orderedBy* de la seule <*section*\\> de la *Composition* référencée."
+
 * section[CurrentMedication].entry 1..1 MS 
 * section[CurrentMedication].entry only Reference(FrCurrentMedicationComposition)
 * section[CurrentMedication].entry ^short = "La référence à la ressource *Composition* du Traitement Médicamenteux Courant. Ce Traitement peut, formellement, être vide si le patient ne prend pas de médicament lors de son hospitalisation."
 * section[CurrentMedication].entry ^comment = "Un Traitement Médicamenteux Courant, même vide si la patient ne prend aucun médicament lors de son hospitalisation, doit être attaché à la FCT (Fiche de Concimaition des Traitements médicamenteux)."
+
 * section[CurrentMedication].section ..0 MS
 * section[CurrentMedication].section ^requirements = "pas de sous-section dans le traitement médicamenteux courant (toutes les lignes de traitement sont au même niveau)"
 
