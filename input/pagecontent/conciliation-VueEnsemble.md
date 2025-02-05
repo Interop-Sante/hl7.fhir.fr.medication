@@ -36,7 +36,8 @@ Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](Structur
 
 ![Conciliation-ConciliationRetroactiveALAdmissiones](Conciliation3.jpg)
 
-### Ressources
+
+### Ressources définies au sein du guide
 
 <div class="figure" style="width:100%;">
     <p>{% include conciliation-overview.svg %}</p>
