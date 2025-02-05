@@ -28,32 +28,4 @@ MHComp --> MHMS : owner 0..1
 ' ########
 MHMS --> M : providedBy 0..1
 
-' ########
-' # CMMS #
-' ########
-CMMS --> organization : providedBy 0..1
-
-
-' ################
-' # organization #
-' ################
-organization --> organization : partOf 0..1
-
-' ##########
-' # person #
-' ##########
-person --> practitioner : link 0..*
-
-
-' ####################
-' # practitionerrole #
-' ####################
-
-' organization
-practitionerrole --> organization : organization 0..1
-
-' practitioner
-practitionerrole --> practitioner : practitioner 0..1
-
-
 @enduml
