@@ -31,11 +31,13 @@ Description: "Profil de la ressource *Composition* représentant la Fiche de Con
 * author ^requirements = "Identifier les co-auteurs de la FCT (Fiche de Conciliation des Traitements médicamenteux)."
 * author ^meaningWhenMissing = "Au moins un auteur obligatoire."
 * author.type = "PractitionerRole"
+
 * attester.party 1..
 * attester.party only Reference($FrCorePractitionerRole)
 * attester.party.reference 1..
 * attester.party.type = "Practitioner"
 * attester.party.identifier ..0
+
 * section ..3
 * section MS
 * section ^slicing.description = "3 sections : 1. Bilan médicamenteux ; 2Traitement Médicamenteux Courant ; 3. Conciliation proprement dite"
