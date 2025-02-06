@@ -1,6 +1,9 @@
 ### Vue d’ensemble
 
-### Implémentation
+> **Note :**  
+> La section conciliation est en draft
+
+#### Implémentation
 
 Les 3 documents de la conciliation sont implémentés chacun sous forme d'une ressource *Bundle* de type `document`.
 
@@ -15,11 +18,11 @@ Pour la conciliation rétroactive d'admission,
 - Le **Traitement Médicamenteux courant** est l'**Ordonnance Médicamenteuse d'Admission** représentée par la composition [FrOnAdmissionMedicationComposition](StructureDefinition-FrOnAdmissionMedicationComposition.html)
 - La **Fiche de Conciliation des Traitements (FCT)** est la **Fiche de Conciliation rétroactive des Traitements à l'admission** représentée par la composition [FrOnAdmissionRetroactiveMedicationReconciliationComposition](StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html)
 
-#### Les 3 documents supports de la conciliation
+##### Les 3 documents supports de la conciliation
 
 ![DocumentsSupportsConciliation](Conciliation1.jpg)
 
-#### Les ressources profilée par Interop'Santé
+##### Les ressources profilée par Interop'Santé
 
 Le profilage de ces ressources répond aux recommandations du [guide méthodologique de mise en œuvre de la conciliation médicamenteuse](https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante) publié par la Haute Autorité de Santé.
 
@@ -28,7 +31,7 @@ Le profilage de ces ressources répond aux recommandations du [guide méthodolog
 
 La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux du patient avant hospitalisation) et au *traitement médicamenteux courant* (le traitement médicamenteux en cours lors de l'hospitalisation). De ce fait, le profil [FrCurrentMedicationComposition](StructureDefinition-FrCurrentMedicationComposition.html) a été défini pour rendre compte de ce *traitement médicamenteux courant*.
 
-#### Dépendance des ressources profilés par Interop'Santé
+##### Dépendance des ressources profilés par Interop'Santé
 
 ![IGMedicationDependanceRessourcesProfileesConciliation](Conciliation2.jpg)
 
@@ -37,13 +40,13 @@ Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](Structur
 ![Conciliation-ConciliationRetroactiveALAdmissiones](Conciliation3.jpg)
 
 
-### Ressources définies au sein du guide
+#### Ressources définies au sein du guide
 
 <div class="figure" style="width:100%;">
     <p>{% include conciliation-overview.svg %}</p>
 </div>
 
-#### Profils
+##### Profils
 
 <!-- A retravailler, inutle car doublon difficile à maintenir, rediriger vers la page artifact ou un plantuml -->
 
@@ -105,7 +108,7 @@ Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](Structur
   - Composition du *Bundle* portant le document FHIR **Fiche de Conciliation rétroactive des Traitements à l'admission**
   - C'est un cas particulier de FCT, qui fixe le type du document à : rétroactvie à l'admission
 
-#### Extensions
+##### Extensions
 
 - [*FrMedicationHistorySources*](StructureDefinition-fr-medication-history-sources.html)
   - Type: *complex*
@@ -130,7 +133,7 @@ Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](Structur
     - résolution de la divergence identifiée sur la ligne de traitement
   - Figure dans la ressource *FrMedicationReconciliationMedicationStatement*, elle y est dénommée reconciliation
 
-#### ValueSets
+##### ValueSets
 
 - [*FrCurrentMedicationDocumentType*](ValueSet-FrCurrentMedicationDocumentType.html)
   Le type de document d'une ressource FrCurrentMedicationComposition (Traitement Médicamenteux Courant)
@@ -149,7 +152,7 @@ Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](Structur
 - [*FrMedicationReconciliationResolution*](ValueSet-FrMedicationReconciliationResolution.html)
   La résolution d'une divergence sur une ligne de traitement d'une FCT
 
-#### CodeSystems
+##### CodeSystems
 
 - [*FrDocumentType*](CodeSystem-fr-document-type.html)
   Le type de document, avec leur catégorie
@@ -167,5 +170,3 @@ Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](Structur
   La gravité de l'erreur sur une ligne de traitement d'une FCT
 - [*FrMedicationReconciliationResolution*](CodeSystem-FrMedicationReconciliationResolution.html)
   La résolution d'une divergence sur une ligne de traitement d'une FCT
-
-
