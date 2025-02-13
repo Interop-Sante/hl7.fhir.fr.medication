@@ -12,7 +12,7 @@ Selon que ce médicament prescrit est un **médicament simple** ou un **médicam
 le **médicament prescrit** est représenté par trois variantes de ressource *Medication*:
 
 - *FrMedicationUcd*: médicament exprimée en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521*
-- *FrMedicationNonProprietaryName*: médicament exprimé en DC (dénomination commune)/ Ex: *paracétamol*
+- *FrMedicationNonProprietaryName*: médicament exprimé en DC (dénomination commune identifiée par son **code SMS** ou son **code technique ANSM** dans l'attente de l'attribution d'un code SMS )/ Ex: *paracétamol dont le code SMS est 100000090270*
 - *FrMedicationCompound*: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: *glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g*.
 
 Dépendance des ressources profilées par Interop'Santé
@@ -43,7 +43,7 @@ En prescription intrahospitalière, il n'y a généralement pas de consigne de d
 
 Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FrInPatientMedicationRequest*.
 
-Elles concernent également les règles définissant la **première dose prescrite** et la **dernière dose prescrites**.
+Elles concernent également les règles définissant la **première dose prescrite** et la **dernière dose prescrite**.
 
 Deux dates, de début et de fin, de la ligne de prescription doivent être considérées :
 
@@ -155,7 +155,7 @@ Notes
 
     - la Date/heure début prescrite est J1 10h30 ;
     - la Date/heure fin prescrite est J6 10h30 (J1 10h30 + 5j = J6 10h30) ;
-    - la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la lilgne de prescription à J6 7h.
+    - la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la ligne de prescription à J6 7h.
 1. Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de *dosageInstruction* doit ajouter la durée de l’administration, `dosageInstruction.doseAndRate.RateRatio.denominator`, à la date/heure de début d’administration de cette dernière dose.
 1. Pour les posologies complexes, impliquant une description au travers d’une collection d’éléments `dosageInstruction` rattachés à *MedicationRequest*, c’est l’interprétation de la collection de `dosageInstruction` qui doit conduire au calcul de ces dates/heures début/fin effectives de *MedicationRequest* (fonction min() pour les dates de début, fonction max() pour les date de fin).
 

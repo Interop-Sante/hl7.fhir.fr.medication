@@ -4,7 +4,7 @@
 
 ### La ligne de prescription initiale, complexité du médicament prescrit
 
-#### Médicament simple en spécilialité
+#### Médicament simple en spécialité
 
 - [EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-14624.html)
 - [CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h par os, pendant 5j](MedicationRequest-14625.html)
@@ -34,14 +34,14 @@
   - Ces deux variantes sont **soumises à concertation : une seule sera retenue**. Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques), § concacré à l'extension *IsVehicle*
 - [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-14651.html)
 
-### La prescription inititale, complexité de la posologie
+### La prescription initiale, complexité de la posologie
 
 Un premier niveau de complexité est adressé par les cas d'usage précédents.
 Les niveaux de complexité supplémentaires adressent
 
 - les doses rationnelles
-  - [BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendent 1 semaine](MedicationRequest-14646.html)
-  - Dans FHIR, les nombres rationnels sont traduit en type decimal, avec des règles concernant la gestion de la *précision*
+  - [BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine](MedicationRequest-14646.html)
+  - Dans FHIR, les nombres rationnels sont traduits en type decimal, avec des règles concernant la gestion de la *précision*
   - En pratique, pour l'expression de la dose, les nombres rationnels impliqués se limitent à 1/4, 1/3, 1/2, 2/3 et 3/4
   - Ce guide recommande de représenter les rationnels à la 6ème décimal. Ainsi
     - 1/4 : 0.25
@@ -52,7 +52,7 @@ Les niveaux de complexité supplémentaires adressent
 - des doses différentes entre horaires
   - [CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j](MedicationRequest-14641.html)
   - [paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j](MedicationRequest-14642.html)
-- les fréquences inférieurs à la journée
+- les fréquences inférieures à la journée
   - [CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j](MedicationRequest-14643.html)
   - [paracétamol, 500 mg toutes les 6 h per os, pendant 5j](MedicationRequest-14644.html)
 - les fréquences calendaires
@@ -63,7 +63,7 @@ Les niveaux de complexité supplémentaires adressent
   - Le type complexe *Timing* est normatif, il est en pratique impossible de le faire évoluer.
     - Faut-il créer les extensions *dayOfMonth* et *weekdayOfMonth* ?
     - Note: l'extension standard [dayOfMonth](https://hl7.org/fhir/R4/extension-timing-dayofmonth.html) existe !! (maturité 1).
-- les prescriptions conditionnelles simple
+- les prescriptions conditionnelles simples
   - [CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j](MedicationRequest-14639.html)
   - [paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j](MedicationRequest-14640.html)
   - Le concept de délais *minimum* entre deux prises n'est pas codable.
@@ -130,7 +130,7 @@ entre
 #### Objectif
 
 - La quantité de principes actifs de la dose doit être déterminée,
-- Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminé.
+- Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminée.
 
 #### Contrainte sur le Médicament prescrit (`MedicationRequest.medication`)
 
@@ -258,7 +258,7 @@ Voir les deux variantes de l'exemple
 1. sur .ingredient de Medication composé : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html)
 
 Ces **deux variantes** transmettent strictement la même information et **sont soumises à concertation**.
-Dans le version 1 finalisé du guide, **une seule sera retenue** et le contexte d'application de l'extension *IsVehicule* sera réduit en conséquence.
+Dans la version 1 finalisée du guide, **une seule sera retenue** et le contexte d'application de l'extension *IsVehicule* sera réduit en conséquence.
 
 Note PN13:
 
@@ -267,7 +267,7 @@ Note PN13:
 
 ### Q.S.P. (quantité suffisante pour ...)
 
-Cette expression est utilisé dans la prescription des injectables en seringue électrique pour déclarer le volume de soluté composant le médicament prescrit en *quantité suffisante pour* atteindre le volume du médicament composé, c'est-à-dire le volume final de la seringue.
+Cette expression est utilisée dans la prescription des injectables en seringue électrique pour déclarer le volume de soluté composant le médicament prescrit en *quantité suffisante pour* atteindre le volume du médicament composé, c'est-à-dire le volume final de la seringue.
 
 L'application de la règle suivante répond à ce cas d'usage :
 
@@ -309,7 +309,7 @@ Elles s'expriment dans la ressource Medication référencée par l'élément med
 
 La durée d'administration du patch est un choix du prescipteur.
 
-Il **DOIT** être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est idenitique à la durée maximal garantie par le dispositif intégré.
+Il **DOIT** être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est identique à la durée maximale garantie par le dispositif intégré.
 
 Le guide d'implémentation n'assigne à la durée d'administration, aucune valeur par défaut qui serait particulière aux patches.
 

@@ -5,7 +5,7 @@
   <p>
     <b>Note</b>
     <br>
-    Dans un futur proche, le référentiel unique d'interopérabilité du médicament (RUIM) remplacera les terminologies non standard présentes dans ce guide d'implémentation.
+    Dans un futur proche, le référentiel unique d'interopérabilité du médicament (RUIM) remplacera les terminologies non standards présentes dans ce guide d'implémentation.
   </p>
 </blockquote>
 
@@ -20,7 +20,7 @@ Ce domaine est pris en charge par le GT Pharmacie d'HL7 France au sein de l'asso
 
 Cet IG est en développement continu. Certaines sections n’ont pas encore été complètement développées dans cette version. Ces sections sont néanmoins identifiées pour référence.
 
-L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformationPN13-FHIR.html) et inversement.
+L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformation-PN13-vers-FHIR.html) et inversement.
 
 ## Dépendances
 

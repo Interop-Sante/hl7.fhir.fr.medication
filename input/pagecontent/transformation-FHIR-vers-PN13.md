@@ -4,9 +4,9 @@
 
 Prévu pour une version ultérieure de ce guide.
 
-## La prescritpion
+## La prescription
 
-Prévu pour une version ultérieur de ce guide.
+Prévu pour une version ultérieure de ce guide.
 
 ## La dispensation
 
