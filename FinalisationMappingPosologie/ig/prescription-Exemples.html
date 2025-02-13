@@ -277,7 +277,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#exemples" id="markdown-toc-exemples">Exemples</a>    <ul>
       <li><a href="#exemples-généraux" id="markdown-toc-exemples-généraux">Exemples généraux</a>        <ul>
           <li><a href="#la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit" id="markdown-toc-la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit">La ligne de prescription initiale, complexité du médicament prescrit</a></li>
-          <li><a href="#la-prescription-inititale-complexité-de-la-posologie" id="markdown-toc-la-prescription-inititale-complexité-de-la-posologie">La prescription inititale, complexité de la posologie</a></li>
+          <li><a href="#la-prescription-initiale-complexité-de-la-posologie" id="markdown-toc-la-prescription-initiale-complexité-de-la-posologie">La prescription initiale, complexité de la posologie</a></li>
           <li><a href="#les-modifcations-de-la-ligne-prescription-initiale" id="markdown-toc-les-modifcations-de-la-ligne-prescription-initiale">Les modifcations de la ligne prescription initiale</a></li>
         </ul>
       </li>
@@ -314,7 +314,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit">La ligne de prescription initiale, complexité du médicament prescrit</h3>
 
-<h4 id="médicament-simple-en-spécilialité">Médicament simple en spécilialité</h4>
+<h4 id="médicament-simple-en-spécialité">Médicament simple en spécialité</h4>
 
 <ul>
   <li><a href="MedicationRequest-14624.html">EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j</a></li>
@@ -356,7 +356,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
 </ul>
 
-<h3 id="la-prescription-inititale-complexité-de-la-posologie">La prescription inititale, complexité de la posologie</h3>
+<h3 id="la-prescription-initiale-complexité-de-la-posologie">La prescription initiale, complexité de la posologie</h3>
 
 <p>Un premier niveau de complexité est adressé par les cas d’usage précédents.
 Les niveaux de complexité supplémentaires adressent</p>
@@ -364,8 +364,8 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li>les doses rationnelles
     <ul>
-      <li><a href="MedicationRequest-14646.html">BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendent 1 semaine</a></li>
-      <li>Dans FHIR, les nombres rationnels sont traduit en type decimal, avec des règles concernant la gestion de la <em>précision</em></li>
+      <li><a href="MedicationRequest-14646.html">BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine</a></li>
+      <li>Dans FHIR, les nombres rationnels sont traduits en type decimal, avec des règles concernant la gestion de la <em>précision</em></li>
       <li>En pratique, pour l’expression de la dose, les nombres rationnels impliqués se limitent à 1/4, 1/3, 1/2, 2/3 et 3/4</li>
       <li>Ce guide recommande de représenter les rationnels à la 6ème décimal. Ainsi
         <ul>
@@ -384,7 +384,7 @@ Les niveaux de complexité supplémentaires adressent</p>
       <li><a href="MedicationRequest-14642.html">paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j</a></li>
     </ul>
   </li>
-  <li>les fréquences inférieurs à la journée
+  <li>les fréquences inférieures à la journée
     <ul>
       <li><a href="MedicationRequest-14643.html">CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j</a></li>
       <li><a href="MedicationRequest-14644.html">paracétamol, 500 mg toutes les 6 h per os, pendant 5j</a></li>
@@ -407,7 +407,7 @@ Les niveaux de complexité supplémentaires adressent</p>
       </li>
     </ul>
   </li>
-  <li>les prescriptions conditionnelles simple
+  <li>les prescriptions conditionnelles simples
     <ul>
       <li><a href="MedicationRequest-14639.html">CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
       <li><a href="MedicationRequest-14640.html">paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
@@ -518,7 +518,7 @@ Les niveaux de complexité supplémentaires adressent</p>
 
 <ul>
   <li>La quantité de principes actifs de la dose doit être déterminée,</li>
-  <li>Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminé.</li>
+  <li>Sauf pour les unités de prescription à volume indéterminé (ex : application), la concentration de principes actifs de la dose doit être déterminée.</li>
 </ul>
 
 <h4 id="contrainte-sur-le-médicament-prescrit-medicationrequestmedication">Contrainte sur le Médicament prescrit (<code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>)</h4>
@@ -657,7 +657,7 @@ Cette extension est appliquée</p>
 </ol>
 
 <p>Ces <strong>deux variantes</strong> transmettent strictement la même information et <strong>sont soumises à concertation</strong>.
-Dans le version 1 finalisé du guide, <strong>une seule sera retenue</strong> et le contexte d’application de l’extension <em>IsVehicule</em> sera réduit en conséquence.</p>
+Dans la version 1 finalisée du guide, <strong>une seule sera retenue</strong> et le contexte d’application de l’extension <em>IsVehicule</em> sera réduit en conséquence.</p>
 
 <p>Note PN13:</p>
 
@@ -668,7 +668,7 @@ Dans le version 1 finalisé du guide, <strong>une seule sera retenue</strong> et
 
 <h3 id="qsp-quantité-suffisante-pour-">Q.S.P. (quantité suffisante pour …)</h3>
 
-<p>Cette expression est utilisé dans la prescription des injectables en seringue électrique pour déclarer le volume de soluté composant le médicament prescrit en <em>quantité suffisante pour</em> atteindre le volume du médicament composé, c’est-à-dire le volume final de la seringue.</p>
+<p>Cette expression est utilisée dans la prescription des injectables en seringue électrique pour déclarer le volume de soluté composant le médicament prescrit en <em>quantité suffisante pour</em> atteindre le volume du médicament composé, c’est-à-dire le volume final de la seringue.</p>
 
 <p>L’application de la règle suivante répond à ce cas d’usage :</p>
 
@@ -722,7 +722,7 @@ délivré de principe(s) actif(s).</li>
 
 <p>La durée d’administration du patch est un choix du prescipteur.</p>
 
-<p>Il <strong>DOIT</strong> être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est idenitique à la durée maximal garantie par le dispositif intégré.</p>
+<p>Il <strong>DOIT</strong> être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est identique à la durée maximale garantie par le dispositif intégré.</p>
 
 <p>Le guide d’implémentation n’assigne à la durée d’administration, aucune valeur par défaut qui serait particulière aux patches.</p>
 
@@ -803,7 +803,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 5, 2025 09:11+0000">2025-02-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 13, 2025 15:34+0000">2025-02-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

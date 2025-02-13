@@ -290,7 +290,7 @@ le <strong>médicament prescrit</strong> est représenté par trois variantes de
 
 <ul>
   <li><em>FrMedicationUcd</em>: médicament exprimée en spécialité identifié par son <strong>code UCD</strong>. Ex: <em>EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521</em></li>
-  <li><em>FrMedicationNonProprietaryName</em>: médicament exprimé en DC (dénomination commune)/ Ex: <em>paracétamol</em></li>
+  <li><em>FrMedicationNonProprietaryName</em>: médicament exprimé en DC (dénomination commune identifiée par son <strong>code SMS</strong> ou son <strong>code technique ANSM</strong> dans l’attente de l’attribution d’un code SMS )/ Ex: <em>paracétamol dont le code SMS est 100000090270</em></li>
   <li><em>FrMedicationCompound</em>: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: <em>glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g</em>.</li>
 </ul>
 
@@ -324,7 +324,7 @@ Ex: <em>paracétamol+codéine 500 mg+30 mg</em></p>
 
 <p>Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource <em>MedicationRequest</em> profilée <em>FrInPatientMedicationRequest</em>.</p>
 
-<p>Elles concernent également les règles définissant la <strong>première dose prescrite</strong> et la <strong>dernière dose prescrites</strong>.</p>
+<p>Elles concernent également les règles définissant la <strong>première dose prescrite</strong> et la <strong>dernière dose prescrite</strong>.</p>
 
 <p>Deux dates, de début et de fin, de la ligne de prescription doivent être considérées :</p>
 
@@ -464,7 +464,7 @@ Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un éléme
     <ul>
       <li>la Date/heure début prescrite est J1 10h30 ;</li>
       <li>la Date/heure fin prescrite est J6 10h30 (J1 10h30 + 5j = J6 10h30) ;</li>
-      <li>la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la lilgne de prescription à J6 7h.</li>
+      <li>la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la ligne de prescription à J6 7h.</li>
     </ul>
   </li>
   <li>Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de <em>dosageInstruction</em> doit ajouter la durée de l’administration, <code class="language-plaintext highlighter-rouge">dosageInstruction.doseAndRate.RateRatio.denominator</code>, à la date/heure de début d’administration de cette dernière dose.</li>
@@ -510,7 +510,7 @@ Dans cet exemple</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 5, 2025 09:11+0000">2025-02-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 13, 2025 15:34+0000">2025-02-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
