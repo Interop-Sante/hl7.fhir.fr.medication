@@ -326,7 +326,7 @@ Usage: #definition
 * group[10].element[7].target[0].code = #MedicationRequest.status
 * group[10].element[7].target[0].equivalence = #equivalent
 * group[10].element[7].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/GoNogo
-* group[10].element[7].target[0].dependsOn[0].value = {Absent}
+* group[10].element[7].target[0].dependsOn[0].value = "{Absent}"
 * group[10].element[7].target[0].product[0].property = #MedicationRequest.status
 * group[10].element[7].target[0].product[0].value = "active"
 * group[10].element[7].target[0].product[1].property = #MedicationRequest.intent
@@ -338,7 +338,7 @@ Usage: #definition
 * group[10].element[9].target[0].equivalence = #unmatched
 * group[10].element[10].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Conditions_application
 // mettre extension pour qualifier la note
-* group[10].element[10]].target[0].code = #MedicationRequest.note.text
+* group[10].element[10].target[0].code = #MedicationRequest.note.text
 * group[10].element[10].target[0].equivalence = #equal
 * group[11].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit
 * group[11].element[0].target[0].code = #MedicationRequest.medicationReference
