@@ -1,0 +1,1188 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-FreeSetCIODC-Unite-ConceptMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PN13-FHIR-FreeSetCIODC-Unite-ConceptMap"] ; # 
+  fhir:language [ fhir:v "fr-FR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Transformation codes CIO vers terminologie cible identifiée pour les unités des quantités administrées des médicaments</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-unite-conceptmap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrPN13FHIRFreeSetCIODCUniteConceptMap"] ; # 
+  fhir:title [ fhir:v "Mapping Free Set CIO-DC UNITE"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-02-10T11:15:38Z"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ConceptMap pour la conversion des codes d'unité d'administration de médicaments entre CIO et UCUM"] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "https://www.phast.fr/ciodm/"^^xsd:anyURI ] ;
+     fhir:sourceVersion [ fhir:v "2025" ] ;
+     fhir:target [ fhir:v "https://ucum.org/"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "10*3.bq" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "kBq" ] ;
+         fhir:display [ fhir:v "kBq" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*6" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "10*6" ] ;
+         fhir:display [ fhir:v "10n" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*6.a" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "M[arb'U]" ] ;
+         fhir:display [ fhir:v "106U" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*6.bq" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MBq" ] ;
+         fhir:display [ fhir:v "MBq" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*6.iu" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "M[iU]" ] ;
+         fhir:display [ fhir:v "106UI" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*6.u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "M[arb'U]" ] ;
+         fhir:display [ fhir:v "106U" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*9" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "10*9" ] ;
+         fhir:display [ fhir:v "milliard" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "10*9.bq" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "GBq" ] ;
+         fhir:display [ fhir:v "GBq" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "agD_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[D'ag'U]" ] ;
+         fhir:display [ fhir:v "U agD" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ah_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]{anti'hep}" ] ;
+         fhir:display [ fhir:v "U anti hép." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "amp" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{amp}" ] ;
+         fhir:display [ fhir:v "amp" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "an" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "a" ] ;
+         fhir:display [ fhir:v "a" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "appln" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{appln}" ] ;
+         fhir:display [ fhir:v "appln" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "applr" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{applr}" ] ;
+         fhir:display [ fhir:v "applr" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "arb_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]" ] ;
+         fhir:display [ fhir:v "U" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "axa_iu" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[anti'Xa'U]" ] ;
+         fhir:display [ fhir:v "U anti Xa" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "baton" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{stick}" ] ;
+         fhir:display [ fhir:v "bâton" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "BBCHE" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{mouthw}" ] ;
+         fhir:display [ fhir:v "b.bche" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "boite" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{box}" ] ;
+         fhir:display [ fhir:v "boîte" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "bouffee" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{puff}" ] ;
+         fhir:display [ fhir:v "bouffée" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "bq" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Bq" ] ;
+         fhir:display [ fhir:v "Bq" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "btle" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{btle}" ] ;
+         fhir:display [ fhir:v "boutteille" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "c_a_c" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[tsp_m]" ] ;
+         fhir:display [ fhir:v "càc" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "c_a_d" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{dsp}" ] ;
+         fhir:display [ fhir:v "càd" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "c_a_s" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[tbs_m]" ] ;
+         fhir:display [ fhir:v "càs" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "c_mes" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{mes'sp}" ] ;
+         fhir:display [ fhir:v "c.mes." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cadre" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{frame}" ] ;
+         fhir:display [ fhir:v "cadre" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "caisse" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{crate}" ] ;
+         fhir:display [ fhir:v "caisse" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "caps" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{caps}" ] ;
+         fhir:display [ fhir:v "caps" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cart" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{cart}" ] ;
+         fhir:display [ fhir:v "cart" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "catap" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{poult}" ] ;
+         fhir:display [ fhir:v "catapl." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ceip_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]{ceip}" ] ;
+         fhir:display [ fhir:v "U CEIP" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cpr" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{tbl}" ] ;
+         fhir:display [ fhir:v "cpr" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cprsse" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{dress}" ] ;
+         fhir:display [ fhir:v "compresse" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cycle" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{cycle}" ] ;
+         fhir:display [ fhir:v "cycle" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dc" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{cut'dev}" ] ;
+         fhir:display [ fhir:v "disp.cut." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ddose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{meas'dev}" ] ;
+         fhir:display [ fhir:v "disp.doseur" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "diu" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{iud}" ] ;
+         fhir:display [ fhir:v "diu" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{dose}" ] ;
+         fhir:display [ fhir:v "dose" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dose_kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{kg'dose}" ] ;
+         fhir:display [ fhir:v "dose-kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosevac" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{vac'dose}" ] ;
+         fhir:display [ fhir:v "dose-vac" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dtd" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{patch}" ] ;
+         fhir:display [ fhir:v "cutaneous patch" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dvag" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{vag'dev}" ] ;
+         fhir:display [ fhir:v "disp.vagin." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "EMPMED" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{med'plast}" ] ;
+         fhir:display [ fhir:v "emplâtre méd." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "eph_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]{eph}" ] ;
+         fhir:display [ fhir:v "UPE" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "epmed" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{med'spng}" ] ;
+         fhir:display [ fhir:v "éponge méd." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "feiba_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]{feiba}" ] ;
+         fhir:display [ fhir:v "U FEIBA" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "feuille" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{foil}" ] ;
+         fhir:display [ fhir:v "feuille" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "film_ths" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{blister}" ] ;
+         fhir:display [ fhir:v "film thermos." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "flac" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{vial}" ] ;
+         fhir:display [ fhir:v "vial" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "flac c-gttes" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{drpr'cont}" ] ;
+         fhir:display [ fhir:v "flac.c.gttes" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "flac_pres" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{prsrd'cont}" ] ;
+         fhir:display [ fhir:v "flac.press." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "flac_pulv" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{spray}" ] ;
+         fhir:display [ fhir:v "flac.pulv." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "flm orodisp" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{orodisp'flm}" ] ;
+         fhir:display [ fhir:v "film orodisp." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "fut" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{bbl}" ] ;
+         fhir:display [ fhir:v "fût" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g" ] ;
+         fhir:display [ fhir:v "g" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/h" ] ;
+         fhir:display [ fhir:v "g/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/kg" ] ;
+         fhir:display [ fhir:v "g/kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/kg/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/kg/h" ] ;
+         fhir:display [ fhir:v "g/kg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/kg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/kg/min" ] ;
+         fhir:display [ fhir:v "g/kg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/m2" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/m2" ] ;
+         fhir:display [ fhir:v "g/m²" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/m2/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/m2/h" ] ;
+         fhir:display [ fhir:v "g/m²/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/m2/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/m2/min" ] ;
+         fhir:display [ fhir:v "g/m²/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "g/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "g/min" ] ;
+         fhir:display [ fhir:v "g/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "gel" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{hard'caps}" ] ;
+         fhir:display [ fhir:v "gelule" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "godet" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{cup}" ] ;
+         fhir:display [ fhir:v "godet" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "gomme" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{gum}" ] ;
+         fhir:display [ fhir:v "gomme" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "granule" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{granule}" ] ;
+         fhir:display [ fhir:v "granule" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "gte" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[drp]" ] ;
+         fhir:display [ fhir:v "gtte" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "h" ] ;
+         fhir:display [ fhir:v "h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "implant" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{implant}" ] ;
+         fhir:display [ fhir:v "implant" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "inhalateur" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{inhaler}" ] ;
+         fhir:display [ fhir:v "inhalateur" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "inka_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]{kallikrein inactivator}" ] ;
+         fhir:display [ fhir:v "U IK" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "insert" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{insert}" ] ;
+         fhir:display [ fhir:v "insert" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "inst" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{inst}" ] ;
+         fhir:display [ fhir:v "instill." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "irrig" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{irrig}" ] ;
+         fhir:display [ fhir:v "irrig." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]" ] ;
+         fhir:display [ fhir:v "UI" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/h" ] ;
+         fhir:display [ fhir:v "UI/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/kg" ] ;
+         fhir:display [ fhir:v "UI/kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/kg/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/kg/h" ] ;
+         fhir:display [ fhir:v "UI/kg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/kg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/kg/min" ] ;
+         fhir:display [ fhir:v "UI/kg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/m2" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/m2" ] ;
+         fhir:display [ fhir:v "UI/m²" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/m2/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/m2/h" ] ;
+         fhir:display [ fhir:v "UI/m²/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/m2/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/m2/min" ] ;
+         fhir:display [ fhir:v "UI/m²/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/mL" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/mL" ] ;
+         fhir:display [ fhir:v "UI/mL" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "iu/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[iU]/min" ] ;
+         fhir:display [ fhir:v "UI/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "j" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "d" ] ;
+         fhir:display [ fhir:v "j" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "kg" ] ;
+         fhir:display [ fhir:v "kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "kit" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{kit}" ] ;
+         fhir:display [ fhir:v "kit" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "L" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "L" ] ;
+         fhir:display [ fhir:v "L" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "L/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "L/min" ] ;
+         fhir:display [ fhir:v "L/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "lavg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{wash}" ] ;
+         fhir:display [ fhir:v "lavage" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "lavmt" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{enem}" ] ;
+         fhir:display [ fhir:v "lavement" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "loo_u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "[arb'U]{loo}" ] ;
+         fhir:display [ fhir:v "Loomis" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "lyoph_or" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{oral'lyoph}" ] ;
+         fhir:display [ fhir:v "lyoph.oral" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "m" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "m" ] ;
+         fhir:display [ fhir:v "m" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "m2" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "m2" ] ;
+         fhir:display [ fhir:v "m²" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "matrice" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{matrix}" ] ;
+         fhir:display [ fhir:v "matrice" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "meq" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "meq" ] ;
+         fhir:display [ fhir:v "meq" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "meq/L" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "meq/L" ] ;
+         fhir:display [ fhir:v "meq/L" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg" ] ;
+         fhir:display [ fhir:v "mg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/h" ] ;
+         fhir:display [ fhir:v "mg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/kg" ] ;
+         fhir:display [ fhir:v "mg/kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/kg/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/kg/h" ] ;
+         fhir:display [ fhir:v "mg/kg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/kg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/kg/min" ] ;
+         fhir:display [ fhir:v "mg/kg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/m2" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/m2" ] ;
+         fhir:display [ fhir:v "mg/m²" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/m2/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/m2/h" ] ;
+         fhir:display [ fhir:v "mg/m²/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/m2/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/m2/min" ] ;
+         fhir:display [ fhir:v "mg/m²/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mg/min" ] ;
+         fhir:display [ fhir:v "mg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL" ] ;
+         fhir:display [ fhir:v "mL" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/h" ] ;
+         fhir:display [ fhir:v "mL/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/kg" ] ;
+         fhir:display [ fhir:v "mL/kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/kg/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/kg/h" ] ;
+         fhir:display [ fhir:v "mL/kg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/kg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/kg/min" ] ;
+         fhir:display [ fhir:v "mL/kg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/m2" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/m2" ] ;
+         fhir:display [ fhir:v "mL/m²" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/m2/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/m2/h" ] ;
+         fhir:display [ fhir:v "mL/m²/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/m2/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/m2/min" ] ;
+         fhir:display [ fhir:v "mL/m²/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mL/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mL/min" ] ;
+         fhir:display [ fhir:v "mL/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mmol" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mmol" ] ;
+         fhir:display [ fhir:v "mmol" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mmol/L" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mmol/L" ] ;
+         fhir:display [ fhir:v "mmol/L" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "min" ] ;
+         fhir:display [ fhir:v "min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mois" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mo" ] ;
+         fhir:display [ fhir:v "m" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "mosm/L" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "mosm/L" ] ;
+         fhir:display [ fhir:v "mosm/L" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ng" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ng" ] ;
+         fhir:display [ fhir:v "ng" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ng/kg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ng/kg/min" ] ;
+         fhir:display [ fhir:v "ng/kg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "nkat" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "nkat" ] ;
+         fhir:display [ fhir:v "nkat" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ovule" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{pess}" ] ;
+         fhir:display [ fhir:v "ovule" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "paire" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{pair}" ] ;
+         fhir:display [ fhir:v "paire" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "past" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{loz}" ] ;
+         fhir:display [ fhir:v "pastille" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pâte" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{paste}" ] ;
+         fhir:display [ fhir:v "pâte" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pièce" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{piece}" ] ;
+         fhir:display [ fhir:v "pièce" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "plaq" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{blister}" ] ;
+         fhir:display [ fhir:v "film thermos." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "poche" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{bag}" ] ;
+         fhir:display [ fhir:v "poche" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pot" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{jar}" ] ;
+         fhir:display [ fhir:v "pot" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ppe_doseuse" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{meter'pump}" ] ;
+         fhir:display [ fhir:v "pompe doseuse" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pres" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{press}" ] ;
+         fhir:display [ fhir:v "pression" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pst" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "bandg}" ] ;
+         fhir:display [ fhir:v "pst" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pulv" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{spray}" ] ;
+         fhir:display [ fhir:v "flac.pulv." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "rec_dose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{meter'cont}" ] ;
+         fhir:display [ fhir:v "récip.doseur" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "rec_multi" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{multidose'cont}" ] ;
+         fhir:display [ fhir:v "récip.multidose" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "rec_unidose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{sgldose'cont}" ] ;
+         fhir:display [ fhir:v "récip.unidose" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "sachet" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{sachet}" ] ;
+         fhir:display [ fhir:v "sachet" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "SDIU" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{iud'syst}" ] ;
+         fhir:display [ fhir:v "sdiu" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "SDV" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{vd'syst}" ] ;
+         fhir:display [ fhir:v "sdvag" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ser" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{syr}" ] ;
+         fhir:display [ fhir:v "ser" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ser_prr" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{pfs}" ] ;
+         fhir:display [ fhir:v "ser.préremp" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "set" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{set}" ] ;
+         fhir:display [ fhir:v "set" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "stylo_prr" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{pfp}" ] ;
+         fhir:display [ fhir:v "stylo préremp" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "suppo" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{suppo}" ] ;
+         fhir:display [ fhir:v "suppo." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "tube" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{tube}" ] ;
+         fhir:display [ fhir:v "tube" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "u" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "U" ] ;
+         fhir:display [ fhir:v "U" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug" ] ;
+         fhir:display [ fhir:v "µg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/h" ] ;
+         fhir:display [ fhir:v "µg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/kg" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/kg" ] ;
+         fhir:display [ fhir:v "µg/kg" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/kg/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/kg/h" ] ;
+         fhir:display [ fhir:v "µg/kg/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/kg/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/kg/min" ] ;
+         fhir:display [ fhir:v "µg/kg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/m2" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/m2" ] ;
+         fhir:display [ fhir:v "µg/m²" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/m2/h" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/m2/h" ] ;
+         fhir:display [ fhir:v "µg/m²/h" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/m2/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/m2/min" ] ;
+         fhir:display [ fhir:v "µg/m²/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug/mn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug/min" ] ;
+         fhir:display [ fhir:v "µg/min" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ug_hagglu" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ug{hagglu}" ] ;
+         fhir:display [ fhir:v "µg hémagglut." ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ukat" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ukat" ] ;
+         fhir:display [ fhir:v "µkat" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "uL" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "uL" ] ;
+         fhir:display [ fhir:v "µL" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "VAPO" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "{evaporator}" ] ;
+         fhir:display [ fhir:v "évaporateur" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
