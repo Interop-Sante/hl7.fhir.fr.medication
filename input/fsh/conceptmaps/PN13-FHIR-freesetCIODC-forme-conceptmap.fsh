@@ -3,8 +3,6 @@ InstanceOf: ConceptMap
 Description: "Conversion des codes CIO de forme de médicament en codes des terminologies EQDM Standard Terms et SNOMED-CT"
 Usage: #definition
 * language = #fr-FR
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Transformation codes CIO vers terminologie cible identifiée pour les formes de médicaments</div>"
 * url = "https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-forme-conceptmap"
 * version = "0.1.0"
 * name = "FrPN13FHIRFreeSetCIODCFormeConceptMap"
