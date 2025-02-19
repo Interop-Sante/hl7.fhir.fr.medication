@@ -3,8 +3,6 @@ InstanceOf: ConceptMap
 Description: "Conversion des codes CIO d'unité d'administration de médicaments en codes du référentiel UCUM"
 Usage: #definition
 * language = #fr-FR
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Transformation codes CIO vers terminologie cible identifiée pour les unités des quantités administrées des médicaments</div>"
 * url = "https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-unite-conceptmap"
 * version = "0.1.0"
 * name = "FrPN13FHIRFreeSetCIODCUniteConceptMap"
