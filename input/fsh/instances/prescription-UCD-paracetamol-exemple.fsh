@@ -97,11 +97,11 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
+* note[0].text = "Prescritpion textuelle: PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
 * note[=].extension[NoteScope].valueCode = #LIPRESCTXT
-* note[+].text = "Si douleur"
+* note[+].text = "Indication: Si douleur"
 * note[=].extension[NoteScope].valueCode = #LIPRESCIND
-* note[+].text = "Test paracetamol 2 (à la demande)"
+* note[+].text = "Commentaire: Test paracetamol 2 (à la demande)"
 * note[=].extension[NoteScope].valueCode = #LIPRESCCOMM
 * medicationReference.reference = "#medication-prescr-UCD-paracetamol-exemple"
 * subject.reference = "#patient-prescr-UCD-paracetamol-exemple"
