@@ -1,19 +1,19 @@
-Instance: prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: prescription-UCD-paracetamol-exemple
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de UCD-2 
 Usage: #example
 * type = #searchset
-* entry[0].resource = patient-prescription-UCD-paracetamol-a-la-demande-exemple
-* entry[+].resource = practitioner-prescription-UCD-paracetamol-a-la-demande-exemple
-* entry[+].resource = medication-prescription-UCD-paracetamol-a-la-demande-exemple
-* entry[+].resource = observation-1-prescription-UCD-paracetamol-a-la-demande-exemple
-* entry[+].resource = observation-2-prescription-UCD-paracetamol-a-la-demande-exemple
-* entry[+].resource = medicationrequest-prescription-UCD-paracetamol-a-la-demande-exemple
+* entry[0].resource = patient-prescr-UCD-paracetamol-exemple
+* entry[+].resource = practitioner-prescr-UCD-paracetamol-exemple
+* entry[+].resource = medication-prescr-UCD-paracetamol-exemple
+* entry[+].resource = observation-1-prescr-UCD-paracetamol-exemple
+* entry[+].resource = observation-2-prescr-UCD-paracetamol-exemple
+* entry[+].resource = medicationrequest-prescr-UCD-paracetamol-exemple
 
-Instance: patient-prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: patient-prescr-UCD-paracetamol-exemple
 InstanceOf: Patient
 Usage: #inline
-* id = "patient-prescription-UCD-paracetamol-a-la-demande-exemple"
+* id = "patient-prescr-UCD-paracetamol-exemple"
 * meta.profile[0] = $FrCorePatient
 * identifier[0].use = #usual
 * identifier[=].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -28,10 +28,10 @@ Usage: #inline
 * name[=].given = "JAUNE"
 * birthDate = "1961-11-25"
 
-Instance: practitioner-prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: practitioner-prescr-UCD-paracetamol-exemple
 InstanceOf: Practitioner
 Usage: #inline
-* id = "practitioner-prescription-UCD-paracetamol-a-la-demande-exemple"
+* id = "practitioner-prescr-UCD-paracetamol-exemple"
 * meta.profile[0] = $FrCorePractitioner
 * identifier[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[=].type.coding[=].code = #EI
@@ -44,51 +44,51 @@ Usage: #inline
 * name[=].family = "LUIGGI"
 * name[=].given = "DENIS"
 
-Instance: medication-prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: medication-prescr-UCD-paracetamol-exemple
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-prescription-UCD-paracetamol-a-la-demande-exemple"
+* id = "medication-prescr-UCD-paracetamol-exemple"
 * code.coding[0].code = #3400890006262
 * code.coding[=].system = $UCD
 * code.coding[=].display = "PARACETAMOL VIC 1000MG CPR"
 * code.text = "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME"
 * form = $EDQM#10219000 "Comprimé"
 
-Instance: observation-1-prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: observation-1-prescr-UCD-paracetamol-exemple
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-1-prescription-UCD-paracetamol-a-la-demande-exemple"
+* id = "observation-1-prescr-UCD-paracetamol-exemple"
 * meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * status = #final
 * category.coding[0].code = #vital-signs
 * category.coding[=].system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding[0].code = #8302-2
 * code.coding[=].system = "http://loinc.org"
-* subject.reference = "#patient-prescription-UCD-paracetamol-a-la-demande-exemple"
+* subject.reference = "#patient-prescr-UCD-paracetamol-exemple"
 * effectiveDateTime = "2018-10-25T11:06:06+02:00"
 * valueQuantity.value = 189.0
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #cm
 
-Instance: observation-2-prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: observation-2-prescr-UCD-paracetamol-exemple
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-2-prescription-UCD-paracetamol-a-la-demande-exemple"
+* id = "observation-2-prescr-UCD-paracetamol-exemple"
 * meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
 * status = #final
 * category.coding[0].code = #vital-signs
 * category.coding[=].system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding[0].code = #29463-7
 * code.coding[=].system = "http://loinc.org"
-* subject.reference = "#patient-prescription-UCD-paracetamol-a-la-demande-exemple"
+* subject.reference = "#patient-prescr-UCD-paracetamol-exemple"
 * effectiveDateTime = "2018-06-21T16:05:10+02:00"
 * valueQuantity.value = 120.0
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #kg
 
-Instance: medicationrequest-prescription-UCD-paracetamol-a-la-demande-exemple
+Instance: medicationrequest-prescr-UCD-paracetamol-exemple
 InstanceOf: fr-inpatient-medicationrequest3
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest3"
@@ -103,17 +103,17 @@ Usage: #inline
 * note[=].extension[NoteScope].valueCode = #LIPRESCIND
 * note[+].text = "Test paracetamol 2 (à la demande)"
 * note[=].extension[NoteScope].valueCode = #LIPRESCCOMM
-* medicationReference.reference = "#medication-prescription-UCD-paracetamol-a-la-demande-exemple"
-* subject.reference = "#patient-prescription-UCD-paracetamol-a-la-demande-exemple"
+* medicationReference.reference = "#medication-prescr-UCD-paracetamol-exemple"
+* subject.reference = "#patient-prescr-UCD-paracetamol-exemple"
 * encounter.identifier.value = "70101274"
 * encounter.identifier.system = "https://somehospital.fr/Sejour"
 * supportingInformation[0].identifier.value = "2571"
 * supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * supportingInformation[=].extension[UFRole].valueCode = #UFMED
-* supportingInformation[+].reference = "#observation-1-prescription-UCD-paracetamol-a-la-demande-exemple"
-* supportingInformation[+].reference = "#observation-2-prescription-UCD-paracetamol-a-la-demande-exemple"
+* supportingInformation[+].reference = "#observation-1-prescr-UCD-paracetamol-exemple"
+* supportingInformation[+].reference = "#observation-2-prescr-UCD-paracetamol-exemple"
 * authoredOn = "2022-04-11T16:42:53+02:00"
-* requester.reference = "#practitioner-prescription-UCD-paracetamol-a-la-demande-exemple"
+* requester.reference = "#practitioner-prescr-UCD-paracetamol-exemple"
 * groupIdentifier.value = "10723"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction[0].timing.repeat.boundsPeriod.start = "2022-04-12T06:00:00+02:00"
