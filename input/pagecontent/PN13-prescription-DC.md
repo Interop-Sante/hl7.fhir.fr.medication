@@ -2,7 +2,7 @@
 
 ## DC-2 (paracetamol si besoin)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [prescription-UCD-paracetamol-exemple]
+Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-DC-2](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-bundle-DC-2.html)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
