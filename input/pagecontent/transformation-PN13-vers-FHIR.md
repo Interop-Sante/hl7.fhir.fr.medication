@@ -6,7 +6,7 @@ La transformation de messages PN13 en ressources FHIR se fait à partir de *Conc
 
 Prévu pour une version ultérieure de ce guide.
 
-## La prescritpion
+## La prescription
 
 La traduction d'un message de prescription PN13 en ressources FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l'aide des ressources *ConceptMap* fournies dans ce guide.
 La manière dont les ressources FHIR résultantes sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de `_include` et de `_revInclude`). Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d'une recherche de prescription par identifiant (i.e. élément `groupIndentifier` cf. section suivante sur la notion de prescription multiligne) sous forme de *Bundle* de type `searchset`.

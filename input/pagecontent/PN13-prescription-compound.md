@@ -2,7 +2,7 @@
 
 ## Compound-6166 (perfusion sur 12h par jour)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-Compound-6166](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-bundle-Compound-6166.html)
+Cette prescription PN13 est traduite en FHIR dans l'instance [perfusion-6-composants-exemple](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Perfusion-6-composants-exemple.html)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -127,6 +127,7 @@ Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-Compound-61
                     <Non_substituable>0</Non_substituable>
                     <Commentaire />
                     <Libellé_composant>SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)</Libellé_composant>
+                    <Véhicule>1</Véhicule>
                 </Composant_prescrit>
                 <Elément_posologie>
                     <Fréquence_structurée>
