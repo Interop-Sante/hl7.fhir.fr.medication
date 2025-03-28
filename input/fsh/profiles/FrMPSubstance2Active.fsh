@@ -3,7 +3,6 @@ Parent: CodeableConcept
 Id: fr-mp-substance-2-active
 Description: "code for the medicinal product substance"
 * ^status = #draft
-* ^experimental = false
 * . ^short = "SNOMED CT Medicinal Product Substance"
 * . ^example[0].label = "Glucose"
 * . ^example[=].valueCodeableConcept = $sct#67079006 "glucose (substance)"
@@ -21,5 +20,5 @@ Description: "code for the medicinal product substance"
     otherCoding 0..*
 * coding[snomedSubstanceCoding] from FrMpSubstanceActive (required)
 * coding[snomedSubstanceCoding] ^binding.description = "Medicinal product Substance"
-* coding[snomedSubstanceCoding].system = "http://snomed.info/sct" (exactly)
+* coding[snomedSubstanceCoding].system = $sct
 * coding[otherCoding].system = "^((?!http:\\/\\/snomed\\.info\\/sct).)*$"

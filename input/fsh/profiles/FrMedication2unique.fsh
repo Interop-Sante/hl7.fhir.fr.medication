@@ -18,21 +18,16 @@ Description: "ressource Medication unique regroupant les 4 profils en 1 (ucd, uc
 
 * code.coding[ucdCode] from $SIPh-CIO_UCD (required)
 * code.coding[ucdCode] ^short = "Codes that identify this branded medication"
-* code.coding[ucdCode] ^definition = "Codes that identify this branded medication"
-* code.coding[ucdCode] ^binding.description = "UCD code"
 // * code.coding[ucdCode].system = "^http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD$" //TODO : remplacer avec le système FHIR d'UCD
 * code.coding[ucdCode].system ^short = "UCD codeSystem"
 * code.coding[ucdCode].system ^definition = "The UCD code system (under the responsibility of the Club Inter Pharmaceutique (CIP)"
 * code.coding[ucdCode].system ^comment = "In the absence of a uri defined by the Club Interpharceutique or the competent government authorities, the uri defined by PHAST is used."
 * code.coding[ucdCode].system ^requirements = "The code system SHALL be the UCD code system"
-* code.coding[ucdCode].code ^binding.description = "code UCD valide"
 
 
 * code.coding[snomedMedicinalProductCode] from FrMedicinalProductOnly (required)
-* code.coding[snomedMedicinalProductCode].system = "^http:\\/\\/snomed\\.info\\/sct$"
+* code.coding[snomedMedicinalProductCode].system = $sct
 * code.coding[snomedMedicinalProductCode].system ^short = "SNOMED CT codeSystem"
-* code.coding[snomedMedicinalProductCode].system ^requirements = "The code system SHALL be the SNOMED CT code system"
-* code.coding[snomedMedicinalProductCode].code ^binding.description = "MP sctid valide"
 
 * code.coding[otherMedicationCode] obeys frmed-med-2 and frmed-med-3 and frmed-med-4
 * code.coding[otherMedicationCode] ^short = "Generaly no code for compound medicinal product"
@@ -40,9 +35,7 @@ Description: "ressource Medication unique regroupant les 4 profils en 1 (ucd, uc
 // * code.coding[otherMedicationCode].system = "^((?!http:\\/\\/phast\\.fr\\/fhir\\/ValueSet\\/Pharmacy\\/CIOdc\\/SIPh-CIO_UCD|http:\\/\\/snomed\\.info\\/sct).)*$" 
 
 * code.text MS
-* code.text ^comment = "If there is no code (usually not available for a compound drug or must be local if available), a name SHALL be provided."
 
 * ingredient 1.. MS
 * ingredient.item[x] only FrMPSubstance2Active or Reference(FrMedication2unique)
 * ingredient.item[x] MS
-* ingredient.item[x] ^definition = "The actual ingredient - either a substance (simple medication's ingredient) or another medication (compound medciation's ingredient)."

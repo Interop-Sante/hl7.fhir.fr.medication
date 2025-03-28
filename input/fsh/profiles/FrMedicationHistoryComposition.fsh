@@ -1,38 +1,35 @@
 Profile: FrMedicationHistoryComposition
 Parent: Composition
 Id: fr-medication-history-composition
-Description: """Profil de la ressource Composition du Bilan Médicamenteux.
-Medication Assessment Composition resource profile."""
-* ^purpose = "Ce profil est utilisé pour la Composition du Bundle portant le document FHIR Bilan Médicamenteux."
-* . ^short = "Bilan Médicamenteux"
-* . ^definition = "Bilan Médicamenteux : liste des traitements médicamenteux du patient avant son entrée à l'hôpital."
-* . ^comment = "Ce Bilan Médicamenteux est la première étape de la Conciliation Médicamenteuse. Voir [le guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante)."
+Description: """Profil de la ressource Composition représentant le Bilan Médicamenteux."""
+* . ^short = "Bilan Médicamenteux : liste des traitements médicamenteux du patient avant son entrée à l'hôpital. Ce Bilan Médicamenteux est la première étape de la Conciliation Médicamenteuse. Voir [le guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante)."
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
+
 * type MS
-* type ^requirements = "Coder le contexte *Bilan Médicamenteux* de cette Composition."
+* type ^short = "Code contexte du *Bilan Médicamenteux* de cette Composition."
 * type.coding 1..1
 * type.coding = http://loinc.org#10160-0 "History of Medication use Narrative"
+
 * subject 1..
 * subject only Reference($FrCorePatient)
 * subject MS
 * subject ^short = "Le patient"
 * subject ^definition = "Le patient auquel se rapporte ce document Bilan Médicamenteux."
 * subject ^comment = "Un Bilan Médicamenteux se rapporte obligatoirement à un patient, référencé en tant que ressource *Patient* profilée *fr-patient*\\."
-* subject ^requirements = "Identifier le patient auquel se rapporte obligatoirement un Bilan Médicamenteux, patient référencé en tant que ressource *Patient* profilée *fr-patient*\\."
-
 * subject.type = "Patient"
+
 * date MS
 * date ^short = "Date de réalisation du Bilan Médicamenteux"
-* date ^definition = "Date de réalisation du Bilan Médicamenteux par son auteur. //The composition editing time, when the composition was last logically changed by the author."
-* author only Reference($FrCorePractitionerRole)
+* date ^definition = "Date de réalisation du Bilan Médicamenteux par son auteur."
+
+* author only Reference($FrCorePractitionerRole) //NR : on ne veut pas ici cibler le practitioner ?
 * author MS
 * author ^short = "Auteur du Bilan Médicamenteux"
-* author ^definition = "Auteur du Bilan Médicamenteux, défini ès qualités (ressource *FrPractionerRoleProfession*\\) ET, de préférence, aussi nominativement (la ressource *FrPractionerRoleProfession* instanciée réfère une instance de ressource *FrPractioner*\\)."
-* author ^comment = "Il est vivement recommandé d'identifier nominativement le ou les auteurs : la ressource *FrPractionerRoleProfession* instanciée (ex: Pharmacien) réfère une instance de ressource *FrPractioner* (ex: Dr UNTEL)."
-* author ^requirements = "Identifer le ou les auteurs du Bilan Médicamenteux."
-* title = "Bilan médicamenteux" (exactly)
+
+* title = "Bilan médicamenteux" //NR : on ne veut pas permettre un autre titre que celui-ci ?
 * title ^requirements = "titre de ce document en français"
+
 * attester 1..1
 * attester.party 1..
 * attester.party only Reference($FrCorePractitionerRole)
@@ -40,6 +37,7 @@ Medication Assessment Composition resource profile."""
 * attester.party.reference 1..
 * attester.party.identifier ..0
 * attester.party.identifier ^requirements = "Identification du professionnel de santé uniquement par référence à une ressource *PractitionerRole* profilée *fr-practitioner-role*\\."
+
 * section 1..1
 * section MS
 * section ^short = "Les lignes de traitement médicamenteux"
@@ -54,11 +52,11 @@ Medication Assessment Composition resource profile."""
 * section.extension[compositionSourcing] ^comment = "Ce sourcing est obligatoire : il n'est pas possible de réaliser un Bilan Médicamenteux sans jamais consulter aucune source."
 * section.extension[compositionSourcing] ^requirements = "Décrire obligatoirement les sources consultées."
 
-* section.title = "Liste des médicaments" (exactly)
+* section.title = "Liste des médicaments" //NR : On ne veut pas laisser le chox du titre ?
 
-* section.code.coding = http://loinc.org#10160-0 "History of Medication use Narrative" (exactly)
+* section.code.coding = http://loinc.org#10160-0 "History of Medication use Narrative"
 
-* section.author ..0
+* section.author ..0 //NR : pourquoi est-ce en must-support si le champs est interdit ?
 * section.author MS
 * section.author ^requirements = "L'auteur de la section est celui de l'ensemble du document"
 * section.focus ..0
@@ -66,6 +64,7 @@ Medication Assessment Composition resource profile."""
 * section.focus ^definition = "Le sujet sur lequel porte la *section*\\, quand ce n'est pas celui sur lequel porte la *Composition*\\."
 * section.focus ^comment = "Le Blian Médicamenteux ne concerne que le patient courant, sujet de la *Composition*\\.\r\n- La manière de décrire pour le nouveau-né ou le nourisson, les substances prises par sa mère qu'il absorberait par allaitement maternel, n'a pas été explicitement définie. Il s'agirait, de toute façon, si cette substance devait figurer dans le Bilan Médicamenteux du bébé, d'une <*entry*\\> de cette section, une ressource *MedicationStatement* profilée *fr_medication-history-medication-statement* dont il serait précisé qu'elle provient de l'allaitement maternel. Cas d'usage non détaillé."
 * section.focus ^requirements = "Le Blian Médicamenteux ne concerne que le patient courant (voir élément *subject* de la *Composition*\\)."
+
 * section.mode 1..
 * section.mode = #working
 * section.mode MS
@@ -83,4 +82,5 @@ Medication Assessment Composition resource profile."""
 * section.entry ^comment = "0 à n lignes de traitement médicamenteux dans le Bilan."
 * section.entry ^requirements = "Porter les lignes de traitement médicamenteux du Bilan"
 * section.entry ^meaningWhenMissing = "Aucun traitement avant l'hospitalisation"
+
 * section.section ..0

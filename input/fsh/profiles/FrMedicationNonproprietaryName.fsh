@@ -4,7 +4,6 @@ Id: fr-medication-nonproprietary-name
 Title: "French non proprietary name Medication"
 Description: "Simple prescribed, dispensed, administered or used medication expressed in non proprietary name composed of one to many substances. If composed of many substance, the strengh SHALL be defined."
 * ^status = #draft
-* ^experimental = false
 * ^purpose = "Simple medication description, include those composed of many substances."
 * . ^short = "Simple nonproprietary name Medication of MRQ, MDP or MUS"
 * . ^definition = "This ressource is profiled for describing a simple medicament (vs compound medication) in the presription line represented by a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement)."
