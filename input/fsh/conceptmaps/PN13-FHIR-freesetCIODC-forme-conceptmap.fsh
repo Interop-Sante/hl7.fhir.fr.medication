@@ -16,7 +16,7 @@ Usage: #definition
 * description = "ConceptMap pour la conversion des codes de forme de médicaments entre CIO et terminologies EQDM Standard Terms et SNOMED-CT"
 * group[0].source = "https://www.phast.fr/ciodm/"
 * group[=].sourceVersion = "2025"
-* group[=].target = "https://www.edqm.eu/en/standard-terms-database"
+* group[=].target = "http://standardterms.edqm.eu"
 * group[=].element[0].code = #1
 * group[=].element[=].target.code = #10501000
 * group[=].element[=].target.display = "Bath additive"

@@ -133,7 +133,7 @@ Usage: #inline
 * ingredient[+].itemReference.reference = "#medication-3-prescr-perf-6-exemple"
 * ingredient[+].itemReference.reference = "#medication-4-prescr-perf-6-exemple"
 * ingredient[+].itemReference.reference = "#medication-5-prescr-perf-6-exemple"
-* indredient[+].extension[IsVehicle].valueBoolean = true
+* ingredient[+].extension[IsVehicle].valueBoolean = true
 * ingredient[=].itemReference.reference = "#medication-6-prescr-perf-6-exemple"
 
 

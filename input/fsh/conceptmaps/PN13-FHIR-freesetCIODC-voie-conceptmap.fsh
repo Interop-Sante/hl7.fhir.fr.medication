@@ -16,7 +16,7 @@ Usage: #definition
 * contact.telecom.value = "http://interopsante.org/"
 * group[0].source = "https://www.phast.fr/ciodm/"
 * group[=].sourceVersion = "2025"
-* group[=].target = "https://www.edqm.eu/en/standard-terms-database"
+* group[=].target = "http://standardterms.edqm.eu"
 * group[=].element[0].code = #12
 * group[=].element[=].target.code = #20015000
 * group[=].element[=].target.display = "Hémodialyse"

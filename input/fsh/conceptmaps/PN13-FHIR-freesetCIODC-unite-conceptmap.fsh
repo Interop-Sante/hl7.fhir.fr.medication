@@ -16,7 +16,7 @@ Usage: #definition
 * description = "ConceptMap pour la conversion des codes d'unité d'administration de médicaments entre CIO et UCUM"
 * group.source = "https://www.phast.fr/ciodm/"
 * group.sourceVersion = "2025"
-* group.target = "https://ucum.org/"
+* group.target = "http://unitsofmeasure.org"
 * group.element[0].code = #10*3.bq
 * group.element[=].target.code = #kBq
 * group.element[=].target.display = "kBq"
