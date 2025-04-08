@@ -41,4 +41,4 @@ Usage: #inline
 * dosageInstruction.maxDosePerAdministration.value = 2
 * dosageInstruction.maxDosePerAdministration.unit = "Comprimé"
 * dosageInstruction.maxDosePerAdministration.system = $EDQM
-* dosageInstruction.maxDosePerAdministration.cod = #10219000
+* dosageInstruction.maxDosePerAdministration.code = #10219000

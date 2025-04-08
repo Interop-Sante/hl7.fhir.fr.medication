@@ -95,7 +95,6 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-// Extension à faire pour qualifier note
 * note[0].text = "Prescription textuelle: PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
 * note[=].extension[NoteScope].valueCode = #LIPRESCTXT
 * note[+].text = "Indication: En cas de douleur"
@@ -111,7 +110,7 @@ Usage: #inline
 * supportingInformation[=].extension[UFRole].valueCode = #UFMED
 * supportingInformation[+].reference = "#observation-DC-2-1"
 * supportingInformation[+].reference = "#observation-DC-2-2"
-* AuthoredOn = "2022-04-11T16:42:53+02:00"
+* authoredOn = "2022-04-11T16:42:53+02:00"
 * requester.reference = "#practitioner-DC-2"
 * groupIdentifier.value = "10723"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"

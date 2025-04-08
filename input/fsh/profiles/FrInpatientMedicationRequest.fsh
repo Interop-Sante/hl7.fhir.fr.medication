@@ -11,7 +11,7 @@ Description: "French inpatient medication request profile"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
 * extension[treatmentIntent] ^meaningWhenMissing = "overall intention of the treatment not specified"
 * extension[treatmentIntent].value[x].coding ^definition = "SNOMED CT code minimal value set for overall treatment intent (extensible)"
-* medication[x] only Reference(fr-medication-noncompound or fr-medication-compound)
+* medication[x] Reference(fr-medication-noncompound or fr-medication-compound)
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
 * supportingInformation.extension contains fr-uf-role named UFRole 0..1
@@ -28,13 +28,13 @@ Description: "French inpatient medication request profile"
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
 * dosageInstruction.method from FrMethodOfAdministration (extensible)
 * dosageInstruction.doseAndRate.extension contains fr-basis-of-dose-component named BasisOfDoseComponent 0..1
-* dosageInstruction.doseAndRate.dose[x] only FrRangeMedication or FrSimpleQuantityUcum or FrSimpleQuantityEdqm
-* dosageInstruction.doseAndRate.rate[x] only FrRatioMedication or FrRangeMedication or FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosageInstruction.doseAndRate.dose[x] only FrRangeMedication
+* dosageInstruction.doseAndRate.rate[x] only FrRatioMedication
 * dosageInstruction.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time. Using a ratio, the denominator SHALL be a quantity of time. Using a simple quantity the UCUM unit SHALL be a unit of rate."
-* dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
-* dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
-* dosageInstruction.maxDosePerAdministration only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
-* dosageInstruction.maxDosePerLifetime only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityMedication
+* dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityMedication
+* dosageInstruction.maxDosePerAdministration only FrSimpleQuantityMedication
+* dosageInstruction.maxDosePerLifetime only FrSimpleQuantityMedication
 * dispenseRequest.initialFill ..0
 * dispenseRequest.dispenseInterval ..0
 * dispenseRequest.validityPeriod.start 1..

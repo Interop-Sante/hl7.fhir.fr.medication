@@ -47,8 +47,8 @@ Usage: #inline
 * id = "medication-C-14637"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
 * code.text = "G5 500mL + NaCl 2g + KCl 1g"
-* ingredient[0].itemReference.reference = "#medication-1-14637"
-* indredient[=].extension[IsVehicle].valueBoolean = true
+* indredient[0].extension[IsVehicle].valueBoolean = true
+* ingredient[=].itemReference.reference = "#medication-1-14637"
 * ingredient[+].itemReference.reference = "#medication-2-14637"
 * ingredient[+].itemReference.reference = "#medication-3-14637"
 

@@ -1,14 +1,14 @@
-Instance: 14619
+Instance: 14658
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14619
-* entry[+].resource = medicationrequest-14619
+* entry[0].resource = medication-14658
+* entry[+].resource = medicationrequest-14658
 
-Instance: medication-14619
+Instance: medication-14658
 InstanceOf: fr-medication-compound
 Usage: #inline
-* id = "medication-14619"
+* id = "medication-14658"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code.text = "PARACETAMOL+CODEINE 500mg+30mg"
 * ingredient[0].itemCodeableConcept = $SMS#100000090270 "paracétamol"
@@ -18,18 +18,18 @@ Usage: #inline
 * ingredient[=].itemCodeableConcept.text = "CODEINE"
 * ingredient[=].strength.numerator = 30 'mg' "mg"
 
-Instance: 14619
+Instance: medicationrequest-14658
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14619"
+* medicationReference.reference = "#medication-14658"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-19T16:22:39.825Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-14619"
+* groupIdentifier.value = "Presc-14658"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-19T16:22:00Z"

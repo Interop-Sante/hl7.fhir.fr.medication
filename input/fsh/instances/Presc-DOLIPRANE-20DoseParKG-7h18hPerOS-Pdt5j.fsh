@@ -10,7 +10,7 @@ InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-14626"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
-* code = $UDC#3400892028057 "DOLIPRANE 2,4% BUV FV100ML"
+* code = $UCD#3400892028057 "DOLIPRANE 2,4% BUV FV100ML"
 * code.text = "DOLIPRANE 2.4% ss sucre, susp buv"
 * form = $EDQM#10106000 "suspension buvable"
 * form.text = "suspension buvable"
@@ -22,7 +22,6 @@ Usage: #inline
 
 Instance: medicationrequest-14626
 InstanceOf: FrInpatientMedicationRequest
-Usage: #example
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
@@ -46,4 +45,4 @@ Usage: #inline
 * dosageInstruction.doseAndRate[=].doseQuantity.value = 20
 * dosageInstruction.doseAndRate[=].doseQuantity.unit = "dose_kg"
 * dosageInstruction.doseAndRate[=].doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate[=].doseQuantity.code =#{dose_kg}
+* dosageInstruction.doseAndRate[=].doseQuantity.code = #{dose_kg}

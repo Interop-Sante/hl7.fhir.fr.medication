@@ -1,14 +1,14 @@
-Instance: 14624
+Instance: 14628
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14624
-* entry[+].resource = medicationrequest-14624
+* entry[0].resource = medication-14628
+* entry[+].resource = medicationrequest-14628
 
-Instance: medication-14624
+Instance: medication-14628
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14624"
+* id = "medication-14628"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400893539354 "NICORETTESKIN 15MG/16H DISP"
 * code.text = "NICOTINE"
@@ -20,18 +20,18 @@ Usage: #inline
 * ingredient.strength.numerator = 15 'mg' "mg"
 * ingredient.strength.denominator = 1 '1'
 
-Instance: medicationrequest-14624
+Instance: medicationrequest-14628
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14624"
+* medicationReference.reference = "#medication-14628"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-29T13:27:21.531Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-14624"
+* groupIdentifier.value = "Presc-14628"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-29T13:27:00Z"

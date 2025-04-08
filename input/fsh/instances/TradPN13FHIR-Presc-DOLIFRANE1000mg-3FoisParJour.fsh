@@ -6,7 +6,7 @@ Usage: #example
 * entry[0].resource = medication-exemple-01-34-01
 * entry[+].resource = medicationrequest-exemple-01-34-01
 
-nstance: medication-exemple-01-34-01
+Instance: medication-exemple-01-34-01
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-exemple-01-34-01"

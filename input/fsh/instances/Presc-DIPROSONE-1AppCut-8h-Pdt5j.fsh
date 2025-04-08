@@ -22,7 +22,6 @@ Usage: #inline
 
 Instance: medicationrequest-14627
 InstanceOf: FrInpatientMedicationRequest
-Usage: #example
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active

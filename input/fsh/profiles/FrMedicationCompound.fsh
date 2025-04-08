@@ -25,9 +25,7 @@ Description: "A complex medication composed of two to many simple medication. Th
 * ingredient ^definition = "Identifies a medicinal component of the compound medicinal product"
 * ingredient ^comment = "The Medication SHALL contain ALL the items of the item element list AND ONLY the items of the item element list."
 * ingredient.extension contains fr-is-vehicle named IsVehicle 0..1
-* ingredient.item[x] only Reference(fr-medication-noncompound)
+* ingredient.item[x] Reference(fr-medication-noncompound)
 * ingredient.item[x] ^short = "The actual compound"
 * ingredient.item[x] ^definition = "The actual compound, either nonproprietary named medication or branded named medication identified by a UCD code."
-* ingredient.strength ..0
-* ingredient.strength ^requirements = "The amount and strength of the medication component are described in the item element referencing a Medication ressource profiled fr-medication-non-compound."
 * batch ..0

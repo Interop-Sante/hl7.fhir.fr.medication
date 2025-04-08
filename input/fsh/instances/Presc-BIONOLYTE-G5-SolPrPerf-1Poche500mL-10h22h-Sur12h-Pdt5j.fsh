@@ -57,6 +57,6 @@ Usage: #inline
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.system = $EDQM
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #15009000
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.value = 12
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.unti = "h"
+* dosageInstruction.doseAndRate[=].rateRatio.denominator.unit = "h"
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.system = $unitsofmeasure
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.code = #h
