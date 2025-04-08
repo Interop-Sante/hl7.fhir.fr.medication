@@ -17,9 +17,9 @@ Description: "A complex medication composed of two to many simple medication. Th
 * code.text 1..
 * code.text ^requirements = "Although a code might not be available for a compoud medicinal product, there is alway a denomination for it."
 * form from FrMpDoseForm (extensible)
-* amount only FrRatioMedication
-* amount ^definition = "Specific amount in Medication defined by the element collection. For instance 1 L for the amount of the compound Glucose 5% of an infusion Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g. Or 3 g for the amount of compound Sodium chloride of the same infusion. SHALL be 1 (without unit, ie. code = 1 in UCUM system) when there is multiple ingredient element with at least the strenght element of two of them expressed in asbolute quantity (ie. simple quantity)."
-* amount ^comment = "The Ratio datatype is limited to numerator value, leading back to the SimpleQuantity datatype."
+//* amount only FrRatioMedication
+//* amount ^definition = "Specific amount in Medication defined by the element collection. For instance 1 L for the amount of the compound Glucose 5% of an infusion Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g. Or 3 g for the amount of compound Sodium chloride of the same infusion. SHALL be 1 (without unit, ie. code = 1 in UCUM system) when there is multiple ingredient element with at least the strenght element of two of them expressed in asbolute quantity (ie. simple quantity)."
+//* amount ^comment = "The Ratio datatype is limited to numerator value, leading back to the SimpleQuantity datatype."
 * ingredient 1..
 * ingredient ^short = "Medication component of compound medication"
 * ingredient ^definition = "Identifies a medicinal component of the compound medicinal product"
