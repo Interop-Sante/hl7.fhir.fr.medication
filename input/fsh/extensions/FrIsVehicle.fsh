@@ -7,4 +7,3 @@ Description: "Medication component which is the vehicle of the compound Medicati
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient"
 * value[x] only boolean
-* value[x] = true
