@@ -31,10 +31,10 @@ Description: "French inpatient medication request profile"
 //* dosageInstruction.doseAndRate.dose[x] only FrRangeMedication
 //* dosageInstruction.doseAndRate.rate[x] only FrRatioMedication
 //* dosageInstruction.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time. Using a ratio, the denominator SHALL be a quantity of time. Using a simple quantity the UCUM unit SHALL be a unit of rate."
-* dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityMedication
-* dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityMedication
-* dosageInstruction.maxDosePerAdministration only FrSimpleQuantityMedication
-* dosageInstruction.maxDosePerLifetime only FrSimpleQuantityMedication
+//* dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityMedication
+//* dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityMedication
+//* dosageInstruction.maxDosePerAdministration only FrSimpleQuantityMedication
+//* dosageInstruction.maxDosePerLifetime only FrSimpleQuantityMedication
 * dispenseRequest.initialFill ..0
 * dispenseRequest.dispenseInterval ..0
 * dispenseRequest.validityPeriod.start 1..
