@@ -1,28 +1,28 @@
-Instance: 14620
+Instance: Presc-Betamethasone-ApplCut
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14620
-* entry[+].resource = medicationrequest-14620
+* entry[0].resource = medication-Presc-Betamethasone-ApplCut
+* entry[+].resource = medicationrequest-Presc-Betamethasone-ApplCut
 
-Instance: medication-14620
+Instance: medication-Presc-Betamethasone-ApplCut
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14620"
+* id = "medication-Presc-Betamethasone-ApplCut"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000091947 "bétaméthasone"
 * code.text = "BETAMETHASONE"
 * amount.numerator = 0.5 'mg' "mg"
 * amount.denominator = $unitsofmeasure#g "g"
 
-Instance: medicationrequest-14620
+Instance: medicationrequest-Presc-Betamethasone-ApplCut
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14620"
+* medicationReference.reference = "#edication-Presc-Betamethasone-ApplCut"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-13T08:48:39.825Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

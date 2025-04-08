@@ -15,12 +15,12 @@ Ce formalisme n'est pas obligatoire, la manière dont les ressources FHIR consti
 - [DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-14627.html)
 - [NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](MedicationRequest-14628.html)
 - [MATRIFEN 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j](MedicationRequest-14629.html)
-- [BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14630.html)
+- [BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j](Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html)
 
 #### Médicament simple en DC
 
 - [paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-14618.html)
-- [bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-14620.html)
+- [bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j](Presc-Betamethasone-ApplCut.html)
 - [nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](MedicationRequest-14621.html)
 - [fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j](MedicationRequest-14622.html)
 
@@ -44,7 +44,7 @@ Un premier niveau de complexité est adressé par les cas d'usage précédents.
 Les niveaux de complexité supplémentaires adressent
 
 - les doses rationnelles
-  - [BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine](MedicationRequest-14646.html)
+  - [BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine](Presc-BISOPROLOL-SANDOZ-DosesRationnelles.html)
   - Dans FHIR, les nombres rationnels sont traduits en type decimal, avec des règles concernant la gestion de la *précision*
   - En pratique, pour l'expression de la dose, les nombres rationnels impliqués se limitent à 1/4, 1/3, 1/2, 2/3 et 3/4
   - Ce guide recommande de représenter les rationnels à la 6ème décimal. Ainsi

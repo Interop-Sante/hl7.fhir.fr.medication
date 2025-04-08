@@ -1,14 +1,14 @@
-Instance: 14630
+Instance: Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14630
-* entry[+].resource = medicationrequest-14630
+* entry[0].resource = medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
+* entry[+].resource = medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 
-Instance: medication-14630
+Instance: medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14630"
+* id = "medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400893093542 "BIONOLYTE G5 INJ FPE500ML"
 * code.text = "BIONOLYTE G5, sol pr perf, flac 500 mL"
@@ -30,14 +30,14 @@ Usage: #inline
 * ingredient[=].strength.numerator = 1 'g' "g"
 * ingredient[=].strength.denominator = 1 '1'
 
-Instance: medicationrequest-14630
+Instance: medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medicationrequest-14630"
+* medicationReference.reference = "#medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-29T17:29:27.603Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
