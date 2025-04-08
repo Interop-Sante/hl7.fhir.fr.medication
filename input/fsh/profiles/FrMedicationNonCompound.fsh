@@ -32,16 +32,16 @@ Description: "Simple prescribed, dispensed, administered or used medication comp
 * code.coding[nonCompoundCode] ^short = "Codes that identify this simple medication"
 * code.coding[nonCompoundCode] ^definition = "Codes that identify this simple medication"
 * code.coding[nonCompoundCode] ^binding.description = "UCD, SMS or ANSM code"
-* amount only FrRatioUcum
+* form from FrMpDoseForm (extensible)
+* form ^comment = "When branded medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When branded medication is referenced within MedicationAdministration, this is administered form."
+// A modifier pour que ce ne soit plus la base de la dose
+* amount only FrRatioMedication
 * amount ^short = "Amount of drug in the MRequest, MDispense or MUsage"
 * amount ^definition = "The quantity of the only substance or the volume (liquid) or mass (ointment) in the Medication of the MedicationRequest, Dispense or Use (pka MedicationStatement)."
 // Si la contrainte d'avoir au moins un composant est levée (notamment parce que code du médicament porte cette information) le commentaire est à mettre à jour
 * amount ^comment = "If the strenght of the ingredients is a concentration, it is the volume (liquid) or mass (ointment) in the Medication of the MedicationRequest, Dispense or Use (pka MedicationStatement).\r\nIf there is only one ingredient and the strenght is not defined, it is the quantity of the substance."
 * ingredient ^definition = "Identifies a particular constituent in the product."
-// Si la contrainte d'avoir au moins un composant est levée (notamment parce que code du médicament porte cette information) le commentaire est à mettre à jour
-* ingredient ^comment = "For the active ingedients, the medication contains ALL the ingredients and ONLY the ingredients."
-// Faire un jeu de valeur juste avec des codes SMS et ANSM pour les ingrédients? A priori pas de nécessité de passer par UCD part étant donné que les substances sont maintenant dans le RIUM
-* ingredient.item[x] only FrMPSubstanceActive
+* ingredient.item[x] only FrMPSubstance
 * ingredient.item[x] ^short = "Substance"
 * ingredient.item[x] ^definition = "The actual substance (simple ingredient) of the simple medication (ie. made of single component)."
 * ingredient.item[x] ^requirements = "The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication"

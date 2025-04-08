@@ -1,5 +1,8 @@
 # Exemples
 
+Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d'une recherche de prescription par identifiant (i.e. élément `groupIndentifier`) sous forme de *Bundle* de type `searchset`.
+Ce formalisme n'est pas obligatoire, la manière dont les ressources FHIR constituant une prescription sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de `_include` et de `_revInclude`)
+
 ## Exemples généraux
 
 ### La ligne de prescription initiale, complexité du médicament prescrit
@@ -7,7 +10,7 @@
 #### Médicament simple en spécialité
 
 - [EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-14624.html)
-- [CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h par os, pendant 5j](MedicationRequest-14625.html)
+- [CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j](MedicationRequest-14625.html)
 - [DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j](MedicationRequest-14626.html)
 - [DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-14627.html)
 - [NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](MedicationRequest-14628.html)
@@ -17,22 +20,23 @@
 #### Médicament simple en DC
 
 - [paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-14618.html)
-- [paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j](MedicationRequest-14619.html)
 - [bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-14620.html)
 - [nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](MedicationRequest-14621.html)
 - [fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j](MedicationRequest-14622.html)
-- [glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14631.html)
-  - Note : Il s'agit de la prescription d'une perfusion préfabriquée, prête à l'emploi, d'un médicament associant deux électrolytes à du glucose 5%. C'est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.
 
 #### Médicament composé
 
+- [paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j](MedicationRequest-14619.html)
 - [Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14637.html)
 - [Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14638.html)
-- marquer l'un des médicaments composant comme étant le soluté du médicament composé
-  - marqueur sur Medication composant : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14649.html)
-  - marqueur sur `.ingredient` de *Medication composé* : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html)
-  - Ces deux variantes sont **soumises à concertation : une seule sera retenue**. Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques), § concacré à l'extension *IsVehicle*
+- marquer l'un des médicaments composant comme étant le soluté du médicament composé: [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html) Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques), § concacré à l'extension *IsVehicle*
 - [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-14651.html)
+
+
+#### Médicament virtuel
+
+- [glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j](MedicationRequest-14631.html)
+  - Note : Il s'agit de la prescription d'une perfusion préfabriquée, prête à l'emploi, d'un médicament associant deux électrolytes à du glucose 5%. C'est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.
 
 ### La prescription initiale, complexité de la posologie
 
@@ -61,18 +65,13 @@ Les niveaux de complexité supplémentaires adressent
     - *tous les 05 du mois*
     - *tous les derniers vendredis du mois*
   - Le type complexe *Timing* est normatif, il est en pratique impossible de le faire évoluer.
-    - Faut-il créer les extensions *dayOfMonth* et *weekdayOfMonth* ?
-    - Note: l'extension standard [dayOfMonth](https://hl7.org/fhir/R4/extension-timing-dayofmonth.html) existe !! (maturité 1).
+    - Il est nécessaire pour l'instant de "calculer" les dates correspondantes à la fréquence calendaire et de les indiquer dans autant de dosageInstruction.
+    - Note: l'extension standard [dayOfMonth](https://hl7.org/fhir/R4/extension-timing-dayofmonth.html) existe en FHIR R4 (maturité 1), mais elle n'est pas reprise en FHIR R5. Son utilisation n'est donc pas conseillée.
 - les prescriptions conditionnelles simples
   - [CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j](MedicationRequest-14639.html)
   - [paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j](MedicationRequest-14640.html)
-  - Le concept de délais *minimum* entre deux prises n'est pas codable.
-    - Il apparait en tant que consigne complémentaire en texte libre dans un élément *additionalInstruction*.
-    - Faut-il créer un extension ?
 - les doses progessives ou dégressives par palier
   - [méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j](MedicationRequest-14647.html)
-  - Qu'apporte l'élément `dosageInstruction.sequence` de chaque palier par rapport l'élément `dosageInstruction.timing.repeat.boundsPeriod` indispensable ?
-  - L'élément `dosageInstruction.sequence` est facultatif. Ne serait-il pas préferable le supprimer ?
 - l'expression de la quantité d'une dose se référant à l'un des médicaments composant du médicament composé prescrit
   - [céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j](MedicationRequest-14648.html)
   - Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques) § concacré à l'extension *Basis of Dose Component*.
@@ -88,35 +87,37 @@ Il n'y a pas d'exemple, pour l'instant.
 ### Ex: LASILIX 20 mg, sol inj amp 2 mL, XX à 7h et 18h IV, pendant 5j
 
 - **unité de médicament prescrit** ➟ `MedicationRequest.medication`
-  - `LASILIX` → marque ➟ dans le `.text` du `.coding` de la spécialité
+  - `LASILIX` → marque ➟ `code.coding.dispaly` dans le libellé correspondant au code UCD provenant du [Référentiel Unique d'Interopérabilité du Médicament - RUIM](https://smt.esante.gouv.fr/terminologie-ref_interop_med/)
   - `furosémide` → principe actif ➟ `.ingredient().item\[x\]`
-  - `20 mg` → dosage ➟ `.ingredient().strength`
+  - `20 mg` → dosage ➟ optionnellement dans `.ingredient().strength`
   - `sol inj` → forme ➟ `.form`
-  - `amp` → présentation ➟ en annotation `{amp}` de l'unité de dénombrement UCUM
+  - `amp` → présentation ➟ code EDQM dans le dénominateur du ratio du dosage et/ou du volume
   - `2 mL` → volume ➟ `.amount`
 - dose prescrite → `MedicationRequest.dosageInstruction`
   - `XX` → quantité ➟ `.doseAndRate`
   - `à 7h et 18h` → horaire de prise ➟ `.timing.repeat.timeOfDay()`
   - `per os` → voie d'administration ➟ `.route`
   - `pendant 5j` → début (maintenant) et fin (début + 5j) ➟ `.timing.boundsPeriod`
-- La quantité `XX` de la dose prescrite peut s'exprimer de 3 façons différentes, par exemple :
+- La quantité `XX` de la dose prescrite peut s'exprimer de 4 façons différentes, par exemple :
+  - `1 Ampoule`(code EDQM `15002000`)
   - `1` (unité \[de présentation de l'unité de médicament prescrit\] = ampoule contenant 20 mg de furosémide)
   - `20 mg` (de principe actif = furosémide)
   - `2 mL` (de produit = solution injectable contenant 20 mg de furosémide)
 
-Ces 3 expressions permettent de déterminer la quantité de(s) principe(s) actif(s) à partir de caratéristiques du médicament prescrit
+Ces 4 expressions permettent de déterminer la quantité de(s) principe(s) actif(s) à partir de caratéristiques du médicament prescrit. Cependant, pour des raisons de simplicité de dispensation et d'administration, dans le cas des prescriptions en spécialité pour lesquelles la présentation est définie par le code UCD utilisé, la première expression en unité de présentation est préférée si possible.
 
 ### Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j
 
 - **unité de médicament prescrit** ➟ `MedicationRequest.medication`
-  - `FUROSEMIDE` → médicament en DC ➟ dans le `.text` du `.coding` du médicament en DC
-  - `furosémide` → principe actif ➟ `.ingredient().item\[x\]`
+  - `FUROSEMIDE` → médicament en DC ➟ `code.coding.dispaly` dans le libellé correspondant au code de substance (code SMS ou code technique ANSM) provenant du [Référentiel Unique d'Interopérabilité du Médicament - RUIM](https://smt.esante.gouv.fr/terminologie-ref_interop_med/)
+  - `furosémide` → principe actif ➟ `.ingredient().item\[x\]` (optionnel dans le cas d'un médicament simple préscrit en DC dans la mesure où le le principe actif est identique au médicament)
   - les autres caractéristiques ne sont pas contraintes par le prescripteur
 - **dose prescrite** → `MedicationRequest.dosageInstruction`
   - caractéristiques identiques à celles de l'exemple de ligne de prescription en spécialité
 - La **quantité** `XX` de la dose prescrite ne peut plus s'exprimer que d'1 façon :
   - `20 mg` (de principe actif = furosémide)
-- Les 2 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
+- Les 3 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
+  - `1 [unité de présentation]`(unité de présentation non définie dans `medication`ni dans le RIUM)
   - `1` (unité [de présentation de l'unité de médicament prescrit] = furosémide en quantité non définie)
   - `2 mL` (de produit = un produit qui contient du furosémide en concentration non définie)
 
@@ -134,7 +135,7 @@ entre
 
 #### Contrainte sur le Médicament prescrit (`MedicationRequest.medication`)
 
-Le dosage (`.ingredient[].strength`) est exigé quand le médicament prescrit est
+Le dosage (`.ingredient[].strength`) est exigé quand le médicament prescrit est un médicament composé:
 
 - une association de principes actifs (ex : paracétamol + codéine)
 - un médicament extemporané (ex : perfusion composée de plusieurs médicaments)
@@ -164,9 +165,9 @@ Si une durée d'administration n'est pas spécifiée par le prescripteur, cela s
 
 Intraveineuse lente et intraveineuse directe ne sont pas des voies d'administration, quand bien même ces concepts s'y invitent régulièrement dans les listes locales des voies d'administration. Ce sont des méthodes, dont la principale différence porte sur la durée d'administration, qui n'est dans ce cas pas quantifée mais simplement qualifiée.
 
-Si le prescripteur souhaite ne pas donner une durée d'administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l'élément `method` de la ressource *MedicationRequest*. La voie d'administration, élément `route`, prend dans les deux cas la valeur voie intraveineuse.
+Si le prescripteur souhaite ne pas donner une durée d'administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l'élément `method` de `dosageInstruction`de la ressource *MedicationRequest*. La voie d'administration, élément `route`, prend dans les deux cas la valeur voie intraveineuse.
 
-Ni l'EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d'administration *injection*.
+Ni l'EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d'administration *injection*. La distinction qualitative est donc à exprimer dans l'élément `.text`de `method`
 
 #### Injection continue
 
@@ -247,18 +248,10 @@ Dans un médicament composé, permet d'exprimer quel composant, quelle ressource
 Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.
 
 Cette information est portée par l'extension [*FrIsVehicle*](StructureDefinition-FrIsVehicle.html).
-Cette extension est appliquée
 
-- soit à la ressource *Medication* composant qui est référencée par l'élément ingredient de la ressource *Medication* composée,
-- soit à l'élément `ingredient` de la ressource *Medication* composée.
+Cette extension est appliquée à l'élément `ingredient` de la ressource *Medication* composée.
 
-Voir les deux variantes de l'exemple
-
-1. sur Medication composant : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14649.html)
-1. sur .ingredient de Medication composé : [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html)
-
-Ces **deux variantes** transmettent strictement la même information et **sont soumises à concertation**.
-Dans la version 1 finalisée du guide, **une seule sera retenue** et le contexte d'application de l'extension *IsVehicule* sera réduit en conséquence.
+Voir l'exemple [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-14650.html)
 
 Note PN13:
 
@@ -272,13 +265,13 @@ Cette expression est utilisée dans la prescription des injectables en seringue 
 L'application de la règle suivante répond à ce cas d'usage :
 
 - repérer l'*ingredient* représentant le médicament composant qui joue le rôle de soluté avec l'extension *IsVehicule* ;
-- ne pas mettre de volume à ce médicament composant jouant le rôle de soluté (absence d'élément amount dans la ressource Medication représentant le médicament soluté) ;
-- mettre le volume cible dans l'élément amount de la ressource Medication représentant le médicament composé.
+- ne pas mettre de volume à ce médicament composant jouant le rôle de soluté (absence d'élément amount dans la ressource *Medication* représentant le médicament soluté) ;
+- mettre le volume cible dans l'élément amount de la ressource *Medication* représentant le médicament composé.
 
 Cette règle impose l'utilisation de l'extension *IsVehicule*.
 Voir exemple [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-14651.html)
 
-En [R5](https://hl7.org/fhir/medication.html), le ressource *Medication* voit l'élément `ingredient.strength` passer de type exclusivement *Ratio* en type alternatif *Ratio*, *Quantity* ou *CodeableConcept* avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).
+En [R5](https://hl7.org/fhir/medication.html), la ressource *Medication* voit l'élément `ingredient.strength` passer de type exclusivement *Ratio* en type alternatif *Ratio*, *Quantity* ou *CodeableConcept* avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).
 
 - En mettant dans
   - `.totalVolume` : le volume cible de la seringue,
@@ -303,7 +296,7 @@ Un patch est un médicament incluant un dispositif intégré garantissant
 
 Ces informations sont des propriétés du médicament prescrit.
 
-Elles s'expriment dans la ressource Medication référencée par l'élément medication qui décrit l'unité de médicament prescrit dans la ressource MedicationRequest.
+Elles s'expriment dans la ressource *Medication* référencée par l'élément medication qui décrit l'unité de médicament prescrit dans la ressource *MedicationRequest*.
 
 ### Propriété de la dose
 
@@ -367,5 +360,5 @@ Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseA
 Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](MedicationRequest-14652.html)
 
 **Note**:
-Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la `surface corporelle` (1,85 m²), voire seulement de la `taille` (1,75 m) et du `poids` (70 kg) du patient.
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la `surface corporelle` (1,85 m²), voire seulement de la `taille` (1,75 m) et du `poids` (70 kg) du patient dans des ressources *Observation* référencées par `MedicationRequest.supportingInfoormation`.
 Mais c'est un autre cas d'usage, qui, quand bien même il déboucherait sur la même délivrance, *capécitabine 1800 mg*, laisserait au pharmacien l'arbitrage de l'arrondi par rapport à la dose prescrite. C'est un cas d'usage différent parce que l'acteur et le temps où se fait l'arrondi ne sont pas les mêmes.

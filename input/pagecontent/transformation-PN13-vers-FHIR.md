@@ -24,7 +24,7 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
   - 1 ressource *Encounter* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Encounter* référencée n'existe pas déjà).
   - 0 à n ressource(s) *Observation* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Observation* référencée n'existe pas déjà).
   - 1 ressource *Practitioner* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Practitioner* référencée n'existe pas déjà).
-  - 1 à n ressource(s) *Medication* cf. section **Type de prescription**.
+  - 0 à n ressource(s) *Medication* cf. section **Medication**.
 - 0 à 1 ressource *RequestGroup* (ou *RequestOrchestration* en FHIR R5). Son alimentation à partir des données PN13 sera documentée dans un mapping à venir dans une version ultérieure de cet IG.
 
 ### Existence préalable des ressources référencées
@@ -75,15 +75,17 @@ Dans le message PN13, à partir des sous-éléments de `Message/M_Prescription_m
   
 #### Medication
 
-Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` dans le message PN13, créer une ressource *Medication* suivant le profil [fr-medication-noncompound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationnoncompound-conceptmap].
+1. Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` dans le message PN13:
 
-Si le message PN13 comporte plusieurs éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` créer une ressource *Medication* suivant le profil [fr-medication-compound2] qui référence chaque ressource créé à partir des éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` via `Medication.ingredient.itemReference.reference` en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationcompound-conceptmap].
-
-**Note**: On pourrait considérer réutiliser des ressources *Medication* existantes mais dans la mesure où les ressources *Medication* d'une prescription peuvent porter des information de contexte (ex. extension Is_Vehicule), il est recommandé dans un premier temps de créer les ressources à chaque fois. Eventuellement à terme il pourrait être envisagé de ne plus le faire si les effets de bord potentiels ont pu être finement identifier.
+  - si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d'information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament, il est possible d'utiliser le code du médicament soit dans `MedicationRequest.medicationCodeableConcept`(dans le cas d'un médicament simple) soit dans `Medication.ingredient.itemCodeableConcept` (dans le cas d'un médicament composé cf. item 2) ou de créer une ressource *Medication* pour ce médicament (cf. item suivant sur la création de la ressource *Medication*);
+  - si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l'information isVehicule...) une ressource *Medication* **DOIT** être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationnoncompound-conceptmap]. Une ressource peut également être créée pour les composants prescrits ne portant pas d'informations complémentaires aux informations présentes dans le RUIM (cf. item précédent).
+1. Si le message PN13 comporte plusieurs éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` créer une ressource *Medication* suivant le profil [fr-medication-compound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationcompound-conceptmap]:
+  - qui référence chaque ressource créée à partir des éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` via `Medication.ingredient.itemReference.reference`;
+  - qui indique le code du médicament via `Medication.ingredient.itemCodeableConcept`. 
 
 #### MedicationRequest
 
-Créer une ressource *MedicationRequest* suivant le profil [fr-inpatient-medicationrequest3] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationrequest-conceptmap] et en référençant les ressources précédemment créées ou identifiées lors des étapes précédentes.
+Créer une ressource *MedicationRequest* suivant le profil [fr-inpatient-medicationrequest] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationrequest-conceptmap] et en référençant les ressources précédemment créées ou identifiées lors des étapes précédentes.
 
 Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie` ne comportant pas d'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début` valorisé à `4`, créer une instance de `MedicationRequest.dosageInstruction` en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-dosageinstruction-conceptmap].
 

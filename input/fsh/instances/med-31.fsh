@@ -1,11 +1,11 @@
 Instance: med-31
-InstanceOf: FrMedication2unique
+InstanceOf: FrMedication
 Usage: #inline
-* code = $SIPh-CIO_UCD#3400893766521 "EFFERALGAN 1 000 mg, cpr"
+* code = $UCD#3400893766521 "EFFERALGANMED 1000MG CPR"
 * code.text = "EFFERALGAN 1 000 mg, cpr"
-* form = $sct#421026006 "comprimé oral"
+* form = $EDQM#10219000 "Comprimé"
 * form.text = "comprimé"
-* ingredient.itemCodeableConcept = $sct#387517004 "paracétamol"
+* ingredient.itemCodeableConcept = $SMS#100000090270 "paracétamol"
 * ingredient.itemCodeableConcept.text = "PARACETAMOL"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 1000 'mg' "mg"

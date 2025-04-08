@@ -153,13 +153,13 @@ Usage: #definition
 * group[11].element[0].target[0].comment = "Cet élément est mappé au niveau de la ressource ConceptMap PN13-FHIR-prescmed-medicationrequest-conceptmap"
 * group[12].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme
 * group[12].element[0].target[0].equivalence = #disjoint
-* group[12].element[0].target[0].comment = "Dans le cas des médicaments composés, la forme est à indiqué au niveau de la ressource Medication chapeau suivant le profil fr-medication-compound2"
+* group[12].element[0].target[0].comment = "Dans le cas des médicaments composés, la forme est à indiqué au niveau de la ressource Medication chapeau suivant le profil fr-medication-compound"
 * group[12].element[0].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic
 * group[12].element[0].target[0].dependsOn[0].value = "{Présence de plusieurs éléments Elément_prescr_médic dans le message PN13}"
 * group[12].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme
 * group[12].element[1].target[0].code = #Medication.form.coding.code
 * group[12].element[1].target[0].equivalence = #equivalent
-* group[12].element[1].target[0].comment = "L'équivalence est donnée par le mapping fourni par PHAST"
+* group[12].element[1].target[0].comment = "le code cible est à trouver dans le mapping Free Set CIO-DC FORME"
 * group[12].element[1].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme@Phast-nomenclature
 * group[12].element[1].target[0].dependsOn[0].value = "SIPh-CIO_Forme"
 * group[12].element[1].target[0].dependsOn[1].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic
@@ -167,7 +167,7 @@ Usage: #definition
 * group[12].element[2].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme
 * group[12].element[2].target[0].code = #Medication.form.coding.code
 * group[12].element[2].target[0].equivalence = #equivalent
-* group[12].element[2].target[0].comment = "Le code forme PN13 est à traduire en EDQM pour alimenter Medication.form.coding.code"
+* group[12].element[2].target[0].comment = "le code cible est à trouver dans le mapping Free Set CIO-DC FORME"
 * group[12].element[2].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme@Phast-nomenclature
 * group[12].element[2].target[0].dependsOn[0].value = "{Absent}"
 * group[12].element[2].target[0].dependsOn[1].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic
@@ -184,7 +184,7 @@ Usage: #definition
 * group[12].element[4].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme
 * group[12].element[4].target[0].code = #Medication.form.coding.code
 * group[12].element[4].target[0].equivalence = #relatedto
-* group[12].element[4].target[0].comment = "Le code forme PN13 est à traduire en EDQM pour alimenter Medication.form.coding.code"
+* group[12].element[4].target[0].comment = "Certains codes cibles peuvent être trouvés dans le mapping Free Set CIO-DC FORME. Dans le cas contraire, si la traduction en EDQM n'est pas possible, Medication.form.text peut être utilisé mais pourrait poser des problèmes d'interprétation"
 * group[12].element[4].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme@Phast-nomenclature
 * group[12].element[4].target[0].dependsOn[0].value = "SIPh-Forme"
 * group[12].element[4].target[0].dependsOn[1].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic

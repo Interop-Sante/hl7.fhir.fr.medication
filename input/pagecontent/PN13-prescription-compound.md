@@ -1,8 +1,8 @@
 # Exemples PN13 de prescritpion de médicaments composés
 
-## Compound-6166 (perfusion sur 12h par jour)
+## Perfusion 6 composants sur 12h par jour
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [perfusion-6-composants-exemple](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Perfusion-6-composants-exemple.html)
+Cette prescription PN13 est traduite en FHIR dans l'instance [Presc-perfusion-6-composants-exemple](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Perfusion-6-composants-exemple.html)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

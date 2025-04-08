@@ -6,8 +6,7 @@
   - Type: *MedicationRequest*
   - Une ligne de prescription
   - En fonction de la nature du médicament prescrit, référence
-    - soit une ressource *FrMedicationUCD*,
-    - soit une ressource *FrMedicationNonProprietaryName*,
+    - soit une ressource *FrMedicationNonCompound*,
     - soit une ressource *FrMedicationCompound*
 - [*FrMedicationUcd*](StructureDefinition-FrMedicationUcd.html)
   - Type: *Medication*

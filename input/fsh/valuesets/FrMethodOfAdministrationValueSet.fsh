@@ -6,5 +6,4 @@ Description: "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstru
 * ^status = #draft
 * ^experimental = false
 * ^immutable = false
-* include codes from system SNOMED_CT
-    where constraint = "< 736665006 |Dose form administration method (administration method)| minus > (< 736665006 |Dose form administration method (administration method)|)"
+* include codes from system $EDQM

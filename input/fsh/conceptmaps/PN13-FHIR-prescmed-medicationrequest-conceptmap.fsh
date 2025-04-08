@@ -15,9 +15,9 @@ Usage: #definition
 * group[0].element[0].code =  $PN13Schema#Messages@Phast-id_message
 * group[0].element[0].target[0].code = #MedicationRequest.groupIdentifier.value
 * group[0].element[0].target[0].equivalence = #equal
-* group[0].element[0].target[0].comment = "Si l'identifiant de message n'est pas présent, le groupIdentifier est à attribuer par le system effectuant la traduction de manière à ce qu'il soit unique pour chaque prescription"
+* group[0].element[0].target[0].comment = "Si l'identifiant de message n'est pas présent, le groupIdentifier est à attribuer par le système effectuant la traduction du message PN13 de manière à ce que le couple (identfier.value,identifier.system)  soit unique pour chaque prescription"
 * group[0].element[0].target[0].product[0].property = #MedicationRequest.groupIdentifier.system
-* group[0].element[0].target[0].product[0].value = "{A attribuer par le systéme effectuant la traduction}"
+* group[0].element[0].target[0].product[0].value = "{A attribuer par le systéme effectuant la traduction en fonction du système émetteur du message PN13}"
 * group[0].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Mode_communication
 * group[0].element[1].target[0].equivalence = #unmatched
 * group[0].element[2].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Dh_prescription
@@ -108,7 +108,7 @@ Usage: #definition
 * group[3].element[0].target[0].code = #MedicationRequest.identifier.value
 * group[3].element[0].target[0].equivalence = #equal
 * group[3].element[0].target[0].product[0].property = #MedicationRequest.identifier.system
-* group[3].element[0].target[0].product[0].value = "{A attribuer par le systéme effectuant la traduction}"
+* group[3].element[0].target[0].product[0].value = "{A attribuer par le systéme effectuant la traduction en fonction du système émetteur du message PN13}"
 * group[4].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Type_élément_prescr
 * group[4].element[0].target[0].code = #MedicationRequest.medicationReference.reference
 * group[4].element[0].target[0].equivalence = #unmatched
@@ -163,7 +163,7 @@ Usage: #definition
 * group[5].element[1].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration
 * group[5].element[1].target[0].code = #MedicationRequest.dosageInstruction.route.coding.code
 * group[5].element[1].target[0].equivalence = #equivalent
-* group[5].element[1].target[0].comment = "le code cible est à trouver dans le mapping SIPh-CIO_Voie_administration / EDMQ"
+* group[5].element[1].target[0].comment = "le code cible est à trouver dans le mapping Free Set CIO-DC VOIE"
 * group[5].element[1].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration@Phast-nomenclature
 * group[5].element[1].target[0].dependsOn[0].value = "SIPh-CIO_Voie_administration"
 * group[5].element[1].target[0].product[0].property = #MedicationRequest.dosageInstruction.route.coding.system
@@ -171,7 +171,7 @@ Usage: #definition
 * group[5].element[2].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration
 * group[5].element[2].target[0].code = #MedicationRequest.dosageInstruction.route.coding.code
 * group[5].element[2].target[0].equivalence = #equivalent
-* group[5].element[2].target[0].comment = "le code cible est à trouver dans le mapping SIPh-CIO_Voie_administration / EDMQ"
+* group[5].element[2].target[0].comment = "le code cible est à trouver dans le mapping Free Set CIO-DC VOIE"
 * group[5].element[2].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration@Phast-nomenclature
 * group[5].element[2].target[0].dependsOn[0].value = "{Absent}"
 * group[5].element[2].target[0].product[0].property = #MedicationRequest.dosageInstruction.route.coding.system
@@ -179,7 +179,7 @@ Usage: #definition
 * group[5].element[3].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration
 * group[5].element[3].target[0].code = #MedicationRequest.dosageInstruction.route.text
 * group[5].element[3].target[0].equivalence = #equivalent
-* group[5].element[3].target[0].comment = "Le code SIPh est à traduire en code EDQM si possible à indiquer dans MedicationRequest.dosageInstruction.route.coding.code avec MedicationRequest.dosageInstruction.route.coding.system valorisé à http://standardterms.edqm.eu. Si ce n'est pas possible MedicationRequest.dosageInstruction.route.text peut être utilisé pour mettre le libellé de la voie d'administration"
+* group[5].element[3].target[0].comment = "Le code SIPh est à traduire en code EDQM si possible (le cas échéant en utilisant le mapping Free Set CIO-DC VOIE) à indiquer dans MedicationRequest.dosageInstruction.route.coding.code avec MedicationRequest.dosageInstruction.route.coding.system valorisé à http://standardterms.edqm.eu. Si ce n'est pas possible MedicationRequest.dosageInstruction.route.text peut être utilisé pour mettre le libellé de la voie d'administration"
 * group[5].element[3].target[0].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration@Phast-nomenclature
 * group[5].element[3].target[0].dependsOn[0].value = "SIPh-Voie_administration"
 * group[6].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Lieu_administration
@@ -344,6 +344,9 @@ Usage: #definition
 * group[11].element[0].target[0].code = #MedicationRequest.medicationReference
 * group[11].element[0].target[0].equivalence = #relatedto
 * group[11].element[0].target[0].comment = "Voir les ressources concepMap PN13-FHIR-Prescmedi-medicationComp-conceptmap ou PN13-FHIR-Prescmedi-medicationNonComp-conceptmap pour le détail du mapping de cet élément"
+* group[11].element[0].target[1].code = #MedicationRequest.medicationCodeableConcept
+* group[11].element[0].target[1].equivalence = #relatedto
+* group[11].element[0].target[1].comment = "Si Composant_prescrit ne comporte pas d'information complémentaire à l'enregistrement du RUIM, medicationCodeableConcept peut être utilisé"
 * group[12].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie
 * group[12].element[0].target[0].code = #MedicationRequest.dosageInstruction
 * group[12].element[0].target[0].equivalence = #relatedto

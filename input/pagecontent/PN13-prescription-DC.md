@@ -1,8 +1,8 @@
 # Exemples PN13 de prescritpion en DC
 
-## DC-2 (paracetamol si besoin)
+## Paracétamol en cas de douleur
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [bundle-DC-2](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-bundle-DC-2.html)
+Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc-Paracetamol-SiDouleur](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-bundle-DC-2.html)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

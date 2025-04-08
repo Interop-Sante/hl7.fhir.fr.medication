@@ -11,23 +11,30 @@ Description: "French inpatient medication request profile"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
 * extension[treatmentIntent] ^meaningWhenMissing = "overall intention of the treatment not specified"
 * extension[treatmentIntent].value[x].coding ^definition = "SNOMED CT code minimal value set for overall treatment intent (extensible)"
-* medication[x] only Reference(FrMedicationUcd or FrMedicationNonproprietaryName or FrMedicationCompound)
+* medication[x] only Reference(fr-medication-noncompound or fr-medication-compound)
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
+* supportingInformation.extension contains fr-uf-role named UFRole 0..1
 * requester 1..
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"
 * requester ^definition = "The prescriber that initiated the request and has responsibility for its activation."
+* note.extension contains fr-medicationrequest-note-scope named NoteScope 0..1 MS
+* note.extension[NoteScope] ^short = "Périmètre de la note"
+* note.extension[NoteScope] ^definition = "Périmètre indiquant la portée de la note"
+* note.extension[NoteScope] ^comment = "Extension utilisée pour le traduction de message PN13 en FHIR afin de donner le périmètre de la note pour éviter la concatenation d'élément textuel en une seule note difficile à comprendre"
 * dosageInstruction 1..
+* dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
 * dosageInstruction.method from FrMethodOfAdministration (extensible)
-* dosageInstruction.doseAndRate.dose[x] only FrRangeUcum or FrSimpleQuantityUcum
-* dosageInstruction.doseAndRate.rate[x] only FrRatioUcum or FrRangeUcum or FrSimpleQuantityUcum
+* dosageInstruction.doseAndRate.extension contains fr-basis-of-dose-component named BasisOfDoseComponent 0..1
+* dosageInstruction.doseAndRate.dose[x] only FrRangeMedication or FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosageInstruction.doseAndRate.rate[x] only FrRatioMedication or FrRangeMedication or FrSimpleQuantityUcum or FrSimpleQuantityEdqm
 * dosageInstruction.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time. Using a ratio, the denominator SHALL be a quantity of time. Using a simple quantity the UCUM unit SHALL be a unit of rate."
-* dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityUcum
-* dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityUcum
-* dosageInstruction.maxDosePerAdministration only FrSimpleQuantityUcum
-* dosageInstruction.maxDosePerLifetime only FrSimpleQuantityUcum
+* dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosageInstruction.maxDosePerAdministration only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosageInstruction.maxDosePerLifetime only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
 * dispenseRequest.initialFill ..0
 * dispenseRequest.dispenseInterval ..0
 * dispenseRequest.validityPeriod.start 1..

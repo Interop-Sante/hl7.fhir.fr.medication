@@ -17,7 +17,7 @@ Usage: #example
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-07-17T10:09:59Z"
 * dosageInstruction.timing.repeat.timeOfDay[0] = "07:00:00"
 * dosageInstruction.timing.repeat.timeOfDay[+] = "18:00:00"
-* dosageInstruction.route = $sct#26643006 "Voie orale"
+* dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.route.text = "Voie orale"
 * dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate.type.text = "Ordered"

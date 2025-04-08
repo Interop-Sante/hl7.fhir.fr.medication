@@ -6,5 +6,4 @@ Description: "Le jeu de valeurs à utiliser pour coder l'élément *doseForm* de
 * ^status = #draft
 * ^experimental = false
 * ^immutable = false
-* include codes from system SNOMED_CT
-    where constraint = "(< 763158003 |Medicinal product (product)|) . 411116001 |Has manufactured dose form (attribute)|"
+* include codes from system $EDQM

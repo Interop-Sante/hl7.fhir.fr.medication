@@ -6,5 +6,4 @@ Description: "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstru
 * ^status = #draft
 * ^experimental = false
 * ^immutable = false
-* include codes from system SNOMED_CT
-    where constraint = "< 284009009 |Route of administration value (qualifier value)| minus > (< 284009009 |Route of administration value (qualifier value)|)"
+* include codes from system $EDQM
