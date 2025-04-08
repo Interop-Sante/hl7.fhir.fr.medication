@@ -10,7 +10,7 @@ InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-14631"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
-// trouver le code Medicabase pour ce médicament virtuel
+* code = "https://bogussystem.fr/MVid"#BOGUSCODE "BOGUS MV NAME"
 * code.text = "GLUCOSE + SODIUM CHLORURE + POTASSIUM CHLORURE"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
