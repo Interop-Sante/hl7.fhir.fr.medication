@@ -10,7 +10,7 @@ Description: "simple quantity datatype requiring a UCUM or EDQM unit"
 * comparator ..0
 * comparator ^definition = "Not allowed to be used in this context"
 * system 1.. MS
-* system = "http://standardterms.edqm.eu" or "http://unitsofmeasure.org" (exactly)
+* system = "http://standardterms.edqm.eu" or "http://unitsofmeasure.org"
 * system ^definition = "EDQM requiered for the identification of the system that provides the coded form of the unit."
 * system ^requirements = "EDQM requiered."
 * code 1..

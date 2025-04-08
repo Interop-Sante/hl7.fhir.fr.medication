@@ -11,7 +11,7 @@ Description: "French inpatient medication request profile"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
 * extension[treatmentIntent] ^meaningWhenMissing = "overall intention of the treatment not specified"
 * extension[treatmentIntent].value[x].coding ^definition = "SNOMED CT code minimal value set for overall treatment intent (extensible)"
-* medication[x] Reference(fr-medication-noncompound or fr-medication-compound)
+* medicationReference only Reference(fr-medication-noncompound or fr-medication-compound)
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
 * supportingInformation.extension contains fr-uf-role named UFRole 0..1
@@ -19,7 +19,7 @@ Description: "French inpatient medication request profile"
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"
 * requester ^definition = "The prescriber that initiated the request and has responsibility for its activation."
-* note.extension contains fr-medicationrequest-note-scope named NoteScope 0..1 MS
+* note.extension contains fr-medicationrequest-note-scope named NoteScope 0..1
 * note.extension[NoteScope] ^short = "Périmètre de la note"
 * note.extension[NoteScope] ^definition = "Périmètre indiquant la portée de la note"
 * note.extension[NoteScope] ^comment = "Extension utilisée pour le traduction de message PN13 en FHIR afin de donner le périmètre de la note pour éviter la concatenation d'élément textuel en une seule note difficile à comprendre"
