@@ -137,9 +137,6 @@
       <li>
         <a href="prescription-Exemples.html">Exemples</a>
       </li>
-      <li>
-        <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -185,7 +182,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l337">​</a>
+      <li><a name="l331">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -310,6 +307,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="exemples">Exemples</h1>
 
+<p>Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d’une recherche de prescription par identifiant (i.e. élément <code class="language-plaintext highlighter-rouge">groupIndentifier</code>) sous forme de <em>Bundle</em> de type <code class="language-plaintext highlighter-rouge">searchset</code>.
+Ce formalisme n’est pas obligatoire, la manière dont les ressources FHIR constituant une prescription sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de <code class="language-plaintext highlighter-rouge">_include</code> et de <code class="language-plaintext highlighter-rouge">_revInclude</code>)</p>
+
 <h2 id="exemples-généraux">Exemples généraux</h2>
 
 <h3 id="la-ligne-de-prescription-initiale-complexité-du-médicament-prescrit">La ligne de prescription initiale, complexité du médicament prescrit</h3>
@@ -317,43 +317,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="médicament-simple-en-spécialité">Médicament simple en spécialité</h4>
 
 <ul>
-  <li><a href="MedicationRequest-14624.html">EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14625.html">CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h par os, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14626.html">DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14627.html">DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14628.html">NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</a></li>
-  <li><a href="MedicationRequest-14629.html">MATRIFEN 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j</a></li>
-  <li><a href="MedicationRequest-14630.html">BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j</a></li>
+  <li><a name="l620">​</a><a href="MedicationRequest-14624.html">EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j</a></li>
+  <li><a name="l624">​</a><a href="MedicationRequest-14625.html">CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j</a></li>
+  <li><a name="l628">​</a><a href="MedicationRequest-14626.html">DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j</a></li>
+  <li><a name="l632">​</a><a href="MedicationRequest-14627.html">DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j</a></li>
+  <li><a name="l636">​</a><a href="MedicationRequest-14628.html">NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</a></li>
+  <li><a name="l640">​</a><a href="MedicationRequest-14629.html">MATRIFEN 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j</a></li>
+  <li><a name="l644">​</a><a href="Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html">BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j</a></li>
 </ul>
 
 <h4 id="médicament-simple-en-dc">Médicament simple en DC</h4>
 
 <ul>
-  <li><a href="MedicationRequest-14618.html">paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14619.html">paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14620.html">bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14621.html">nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</a></li>
-  <li><a href="MedicationRequest-14622.html">fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j</a></li>
-  <li><a href="MedicationRequest-14631.html">glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j</a>
-    <ul>
-      <li>Note : Il s’agit de la prescription d’une perfusion préfabriquée, prête à l’emploi, d’un médicament associant deux électrolytes à du glucose 5%. C’est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.</li>
-    </ul>
-  </li>
+  <li><a name="l654">​</a><a href="MedicationRequest-14618.html">paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j</a></li>
+  <li><a name="l658">​</a><a href="Presc-Betamethasone-ApplCut.html">bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j</a></li>
+  <li><a name="l662">​</a><a href="MedicationRequest-14621.html">nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</a></li>
+  <li><a name="l666">​</a><a href="MedicationRequest-14622.html">fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j</a></li>
 </ul>
 
 <h4 id="médicament-composé">Médicament composé</h4>
 
 <ul>
-  <li><a href="MedicationRequest-14637.html">Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j</a></li>
-  <li><a href="MedicationRequest-14638.html">Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j</a></li>
-  <li>marquer l’un des médicaments composant comme étant le soluté du médicament composé
+  <li><a name="l676">​</a><a href="MedicationRequest-14619.html">paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j</a></li>
+  <li><a name="l680">​</a><a href="MedicationRequest-14637.html">Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j</a></li>
+  <li><a name="l684">​</a><a href="MedicationRequest-14638.html">Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j</a></li>
+  <li><a name="l688">​</a>marquer l’un des médicaments composant comme étant le soluté du médicament composé: <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a> Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+  <li><a name="l699">​</a><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
+</ul>
+
+<h4 id="médicament-virtuel">Médicament virtuel</h4>
+
+<ul>
+  <li><a name="l709">​</a><a href="MedicationRequest-14631.html">glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j</a>
     <ul>
-      <li>marqueur sur Medication composant : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-      <li>marqueur sur <code class="language-plaintext highlighter-rouge">.ingredient</code> de <em>Medication composé</em> : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l707">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+      <li>Note : Il s’agit de la prescription d’une perfusion préfabriquée, prête à l’emploi, d’un médicament associant deux électrolytes à du glucose 5%. C’est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.</li>
     </ul>
   </li>
-  <li><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
 </ul>
 
 <h3 id="la-prescription-initiale-complexité-de-la-posologie">La prescription initiale, complexité de la posologie</h3>
@@ -364,7 +363,7 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li>les doses rationnelles
     <ul>
-      <li><a href="MedicationRequest-14646.html">BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine</a></li>
+      <li><a name="l733">​</a><a href="Presc-BISOPROLOL-SANDOZ-DosesRationnelles.html">BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine</a></li>
       <li>Dans FHIR, les nombres rationnels sont traduits en type decimal, avec des règles concernant la gestion de la <em>précision</em></li>
       <li>En pratique, pour l’expression de la dose, les nombres rationnels impliqués se limitent à 1/4, 1/3, 1/2, 2/3 et 3/4</li>
       <li>Ce guide recommande de représenter les rationnels à la 6ème décimal. Ainsi
@@ -380,19 +379,19 @@ Les niveaux de complexité supplémentaires adressent</p>
   </li>
   <li>des doses différentes entre horaires
     <ul>
-      <li><a href="MedicationRequest-14641.html">CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j</a></li>
-      <li><a href="MedicationRequest-14642.html">paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j</a></li>
+      <li><a name="l772">​</a><a href="MedicationRequest-14641.html">CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j</a></li>
+      <li><a name="l776">​</a><a href="MedicationRequest-14642.html">paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j</a></li>
     </ul>
   </li>
   <li>les fréquences inférieures à la journée
     <ul>
-      <li><a href="MedicationRequest-14643.html">CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j</a></li>
-      <li><a href="MedicationRequest-14644.html">paracétamol, 500 mg toutes les 6 h per os, pendant 5j</a></li>
+      <li><a name="l786">​</a><a href="MedicationRequest-14643.html">CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j</a></li>
+      <li><a name="l790">​</a><a href="MedicationRequest-14644.html">paracétamol, 500 mg toutes les 6 h per os, pendant 5j</a></li>
     </ul>
   </li>
   <li>les fréquences calendaires
     <ul>
-      <li><a href="MedicationRequest-14645.html">CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois</a></li>
+      <li><a name="l800">​</a><a href="MedicationRequest-14645.html">CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois</a></li>
       <li>Le type complexe <em>Timing</em> ne permet pas le codage des situations suivantes
         <ul>
           <li><em>tous les 05 du mois</em></li>
@@ -401,40 +400,32 @@ Les niveaux de complexité supplémentaires adressent</p>
       </li>
       <li>Le type complexe <em>Timing</em> est normatif, il est en pratique impossible de le faire évoluer.
         <ul>
-          <li>Faut-il créer les extensions <em>dayOfMonth</em> et <em>weekdayOfMonth</em> ?</li>
-          <li>Note: l’extension standard <a href="https://hl7.org/fhir/R4/extension-timing-dayofmonth.html">dayOfMonth</a> existe !! (maturité 1).</li>
+          <li>Il est nécessaire pour l’instant de “calculer” les dates correspondantes à la fréquence calendaire et de les indiquer dans autant de dosageInstruction.</li>
+          <li>Note: l’extension standard <a href="https://hl7.org/fhir/R4/extension-timing-dayofmonth.html">dayOfMonth</a> existe en FHIR R4 (maturité 1), mais elle n’est pas reprise en FHIR R5. Son utilisation n’est donc pas conseillée.</li>
         </ul>
       </li>
     </ul>
   </li>
   <li>les prescriptions conditionnelles simples
     <ul>
-      <li><a href="MedicationRequest-14639.html">CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
-      <li><a href="MedicationRequest-14640.html">paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
-      <li>Le concept de délais <em>minimum</em> entre deux prises n’est pas codable.
-        <ul>
-          <li>Il apparait en tant que consigne complémentaire en texte libre dans un élément <em>additionalInstruction</em>.</li>
-          <li>Faut-il créer un extension ?</li>
-        </ul>
-      </li>
+      <li><a name="l845">​</a><a href="MedicationRequest-14639.html">CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
+      <li><a name="l849">​</a><a href="MedicationRequest-14640.html">paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j</a></li>
     </ul>
   </li>
   <li>les doses progessives ou dégressives par palier
     <ul>
-      <li><a href="MedicationRequest-14647.html">méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j</a></li>
-      <li>Qu’apporte l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction.sequence</code> de chaque palier par rapport l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction.timing.repeat.boundsPeriod</code> indispensable ?</li>
-      <li>L’élément <code class="language-plaintext highlighter-rouge">dosageInstruction.sequence</code> est facultatif. Ne serait-il pas préferable le supprimer ?</li>
+      <li><a name="l859">​</a><a href="MedicationRequest-14647.html">méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j</a></li>
     </ul>
   </li>
   <li>l’expression de la quantité d’une dose se référant à l’un des médicaments composant du médicament composé prescrit
     <ul>
-      <li><a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l916">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
+      <li><a name="l869">​</a><a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
+      <li><a name="l873">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
     </ul>
   </li>
   <li>l’expression d’une dose réelle pertinente à partir d’une dose théorique fonction de paramètres patient
     <ul>
-      <li><a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></li>
+      <li><a name="l888">​</a><a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></li>
     </ul>
   </li>
 </ul>
@@ -450,11 +441,11 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li><strong>unité de médicament prescrit</strong> ➟ <code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">LASILIX</code> → marque ➟ dans le <code class="language-plaintext highlighter-rouge">.text</code> du <code class="language-plaintext highlighter-rouge">.coding</code> de la spécialité</li>
+      <li><code class="language-plaintext highlighter-rouge">LASILIX</code> → marque ➟ <code class="language-plaintext highlighter-rouge">code.coding.dispaly</code> dans le libellé correspondant au code UCD provenant du <a href="https://smt.esante.gouv.fr/terminologie-ref_interop_med/">Référentiel Unique d’Interopérabilité du Médicament - RUIM</a></li>
       <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <code class="language-plaintext highlighter-rouge">.ingredient().item\[x\]</code></li>
-      <li><code class="language-plaintext highlighter-rouge">20 mg</code> → dosage ➟ <code class="language-plaintext highlighter-rouge">.ingredient().strength</code></li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> → dosage ➟ optionnellement dans <code class="language-plaintext highlighter-rouge">.ingredient().strength</code></li>
       <li><code class="language-plaintext highlighter-rouge">sol inj</code> → forme ➟ <code class="language-plaintext highlighter-rouge">.form</code></li>
-      <li><code class="language-plaintext highlighter-rouge">amp</code> → présentation ➟ en annotation <code class="language-plaintext highlighter-rouge">{amp}</code> de l’unité de dénombrement UCUM</li>
+      <li><code class="language-plaintext highlighter-rouge">amp</code> → présentation ➟ code EDQM dans le dénominateur du ratio du dosage et/ou du volume</li>
       <li><code class="language-plaintext highlighter-rouge">2 mL</code> → volume ➟ <code class="language-plaintext highlighter-rouge">.amount</code></li>
     </ul>
   </li>
@@ -466,8 +457,9 @@ Les niveaux de complexité supplémentaires adressent</p>
       <li><code class="language-plaintext highlighter-rouge">pendant 5j</code> → début (maintenant) et fin (début + 5j) ➟ <code class="language-plaintext highlighter-rouge">.timing.boundsPeriod</code></li>
     </ul>
   </li>
-  <li>La quantité <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
+  <li>La quantité <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite peut s’exprimer de 4 façons différentes, par exemple :
     <ul>
+      <li><code class="language-plaintext highlighter-rouge">1 Ampoule</code>(code EDQM <code class="language-plaintext highlighter-rouge">15002000</code>)</li>
       <li><code class="language-plaintext highlighter-rouge">1</code> (unité [de présentation de l’unité de médicament prescrit] = ampoule contenant 20 mg de furosémide)</li>
       <li><code class="language-plaintext highlighter-rouge">20 mg</code> (de principe actif = furosémide)</li>
       <li><code class="language-plaintext highlighter-rouge">2 mL</code> (de produit = solution injectable contenant 20 mg de furosémide)</li>
@@ -475,15 +467,15 @@ Les niveaux de complexité supplémentaires adressent</p>
   </li>
 </ul>
 
-<p>Ces 3 expressions permettent de déterminer la quantité de(s) principe(s) actif(s) à partir de caratéristiques du médicament prescrit</p>
+<p>Ces 4 expressions permettent de déterminer la quantité de(s) principe(s) actif(s) à partir de caratéristiques du médicament prescrit. Cependant, pour des raisons de simplicité de dispensation et d’administration, dans le cas des prescriptions en spécialité pour lesquelles la présentation est définie par le code UCD utilisé, la première expression en unité de présentation est préférée si possible.</p>
 
 <h3 id="ex-furosemide-xx-à-7h-et-18h-iv-pendant-5j">Ex: FUROSEMIDE XX à 7h et 18h IV, pendant 5j</h3>
 
 <ul>
   <li><strong>unité de médicament prescrit</strong> ➟ <code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">FUROSEMIDE</code> → médicament en DC ➟ dans le <code class="language-plaintext highlighter-rouge">.text</code> du <code class="language-plaintext highlighter-rouge">.coding</code> du médicament en DC</li>
-      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <code class="language-plaintext highlighter-rouge">.ingredient().item\[x\]</code></li>
+      <li><code class="language-plaintext highlighter-rouge">FUROSEMIDE</code> → médicament en DC ➟ <code class="language-plaintext highlighter-rouge">code.coding.dispaly</code> dans le libellé correspondant au code de substance (code SMS ou code technique ANSM) provenant du <a href="https://smt.esante.gouv.fr/terminologie-ref_interop_med/">Référentiel Unique d’Interopérabilité du Médicament - RUIM</a></li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <code class="language-plaintext highlighter-rouge">.ingredient().item\[x\]</code> (optionnel dans le cas d’un médicament simple préscrit en DC dans la mesure où le le principe actif est identique au médicament)</li>
       <li>les autres caractéristiques ne sont pas contraintes par le prescripteur</li>
     </ul>
   </li>
@@ -497,8 +489,9 @@ Les niveaux de complexité supplémentaires adressent</p>
       <li><code class="language-plaintext highlighter-rouge">20 mg</code> (de principe actif = furosémide)</li>
     </ul>
   </li>
-  <li>Les 2 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
+  <li>Les 3 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
     <ul>
+      <li><code class="language-plaintext highlighter-rouge">1 [unité de présentation]</code>(unité de présentation non définie dans <code class="language-plaintext highlighter-rouge">medication</code>ni dans le RIUM)</li>
       <li><code class="language-plaintext highlighter-rouge">1</code> (unité [de présentation de l’unité de médicament prescrit] = furosémide en quantité non définie)</li>
       <li><code class="language-plaintext highlighter-rouge">2 mL</code> (de produit = un produit qui contient du furosémide en concentration non définie)</li>
     </ul>
@@ -523,7 +516,7 @@ Les niveaux de complexité supplémentaires adressent</p>
 
 <h4 id="contrainte-sur-le-médicament-prescrit-medicationrequestmedication">Contrainte sur le Médicament prescrit (<code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code>)</h4>
 
-<p>Le dosage (<code class="language-plaintext highlighter-rouge">.ingredient[].strength</code>) est exigé quand le médicament prescrit est</p>
+<p>Le dosage (<code class="language-plaintext highlighter-rouge">.ingredient[].strength</code>) est exigé quand le médicament prescrit est un médicament composé:</p>
 
 <ul>
   <li>une association de principes actifs (ex : paracétamol + codéine)</li>
@@ -557,9 +550,9 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 
 <p>Intraveineuse lente et intraveineuse directe ne sont pas des voies d’administration, quand bien même ces concepts s’y invitent régulièrement dans les listes locales des voies d’administration. Ce sont des méthodes, dont la principale différence porte sur la durée d’administration, qui n’est dans ce cas pas quantifée mais simplement qualifiée.</p>
 
-<p>Si le prescripteur souhaite ne pas donner une durée d’administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l’élément <code class="language-plaintext highlighter-rouge">method</code> de la ressource <em>MedicationRequest</em>. La voie d’administration, élément <code class="language-plaintext highlighter-rouge">route</code>, prend dans les deux cas la valeur voie intraveineuse.</p>
+<p>Si le prescripteur souhaite ne pas donner une durée d’administration explicite quantifiée, cette distinction qualitative DOIT être portée dans l’élément <code class="language-plaintext highlighter-rouge">method</code> de <code class="language-plaintext highlighter-rouge">dosageInstruction</code>de la ressource <em>MedicationRequest</em>. La voie d’administration, élément <code class="language-plaintext highlighter-rouge">route</code>, prend dans les deux cas la valeur voie intraveineuse.</p>
 
-<p>Ni l’EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d’administration <em>injection</em>.</p>
+<p>Ni l’EDQM, ni SNOMED CT ne fournissent de codes pour nuancer la méthode d’administration <em>injection</em>. La distinction qualitative est donc à exprimer dans l’élément <code class="language-plaintext highlighter-rouge">.text</code>de <code class="language-plaintext highlighter-rouge">method</code></p>
 
 <h4 id="injection-continue">Injection continue</h4>
 
@@ -624,9 +617,9 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de rapporter l’expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1601">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <code class="language-plaintext highlighter-rouge">doseAndRate</code> du type complex <em>Dosage</em> qui s’applique à l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code>* de la ressource <em>MedicationRequest</em>.</p>
+<p><a name="l1578">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <code class="language-plaintext highlighter-rouge">doseAndRate</code> du type complex <em>Dosage</em> qui s’applique à l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code>* de la ressource <em>MedicationRequest</em>.</p>
 
-<p>Voir exemple <a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
+<p><a name="l1597">​</a>Voir exemple <a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
 
 <p>Note PN13:</p>
 
@@ -641,23 +634,11 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1667">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.
-Cette extension est appliquée</p>
+<p><a name="l1644">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.</p>
 
-<ul>
-  <li>soit à la ressource <em>Medication</em> composant qui est référencée par l’élément ingredient de la ressource <em>Medication</em> composée,</li>
-  <li>soit à l’élément <code class="language-plaintext highlighter-rouge">ingredient</code> de la ressource <em>Medication</em> composée.</li>
-</ul>
+<p>Cette extension est appliquée à l’élément <code class="language-plaintext highlighter-rouge">ingredient</code> de la ressource <em>Medication</em> composée.</p>
 
-<p>Voir les deux variantes de l’exemple</p>
-
-<ol>
-  <li>sur Medication composant : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-  <li>sur .ingredient de Medication composé : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-</ol>
-
-<p>Ces <strong>deux variantes</strong> transmettent strictement la même information et <strong>sont soumises à concertation</strong>.
-Dans la version 1 finalisée du guide, <strong>une seule sera retenue</strong> et le contexte d’application de l’extension <em>IsVehicule</em> sera réduit en conséquence.</p>
+<p><a name="l1660">​</a>Voir l’exemple <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
 
 <p>Note PN13:</p>
 
@@ -674,14 +655,14 @@ Dans la version 1 finalisée du guide, <strong>une seule sera retenue</strong> e
 
 <ul>
   <li>repérer l’<em>ingredient</em> représentant le médicament composant qui joue le rôle de soluté avec l’extension <em>IsVehicule</em> ;</li>
-  <li>ne pas mettre de volume à ce médicament composant jouant le rôle de soluté (absence d’élément amount dans la ressource Medication représentant le médicament soluté) ;</li>
-  <li>mettre le volume cible dans l’élément amount de la ressource Medication représentant le médicament composé.</li>
+  <li>ne pas mettre de volume à ce médicament composant jouant le rôle de soluté (absence d’élément amount dans la ressource <em>Medication</em> représentant le médicament soluté) ;</li>
+  <li>mettre le volume cible dans l’élément amount de la ressource <em>Medication</em> représentant le médicament composé.</li>
 </ul>
 
-<p>Cette règle impose l’utilisation de l’extension <em>IsVehicule</em>.
+<p><a name="l1734">​</a>Cette règle impose l’utilisation de l’extension <em>IsVehicule</em>.
 Voir exemple <a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></p>
 
-<p>En <a href="https://hl7.org/fhir/medication.html">R5</a>, le ressource <em>Medication</em> voit l’élément <code class="language-plaintext highlighter-rouge">ingredient.strength</code> passer de type exclusivement <em>Ratio</em> en type alternatif <em>Ratio</em>, <em>Quantity</em> ou <em>CodeableConcept</em> avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).</p>
+<p>En <a href="https://hl7.org/fhir/medication.html">R5</a>, la ressource <em>Medication</em> voit l’élément <code class="language-plaintext highlighter-rouge">ingredient.strength</code> passer de type exclusivement <em>Ratio</em> en type alternatif <em>Ratio</em>, <em>Quantity</em> ou <em>CodeableConcept</em> avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).</p>
 
 <ul>
   <li>En mettant dans
@@ -716,7 +697,7 @@ délivré de principe(s) actif(s).</li>
 
 <p>Ces informations sont des propriétés du médicament prescrit.</p>
 
-<p>Elles s’expriment dans la ressource Medication référencée par l’élément medication qui décrit l’unité de médicament prescrit dans la ressource MedicationRequest.</p>
+<p>Elles s’expriment dans la ressource <em>Medication</em> référencée par l’élément medication qui décrit l’unité de médicament prescrit dans la ressource <em>MedicationRequest</em>.</p>
 
 <h3 id="propriété-de-la-dose">Propriété de la dose</h3>
 
@@ -778,10 +759,10 @@ délivré de principe(s) actif(s).</li>
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Voir exemple <a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></p>
+<p><a name="l2169">​</a>Voir exemple <a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></p>
 
 <p><strong>Note</strong>:
-Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la <code class="language-plaintext highlighter-rouge">surface corporelle</code> (1,85 m²), voire seulement de la <code class="language-plaintext highlighter-rouge">taille</code> (1,75 m) et du <code class="language-plaintext highlighter-rouge">poids</code> (70 kg) du patient.
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la <code class="language-plaintext highlighter-rouge">surface corporelle</code> (1,85 m²), voire seulement de la <code class="language-plaintext highlighter-rouge">taille</code> (1,75 m) et du <code class="language-plaintext highlighter-rouge">poids</code> (70 kg) du patient dans des ressources <em>Observation</em> référencées par <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInfoormation</code>.
 Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur la même délivrance, <em>capécitabine 1800 mg</em>, laisserait au pharmacien l’arbitrage de l’arrondi par rapport à la dose prescrite. C’est un cas d’usage différent parce que l’acteur et le temps où se fait l’arrondi ne sont pas les mêmes.</p>
 
 
@@ -803,7 +784,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 15:52+0000">2025-02-24</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 9, 2025 16:25+0000">2025-04-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

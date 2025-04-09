@@ -137,9 +137,6 @@
       <li>
         <a href="prescription-Exemples.html">Exemples</a>
       </li>
-      <li>
-        <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -185,7 +182,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l337">​</a>
+      <li><a name="l331">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -279,18 +276,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>La prescription est un ensemble de <strong>lignes de prescription</strong>, représentées chacune par une ressource <em>MedicationRequest</em> profilée <em>FrInpatientMedicationRequest</em>.</p>
 
-<p>La prescription en tant que telle (le regroupement de lignes de prescription), n’a pas été étudiée. Voir la rubrique <a href="prescription-Implementation.html">Implémentation</a> pour une première ébauche.</p>
+<p>La prescription en tant que telle (le regroupement de lignes de prescription), n’est pas représenté par une ressource FHIR. En accord avec les guidelines d’HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l’élément <em>groupeIdentifier</em>.</p>
 
 <p>Chaque <strong>ligne de prescription</strong> est composée d’un <strong>médicament prescrit</strong> et de sa <strong>posologie</strong>.</p>
 
 <p>Le <strong>médicament prescrit</strong> est représenté par l’élément <code class="language-plaintext highlighter-rouge">medication\[x\]</code> (1..1) de la ressource <em>FrInpatientMedicationRequest</em> qui le contraint à faire référence à une ressource <em>Medication</em>.</p>
 
-<p>Selon que ce médicament prescrit est un <strong>médicament simple</strong> ou un <strong>médicament composé</strong> de plusieurs médicaments simples et que le médicament simple est exprimé en <strong>DC</strong> (dénomination commune) ou en <strong>spécialité</strong>,
-le <strong>médicament prescrit</strong> est représenté par trois variantes de ressource <em>Medication</em>:</p>
+<p>Selon que ce médicament prescrit est un <strong>médicament simple</strong> ou un <strong>médicament composé</strong> de plusieurs médicaments simples, le <strong>médicament prescrit</strong> est représenté par deux variantes de ressource <em>Medication</em>:</p>
 
 <ul>
-  <li><em>FrMedicationUcd</em>: médicament exprimée en spécialité identifié par son <strong>code UCD</strong>. Ex: <em>EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521</em></li>
-  <li><em>FrMedicationNonProprietaryName</em>: médicament exprimé en DC (dénomination commune identifiée par son <strong>code SMS</strong> ou son <strong>code technique ANSM</strong> dans l’attente de l’attribution d’un code SMS )/ Ex: <em>paracétamol dont le code SMS est 100000090270</em></li>
+  <li><em>FrMedicationNonCompound</em>: médicament simplte exprimé en spécialité identifié par son <strong>code UCD</strong>. Ex: <em>EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521</em> ou médicament exprimé en DC (dénomination commune identifiée par son <strong>code SMS</strong> ou son <strong>code technique ANSM</strong> dans l’attente de l’attribution d’un code SMS )/ Ex: <em>paracétamol dont le code SMS est 100000090270</em></li>
   <li><em>FrMedicationCompound</em>: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: <em>glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g</em>.</li>
 </ul>
 
@@ -298,7 +293,7 @@ le <strong>médicament prescrit</strong> est représenté par trois variantes de
 
 <p><img src="Prescription1.jpg" alt="IGMedicationDependanceRessourcesProfileesPrescription"/></p>
 
-<p>Noter qu’un médicament simple peut être une association de plusieurs principes actifs. Ce n’en est pas moins un médicament simple représenté par une ressource <em>FrMedicationUcd</em> si c’est une spécialité ou une ressource <em>FrMedicationNonProprietaryName</em> si c’est une DC.
+<p>Noter qu’un médicament simple peut être une association de plusieurs principes actifs. Ce n’en est pas moins un médicament simple représenté par une ressource <em>FrMedicationNonCompound</em>.
 Ex: <em>CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047</em>
 Ex: <em>paracétamol+codéine 500 mg+30 mg</em></p>
 
@@ -510,7 +505,7 @@ Dans cet exemple</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 15:52+0000">2025-02-24</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 9, 2025 16:25+0000">2025-04-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
