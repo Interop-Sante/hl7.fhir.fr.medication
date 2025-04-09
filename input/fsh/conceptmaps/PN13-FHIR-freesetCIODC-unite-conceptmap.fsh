@@ -562,7 +562,7 @@ Usage: #definition
 * group.element[=].target.display = "pression"
 * group.element[=].target.equivalence = #equal
 * group.element[+].code = #pst
-* group.element[=].target.code = #bandg}
+* group.element[=].target.code = #{bandg}
 * group.element[=].target.display = "pst"
 * group.element[=].target.equivalence = #equal
 * group.element[+].code = #pulv
