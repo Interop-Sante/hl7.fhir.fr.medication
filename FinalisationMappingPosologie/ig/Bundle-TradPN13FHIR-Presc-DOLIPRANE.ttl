@@ -1,0 +1,152 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/Bundle/TradPN13FHIR-Presc-DOLIPRANE> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TradPN13FHIR-Presc-DOLIPRANE"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-TradPN13FHIR-Presc-DOLIPRANE" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-TradPN13FHIR-Presc-DOLIPRANE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-TradPN13FHIR-Presc-DOLIPRANE</b></p><a name=\"medication-TradPN13FHIR-Presc-DOLIPRANE\"> </a><a name=\"hcmedication-TradPN13FHIR-Presc-DOLIPRANE\"> </a><a name=\"medication-TradPN13FHIR-Presc-DOLIPRANE-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-medication-noncompound.html\">French Non Compound Medication</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892169026}\">DOLIPRANE 1 000 mg, cpr efferv</span></p></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/UCD"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "3400892169026" ] ;
+           fhir:display [ fhir:v "DOLIPRANE 1000MG CPR EFFV" ]
+         ] ) ;
+         fhir:text [ fhir:v "DOLIPRANE 1 000 mg, cpr efferv" ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-TradPN13FHIR-Presc-DOLIPRANE" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-TradPN13FHIR-Presc-DOLIPRANE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-TradPN13FHIR-Presc-DOLIPRANE</b></p><a name=\"medicationrequest-TradPN13FHIR-Presc-DOLIPRANE\"> </a><a name=\"hcmedicationrequest-TradPN13FHIR-Presc-DOLIPRANE\"> </a><a name=\"medicationrequest-TradPN13FHIR-Presc-DOLIPRANE-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">French Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: <code>https://somehospital.fr/PrescrptionLine-ID</code>/id1</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-TradPN13FHIR-Presc-DOLIPRANE</code></p><p><b>subject</b>: Identifier: <code>https://somehospital.fr/IPP</code>/123456</p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/234567</p><p><b>supportingInformation</b>: Identifier: <code>https://somehospital.fr/UF</code>/2571</p><p><b>authoredOn</b>: 2007-12-27 10:33:00+0100</p><p><b>requester</b>: Identifier: <code>https://somehospital.fr/EI</code>/345678</p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/IdentifiantAttribuePourLaTraductionEnFHIR</p><p><b>note</b>: Prescription textuelle: Doliprane cpr 3x1g/j x 3j</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Code , Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code10219000 = 'Tablet')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:identifier ( [
+         fhir:system [ fhir:v "https://somehospital.fr/PrescrptionLine-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "id1" ]
+       ] ) ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#medication-TradPN13FHIR-Presc-DOLIPRANE" ]
+       ] ;
+       fhir:subject [
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/IPP"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "123456" ]
+         ]
+       ] ;
+       fhir:encounter [
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/Sejour"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "234567" ]
+         ]
+       ] ;
+       fhir:supportingInformation ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "UFMED"
+           ]
+         ] ) ;
+         fhir:type [ fhir:v "Organization"^^xsd:anyURI ] ;
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/UF"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "2571" ]
+         ]
+       ] ) ;
+       fhir:authoredOn [ fhir:v "2007-12-27T10:33:00+01:00"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/EI"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "345678" ]
+         ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "IdentifiantAttribuePourLaTraductionEnFHIR" ]
+       ] ;
+       fhir:note ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "LIPRESCTXT"
+           ]
+         ] ) ;
+         fhir:text [ fhir:v "Prescription textuelle: Doliprane cpr 3x1g/j x 3j" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2007-12-28T07:00:00+01:00"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2007-12-30T18:00:00+01:00"^^xsd:dateTime ]
+             ]
+           ] ;
+           fhir:code [
+             fhir:coding ( [
+               fhir:system [ fhir:v "https://CH-Biorel.fr/Frequence"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "3" ] ;
+               fhir:display [ fhir:v "Trois fois par jour" ]
+             ] )
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20053000" ] ;
+             fhir:display [ fhir:v "Voie orale" ]
+           ] )
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "10219000" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

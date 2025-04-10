@@ -1,0 +1,227 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/Bundle/Presc-PerfDobutamine-Qsp40mL> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Presc-PerfDobutamine-Qsp40mL"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-1-Presc-PerfDobutamine-Qsp40mL" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-1-Presc-PerfDobutamine-Qsp40mL\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-1-Presc-PerfDobutamine-Qsp40mL</b></p><a name=\"medication-1-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"hcmedication-1-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"medication-1-Presc-PerfDobutamine-Qsp40mL-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-medication-noncompound.html\">French Non Compound Medication</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000081844}\">DOBUTAMINE</span></p><p><b>amount</b>: 200 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/</p><p><b style=\"color: maroon\">Exception Generating Narrative: Cannot invoke &quot;org.hl7.fhir.r5.renderers.utils.ResourceWrapper.has(String)&quot; because &quot;q&quot; is null </b></p></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "100000081844" ] ;
+           fhir:display [ fhir:v "dobutamine" ]
+         ] ) ;
+         fhir:text [ fhir:v "DOBUTAMINE" ]
+       ] ;
+       fhir:amount [
+         fhir:numerator [
+           fhir:value [ fhir:v "200"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mg" ]
+         ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-2-Presc-PerfDobutamine-Qsp40mL" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-2-Presc-PerfDobutamine-Qsp40mL\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-2-Presc-PerfDobutamine-Qsp40mL</b></p><a name=\"medication-2-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"hcmedication-2-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"medication-2-Presc-PerfDobutamine-Qsp40mL-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-medication-noncompound.html\">French Non Compound Medication</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000078171}\">GLUCOSE</span></p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 11210000}\">solution pour perfusion</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000078171}\">GLUCOSE</span></td><td>50 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/1 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></td></tr></table></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "100000078171" ] ;
+           fhir:display [ fhir:v "glucose" ]
+         ] ) ;
+         fhir:text [ fhir:v "GLUCOSE" ]
+       ] ;
+       fhir:form [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "11210000" ] ;
+           fhir:display [ fhir:v "solution pour perfusion" ]
+         ] ) ;
+         fhir:text [ fhir:v "solution pour perfusion" ]
+       ] ;
+       fhir:ingredient ( [
+         fhir:item [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "100000078171" ] ;
+             fhir:display [ fhir:v "glucose" ]
+           ] ) ;
+           fhir:text [ fhir:v "GLUCOSE" ]
+         ] ;
+         fhir:strength [
+           fhir:numerator [
+             fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mL" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mL" ]
+           ]
+         ]
+       ] )
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-C-Presc-PerfDobutamine-Qsp40mL" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-C-Presc-PerfDobutamine-Qsp40mL\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-C-Presc-PerfDobutamine-Qsp40mL</b></p><a name=\"medication-C-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"hcmedication-C-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"medication-C-Presc-PerfDobutamine-Qsp40mL-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-medication-compound.html\">French compound Medication</a></p></div><p><b>code</b>: <span title=\"Codes:\">Dobutamine 200 mg dans G5 qsp 40 mL</span></p><p><b>amount</b>: 40 ml<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeml = 'ml')</span>/</p><p><b style=\"color: maroon\">Exception Generating Narrative: Cannot invoke &quot;org.hl7.fhir.r5.renderers.utils.ResourceWrapper.has(String)&quot; because &quot;q&quot; is null </b></p></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Dobutamine 200 mg dans G5 qsp 40 mL" ]
+       ] ;
+       fhir:amount [
+         fhir:numerator [
+           fhir:value [ fhir:v "40"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "ml" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ml" ]
+         ]
+       ] ;
+       fhir:ingredient ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-is-vehicle"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:boolean ;
+             fhir:v true
+           ]
+         ] ) ;
+         fhir:item [
+           a fhir:Reference ;
+           fhir:reference [ fhir:v "#medication-2-Presc-PerfDobutamine-Qsp40mL" ]
+         ]
+       ] )
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-Presc-PerfDobutamine-Qsp40mL" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-PerfDobutamine-Qsp40mL\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-PerfDobutamine-Qsp40mL</b></p><a name=\"medicationrequest-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"hcmedicationrequest-Presc-PerfDobutamine-Qsp40mL\"> </a><a name=\"medicationrequest-Presc-PerfDobutamine-Qsp40mL-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">French Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-C-Presc-PerfDobutamine-Qsp40mL</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-10-15 10:25:27+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14651</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Rate[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>400 µg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeug = 'ug')</span>/1 min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemin = 'min')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#medication-C-Presc-PerfDobutamine-Qsp40mL" ]
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:authoredOn [ fhir:v "2021-10-15T10:25:27.401Z"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Presc-14651" ]
+       ] ;
+       fhir:dosageInstruction ( [
+         fhir:sequence [ fhir:v 1 ] ;
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2021-10-15T10:25:00Z"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2021-10-16T10:24:59Z"^^xsd:dateTime ]
+             ]
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20045000" ] ;
+             fhir:display [ fhir:v "Voie intraveineuse" ]
+           ] ) ;
+           fhir:text [ fhir:v "Voie intraveineuse" ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-basis-of-dose-component"^^xsd:anyURI ] ;
+             fhir:value [
+               a fhir:Reference ;
+               fhir:reference [ fhir:v "#medication-1-Presc-PerfDobutamine-Qsp40mL" ]
+             ]
+           ] ) ;
+           fhir:rate [
+             a fhir:Ratio ;
+             fhir:numerator [
+               fhir:value [ fhir:v "400"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "µg" ] ;
+               fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "ug" ]
+             ] ;
+             fhir:denominator [
+               fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "min" ] ;
+               fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "min" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

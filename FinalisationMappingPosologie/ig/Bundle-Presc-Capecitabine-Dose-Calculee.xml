@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Presc-Capecitabine-Dose-Calculee"/>
+  <meta>
+    <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <Medication>
+        <id value="medication-Presc-Capecitabine-Dose-Calculee"/>
+        <meta>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_medication-Presc-Capecitabine-Dose-Calculee"> </a><p class="res-header-id"><b>Generated Narrative: Medication medication-Presc-Capecitabine-Dose-Calculee</b></p><a name="medication-Presc-Capecitabine-Dose-Calculee"> </a><a name="hcmedication-Presc-Capecitabine-Dose-Calculee"> </a><a name="medication-Presc-Capecitabine-Dose-Calculee-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fr-medication-noncompound.html">French Non Compound Medication</a></p></div><p><b>code</b>: <span title="Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000089303}">CAPECITABINE</span></p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://data.esante.gouv.fr/ansm/medicament/codeSMS"/>
+            <code value="100000089303"/>
+            <display value="capécitabine"/>
+          </coding>
+          <text value="CAPECITABINE"/>
+        </code>
+      </Medication>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-Presc-Capecitabine-Dose-Calculee"/>
+        <meta>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-Presc-Capecitabine-Dose-Calculee"> </a><p class="res-header-id"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-Capecitabine-Dose-Calculee</b></p><a name="medicationrequest-Presc-Capecitabine-Dose-Calculee"> </a><a name="hcmedicationrequest-Presc-Capecitabine-Dose-Calculee"> </a><a name="medicationrequest-Presc-Capecitabine-Dose-Calculee-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fr-inpatient-medicationrequest.html">French Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-Capecitabine-Dose-Calculee</code></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>authoredOn</b>: 2021-10-15 20:06:12+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-71482713">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14652</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20053000}">Voie orale</span></p><blockquote><p><b>doseAndRate</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type calculated}">Calculated</span></p><p><b>dose</b>: 1000 mg/m²<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/m2 = 'mg/m2')</span></p></blockquote><blockquote><p><b>doseAndRate</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}">Ordered</span></p><p><b>dose</b>: 1800 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span></p></blockquote></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <medicationReference>
+          <reference value="#medication-Presc-Capecitabine-Dose-Calculee"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <authoredOn value="2021-10-15T20:06:12.345Z"/>
+        <requester>
+          <reference value="Practitioner/smart-Practitioner-71482713"/>
+        </requester>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-14652"/>
+        </groupIdentifier>
+        <dosageInstruction>
+          <timing>
+            <repeat>
+              <boundsPeriod>
+                <start value="2021-10-15T20:06:00Z"/>
+                <end value="2021-10-29T20:05:59Z"/>
+              </boundsPeriod>
+              <timeOfDay value="07:00:00"/>
+              <timeOfDay value="18:00:00"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20053000"/>
+              <display value="Voie orale"/>
+            </coding>
+            <text value="Voie orale"/>
+          </route>
+          <doseAndRate>
+            <type>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                <code value="calculated"/>
+                <display value="Calculated"/>
+              </coding>
+              <text value="Calculated"/>
+            </type>
+            <doseQuantity>
+              <value value="1000"/>
+              <unit value="mg/m²"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="mg/m2"/>
+            </doseQuantity>
+          </doseAndRate>
+          <doseAndRate>
+            <type>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                <code value="ordered"/>
+                <display value="Ordered"/>
+              </coding>
+              <text value="Ordered"/>
+            </type>
+            <doseQuantity>
+              <value value="1800"/>
+              <unit value="mg"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="mg"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+</Bundle>

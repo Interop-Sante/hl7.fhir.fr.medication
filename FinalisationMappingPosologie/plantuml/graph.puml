@@ -13,39 +13,13 @@ package IG #DDDDDD{
              Range.high => [None..None]
         } 
 
-        class FrRangeUcum{
-
-             Range.low => [None..None]
-             Range.high => [None..None]
-        } 
-
         class FrRatioMedication{
 
              Ratio.numerator => [None..None]
              Ratio.denominator => [None..None]
         } 
 
-        class FrRatioUcum{
-
-             Ratio.numerator => [None..None]
-             Ratio.denominator => [None..None]
-        } 
-
-        class FrSimpleQuantityEdqm{
-
-             Quantity => [None..None]
-             Quantity.system => [1..None]
-             Quantity.code => [1..None]
-        } 
-
         class FrSimpleQuantityMedication{
-
-             Quantity => [None..None]
-             Quantity.system => [1..None]
-             Quantity.code => [1..None]
-        } 
-
-        class FrSimpleQuantityUcum{
 
              Quantity => [None..None]
              Quantity.system => [1..None]
@@ -120,6 +94,17 @@ package IG #DDDDDD{
              MedicationRequest.dosageInstruction.route => [None..None]
              MedicationRequest.dosageInstruction.method => [None..None]
              MedicationRequest.dosageInstruction.doseAndRate.extension:BasisOfDoseComponent => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity => [0..1]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerAdministration => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerLifetime => [None..None]
              MedicationRequest.dispenseRequest.initialFill => [None..0]
              MedicationRequest.dispenseRequest.dispenseInterval => [None..0]
              MedicationRequest.dispenseRequest.validityPeriod.start => [1..None]
@@ -205,6 +190,7 @@ package IG #DDDDDD{
              Medication.amount => [None..None]
              Medication.ingredient => [None..None]
              Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.strength => [None..None]
              Medication.batch => [None..None]
         } 
 
@@ -705,29 +691,13 @@ package "Ressources de base" #palegreen {
 
     class87ba2ecc8b6915e8bd6f5089918229fd --> FrRangeMedication
 
- class "Range" as  class87ba2ecc8b6915e8bd6f5089918229fd 
-
-    class87ba2ecc8b6915e8bd6f5089918229fd --> FrRangeUcum
-
  class "Ratio" as  class8334a158298fbcf163f4dcb4a387d150 
 
     class8334a158298fbcf163f4dcb4a387d150 --> FrRatioMedication
 
- class "Ratio" as  class8334a158298fbcf163f4dcb4a387d150 
-
-    class8334a158298fbcf163f4dcb4a387d150 --> FrRatioUcum
-
- class "SimpleQuantity" as  class2c391528ab21e799798c2a3a4ed7eed2 
-
-    class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityEdqm
-
  class "SimpleQuantity" as  class2c391528ab21e799798c2a3a4ed7eed2 
 
     class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityMedication
-
- class "SimpleQuantity" as  class2c391528ab21e799798c2a3a4ed7eed2 
-
-    class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityUcum
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
