@@ -28,8 +28,11 @@ Description: "French inpatient medication request profile"
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
 * dosageInstruction.method from FrMethodOfAdministration (extensible)
 * dosageInstruction.doseAndRate.extension contains fr-basis-of-dose-component named BasisOfDoseComponent 0..1
-* dosageInstruction.doseAndRate.dose[x] only FrRangeMedication
-* dosageInstruction.doseAndRate.rate[x] only FrRatioMedication
+* dosageInstruction.doseAndRate.doseRange only FrRangeMedication
+* dosageInstruction.doseAndRate.doseQuantity only FrSimpleQuantityMedication
+* dosageInstruction.doseAndRate.rateRatio only FrRatioMedication
+* dosageInstruction.doseAndRate.rateRange only FrRangeMedication
+* dosageInstruction.doseAndRate.rateQuantity only FrSimpleQuantityMedication
 * dosageInstruction.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time. Using a ratio, the denominator SHALL be a quantity of time. Using a simple quantity the UCUM unit SHALL be a unit of rate."
 * dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityMedication
 * dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityMedication
