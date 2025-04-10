@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
   	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
       <!-- Placeholder for child template CSS declarations -->
 <link rel="stylesheet" href="assets/css/hl7fr.css"/>
 
@@ -45,6 +46,7 @@
     h3,h4,h5,h6{--heading-prefix:"13"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
+
           <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
   <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
@@ -162,8 +164,21 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -313,7 +328,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <ul>
       <li>marqueur sur <em>Medication composant</em> : <a href="MedicationRequest-14649.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
       <li>marqueur sur <em>.ingredient</em> de <em>Medication composé</em> : <a href="MedicationRequest-14650.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l644">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+      <li><a name="l669">​</a>Ces deux variantes sont <strong>soumises à concertation : une seule sera retenue</strong>. Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
     </ul>
   </li>
   <li><a href="MedicationRequest-14651.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
@@ -392,7 +407,7 @@ Les niveaux de complexité supplémentaires adressent</p>
   <li>l’expression de la quantité d’une dose se référant à l’un des médicaments composant du médicament composé prescrit
     <ul>
       <li><a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l853">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
+      <li><a name="l878">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
     </ul>
   </li>
   <li>l’expression d’une dose réelle pertinente à partir d’une dose théorique fonction de paramètres patient
@@ -413,27 +428,27 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
     <ul>
-      <li>==<strong>LASILIX</strong>== → marque ➟ dans le <em>.text</em> du <em>.coding</em> de la spécialité</li>
-      <li>==<strong>furosémide</strong>== → principe actif ➟ <em>.ingredient().item[x]</em></li>
-      <li>==<strong>20 mg</strong>== → dosage ➟ <em>.ingredient().strength</em></li>
-      <li>==<strong>sol inj</strong>== → forme ➟ <em>.form</em></li>
-      <li>==<strong>amp</strong>== → présentation ➟ en annotation ==<strong>{amp}</strong>== de l’unité de dénombrement UCUM</li>
-      <li>==<strong>2 mL</strong>== → volume ➟ <em>.amount</em></li>
+      <li><code class="language-plaintext highlighter-rouge">LASILIX</code> → marque ➟ dans le <em>.text</em> du <em>.coding</em> de la spécialité</li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> → dosage ➟ <em>.ingredient().strength</em></li>
+      <li><code class="language-plaintext highlighter-rouge">sol inj</code> → forme ➟ <em>.form</em></li>
+      <li><code class="language-plaintext highlighter-rouge">amp</code> → présentation ➟ en annotation <code class="language-plaintext highlighter-rouge">{amp}</code> de l’unité de dénombrement UCUM</li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> → volume ➟ <em>.amount</em></li>
     </ul>
   </li>
   <li>dose prescrite → <em>MedicationRequest.dosageInstruction</em>
     <ul>
-      <li>==<strong>XX</strong>== → quantité ➟ <em>.doseAndRate</em></li>
-      <li>==<strong>à 7h et 18h</strong>== → horaire de prise ➟ <em>.timing.repeat.timeOfDay()</em></li>
-      <li>==<strong>per os</strong>== → voie d’administration ➟ <em>.route</em></li>
-      <li>==<strong>pendant 5j</strong>== → début (maintenant) et fin (début + 5j) ➟ <em>.timing.boundsPeriod</em></li>
+      <li><code class="language-plaintext highlighter-rouge">XX</code> → quantité ➟ <em>.doseAndRate</em></li>
+      <li><code class="language-plaintext highlighter-rouge">à 7h et 18h</code> → horaire de prise ➟ <em>.timing.repeat.timeOfDay()</em></li>
+      <li><code class="language-plaintext highlighter-rouge">per os</code> → voie d’administration ➟ <em>.route</em></li>
+      <li><code class="language-plaintext highlighter-rouge">pendant 5j</code> → début (maintenant) et fin (début + 5j) ➟ <em>.timing.boundsPeriod</em></li>
     </ul>
   </li>
-  <li>La quantité ==<strong>XX</strong>== de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
+  <li>La quantité <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite peut s’exprimer de 3 façons différentes, par exemple :
     <ul>
-      <li>==<strong>1</strong>== (unité [de présentation de l’unité de médicament prescrit] = ampoule contenant 20 mg de furosémide)</li>
-      <li>==<strong>20 mg</strong>== (de principe actif = furosémide)</li>
-      <li>==<strong>2 mL</strong>== (de produit = solution injectable contenant 20 mg de furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">1</code> (unité [de présentation de l’unité de médicament prescrit] = ampoule contenant 20 mg de furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> (de principe actif = furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> (de produit = solution injectable contenant 20 mg de furosémide)</li>
     </ul>
   </li>
 </ul>
@@ -445,8 +460,8 @@ Les niveaux de complexité supplémentaires adressent</p>
 <ul>
   <li><strong>unité de médicament prescrit</strong> ➟ <em>MedicationRequest.medication</em>
     <ul>
-      <li>==<strong>FUROSEMIDE</strong>== → médicament en DC ➟ dans le <em>.text</em> du <em>.coding</em> du médicament en DC</li>
-      <li>==<strong>furosémide</strong>== → principe actif ➟ <em>.ingredient().item[x]</em></li>
+      <li><code class="language-plaintext highlighter-rouge">FUROSEMIDE</code> → médicament en DC ➟ dans le <em>.text</em> du <em>.coding</em> du médicament en DC</li>
+      <li><code class="language-plaintext highlighter-rouge">furosémide</code> → principe actif ➟ <em>.ingredient().item[x]</em></li>
       <li>les autres caractéristiques ne sont pas contraintes par le prescripteur</li>
     </ul>
   </li>
@@ -455,15 +470,15 @@ Les niveaux de complexité supplémentaires adressent</p>
       <li>caractéristiques identiques à celles de l’exemple de ligne de prescription en spécialité</li>
     </ul>
   </li>
-  <li>La <strong>quantité</strong> ==<strong>XX</strong>== de la dose prescrite ne peut plus s’exprimer que d’1 façon :
+  <li>La <strong>quantité</strong> <code class="language-plaintext highlighter-rouge">XX</code> de la dose prescrite ne peut plus s’exprimer que d’1 façon :
     <ul>
-      <li>==<strong>20 mg</strong>== (de principe actif = furosémide)</li>
+      <li><code class="language-plaintext highlighter-rouge">20 mg</code> (de principe actif = furosémide)</li>
     </ul>
   </li>
   <li>Les 2 autres ne permettent pas de déterminer la quantité de(s) prinicipe(s) actif(s)
     <ul>
-      <li>==<strong>1</strong>== (unité [de présentation de l’unité de médicament prescrit] = furosémide en quantité non définie)</li>
-      <li>==<strong>2 mL</strong>== (de produit = un produit qui contient du furosémide en concentration non définie)</li>
+      <li><code class="language-plaintext highlighter-rouge">1</code> (unité [de présentation de l’unité de médicament prescrit] = furosémide en quantité non définie)</li>
+      <li><code class="language-plaintext highlighter-rouge">2 mL</code> (de produit = un produit qui contient du furosémide en concentration non définie)</li>
     </ul>
   </li>
 </ul>
@@ -532,46 +547,45 @@ Par exemple, quantité connue 20 mg et volume connu 2 ml, implique que la concen
 
 <p>exemple</p>
 
-<p>… json
-“doseAndRate”: [
-  {
-     …
-     “rateRatio”: {
-      “value”: 700,
-      “unit”: “µg”
-      “system”: “http://unitsofmeasure.org”,
-      “code”: “ug”
-    },
-    “denominator”: {
-      “unit”: “min”,
-      “system”: “http://unitsofmeasure.org”,
-      “code”: “min”
-    }
-  }
-]
-…
-ou</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"doseAndRate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+     </span><span class="err">...</span><span class="w">
+     </span><span class="nl">"rateRatio"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"µg"</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ug"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"denominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"min"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"min"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
-<p>… json
-“doseAndRate”: [
-  {
-    …
-    “rateQuantity”: {
-      “value”: 700,
-      “unit”: “µg/min”
-      “system”: “http://unitsofmeasure.org”,
-      “code”: “ug/min”
-    }
-  }
-]
-…</p>
+<p>ou</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"doseAndRate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="nl">"rateQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"µg/min"</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ug/min"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p><strong>Note</strong>:
 Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <ul>
-  <li>une unité UCUM de temps (ex: ==<strong>min</strong>==) au dénominateur (==<strong>deniminator.code</strong>==) dans un type de donnée <em>ratio</em> (==<strong>rateRatio</strong>==)</li>
-  <li>une unité UCUM de débit (ex: ==<strong>ug/min</strong>==) dans un type de donnée <em>quantity</em> (==<strong>rateQuantity</strong>==)</li>
+  <li>une unité UCUM de temps (ex: <code class="language-plaintext highlighter-rouge">min</code>) au dénominateur (<code class="language-plaintext highlighter-rouge">deniminator.code</code>) dans un type de donnée <em>ratio</em> (<code class="language-plaintext highlighter-rouge">rateRatio</code>)</li>
+  <li>une unité UCUM de débit (ex: <code class="language-plaintext highlighter-rouge">ug/min</code>) dans un type de donnée <em>quantity</em> (<code class="language-plaintext highlighter-rouge">rateQuantity</code>)</li>
 </ul>
 
 <p>La seconde implique une <strong>interprétation du code UCUM par le logiciel</strong> pour avoir connaissance de la notion de débit (savoir reconnaitre une unité de débit UCUM).</p>
@@ -588,7 +602,7 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de rapporter l’expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <em>doseAndRate</em> du type complex <em>Dosage</em> qui s’applique à l’élément <em>dosageInstruction</em> de la ressource <em>MedicationRequest</em>.</p>
+<p><a name="l1560">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <em>doseAndRate</em> du type complex <em>Dosage</em> qui s’applique à l’élément <em>dosageInstruction</em> de la ressource <em>MedicationRequest</em>.</p>
 
 <p>Voir exemple <a href="MedicationRequest-14648.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
 
@@ -605,7 +619,7 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.
+<p><a name="l1626">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.
 Cette extension est appliquée</p>
 
 <ul>
@@ -704,49 +718,48 @@ délivré de principe(s) actif(s).</li>
 
 <p>Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseAndRate distingués par leur type</p>
 
-<p>… json
-“doseAndRate”: [
-   {
-      “type”: {
-         “coding”: [
-            {
-               “system”: “http://terminology.hl7.org/CodeSystem/dose-rate-type”,
-               “code”: “calculated”,
-               “display”: “Calculated”
-            }
-         ]
-      },
-      “doseQuantity”: {
-         “value”: 1000,
-         “unit”: “mg/m²”,
-         “system”: “http://unitsofmeasure.org”,
-         “code”: “mg/m2”
-      }
-   },
-   {
-      “type”: {
-         “coding”: [
-            {
-               “system”: “http://terminology.hl7.org/CodeSystem/dose-rate-type”,
-               “code”: “ordered”,
-               “display”: “Ordered”
-            }
-         ]
-      },
-      “doseQuantity”: {
-         “value”: 1800,
-         “unit”: “mg”,
-         “system”: “http://unitsofmeasure.org”,
-         “code”: “mg”
-      }
-   }
-]
-…</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"doseAndRate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/dose-rate-type"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calculated"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calculated"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"doseQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg/m²"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg/m2"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/dose-rate-type"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ordered"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ordered"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"doseQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1800</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p>Voir exemple <a href="MedicationRequest-14652.html">capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</a></p>
 
 <p><strong>Note</strong>:
-Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la ==<strong>surface corporelle</strong>== (1,85 m²), voire seulement de la ==<strong>taille</strong>== (1,75 m) et du ==<strong>poids</strong>== (70 kg) du patient.
+Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la <code class="language-plaintext highlighter-rouge">surface corporelle</code> (1,85 m²), voire seulement de la <code class="language-plaintext highlighter-rouge">taille</code> (1,75 m) et du <code class="language-plaintext highlighter-rouge">poids</code> (70 kg) du patient.
 Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur la même délivrance, <em>capécitabine 1800 mg</em>, laisserait au pharmacien l’arbitrage de l’arrondi par rapport à la dose prescrite. C’est un cas d’usage différent parce que l’acteur et le temps où se fait l’arrondi ne sont pas les mêmes.</p>
 
 
@@ -768,7 +781,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 09:12+0000">2024-09-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 10, 2025 15:36+0000">2025-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

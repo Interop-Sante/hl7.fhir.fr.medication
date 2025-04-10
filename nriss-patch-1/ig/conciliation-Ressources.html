@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
   	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
       <!-- Placeholder for child template CSS declarations -->
 <link rel="stylesheet" href="assets/css/hl7fr.css"/>
 
@@ -45,6 +46,7 @@
     h3,h4,h5,h6{--heading-prefix:"5"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
+
           <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
   <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
@@ -162,8 +164,21 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -243,7 +258,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h2 id="profils">Profils</h2>
 
 <ul>
-  <li><a href="StructureDefinition-FrMedicationHistoryComposition.html"><em>FrMedicationHistoryComposition</em></a>
+  <li><a name="l460">​</a><a href="StructureDefinition-FrMedicationHistoryComposition.html"><em>FrMedicationHistoryComposition</em></a>
     <ul>
       <li>Type: <em>Composition</em></li>
       <li>Composition du <em>Bundle</em> portant le document FHIR <strong>Bilan Médicamenteux</strong></li>
@@ -256,7 +271,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Est référencé par le <em>Bundle</em> du type <em>document</em> portant <strong>le Bilan Médicamenteux</strong></li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrMedicationHistoryMedicationStatement.html"><em>FrMedicationHistoryMedicationStatement</em></a>
+  <li><a name="l511">​</a><a href="StructureDefinition-FrMedicationHistoryMedicationStatement.html"><em>FrMedicationHistoryMedicationStatement</em></a>
     <ul>
       <li>Type: <em>MedicationStatement</em></li>
       <li>Ligne du <strong>Bilan Médicamenteux</strong></li>
@@ -274,7 +289,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrCurrentMedicationComposition.html"><em>FrCurrentMedicationComposition</em></a>
+  <li><a name="l562">​</a><a href="StructureDefinition-FrCurrentMedicationComposition.html"><em>FrCurrentMedicationComposition</em></a>
     <ul>
       <li>Type : <em>Composition</em></li>
       <li><em>Composition</em> du <em>Bundle</em> portant le document FHIR <strong>Traitement Médicamenteux</strong> courant (traitement hospitalier)</li>
@@ -282,7 +297,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Est référencé par le <em>Bundle</em> du type <em>document</em> portant le <strong>Traitement Médicamenteux</strong> courant (traitement hospitalier)</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrCurrentMedicationMedicationStatement.html"><em>FrCurrentMedicationMedicationStatement</em></a>
+  <li><a name="l604">​</a><a href="StructureDefinition-FrCurrentMedicationMedicationStatement.html"><em>FrCurrentMedicationMedicationStatement</em></a>
     <ul>
       <li>Type: <em>MedicationStatement</em></li>
       <li>Ligne du <strong>Traitement Médicamenteux courant</strong> (traitement hospitalier)</li>
@@ -295,7 +310,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrMedicationReconciliationComposition.html"><em>FrMedicationReconciliationComposition</em></a>
+  <li><a name="l644">​</a><a href="StructureDefinition-FrMedicationReconciliationComposition.html"><em>FrMedicationReconciliationComposition</em></a>
     <ul>
       <li>Type: <em>Composition</em></li>
       <li><em>Composition</em> du <em>Bundle</em> portant le document FHIR Fiche de <strong>Conciliation des Traitements (FCT)</strong></li>
@@ -309,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Est référencé par le <em>Bundle</em> du type <em>document</em> portant la <strong>FCT</strong></li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrMedicationReconciliationComposition.html"><em>FrMedicationReconciliationMedicationStatement</em></a>
+  <li><a name="l703">​</a><a href="StructureDefinition-FrMedicationReconciliationComposition.html"><em>FrMedicationReconciliationMedicationStatement</em></a>
     <ul>
       <li>Type: <em>MedicationStatement</em></li>
       <li>Ligne de traitement médicamenteux de la <strong>Fiche de Conciliation des Traitements (FCT)</strong></li>
@@ -321,7 +336,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrMedication.html"><em>FrMedication</em></a>
+  <li><a name="l740">​</a><a href="StructureDefinition-FrMedication.html"><em>FrMedication</em></a>
     <ul>
       <li>Type: <em>Medication</em></li>
       <li>Le médicament d’une ligne du <strong>Bilan Médicamenteux</strong> ou du <strong>Traitement Médicamenteux</strong> courant ou de la <strong>FCT</strong></li>
@@ -334,14 +349,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrOnAdmissionMedicationComposition.html"><em>FrOnAdmissionMedicationComposition</em></a>
+  <li><a name="l780">​</a><a href="StructureDefinition-FrOnAdmissionMedicationComposition.html"><em>FrOnAdmissionMedicationComposition</em></a>
     <ul>
       <li>Type: <em>Composition</em></li>
       <li>Composition du <em>Bundle</em> portant le document FHIR <strong>Ordonnance Médicamenteuse d’Admission (OMA)</strong></li>
       <li>C’est un cas particulier de Traitement Médicamenteux Courant, qui fixe le type du document à : à l’admission</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html"><em>FrOnAdmissionRetroactiveMedicationReconciliationComposition</em></a>
+  <li><a name="l805">​</a><a href="StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html"><em>FrOnAdmissionRetroactiveMedicationReconciliationComposition</em></a>
     <ul>
       <li>Type: <em>Composition</em></li>
       <li>Composition du <em>Bundle</em> portant le document FHIR <strong>Fiche de Conciliation rétroactive des Traitements à l’admission</strong></li>
@@ -376,7 +391,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-FrMedicationStatementReconciliationProperties.html"><em>FrMedicationStatementReconciliationProperties</em></a>
+  <li><a name="l902">​</a><a href="StructureDefinition-FrMedicationStatementReconciliationProperties.html"><em>FrMedicationStatementReconciliationProperties</em></a>
     <ul>
       <li>Type: <em>complex</em></li>
       <li>Propriétés de conciliation d’une ligne de traitement médicamenteux dans une Fiche de Conciliation des Traitements médicamenteux (FCT)
@@ -398,21 +413,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h2 id="valuesets">ValueSets</h2>
 
 <ul>
-  <li><a href="ValueSet-FrCurrentMedicationDocumentType.html"><em>FrCurrentMedicationDocumentType</em></a>
+  <li><a name="l955">​</a><a href="ValueSet-FrCurrentMedicationDocumentType.html"><em>FrCurrentMedicationDocumentType</em></a>
 Le type de document d’une ressource FrCurrentMedicationComposition (Traitement Médicamenteux Courant)</li>
   <li><a href="ValueSet-fr-medication-reconciliation-document-type.html"><em>FrMedicationReconciliationDocumentType</em></a>
 Le type de document d’une ressource FrMedicationReconciliationComposition (FCT)</li>
-  <li><a href="ValueSet-FrEditorialStatus.html"><em>FrEditorialStatus</em></a>
+  <li><a name="l967">​</a><a href="ValueSet-FrEditorialStatus.html"><em>FrEditorialStatus</em></a>
 Le statut éditorial d’une valeur</li>
-  <li><a href="ValueSet-FrMedicationHistorySourceType.html"><em>FrMedicationHistorySourceType</em></a>
+  <li><a name="l973">​</a><a href="ValueSet-FrMedicationHistorySourceType.html"><em>FrMedicationHistorySourceType</em></a>
 La source d’un Bilan Médicamenteux</li>
-  <li><a href="ValueSet-FrMedicationReconciliationStatus.html"><em>FrMedicationReconciliationStatus</em></a>
+  <li><a name="l979">​</a><a href="ValueSet-FrMedicationReconciliationStatus.html"><em>FrMedicationReconciliationStatus</em></a>
 Le statut d’une ligne de traitement d’une FCT</li>
-  <li><a href="ValueSet-FrMedicationReconciliationQualifiedDiscrepancy.html"><em>FrMedicationReconciliationQualifiedDiscrepancy</em></a>
+  <li><a name="l985">​</a><a href="ValueSet-FrMedicationReconciliationQualifiedDiscrepancy.html"><em>FrMedicationReconciliationQualifiedDiscrepancy</em></a>
 La qualification de la divergence identifiée sur une ligne de traitement d’une FCT</li>
-  <li><a href="ValueSet-FrMedicationReconciliationOutcome.html"><em>FrMedicationReconciliationOutcome</em></a>
+  <li><a name="l991">​</a><a href="ValueSet-FrMedicationReconciliationOutcome.html"><em>FrMedicationReconciliationOutcome</em></a>
 La gravité de l’erreur sur une ligne de traitement d’une FCT</li>
-  <li><a href="ValueSet-FrMedicationReconciliationResolution.html"><em>FrMedicationReconciliationResolution</em></a>
+  <li><a name="l997">​</a><a href="ValueSet-FrMedicationReconciliationResolution.html"><em>FrMedicationReconciliationResolution</em></a>
 La résolution d’une divergence sur une ligne de traitement d’une FCT</li>
 </ul>
 
@@ -421,19 +436,19 @@ La résolution d’une divergence sur une ligne de traitement d’une FCT</li>
 <ul>
   <li><a href="CodeSystem-fr-document-type.html"><em>FrDocumentType</em></a>
 Le type de document, avec leur catégorie</li>
-  <li><a name="l990">​</a><a href="CodeSystems-FrEditorialStatus.html"><em>FrEditorialStatus</em></a>
+  <li><a name="l1015">​</a><a href="CodeSystems-FrEditorialStatus.html"><em>FrEditorialStatus</em></a>
 Le statut éditorial d’une valeur</li>
-  <li><a href="CodeSystem-FrMedicationHistorySourceType.html"><em>FrMedicationHistorySourceType</em></a>
+  <li><a name="l1021">​</a><a href="CodeSystem-FrMedicationHistorySourceType.html"><em>FrMedicationHistorySourceType</em></a>
 La source d’un Bilan Médicamenteux</li>
-  <li><a href="CodeSystem-FrMedicationReconciliationStatus.html"><em>FrMedicationReconciliationStatus</em></a>
+  <li><a name="l1027">​</a><a href="CodeSystem-FrMedicationReconciliationStatus.html"><em>FrMedicationReconciliationStatus</em></a>
 Le statut d’une ligne de traitement d’une FCT</li>
-  <li><a href="CodeSystem-FrMedicationReconciliationDiscrepancy.html"><em>FrMedicationReconciliationDiscrepancy</em></a>
+  <li><a name="l1033">​</a><a href="CodeSystem-FrMedicationReconciliationDiscrepancy.html"><em>FrMedicationReconciliationDiscrepancy</em></a>
 La qualification de la divergence identifiée sur une ligne de traitement d’une FCT</li>
-  <li><a href="CodeSystem-FrMedicationReconciliationType.html"><em>FrMedicationReconciliationType</em></a>
+  <li><a name="l1039">​</a><a href="CodeSystem-FrMedicationReconciliationType.html"><em>FrMedicationReconciliationType</em></a>
 Le type d’écart/erreur sur une ligne de traitement d’une FCT</li>
-  <li><a href="CodeSystem-FrMedicationReconciliationOutcome.html"><em>FrMedicationReconciliationOutcome</em></a>
+  <li><a name="l1045">​</a><a href="CodeSystem-FrMedicationReconciliationOutcome.html"><em>FrMedicationReconciliationOutcome</em></a>
 La gravité de l’erreur sur une ligne de traitement d’une FCT</li>
-  <li><a href="CodeSystem-FrMedicationReconciliationResolution.html"><em>FrMedicationReconciliationResolution</em></a>
+  <li><a name="l1051">​</a><a href="CodeSystem-FrMedicationReconciliationResolution.html"><em>FrMedicationReconciliationResolution</em></a>
 La résolution d’une divergence sur une ligne de traitement d’une FCT</li>
 </ul>
 
@@ -456,7 +471,7 @@ La résolution d’une divergence sur une ligne de traitement d’une FCT</li>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 09:12+0000">2024-09-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 10, 2025 15:36+0000">2025-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

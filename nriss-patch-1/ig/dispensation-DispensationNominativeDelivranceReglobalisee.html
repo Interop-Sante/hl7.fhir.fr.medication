@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/hl7fr.css" rel="stylesheet"/>
 
@@ -45,6 +46,7 @@
     h3,h4,h5,h6{--heading-prefix:"18"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
   <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
@@ -162,8 +164,21 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="transformationPN13-FHIR.html">Transformation PN13</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -272,8 +287,8 @@ Exemple:</p>
 
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [14 gélules](MedicationDispense-14664.html)
 - l'usage de l'extension standard [event-basedOn](https://hl7.org/fhir/R4/extension-event-basedon.html) référence les dispensations nominatives à l'origine de la délivrance reglobalisée
-- une ressource **Group** de ==**type**== **person** est constituée pour référencer les patients ==**subject**== de la délivrance reglobalisée
-- il n'y a pas de posologie globale (pas de ==**dosageInstruction**==) pour cette délivrance reglobalisée.
+- une ressource **Group** de `type` **person** est constituée pour référencer les patients `subject` de la délivrance reglobalisée
+- il n'y a pas de posologie globale (pas de `dosageInstruction`) pour cette délivrance reglobalisée.
 </code></pre></div>        </div>
       </li>
     </ul>
@@ -284,20 +299,21 @@ Exemple:</p>
 
 <p>L’usage de l’extension standard <em>event-basedOn</em> est discutable: elle ne s’applique qu’à un élément <em>Condition</em></p>
 
-<p>… json
-  “context” : [{
-    “type” : “element”,
-    “expression” : “Condition”
-  }],
-  …</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"element"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expression"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
-<p>Une autre option est de référencer les dispensations nominatives dans l’élément répétable ==<strong>supportingInformation</strong>==. Cette solution est nativement conforme au schéma de la ressource <em>MedicationDispense</em>. <a href="MedicationDispense-14665.html">Voir cette alternative</a>.</p>
+<p>Une autre option est de référencer les dispensations nominatives dans l’élément répétable <code class="language-plaintext highlighter-rouge">supportingInformation</code>. Cette solution est nativement conforme au schéma de la ressource <em>MedicationDispense</em>. <a href="MedicationDispense-14665.html">Voir cette alternative</a>.</p>
 
 <p>Une ressource <em>MedicationDispense</em> globale comme agrégateur de <em>MedicationDispense</em> individualisées est discutable : une ressource <em>SupplyDelivery</em> ne serait-elle pas plus appropriée ?</p>
 
-<p>Le problème est qu’il n’y a <strong>pas de moyen de relier cette ressource <em>SupplyDelivery</em> à la collection de ressources <em>MedicationRequest</em></strong> qu’elle honore : son élément ==<strong>basedOn</strong>== est contraint de référencer une ressource <em>SupplyRequest</em>. Par contre la période couverte par la délivrance peut être décrite dans l’élément ==<strong>occurence[x]:occurrencePeriod</strong>==.</p>
+<p>Le problème est qu’il n’y a <strong>pas de moyen de relier cette ressource <em>SupplyDelivery</em> à la collection de ressources <em>MedicationRequest</em></strong> qu’elle honore : son élément <code class="language-plaintext highlighter-rouge">basedOn</code> est contraint de référencer une ressource <em>SupplyRequest</em>. Par contre la période couverte par la délivrance peut être décrite dans l’élément <code class="language-plaintext highlighter-rouge">occurence[x]:occurrencePeriod</code>.</p>
 
-<p>Notons qu’en pratique intrahospitalière, ==<strong>daysSupply</strong>== gagnerait à bénéficier d’un alternative ==<strong>periodSupply</strong>== pour pouvoir mentionner plus précisément quelle est la période couverte par cette occurence de délivrance dans le cas d’une délivrance fractionnée.</p>
+<p>Notons qu’en pratique intrahospitalière, <code class="language-plaintext highlighter-rouge">daysSupply</code> gagnerait à bénéficier d’une alternative <code class="language-plaintext highlighter-rouge">periodSupply</code> pour pouvoir mentionner plus précisément quelle est la période couverte par cette occurence de délivrance dans le cas d’une délivrance fractionnée.</p>
 
 
 
@@ -318,7 +334,7 @@ Exemple:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 18, 2024 09:12+0000">2024-09-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 10, 2025 15:36+0000">2025-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
