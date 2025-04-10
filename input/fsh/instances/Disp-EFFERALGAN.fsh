@@ -2,7 +2,7 @@ Instance: Disp-EFFERALGAN
 InstanceOf: FrInpatientMedicationDispense
 Usage: #example
 * status = #completed
-* medicationReference.reference = "#InLine-med-EFFERALGAN"
+* medicationReference.reference = "Medication/InLine-med-EFFERALGAN"
 * subject.reference = "Patient/14602"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
 * authorizingPrescription.reference = "MedicationRequest/medicationrequest-Presc-EFFERALGAN"
