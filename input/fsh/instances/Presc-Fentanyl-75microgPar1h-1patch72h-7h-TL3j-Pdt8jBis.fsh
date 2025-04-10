@@ -1,28 +1,31 @@
-Instance: 14622Bis
+Instance: Presc-Fentanyl-patch72h-TL3j-Bis
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14622Bis
-* entry[+].resource = medicationrequest-14622Bis
+* entry[0].resource = medication-Presc-Fentanyl-patch72h-TL3j-Bis
+* entry[+].resource = medicationrequest-Presc-Fentanyl-patch72h-TL3j-Bis
 
-Instance: medication-14622Bis
+Instance: medication-Presc-Fentanyl-patch72h-TL3j-Bis
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14622Bis"
+* id = "medication-Presc-Fentanyl-patch72h-TL3j-Bis"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000090377 "fentanyl"
 * code.text = "FENTANYL"
-* amount.numerator = 75 'ug' "µg"
-* amount..denominator = 1 'h' "h"
+* form = $EDQM#0061 "Patch"
+* ingredient[0].itemCodeableConcept = $SMS#100000090377 "fentanyl"
+* ingredient[=].itemCodeableConcept.text = "FENTANYL"
+* ingredient[=].strength.numerator = 75 'ug' "µg"
+* ingredient[=].strength.denominator = 1 'h' "h"
 
-Instance: medicationrequest-14622Bis
+Instance: medicationrequest-Presc-Fentanyl-patch72h-TL3j-Bis
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14622Bis"
+* medicationReference.reference = "#medication-Presc-Fentanyl-patch72h-TL3j-Bis"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-20T19:05:30.603Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
@@ -34,5 +37,8 @@ Usage: #inline
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 1 '1'
+* dosageInstruction.doseAndRate.rateRatio.numerator.value = 1
+* dosageInstruction.doseAndRate.rateRatio.numerator.unit = "Patch"
+* dosageInstruction.doseAndRate.rateRatio.numerator.system = $EDQM
+* dosageInstruction.doseAndRate.rateRatio.numerator.code = #15036000
 * dosageInstruction.doseAndRate.rateRatio.denominator = 72 'h' "h"

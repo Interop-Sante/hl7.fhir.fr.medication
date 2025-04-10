@@ -1,14 +1,14 @@
-Instance: 14631
+Instance: Presc-MV-PerfGl-NaCl-KCl
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14631
-* entry[+].resource = medicationrequest-14631
+* entry[0].resource = medication-Presc-MV-PerfGl-NaCl-KCl
+* entry[+].resource = medicationrequest-Presc-MV-PerfGl-NaCl-KCl
 
-Instance: medication-14631
+Instance: medication-Presc-MV-PerfGl-NaCl-KCl
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14631"
+* id = "medication-Presc-MV-PerfGl-NaCl-KCl"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = https://bogussystem.fr/MVid#BOGUSCODE "BOGUS MV NAME"
 * code.text = "GLUCOSE + SODIUM CHLORURE + POTASSIUM CHLORURE"
@@ -27,14 +27,14 @@ Usage: #inline
 * ingredient[=].strength.numerator = 1 'g' "g"
 
 
-Instance: medicationrequest-14631
+Instance: medicationrequest-Presc-MV-PerfGl-NaCl-KCl
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14631"
+* medicationReference.reference = "#medication-Presc-MV-PerfGl-NaCl-KCl"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-30T11:42:16.592Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
@@ -47,5 +47,8 @@ Usage: #inline
 * dosageInstruction.timing.repeat.timeOfDay[+] = "22:00:00"
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 1 '1'
+* dosageInstruction.doseAndRate.rateRatio.numerator.value = 1
+* dosageInstruction.doseAndRate.rateRatio.numerator.unit = "Poche"
+* dosageInstruction.doseAndRate.rateRatio.numerator.system = $EDQM
+* dosageInstruction.doseAndRate.rateRatio.numerator.code = #15005000
 * dosageInstruction.doseAndRate.rateRatio.denominator = 12 'h' "h"

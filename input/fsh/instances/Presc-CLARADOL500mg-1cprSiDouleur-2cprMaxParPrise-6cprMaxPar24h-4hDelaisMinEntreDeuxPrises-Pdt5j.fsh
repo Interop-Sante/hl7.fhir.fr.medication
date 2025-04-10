@@ -1,10 +1,10 @@
-Instance: 14639
+Instance: Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry.resource = medicationrequest-14639
+* entry.resource = medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 
-Instance: medicationrequest-14639
+Instance: medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"

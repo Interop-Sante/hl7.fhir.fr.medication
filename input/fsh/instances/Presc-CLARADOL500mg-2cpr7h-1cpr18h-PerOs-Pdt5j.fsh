@@ -1,10 +1,10 @@
-Instance: 14641
+Instance: Presc-CLARADOL-DoseDiffPraHoraire
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry.resource = medicationrequest-14641
+* entry.resource = medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
 
-Instance: medicationrequest-14641
+Instance: medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"

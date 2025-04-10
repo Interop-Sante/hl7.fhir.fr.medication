@@ -1,20 +1,20 @@
-Instance: Bundle-Exemple-01-34-01-Interpret
+Instance: TradPN13FHIR-Presc-DOLIPRANE-Interpret
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de PN13-IS.4.0.Exemples_01.34.01 avec interprétation du code de fréquence
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-exemple-01-34-01-Interpret
-* entry[+].resource = medicationrequest-exemple-01-34-01-Interpret
+* entry[0].resource = medication-TradPN13FHIR-Presc-DOLIPRANE-Interpret
+* entry[+].resource = medicationrequest-TradPN13FHIR-Presc-DOLIPRANE-Interpret
 
-Instance: medication-exemple-01-34-01-Interpret
+Instance: medication-TradPN13FHIR-Presc-DOLIPRANE-Interpret
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-exemple-01-34-01-Interpret"
+* id = "medication-TradPN13FHIR-Presc-DOLIPRANE-Interpret"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400892169026 "DOLIPRANE 1000MG CPR EFFV"
 * code.text = "DOLIPRANE 1 000 mg, cpr efferv"
 
-Instance: medicationrequest-exemple-01-34-01-Interpret
+Instance: medicationrequest-TradPN13FHIR-Presc-DOLIPRANE-Interpret
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -25,7 +25,7 @@ Usage: #inline
 * priority = #routine
 * note[0].text = "Prescription textuelle: Doliprane cpr 3x1g/j x 3j"
 * note[=].extension[NoteScope].valueCode = #LIPRESCTXT
-* medicationReference.reference = "#medication-exemple-01-34-01-Interpret"
+* medicationReference.reference = "#medication-TradPN13FHIR-Presc-DOLIPRANE-Interpret"
 * subject.identifier.value = "123456"
 * subject.identifier.system = "https://somehospital.fr/IPP"
 * encounter.identifier.value = "234567"

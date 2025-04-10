@@ -1,19 +1,19 @@
-Instance: bundle-DC-2
+Instance: TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de DC-2 
 Usage: #example
 * type = #searchset
-* entry[0].resource = patient-DC-2
-* entry[+].resource = practitioner-DC-2
-* entry[+].resource = medication-DC-2
-* entry[+].resource = observation-1-DC-2
-* entry[+].resource = observation-2-DC-2
-* entry[+].resource = medicationrequest-DC-2
+* entry[0].resource = patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur
+* entry[+].resource = practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur
+* entry[+].resource = medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur
+* entry[+].resource = observation-1-TradPN13FHIR-Presc-Paracetamol-SiDouleur
+* entry[+].resource = observation-2-TradPN13FHIR-Presc-Paracetamol-SiDouleur
+* entry[+].resource = medicationrequest-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 
-Instance: patient-DC-2
+Instance: patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Patient
 Usage: #inline
-* id = "patient-DC-2"
+* id = "patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * meta.profile[0] = $FrCorePatient
 * identifier[0].use = #usual
 * identifier[=].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -28,10 +28,10 @@ Usage: #inline
 * name[=].given = "JAUNE"
 * birthDate = "1961-11-25"
 
-Instance: practitioner-DC-2
+Instance: practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Practitioner
 Usage: #inline
-* id = "practitioner-DC-2"
+* id = "practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * meta.profile[0] = $FrCorePractitioner
 * identifier[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[=].type.coding[=].code = #EI
@@ -44,49 +44,49 @@ Usage: #inline
 * name[=].family = "LUIGGI"
 * name[=].given = "DENIS"
 
-Instance: medication-DC-2
+Instance: medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-DC-2"
+* id = "medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"
 
-Instance: observation-1-DC-2
+Instance: observation-1-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-1-DC-2"
+* id = "observation-1-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * status = #final
 * category.coding[0].code = #vital-signs
 * category.coding[=].system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding[0].code = #8302-2
 * code.coding[=].system = "http://loinc.org"
-* subject.reference = "#patient-DC-2"
+* subject.reference = "#patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * effectiveDateTime = "2018-10-25T11:06:06+02:00"
 * valueQuantity.value = 189.0
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #cm
 
-Instance: observation-2-DC-2
+Instance: observation-2-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-2-DC-2"
+* id = "observation-2-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
 * status = #final
 * category.coding[0].code = #vital-signs
 * category.coding[=].system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding[0].code = #29463-7
 * code.coding[=].system = "http://loinc.org"
-* subject.reference = "#patient-DC-2"
+* subject.reference = "#patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * effectiveDateTime = "2018-06-21T16:05:10+02:00"
 * valueQuantity.value = 120.0
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #kg
 
-Instance: medicationrequest-DC-2
+Instance: medicationrequest-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -101,17 +101,17 @@ Usage: #inline
 * note[=].extension[NoteScope].valueCode = #LIPRESCIND
 * note[+].text = "Commentaire: Test paracetamol DC 2 (à la demande)"
 * note[=].extension[NoteScope].valueCode = #LIPRESCCOMM
-* medicationReference.reference = "#medication-DC-2"
-* subject.reference = "#patient-DC-2"
+* medicationReference.reference = "#medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
+* subject.reference = "#patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * encounter.identifier.value = "70101274"
 * encounter.identifier.system = "https://somehospital.fr/Sejour"
 * supportingInformation[0].identifier.value = "2571"
 * supportingInformation[=].identifier.system = "https://somehospital.fr/UF"
 * supportingInformation[=].extension[UFRole].valueCode = #UFMED
-* supportingInformation[+].reference = "#observation-DC-2-1"
-* supportingInformation[+].reference = "#observation-DC-2-2"
+* supportingInformation[+].reference = "#observation-1-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
+* supportingInformation[+].reference = "#observation-2-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * authoredOn = "2022-04-11T16:42:53+02:00"
-* requester.reference = "#practitioner-DC-2"
+* requester.reference = "#practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * groupIdentifier.value = "10723"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction[0].timing.repeat.boundsPeriod.start = "2022-04-12T06:00:00+02:00"

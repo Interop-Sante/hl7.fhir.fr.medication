@@ -1,26 +1,26 @@
-Instance: Perfusion-6-composants-exemple
+Instance: TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de Compound-6166 
 Usage: #example
 * type = #searchset
-* entry[0].resource = patient-prescr-perf-6-exemple
-* entry[+].resource = practitioner-prescr-perf-6-exemple
-* entry[+].resource = medication-1-prescr-perf-6-exemple
-* entry[+].resource = medication-2-prescr-perf-6-exemple
-* entry[+].resource = medication-3-prescr-perf-6-exemple
-* entry[+].resource = medication-4-prescr-perf-6-exemple
-* entry[+].resource = medication-5-prescr-perf-6-exemple
-* entry[+].resource = medication-6-prescr-perf-6-exemple
-* entry[+].resource = medication-C-prescr-perf-6-exemple
-* entry[+].resource = observation-1-prescr-perf-6-exemple
-* entry[+].resource = observation-2-prescr-perf-6-exemple
-* entry[+].resource = observation-3-prescr-perf-6-exemple
-* entry[+].resource = medicationrequest-prescr-perf-6-exemple
+* entry[0].resource = patient-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = practitioner-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-1-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-2-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-3-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-4-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-5-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-6-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medication-C-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = observation-1-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = observation-2-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = observation-3-TradPN13FHIR-Presc-perfusion-6-composants
+* entry[+].resource = medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants
 
-Instance: patient-prescr-perf-6-exemple
+Instance: patient-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: Patient
 Usage: #inline
-* id = "patient-prescr-perf-6-exemple"
+* id = "patient-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = $FrCorePatient
 * identifier[0].use = #usual
 * identifier[=].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -35,10 +35,10 @@ Usage: #inline
 * gender = #male
 * birthDate = "2000-01-01"
 
-Instance: practitioner-prescr-perf-6-exemple
+Instance: practitioner-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: Practitioner
 Usage: #inline
-* id = "practitioner-prescr-perf-6-exemple"
+* id = "practitioner-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = $FrCorePractitioner
 * identifier[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[=].type.coding[=].code = #EI
@@ -50,10 +50,10 @@ Usage: #inline
 * name[+].use = #official
 * name[=].given = "Charles"
 
-Instance: medication-1-prescr-perf-6-exemple
+Instance: medication-1-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-1-prescr-perf-6-exemple"
+* id = "medication-1-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400894061175 "NUTRYELT PERF AMP10ML"
 * code.text = "NUTRYELT, sol à diluer pr perf, amp 10 mL"
@@ -62,10 +62,10 @@ Usage: #inline
 * amount.numerator.code = #15002000
 * amount.numerator.unit = "Ampoule"
 
-Instance: medication-2-prescr-perf-6-exemple
+Instance: medication-2-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-2-prescr-perf-6-exemple"
+* id = "medication-2-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400892834719 "POTASSIUM 10% CPF AB10ML"
 * code.text = "POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL"
@@ -74,10 +74,10 @@ Usage: #inline
 * amount.numerator.code = #15002000
 * amount.numerator.unit = "Ampoule"
 
-Instance: medication-3-prescr-perf-6-exemple
+Instance: medication-3-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-3-prescr-perf-6-exemple"
+* id = "medication-3-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400892614236 "MAGNESIUM C.10% LAV AB10ML"
 * code.text = "MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL"
@@ -86,10 +86,10 @@ Usage: #inline
 * amount.numerator.code = #15002000
 * amount.numerator.unit = "Ampoule"
 
-Instance: medication-4-prescr-perf-6-exemple
+Instance: medication-4-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-4-prescr-perf-6-exemple"
+* id = "medication-4-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400893149416 "CALCIUM LEV.ZEN 25MG/2,5ML FL"
 * code.text = "LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL"
@@ -98,10 +98,10 @@ Usage: #inline
 * amount.numerator.code = #15060000
 * amount.numerator.unit = "Flacon"
 
-Instance: medication-5-prescr-perf-6-exemple
+Instance: medication-5-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-5-prescr-perf-6-exemple"
+* id = "medication-5-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400891343281 "CERNEVIT INJ FL"
 * code.text = "CERNEVIT, pdr pr sol inj ou pr perf"
@@ -110,10 +110,10 @@ Usage: #inline
 * amount.numerator.code = #15060000
 * amount.numerator.unit = "Flacon"
 
-Instance: medication-6-prescr-perf-6-exemple
+Instance: medication-6-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-6-prescr-perf-6-exemple"
+* id = "medication-6-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400891780475 "SODIUM 0,9% BBM INJ P.E500ML"
 * code.text = "SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)"
@@ -122,72 +122,72 @@ Usage: #inline
 * amount.numerator.code = #15005000
 * amount.numerator.unit = "Poche"
 
-Instance: medication-C-prescr-perf-6-exemple
+Instance: medication-C-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-prescr-perf-6-exemple"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
 * code.text = "NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)"
-* ingredient[0].itemReference.reference = "#medication-1-prescr-perf-6-exemple"
-* ingredient[+].itemReference.reference = "#medication-2-prescr-perf-6-exemple"
-* ingredient[+].itemReference.reference = "#medication-3-prescr-perf-6-exemple"
-* ingredient[+].itemReference.reference = "#medication-4-prescr-perf-6-exemple"
-* ingredient[+].itemReference.reference = "#medication-5-prescr-perf-6-exemple"
+* ingredient[0].itemReference.reference = "#medication-1-TradPN13FHIR-Presc-perfusion-6-composants"
+* ingredient[+].itemReference.reference = "#medication-2-TradPN13FHIR-Presc-perfusion-6-composants"
+* ingredient[+].itemReference.reference = "#medication-3-TradPN13FHIR-Presc-perfusion-6-composants"
+* ingredient[+].itemReference.reference = "#medication-4-TradPN13FHIR-Presc-perfusion-6-composants"
+* ingredient[+].itemReference.reference = "#medication-5-TradPN13FHIR-Presc-perfusion-6-composants"
 * ingredient[+].extension[IsVehicle].valueBoolean = true
-* ingredient[=].itemReference.reference = "#medication-6-prescr-perf-6-exemple"
+* ingredient[=].itemReference.reference = "#medication-6-TradPN13FHIR-Presc-perfusion-6-composants"
 
 
-Instance:  observation-1-prescr-perf-6-exemple
+Instance:  observation-1-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-1-prescr-perf-6-exemple"
+* id = "observation-1-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding.code = #8302-2
 * code.coding.system = "http://loinc.org"
-* subject.reference = "#patient-prescr-perf-6-exemple"
+* subject.reference = "#patient-TradPN13FHIR-Presc-perfusion-6-composants"
 * effectiveDateTime = "2023-05-03T11:30:00+02:00"
 * valueQuantity.value = 181.0
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #cm
 
-Instance: observation-2-prescr-perf-6-exemple
+Instance: observation-2-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-2-prescr-perf-6-exemple"
+* id = "observation-2-TradPN13FHIR-Presc-perfusion-6-composants"
 * meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding.code = #29463-7
 * code.coding.system = "http://loinc.org"
-* subject.reference = "#patient-prescr-perf-6-exemple"
+* subject.reference = "#patient-TradPN13FHIR-Presc-perfusion-6-composants"
 * effectiveDateTime = "2023-05-03T11:30:00+02:00"
 * valueQuantity.value = 79
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #kg
 
-Instance: observation-3-prescr-perf-6-exemple
+Instance: observation-3-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: Observation
 Usage: #inline
-* id = "observation-3-prescr-perf-6-exemple"
+* id = "observation-3-TradPN13FHIR-Presc-perfusion-6-composants"
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding.code = #33558-8
 * code.coding.system = "http://loinc.org"
-* subject.reference = "#patient-prescr-perf-6-exemple"
+* subject.reference = "#patient-TradPN13FHIR-Presc-perfusion-6-composants"
 * effectiveDateTime = "2023-05-03T11:30:00+02:00"
 * valueQuantity.value = 0
 * valueQuantity.unit = "µmol/l"
 * valueQuantity.system = $unitsofmeasure
 * valueQuantity.code = #umol/L
 
-Instance: medicationrequest-prescr-perf-6-exemple
+Instance: medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -198,15 +198,15 @@ Usage: #inline
 * priority = #routine
 * note[0].text = "**Prescription textuelle:** 1 préparation en continu sur 12h00 par jour"
 * note[=].extension[NoteScope].valueCode = #LIPRESCTXT
-* medicationReference.reference = "#medication-C-prescr-perf-6-exemple"
-* subject.reference = "#patient-prescr-perf-6-exemple"
+* medicationReference.reference = "#medication-C-TradPN13FHIR-Presc-perfusion-6-composants"
+* subject.reference = "#patient-TradPN13FHIR-Presc-perfusion-6-composants"
 * encounter.identifier.value = "3"
 * encounter.identifier.system = "https://somehospital.fr/Sejour"
-* supportingInformation[0].reference = "#observation-1-prescr-perf-6-exemple"
-* supportingInformation[+].reference = "#observation-2-prescr-perf-6-exemple"
-* supportingInformation[+].reference = "#observation-3-prescr-perf-6-exemple"
+* supportingInformation[0].reference = "#observation-1-TradPN13FHIR-Presc-perfusion-6-composants"
+* supportingInformation[+].reference = "#observation-2-TradPN13FHIR-Presc-perfusion-6-composants"
+* supportingInformation[+].reference = "#observation-3-TradPN13FHIR-Presc-perfusion-6-composants"
 * authoredOn = "2023-05-03T11:30:00+02:00"
-* requester.reference = "#practitioner-prescr-perf 6-exemple"
+* requester.reference = "#practitioner-TradPN13FHIR-Presc-perfusion-6-composants"
 * groupIdentifier.value = "IdentifiantAttribuéPourLaTraductionEnFHIR"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction[0].timing.repeat.boundsPeriod.start = "2023-05-03T10:00:00+02:00"

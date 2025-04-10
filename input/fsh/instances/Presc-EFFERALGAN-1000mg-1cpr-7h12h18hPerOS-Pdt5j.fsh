@@ -1,14 +1,14 @@
-Instance: 14624
+Instance: Presc-EFFERALGAN
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14624
-* entry[+].resource = medicationrequest-14624
+* entry[0].resource = medication-Presc-EFFERALGAN
+* entry[+].resource = medicationrequest-Presc-EFFERALGAN
 
-Instance: medication-14624
+Instance: medication-Presc-EFFERALGAN
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14624"
+* id = "medication-Presc-EFFERALGAN"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400893766521 "EFFERALGANMED 1000MG CPR"
 * code.text = "EFFERALGAN 1 000 mg, cpr"
@@ -19,14 +19,14 @@ Usage: #inline
 * ingredient.strength.numerator = 1000 'mg' "mg"
 * ingredient.strength.denominator = 1 '1'
 
-Instance: medicationrequest-14624
+Instance: medicationrequest-Presc-EFFERALGAN
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14624"
+* medicationReference.reference = "#medication-Presc-EFFERALGAN"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-28T14:52:40.936Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

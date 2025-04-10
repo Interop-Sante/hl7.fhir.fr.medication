@@ -1,10 +1,10 @@
-Instance: 14645
+Instance: Presc-CLARADOL-TLMardisVendredis
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry.resource = medicationrequest-14645
+* entry.resource = medicationrequest-Presc-CLARADOL-TLMardisVendredis
 
-Instance: medicationrequest-14645
+Instance: medicationrequest-Presc-CLARADOL-TLMardisVendredis
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"

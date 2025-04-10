@@ -1,14 +1,14 @@
-Instance: 14628
+Instance: Presc-NICOREETESKIN-patch
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14628
-* entry[+].resource = medicationrequest-14628
+* entry[0].resource = medication-Presc-NICOREETESKIN-patch
+* entry[+].resource = medicationrequest-Presc-NICOREETESKIN-patch
 
-Instance: medication-14628
+Instance: medication-Presc-NICOREETESKIN-patch
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14628"
+* id = "medication-Presc-NICOREETESKIN-patch"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400893539354 "NICORETTESKIN 15MG/16H DISP"
 * code.text = "NICOTINE"
@@ -20,14 +20,14 @@ Usage: #inline
 * ingredient.strength.numerator = 15 'mg' "mg"
 * ingredient.strength.denominator = 1 '1'
 
-Instance: medicationrequest-14628
+Instance: medicationrequest-Presc-NICOREETESKIN-patch
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14628"
+* medicationReference.reference = "#medication-Presc-NICOREETESKIN-patch"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-29T13:27:21.531Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

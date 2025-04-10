@@ -1,26 +1,26 @@
-Instance: 14652
+Instance: Presc-Capecitabine-Dose-Calculee
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14652
-* entry[+].resource = medicationrequest-14652
+* entry[0].resource = medication-Presc-Capecitabine-Dose-Calculee
+* entry[+].resource = medicationrequest-Presc-Capecitabine-Dose-Calculee
 
-Instance: medication-14652
+Instance: medication-Presc-Capecitabine-Dose-Calculee
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14652"
+* id = "medication-Presc-Capecitabine-Dose-Calculee"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000089303 "capécitabine"
 * code.text = "CAPECITABINE"
 
-Instance: medicationrequest-14652
+Instance: medicationrequest-Presc-Capecitabine-Dose-Calculee
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14652"
+* medicationReference.reference = "#medication-Presc-Capecitabine-Dose-Calculee"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-10-15T20:06:12.345Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

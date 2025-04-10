@@ -1,10 +1,10 @@
-Instance: 14625
+Instance: Presc-CODOLIPRANE-MedCodeableConcept
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medicationrequest-14625
+* entry[0].resource = medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
 
-Instance: medicationrequest-14625
+Instance: medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"

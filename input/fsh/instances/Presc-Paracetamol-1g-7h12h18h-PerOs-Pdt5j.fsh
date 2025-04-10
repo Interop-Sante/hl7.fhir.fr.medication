@@ -1,26 +1,26 @@
-Instance: 14618
+Instance: Presc-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14618
-* entry[+].resource = medicationrequest-14618
+* entry[0].resource = medication-Presc-Paracetamol
+* entry[+].resource = medicationrequest-Presc-Paracetamol
 
-Instance: medication-14618
+Instance: medication-Presc-Paracetamol
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14618"
+* id = "medication-Presc-Paracetamol"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"
 
-Instance: medicationrequest-14618
+Instance: medicationrequest-Presc-Paracetamol
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14618"
+* medicationReference.reference = "#medication-Presc-Paracetamol"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-13T08:48:39.825Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

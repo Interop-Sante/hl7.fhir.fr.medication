@@ -1,14 +1,14 @@
-Instance: 14629
+Instance: Presc-MATRIFEN-patch-TL72h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14629
-* entry[+].resource = medicationrequest-14629
+* entry[0].resource = medication-Presc-MATRIFEN-patch-TL72h
+* entry[+].resource = medicationrequest-Presc-MATRIFEN-patch-TL72h
 
-Instance: medication-14629
+Instance: medication-Presc-MATRIFEN-patch-TL72h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14629"
+* id = "medication-Presc-MATRIFEN-patch-TL72h"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400893183014 "MATRIFEN 75µG/H DISP TRANS"
 * code.text = "MATRIFEN 75 ug/h, dispositif transdermique"
@@ -20,14 +20,14 @@ Usage: #inline
 * ingredient.strength.numerator = 75 'ug' "µg"
 * ingredient.strength.denominator = $unitsofmeasure#h "h"
 
-Instance: medicationrequest-14629
+Instance: medicationrequest-Presc-MATRIFEN-patch-TL72h
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14629"
+* medicationReference.reference = "#medication-Presc-MATRIFEN-patch-TL72h"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-29T16:14:13.817Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
@@ -42,9 +42,9 @@ Usage: #inline
 * dosageInstruction.doseAndRate[0].type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate[=].type.text = "Ordered"
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.value = 1
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.unit = "patch"
+* dosageInstruction.doseAndRate[=].rateRatio.numerator.unit = "patch cutané"
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.system = $EDQM
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #90001112
+* dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #10517500
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.value = 72
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.unit = "h"
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.system = $unitsofmeasure

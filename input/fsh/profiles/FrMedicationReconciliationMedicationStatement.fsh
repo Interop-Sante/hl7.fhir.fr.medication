@@ -65,17 +65,17 @@ Description: "Profil de la ressource *MedicationStatement* référencée dans la
 * note ^comment = "Bien distinguer les informations complémentaires relatives au traitement médicamenteux que représente cette ligne, qui doivent figurer ici, de celles relative à la conciliation proprement-dite de cette ligne avec le Bilan Médicamenteux et le Traitement Médicamenteux Courant, qui doivent figurer dans l'extension *reconciliation*"
 * note ^requirements = "Bien distinguer information complémentaire concernant le traitement médicamenteux de celle concernant la conciliation proprement-dite."
 * note ^meaningWhenMissing = "Toute l'information nécessaire à la compréhension du traitement médicamenteux que représente cette ressource *MedicationStatement* est contenue dans ses autres éléments."
-* dosage.doseAndRate.dose[x] only FrRangeMedication or FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosage.doseAndRate.dose[x] only FrRangeMedication
 * dosage.doseAndRate.dose[x] MS
 * dosage.doseAndRate.dose[x] ^short = "Precise amount of medication per dose"
 * dosage.doseAndRate.dose[x] ^definition = "Amount of medication per dose. No use of element 'comparator' in the simpleQuantity definitions."
-* dosage.doseAndRate.rate[x] only FrRatioMedication or FrRangeMedication or FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosage.doseAndRate.rate[x] only FrRatioMedication
 * dosage.doseAndRate.rate[x] MS
 * dosage.doseAndRate.rate[x] ^short = "Precise amount of medication per unit of time"
 * dosage.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time No use of element 'comparator' in the simpleQuantity definitions."
 * dosage.maxDosePerPeriod only FrRatioMedication
 * dosage.maxDosePerPeriod MS
-* dosage.maxDosePerAdministration only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosage.maxDosePerAdministration only FrSimpleQuantityMedication
 * dosage.maxDosePerAdministration MS
-* dosage.maxDosePerLifetime only FrSimpleQuantityUcum or FrSimpleQuantityEdqm
+* dosage.maxDosePerLifetime only FrSimpleQuantityMedication
 * dosage.maxDosePerLifetime MS

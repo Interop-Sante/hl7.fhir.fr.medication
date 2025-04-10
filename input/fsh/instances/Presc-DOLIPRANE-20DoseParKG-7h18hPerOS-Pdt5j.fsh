@@ -1,14 +1,14 @@
-Instance: 14626
+Instance: Presc-DOLIPRANE-20DoseParKG
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14626
-* entry[+].resource = medicationrequest-14626
+* entry[0].resource = medication-Presc-DOLIPRANE-20DoseParKG
+* entry[+].resource = medicationrequest-Presc-DOLIPRANE-20DoseParKG
 
-Instance: medication-14626
+Instance: medication-Presc-DOLIPRANE-20DoseParKG
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14626"
+* id = "medication-Presc-DOLIPRANE-20DoseParKG"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $UCD#3400892028057 "DOLIPRANE 2,4% BUV FV100ML"
 * code.text = "DOLIPRANE 2.4% ss sucre, susp buv"
@@ -20,14 +20,14 @@ Usage: #inline
 * ingredient.strength.numerator = 15 'mg' "mg"
 * ingredient.strength.denominator = 1 '1'
 
-Instance: medicationrequest-14626
+Instance: medicationrequest-Presc-DOLIPRANE-20DoseParKG
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14626"
+* medicationReference.reference = "#medication-Presc-DOLIPRANE-20DoseParKG"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-28T15:20:31.592Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

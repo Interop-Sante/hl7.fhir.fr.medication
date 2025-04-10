@@ -1,26 +1,26 @@
-Instance: 14647
+Instance: Presc-Methylpredinosolone-DosesEvolutives
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14647
-* entry[+].resource = medicationrequest-14647
+* entry[0].resource = medication-Presc-Methylpredinosolone-DosesEvolutives
+* entry[+].resource = medicationrequest-Presc-Methylpredinosolone-DosesEvolutives
 
-Instance: medication-14647
+Instance: medication-Presc-Methylpredinosolone-DosesEvolutives
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14647"
+* id = "medication-Presc-Methylpredinosolone-DosesEvolutives"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000091803 "méthylprednisolone"
 * code.text = "METHYLPREDNISOLONE"
 
-Instance: medicationrequest-14647
+Instance: medicationrequest-Presc-Methylpredinosolone-DosesEvolutives
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14647"
+* medicationReference.reference = "#medication-Presc-Methylpredinosolone-DosesEvolutives"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-08-14T18:17:26.372Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

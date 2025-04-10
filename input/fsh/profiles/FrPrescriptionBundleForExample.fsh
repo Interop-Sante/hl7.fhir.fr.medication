@@ -29,7 +29,7 @@ Description: "Profil de la ressource Bundle pour la constitution d'exemples de p
 // * entry.resource[MedicationRequest] ^short = "Line of presciption"
 // * entry.resource[MedicationNonCompound] from fr-medication-noncompound
 // * entry.resource[MedicationNonCompound] ^short = "Simple medication either prescribed directly or referenced by a compound medication"
-// * entry.resource[MedicationCompound] from fr-medication-compound2
+// * entry.resource[MedicationCompound] from fr-medication-compound
 // * entry.resource[MedicationCompound] ^short = "Prescribed compound medication"
 // * entry.resource[RequestGroupForPrescription] from fr-requestgroup-for-prescription
 // * entry.resource[RequestGroupForPrescription] ^short = "Relation between lines of prescription (ex. exclusive: one or the other)"

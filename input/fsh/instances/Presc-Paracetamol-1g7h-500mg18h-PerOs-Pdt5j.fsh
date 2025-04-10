@@ -1,26 +1,26 @@
-Instance: 14642
+Instance: Presc-Paracetamol-DoseEvolutive
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14642
-* entry[+].resource = medicationrequest-14642
+* entry[0].resource = medication-Presc-Paracetamol-DoseEvolutive
+* entry[+].resource = medicationrequest-Presc-Paracetamol-DoseEvolutive
 
-Instance: medication-14642
+Instance: medication-Presc-Paracetamol-DoseEvolutive
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14642"
+* id = "medication-Presc-Paracetamol-DoseEvolutive"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"
 
-Instance: medicationrequest-14642
+Instance: medicationrequest-Presc-Paracetamol-DoseEvolutive
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#med-221medication-14642"
+* medicationReference.reference = "#med-221medication-Presc-Paracetamol-DoseEvolutive"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-08-12T14:29:15.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

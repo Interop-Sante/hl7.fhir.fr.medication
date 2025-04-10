@@ -1,26 +1,26 @@
-Instance: 14621
+Instance: Presc-Nicotine-15mgPar16h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14621
-* entry[+].resource = medicationrequest-14621
+* entry[0].resource = medication-Presc-Nicotine-15mgPar16h
+* entry[+].resource = medicationrequest-Presc-Nicotine-15mgPar16h
 
-Instance: medication-14621
+Instance: medication-Presc-Nicotine-15mgPar16h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-14624"
+* id = "medication-Presc-Nicotine-15mgPar16h"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000079991 "nicotine"
 * code.text = "NICOTINE"
 
-Instance: medicationrequest-14621
+Instance: medicationrequest-Presc-Nicotine-15mgPar16h
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14621"
+* medicationReference.reference = "#medication-Presc-Nicotine-15mgPar16h"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-19T18:33:41.714Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

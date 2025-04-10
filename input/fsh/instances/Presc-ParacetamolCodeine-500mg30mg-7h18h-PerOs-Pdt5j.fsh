@@ -1,14 +1,14 @@
-Instance: 14658
+Instance: Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-14658
-* entry[+].resource = medicationrequest-14658
+* entry[0].resource = medication-Presc-ParacetamolCodeine-500mg30mg
+* entry[+].resource = medicationrequest-Presc-ParacetamolCodeine-500mg30mg
 
-Instance: medication-14658
+Instance: medication-Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-medication-compound
 Usage: #inline
-* id = "medication-14658"
+* id = "medication-Presc-ParacetamolCodeine-500mg30mg"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code.text = "PARACETAMOL+CODEINE 500mg+30mg"
 * ingredient[0].itemCodeableConcept = $SMS#100000090270 "paracétamol"
@@ -18,14 +18,14 @@ Usage: #inline
 * ingredient[=].itemCodeableConcept.text = "CODEINE"
 * ingredient[=].strength.numerator = 30 'mg' "mg"
 
-Instance: medicationrequest-14658
+Instance: medicationrequest-Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-14658"
+* medicationReference.reference = "#medication-Presc-ParacetamolCodeine-500mg30mg"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-19T16:22:39.825Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

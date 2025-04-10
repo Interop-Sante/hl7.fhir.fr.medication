@@ -1,17 +1,17 @@
-Instance: 14638
+Instance: Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-1-14638
-* entry[+].resource = medication-2-14638
-* entry[+].resource = medication-3-14638
-* entry[+].resource = medication-C-14638
-* entry[+].resource = medicationrequest-14638
+* entry[0].resource = medication-1-Presc-PerfGl-NaCl-KCl-1l
+* entry[+].resource = medication-2-Presc-PerfGl-NaCl-KCl-1l
+* entry[+].resource = medication-3-Presc-PerfGl-NaCl-KCl-1l
+* entry[+].resource = medication-C-Presc-PerfGl-NaCl-KCl-1l
+* entry[+].resource = medicationrequest-Presc-PerfGl-NaCl-KCl-1l
 
-Instance: medication-1-14638
+Instance: medication-1-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-1-14638"
+* id = "medication-1-Presc-PerfGl-NaCl-KCl-1l"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000078171 "glucose"
 * code.text = "GLUCOSE"
@@ -23,10 +23,10 @@ Usage: #inline
 * ingredient.strength.numerator = 50 'mg' "mg"
 * ingredient.strength.denominator = 1 'mL' "mL"
 
-Instance: medication-2-14638
+Instance: medication-2-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-2-14638"
+* id = "medication-2-Presc-PerfGl-NaCl-KCl-1l"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000092115 "chlorure de sodium"
 * code.text = "SODIUM CHLORURE"
@@ -34,10 +34,10 @@ Usage: #inline
 * form.text = "solution injectable"
 * amount.numerator = 3 'g' "g"
 
-Instance: medication-3-14638
+Instance: medication-3-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-3-14638"
+* id = "medication-3-Presc-PerfGl-NaCl-KCl-1l"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000091807 "chlorure de potassium"
 * code.text = "POTASSIUM CHLORURE"
@@ -46,24 +46,24 @@ Usage: #inline
 * amount.numerator = 2 'g' "g"
 
 
-Instance: medication-C-14638
+Instance: medication-C-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-14638"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
 * code.text = "G5 1L + NaCl 3g + KCl 2g"
-* ingredient[0].itemReference.reference = "#medication-1-14638"
-* ingredient[+].itemReference.reference = "#medication-2-14638"
-* ingredient[+].itemReference.reference = "#medication-3-14638"
+* ingredient[0].itemReference.reference = "#medication-1-Presc-PerfGl-NaCl-KCl-1l"
+* ingredient[+].itemReference.reference = "#medication-2-Presc-PerfGl-NaCl-KCl-1l"
+* ingredient[+].itemReference.reference = "#medication-3-Presc-PerfGl-NaCl-KCl-1l"
 
-Instance: medicationrequest-14638
+Instance: medicationrequest-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-C-14638"
+* medicationReference.reference = "#medication-C-Presc-PerfGl-NaCl-KCl-1l"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-08-02T15:26:27.603Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
