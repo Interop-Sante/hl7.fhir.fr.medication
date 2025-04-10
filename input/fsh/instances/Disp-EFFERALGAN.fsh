@@ -1,12 +1,11 @@
-Instance: 14657
+Instance: Disp-EFFERALGAN
 InstanceOf: FrInpatientMedicationDispense
 Usage: #example
-* contained = med-21
 * status = #completed
-* medicationReference.reference = "#med-21"
+* medicationReference.reference = "#InLine-med-EFFERALGAN"
 * subject.reference = "Patient/14602"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
-* authorizingPrescription.reference = "MedicationRequest/14624"
+* authorizingPrescription.reference = "MedicationRequest/medicationrequest-Presc-EFFERALGAN"
 * type = $v3-ActCode#FFC "First Fill - Complete"
 * quantity = 15 '1'
 * daysSupply = 5 'd' "jours"

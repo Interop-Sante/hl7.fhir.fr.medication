@@ -1,4 +1,4 @@
-Instance: med-21
+Instance: InLine-med-EFFERALGAN
 InstanceOf: FrMedication
 Usage: #inline
 * code = $UCD#3400893766521 "EFFERALGANMED 1000MG CPR"
