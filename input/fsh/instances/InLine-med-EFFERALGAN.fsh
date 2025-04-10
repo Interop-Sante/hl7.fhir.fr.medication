@@ -1,6 +1,6 @@
 Instance: InLine-med-EFFERALGAN
 InstanceOf: FrMedication
-Usage: #inline
+Usage: #example
 * code = $UCD#3400893766521 "EFFERALGANMED 1000MG CPR"
 * code.text = "EFFERALGAN 1 000 mg, cpr"
 * form = $EDQM#10219000 "Comprimé"
