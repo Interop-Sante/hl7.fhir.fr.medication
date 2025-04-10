@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-10T13:16:38+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-10T13:34:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1815,6 +1815,24 @@
        fhir:example [
          a fhir:boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Medication/InLine-med-EFFERALGAN> ;
+         fhir:reference [ fhir:v "Medication/InLine-med-EFFERALGAN" ]
+       ] ;
+       fhir:name [ fhir:v "InLine-med-EFFERALGAN" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication>
        ]
      ] [
        fhir:extension ( [
