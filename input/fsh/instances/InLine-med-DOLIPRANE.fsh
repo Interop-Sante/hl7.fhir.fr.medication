@@ -1,6 +1,6 @@
-Instance: med-421
+Instance: InLine-DOLIPRANE
 InstanceOf: FrMedication
-Usage: #inline
+Usage: #example
 * code = $UCD#3400891996128 "DOLIPRANE 500MG GELU"
 * code.text = "DOLIPRANE 500 mg, gélule"
 * form = $EDQM#10210000 "Gélule"

@@ -1,5 +1,5 @@
-Instance: med-351
+Instance: InLine-med-Paracetamol
 InstanceOf: FrMedication
-Usage: #inline
+Usage: #example
 * code.coding = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"

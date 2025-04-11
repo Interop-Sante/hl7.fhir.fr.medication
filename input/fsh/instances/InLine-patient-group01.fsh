@@ -1,6 +1,6 @@
-Instance: group-01
+Instance: InLine-patient-group-01
 InstanceOf: Group
-Usage: #inline
+Usage: #example
 * type = #person
 * actual = true
 * member[0].entity = Reference(Patient/14602)

@@ -1,12 +1,12 @@
-Instance: 14661
+Instance: Disp-DOLIPRANE-Refill-Substit
 InstanceOf: FrInpatientMedicationDispense
 Usage: #example
-* contained = med-381
+* contained = med-401
 * status = #completed
-* medicationReference.reference = "#med-381"
-* subject.reference = "Patient/14602"
+* medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
+* subject.reference = "Patient/14604"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
-* authorizingPrescription.reference = "MedicationRequest/14654"
+* authorizingPrescription.reference = "MedicationRequest/InLine-presc-EFFERALGAN2"
 * type = $v3-ActCode#RFP "Refill - Part"
 * quantity = 6 '1'
 * daysSupply = 2 'd' "jours"
@@ -14,7 +14,7 @@ Usage: #example
 * whenHandedOver = "2021-07-16T10:24:00Z"
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-16T10:10:00Z"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2021-07-18T10:09:59Z"
+* dosageInstruction.timing.repeat.boundsPeriod.end = "2021-07-17T10:09:59Z"
 * dosageInstruction.timing.repeat.timeOfDay[0] = "07:00:00"
 * dosageInstruction.timing.repeat.timeOfDay[+] = "12:00:00"
 * dosageInstruction.timing.repeat.timeOfDay[+] = "18:00:00"
