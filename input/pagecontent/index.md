@@ -2,13 +2,16 @@
 # Introduction
 
 
-<blockquote class="stu-note">
-  <p>
-    <b>Note</b>
-    <br>
-    Dans un futur proche, le référentiel unique d'interopérabilité du médicament (RUIM) remplacera les terminologies non standard présentes dans ce guide d'implémentation.
-  </p>
-</blockquote>
+{% if site.data.info.releaselabel == 'ci-build' %}
+  <div style="width: 65%">
+      <blockquote class="stu-note">
+      <p>
+      <b>Attention !</b> Cet Implementation Guide n'est pas la version courante. La version courante sera accessible via l'URL canonique (http://interop.esante.gouv.fr/ig/fhir/cds) lorsque celui-ci sera publié.
+      </p>
+      </blockquote>
+  </div>
+{% endif %}
+
 
 
 Ce guide d'implémentation (IG) a pour vocation à spécifier les flux d'information autour du médicament pour un patient dans un contexte hospitalier dans un premier temps.
