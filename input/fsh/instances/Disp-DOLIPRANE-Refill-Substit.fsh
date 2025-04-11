@@ -1,7 +1,6 @@
 Instance: Disp-DOLIPRANE-Refill-Substit
 InstanceOf: FrInpatientMedicationDispense
 Usage: #example
-* contained = med-401
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
 * subject.reference = "Patient/14604"
