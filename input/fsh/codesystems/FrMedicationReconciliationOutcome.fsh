@@ -1,6 +1,6 @@
 CodeSystem: FrMedicationReconciliationOutcome
 Id: fr-medication-reconciliation-outcome
-Title: "code system InterOp'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT"
+Title: "code system Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT"
 Description: "Le système de codage de la gravité de l'erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^status = #draft

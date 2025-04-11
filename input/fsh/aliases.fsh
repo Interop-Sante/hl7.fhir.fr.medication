@@ -6,11 +6,18 @@ Alias: $dose-rate-type = http://terminology.hl7.org/CodeSystem/dose-rate-type
 Alias: $SIPh-CIO_DC = http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/SIPh-CIO_DC
 Alias: $DC_Composant = http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc/DC_Composant
 Alias: $unitsofmeasure = http://unitsofmeasure.org
+Alias: $UCD = http://data.esante.gouv.fr/ansm/medicament/UCD
+Alias: $SMS = http://data.esante.gouv.fr/ansm/medicament/codeSMS
+Alias: $TechANSM = http://data.esante.gouv.fr/ansm/medicament/substance
+Alias: $EDQM = http://standardterms.edqm.eu
 
 Alias: $fr-document-type = https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type
 
 Alias: $medicationknowledge-characteristic = http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic
 Alias: $medication-ingredientstrength_1 = http://hl7.org/fhir/ValueSet/medication-ingredientstrength
+Alias: $fr-additional-when-codes = https://hl7.fr/fhir/fr/medication/ValueSet/fr-additional-when-codes
+
+Alias: $fr-additional-when-values = https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values
 
 // FrCore aliases
 Alias: $FrCoreEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter
@@ -30,10 +37,5 @@ Alias: $PN13Gender = https://interopsante.org/pn13/SIPh_sexe
 Alias: $PN13TypeComposant = https://interopsante.org/pn13/SIPh_TypeComposant
 Alias: $PN13Schema-Posologie = https://interopsante.org/pn13/xsd/M_prescription_medicaments/Prescription/Element_prescr_medic/Element_posologie
 Alias: $FhirDosage = https://hl7.org/fhir/R4/dosage
-
-// Alias: $FrMedicationProfileList = https://hl7.fr/ig/fhir/Medication/CodeSystem/fr-medication-profil-list
-// Alias: $FrMedicationUCD = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrMecicationUcd
-// Alias: $FrMedicationNonproprietaryName = https://hl7.fr/ig/fhir/medication/StructureDefinition/FeMedicationNonproprietaryName
-// Alias: $FrMedicationCompound = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrMecicationCompound
-// Alias: $FrInpatientMedicationRequest = https://hl7.fr/ig/fhir/medication/StructureDefinition/FrInpatientMedicationRequest
+Alias: $FhirObservation = https://hl7.org/fhir/R4/observation
 

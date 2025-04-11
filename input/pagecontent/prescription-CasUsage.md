@@ -1,6 +1,6 @@
 # Cas d'usage
 
-## La ligne de prescription intiale
+## La ligne de prescription initale
 
 En situation réelle, n'émettre que des lignes de prescription initiales est rarement suffisant. Néanmoins, c'est la base qui permet d'explorer la complexité de la prescription selon deux axes, le médicament prescrit et la posologie.
 
@@ -8,7 +8,7 @@ La complexité du *médicament prescrit*
 
 - Une spécialité
   - monosubstance dosée en quantité sous forme comprimé
-  - bisubstance dosées en quantité sous forme comprimé
+  - bisubstance doséee en quantité sous forme comprimé
   - monosubstance dosée en concentration et prescrite en dose-kg
   - monosubstance dosée en concentration et prescrite en application
   - monosubstance patch dosée en quantité sur durée du patch
@@ -30,7 +30,7 @@ La complexité du *médicament prescrit*
   - Elles sont définies dans le Code de la santé publique
     - préparation magistrale : « tout médicament préparé au vu de la prescription destinée à un patient déterminé... » ;
     - préparation officinale : « tout médicament préparé en pharmacie, inscrit à la pharmacopée ou au formulaire national... ».
-  - Elles ne sont pas couvertes par ce guide d'implémentation
+  - Dans le contexte de ce guide, elles sont modélisées comme des prescriptions Extemporanées 
 
 *La complexité de la posologie*:
 
@@ -40,7 +40,7 @@ La complexité du *médicament prescrit*
   - la durée d'administration
   - la dose
 - Un premier niveau de complexité est adressé par les cas d'usage :
-  - fréquence : journaliére ou tout les 3 j
+  - fréquence : journaliére ou tous les 3 j
   - horaires : fixes
   - durée d'administration : négligeable (assimilée à nulle) ou déterminée
   - dose : exprimée en nombre d'unités de médicament prescrit (comprimé, dose-kg , application, patch, flacon) ou quantité de principe actif (mg, g)

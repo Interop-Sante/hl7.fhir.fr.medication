@@ -36,14 +36,14 @@ Current Medication MedicationStatement resource profile"""
 * dosage.doseAndRate MS
 
 * dosage.doseAndRate.dose[x] MS 
-* dosage.doseAndRate.dose[x] only FrRangeUcum or FrSimpleQuantityUcum 
+* dosage.doseAndRate.dose[x] only FrRangeMedication
 * dosage.doseAndRate.dose[x] ^short = "Amount of medication per dose. No use of element 'comparator' in the simpleQuantity definitions."
 
 * dosage.doseAndRate.rate[x] MS 
-* dosage.doseAndRate.rate[x] only FrRatioUcum or FrRangeUcum or FrSimpleQuantityUcum
+* dosage.doseAndRate.rate[x] only FrRatioMedication
 * dosage.maxDosePerPeriod MS 
-* dosage.maxDosePerPeriod only FrRatioUcum
+* dosage.maxDosePerPeriod only FrRatioMedication
 * dosage.maxDosePerAdministration MS 
-* dosage.maxDosePerAdministration only FrSimpleQuantityUcum
+* dosage.maxDosePerAdministration only FrSimpleQuantityMedication
 * dosage.maxDosePerLifetime MS 
-* dosage.maxDosePerLifetime only FrSimpleQuantityUcum
+* dosage.maxDosePerLifetime only FrSimpleQuantityMedication

@@ -1,6 +1,6 @@
 CodeSystem: FrMedicationReconciliationStatus
 Id: fr-medication-reconciliation-status
-Title: "code system InterOp'Santé - Statut d'une ligne de traitement d'une FCT"
+Title: "code system Interop'Santé - Statut d'une ligne de traitement d'une FCT"
 Description: "Le système de codage du statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^status = #draft
