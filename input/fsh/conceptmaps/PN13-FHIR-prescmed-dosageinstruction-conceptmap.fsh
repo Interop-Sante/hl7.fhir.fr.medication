@@ -1437,7 +1437,7 @@ Usage: #definition
 * group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.doseAndRate.maxDosePerPeriod.numerator.system
 * group[=].element[=].target[=].product[=].value = "http://unitsofmeasure.org"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[=].code = $FhirDosage#Dosage.doseAndRate.maxDosePerPeriod.numerator.unit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.maxDosePerPeriod.numerator.unit
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Si Quantité/Unité n'est pas exprimée en EDQM ou UCUM, il est recommander, si possible, de la traduire dans une de ces terminologies (le cas échéant en utilisant le mapping Free Set CIO-DC UNITE) et d'utiliser maxDosePerPeriod.numerator.code et de référencer la terminologie utilisée dans maxDosePerPeriod.numerator.system. Si ce n'est pas possible, maxDosePerPeriod.numerator.unit peut être utilisé mais pourrait poser des problèmes d'interprétation."
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
