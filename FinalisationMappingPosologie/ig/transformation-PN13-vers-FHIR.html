@@ -379,20 +379,20 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
 
 <h4 id="medication">Medication</h4>
 
-<ol>
+<ul>
   <li>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> dans le message PN13:
     <ul>
       <li>si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d’information complémentaires aux informations présentes dans le Référentiel Unique d’Interopérabilité du Médicament, il est possible d’utiliser le code du médicament soit dans <code class="language-plaintext highlighter-rouge">MedicationRequest.medicationCodeableConcept</code>(dans le cas d’un médicament simple) soit dans <code class="language-plaintext highlighter-rouge">Medication.ingredient.itemCodeableConcept</code> (dans le cas d’un médicament composé cf. item 2) ou de créer une ressource <em>Medication</em> pour ce médicament (cf. item suivant sur la création de la ressource <em>Medication</em>);</li>
-      <li>si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d’Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l’information isVehicule…) une ressource <em>Medication</em> <strong>DOIT</strong> être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource <em>ConceptMap</em> <a href="ConceptMap-PN13-FHIR-prescmed-medicationnoncompound-conceptmap.html">PN13-FHIR-prescmed-medicationnoncompound-conceptmap</a>. Une ressource peut également être créée pour les composants prescrits ne portant pas d’informations complémentaires aux informations présentes dans le RUIM (cf. item précédent).</li>
+      <li>si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d’Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l’information isVehicule…) une ressource <em>Medication</em> <strong>DOIT</strong> être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource <em>ConceptMap</em> <a href="ConceptMap-PN13-FHIR-prescmed-medicationnoncompound-conceptmap.html">PN13-FHIR-prescmed-medicationnoncompound-conceptmap</a>.</li>
     </ul>
   </li>
-  <li>Si le message PN13 comporte plusieurs éléments <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> créer une ressource <em>Medication</em> suivant le profil [fr-medication-compound] en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-medicationcompound-conceptmap]:
+  <li>Si le message PN13 comporte plusieurs éléments <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> créer une ressource <em>Medication</em> suivant le profil [fr-medication-compound] en utilisant la ressource <em>ConceptMap</em> <a href="ConceptMap-PN13-FHIR-prescmed-medicationcomp-conceptmap.html">PN13-FHIR-prescmed-medicationcomp-conceptmap</a> :
     <ul>
       <li>qui référence chaque ressource créée à partir des éléments <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> via <code class="language-plaintext highlighter-rouge">Medication.ingredient.itemReference.reference</code>;</li>
       <li>qui indique le code du médicament via <code class="language-plaintext highlighter-rouge">Medication.ingredient.itemCodeableConcept</code>.</li>
     </ul>
   </li>
-</ol>
+</ul>
 
 <h4 id="medicationrequest">MedicationRequest</h4>
 
@@ -469,7 +469,7 @@ Si l’unité référencée en PN13 dans <code class="language-plaintext highlig
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 14, 2025 13:54+0000">2025-04-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 14, 2025 14:46+0000">2025-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
