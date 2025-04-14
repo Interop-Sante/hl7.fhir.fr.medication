@@ -9,7 +9,7 @@ Ce formalisme n'est pas obligatoire, la manière dont les ressources FHIR consti
 
 #### Médicament simple en spécialité
 
-- [EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-Presc-EFFERALGAN.html)
+- [EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j](Bundle-Presc-EFFERALGAN.html)
 - [CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j](MedicationRequest-Presc-CODOLIPRANE-MedCodeableConcept.html)
 - [DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j](MedicationRequest-Presc-DOLIPRANE-20DoseParKG.html)
 - [DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-Presc-DIPROSONE-AppCut.html)
