@@ -1188,6 +1188,13 @@ Usage: #definition
 * group[=].element[=].target[=].comment = "Dans le cas où la terminologie utilisée dans le message PN13 n'est pas UCUM, la valeur de Unité est à traduire en UCUM. Le mapping Free Set CIO-DC UNITE peut être utilisé si la terminilogie CIO est utilisée"
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.value
+* group[=].element[=].target[=].equivalence = #relatedto
+* group[=].element[=].target[=].comment = "La valeur de value est à calculer à partir Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite Cf. le paragraphe Unité dose en PN13 de la page Transformation de PN13 en FHIR"
+* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
+* group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
+* group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
+* group[=].element[=].target[=].dependsOn[=].value = "dose"
+* group[=].element[=].target[+].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.value
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
