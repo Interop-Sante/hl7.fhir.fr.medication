@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-04-14T13:17:43+00:00",
+  "date" : "2025-04-14T13:53:40+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -837,7 +837,7 @@
         "valueString" : "ConceptMap"
       }],
       "reference" : {
-        "reference" : "ConceptMap/PN13-FHIR-prescmed-medicationComp-conceptmap"
+        "reference" : "ConceptMap/PN13-FHIR-prescmed-medicationcomp-conceptmap"
       },
       "name" : "Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments",
       "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un médicament composé d'une prescritpion de médicament",
@@ -995,30 +995,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-medication-compound"
-      },
-      "name" : "French compound Medication",
-      "description" : "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-inpatient-medicationrequest"
-      },
-      "name" : "French Inpatient MedicationRequest",
-      "description" : "French inpatient medication request profile",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1038,18 +1014,6 @@
       },
       "name" : "French Method Of Administration",
       "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FrMedicationRequest*.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-medication-noncompound"
-      },
-      "name" : "French Non Compound Medication",
-      "description" : "Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined.",
       "exampleBoolean" : false
     },
     {
@@ -1105,10 +1069,34 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-inpatient-medicationrequest"
+      },
+      "name" : "FrInpatientMedicationRequest",
+      "description" : "French inpatient medication request profile",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-medication"
       },
       "name" : "FrMedication",
       "description" : "profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp'Santé",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-compound"
+      },
+      "name" : "FrMedicationCompound",
+      "description" : "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.",
       "exampleBoolean" : false
     },
     {
@@ -1153,6 +1141,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-medication-noncompound"
+      },
+      "name" : "FrMedicationNonCompound",
+      "description" : "Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-medication-reconciliation-composition"
       },
       "name" : "FrMedicationReconciliationComposition",
@@ -1189,6 +1189,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-observation-for-prescription"
+      },
+      "name" : "FrObservationForPrescription",
+      "description" : "Observation provided as context of the prescription (ex. weight, height...)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-on-admission-medication-composition"
       },
       "name" : "FrOnAdmissionMedicationComposition",
@@ -1217,6 +1229,18 @@
       },
       "name" : "FrPrescriptionBunbleForExample",
       "description" : "Profil de la ressource Bundle pour la constitution d'exemples de prescription.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-requestgroup-for-prescription"
+      },
+      "name" : "FrRequestGroupForPrescrption",
+      "description" : "RequestGroup for expressing links between lines of a prescription",
       "exampleBoolean" : false
     },
     {
@@ -1412,18 +1436,6 @@
         "reference" : "CodeSystem/medication-ingredient-strength-codes"
       },
       "name" : "Medication_Ingredient_Strength_Codes",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-observation-for-prescription"
-      },
-      "name" : "Observation for prescription",
-      "description" : "Observation provided as context of the prescription (ex. weight, height...)",
       "exampleBoolean" : false
     },
     {
@@ -1767,18 +1779,6 @@
       },
       "name" : "Ratio with UCUM or EDQM quantity units",
       "description" : "Ratio with numerator and denominator unit UCUM or EDQM encoded",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-requestgroup-for-prescription"
-      },
-      "name" : "RequestGroup for prescription",
-      "description" : "RequestGroup for expressing links between lines of a prescription",
       "exampleBoolean" : false
     },
     {

@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-04-14T13:17:43+00:00"/>
+  <date value="2025-04-14T13:53:40+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -661,7 +661,7 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationComp-conceptmap"/>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationcomp-conceptmap"/>
       </reference>
       <name value="Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments"/>
       <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament composé d'une prescritpion de médicament"/>
@@ -805,28 +805,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-medication-compound"/>
-      </reference>
-      <name value="French compound Medication"/>
-      <description value="A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-inpatient-medicationrequest"/>
-      </reference>
-      <name value="French Inpatient MedicationRequest"/>
-      <description value="French inpatient medication request profile"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -845,17 +823,6 @@
       </reference>
       <name value="French Method Of Administration"/>
       <description value="Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FrMedicationRequest*."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-medication-noncompound"/>
-      </reference>
-      <name value="French Non Compound Medication"/>
-      <description value="Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -906,10 +873,32 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/fr-inpatient-medicationrequest"/>
+      </reference>
+      <name value="FrInpatientMedicationRequest"/>
+      <description value="French inpatient medication request profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-medication"/>
       </reference>
       <name value="FrMedication"/>
       <description value="profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp'Santé"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-compound"/>
+      </reference>
+      <name value="FrMedicationCompound"/>
+      <description value="A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -950,6 +939,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/fr-medication-noncompound"/>
+      </reference>
+      <name value="FrMedicationNonCompound"/>
+      <description value="Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-medication-reconciliation-composition"/>
       </reference>
       <name value="FrMedicationReconciliationComposition"/>
@@ -983,6 +983,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/fr-observation-for-prescription"/>
+      </reference>
+      <name value="FrObservationForPrescription"/>
+      <description value="Observation provided as context of the prescription (ex. weight, height...)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-on-admission-medication-composition"/>
       </reference>
       <name value="FrOnAdmissionMedicationComposition"/>
@@ -1009,6 +1020,17 @@
       </reference>
       <name value="FrPrescriptionBunbleForExample"/>
       <description value="Profil de la ressource Bundle pour la constitution d'exemples de prescription."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-requestgroup-for-prescription"/>
+      </reference>
+      <name value="FrRequestGroupForPrescrption"/>
+      <description value="RequestGroup for expressing links between lines of a prescription"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1187,17 +1209,6 @@
         <reference value="CodeSystem/medication-ingredient-strength-codes"/>
       </reference>
       <name value="Medication_Ingredient_Strength_Codes"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-observation-for-prescription"/>
-      </reference>
-      <name value="Observation for prescription"/>
-      <description value="Observation provided as context of the prescription (ex. weight, height...)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1510,17 +1521,6 @@
       </reference>
       <name value="Ratio with UCUM or EDQM quantity units"/>
       <description value="Ratio with numerator and denominator unit UCUM or EDQM encoded"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-requestgroup-for-prescription"/>
-      </reference>
-      <name value="RequestGroup for prescription"/>
-      <description value="RequestGroup for expressing links between lines of a prescription"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

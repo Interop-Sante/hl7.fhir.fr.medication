@@ -313,10 +313,26 @@ Current Medication MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-fr-inpatient-medicationrequest.html" title="StructureDefinition/fr-inpatient-medicationrequest">FrInpatientMedicationRequest</a>
+            </td>
+            <td>
+<p>French inpatient medication request profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-fr-medication.html" title="StructureDefinition/fr-medication">FrMedication</a>
             </td>
             <td>
 <p>profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp’Santé</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-medication-compound.html" title="StructureDefinition/fr-medication-compound">FrMedicationCompound</a>
+            </td>
+            <td>
+<p>A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.</p>
 </td>
          </tr>
          <tr>
@@ -339,6 +355,14 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-fr-medication-noncompound.html" title="StructureDefinition/fr-medication-noncompound">FrMedicationNonCompound</a>
+            </td>
+            <td>
+<p>Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-fr-medication-reconciliation-composition.html" title="StructureDefinition/fr-medication-reconciliation-composition">FrMedicationReconciliationComposition</a>
             </td>
             <td>
@@ -351,6 +375,14 @@ Medication History MedicationStatement resource profile</p>
             </td>
             <td>
 <p>Profil de la ressource <em>MedicationStatement</em> référencée dans la ressource <em>Composition</em> de la Fiche de Conciliation des Traitements médicamenteux (FCT).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-observation-for-prescription.html" title="StructureDefinition/fr-observation-for-prescription">FrObservationForPrescription</a>
+            </td>
+            <td>
+<p>Observation provided as context of the prescription (ex. weight, height…)</p>
 </td>
          </tr>
          <tr>
@@ -379,39 +411,7 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-inpatient-medicationrequest.html" title="StructureDefinition/fr-inpatient-medicationrequest">French Inpatient MedicationRequest</a>
-            </td>
-            <td>
-<p>French inpatient medication request profile</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-medication-noncompound.html" title="StructureDefinition/fr-medication-noncompound">French Non Compound Medication</a>
-            </td>
-            <td>
-<p>Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-medication-compound.html" title="StructureDefinition/fr-medication-compound">French compound Medication</a>
-            </td>
-            <td>
-<p>A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-observation-for-prescription.html" title="StructureDefinition/fr-observation-for-prescription">Observation for prescription</a>
-            </td>
-            <td>
-<p>Observation provided as context of the prescription (ex. weight, height…)</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-requestgroup-for-prescription.html" title="StructureDefinition/fr-requestgroup-for-prescription">RequestGroup for prescription</a>
+               <a href="StructureDefinition-fr-requestgroup-for-prescription.html" title="StructureDefinition/fr-requestgroup-for-prescription">FrRequestGroupForPrescrption</a>
             </td>
             <td>
 <p>RequestGroup for expressing links between lines of a prescription</p>
@@ -875,7 +875,7 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ConceptMap-PN13-FHIR-prescmed-medicationComp-conceptmap.html" title="ConceptMap/PN13-FHIR-prescmed-medicationComp-conceptmap">Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments</a>
+               <a href="ConceptMap-PN13-FHIR-prescmed-medicationcomp-conceptmap.html" title="ConceptMap/PN13-FHIR-prescmed-medicationcomp-conceptmap">Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments</a>
             </td>
             <td>
 <p>ConceptMap pour la conversion PN13 vers FHIR d’un médicament composé d’une prescritpion de médicament</p>
@@ -1210,7 +1210,7 @@ Medication History MedicationStatement resource profile</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 14, 2025 13:18+0000">2025-04-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 14, 2025 13:54+0000">2025-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
