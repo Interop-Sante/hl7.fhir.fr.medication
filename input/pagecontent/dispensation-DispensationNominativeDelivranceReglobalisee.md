@@ -7,26 +7,26 @@ Exemple:
 
 - soit 3 prescriptions
 
-   1.[paracétamol 1 g à 7h, 12h et 18h per os, du 13/07 08:48 au 18/07 08:47 (5j)](MedicationRequest-14654.html)
-   1.[paracétamol 500 mg à 7h et 18 per os, du 14/07 09:07 au 17/07 09:06 (3j)](MedicationRequest-14659.html)
-   1.[EFFERALGAN 1000 mg, cpr à 7h, 12h et 18h per os, du 15/07 11:02 au 25/07 11:01 (10j)](MedicationRequest-14660.html)
+    1.[paracétamol 1 g à 7h, 12h et 18h per os, du 13/07 08:48 au 18/07 08:47 (5j)](MedicationRequest-14654.html)
+    1.[paracétamol 500 mg à 7h et 18 per os, du 14/07 09:07 au 17/07 09:06 (3j)](MedicationRequest-14659.html)
+    1.[EFFERALGAN 1000 mg, cpr à 7h, 12h et 18h per os, du 15/07 11:02 au 25/07 11:01 (10j)](MedicationRequest-14660.html)
 
 - dispensation du 16/07 pour 2 jours (ie. couvrant les 16 et 17 /07), sachant que la spécialité délivrée est DOLIPRANE 500 mg, gélule
 
   - 3 dispensations nominatives, de DOLIPRANE 500 mg gélule, une par prescription courante
 
-    1.[6 gélules](MedicationDispense-14661.html)
-    1.[2 gélules](MedicationDispense-14662.html)
-    1.[6 gélules](MedicationDispense-14663.html)
+      1.[6 gélules](MedicationDispense-14661.html)
+      1.[2 gélules](MedicationDispense-14662.html)
+      1.[6 gélules](MedicationDispense-14663.html)
 
-        - les posologies (==**dosageInstruction**==) sont ré-exprimées en nombre d'unités du médicament délivré, traduisant l'incidence de cette délivrance reglobalisée sur chacune des dispensations nominatives
+    - les posologies (==**dosageInstruction**==) sont ré-exprimées en nombre d'unités du médicament délivré, traduisant l'incidence de cette délivrance reglobalisée sur chacune des dispensations nominatives
 
   - 1 délivrance reglobalisée, cumulant les 3 dispensations nominatives
 
-        - [14 gélules](MedicationDispense-14664.html)
-        - l'usage de l'extension standard [event-basedOn](https://hl7.org/fhir/R4/extension-event-basedon.html) référence les dispensations nominatives à l'origine de la délivrance reglobalisée
-        - une ressource **Group** de `type` **person** est constituée pour référencer les patients `subject` de la délivrance reglobalisée
-        - il n'y a pas de posologie globale (pas de `dosageInstruction`) pour cette délivrance reglobalisée.
+      - [14 gélules](MedicationDispense-14664.html)
+      - l'usage de l'extension standard [event-basedOn](https://hl7.org/fhir/R4/extension-event-basedon.html) référence les dispensations nominatives à l'origine de la délivrance reglobalisée
+      - une ressource **Group** de `type` **person** est constituée pour référencer les patients `subject` de la délivrance reglobalisée
+      - il n'y a pas de posologie globale (pas de `dosageInstruction`) pour cette délivrance reglobalisée.
 
 ## Limites
 
