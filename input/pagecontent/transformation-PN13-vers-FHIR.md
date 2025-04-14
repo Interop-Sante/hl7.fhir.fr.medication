@@ -75,12 +75,12 @@ Dans le message PN13, à partir des sous-éléments de `Message/M_Prescription_m
   
 #### Medication
 
-1. Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` dans le message PN13:
-   - si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d'information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament, il est possible d'utiliser le code du médicament soit dans `MedicationRequest.medicationCodeableConcept`(dans le cas d'un médicament simple) soit dans `Medication.ingredient.itemCodeableConcept` (dans le cas d'un médicament composé cf. item 2) ou de créer une ressource *Medication* pour ce médicament (cf. item suivant sur la création de la ressource *Medication*);
-   - si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l'information isVehicule...) une ressource *Medication* **DOIT** être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationnoncompound-conceptmap]. Une ressource peut également être créée pour les composants prescrits ne portant pas d'informations complémentaires aux informations présentes dans le RUIM (cf. item précédent).
-1. Si le message PN13 comporte plusieurs éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` créer une ressource *Medication* suivant le profil [fr-medication-compound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationcompound-conceptmap]:
-   - qui référence chaque ressource créée à partir des éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` via `Medication.ingredient.itemReference.reference`;
-   - qui indique le code du médicament via `Medication.ingredient.itemCodeableConcept`. 
+- Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` dans le message PN13:
+  - si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d'information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament, il est possible d'utiliser le code du médicament soit dans `MedicationRequest.medicationCodeableConcept`(dans le cas d'un médicament simple) soit dans `Medication.ingredient.itemCodeableConcept` (dans le cas d'un médicament composé cf. item 2) ou de créer une ressource *Medication* pour ce médicament (cf. item suivant sur la création de la ressource *Medication*);
+  - si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l'information isVehicule...) une ressource *Medication* **DOIT** être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationnoncompound-conceptmap]. 
+- Si le message PN13 comporte plusieurs éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` créer une ressource *Medication* suivant le profil [fr-medication-compound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationcomp-conceptmap] :
+  - qui référence chaque ressource créée à partir des éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` via `Medication.ingredient.itemReference.reference`;
+  - qui indique le code du médicament via `Medication.ingredient.itemCodeableConcept`. 
 
 #### MedicationRequest
 
