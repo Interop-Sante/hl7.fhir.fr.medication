@@ -1,4 +1,4 @@
-Instance: PN13-FHIR-prescmed-medicationComp-conceptmap
+Instance: PN13-FHIR-prescmed-medicationcomp-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "FrPN13FHIRMedicationPrescriptionMedicationCompConceptMap"

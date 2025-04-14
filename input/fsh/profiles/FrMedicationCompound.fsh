@@ -1,7 +1,7 @@
 Profile: FrMedicationCompound
 Parent: Medication
 Id: fr-medication-compound
-Title: "French compound Medication"
+Title: "FrMedicationCompound"
 Description: "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."
 * ^status = #draft
 * ^experimental = false
