@@ -1,4 +1,4 @@
-Instance: Presc-CLARADOL-DoseDiffPraHoraire
+Instance: Presc-CLARADOL-DoseDiffParHoraire
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
