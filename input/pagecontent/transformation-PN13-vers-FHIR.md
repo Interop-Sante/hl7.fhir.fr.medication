@@ -46,7 +46,7 @@ Dans le message PN13, à partir des sous-éléments de `Message/M_Prescription_m
 - S'il n'exite pas de ressource *Patient* correspondante:
   - Si seul l'élément `Message/M_Prescription_médicaments/Patient/Ipp` est fourni, l'utiliser pour alimenter `MedicationRequest.subject.identifier.value` cf. ressource *ConceptMap* [PN13-FHIR-prescmed-patient-id-seul-conceptmap].
   - Si le patient a une INS qualifiée (i.e. présence de l'élément `Message/M_Prescription_médicaments/Patient/INS` renseigné et élément `Message/M_Prescription_médicaments/Patient/Statut_idpat` valorisé à `VALI`), créer la ressource *Patient* suivant le profil [FRCorePatientINS]($FrCorePatientINS) (éventuellement directement sur le serveur ou dans la ressource *Bundle* représentant la prescription comme c'est le cas pour les exemples fournis) en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-patient-avec-INS-conceptmap].
-  - Si le patient n'a pas d'INS qualifiée, créer la ressource *Patient* suivant le profil [FRCorePatient]($FRCorePatient) (éventuellement directement sur le serveur ou dans la ressource *Bundle* représentant la prescription comme c'est le cas pour les exemples fournis) en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-patient-sans-INS-conceptmap].
+  - Si le patient n'a pas d'INS qualifiée, créer la ressource *Patient* suivant le profil [FRCorePatient]($FrCorePatient) (éventuellement directement sur le serveur ou dans la ressource *Bundle* représentant la prescription comme c'est le cas pour les exemples fournis) en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-patient-sans-INS-conceptmap].
 
 #### Encounter
 
