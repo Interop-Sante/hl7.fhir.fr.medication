@@ -129,7 +129,7 @@ Usage: #definition
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Voir les ressources concepMap PN13-FHIR-Prescmedi-medicationComp-conceptmap ou PN13-FHIR-Prescmedi-medicationNonComp-conceptmap pour le détail du mapping de cet élément"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Libellé_élément_prescr
-* group[=].element[=].target[=].code = #MedicationRequest.note.text
+* group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Libellé textuel du médicament:`"
 * group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
