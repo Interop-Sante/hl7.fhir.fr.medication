@@ -6,7 +6,7 @@ Description: "Le système de codage pour la qualification du périmètre des not
 * ^status = #draft
 * ^experimental = false
 * ^content = #complete
-* ^count = 7
+* ^count = 10
 * #PRESCCOM "Commentaire au niveau de la prescription"
 * #LIPRESCTXT "Formulation textuelle d'une ligne de prescription par le prescripteur (vs élément .text généré automatiquement)"
 * #LIPRESCIND "Indication textuelle au niveau de la ligne de prescription"
@@ -14,3 +14,6 @@ Description: "Le système de codage pour la qualification du périmètre des not
 * #LIPRESCRENSCOMP "Renseignement complémentaire textuel"
 * #MEDIND "Indication au niveau du médicament prescrit"
 * #MEDCOM "Commentaire au niveau du médicament prescrit"
+* #LIPRESCCONDAPPL "Conditions d’application de la ligne de prescription"
+* #LIPRESCLIBMED "Libellé textuel du médicament prescrit"
+* #LIPRESCPOS "Libellé textuel de la posologie"

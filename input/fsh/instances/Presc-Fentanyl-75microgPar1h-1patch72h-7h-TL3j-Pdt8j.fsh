@@ -12,6 +12,11 @@ Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
 * code = $SMS#100000090377 "fentanyl"
 * code.text = "FENTANYL"
+* form = $EDQM#0061 "Patch"
+* ingredient[0].itemCodeableConcept = $SMS#100000090377 "fentanyl"
+* ingredient[=].itemCodeableConcept.text = "FENTANYL"
+* ingredient[=].strength.numerator = 75 'ug' "µg"
+* ingredient[=].strength.denominator = 1 'h' "h"
 
 Instance: medicationrequest-Presc-Fentanyl-patch72h-TL3j
 InstanceOf: FrInpatientMedicationRequest
@@ -26,21 +31,14 @@ Usage: #inline
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * groupIdentifier.value = "Presc-14622"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction[0].sequence = 1
-* dosageInstruction[=].timing.event = "2021-07-21T07:00:00Z"
-* dosageInstruction[=].route = $EDQM#20070000 "Voie transdermique"
-* dosageInstruction[=].route.text = "Voie transdermique"
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 75 'ug' "µg"
-* dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'h' "h"
-* dosageInstruction[+].sequence = 2
-* dosageInstruction[=].timing.event = "2021-07-24T07:00:00Z"
-* dosageInstruction[=].route = $EDQM#20070000 "Voie transdermique"
-* dosageInstruction[=].route.text = "Voie transdermique"
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 75 'ug' "µg"
-* dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'h' "h"
-* dosageInstruction[+].sequence = 3
-* dosageInstruction[=].timing.event = "2021-07-27T07:00:00Z"
-* dosageInstruction[=].route = $EDQM#20070000 "Voie transdermique"
-* dosageInstruction[=].route.text = "Voie transdermique"
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 75 'ug' "µg"
-* dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'h' "h"
+* dosageInstruction.sequence = 1
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-20T19:05:00Z"
+* dosageInstruction.timing.repeat.boundsPeriod.end = "2021-07-28T19:04:59Z"
+* dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
+* dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
+* dosageInstruction.route.text = "Voie transdermique"
+* dosageInstruction.doseAndRate.rateRatio.numerator.value = 1
+* dosageInstruction.doseAndRate.rateRatio.numerator.unit = "Patch"
+* dosageInstruction.doseAndRate.rateRatio.numerator.system = $EDQM
+* dosageInstruction.doseAndRate.rateRatio.numerator.code = #15036000
+* dosageInstruction.doseAndRate.rateRatio.denominator = 72 'h' "h"
