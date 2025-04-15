@@ -10,32 +10,32 @@ Ce formalisme n'est pas obligatoire, la manière dont les ressources FHIR consti
 #### Médicament simple en spécialité
 
 - [EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j](Bundle-Presc-EFFERALGAN.html)
-- [CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j](MedicationRequest-Presc-CODOLIPRANE-MedCodeableConcept.html)
-- [DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j](MedicationRequest-Presc-DOLIPRANE-20DoseParKG.html)
-- [DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-Presc-DIPROSONE-AppCut.html)
-- [NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](MedicationRequest-Presc-NICOREETESKIN-patch.html)
-- [MATRIFEN 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j](MedicationRequest-Presc-MATRIFEN-patch-TL72h.html)
-- [BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j](MedicationRequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html)
+- [CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j](Bundle-Presc-CODOLIPRANE-MedCodeableConcept.html)
+- [DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j](Bundle-Presc-DOLIPRANE-20DoseParKG.html)
+- [DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j](Bundle-Presc-DIPROSONE-AppCut.html)
+- [NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](Bundle-Presc-NICOREETESKIN-patch.html)
+- [MATRIFEN 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j](Bundle-Presc-MATRIFEN-patch-TL72h.html)
+- [BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html)
 
 #### Médicament simple en DC
 
-- [paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-Presc-Paracetamol.html)
-- [bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j](MedicationRequest-Presc-Betamethasone-ApplCut.html)
-- [nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](MedicationRequest-Presc-Nicotine-15mgPar16h.html)
-- [fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j](MedicationRequest-Presc-Fentanyl-patch72h-TL3j.html)
+- [paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j](Bundle-Presc-Paracetamol.html)
+- [bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j](Bundle-Presc-Betamethasone-ApplCut.html)
+- [nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](Bundle-Presc-Nicotine-15mgPar16h.html)
+- [fentanyl 75 ug/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j](Bundle-Presc-Fentanyl-patch72h-TL3j.html)
 
 #### Médicament composé
 
-- [paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j](MedicationRequest-Presc-ParacetamolCodeine-500mg30mg.html)
-- [Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j](MedicationRequest-Presc-PerfGl-NaCl-KCl-500ml.html)
-- [Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j](MedicationRequest-Presc-PerfGl-NaCl-KCl-1l.html)
-- marquer l'un des médicaments composant comme étant le soluté du médicament composé: [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-Presc-MiniperfCefotaxime-En20min-Pdt3j.html) Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques), § concacré à l'extension *IsVehicle*
-- [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-Presc-PerfDobutamine-Qsp40mL.html)
+- [paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j](Bundle-Presc-ParacetamolCodeine-500mg30mg.html)
+- [Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-PerfGl-NaCl-KCl-500ml.html)
+- [Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-PerfGl-NaCl-KCl-1l.html)
+- marquer l'un des médicaments composant comme étant le soluté du médicament composé: [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt3j.html) Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques), § concacré à l'extension *IsVehicle*
+- [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](Bundle-Presc-PerfDobutamine-Qsp40mL.html)
 
 
 #### Médicament virtuel
 
-- [glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j](MedicationRequest-Presc-MV-PerfGl-NaCl-KCl.html)
+- [glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-MV-PerfGl-NaCl-KCl.html)
   - Note : Il s'agit de la prescription d'une perfusion préfabriquée, prête à l'emploi, d'un médicament associant deux électrolytes à du glucose 5%. C'est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.
 
 ### La prescription initiale, complexité de la posologie
@@ -44,7 +44,7 @@ Un premier niveau de complexité est adressé par les cas d'usage précédents.
 Les niveaux de complexité supplémentaires adressent
 
 - les doses rationnelles
-  - [BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine](Presc-BISOPROLOL-SANDOZ-DosesRationnelles.html)
+  - [BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine](Bundle-Presc-BISOPROLOL-SANDOZ-DosesRationnelles.html)
   - Dans FHIR, les nombres rationnels sont traduits en type decimal, avec des règles concernant la gestion de la *précision*
   - En pratique, pour l'expression de la dose, les nombres rationnels impliqués se limitent à 1/4, 1/3, 1/2, 2/3 et 3/4
   - Ce guide recommande de représenter les rationnels à la 6ème décimal. Ainsi
@@ -54,13 +54,13 @@ Les niveaux de complexité supplémentaires adressent
     - 2/3 : 0.666667
     - 3/4 : 0.75
 - des doses différentes entre horaires
-  - [CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j](MedicationRequest-Presc-CLARADOL-DoseDiffParHoraire.html)
-  - [paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j](MedicationRequest-Presc-Paracetamol-DoseEvolutive.html)
+  - [CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j](Bundle-Presc-CLARADOL-DoseDiffParHoraire.html)
+  - [paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j](Bundle-Presc-Paracetamol-DoseEvolutive.html)
 - les fréquences inférieures à la journée
-  - [CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j](MedicationRequest-Presc-CLARADOL-TL6h-MedCodeableConcept.html)
-  - [paracétamol, 500 mg toutes les 6 h per os, pendant 5j](MedicationRequest-Presc-Paracetamol-TL6h.html)
+  - [CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j](Bundle-Presc-CLARADOL-TL6h-MedCodeableConcept.html)
+  - [paracétamol, 500 mg toutes les 6 h per os, pendant 5j](Bundle-Presc-Paracetamol-TL6h.html)
 - les fréquences calendaires
-  - [CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois](MedicationRequest-Presc-CLARADOL-TLMardisVendredis.html)
+  - [CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois](Bundle-Presc-CLARADOL-TLMardisVendredis.html)
   - Le type complexe *Timing* ne permet pas le codage des situations suivantes
     - *tous les 05 du mois*
     - *tous les derniers vendredis du mois*
@@ -68,15 +68,15 @@ Les niveaux de complexité supplémentaires adressent
     - Il est nécessaire pour l'instant de "calculer" les dates correspondantes à la fréquence calendaire et de les indiquer dans autant de dosageInstruction.
     - Note: l'extension standard [dayOfMonth](https://hl7.org/fhir/R4/extension-timing-dayofmonth.html) existe en FHIR R4 (maturité 1), mais elle n'est pas reprise en FHIR R5. Son utilisation n'est donc pas conseillée.
 - les prescriptions conditionnelles simples
-  - [CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j](MedicationRequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin.html)
-  - [paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j](MedicationRequest-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin.html)
+  - [CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j](Bundle-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin.html)
+  - [paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j](Bundle-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin.html)
 - les doses progessives ou dégressives par palier
-  - [méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j](MedicationRequest-Presc-Methylpredinosolone-DosesEvolutives.html)
+  - [méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j](Bundle-Presc-Methylpredinosolone-DosesEvolutives.html)
 - l'expression de la quantité d'une dose se référant à l'un des médicaments composant du médicament composé prescrit
-  - [céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j](MedicationRequest-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
+  - [céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
   - Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques) § concacré à l'extension *Basis of Dose Component*.
 - l'expression d'une dose réelle pertinente à partir d'une dose théorique fonction de paramètres patient
-  - [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](MedicationRequest-Presc-Capecitabine-Dose-Calculee.html)
+  - [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Bundle-Presc-Capecitabine-Dose-Calculee.html)
 
 ### Les modifcations de la ligne prescription initiale
 
@@ -232,9 +232,9 @@ Dans un médicament composé, permet d'exprimer à quel médicament composant, q
 
 Ex: Permet de rapporter l'expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.
 
-Cette information est portée par l'extension [*FrBasisOfDoseComponent*](StructureDefinition-FrBasisOfDoseComponent.html) de l'élément `doseAndRate` du type complex *Dosage* qui s'applique à l'élément `dosageInstruction`* de la ressource *MedicationRequest*.
+Cette information est portée par l'extension [*FrBasisOfDoseComponent*](Bundle-FrBasisOfDoseComponent.html) de l'élément `doseAndRate` du type complex *Dosage* qui s'applique à l'élément `dosageInstruction`* de la ressource *MedicationRequest*.
 
-Voir exemple [céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
+Voir exemple [céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
 
 Note PN13:
 
@@ -251,7 +251,7 @@ Cette information est portée par l'extension [*FrIsVehicle*](StructureDefinitio
 
 Cette extension est appliquée à l'élément `ingredient` de la ressource *Medication* composée.
 
-Voir l'exemple [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](MedicationRequest-Presc-MiniperfCefotaxime-En20min-Pdt3j.html)
+Voir l'exemple [céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt3j.html)
 
 Note PN13:
 
@@ -269,7 +269,7 @@ L'application de la règle suivante répond à ce cas d'usage :
 - mettre le volume cible dans l'élément amount de la ressource *Medication* représentant le médicament composé.
 
 Cette règle impose l'utilisation de l'extension *IsVehicule*.
-Voir exemple [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](MedicationRequest-Presc-PerfDobutamine-Qsp40mL.html)
+Voir exemple [dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j](Bundle-Presc-PerfDobutamine-Qsp40mL.html)
 
 En [R5](https://hl7.org/fhir/medication.html), la ressource *Medication* voit l'élément `ingredient.strength` passer de type exclusivement *Ratio* en type alternatif *Ratio*, *Quantity* ou *CodeableConcept* avec jeu de valeurs préferré contenant la valeur qs (quantité suffisante pour).
 
@@ -357,7 +357,7 @@ Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseA
 ]
 ```
 
-Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](MedicationRequest-Presc-Capecitabine-Dose-Calculee.html)
+Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Bundle-Presc-Capecitabine-Dose-Calculee.html)
 
 **Note**:
 Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la `surface corporelle` (1,85 m²), voire seulement de la `taille` (1,75 m) et du `poids` (70 kg) du patient dans des ressources *Observation* référencées par `MedicationRequest.supportingInfoormation`.
