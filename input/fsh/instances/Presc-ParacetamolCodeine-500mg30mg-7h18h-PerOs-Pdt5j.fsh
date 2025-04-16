@@ -9,8 +9,9 @@ Instance: medication-Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-Presc-ParacetamolCodeine-500mg30mg"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
 * code.text = "PARACETAMOL+CODEINE 500mg+30mg"
+* form = $EDQM#10219000 "Comprimé"
 * ingredient[0].itemCodeableConcept = $SMS#100000090270 "paracétamol"
 * ingredient[=].itemCodeableConcept.text = "PARACETAMOL"
 * ingredient[=].strength.numerator = 500 'mg' "mg"
@@ -38,4 +39,7 @@ Usage: #inline
 * dosageInstruction.timing.repeat.timeOfDay[+] = "18:00:00"
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.route.text = "Voie orale"
-* dosageInstruction.doseAndRate.doseQuantity = 1 '1'
+* dosageInstruction.doseAndRate.doseQuantity.value = 1
+* dosageInstruction.doseAndRate.doseQuantity.unit = "Comprimé"
+* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
+* dosageInstruction.doseAndRate.doseQuantity.code = #15054000

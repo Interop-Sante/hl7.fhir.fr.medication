@@ -44,7 +44,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.value = 1
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.unit = "patch"
 * dosageInstruction.doseAndRate[=].rateRatio.numerator.system = $EDQM
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #90001112
+* dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #15036000
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.value = 16
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.unit = "h"
 * dosageInstruction.doseAndRate[=].rateRatio.denominator.system = $unitsofmeasure

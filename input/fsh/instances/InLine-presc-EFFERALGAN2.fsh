@@ -17,4 +17,7 @@ Usage: #example
 * dosageInstruction.route.text = "Voie orale"
 * dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate.type.text = "Ordered"
-* dosageInstruction.doseAndRate.doseQuantity = 1 '1'
+* dosageInstruction.doseAndRate.doseQuantity.value = 1
+* dosageInstruction.doseAndRate.doseQuantity.unit = "Comprimé"
+* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
+* dosageInstruction.doseAndRate.doseQuantity.code = #15054000

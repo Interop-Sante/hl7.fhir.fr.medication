@@ -76,5 +76,5 @@ Usage: #inline
 * dosageInstruction.timing.repeat.timeOfDay[+] = "22:00:00"
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 1 '1'
+* dosageInstruction.doseAndRate.rateRatio.numerator = 1 $EDQM#15005000 "Poche"
 * dosageInstruction.doseAndRate.rateRatio.denominator = 12 'h' "h"

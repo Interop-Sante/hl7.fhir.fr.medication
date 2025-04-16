@@ -27,7 +27,7 @@ Usage: #inline
 * dosageInstruction[=].doseAndRate[0].doseQuantity.value = 2
 * dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "Comprimé"
 * dosageInstruction[=].doseAndRate[=].doseQuantity.system = $EDQM
-* dosageInstruction[=].doseAndRate[=].doseQuantity.code = #10219000
+* dosageInstruction[=].doseAndRate[=].doseQuantity.code = #15054000
 * dosageInstruction[+].sequence = 1
 * dosageInstruction[=].timing.repeat.boundsPeriod.start = "2021-08-12T14:08:00Z"
 * dosageInstruction[=].timing.repeat.boundsPeriod.end = "2021-08-17T14:07:59Z"
@@ -37,4 +37,4 @@ Usage: #inline
 * dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1
 * dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "Comprimé"
 * dosageInstruction[=].doseAndRate[=].doseQuantity.system = $EDQM
-* dosageInstruction[=].doseAndRate[=].doseQuantity.code = #10219000
+* dosageInstruction[=].doseAndRate[=].doseQuantity.code = #15054000

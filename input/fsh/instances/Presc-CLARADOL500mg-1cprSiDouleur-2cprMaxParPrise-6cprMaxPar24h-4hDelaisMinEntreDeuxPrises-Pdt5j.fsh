@@ -32,13 +32,13 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
 * dosageInstruction.doseAndRate.doseQuantity.unit = "Comprimé"
 * dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
-* dosageInstruction.doseAndRate.doseQuantity.code = #10219000
+* dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 * dosageInstruction.maxDosePerPeriod.numerator.value = 6
 * dosageInstruction.maxDosePerPeriod.numerator.unit = "Comprimé"
 * dosageInstruction.maxDosePerPeriod.numerator.system = $EDQM
-* dosageInstruction.maxDosePerPeriod.numerator.code = #10219000
+* dosageInstruction.maxDosePerPeriod.numerator.code = #15054000
 * dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
 * dosageInstruction.maxDosePerAdministration.value = 2
 * dosageInstruction.maxDosePerAdministration.unit = "Comprimé"
 * dosageInstruction.maxDosePerAdministration.system = $EDQM
-* dosageInstruction.maxDosePerAdministration.code = #10219000
+* dosageInstruction.maxDosePerAdministration.code = #15054000

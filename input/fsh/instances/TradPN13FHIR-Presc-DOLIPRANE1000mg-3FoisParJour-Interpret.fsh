@@ -47,5 +47,5 @@ Usage: #inline
 * dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * dosageInstruction[=].doseAndRate[0].doseQuantity.value = 1
 * dosageInstruction[=].doseAndRate[=].doseQuantity.system = $EDQM
-* dosageInstruction[=].doseAndRate[=].doseQuantity.code = #10219000
+* dosageInstruction[=].doseAndRate[=].doseQuantity.code = #15036000
 * dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "Comprimé"

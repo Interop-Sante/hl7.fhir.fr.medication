@@ -24,4 +24,4 @@ Usage: #example
 * dosageInstruction.doseAndRate[=].doseQuantity.value = 1
 * dosageInstruction.doseAndRate[=].doseQuantity.unit = "Comprimé"
 * dosageInstruction.doseAndRate[=].doseQuantity.system = $EDQM
-* dosageInstruction.doseAndRate[=].doseQuantity.code = #10219000
+* dosageInstruction.doseAndRate[=].doseQuantity.code = #15054000
