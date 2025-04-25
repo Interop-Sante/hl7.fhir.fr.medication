@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-24T15:43:49+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T13:21:13+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -2046,6 +2046,24 @@
        ] ;
        fhir:name [ fhir:v "Medication descriptive properties" ] ;
        fhir:description [ fhir:v "Specifies descriptive properties of the medicine" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-to-dispense> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-to-dispense" ]
+       ] ;
+       fhir:name [ fhir:v "Medication to be dispensed" ] ;
+       fhir:description [ fhir:v "This extension stated whether the medication has to be dispensed or not (e.g. when a patient has already the medication)." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
