@@ -11,10 +11,13 @@ Description: "French inpatient medication request profile"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
 * extension[treatmentIntent] ^meaningWhenMissing = "overall intention of the treatment not specified"
 * extension[treatmentIntent].value[x].coding ^definition = "SNOMED CT code minimal value set for overall treatment intent (extensible)"
-* medication[x].extension contains fr-medication-to-dispense named toDispense 0..1
-* medication[x].extension[toDispense] ^short = "Medication to be dispensed"
-* medication[x].extension[toDispense] ^definition = "If the value is negative, the patient already has the medication, no dispense is necessary"
+* medicationReference.extension contains fr-medication-to-dispense named toDispense 0..1
+* medicationReference.extension[toDispense] ^short = "Medication to be dispensed"
+* medicationReference.extension[toDispense] ^definition = "If the value is negative, the patient already has the medication, no dispense is necessary"
 * medicationReference only Reference(fr-medication-noncompound or fr-medication-compound)
+* medicationCodeableConcept.extension contains fr-medication-to-dispense named toDispense 0..1
+* medicationCodeableConcept.extension[toDispense] ^short = "Medication to be dispensed"
+* medicationCodeableConcept.extension[toDispense] ^definition = "If the value is negative, the patient already has the medication, no dispense is necessary"
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
 * supportingInformation.extension contains fr-uf-role named UFRole 0..1
