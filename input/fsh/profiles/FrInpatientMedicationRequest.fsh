@@ -11,6 +11,9 @@ Description: "French inpatient medication request profile"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
 * extension[treatmentIntent] ^meaningWhenMissing = "overall intention of the treatment not specified"
 * extension[treatmentIntent].value[x].coding ^definition = "SNOMED CT code minimal value set for overall treatment intent (extensible)"
+* medication[x].extension contains fr-medication-to-dispense named toDispense 0..1
+* medication[x].extension[toDispense] ^short = "Medication to be dispensed"
+* medication[x].extension[toDispense] ^definition = "If the value is negative, the patient already has the medication, no dispense is necessary"
 * medicationReference only Reference(fr-medication-noncompound or fr-medication-compound)
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
@@ -19,10 +22,10 @@ Description: "French inpatient medication request profile"
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"
 * requester ^definition = "The prescriber that initiated the request and has responsibility for its activation."
-* note.extension contains fr-medicationrequest-note-scope named NoteScope 0..1
-* note.extension[NoteScope] ^short = "Périmètre de la note"
-* note.extension[NoteScope] ^definition = "Périmètre indiquant la portée de la note"
-* note.extension[NoteScope] ^comment = "Extension utilisée pour le traduction de message PN13 en FHIR afin de donner le périmètre de la note pour éviter la concatenation d'élément textuel en une seule note difficile à comprendre"
+* note.extension contains fr-medicationrequest-note-scope named noteScope 0..1
+* note.extension[noteScope] ^short = "Scope of the note"
+* note.extension[noteScope] ^definition = "States where the content of the note comes from"
+* note.extension[noteScope] ^comment = "Extension used for translating PN13 messages into FHIR in order to discriminate the notes and not concatenate all the PN13 textual information into a single note which would be difficult to understand"
 * dosageInstruction 1..
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
