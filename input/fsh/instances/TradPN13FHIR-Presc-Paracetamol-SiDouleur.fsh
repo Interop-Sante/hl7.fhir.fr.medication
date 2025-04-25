@@ -96,11 +96,11 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * note[0].text = "Prescription textuelle: PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
-* note[=].extension[NoteScope].valueCode = #LIPRESCTXT
+* note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * note[+].text = "Indication: En cas de douleur"
-* note[=].extension[NoteScope].valueCode = #LIPRESCIND
+* note[=].extension[noteScope].valueCode = #LIPRESCIND
 * note[+].text = "Commentaire: Test paracetamol DC 2 (à la demande)"
-* note[=].extension[NoteScope].valueCode = #LIPRESCCOMM
+* note[=].extension[noteScope].valueCode = #LIPRESCCOMM
 * medicationReference.reference = "#medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * subject.reference = "#patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * encounter.identifier.value = "70101274"

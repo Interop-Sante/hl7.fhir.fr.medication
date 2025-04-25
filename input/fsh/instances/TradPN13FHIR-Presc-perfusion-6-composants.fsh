@@ -197,7 +197,7 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * note[0].text = "**Prescription textuelle:** 1 préparation en continu sur 12h00 par jour"
-* note[=].extension[NoteScope].valueCode = #LIPRESCTXT
+* note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationReference.reference = "#medication-C-TradPN13FHIR-Presc-perfusion-6-composants"
 * subject.reference = "#patient-TradPN13FHIR-Presc-perfusion-6-composants"
 * encounter.identifier.value = "3"

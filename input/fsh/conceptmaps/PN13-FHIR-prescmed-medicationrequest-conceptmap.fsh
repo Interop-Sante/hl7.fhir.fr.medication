@@ -46,9 +46,9 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Commentaire sur la prescription:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "PRESCCOM"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Rôle_auteur
 * group[=].element[=].target[0].equivalence = #unmatched
@@ -96,9 +96,9 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Commentaire sur la prescription:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "PRESCCOM"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Rens_compl
 * group[=].element[=].target[0].code = #MedicationRequest.supportingInformation.reference
@@ -112,9 +112,9 @@ Usage: #definition
 * group[=].element[=].target[=].comment = "Reprendre la valeur de Valeur_rens_compl en la préfixant par le libellé du type de renseignement complémentaire (Code_rens_compl) issu de la terminologie SIPh_RensComplement"
 * group[=].element[=].target[=].dependsOn[0].property = #Messages/M_prescription_médicaments/Prescription/Rens_compl/Valeur_rens_compl
 * group[=].element[=].target[=].dependsOn[=].value = "{Présent}"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCRENSCOMP"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr
 * group[=].element[=].target[0].code = #MedicationRequest.identifier.value
@@ -132,9 +132,9 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Libellé textuel du médicament:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCLIBMED"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Cré_arr_mod_val
 * group[=].element[=].target[0].equivalence = #unmatched
@@ -160,7 +160,10 @@ Usage: #definition
 * group[=].element[=].target[=].product[0].property = #MedicationRequest.priority
 * group[=].element[=].target[=].product[=].value = "routine"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Fourniture
-* group[=].element[=].target[0].equivalence = #unmatched
+* group[=].element[=].target[0].code = #MedicationRequest.medication[x].extension.valueBoolean
+* group[=].element[=].target[=].equivalence = #equal
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.medication[x].extension.url
+* group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-to-dispense"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur
 * group[=].element[=].target[0].code = #MedicationRequest.requester
 * group[=].element[=].target[=].equivalence = #relatedto
@@ -210,9 +213,9 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Libellé textuel de la posologie:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCPOS"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début_prescrite
 * group[=].element[=].target[0].code = #MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start
@@ -248,17 +251,17 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Indication sur la ligne de prescription:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCIND"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Commentaire sur la ligne de prescription:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCCOMM"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Rôle_auteur
 * group[=].element[=].target[0].equivalence = #unmatched
@@ -306,9 +309,9 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Commentaire sur la ligne de prescription:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCCOMM"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Rang_élément_prescr
 * group[=].element[=].target[0].equivalence = #unmatched
@@ -372,9 +375,9 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Le texte est à préfixer par `Condition d'application sur la ligne de prescription:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.url
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.valueCode
+* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
 * group[=].element[=].target[=].product[=].value = "LIPRESCCONDAPPL"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit
 * group[=].element[=].target[0].code = #MedicationRequest.medicationReference

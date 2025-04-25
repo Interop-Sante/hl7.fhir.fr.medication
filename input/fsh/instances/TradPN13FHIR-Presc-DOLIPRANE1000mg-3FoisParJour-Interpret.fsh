@@ -24,7 +24,7 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * note[0].text = "Prescription textuelle: Doliprane cpr 3x1g/j x 3j"
-* note[=].extension[NoteScope].valueCode = #LIPRESCTXT
+* note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationReference.reference = "#medication-TradPN13FHIR-Presc-DOLIPRANE-Interpret"
 * subject.identifier.value = "123456"
 * subject.identifier.system = "https://somehospital.fr/IPP"

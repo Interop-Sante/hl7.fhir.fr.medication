@@ -99,11 +99,11 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * note[0].text = "**Prescritpion textuelle:** PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours"
-* note[=].extension[NoteScope].valueCode = #LIPRESCTXT
+* note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * note[+].text = "**Indication:** Si douleur"
-* note[=].extension[NoteScope].valueCode = #LIPRESCIND
+* note[=].extension[noteScope].valueCode = #LIPRESCIND
 * note[+].text = "**Commentaire:** Test paracetamol 2 (à la demande)"
-* note[=].extension[NoteScope].valueCode = #LIPRESCCOMM
+* note[=].extension[noteScope].valueCode = #LIPRESCCOMM
 * medicationReference.reference = "#medication-TradPN13FHIR-Presc-Paracetamol"
 * subject.reference = "#patient-TradPN13FHIR-Presc-Paracetamol"
 * encounter.identifier.value = "70101274"
