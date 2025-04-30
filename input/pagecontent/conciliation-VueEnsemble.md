@@ -24,15 +24,15 @@ Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'évén
 
 Le profilage de ces ressources répond aux recommandations du [guide méthodologique de mise en œuvre de la conciliation médicamenteuse](https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante) publié par la Haute Autorité de Santé.
 
-- bilan médicamenteux : voir profil [FrMedicationHistoryComposition](StructureDefinition-FrMedicationHistoryComposition.html)
-- fiche de conciliation des traitements médicamenteux (FCT) : voir profil [FrMedicationReconciliationComposition](StructureDefinition-FrMedicationReconciliationComposition.html)
+- bilan médicamenteux : voir profil [FrMedicationHistoryComposition](StructureDefinition-fr-medication-history-composition.html)
+- fiche de conciliation des traitements médicamenteux (FCT) : voir profil [FrMedicationReconciliationComposition](StructureDefinition-fr-medication-reconciliation-composition.html)
 
-La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux du patient avant hospitalisation) et au *traitement médicamenteux courant* (le traitement médicamenteux en cours lors de l'hospitalisation). De ce fait, le profil [FrCurrentMedicationComposition](StructureDefinition-FrCurrentMedicationComposition.html) a été défini pour rendre compte de ce *traitement médicamenteux courant*.
+La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux du patient avant hospitalisation) et au *traitement médicamenteux courant* (le traitement médicamenteux en cours lors de l'hospitalisation). De ce fait, le profil [FrCurrentMedicationComposition](StructureDefinition-fr-current-medication-composition.html) a été défini pour rendre compte de ce *traitement médicamenteux courant*.
 
 ## Dépendance des ressources profilés par Interop'Santé
 
 ![IGMedicationDependanceRessourcesProfileesConciliation](Conciliation2.jpg)
 
-Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](StructureDefinition-FrOnAdmissionRetroactiveMedicationReconciliationComposition.html) contraint le profil général [FrMedicationReconciliationComposition](StructureDefinition-FrMedicationReconciliationComposition.html) pour répondre au cas particulier de la **conciliation rétroactive d'admission**. Il référence un cas particulier de *traitement médicamenteux courant*, l'**ordonnance médicale d'admission (OMA)**, ordonnance adressée par le profil [FrOnAdmissionMedicationComposition](StructureDefinition-FrOnAdmissionMedicationComposition.html) qui contraint le profil général [FrCurrentMedicationComposition](StructureDefinition-FrCurrentMedicationComposition.html).
+Le profil [FrOnAdmissionRetroactiveMedicationReconciliationComposition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.html) contraint le profil général [FrMedicationReconciliationComposition](StructureDefinition-fr-medication-reconciliation-composition.html) pour répondre au cas particulier de la **conciliation rétroactive d'admission**. Il référence un cas particulier de *traitement médicamenteux courant*, l'**ordonnance médicale d'admission (OMA)**, ordonnance adressée par le profil [FrOnAdmissionMedicationComposition](StructureDefinition-fr-on-admission-medication-composition.html) qui contraint le profil général [FrCurrentMedicationComposition](StructureDefinition-fr-current-medication-composition.html).
 
 ![Conciliation-ConciliationRetroactiveALAdmissiones](Conciliation3.jpg)

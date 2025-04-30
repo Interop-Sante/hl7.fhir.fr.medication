@@ -46,20 +46,20 @@ Medication History MedicationStatement resource profile"""
 * informationSource ^comment = "Dans le contexte de la Conciliation des Traitements médicamenteux, le sourcing des informations de la ligne du Bilan Médicamenteux doit être réalisé à travers l'extension *statementSourcing* et à travers elle seulement"
 * informationSource ^requirements = "Garantir la règle de gestion du sourcing exclusivement à travers l'extension *statementSourcing*"
 * dosage MS
-* dosage.doseAndRate.dose[x] only FrRangeUcum or FrSimpleQuantityUcum
+* dosage.doseAndRate.dose[x] only FrRangeMedication
 * dosage.doseAndRate.dose[x] MS
 * dosage.doseAndRate.dose[x] ^short = "Precise amount of medication per dose"
 * dosage.doseAndRate.dose[x] ^definition = "Amount of medication per dose. No use of element 'comparator' in the simpleQuantity definitions."
-* dosage.doseAndRate.rate[x] only FrRatioUcum or FrRangeUcum or FrSimpleQuantityUcum
+* dosage.doseAndRate.rate[x] only FrRatioMedication
 * dosage.doseAndRate.rate[x] MS
-* dosage.maxDosePerPeriod only FrRatioUcum
+* dosage.maxDosePerPeriod only FrRatioMedication
 * dosage.maxDosePerPeriod MS
 * dosage.maxDosePerPeriod ^short = "Upper precise limit on medication per unit of time"
 * dosage.maxDosePerPeriod ^definition = "Upper limit on medication per unit of time. This datatype excludes measurements whose uncertainity is described by the simpleQuantity \"comparator\" element."
-* dosage.maxDosePerAdministration only FrSimpleQuantityUcum
+* dosage.maxDosePerAdministration only FrSimpleQuantityMedication
 * dosage.maxDosePerAdministration MS
-* dosage.maxDosePerAdministration ^short = "Precise upper limit on medication per administration with UCUM unit"
-* dosage.maxDosePerAdministration ^definition = "Fixed upper limit on medication per administration with UCUM unit."
-* dosage.maxDosePerLifetime only FrSimpleQuantityUcum
+* dosage.maxDosePerAdministration ^short = "Precise upper limit on medication per administration with UCUM or EDQM unit"
+* dosage.maxDosePerAdministration ^definition = "Fixed upper limit on medication per administration with UCUM or EDQM unit."
+* dosage.maxDosePerLifetime only FrSimpleQuantityMedication
 * dosage.maxDosePerLifetime MS
-* dosage.maxDosePerLifetime ^short = "A fixed measured or measurable amount with UCUM unit"
+* dosage.maxDosePerLifetime ^short = "A fixed measured or measurable amount with UCUM or EDQM unit"

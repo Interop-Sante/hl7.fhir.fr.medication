@@ -1,7 +1,6 @@
 
 # Introduction
 
-
 {% if site.data.info.releaselabel == 'ci-build' %}
   <div style="width: 65%">
       <blockquote class="stu-note">
@@ -11,8 +10,6 @@
       </blockquote>
   </div>
 {% endif %}
-
-
 
 Ce guide d'implémentation (IG) a pour vocation à spécifier les flux d'information autour du médicament pour un patient dans un contexte hospitalier dans un premier temps.
 Trois cas d'usage sont pris en compte dans la version actuelle de cet IG:
@@ -25,12 +22,12 @@ Ce domaine est pris en charge par le GT Pharmacie d'HL7 France au sein de l'asso
 
 Cet IG est en développement continu. Certaines sections n’ont pas encore été complètement développées dans cette version. Ces sections sont néanmoins identifiées pour référence.
 
-L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformationPN13-FHIR.html) et inversement.
+L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformation-PN13-vers-FHIR.html) et inversement.
 
-### Dépendances
+## Dépendances
 
 {% include dependency-table.xhtml %}
 
-### Propriété intellectuelle
+## Propriété intellectuelle
 
 {% include ip-statements.xhtml %}

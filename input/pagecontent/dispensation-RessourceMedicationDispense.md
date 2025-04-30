@@ -10,14 +10,14 @@ La ressource MedicationDispense porte la délivrance d'un médicament et d'un se
 voir spécification HL7 R4 : [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html)
 
 - `status` : statut de la délivrance. Un [jeu de valeurs](https://hl7.org/fhir/R4/valueset-medicationdispense-status.html) est **requis** par le standard (cf.infra). Il manquerait au moins une valeur entre "préparé" et "délivré", a minima "en cours d'acheminement".
-- `medication` : le médicament délicré. C'est un médicament réel, a priori une spécialité identifiée par son code UCD.
+- `medication` : le médicament délivré. C'est un médicament réel, a priori une spécialité identifiée par son code UCD.
   **ATTENTION** : 10 à 15% des médicaments dispensés à l’hôpital n’ont pas de code UCD, par exemple les préparations pédiatriques à partir d’une UCD.
   Le chapitre Prescription couvre les médicaments composés et illustre comment ils doivent être décrits (ex : une perfusion). Il ne couvre ni les préparations magistrales ni les préparations hospitalières (article L. 5121-1 du Code de la santé publique). Leur description standardisée doit faire l’objet d’un travail complémentaire qui n’a pas encore été programmé.
-- `subject` : le patient ou le groupe de patients. L'option groupe de patients ouvre la possibilité de formuler une dispensation nomminative reglobalisée.
+- `subject` : le patient ou le groupe de patients. L'option groupe de patients ouvre la possibilité de formuler une dispensation nominative reglobalisée.
 - `performer` : le **préparateur** qui réalise la délivrance
 - `authorizingPrescription` : la prescription pour laquelle cette délivrance est réalisée. Ou les prescriptions si la délivrance est reglobalisée.
 - `type` : type de délivrance.
-  Un [jeu de valeurs](https://hl7.org/fhir/R4/v3/ActPharmacySupplyType/vs.html) est proposé en exemple. Il ne permet de qualifier directement le type au sens « journalière individuelle nominative », « nominative reglobalisée », …
+  Un [jeu de valeurs](https://hl7.org/fhir/R4/v3/ActPharmacySupplyType/vs.html) est proposé en exemple. Il ne permet pas de qualifier directement le type au sens « journalière individuelle nominative », « nominative reglobalisée », …
 - `quantity` : quantité de médicament délivré.
 - `daysSupply` : durée de traitement couvert (à la posologie décrite dans `dosageInstruction` des prescriptions référencées par `authorizingPrescription`).
   Ne porte pas la périodicité de la délivrance mais la période tirée de cette éventuelle périodicité qui est appliquée à cette délivrance.

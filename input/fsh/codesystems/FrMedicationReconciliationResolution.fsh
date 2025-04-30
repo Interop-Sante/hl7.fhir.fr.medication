@@ -1,6 +1,6 @@
 CodeSystem: FrMedicationReconciliationResolution
 Id: fr-medication-reconciliation-resolution
-Title: "code system InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"
+Title: "code system Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"
 Description: "Le système de codage de la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^version = "0.2.0"
