@@ -14,29 +14,31 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1426"]
     },
     {
-      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/FrMedicinalProductOnly",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrMedicinalProductOnly",
-      "title" : "French Medicinal Product only",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *code* de la ressource *FrMedicationNonproprietaryName*.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
       "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/FrMethodOfAdministration",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrMethodOfAdministration",
       "title" : "French Method Of Administration",
       "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FrMedicationRequest*.",
-      "systems" : ["http://snomed.info/sct"]
+      "systems" : ["http://standardterms.edqm.eu"]
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-additional-when-codes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrAdditionalWhenCodes",
+      "title" : "value set Interop'Santé - Codes additionnels pour l'élément when",
+      "description" : "Le jeu de valeurs à utiliser pour coder des périodes d'occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing.",
+      "systems" : [
+        "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-additional-when-codes"
+      ]
     },
     {
       "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-current-medication-document-type",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrCurrentMedicationDocumentType",
-      "title" : "value set InterOp'Santé - type de document de la ressource Composition d'une FCT",
+      "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une liste des Traitements Médicamenteux Courants.",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type"
@@ -47,10 +49,23 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrEditorialStatus",
-      "title" : "value set InterOp'Santé - Statut éditorial d'une valeur",
+      "title" : "value set Interop'Santé - Statut éditorial d'une valeur",
       "description" : "Le jeu de valeurs à utiliser pour coder le statut éditorial d'une valeur.",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-editorial-status"
+      ]
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-medication-code",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrMedicationCodes",
+      "title" : "value set Interop'Santé - Codes identifiant les médicaments",
+      "description" : "Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code",
+      "systems" : [
+        "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+        "http://data.esante.gouv.fr/ansm/medicament/substance",
+        "http://data.esante.gouv.fr/ansm/medicament/UCD"
       ]
     },
     {
@@ -69,7 +84,7 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrMedicationReconciliationDocumentType",
-      "title" : "value set InterOp'Santé - type de document de la ressource Composition d'une FCT",
+      "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type"
@@ -91,7 +106,7 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrMedicationReconciliationQualifiedDiscrepancy",
-      "title" : "value set InterOp'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
+      "title" : "value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-discrepancy"
@@ -102,7 +117,7 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrMedicationReconciliationResolution",
-      "title" : "value set InterOp'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
+      "title" : "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
       "description" : "Un jeu de valeurs à utiliser pour coder la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-resolution"
@@ -113,7 +128,7 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrMedicationReconciliationStatus",
-      "title" : "value set InterOp'Santé - Statut d'une ligne de traitement d'une FCT",
+      "title" : "value set Interop'Santé - Statut d'une ligne de traitement d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-status"
@@ -124,7 +139,7 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "FrMedicationReconciliationType",
-      "title" : "value set InterOp'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
+      "title" : "value set Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
       "description" : "Le jeu de valeurs à utiliser pour coder le type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
       "systems" : [
         "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-medication-reconciliation-type"
@@ -137,25 +152,18 @@
       "name" : "FrMpDoseForm",
       "title" : "French Medicinal product Dose form",
       "description" : "Le jeu de valeurs à utiliser pour coder l'élément *doseForm* des ressources *FrMedicationUcd*, *FrMedicationUcdPart* ou *FrMedicationNonProprietaryName*.",
-      "systems" : ["http://snomed.info/sct"]
+      "systems" : ["http://standardterms.edqm.eu"]
     },
     {
-      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-mp-substance-active",
+      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-note-scope-codes-vs",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "FrMpSubstanceActive",
-      "title" : "French Medicinal product Active substance",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *ingredient.itemCodeableConcept* des ressources *FrMedicationUcd*, *FrMedicationUcdPart* et *FrMedicationNonproprietaryName*.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
-      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-mp-unit-of-presentation",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "FrMpUnitOfPresentation",
-      "title" : "French Medicinal product Unit of Presentation",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'unité de présentation de la dose.",
-      "systems" : ["http://snomed.info/sct"]
+      "name" : "FrNoteScopeCodeValueSet",
+      "title" : "value set Interop'Santé - Codes pour le périmètre des notes",
+      "description" : "Le jeu de valeurs à utiliser pour coder le périmètre des notes par exemple lors de la transformation de message PN13 en ressources FHIR",
+      "systems" : [
+        "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-note-scope-codes"
+      ]
     },
     {
       "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-route-of-administration",
@@ -164,7 +172,19 @@
       "name" : "FrRouteOfAdministration",
       "title" : "French Route of Administration",
       "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.route* de la ressource *FrMedicationRequest*.",
-      "systems" : ["http://snomed.info/sct"]
+      "systems" : ["http://standardterms.edqm.eu"]
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-substance-code",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrSubstanceCode",
+      "title" : "value set Interop'Santé - Codes identifiant les substances",
+      "description" : "Le jeu de valeurs à utiliser pour indiquer un ingrédient composant un médicament dans Medication.ingredient.itemCodeableConcept.coding.code",
+      "systems" : [
+        "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+        "http://data.esante.gouv.fr/ansm/medicament/substance"
+      ]
     },
     {
       "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-treatment-intent",
@@ -174,6 +194,17 @@
       "title" : "French overall intention of the treatment",
       "description" : "Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FrInpatientMedicationRequest*.",
       "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "https://hl7.fr/fhir/fr/medication/ValueSet/fr-uf-role-code-for-prescription",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrUfRoleCodesForPrescriptionValueSet",
+      "title" : "value set Interop'Santé - Types de rôle d’une UF par rapport à un séjour patient dans une prescription",
+      "description" : "Le jeu de valeurs à utiliser dans l'extension pour indiquer le type d'UF référencée dans Medication.supportingInfo",
+      "systems" : [
+        "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-uf-role-codes"
+      ]
     }
   ]
 }

@@ -7,19 +7,19 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class FrRangeUcum{
+        class FrRangeMedication{
 
              Range.low => [None..None]
              Range.high => [None..None]
         } 
 
-        class FrRatioUcum{
+        class FrRatioMedication{
 
              Ratio.numerator => [None..None]
              Ratio.denominator => [None..None]
         } 
 
-        class FrSimpleQuantityUcum{
+        class FrSimpleQuantityMedication{
 
              Quantity => [None..None]
              Quantity.system => [1..None]
@@ -77,28 +77,33 @@ package IG #DDDDDD{
              MedicationDispense.receiver => [None..None]
         } 
 
-        class FrInpatientMedicationRequest2{
-
-             MedicationRequest.medication[x] => [None..None]
-             MedicationRequest.subject => [None..None]
-             MedicationRequest.encounter => [None..None]
-             MedicationRequest.requester => [1..None]
-        } 
-
         class FrInpatientMedicationRequest{
 
              MedicationRequest.extension => [None..None]
              MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
              MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
              MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.medication[x]:medicationReference => [0..1]
+             MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept => [0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept.extension:toDispense => <&plus>[0..1]
              MedicationRequest.subject => [None..None]
              MedicationRequest.encounter => [None..None]
+             MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
              MedicationRequest.requester => [1..None]
+             MedicationRequest.note.extension:noteScope => <&plus>[0..1]
              MedicationRequest.dosageInstruction => [1..None]
+             MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
              MedicationRequest.dosageInstruction.route => [None..None]
              MedicationRequest.dosageInstruction.method => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.extension:BasisOfDoseComponent => <&plus>[0..1]
              MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity => [0..1]
              MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity => [0..1]
              MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [None..None]
              MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [None..None]
              MedicationRequest.dosageInstruction.maxDosePerAdministration => [None..None]
@@ -112,31 +117,16 @@ package IG #DDDDDD{
              MedicationRequest.dispenseRequest.performer => [None..0]
         } 
 
-        class FrMedication2unique{
-
-             Medication.code.coding => [None..None]
-             Medication.code.coding:ucdCode => [0..1]
-             Medication.code.coding:ucdCode.system => [None..None]
-             Medication.code.coding:ucdCode.code => [None..None]
-             Medication.code.coding:snomedMedicinalProductCode => [0..1]
-             Medication.code.coding:snomedMedicinalProductCode.system => [None..None]
-             Medication.code.coding:snomedMedicinalProductCode.code => [None..None]
-             Medication.code.coding:otherMedicationCode => [0..1]
-             Medication.code.text => [None..None]
-             Medication.ingredient => [1..None]
-             Medication.ingredient.item[x] => [None..None]
-        } 
-
         class FrMedicationCompound{
 
              Medication.code => [1..None]
-             Medication.code.coding => [None..None]
              Medication.code.text => [1..None]
              Medication.form => [None..None]
-             Medication.amount => [None..None]
              Medication.ingredient => [1..None]
+             Medication.ingredient.extension => [None..None]
+             Medication.ingredient.extension:IsVehicle => <&plus>[0..1]
              Medication.ingredient.item[x] => [None..None]
-             Medication.ingredient.strength => [None..0]
+             Medication.ingredient.item[x]:itemReference => [0..1]
              Medication.batch => [None..0]
         } 
 
@@ -191,18 +181,20 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
-        class FrMedicationNonproprietaryName{
+        class FrMedicationNonCompound{
 
              Medication.extension => [None..None]
              Medication.extension:drugCharacteristic => <&plus>[0..*]
              Medication.code => [1..None]
+             Medication.code.coding => [1..None]
+             Medication.code.coding:nonCompoundCode => [1..1]
              Medication.code.text => [None..None]
              Medication.form => [None..None]
              Medication.amount => [None..None]
-             Medication.ingredient => [1..None]
+             Medication.ingredient => [None..None]
              Medication.ingredient.item[x] => [None..None]
              Medication.ingredient.strength => [None..None]
-             Medication.batch => [None..0]
+             Medication.batch => [None..None]
         } 
 
         class FrMedicationReconciliationComposition{
@@ -277,55 +269,24 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
-        class FrMedicationUcdPart{
-
-             Medication.code => [None..None]
-             Medication.code.coding => [None..0]
-             Medication.code.text => [1..None]
-             Medication.manufacturer => [None..0]
-             Medication.form => [1..None]
-             Medication.ingredient => [None..None]
-             Medication.ingredient.item[x] => [None..None]
-             Medication.ingredient.strength => [None..None]
-             Medication.batch => [None..None]
-        } 
-
-        class FrMedicationUcd{
-
-             Medication.code => [1..None]
-             Medication.code.text => [None..None]
-             Medication.form => [None..None]
-             Medication.amount => [None..None]
-             Medication.ingredient => [1..None]
-             Medication.ingredient.item[x] => [None..None]
-             Medication.ingredient.strength => [None..None]
-             Medication.batch => [None..None]
-        } 
-
         class FrMedication{
 
              Medication.meta.profile => [None..None]
              Medication.implicitRules => [None..0]
-             Medication.code => [None..0]
              Medication.amount => [None..0]
-             Medication.ingredient => [1..None]
              Medication.ingredient.item[x] => [None..None]
              Medication.ingredient.strength => [None..None]
              Medication.batch => [None..0]
         } 
 
-        class FrMPSubstance2Active{
-
-             CodeableConcept.coding => [1..None]
-             CodeableConcept.coding:snomedSubstanceCoding => [0..1]
-             CodeableConcept.coding:snomedSubstanceCoding.system => [1..None]
-             CodeableConcept.coding:otherCoding => [0..*]
-             CodeableConcept.coding:otherCoding.system => [1..None]
-        } 
-
-        class FrMPSubstanceActive{
+        class FrMPSubstance{
 
              CodeableConcept.coding => [None..None]
+        } 
+
+        class FrObservationForPrescription{
+
+             Observation.subject => [1..None]
         } 
 
         class FrOnAdmissionMedicationComposition{
@@ -340,17 +301,42 @@ package IG #DDDDDD{
              Composition.type => [None..None]
              Composition.section:CurrentMedication => [None..None]
              Composition.section:CurrentMedication.entry => [None..None]
+        } 
+
+        class FrPrescriptionBunbleForExample{
+
+             Bundle.implicitRules => [None..0]
+             Bundle.language => [None..None]
+             Bundle.type => [None..None]
+        } 
+
+        class FrRequestGroupForPrescription{
+
+             RequestGroup.groupIdentifier => [1..None]
          }
 
      }
      package extension #paleturquoise {
 
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
+     FrMedicationCompound -[#black,dashed,thickness=2]-> FrIsVehicle
      FrMedicationHistoryComposition -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
-     FrMedicationNonproprietaryName -[#black,dashed,thickness=2]-> FrDrugCharacteristic
+     FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
 
+        class FrAdditionalWhenValues{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class FrBasisOfDoseComponent{
 
           Extension.extension => [None..0]
@@ -397,6 +383,18 @@ package IG #DDDDDD{
           Extension.extension:source.value[x] => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
+        } 
+        class FrMedicationToDispense{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrMedicationRequestNoteScope{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
         } 
         class FrMedicationStatementReconciliationProperties{
 
@@ -583,9 +581,19 @@ package IG #DDDDDD{
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class FrUFRole{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
          }
      }
      package valueset #PaleVioletRed{
+
+        class FrAdditionalWhenCodes  
+
+     FrAdditionalWhenValues -[#black,dotted,thickness=2]-> FrAdditionalWhenCodes
 
         class FrCurrentMedicationDocumentType  
 
@@ -599,10 +607,6 @@ package IG #DDDDDD{
 
      FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
 
-        class FrMedicinalProductOnly  
-
-     FrMedication2unique -[#black,dotted,thickness=2]-> FrMedicinalProductOnly
-
         class FrMpDoseForm  
 
      FrMedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
@@ -611,25 +615,21 @@ package IG #DDDDDD{
 
      FrMedicationHistorySources -[#black,dotted,thickness=2]-> FrMedicationHistorySourceType
 
-        class FrMedicinalProductOnly  
+        class FrMedicationCodes  
 
-     FrMedicationNonproprietaryName -[#black,dotted,thickness=2]-> FrMedicinalProductOnly
+     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMedicationCodes
 
         class FrMpDoseForm  
 
-     FrMedicationNonproprietaryName -[#black,dotted,thickness=2]-> FrMpDoseForm
+     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
 
         class FrMedicationReconciliationDocumentType  
 
      FrMedicationReconciliationComposition -[#black,dotted,thickness=2]-> FrMedicationReconciliationDocumentType
 
-        class FrMpDoseForm  
+        class FrNoteScopeCodeValueSet  
 
-     FrMedicationUcdPart -[#black,dotted,thickness=2]-> FrMpDoseForm
-
-        class FrMpDoseForm  
-
-     FrMedicationUcd -[#black,dotted,thickness=2]-> FrMpDoseForm
+     FrMedicationRequestNoteScope -[#black,dotted,thickness=2]-> FrNoteScopeCodeValueSet
 
         class FrMedicationReconciliationStatus  
 
@@ -679,13 +679,9 @@ package IG #DDDDDD{
 
      FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
 
-        class FrMpSubstanceActive  
+        class FrSubstanceCode  
 
-     FrMPSubstance2Active -[#black,dotted,thickness=2]-> FrMpSubstanceActive
-
-        class FrMpSubstanceActive  
-
-     FrMPSubstanceActive -[#black,dotted,thickness=2]-> FrMpSubstanceActive
+     FrMPSubstance -[#black,dotted,thickness=2]-> FrSubstanceCode
 
         class MedicationIngredientStrengthCodes  
 
@@ -694,21 +690,25 @@ package IG #DDDDDD{
         class FrTreatmentIntent  
 
      FrTeatmentIntent -[#black,dotted,thickness=2]-> FrTreatmentIntent
+
+        class FrUfRoleCodesForPrescriptionValueSet  
+
+     FrUFRole -[#black,dotted,thickness=2]-> FrUfRoleCodesForPrescriptionValueSet
        }
 
 package "Ressources de base" #palegreen {
 
  class "Range" as  class87ba2ecc8b6915e8bd6f5089918229fd 
 
-    class87ba2ecc8b6915e8bd6f5089918229fd --> FrRangeUcum
+    class87ba2ecc8b6915e8bd6f5089918229fd --> FrRangeMedication
 
  class "Ratio" as  class8334a158298fbcf163f4dcb4a387d150 
 
-    class8334a158298fbcf163f4dcb4a387d150 --> FrRatioUcum
+    class8334a158298fbcf163f4dcb4a387d150 --> FrRatioMedication
 
  class "SimpleQuantity" as  class2c391528ab21e799798c2a3a4ed7eed2 
 
-    class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityUcum
+    class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityMedication
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
@@ -724,15 +724,7 @@ package "Ressources de base" #palegreen {
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
-    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest2
-
- class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
-
     class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest
-
- class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
-
-    class353bd6f65060d17097c3b03141e79cce --> FrMedication2unique
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
@@ -748,7 +740,7 @@ package "Ressources de base" #palegreen {
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
-    class353bd6f65060d17097c3b03141e79cce --> FrMedicationNonproprietaryName
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationNonCompound
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
@@ -760,23 +752,15 @@ package "Ressources de base" #palegreen {
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
-    class353bd6f65060d17097c3b03141e79cce --> FrMedicationUcdPart
-
- class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
-
-    class353bd6f65060d17097c3b03141e79cce --> FrMedicationUcd
-
- class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
-
     class353bd6f65060d17097c3b03141e79cce --> FrMedication
 
  class "CodeableConcept" as  class3521d6f1ff87d9b962b1c77766470bb9 
 
-    class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstance2Active
+    class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstance
 
- class "CodeableConcept" as  class3521d6f1ff87d9b962b1c77766470bb9 
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
-    class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstanceActive
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationForPrescription
 
  class "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-current-medication-composition" as  class44d5564388cfbe90dd708eba4c3d00ce 
 
@@ -785,5 +769,13 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-reconciliation-composition" as  class85154736f5ad608ac6ce5fbbc96fe1bd 
 
     class85154736f5ad608ac6ce5fbbc96fe1bd --> FrOnAdmissionRetroactiveReconciliationComposition
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> FrPrescriptionBunbleForExample
+
+ class "RequestGroup" as  class55f9b414b19c569dcbf60f6417255621 
+
+    class55f9b414b19c569dcbf60f6417255621 --> FrRequestGroupForPrescription
 }
 @enduml

@@ -4,6 +4,13 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
+      "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values",
+      "title": "Additional values for when element",
+      "types": [
+        "code"
+      ]
+    },
+    {
       "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-basis-of-dose-component",
       "title": "Medication component Basis of dose",
       "types": [
@@ -186,6 +193,20 @@
         "UsageContext",
         "Dosage",
         "Meta"
+      ]
+    },
+    {
+      "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-to-dispense",
+      "title": "Medication to be dispensed",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope",
+      "title": "Scope for note element in MedicationRequest",
+      "types": [
+        "code"
       ]
     },
     {
@@ -985,6 +1006,13 @@
       "types": [
         "CodeableConcept"
       ]
+    },
+    {
+      "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role",
+      "title": "UF Role",
+      "types": [
+        "code"
+      ]
     }
   ],
   "profiles": {
@@ -1013,21 +1041,31 @@
     "MedicationRequest": [
       {
         "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest",
-        "title": "French Inpatient MedicationRequest"
-      },
-      {
-        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-2",
-        "title": "FrInpatientMedicationRequest2"
+        "title": "FrInpatientMedicationRequest"
       }
     ],
     "Medication": [
       {
-        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-ucd",
-        "title": "French branded name Medication"
-      },
+        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound",
+        "title": "FrMedicationNonCompound"
+      }
+    ],
+    "Observation": [
       {
-        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-ucd-part",
-        "title": "French Ucd Part Medication"
+        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-observation-for-prescription",
+        "title": "FrObservationForPrescription"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example",
+        "title": "FrPrescriptionBunbleForExample"
+      }
+    ],
+    "RequestGroup": [
+      {
+        "url": "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription",
+        "title": "FrRequestGroupForPrescrption"
       }
     ]
   },
@@ -1049,6 +1087,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/event-basedOn": [
       "MedicationDispense"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
@@ -1082,25 +1123,40 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
+    "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values": [
+      "MedicationRequest.dosageInstruction.timing.repeat"
+    ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-basis-of-dose-component": [
+      "Bundle.entry.resource.dosageInstruction.doseAndRate",
       "MedicationRequest.dosageInstruction.doseAndRate"
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-drug-characteristic": [
       "Medication"
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-is-vehicle": [
-      "MedicationRequest.contained",
-      "MedicationRequest.contained.ingredient"
+      "Bundle.entry.resource.ingredient",
+      "Medication.ingredient"
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-history-sources": [
       "Composition.section",
       "MedicationStatement"
+    ],
+    "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-to-dispense": [
+      "MedicationRequest.medication[x]"
+    ],
+    "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope": [
+      "Bundle.entry.resource.note",
+      "MedicationRequest.note"
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationstatement-reconciliation-properties": [
       "MedicationStatement"
     ],
     "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-treatment-intent": [
       "MedicationRequest"
+    ],
+    "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role": [
+      "Bundle.entry.resource.supportingInformation",
+      "MedicationRequest.supportingInformation"
     ]
   }
 }

@@ -1,63 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Conversion PN13 vers FHIR pour un patient avec INS qualifiée d&#39;une prescription de médicaments - Guide d&#39;implémentation du médicament v0.1.0</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments - Guide d'implémentation du médicament v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
-<link href="assets/css/hl7fr.css" rel="stylesheet"/>
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"25.67"}
-    h3,h4,h5,h6{--heading-prefix:"25.67"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"26.72"}
+    h3,h4,h5,h6{--heading-prefix:"26.72"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
-  <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
 </div>
 
 <div id="family-nav">
-  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
 </div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Guide d&#39;implémentation du médicament</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
 
@@ -65,27 +65,27 @@
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
   </li>
@@ -98,13 +98,10 @@
         <a href="conciliation-Intro.html">Introdution</a>
       </li>
       <li>
-        <a href="conciliation-VueEnsemble.html">Vue d&apos;ensemble</a>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
       </li>
       <li>
-        <a href="conciliation-CasUsage.html">Cas d&apos;usage</a>
-      </li>
-      <li>
-        <a href="conciliation-Ressources.html">Ressources</a>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
       </li>
       <li>
         <a href="conciliation-Implementation.html">Implémentation</a>
@@ -123,22 +120,13 @@
         <a href="prescription-Intro.html">Introduction</a>
       </li>
       <li>
-        <a href="prescription-VueEnsemble.html">Vue d&apos;ensemble</a>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
       </li>
       <li>
-        <a href="prescription-CasUsage.html">Cas d&apos;usage</a>
-      </li>
-      <li>
-        <a href="prescription-Ressources.html">Ressources</a>
-      </li>
-      <li>
-        <a href="prescription-Implementation.html">Implémentation</a>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
       </li>
       <li>
         <a href="prescription-Exemples.html">Exemples</a>
-      </li>
-      <li>
-        <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>
       </li>
     </ul>
   </li>
@@ -151,7 +139,7 @@
         <a href="dispensation-Intro.html">Introduction</a>
       </li>
       <li>
-        <a href="dispensation-RessourceMedicationDispense.html">Ressource *MedicationDispense*</a>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
       </li>
       <li>
         <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
@@ -180,6 +168,28 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l313">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
@@ -195,39 +205,39 @@
         <a href="downloads.html">Téléchargements et usages</a>
       </li>
       <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://hl7.fr">Site HL7 </a>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
       </li>
     </ul>
   </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -271,17 +281,17 @@
 
   <a name="root"> </a>
 
-  <h2 id="root">ConceptMap: Conversion PN13 vers FHIR pour un patient avec INS qualifiée d&#39;une prescription de médicaments
+  <h2 id="root">ConceptMap: Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments
 
   </h2>
 
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap<button data-clipboard-text="https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap|0.1.0"/></span>
+      <span class="copy-text">0.1.0<button data-clipboard-text="https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap|0.1.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -297,7 +307,7 @@
         
           Draft
           
-            as of 2025-04-11
+            as of 2025-04-30
           
         
       </td>
@@ -319,21 +329,21 @@
 </p>
 
 
-  <!-- insert intro if present -->
+    <!-- insert intro if present -->
   
 
 
 
-<!--  <p>
+  <!-- <p>
   Formats: <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.xml.html">XML</a>, <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.json.html">JSON</a>, <a href="ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.ttl.html">Turtle</a>
-  </p>-->
+  </p> -->
 
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap PN13-FHIR-prescmed-patient-avec-INS-conceptmap</b></p><a name="PN13-FHIR-prescmed-patient-avec-INS-conceptmap"> </a><a name="hcPN13-FHIR-prescmed-patient-avec-INS-conceptmap"> </a><a name="PN13-FHIR-prescmed-patient-avec-INS-conceptmap-en-US"> </a><p>Mapping from https://interopsante.org/pn13/xsd to <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html">FR Core Patient INS Profile</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="5"><b>Target Concept Details</b></td><td><b>Comment</b></td><td colspan="5"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.identifier.type.coding.code</b></td><td><b>Patient.identfier.use</b></td><td><b>Patient.identifier.type.coding.system</b></td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Ipp</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.identifier.value</td><td style="border-left-width: 0px"></td><td>PI</td><td>usual</td><td>http://terminology.hl7.org/CodeSystem/v2-0203</td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/DI</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">Patient.identifier.system</td><td style="border-left-width: 0px"></td><td/><td/><td/><td>Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td><td colspan="6"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>INS_OID</b></td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.identifier.system</b></td><td><b>Patient.identifier.type.coding.code</b></td><td><b>Patient.identfier.use</b></td><td><b>Patient.identifier.type.coding.system</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/INS</td><td style="border-left-width: 0px"></td><td>1.2.250.1.213.1.4.8</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.identifier.value</td><td style="border-left-width: 0px"></td><td>urn:oid:1.2.250.1.213.1.4.8</td><td>INS-NIR</td><td>official</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td><td colspan="6"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>INS_OID</b></td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.identifier.system</b></td><td><b>Patient.identifier.type.coding.code</b></td><td><b>Patient.identfier.use</b></td><td><b>Patient.identifier.type.coding.system</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/INS</td><td style="border-left-width: 0px"></td><td>1.2.250.1.213.1.4.9</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.identifier.value</td><td style="border-left-width: 0px"></td><td>urn:oid:1.2.250.1.213.1.4.9</td><td>INS-NIA</td><td>official</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td colspan="4"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.name.extension.url</b></td><td><b>Patient.name.use</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Nom_naissance</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.family</td><td style="border-left-width: 0px"></td><td/><td>official</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Premier_prénom</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.given</td><td style="border-left-width: 0px"></td><td/><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Prénoms</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.extension.valueString</td><td style="border-left-width: 0px"></td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name</td><td/></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="3"><b>Target Concept Details</b></td><td colspan="3"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.name.use</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Nom_usuel</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.family</td><td style="border-left-width: 0px"></td><td>usual</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Prénom_usuel</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.given</td><td style="border-left-width: 0px"></td><td/></tr></table><hr/><p><b>Group 6 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Patient/Date_naissance</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.birthDate</td><td>La date doit être transformée du format AAAAMMJJ[HH[MM[SS]]] au format YYYY-MM-DDTHH:MM:SS+ZZ:ZZ. L'offset de fuseau horaire n'est à intégrer que si au moin une heure est fournie.</td></tr><tr><td>Messages/M_prescription_médicaments/Patient/Sexe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.gender</td><td>le code est à traduire en utilisant MedicationRequest.medicationReference.reference</td></tr></table><hr/><p><b>Group 7 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td><b>Comment</b></td><td colspan="4"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.extension.url</b></td><td><b>Patient.extension.valueAddress.extension.url</b></td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Lieu_naissance</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.extension.valueAddress.extension.valueCoding.code</td><td style="border-left-width: 0px"></td><td>http://hl7.org/fhir/StructureDefinition/patient-birthPlace</td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code</td><td>L'élément FHIR Patient.extension.valueAddress.extension.valueCoding.system dépend de la valeur du code. Pour les codes commençant par 99, le system est https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R13-Pays ; pour le code 01 https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire; pour les autres codes le system est est https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune</td></tr></table><hr/><p><b>Group 8 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="5"><b>Target Concept Details</b></td><td colspan="5"><b>Properties</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Patient.extension.url</b></td><td><b>Patient.extension.extension.valueCoding.system</b></td><td><b>Patient.extension.extension.url</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Statut_idpat</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.extension.extension.valueCoding.code</td><td style="border-left-width: 0px"></td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445</td><td>identityStatus</td></tr></table><hr/><p><b>Group 9 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Messages/M_prescription_médicaments/Patient/Date_lunaire</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  <div><p class="res-header-id"><b>Generated Narrative: ConceptMap PN13-FHIR-prescmed-patient-avec-INS-conceptmap</b></p><a name="PN13-FHIR-prescmed-patient-avec-INS-conceptmap"> </a><a name="hcPN13-FHIR-prescmed-patient-avec-INS-conceptmap"> </a><a name="PN13-FHIR-prescmed-patient-avec-INS-conceptmap-en-US"> </a><p>Mapping from https://interopsante.org/pn13/xsd to <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html">FR Core Patient INS Profile</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="5"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.identifier.type.coding.code</b></td><td><b>Patient.identfier.use</b></td><td><b>Patient.identifier.type.coding.system</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Ipp</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.identifier.value</td><td style="border-left-width: 0px"></td><td>PI</td><td>usual</td><td>http://terminology.hl7.org/CodeSystem/v2-0203</td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/DI</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">Patient.identifier.system</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td>Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>INS_OID</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.identifier.system</b></td><td><b>Patient.identifier.type.coding.code</b></td><td><b>Patient.identfier.use</b></td><td><b>Patient.identifier.type.coding.system</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/INS</td><td style="border-left-width: 0px"></td><td>1.2.250.1.213.1.4.8</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.identifier.value</td><td style="border-left-width: 0px"></td><td>urn:oid:1.2.250.1.213.1.4.8</td><td>INS-NIR</td><td>official</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>INS_OID</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.identifier.system</b></td><td><b>Patient.identifier.type.coding.code</b></td><td><b>Patient.identfier.use</b></td><td><b>Patient.identifier.type.coding.system</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/INS</td><td style="border-left-width: 0px"></td><td>1.2.250.1.213.1.4.9</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.identifier.value</td><td style="border-left-width: 0px"></td><td>urn:oid:1.2.250.1.213.1.4.9</td><td>INS-NIA</td><td>official</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.name.extension.url</b></td><td><b>Patient.name.use</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Nom_naissance</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.family</td><td style="border-left-width: 0px"></td><td></td><td>official</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Premier_prénom</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.given</td><td style="border-left-width: 0px"></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Prénoms</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.extension.valueString</td><td style="border-left-width: 0px"></td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name</td><td></td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="3"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.name.use</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Nom_usuel</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.family</td><td style="border-left-width: 0px"></td><td>usual</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Prénom_usuel</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.name.given</td><td style="border-left-width: 0px"></td><td></td></tr></table><hr/><p><b>Group 6 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Patient/Date_naissance</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.birthDate</td><td>La date doit être transformée du format AAAAMMJJ[HH[MM[SS]]] au format YYYY-MM-DDTHH:MM:SS+ZZ:ZZ. L'offset de fuseau horaire n'est à intégrer que si au moin une heure est fournie.</td></tr><tr><td>Messages/M_prescription_médicaments/Patient/Sexe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.gender</td><td>le code est à traduire en utilisant MedicationRequest.medicationReference.reference</td></tr></table><hr/><p><b>Group 7 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.extension.url</b></td><td><b>Patient.extension.valueAddress.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Lieu_naissance</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.extension.valueAddress.extension.valueCoding.code</td><td style="border-left-width: 0px"></td><td>http://hl7.org/fhir/StructureDefinition/patient-birthPlace</td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code</td><td>L'élément FHIR Patient.extension.valueAddress.extension.valueCoding.system dépend de la valeur du code. Pour les codes commençant par 99, le system est https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R13-Pays ; pour le code 01 https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire; pour les autres codes le system est est https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune</td></tr></table><hr/><p><b>Group 8 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="5"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>Patient.extension.url</b></td><td><b>Patient.extension.extension.valueCoding.system</b></td><td><b>Patient.extension.extension.url</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Patient/Statut_idpat</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Patient.extension.extension.valueCoding.code</td><td style="border-left-width: 0px"></td><td>https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability</td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445</td><td>identityStatus</td></tr></table><hr/><p><b>Group 9 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Patient/Date_lunaire</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Les dates luanires ne sont pas à indiquer dans les ressources FHIR</td></tr></table></div>
 
-  <!-- insert notes if present -->
+    <!-- insert notes if present -->
   
 
 
@@ -341,22 +351,22 @@
   
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 11, 2025 07:25+0000">2025-04-11</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 30, 2025 16:50+0000">2025-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -365,33 +375,32 @@
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7.fr/fhir/fr/medication/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/fhir/fr/medication/history.html" target="_blank">Historique des versions </a>
                  
                 
 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-

@@ -13,9 +13,7 @@
     <sch:title>f:Medication</sch:title>
     <sch:rule context="f:Medication">
       <sch:assert test="count(f:implicitRules) &lt;= 0">implicitRules: maximum cardinality of 'implicitRules' is 0</sch:assert>
-      <sch:assert test="count(f:code) &lt;= 0">code: maximum cardinality of 'code' is 0</sch:assert>
       <sch:assert test="count(f:amount) &lt;= 0">amount: maximum cardinality of 'amount' is 0</sch:assert>
-      <sch:assert test="count(f:ingredient) &gt;= 1">ingredient: minimum cardinality of 'ingredient' is 1</sch:assert>
       <sch:assert test="count(f:batch) &lt;= 0">batch: maximum cardinality of 'batch' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
