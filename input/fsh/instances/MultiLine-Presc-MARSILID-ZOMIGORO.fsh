@@ -44,7 +44,7 @@ Usage: #inline
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 
 Instance: requestgroup-Presc-MARSILID-ZOMIGORO
-InstanceOf: FrInpatientMedicationRequestExclusion
+InstanceOf: FrRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "Presc-30001"
