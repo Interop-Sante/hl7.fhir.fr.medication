@@ -16,14 +16,14 @@ Usage: #inline
 * medicationCodeableConcept = $UCD#3400892782287 "MARSILID 50MG CPR"
 * subject.reference = "Patient/30001"
 * authoredOn = "2025-05-02T14:48:44.461Z"
-* requester.reference = "Practitioner/smart-Practitioner-71482713"
+* requester.reference = "Practitioner/smart-Practitioner-30001"
 * groupIdentifier.value = "Presc-30001"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-09T14:48:59Z"
-* dosageInstruction.timing.repeat.period = 6
-* dosageInstruction.timing.repeat.periodUnit = #h
+* dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
+* dosageInstruction.timing.repeat.frequency = 1
+* dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.route.text = "Voie orale"
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
@@ -58,6 +58,6 @@ Usage: #inline
 * action[=].relatedAction.extension[additionalRelationship] = #EXCL
 * action[=].relatedAction.actionId = "Action2"
 * action[=].relatedAction.relationship = #concurrent
-* action[=].resource = "#medicationrequest-Presc-MARSILID"
-* action[+].id = "Action2"
 * action[=].resource = "#medicationrequest-Presc-ZOMIGORO"
+* action[+].id = "Action2"
+* action[=].resource = "#medicationrequest-Presc-MARSILID"
