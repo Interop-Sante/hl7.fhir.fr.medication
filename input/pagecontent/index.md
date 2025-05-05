@@ -5,7 +5,7 @@
   <div style="width: 65%">
       <blockquote class="stu-note">
       <p>
-      <b>Attention !</b> Cet Implementation Guide n'est pas la version courante. La version courante sera accessible via l'URL canonique (https://hl7.fr/fhir/fr/medication) lorsque celui-ci sera publié.
+      <b>Attention !</b> Cet Implementation Guide n'est pas la version courante. La version courante sera accessible via l'URL canonique (https://hl7.fr/ig/fhir/medication) lorsque celui-ci sera publié.
       </p>
       </blockquote>
   </div>
