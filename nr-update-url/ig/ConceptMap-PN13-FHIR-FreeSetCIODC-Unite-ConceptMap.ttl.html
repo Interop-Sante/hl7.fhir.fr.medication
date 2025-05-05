@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Mapping Free Set CIO-DC UNITE - TTL Representation - Guide d'implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"26.76"}
+    h3,h4,h5,h6{--heading-prefix:"26.76"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
+</div>
+
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l313">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Mapping Free Set CIO-DC UNITE</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+  <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/ig/fhir/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Mapping Free Set CIO-DC UNITE - TTL Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2025-02-10
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.ttl" no-download="true">Raw ttl</a> | <a download="null" href="ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.ttl">Download</a></p>
+
+    <!-- insert intro if present -->
+  
+
+
+
+  <pre style="white-space: pre; overflow: hidden" class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ConceptMap ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "PN13-FHIR-FreeSetCIODC-Unite-ConceptMap"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "fr-FR"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "generated" ] ;
+fhir:div "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" lang=\"fr-FR\"&gt;&lt;p class=\"res-header-id\"&gt;&lt;b&gt;Generated Narrative: ConceptMap PN13-FHIR-FreeSetCIODC-Unite-ConceptMap&lt;/b&gt;&lt;/p&gt;&lt;a name=\"PN13-FHIR-FreeSetCIODC-Unite-ConceptMap\"&gt; &lt;/a&gt;&lt;a name=\"hcPN13-FHIR-FreeSetCIODC-Unite-ConceptMap\"&gt; &lt;/a&gt;&lt;a name=\"PN13-FHIR-FreeSetCIODC-Unite-ConceptMap-en-US\"&gt; &lt;/a&gt;&lt;div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"&gt;&lt;p style=\"margin-bottom: 0px\"&gt;Language: fr-FR&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Mapping from (not specified) to (not specified)&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;code&gt;https://www.phast.fr/ciodm/|2025&lt;/code&gt; to &lt;a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ucum.html\"&gt;Unified Code for Units of Measure (UCUM)&lt;/a&gt;&lt;/p&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*3.bq&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;kBq&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*6&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;10*6 (10n)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*6.a&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;M[arb'U] (106U)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*6.bq&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MBq&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*6.iu&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;M[iU] (106UI)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*6.u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;M[arb'U] (106U)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*9&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;10*9 (milliard)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10*9.bq&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;GBq&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;agD_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[D'ag'U] (U agD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ah_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U]{anti'hep} (U anti hép.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;an&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;arb_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U] (U)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;axa_iu&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[anti'Xa'U] (U anti Xa)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;boite&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{box} (boîte)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bq&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bq&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;c_a_c&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[tsp_m] (càc)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;c_a_d&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{dsp} (càd)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;c_a_s&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[tbs_m] (càs)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cadre&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{frame} (cadre)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;caisse&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{crate} (caisse)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ceip_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U]{ceip} (U CEIP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cycle&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{cycle} (cycle)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ddose&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{meas'dev} (disp.doseur)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dose&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{dose} (dose)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dose_kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{kg'dose} (dose-kg)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dosevac&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{vac'dose} (dose-vac)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;eph_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U]{eph} (UPE)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;feiba_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U]{feiba} (U FEIBA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;feuille&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{foil} (feuille)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;flac c-gttes&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{drpr'cont} (flac.c.gttes)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;flac_pres&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{prsrd'cont} (flac.press.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;flac_pulv&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{spray} (flac.pulv.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/kg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/kg/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/kg/h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/kg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/kg/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/m2&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/m2 (g/m²)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/m2/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/m2/h (g/m²/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/m2/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/m2/min (g/m²/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;g/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;g/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;inka_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U]{kallikrein inactivator} (U IK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU] (UI)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/h (UI/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/kg (UI/kg)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/kg/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/kg/h (UI/kg/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/kg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/kg/min (UI/kg/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/m2&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/m2 (UI/m²)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/m2/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/m2/h (UI/m²/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/m2/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/m2/min (UI/m²/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/mL&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/mL (UI/mL)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;iu/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[iU]/min (UI/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;j&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;d (j)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;kg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;kit&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{kit} (kit)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;L&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;L/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;L/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;loo_u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;[arb'U]{loo} (Loomis)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;m&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;m&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;m2&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;m2 (m²)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;meq&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;meq&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;meq/L&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;meq/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/kg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/kg/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/kg/h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/kg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/kg/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/m2&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/m2 (mg/m²)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/m2/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/m2/h (mg/m²/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/m2/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/m2/min (mg/m²/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/kg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/kg/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/kg/h&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/kg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/kg/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/m2&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/m2 (mL/m²)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/m2/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/m2/h (mL/m²/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/m2/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/m2/min (mL/m²/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mL/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mmol&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mmol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mmol/L&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mmol/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mois&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mo (m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mosm/L&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;mosm/L&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ng&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ng&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ng/kg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ng/kg/min&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nkat&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;nkat&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;paire&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{pair} (paire)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pièce&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{piece} (pièce)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ppe_doseuse&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{meter'pump} (pompe doseuse)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pres&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{press} (pression)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pst&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{bandg} (pst)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rec_dose&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{meter'cont} (récip.doseur)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rec_multi&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{multidose'cont} (récip.multidose)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rec_unidose&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{sgldose'cont} (récip.unidose)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;set&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{set} (set)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;u&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;U&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug (µg)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/h (µg/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/kg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/kg (µg/kg)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/kg/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/kg/h (µg/kg/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/kg/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/kg/min (µg/kg/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/m2&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/m2 (µg/m²)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/m2/h&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/m2/h (µg/m²/h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/m2/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/m2/min (µg/m²/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug/mn&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/min (µg/min)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug_hagglu&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug{hagglu} (µg hémagglut.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ukat&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ukat (µkat)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;uL&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;uL (µL)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VAPO&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{evaporator} (évaporateur)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;code&gt;https://www.phast.fr/ciodm/|2025&lt;/code&gt; to &lt;code&gt;http://standardterms.edqm.eu&lt;/code&gt;&lt;/p&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;amp&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15002000 (Ampoule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;appln&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0005 (Application)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;applr&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15004000 (Applicateur)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;baton&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15048000 (Bâton)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;BBCHE&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0015 (Rinçage/lavage)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bouffee&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15001000 (Bouffée)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;btle&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15009000 (Flacon)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;c_mes&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15047000 (Cuillère-mesure)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;caps&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15012000 (Gélule ou capsule molle )&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cart&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15013000 (Cartouche)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;catap&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0076 (Cataplasme)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cpr&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15054000 (Comprimé)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cprsse&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15021000 (Compresse)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dc&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15036000 (Patch)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;diu&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15053000 (Système)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dtd&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15036000 (Patch)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dvag&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15053000 (Système)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;EMPMED&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15042000 (Emplâtre)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;epmed&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15046000 (Eponge)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;film_ths&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15007000 (Plaquette)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;flac&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15060000 (Flacon)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;flm orodisp&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15023000 (Film)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fut&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15006000 (Fût)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gel&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15012000 (Gélule ou capsule molle)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;godet&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15017000 (Godet)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gomme&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0054 (Gomme)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;granule&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15040000 (Granule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gte&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15022000 (Goutte)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;implant&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15025000 (Implant)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;inhalateur&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15026000 (Inhalateur)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insert&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15027000 (Insert)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;inst&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0013 (Instillation)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;irrig&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0015 (Rinçage/lavage)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lavg&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0006 (Bain)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lavmt&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0004 (Administration)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lyoph_or&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15030000 (Lyophilisat)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;matrice&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15031000 (Matrice)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ovule&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15039000 (Ovule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;past&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15029000 (Pastille)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pâte&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0075 (Pâte)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;plaq&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15007000 (Plaquette)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;poche&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15005000 (Poche)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pot&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15028000 (Pot)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pulv&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0017 (Pulvérisation)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sachet&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15045000 (Sachet)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SDIU&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15053000 (Système)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SDV&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15053000 (Système)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ser&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15052000 (Seringue)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ser_prr&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15052000 (Seringue)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;stylo_prr&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15037000 (Stylo)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;suppo&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15051000 (Suppositoire)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;tube&lt;/td&gt;&lt;td&gt;&lt;a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\"&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15058000 (Tube)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"^^rdf:XMLLiteral
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> "https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-unite-conceptmap"^^xsd:anyURI] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "0.1.0"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "FrPN13FHIRFreeSetCIODCUniteConceptMap"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Mapping Free Set CIO-DC UNITE"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "draft"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> "2025-02-10T11:15:38Z"^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Interop'Santé"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">fhir:contact</a> ( [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Interop'Santé" ] ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "url" ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "http://interopsante.org/" ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> "ConceptMap pour la conversion des codes d'unité d'administration de médicaments entre CIO et UCUM / EDQM"] ; # 
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">fhir:group</a> ( [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">fhir:source</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> "https://www.phast.fr/ciodm/"^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">fhir:sourceVersion</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "2025" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">fhir:target</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+    ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*3.bq" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "kBq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "kBq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*6" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*6" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "10n" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*6.a" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "M[arb'U]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "106U" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*6.bq" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "MBq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "MBq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*6.iu" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "M[iU]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "106UI" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*6.u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "M[arb'U]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "106U" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*9" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*9" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "milliard" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "10*9.bq" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "GBq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "GBq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "agD_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[D'ag'U]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U agD" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ah_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]{anti'hep}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U anti hép." ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "an" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "a" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "a" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "arb_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "axa_iu" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[anti'Xa'U]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U anti Xa" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "boite" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{box}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "boîte" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "bq" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "Bq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Bq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "c_a_c" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[tsp_m]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "càc" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "c_a_d" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{dsp}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "càd" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "c_a_s" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[tbs_m]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "càs" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "cadre" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{frame}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "cadre" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "caisse" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{crate}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "caisse" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ceip_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]{ceip}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U CEIP" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "cycle" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{cycle}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "cycle" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ddose" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{meas'dev}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "disp.doseur" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "dose" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{dose}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "dose" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "dose_kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{kg'dose}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "dose-kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "dosevac" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{vac'dose}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "dose-vac" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "eph_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]{eph}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UPE" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "feiba_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]{feiba}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U FEIBA" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "feuille" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{foil}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "feuille" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "flac c-gttes" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{drpr'cont}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "flac.c.gttes" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "flac_pres" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{prsrd'cont}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "flac.press." ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "flac_pulv" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{spray}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "flac.pulv." ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/kg/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/kg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/m2" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/m2" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/m²" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/m2/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/m2/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/m²/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/m2/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/m2/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/m²/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "g/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "g/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "inka_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]{kallikrein inactivator}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U IK" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/kg/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/kg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/m2" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/m2" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/m²" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/m2/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/m2/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/m²/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/m2/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/m2/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/m²/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/mL" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/mL" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/mL" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "iu/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[iU]/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "UI/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "j" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "d" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "j" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "kit" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{kit}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "kit" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "L" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "L/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "L/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "L/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "loo_u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "[arb'U]{loo}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Loomis" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "m" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "m" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "m" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "m2" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "m2" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "m²" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "meq" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "meq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "meq" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "meq/L" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "meq/L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "meq/L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/kg/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/kg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/m2" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/m2" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/m²" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/m2/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/m2/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/m²/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/m2/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/m2/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/m²/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/kg/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/kg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/m2" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/m2" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/m²" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/m2/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/m2/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/m²/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/m2/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/m2/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/m²/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mL/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mL/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mmol" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mmol" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mmol" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mmol/L" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mmol/L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mmol/L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mois" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mo" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "m" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mosm/L" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "mosm/L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "mosm/L" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ng" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ng" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "ng" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ng/kg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ng/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "ng/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "nkat" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "nkat" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "nkat" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "paire" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{pair}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "paire" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "pièce" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{piece}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "pièce" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ppe_doseuse" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{meter'pump}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "pompe doseuse" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "pres" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{press}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "pression" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "pst" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{bandg}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "pst" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "rec_dose" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{meter'cont}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "récip.doseur" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "rec_multi" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{multidose'cont}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "récip.multidose" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "rec_unidose" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{sgldose'cont}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "récip.unidose" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "set" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{set}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "set" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "u" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "U" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "U" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/kg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/kg" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/kg/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/kg/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/kg/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/kg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/m2" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/m2" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/m²" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/m2/h" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/m2/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/m²/h" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/m2/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/m2/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/m²/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/mn" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg/min" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug_hagglu" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ug{hagglu}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µg hémagglut." ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ukat" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ukat" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µkat" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "uL" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "uL" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "µL" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "VAPO" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "{evaporator}" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "évaporateur" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] )
+  ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">fhir:source</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> "https://www.phast.fr/ciodm/"^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.sourceVersion">fhir:sourceVersion</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "2025" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">fhir:target</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+    ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "amp" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15002000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Ampoule" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "appln" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0005" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Application" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "applr" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15004000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Applicateur" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "baton" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15048000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Bâton" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "BBCHE" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0015" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Rinçage/lavage" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "bouffee" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15001000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Bouffée" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "btle" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15009000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Flacon" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "c_mes" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15047000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Cuillère-mesure" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "caps" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15012000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Gélule ou capsule molle " ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "cart" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15013000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Cartouche" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "catap" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0076" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Cataplasme" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "cpr" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15054000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Comprimé" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "cprsse" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15021000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Compresse" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "dc" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15036000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Patch" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "diu" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15053000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Système" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "dtd" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15036000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Patch" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "dvag" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15053000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Système" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "EMPMED" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15042000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Emplâtre" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "epmed" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15046000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Eponge" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "film_ths" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15007000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Plaquette" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "flac" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15060000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Flacon" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "flm orodisp" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15023000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Film" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "fut" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15006000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Fût" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "gel" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15012000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Gélule ou capsule molle" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "godet" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15017000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Godet" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "gomme" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0054" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Gomme" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "granule" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15040000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Granule" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "gte" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15022000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Goutte" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "implant" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15025000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Implant" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "inhalateur" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15026000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Inhalateur" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "insert" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15027000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Insert" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "inst" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0013" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Instillation" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "irrig" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0015" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Rinçage/lavage" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "lavg" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0006" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Bain" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "lavmt" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0004" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Administration" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "lyoph_or" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15030000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Lyophilisat" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "matrice" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15031000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Matrice" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ovule" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15039000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Ovule" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "past" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15029000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Pastille" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "pâte" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0075" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Pâte" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "plaq" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15007000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Plaquette" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "poche" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15005000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Poche" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "pot" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15028000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Pot" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "pulv" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "0017" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Pulvérisation" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "sachet" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15045000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Sachet" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "SDIU" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15053000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Système" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "SDV" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15053000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Système" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ser" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15052000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Seringue" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "ser_prr" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15052000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Seringue" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "stylo_prr" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15037000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Stylo" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "suppo" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15051000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Suppositoire" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "tube" ] ;
+      ( <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "15058000" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Tube" ] ;
+<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "equal" ]       ] )     ] )
+  ] ) . # 
+
+</pre>
+
+
+
+    <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 07:46+0000">2025-05-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/ig/fhir/medication/history.html" target="_blank">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
