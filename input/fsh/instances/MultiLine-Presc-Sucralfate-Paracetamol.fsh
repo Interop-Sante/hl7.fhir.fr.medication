@@ -57,14 +57,14 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
 * dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
 * dosageInstruction.doseAndRate.doseQuantity.code = #mg
-* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.value = 3
-* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.unit = "g"
-* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.system = $unitsofmeasure
-* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.code = #g
-* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.value = 1
-* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.unit = "d"
-* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.system = $unitsofmeasure
-* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.code = #d
+* dosageInstruction.maxDosePerPeriod.numerator.value = 3
+* dosageInstruction.maxDosePerPeriod.numerator.unit = "g"
+* dosageInstruction.maxDosePerPeriod.numerator.system = $unitsofmeasure
+* dosageInstruction.maxDosePerPeriod.numerator.code = #g
+* dosageInstruction.maxDosePerPeriod.denominator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator.unit = "d"
+* dosageInstruction.maxDosePerPeriod.denominator.system = $unitsofmeasure
+* dosageInstruction.maxDosePerPeriod.denominator.code = #d
 
 Instance: requestgroup-Presc-Sucralfate-Paracetamol
 InstanceOf: FrRequestGroupForPrescription
@@ -83,6 +83,6 @@ Usage: #inline
 * action[=].relatedAction.offsetDuration.unit = "h"
 * action[=].relatedAction.offsetDuration.system = $unitsofmeasure
 * action[=].relatedAction.offsetDuration.code = #h
-* action[=].resource = "#medicationrequest-MultiLine-Presc-Paracetamol"
+* action[=].resource.reference = "#medicationrequest-MultiLine-Presc-Paracetamol"
 * action[+].id = "Action2"
-* action[=].resource = "#medicationrequest-MultiLinePresc-Sucralfate"
+* action[=].resource.reference = "#medicationrequest-MultiLinePresc-Sucralfate"

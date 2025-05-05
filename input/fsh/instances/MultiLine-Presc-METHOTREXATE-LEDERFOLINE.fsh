@@ -71,6 +71,6 @@ Usage: #inline
 * action[0].id = "Action1"
 * action[=].relatedAction.actionId = "Action2"
 * action[=].relatedAction.relationship = #concurrent
-* action[=].resource = "#medicationrequest-Presc-LEDERFOLINE"
+* action[=].resource.reference = "#medicationrequest-Presc-LEDERFOLINE"
 * action[+].id = "Action2"
-* action[=].resource = "#medicationrequest-Presc-METHOTREXATE"
+* action[=].resource.reference = "#medicationrequest-Presc-METHOTREXATE"

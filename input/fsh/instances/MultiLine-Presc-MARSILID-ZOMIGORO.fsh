@@ -60,6 +60,6 @@ Usage: #inline
 * action[=].relatedAction.extension[additionalRelationship].valueCode = #EXCL
 * action[=].relatedAction.actionId = "Action2"
 * action[=].relatedAction.relationship = #concurrent
-* action[=].resource = "#medicationrequest-Presc-ZOMIGORO"
+* action[=].resource.reference = "#medicationrequest-Presc-ZOMIGORO"
 * action[+].id = "Action2"
-* action[=].resource = "#medicationrequest-Presc-MARSILID"
+* action[=].resource.reference = "#medicationrequest-Presc-MARSILID"

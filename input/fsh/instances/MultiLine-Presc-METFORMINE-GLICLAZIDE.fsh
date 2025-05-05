@@ -71,6 +71,6 @@ Usage: #inline
 * action[=].relatedAction.extension[additionalRelationship].valueCode = #ALT
 * action[=].relatedAction.actionId = "Action2"
 * action[=].relatedAction.relationship = #concurrent
-* action[=].resource = "#medicationrequest-Presc-GLICLAZIDE"
+* action[=].resource.reference = "#medicationrequest-Presc-GLICLAZIDE"
 * action[+].id = "Action2"
-* action[=].resource = "#medicationrequest-Presc-METFORMINE"
+* action[=].resource.reference = "#medicationrequest-Presc-METFORMINE"
