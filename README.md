@@ -2,7 +2,7 @@
 
 Guide d'implémentation du médicament contenant trois domaines : la conciliation, la prescription et la dispensation.
 
-Aujourd'hui, uniquement la prescription a été retravaillée, les parties conciliation et dispensation sont en draft.
+Aujourd'hui, uniquement la prescription a été retravaillée, les parties conciliation et dispensation sont en draft et nécessitent des travaux complémentaires.
 
 # Accès au guide
 
