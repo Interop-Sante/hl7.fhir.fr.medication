@@ -28,7 +28,7 @@
   <sch:pattern>
     <sch:title>f:Medication/f:ingredient</sch:title>
     <sch:rule context="f:Medication/f:ingredient">
-      <sch:assert test="count(f:extension[@url = 'https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-is-vehicle']) &lt;= 1">extension with URL = 'https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-is-vehicle': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle']) &lt;= 1">extension with URL = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
