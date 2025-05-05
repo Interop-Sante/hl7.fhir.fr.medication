@@ -77,6 +77,14 @@ package IG #DDDDDD{
              MedicationDispense.receiver => [None..None]
         } 
 
+        class FrInpatientMedicationRequestExclusion{
+
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
+             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
+             MedicationRequest.subject => [None..None]
+        } 
+
         class FrInpatientMedicationRequest{
 
              MedicationRequest.extension => [None..None]
@@ -313,11 +321,14 @@ package IG #DDDDDD{
         class FrRequestGroupForPrescription{
 
              RequestGroup.groupIdentifier => [1..None]
+             RequestGroup.action.relatedAction.extension => [None..None]
+             RequestGroup.action.relatedAction.extension:additionalRelationship => <&plus>[0..1]
          }
 
      }
      package extension #paleturquoise {
 
+     FrInpatientMedicationRequestExclusion -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
      FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
@@ -330,7 +341,14 @@ package IG #DDDDDD{
      FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
+     FrRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
 
+        class FrAdditionalActionRelationship{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class FrAdditionalWhenValues{
 
           Extension.extension => [None..0]
@@ -591,6 +609,10 @@ package IG #DDDDDD{
      }
      package valueset #PaleVioletRed{
 
+        class FrAdditionalRequestGroupRelationshipValueSet  
+
+     FrAdditionalActionRelationship -[#black,dotted,thickness=2]-> FrAdditionalRequestGroupRelationshipValueSet
+
         class FrAdditionalWhenCodes  
 
      FrAdditionalWhenValues -[#black,dotted,thickness=2]-> FrAdditionalWhenCodes
@@ -721,6 +743,10 @@ package "Ressources de base" #palegreen {
  class "MedicationDispense" as  classfc53f5b9eccfc9aa8cc26374d1451ab5 
 
     classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FrInpatientMedicationDispense
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequestExclusion
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 

@@ -15,4 +15,10 @@
       <sch:assert test="count(f:groupIdentifier) &gt;= 1">groupIdentifier: minimum cardinality of 'groupIdentifier' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:RequestGroup/f:action/f:relatedAction</sch:title>
+    <sch:rule context="f:RequestGroup/f:action/f:relatedAction">
+      <sch:assert test="count(f:extension[@url = 'https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-action-relationship']) &lt;= 1">extension with URL = 'https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-action-relationship': maximum cardinality of 'extension' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

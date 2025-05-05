@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="MultiLine-Presc-METFORMINE-GLICLAZIDE"/>
+  <meta>
+    <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-Presc-METFORMINE"/>
+        <meta>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-Presc-METFORMINE"> </a><p class="res-header-id"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-METFORMINE</b></p><a name="medicationrequest-Presc-METFORMINE"> </a><a name="hcmedicationrequest-Presc-METFORMINE"> </a><a name="medicationrequest-Presc-METFORMINE-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fr-inpatient-medicationrequest.html">FrInpatientMedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title="Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400890020275}">METFORMINE ACC 1000MG CPR</span></p><p><b>subject</b>: <a href="Patient/30002">Patient/30002</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-3002">Practitioner/smart-Practitioner-3002</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30002</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: at meals, 2</p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20053000}">Voie orale</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>0.5 Comprimé<span style="background: LightGoldenRodYellow"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://data.esante.gouv.fr/ansm/medicament/UCD"/>
+            <code value="3400890020275"/>
+            <display value="METFORMINE ACC 1000MG CPR"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/30002"/>
+        </subject>
+        <authoredOn value="2025-05-02T14:48:44.461Z"/>
+        <requester>
+          <reference value="Practitioner/smart-Practitioner-3002"/>
+        </requester>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-30002"/>
+        </groupIdentifier>
+        <dosageInstruction>
+          <timing>
+            <repeat>
+              <boundsPeriod>
+                <start value="2025-05-02T14:49:00Z"/>
+                <end value="2025-05-31T14:48:59Z"/>
+              </boundsPeriod>
+              <frequency value="2"/>
+              <periodUnit value="d"/>
+              <when value="C"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20053000"/>
+              <display value="Voie orale"/>
+            </coding>
+            <text value="Voie orale"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="0.5"/>
+              <unit value="Comprimé"/>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="15054000"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-Presc-GLICLAZIDE"/>
+        <meta>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-Presc-GLICLAZIDE"> </a><p class="res-header-id"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-GLICLAZIDE</b></p><a name="medicationrequest-Presc-GLICLAZIDE"> </a><a name="hcmedicationrequest-Presc-GLICLAZIDE"> </a><a name="medicationrequest-Presc-GLICLAZIDE-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fr-inpatient-medicationrequest-exclusion.html">FrInpatientMedicationRequestExclusion</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title="Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893541364}">GLICLAZIDE ARW 30MG CPR LM</span></p><p><b>subject</b>: <a href="Patient/30002">Patient/30002</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-3002">Practitioner/smart-Practitioner-3002</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30002</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: at breakfast, Once</p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20053000}">Voie orale</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>3 Comprimé<span style="background: LightGoldenRodYellow"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="option"/>
+        <priority value="routine"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://data.esante.gouv.fr/ansm/medicament/UCD"/>
+            <code value="3400893541364"/>
+            <display value="GLICLAZIDE ARW 30MG CPR LM"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/30002"/>
+        </subject>
+        <authoredOn value="2025-05-02T14:48:44.461Z"/>
+        <requester>
+          <reference value="Practitioner/smart-Practitioner-3002"/>
+        </requester>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-30002"/>
+        </groupIdentifier>
+        <dosageInstruction>
+          <timing>
+            <repeat>
+              <boundsPeriod>
+                <start value="2025-05-02T14:49:00Z"/>
+                <end value="2025-05-31T14:48:59Z"/>
+              </boundsPeriod>
+              <when value="CM"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20053000"/>
+              <display value="Voie orale"/>
+            </coding>
+            <text value="Voie orale"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="3"/>
+              <unit value="Comprimé"/>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="15054000"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <RequestGroup>
+        <id value="requestgroup-Presc-METFORMINE-GLICLAZIDE"/>
+        <meta>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RequestGroup_requestgroup-Presc-METFORMINE-GLICLAZIDE"> </a><p class="res-header-id"><b>Generated Narrative: RequestGroup requestgroup-Presc-METFORMINE-GLICLAZIDE</b></p><a name="requestgroup-Presc-METFORMINE-GLICLAZIDE"> </a><a name="hcrequestgroup-Presc-METFORMINE-GLICLAZIDE"> </a><a name="requestgroup-Presc-METFORMINE-GLICLAZIDE-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fr-requestgroup-for-prescription.html">FrRequestGroupForPrescrption</a></p></div><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30002</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>subject</b>: <a href="Patient/30002">Patient/30002</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action1</blockquote><p><b>description</b>: En cas d'intolérance digestive</p><h3>RelatedActions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style="display: none">*</td><td/><td>Action2</td><td>Concurrent</td></tr></table><p><b>resource</b>: <code>#medicationrequest-Presc-GLICLAZIDE</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action2</blockquote><p><b>resource</b>: <code>#medicationrequest-Presc-METFORMINE</code></p></blockquote></div>
+        </text>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-30002"/>
+        </groupIdentifier>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <subject>
+          <reference value="Patient/30002"/>
+        </subject>
+        <action id="Action1">
+          <description value="En cas d'intolérance digestive"/>
+          <relatedAction>
+            <extension url="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-action-relationship">
+              <valueCode value="ALT"/>
+            </extension>
+            <actionId value="Action2"/>
+            <relationship value="concurrent"/>
+          </relatedAction>
+          <resource>
+            <reference value="#medicationrequest-Presc-GLICLAZIDE"/>
+          </resource>
+        </action>
+        <action id="Action2">
+          <resource>
+            <reference value="#medicationrequest-Presc-METFORMINE"/>
+          </resource>
+        </action>
+      </RequestGroup>
+    </resource>
+  </entry>
+</Bundle>
