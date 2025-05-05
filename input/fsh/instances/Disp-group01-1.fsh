@@ -11,7 +11,7 @@ Usage: #example
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
 * subject.reference = "Group/InLine-patient-group01"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
-* authorizingPrescription[0].reference = "MedicationRequest/InLine-presc-Paracetamol"
+* authorizingPrescription[0].reference = "MedicationRequest/InLine-presc-Paracetamol1"
 * authorizingPrescription[+].reference = "MedicationRequest/InLine-presc-Paracetamol2"
 * authorizingPrescription[+].reference = "MedicationRequest/InLine-presc-EFFERALGAN2"
 * type = $v3-ActCode#RFP "Refill - Part"

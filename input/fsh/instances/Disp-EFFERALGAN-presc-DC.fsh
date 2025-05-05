@@ -5,7 +5,7 @@ Usage: #example
 * medicationReference.reference = "Medication/InLine-med-EFFERALGAN"
 * subject.reference = "Patient/14602"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
-* authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol"
+* authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol1"
 * type = $v3-ActCode#FFC "First Fill - Complete"
 * quantity = 15 '1'
 * daysSupply = 5 'd' "jours"

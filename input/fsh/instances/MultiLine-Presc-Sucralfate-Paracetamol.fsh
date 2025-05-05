@@ -2,13 +2,14 @@ Instance: MultiLine-Presc-Sucralfate-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medicationrequest-Presc-Sucralfate
-* entry[+].resource = medicationrequest-Presc-Paracetamol
+* entry[0].resource = medicationrequest-MultiLine-Presc-Sucralfate
+* entry[+].resource = medicationrequest-MultiLine-Presc-Paracetamol
 * entry[+].resource = requestgroup-Presc-Sucralfate-Paracetamol
 
-Instance: medicationrequest-Presc-Sucralfate
+Instance: medicationrequest-MultiLine-Presc-Sucralfate
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
+* id = "medicationrequest-MultiLine-Presc-Sucralfate"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
@@ -31,9 +32,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
 * dosageInstruction.doseAndRate.doseQuantity.code = #g
 
-Instance: medicationrequest-Presc-Paracetamol
+Instance: medicationrequest-MultiLine-Presc-Paracetamol
 InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
+* id = "medicationrequest-MultiLine-Presc-Paracetamol"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
 * status = #active
 * intent = #order
@@ -55,16 +57,16 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
 * dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
 * dosageInstruction.doseAndRate.doseQuantity.code = #mg
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.numerator.value = 3
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.numerator.unit = "g"
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.numerator.system = $unitsofmeasure
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.numerator.code = #g
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.denominator.value = 1
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.denominator.unit = "d"
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.denominator.system = $unitsofmeasure
-* dosageIstrncution.doseAndRate.maxDosePerPeriod.denominator.code = #d
+* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.value = 3
+* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.unit = "g"
+* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.system = $unitsofmeasure
+* dosageInstruction.doseAndRate.maxDosePerPeriod.numerator.code = #g
+* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.value = 1
+* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.unit = "d"
+* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.system = $unitsofmeasure
+* dosageInstruction.doseAndRate.maxDosePerPeriod.denominator.code = #d
 
-Instance: requestgroup-Presc-Sucralfate-paracetamol
+Instance: requestgroup-Presc-Sucralfate-Paracetamol
 InstanceOf: FrRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
@@ -80,7 +82,7 @@ Usage: #inline
 * action[=].relatedAction.offsetDuration.value = 2
 * action[=].relatedAction.offsetDuration.unit = "h"
 * action[=].relatedAction.offsetDuration.system = $unitsofmeasure
-* action[=].relatedAction.offsetDuration.value = #h
-* action[=].resource = "#medicationrequest-Presc-Paracetamol"
+* action[=].relatedAction.offsetDuration.code = #h
+* action[=].resource = "#medicationrequest-MultiLine-Presc-Paracetamol"
 * action[+].id = "Action2"
-* action[=].resource = "#medicationrequest-Presc-Sucralfate"
+* action[=].resource = "#medicationrequest-MultiLinePresc-Sucralfate"

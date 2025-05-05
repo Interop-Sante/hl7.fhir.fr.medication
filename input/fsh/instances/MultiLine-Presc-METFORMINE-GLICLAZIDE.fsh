@@ -9,6 +9,7 @@ Usage: #example
 Instance: medicationrequest-Presc-METFORMINE
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
+* id = "medicationrequest-Presc-METFORMINE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
@@ -21,7 +22,7 @@ Usage: #inline
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
-* dosageInstruction.timing.repreat.frequency = 2
+* dosageInstruction.timing.repeat.frequency = 2
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.timing.repeat.when = #C
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
@@ -34,6 +35,7 @@ Usage: #inline
 Instance: medicationrequest-Presc-GLICLAZIDE
 InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
+* id = "medicationrequest-Presc-GLICLAZIDE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
 * status = #active
 * intent = #option
@@ -66,7 +68,7 @@ Usage: #inline
 * subject.reference = "Patient/30002"
 * action[0].id = "Action1"
 * action[=].description = "En cas d'intolérance digestive"
-* action[=].relatedAction.extension[additionalRelationship] = #ALT
+* action[=].relatedAction.extension[additionalRelationship].valueCode = #ALT
 * action[=].relatedAction.actionId = "Action2"
 * action[=].relatedAction.relationship = #concurrent
 * action[=].resource = "#medicationrequest-Presc-GLICLAZIDE"

@@ -9,6 +9,7 @@ Usage: #example
 Instance: medicationrequest-Presc-MARSILID
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
+* id = "medicationrequest-Presc-MARSILID"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
@@ -34,6 +35,7 @@ Usage: #inline
 Instance: medicationrequest-Presc-ZOMIGORO
 InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
+* id = "medicationrequest-Presc-ZOMIGORO"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
 * status = #unknown
 * intent = #option
@@ -55,7 +57,7 @@ Usage: #inline
 * subject.reference = "Patient/30001"
 * action[0].id = "Action1"
 * action[=].condition.kind = #stop
-* action[=].relatedAction.extension[additionalRelationship] = #EXCL
+* action[=].relatedAction.extension[additionalRelationship].valueCode = #EXCL
 * action[=].relatedAction.actionId = "Action2"
 * action[=].relatedAction.relationship = #concurrent
 * action[=].resource = "#medicationrequest-Presc-ZOMIGORO"

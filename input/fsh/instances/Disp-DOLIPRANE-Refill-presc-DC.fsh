@@ -5,7 +5,7 @@ Usage: #example
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
 * subject.reference = "Patient/14602"
 * performer.actor.reference = "Practitioner/smart-Practitioner-7148xxxx"
-* authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol"
+* authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol1"
 * type = $v3-ActCode#RFP "Refill - Part"
 * quantity = 6 '1'
 * daysSupply = 2 'd' "jours"
