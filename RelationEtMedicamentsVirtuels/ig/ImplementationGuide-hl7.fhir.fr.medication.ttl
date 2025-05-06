@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-05T15:47:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-06T13:30:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1408,6 +1408,60 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Medication/Expl-med-MV-sulfate-morphine-1> ;
+         fhir:reference [ fhir:v "Medication/Expl-med-MV-sulfate-morphine-1" ]
+       ] ;
+       fhir:name [ fhir:v "Expl-med-MV-sulfate-morphine-1" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Medication/Expl-med-MV-sulfate-morphine-2> ;
+         fhir:reference [ fhir:v "Medication/Expl-med-MV-sulfate-morphine-2" ]
+       ] ;
+       fhir:name [ fhir:v "Expl-med-MV-sulfate-morphine-2" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Medication/Expl-med-sulfate-morphine> ;
+         fhir:reference [ fhir:v "Medication/Expl-med-sulfate-morphine" ]
+       ] ;
+       fhir:name [ fhir:v "Expl-med-sulfate-morphine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -1741,6 +1795,24 @@
        ] ;
        fhir:name [ fhir:v "FrMedicationStatementReconciliationProperties" ] ;
        fhir:description [ fhir:v "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-virtual" ]
+       ] ;
+       fhir:name [ fhir:v "FrMedicationVirtual" ] ;
+       fhir:description [ fhir:v "Virtual medication composed of one to many substances." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

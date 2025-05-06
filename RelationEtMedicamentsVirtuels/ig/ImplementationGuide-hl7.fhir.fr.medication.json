@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-05-05T15:47:55+00:00",
+  "date" : "2025-05-06T13:30:16+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -983,6 +983,39 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Expl-med-MV-sulfate-morphine-1"
+      },
+      "name" : "Expl-med-MV-sulfate-morphine-1",
+      "exampleCanonical" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Expl-med-MV-sulfate-morphine-2"
+      },
+      "name" : "Expl-med-MV-sulfate-morphine-2",
+      "exampleCanonical" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-virtual"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Expl-med-sulfate-morphine"
+      },
+      "name" : "Expl-med-sulfate-morphine",
+      "exampleCanonical" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1206,6 +1239,18 @@
       },
       "name" : "FrMedicationStatementReconciliationProperties",
       "description" : "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-virtual"
+      },
+      "name" : "FrMedicationVirtual",
+      "description" : "Virtual medication composed of one to many substances.",
       "exampleBoolean" : false
     },
     {

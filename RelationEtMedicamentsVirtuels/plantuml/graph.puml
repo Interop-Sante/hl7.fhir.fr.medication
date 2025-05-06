@@ -277,6 +277,15 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
+        class FrMedicationVirtual{
+
+             Medication.extension => [None..None]
+             Medication.extension:drugCharacteristic => <&plus>[0..*]
+             Medication.form => [1..None]
+             Medication.ingredient => [1..None]
+             Medication.ingredient.strength => [1..None]
+        } 
+
         class FrMedication{
 
              Medication.meta.profile => [None..None]
@@ -341,6 +350,7 @@ package IG #DDDDDD{
      FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
+     FrMedicationVirtual -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
 
         class FrAdditionalActionRelationship{
@@ -649,6 +659,10 @@ package IG #DDDDDD{
 
      FrMedicationReconciliationComposition -[#black,dotted,thickness=2]-> FrMedicationReconciliationDocumentType
 
+        class FrMpDoseForm  
+
+     FrMedicationVirtual -[#black,dotted,thickness=2]-> FrMpDoseForm
+
         class FrNoteScopeCodeValueSet  
 
      FrMedicationRequestNoteScope -[#black,dotted,thickness=2]-> FrNoteScopeCodeValueSet
@@ -775,6 +789,10 @@ package "Ressources de base" #palegreen {
  class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
 
     class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationReconciliationMedicationStatement
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationVirtual
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
