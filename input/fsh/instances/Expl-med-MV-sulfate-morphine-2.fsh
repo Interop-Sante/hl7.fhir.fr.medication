@@ -1,7 +1,7 @@
 Instance: Expl-med-MV-sulfate-morphine-2
 InstanceOf: FrMedicationVirtual
 Usage: #example
-* code.coding.code = "MV00000031"
+* code.coding.code = #MV00000031
 * code.coding.system = "https://www.medicabase.fr/systemMV"
 * code.coding.display = "Morphine sulfate 30 mg gélule"
 * form = $EDQM#10210000 "Gélule"
