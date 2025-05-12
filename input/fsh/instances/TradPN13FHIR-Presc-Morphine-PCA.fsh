@@ -33,7 +33,7 @@ Usage: #inline
 * name[0].use = #usual
 * name[=].family = "ARASGAIN"
 * name[+].use = #official
-* name[=].extension[0].url = " https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"
+* name[=].extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"
 * name[=].extension[=].valueString = "MARSALI MORAG MAIREAD"
 * name[=].family = "CUIMEANACH"
 * name[=].given = "MARSALI"
@@ -72,14 +72,14 @@ Usage: #inline
 * dosageInstruction[0].timing.repeat.boundsPeriod.start = "2025-05-07T17:30:00+02:00"
 * dosageInstruction[=].timing.repeat.boundsPeriod.end = "2025-05-11T17:30:00+02:00"
 * dosageInstruction[=].route = $EDQM#20045000 "Voie intraveineuse"
-* dosageInstruction[=].doseAndRate.doseRatio.numerator.value = 5
-* dosageInstruction[=].doseAndRate.doseRatio.numerator.unit = "mg"
-* dosageInstruction[=].doseAndRate.doseRatio.numerator.system = $unitsofmeasure
-* dosageInstruction[=].doseAndRate.doseRatio.numerator.code =#mg
-* dosageInstruction[=].doseAndRate.doseRatio.denominator.value = 1
-* dosageInstruction[=].doseAndRate.doseRatio.denominator.unit = "h"
-* dosageInstruction[=].doseAndRate.doseRatio.denominator.system = $unitsofmeasure
-* dosageInstruction[=].doseAndRate.doseRatio.denominator.code =#h
+* dosageInstruction[=].doseAndRate.rateRatio.numerator.value = 5
+* dosageInstruction[=].doseAndRate.rateRatio.numerator.unit = "mg"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator.system = $unitsofmeasure
+* dosageInstruction[=].doseAndRate.rateRatio.numerator.code = #mg
+* dosageInstruction[=].doseAndRate.rateRatio.denominator.value = 1
+* dosageInstruction[=].doseAndRate.rateRatio.denominator.unit = "h"
+* dosageInstruction[=].doseAndRate.rateRatio.denominator.system = $unitsofmeasure
+* dosageInstruction[=].doseAndRate.rateRatio.denominator.code = #h
 * dosageInstruction[+].timing.repeat.boundsPeriod.start = "2025-05-07T17:30:00+02:00"
 * dosageInstruction[=].timing.repeat.boundsPeriod.end = "2025-05-11T17:30:00+02:00"
 * dosageInstruction[=].timing.repeat.frequencyMax = 1
@@ -90,4 +90,4 @@ Usage: #inline
 * dosageInstruction[=].doseAndRate.doseQuantity.value = 10
 * dosageInstruction[=].doseAndRate.doseQuantity.unit = "mg"
 * dosageInstruction[=].doseAndRate.doseQuantity.system = $unitsofmeasure
-* dosageInstruction[=].doseAndRate.doseQuantity.code =#mg
+* dosageInstruction[=].doseAndRate.doseQuantity.code = #mg

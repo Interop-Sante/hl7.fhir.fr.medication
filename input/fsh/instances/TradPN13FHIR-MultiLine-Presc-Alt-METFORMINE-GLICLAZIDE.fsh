@@ -35,7 +35,7 @@ Usage: #inline
 * name[0].use = #usual
 * name[=].family = "ARASGAIN"
 * name[+].use = #official
-* name[=].extension[0].url = " https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"
+* name[=].extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"
 * name[=].extension[=].valueString = "MARSALI MORAG MAIREAD"
 * name[=].family = "CUIMEANACH"
 * name[=].given = "MARSALI"
