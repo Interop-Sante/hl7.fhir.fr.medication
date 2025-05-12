@@ -15,7 +15,7 @@ Usage: #definition
 * group[0].element[0].code = $PN13Schema-Posologie#Elément_posologie
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.timing
 * group[=].element[=].target[=].equivalence = #relatedto
-* group[=].element[=].target[=].comment = "en l'absence de Fréquence et Fréquence_structurée et sans indication autre de moment de prise spécifique la fréquence par défaut est d'une fois par jour"
+* group[=].element[=].target[=].comment = "Si la fréquence est nécessaire, en l'absence de Fréquence et Fréquence_structurée et sans indication autre de moment de prise spécifique la fréquence par défaut est d'une fois par jour"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Fréquence
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée
@@ -194,6 +194,12 @@ Usage: #definition
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3. timeOfDay est à calculer à partir de Int_temps_év_début/Nombre et Int_temps_év_début/Unité pour traduire la période en heure du jour à partir de l'heure zéro"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie##Elément_posologie/Type_événement_début
+* group[=].element[=].target[=].dependsOn[=].value = "1"
+* group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evénement_début
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing
+* group[=].element[=].target[=].equivalence = #inexact
+* group[=].element[=].target[=].comment = "Le type d'événement de début 1 (date-heure absolue) indique que la posologie est applicable sur les bornes définies par Dh_début et Dh_fin, il n'est pas mappé en FHIR, les bornes suffisent"
+* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "1"
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Evénement_début
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.timing
@@ -1199,7 +1205,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "4"
@@ -1209,10 +1215,10 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "UCUM"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
-* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
+* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequencyMax
 * group[=].element[=].target[=].product[=].value = "1"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR, Elément_posologie/Quantité/Nombre doit être calculé en fonction de l'unité cible"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
@@ -1223,10 +1229,10 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "UCUM"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
-* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
+* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequencyMax
 * group[=].element[=].target[=].product[=].value = "1"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR soit par utilisation du mapping Free Set CIO-DC UNITECIO, soit par mapping de la terminologie locale utilisée. Elément_posologie/Quantité/Nombre peut être à recalculer en fonction de l'unité cible si celle-ci est différente de l'unité initiale"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
@@ -1235,7 +1241,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "1"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de UCUM}"
-* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
+* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequencyMax
 * group[=].element[=].target[=].product[=].value = "1"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.maxDosePerAdministration.value
@@ -1265,7 +1271,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_param_poso_cond
 * group[=].element[=].target[=].dependsOn[=].value = "7"
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3."
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
@@ -1276,10 +1282,10 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "UCUM"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
-* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
+* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequencyMax
 * group[=].element[=].target[=].product[=].value = "1"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3. Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR, Elément_posologie/Quantité/Nombre doit être calculé en fonction de l'unité cible"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
@@ -1290,10 +1296,10 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "UCUM"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
-* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
+* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequencyMax
 * group[=].element[=].target[=].product[=].value = "1"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3. Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR soit par utilisation du mapping Free Set CIO-DC UNITE, soit par mapping de la terminologie locale utilisée. Elément_posologie/Quantité/Nombre peut être à recalculer en fonction de l'unité cible si celle-ci est différente de l'unité initiale"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
@@ -1302,7 +1308,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "1"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de UCUM}"
-* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.frequencyMax
+* group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequencyMax
 * group[=].element[=].target[=].product[=].value = "1"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.maxDosePerAdministration.value
@@ -1366,7 +1372,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[=].element[=].target[=].dependsOn[=].value = "UCUM"
@@ -1377,7 +1383,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR. Elément_posologie/Quantité/Nombre doit être calculé en fonction de l'unité cible"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
@@ -1389,7 +1395,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR soit par utilisation du mapping Free Set CIO-DC UNITE, soit par mapping de la terminologie locale utilisée."
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
@@ -1489,7 +1495,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_param_poso_cond
 * group[=].element[=].target[=].dependsOn[=].value = "7"
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3."
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
@@ -1501,7 +1507,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur parmi 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3. Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR. Elément_posologie/Quantité/Nombre doit être calculé en fonction de l'unité cible"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
@@ -1513,7 +1519,7 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "{Valeur différente de 's'/'min'/'h'/'d'/'wk'/'mo'/'a'}"
 * group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.periodUnit
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3. Elément_posologie/Quantité/Unité doit être traduite en unité accpétée dans FHIR soit par utilisation du mapping Free Set CIO-DC UNITE, soit par mapping de la terminologie locale utilisée."
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début

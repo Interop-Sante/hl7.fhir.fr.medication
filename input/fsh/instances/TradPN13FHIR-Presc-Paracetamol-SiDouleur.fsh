@@ -16,9 +16,9 @@ Usage: #inline
 * id = "patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
 * meta.profile[0] = $FrCorePatient
 * identifier[0].use = #usual
-* identifier[=].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[=].type.coding[=].code = #PI
-* identifier[=].type.coding[=].display = "Patient internal identifier"
+* identifier[=].type.coding[0].system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"
+* identifier[=].type.coding[=].code = #INTRN
+* identifier[=].type.coding[=].display = "Identifiant interne"
 * identifier[=].system = "https://somehospital.fr/IPP"
 * identifier[=].value = "5000001820"
 * name[0].use = #usual
