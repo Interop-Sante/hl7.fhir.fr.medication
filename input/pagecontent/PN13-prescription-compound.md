@@ -2,7 +2,7 @@
 
 ## Perfusion 6 composants sur 12h par jour
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [Presc-perfusion-6-composants-exemple](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Perfusion-6-composants-exemple.html)
+Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc-perfusion-6-composants](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-TradPN13FHIR-Presc-perfusion-6-composants.html)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
