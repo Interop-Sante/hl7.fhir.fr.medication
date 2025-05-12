@@ -2,7 +2,7 @@
 
 ## PARACETAMOL MYLAN CONSEIL 1000 MG en cas de douleur
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc-Paracetamol](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-TradPN13FHIR-Presc-Paracetamol.html).
+Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc-Paracetamol](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-Paracetamol.html).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -116,8 +116,8 @@ A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pen
 ## DOLIPRANE 1000 MG 3x/jour
 
 Cette prescription PN13 est traduite en FHIR:
-- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-TradPN13FHIR-Presc-DOLIPRANE.html) sans interpétation de la terminologie locale de fréquence;
-- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE-Interpret](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-TradPN13FHIR-Presc-DOLIPRANE-Interpret.html) avec interprétation de la terminologie locale de fréquence.
+- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-DOLIPRANE.html) sans interpétation de la terminologie locale de fréquence;
+- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE-Interpret](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-DOLIPRANE-Interpret.html) avec interprétation de la terminologie locale de fréquence.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -166,7 +166,7 @@ Cette prescription PN13 est traduite en FHIR:
 
 ## METFORMINE alternativement GLICLAZIDE
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [Trad-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Trad-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE.html).
+Cette prescription PN13 est traduite en FHIR dans l'instance [Trad-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE](https://interop-sante.github.io/hl7.fhir.fr.medication/RelationEtMedicamentsVirtuels/ig/Bundle-TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE.html).
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
