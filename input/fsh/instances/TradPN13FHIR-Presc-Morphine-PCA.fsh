@@ -1,4 +1,4 @@
-Instance: Trad-Presc-Morphine-PCA
+Instance: TradPN13FHIR-Presc-Morphine-PCA
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset

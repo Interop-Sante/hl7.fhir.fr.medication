@@ -112,7 +112,7 @@ Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc
 
 ## Morphine en PCA (Patient Controled Analgesiae)
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [Trad-Presc-Morphine-PCA](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Trad-Presc-Morphine-PCA.html).
+Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc-Morphine-PCA].
 
 ``` xml
 <?xml version="1.0" encoding="ISO-8859-1"?>

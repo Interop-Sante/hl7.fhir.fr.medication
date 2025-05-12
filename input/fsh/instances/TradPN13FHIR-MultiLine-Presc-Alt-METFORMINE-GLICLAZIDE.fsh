@@ -1,4 +1,4 @@
-Instance: Trad-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE
+Instance: TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
