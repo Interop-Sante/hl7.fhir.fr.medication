@@ -84,7 +84,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: medicationrequest-Trad-Presc-Alt-GLICLAZIDE
-InstanceOf: FrInpatientMedicationRequestExclusion
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Alt-GLICLAZIDE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"

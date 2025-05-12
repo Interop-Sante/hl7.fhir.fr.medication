@@ -84,7 +84,7 @@ Usage: #inline
 * dosageInstruction[=].timing.repeat.boundsPeriod.end = "2025-05-11T17:30:00+02:00"
 * dosageInstruction[=].timing.repeat.frequencyMax = 1
 * dosageInstruction[=].timing.repeat.period = 2
-* dosageInstruction[=].timing.repeat.periodunit = #h
+* dosageInstruction[=].timing.repeat.periodUnit = #h
 * dosageInstruction[=].asNeededCodeableConcept.text = "bolus"
 * dosageInstruction[=].route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction[=].doseAndRate.doseQuantity.value = 10
