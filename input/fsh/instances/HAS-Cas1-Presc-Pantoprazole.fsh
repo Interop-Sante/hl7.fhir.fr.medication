@@ -24,7 +24,7 @@ Usage: #inline
 * priority = #routine
 * note[0].text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le matin"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
-* medicationCodeableConcept = "#medication-HAS-Cas1-Presc-Pantoprazole"
+* medicationReference.reference = "#medication-HAS-Cas1-Presc-Pantoprazole"
 * subject.reference = "Patient/14602"
 * authoredOn = "2025-06-04T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
