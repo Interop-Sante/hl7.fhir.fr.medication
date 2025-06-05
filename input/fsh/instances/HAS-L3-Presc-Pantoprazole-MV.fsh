@@ -1,21 +1,10 @@
-Instance: HAS-Cas1-Presc-Pantoprazole
+Instance: HAS-L3-Presc-Pantoprazole-MV
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-HAS-Cas1-Presc-Pantoprazole
-* entry[+].resource = medicationrequest-HAS-Cas1-Presc-Pantoprazole
+* entry[0].resource = medicationrequest-HAS-L3-Presc-Pantoprazole-MV
 
-Instance: medication-HAS-Cas1-Presc-Pantoprazole
-InstanceOf: fr-medication-noncompound
-Usage: #inline
-* id = "medication-HAS-Cas1-Presc-Pantoprazole"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
-* code = $SMS#100000092491 "pantoprazole"
-* form = $EDQM#10219000 "comprimé"
-* ingredient.itemCodeableConcept = $SMS#100000092491 "pantoprazole"
-* ingredient.strength.numerator = 40 'mg' "mg"
-
-Instance: medicationrequest-HAS-Cas1-Presc-Pantoprazole
+Instance: medicationrequest-HAS-L3-Presc-Pantoprazole-MV
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -24,11 +13,11 @@ Usage: #inline
 * priority = #routine
 * note[0].text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le matin"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
-* medicationReference.reference = "#medication-HAS-Cas1-Presc-Pantoprazole"
+* medicationCodeableConcept = $Medicabase#MV00000792 "PANTOPRAZOLE 40 mg comprimé"
 * subject.reference = "Patient/14602"
 * authoredOn = "2025-06-04T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-HAS-1"
+* groupIdentifier.value = "Presc-HAS-L3-MV"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-04T15:00:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-06-14T14:49:59Z"
