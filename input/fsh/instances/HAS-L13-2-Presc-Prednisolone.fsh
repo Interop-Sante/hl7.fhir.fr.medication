@@ -25,7 +25,7 @@ Usage: #inline
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * groupIdentifier.value = "Presc-HAS-L13-2"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.additionalInstruction = "Jusqu'à obtenir 3 bandelettes urinaires négatives"
+* dosageInstruction.additionalInstruction.text = "Jusqu'à obtenir 3 bandelettes urinaires négatives"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-06T15:00:00+02:00"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.periodUnit = #wk
