@@ -25,5 +25,7 @@ Usage: #inline
 * dosageInstruction.route.text = "Voie cutanée"
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
 * dosageInstruction.doseAndRate.doseQuantity.unit = "Application"
-* dosageInstruction.maxDosePerPeriod.numerator = 2 "Application"
+* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
+* dosageInstruction.doseAndRate.doseQuantity.code = #{Appln}
+* dosageInstruction.maxDosePerPeriod.numerator = 2 $unitsofmeasure#{Appln} "Application"
 * dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
