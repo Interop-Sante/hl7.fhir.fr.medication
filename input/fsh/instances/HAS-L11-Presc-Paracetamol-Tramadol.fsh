@@ -138,7 +138,7 @@ Usage: #inline
 * action[=].action[=].resource.reference = "#medicationrequest-HAS-L11-Presc-Tramadol"
 * action[=].action[+].id = "20250606144844569"
 * action[=].action[=].resource.reference = "#medicationrequest-HAS-L11-Presc-Paracetamol"
-* action[+].id = "A202506061"
+* action[+].id = "A202506062"
 * action[=].description = "STOP SI NAUSEES"
 * action[=].condition.kind = #stop
 * action[=].resource.reference = "#medicationrequest-HAS-L11-Presc-Tramadol"
