@@ -2,7 +2,7 @@ Instance: HAS-L11-Presc-Paracetamol-Tramadol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entre[0].resource = patient-HAS-L11-Presc-Paracetamol-Tramadol
+* entry[0].resource = patient-HAS-L11-Presc-Paracetamol-Tramadol
 * entry[+].resource = medicationrequest-HAS-L11-Presc-Paracetamol
 * entry[+].resource = medicationrequest-HAS-L11-Presc-Tramadol
 * entry[+].resource = requestgroup-HAS-L11-Presc-Paracetamol-Tramadol
