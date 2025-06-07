@@ -12,11 +12,6 @@ Description: "Simple prescribed, dispensed, administered or used medication comp
 
 * obeys frmed-med-1
 
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension contains FrDrugCharacteristic named drugCharacteristic 0..*
-* extension[drugCharacteristic] ^short = "descriptive properties of the medicine"
 * code 1..
 * code ^definition = "A RIUM id that specify this medication."
 * code ^requirements = "The developper SHALL support the infusion use case, which requires a multi-compounds Medication ressource."

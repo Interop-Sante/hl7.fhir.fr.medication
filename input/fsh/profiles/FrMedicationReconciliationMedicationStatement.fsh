@@ -7,14 +7,7 @@ Description: "Profil de la ressource *MedicationStatement* référencée dans la
 * . ^definition = "Ligne de traitement médicamenteux de la FCT (Fiche de Conciliation ds Traitements médicamenteux), avec ses propriétés de documentation de la conciliation."
 * meta.tag ..0
 * implicitRules ..0
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension contains FrMedicationStatementReconciliationProperties named reconciliation 0..1 MS
-* extension[reconciliation] ^short = "Propriétés de la conciliation de cette ligne de traitement médicamenteux"
-* extension[reconciliation] ^definition = "Documentation de la conciliation : statut, divergence, commentaire, type d'erreur/écart, conséquence de l'erreur/écart, résolution de l'erreur/écart"
-* extension[reconciliation] ^comment = "La documentation de la conciliation est renseignée progressivement par le pharmacien puis le prescripteur lors du dialogue qui s'instaure entre eux-deux.\r\nL'élément complexe *reconciliation* peut porter tout l'historique de ce renseignement progressif ou ne porter que son état courant, c'est-à-dire pour chaque propriété, l'information à sa dernière date d'enregistrement par son ou ses auteurs."
-* extension[reconciliation] ^requirements = "Porter la documentation de la Conciliation Médicamenteuse selon les règles de gestion en vigueur en France"
+
 * status MS
 * medication[x] only Reference(FrMedication)
 * medication[x] MS

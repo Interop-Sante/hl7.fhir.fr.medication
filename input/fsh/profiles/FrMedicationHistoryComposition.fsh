@@ -48,12 +48,6 @@ Medication Assessment Composition resource profile."""
 * section ^requirements = "Composition univoque de la ressource *Bilan Médicamenteux*"
 * section ^meaningWhenMissing = "absence de traitement médicamenteux avant l'hospitalisation"
 
-* section.extension contains FrMedicationHistorySources named compositionSourcing 0..* MS
-* section.extension[compositionSourcing] ^short = "sourcing du Bilan Médicamenteux"
-* section.extension[compositionSourcing] ^definition = "sources consultées pour réaliser le Bilan Médicamenteux"
-* section.extension[compositionSourcing] ^comment = "Ce sourcing est obligatoire : il n'est pas possible de réaliser un Bilan Médicamenteux sans jamais consulter aucune source."
-* section.extension[compositionSourcing] ^requirements = "Décrire obligatoirement les sources consultées."
-
 * section.title = "Liste des médicaments" (exactly)
 
 * section.code.coding = http://loinc.org#10160-0 "History of Medication use Narrative" (exactly)

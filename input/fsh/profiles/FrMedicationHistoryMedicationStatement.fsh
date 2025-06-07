@@ -14,15 +14,6 @@ Medication History MedicationStatement resource profile"""
 * implicitRules ..0
 * implicitRules ^requirements = "--> implementers and/or specification writers should avoid using this element"
 * language ^meaningWhenMissing = "langage de la ressource parente *Composition*"
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-
-* extension contains fr-medication-history-sources named statementSourcing 0..1 MS
-
-* extension[statementSourcing] ^short = "Sourcing de la ligne de traitement"
-* extension[statementSourcing] ^definition = "Sourcing de la ligne de traitement du Bilan Médicamenteux : nombre de sources ET liste des sources"
-* extension[statementSourcing] ^comment = "Nombre de sources concordantes pour cette ligne de traitement (quel que soit leur nombre), supérieur à zéro ET la liste de ces sources, au moins une."
 
 * status MS
 * medication[x] only Reference(FrMedication)
