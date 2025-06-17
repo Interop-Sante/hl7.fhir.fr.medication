@@ -1,16 +1,16 @@
-Instance: HAS-4-Presc-Paracetamol-Tramadol
+Instance: HAS-4-Presc-Paracetamol-DAFALGANCODEINE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = patient-HAS-4-Presc-Paracetamol-Tramadol
+* entry[0].resource = patient-HAS-4-Presc-Paracetamol-DAFALGANCODEINE
 * entry[+].resource = medicationrequest-HAS-4-Presc-Paracetamol
-* entry[+].resource = medicationrequest-HAS-4-Presc-Tramadol
-* entry[+].resource = requestgroup-HAS-4-Presc-Paracetamol-Tramadol
+* entry[+].resource = medicationrequest-HAS-4-Presc-DAFALGANCODEINE
+* entry[+].resource = requestgroup-HAS-4-Presc-Paracetamol-DAFALGANCODEINE
 
-Instance: patient-HAS-4-Presc-Paracetamol-Tramadol
+Instance: patient-HAS-4-Presc-Paracetamol-DAFALGANCODEINE
 InstanceOf: Patient
 Usage: #inline
-* id = "patient-HAS-4-Presc-Paracetamol-Tramadol"
+* id = "patient-HAS-4-Presc-Paracetamol-DAFALGANCODEINE"
 * meta.profile[0] = $FrCorePatientINS
 * extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
 * extension[=].extension[0].url = "identityStatus"
@@ -53,7 +53,7 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * medicationCodeableConcept = $Medicabase#MV00000557 "PARACETAMOL 500 mg gélule"
-* subject.reference = "#patient-HAS-4-Presc-Paracetamol-Tramadol"
+* subject.reference = "#patient-HAS-4-Presc-Paracetamol-DAFALGANCODEINE"
 * encounter.identifier.value = "S2025060612345"
 * encounter.identifier.system = "https://somehospital.fr/Sejour"
 * supportingInformation[0].type = "Organization"
@@ -71,8 +71,10 @@ Usage: #inline
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * note[0].text = "Prescription textuelle: Prescription textuelle: PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
-* dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-06T15:00:00+02:00"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2025-06-16T15:00:00+02:00"
+* dosageInstruction.timing.repeat.boundsDuration.value = 10
+* dosageInstruction.timing.repeat.boundsDuration.unit = "jour"
+* dosageInstruction.timing.repeat.boundsDuration.system = $unitsofmeasure
+* dosageInstruction.timing.repeat.boundsDuration.code = #d
 * dosageInstruction.asNeededCodeableConcept = $sct#22253000 "douleur"
 * dosageInstruction.asNeededCodeableConcept.text = "Si douleurs"
 * dosageInstruction.timing.repeat.frequency = 1
@@ -83,18 +85,18 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
 * dosageInstruction.doseAndRate.doseQuantity.code = #15012000
 
-Instance: medicationrequest-HAS-4-Presc-Tramadol
+Instance: medicationrequest-HAS-4-Presc-DAFALGANCODEINE
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
-* id = "medicationrequest-HAS-4-Presc-Tramadol"
+* id = "medicationrequest-HAS-4-Presc-DAFALGANCODEINE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
 * identifier.value = "20250606144844570"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active
 * intent = #option
 * priority = #routine
-* medicationCodeableConcept = $Medicabase#MV00000705 "TRAMADOL 50 mg, cpr orodispersible"
-* subject.reference = "#patient-HAS-4-Presc-Paracetamol-Tramadol"
+* medicationCodeableConcept = $UCD#3400891479287 "DAFALGAN CODEINE CPR"
+* subject.reference = "#patient-HAS-4-Presc-Paracetamol-DAFALGANCODEINE"
 * encounter.identifier.value = "S2025060612345"
 * encounter.identifier.system = "https://somehospital.fr/Sejour"
 * supportingInformation[0].type = "Organization"
@@ -110,18 +112,20 @@ Usage: #inline
 * requester.identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 * groupIdentifier.value = "Presc-HAS-4"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* note[0].text = "Prescription textuelle: TRAMADOL 50 mg, cpr orodispersible - 1 à  2 comprimés toutes les 8 h pendant 10 jours si paracétamol insuffisant. STOP SI NAUSEES"
+* note[0].text = "Prescription textuelle: DAFALGAN CODEINE®, comprimé : un à deux comprimés toutes les 12 h pendant 10 jours  si paracétamol  seul insuffisant, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour . STOP SI NAUSEES."
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
-* dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-06T15:00:00+02:00"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2025-06-16T15:00:00+02:00"
+* dosageInstruction.timing.repeat.boundsDuration.value = 10
+* dosageInstruction.timing.repeat.boundsDuration.unit = "jour"
+* dosageInstruction.timing.repeat.boundsDuration.system = $unitsofmeasure
+* dosageInstruction.timing.repeat.boundsDuration.code = #d
 * dosageInstruction.timing.repeat.frequency = 1
-* dosageInstruction.timing.repeat.period = 8
+* dosageInstruction.timing.repeat.period = 12
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.doseAndRate.doseQuantity = 1 $EDQM#15054000 "Comprimé"
 * dosageInstruction.maxDosePerAdministration = 2 $EDQM#15054000 "Comprimé"
 
 
-Instance: requestgroup-HAS-4-Presc-Paracetamol-Tramadol
+Instance: requestgroup-HAS-4-Presc-Paracetamol-DAFALGANCODEINE
 InstanceOf: FrRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
@@ -130,15 +134,15 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-* subject.reference = "#patient-HAS-4-Presc-Paracetamol-Tramadol"
+* subject.reference = "#patient-HAS-4-Presc-Paracetamol-DAFALGANCODEINE"
 * action[0].id = "A202506061"
 * action[=].selectionBehavior = #exactly-one
 * action[=].action[0].id = "20250606144844570"
 * action[=].action[=].description = "si paracétamol insuffisant"
-* action[=].action[=].resource.reference = "#medicationrequest-HAS-4-Presc-Tramadol"
+* action[=].action[=].resource.reference = "#medicationrequest-HAS-4-Presc-DAFALGANCODEINE"
 * action[=].action[+].id = "20250606144844569"
 * action[=].action[=].resource.reference = "#medicationrequest-HAS-4-Presc-Paracetamol"
 * action[+].id = "A202506062"
 * action[=].description = "STOP SI NAUSEES"
 * action[=].condition.kind = #stop
-* action[=].resource.reference = "#medicationrequest-HAS-4-Presc-Tramadol"
+* action[=].resource.reference = "#medicationrequest-HAS-4-Presc-DAFALGANCODEINE"
