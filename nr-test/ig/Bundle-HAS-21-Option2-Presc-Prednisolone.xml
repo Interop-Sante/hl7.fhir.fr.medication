@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="HAS-21-Option2-Presc-Prednisolone"/>
+  <meta>
+    <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <RequestGroup>
+        <id value="requestgroup-HAS-21-Option2-Presc-Prednisolone"/>
+        <meta>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RequestGroup_requestgroup-HAS-21-Option2-Presc-Prednisolone"> </a><p class="res-header-id"><b>Generated Narrative: RequestGroup requestgroup-HAS-21-Option2-Presc-Prednisolone</b></p><a name="requestgroup-HAS-21-Option2-Presc-Prednisolone"> </a><a name="hcrequestgroup-HAS-21-Option2-Presc-Prednisolone"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fr-requestgroup-for-prescription.html">FrRequestGroupForPrescrption</a></p></div><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-HAS-21-Option2</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>A202506061</blockquote><p><b>selectionBehavior</b>: Exactly One</p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>HAS-21-Option2-1</blockquote><p><b>description</b>: jusqu'à obtenir 3 bandelettes urinaires négatives</p><p><b>resource</b>: <code>#medicationrequest-HAS-21-Option2-Presc-Prednisolone-1</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>HAS-21-Option2-2</blockquote><h3>RelatedActions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style="display: none">*</td><td>HAS-21-Option2-1</td><td>After End</td></tr></table><p><b>resource</b>: <code>#medicationrequest-HAS-21-Option2-Presc-Prednisolone-2</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>HAS-21-Option2-3</blockquote><h3>RelatedActions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style="display: none">*</td><td>HAS-21-Option2-2</td><td>After End</td></tr></table><p><b>resource</b>: <code>#medicationrequest-HAS-21-Option2-Presc-Prednisolone-3</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>HAS-21-Option2-4</blockquote><h3>RelatedActions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style="display: none">*</td><td>HAS-21-Option2-3</td><td>After End</td></tr></table><p><b>resource</b>: <code>#medicationrequest-HAS-21-Option2-Presc-Prednisolone-4</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>HAS-21-Option2-5</blockquote><h3>RelatedActions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style="display: none">*</td><td>HAS-21-Option2-4</td><td>After End</td></tr></table><p><b>resource</b>: <code>#medicationrequest-HAS-21-Option2-Presc-Prednisolone-5</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>HAS-21-Option2-6</blockquote><h3>RelatedActions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style="display: none">*</td><td>HAS-21-Option2-5</td><td>After End</td></tr></table><p><b>resource</b>: <code>#medicationrequest-HAS-21-Option2-Presc-Prednisolone-6</code></p></blockquote></blockquote></div>
+        </text>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-HAS-21-Option2"/>
+        </groupIdentifier>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <action id="A202506061">
+          <selectionBehavior value="exactly-one"/>
+          <action id="HAS-21-Option2-1">
+            <description value="jusqu'à obtenir 3 bandelettes urinaires négatives"/>
+            <resource>
+              <reference value="#medicationrequest-HAS-21-Option2-Presc-Prednisolone-1"/>
+            </resource>
+          </action>
+          <action id="HAS-21-Option2-2">
+            <relatedAction>
+              <actionId value="HAS-21-Option2-1"/>
+              <relationship value="after-end"/>
+            </relatedAction>
+            <resource>
+              <reference value="#medicationrequest-HAS-21-Option2-Presc-Prednisolone-2"/>
+            </resource>
+          </action>
+          <action id="HAS-21-Option2-3">
+            <relatedAction>
+              <actionId value="HAS-21-Option2-2"/>
+              <relationship value="after-end"/>
+            </relatedAction>
+            <resource>
+              <reference value="#medicationrequest-HAS-21-Option2-Presc-Prednisolone-3"/>
+            </resource>
+          </action>
+          <action id="HAS-21-Option2-4">
+            <relatedAction>
+              <actionId value="HAS-21-Option2-3"/>
+              <relationship value="after-end"/>
+            </relatedAction>
+            <resource>
+              <reference value="#medicationrequest-HAS-21-Option2-Presc-Prednisolone-4"/>
+            </resource>
+          </action>
+          <action id="HAS-21-Option2-5">
+            <relatedAction>
+              <actionId value="HAS-21-Option2-4"/>
+              <relationship value="after-end"/>
+            </relatedAction>
+            <resource>
+              <reference value="#medicationrequest-HAS-21-Option2-Presc-Prednisolone-5"/>
+            </resource>
+          </action>
+          <action id="HAS-21-Option2-6">
+            <relatedAction>
+              <actionId value="HAS-21-Option2-5"/>
+              <relationship value="after-end"/>
+            </relatedAction>
+            <resource>
+              <reference value="#medicationrequest-HAS-21-Option2-Presc-Prednisolone-6"/>
+            </resource>
+          </action>
+        </action>
+      </RequestGroup>
+    </resource>
+  </entry>
+</Bundle>

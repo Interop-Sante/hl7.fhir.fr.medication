@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Transformation de PN13 vers FHIR - Guide d'implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"17"}
+    h3,h4,h5,h6{--heading-prefix:"17"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
+</div>
+
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l313">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Transformation de PN13 vers FHIR</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Transformation de PN13 vers FHIR</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#transformation-pn13-vers-fhir" id="markdown-toc-transformation-pn13-vers-fhir">Transformation PN13 vers FHIR</a>    <ul>
+      <li><a href="#la-conciliation" id="markdown-toc-la-conciliation">La conciliation</a></li>
+      <li><a href="#la-prescription" id="markdown-toc-la-prescription">La prescription</a>        <ul>
+          <li><a href="#la-notion-de-prescription-multiligne" id="markdown-toc-la-notion-de-prescription-multiligne">La notion de prescription multiligne</a></li>
+          <li><a href="#ressources-fhir-créées-par-la-transformation-dun-flux-pn13-de-prescription-en-fhir" id="markdown-toc-ressources-fhir-créées-par-la-transformation-dun-flux-pn13-de-prescription-en-fhir">Ressources FHIR créées par la transformation d’un flux PN13 de prescription en FHIR</a></li>
+          <li><a href="#existence-préalable-des-ressources-référencées" id="markdown-toc-existence-préalable-des-ressources-référencées">Existence préalable des ressources référencées</a></li>
+          <li><a href="#processus-de-traduction" id="markdown-toc-processus-de-traduction">Processus de traduction</a></li>
+        </ul>
+      </li>
+      <li><a href="#la-dispensation" id="markdown-toc-la-dispensation">La dispensation</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="transformation-pn13-vers-fhir">Transformation PN13 vers FHIR</h1>
+
+<p>La transformation de messages PN13 en ressources FHIR se fait à partir de <em>ConceptMap</em> indiquant la correspondance entre les éléments XML des messages PN13 et les attributs des ressources FHIR. Elle dépend de certains éléments du message PN13 (ex. nombre d’élément <code class="language-plaintext highlighter-rouge">Composant_prescrit</code>, présence d’élément <code class="language-plaintext highlighter-rouge">Elément_lié</code> pour la prescription) et dans le cas du sens PN13 vers FHIR de la préexistance des instances de ressources pour les ressources référencées (ex. <em>Patient</em>, <em>Practitioner</em>, <em>Encounter</em>).</p>
+
+<h2 id="la-conciliation">La conciliation</h2>
+
+<p>Prévu pour une version ultérieure de ce guide.</p>
+
+<h2 id="la-prescription">La prescription</h2>
+
+<p>La traduction d’un message de prescription PN13 en ressources FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l’aide des ressources <em>ConceptMap</em> fournies dans ce guide.
+La manière dont les ressources FHIR résultantes sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de <code class="language-plaintext highlighter-rouge">_include</code> et de <code class="language-plaintext highlighter-rouge">_revInclude</code>). Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d’une recherche de prescription par identifiant (i.e. élément <code class="language-plaintext highlighter-rouge">groupIndentifier</code> cf. section suivante sur la notion de prescription multiligne) sous forme de <em>Bundle</em> de type <code class="language-plaintext highlighter-rouge">searchset</code>.</p>
+
+<h3 id="la-notion-de-prescription-multiligne">La notion de prescription multiligne</h3>
+
+<p>Il n’existe pas de ressource FHIR pour représenter l’objet prescription. Beaucoup d’implémentations internationales ne traitent que de prescriptions monolignes pour lesquelles la notion de prescription et la notion de ligne de prescription sont confondues dans la ressource FHIR <em>MedicationRequest</em>. Les groupes de travail FHIR au niveau international, interrogés sur la question des prescriptions multilignes, ont fournis des recommandations d’utiliser l’élément <code class="language-plaintext highlighter-rouge">groupIdentifier</code> comme lien entre les différentes lignes de prescritpion d’une prescription multiligne. Une évolution est en cours pour permettre l’interrogation d’un serveur FHIR de manière indiscriminée sur les éléments <code class="language-plaintext highlighter-rouge">identifier</code> et <code class="language-plaintext highlighter-rouge">groupIdentifier</code> afin d’obtenir tous les composants d’une prescription que celle-ci soit monoligne ou multiligne.
+Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivité entre une ligne de prescription et une autre) une ressource <em>RequestGroup</em> en FHIR R4 ou <em>RequestOrchestration</em> en FHIR R5 peut être utilisée pour représenter ces liens. Elle porte également le même ‘groupIdentifier’ que les ressources <em>MedicationRequest</em> qui représentent les lignes de prescription.</p>
+
+<h3 id="ressources-fhir-créées-par-la-transformation-dun-flux-pn13-de-prescription-en-fhir">Ressources FHIR créées par la transformation d’un flux PN13 de prescription en FHIR</h3>
+
+<ul>
+  <li>Optionnellement 1 ressource <em>Bundle</em> d’un type adapté à l’usage parmi message, document et searchset (pour les exemples, le type searchset est utilisé). Selon les implémentations, cette ressource n’est pas nécessaire. Elle est utilisée pour les exemples à des fins de simplification de mise à disposition de toutes les ressources concernées par une prescription dans le même fichier d’exemple.</li>
+  <li>1 à n ressource(s) <em>MedicationRequest</em> suivant le profil <a href="StructureDefinition-fr-inpatient-medicationrequest.html">FrInpatientMedicationRequest</a>.  Chaque ressource <em>MedicationRequest</em> référence:
+    <ul>
+      <li>1 ressource <em>Patient</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Patient</em> référencée n’existe pas déjà).</li>
+      <li>1 ressource <em>Encounter</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Encounter</em> référencée n’existe pas déjà).</li>
+      <li>0 à n ressource(s) <em>Observation</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Observation</em> référencée n’existe pas déjà).</li>
+      <li>1 ressource <em>Practitioner</em> cf. section <strong>Existence préalable des ressources référencées</strong> pour la ressource <em>ConceptMap</em> à utiliser (si la ressource <em>Practitioner</em> référencée n’existe pas déjà).</li>
+      <li>0 à n ressource(s) <em>Medication</em> cf. section <strong>Medication</strong>.</li>
+    </ul>
+  </li>
+  <li>0 à 1 ressource <em>RequestGroup</em> (ou <em>RequestOrchestration</em> en FHIR R5). Son alimentation à partir des données PN13 sera documentée dans un mapping à venir dans une version ultérieure de cet IG.</li>
+</ul>
+
+<h3 id="existence-préalable-des-ressources-référencées">Existence préalable des ressources référencées</h3>
+
+<p>Les “ressources de contexte” qui sont à référencer par la prescription FHIR (i.e. <em>Patient</em>, <em>Practitioner</em>, <em>Encounter</em> et éventuellement <em>Observation</em>) peuvent déjà exister dans le serveur FHIR:</p>
+
+<ul>
+  <li>Si des “ressources de contexte” existent déjà, il convient d’éviter de créer des doublons et d’utiliser les id FHIR de ces ressources existantes afin de créer les références. A cette occasion, un point de vigilance particulier est bien sûr à apporter à l’identification de la ressource Patient en particulier si l’INS n’est pas qualifiée.</li>
+  <li>Si une “ressource de contexte” n’existe pas, il convient:
+    <ul>
+      <li>Si seul l’identifiant est fourni dans le flux PN13, d’utiliser une référence via <code class="language-plaintext highlighter-rouge">identifier</code>.</li>
+      <li>Si des éléments complémentaires sont fournis dans le flux PN13, de créer la ressource correspondante sur le serveur.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="processus-de-traduction">Processus de traduction</h3>
+
+<h4 id="patient">Patient</h4>
+
+<p>Dans le message PN13, à partir des sous-éléments de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Patient</code> identifier si une ressource <em>Patient</em> existe déjà:</p>
+
+<ul>
+  <li>S’il existe une ressource <em>Patient</em> correspondante, récupérer <code class="language-plaintext highlighter-rouge">Patient.id</code> pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.subject.reference</code></li>
+  <li>S’il n’exite pas de ressource <em>Patient</em> correspondante:
+    <ul>
+      <li>Si seul l’élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Patient/Ipp</code> est fourni, l’utiliser pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.subject.identifier.value</code> cf. ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-patient-id-seul-conceptmap].</li>
+      <li><a name="l782">​</a>Si le patient a une INS qualifiée (i.e. présence de l’élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Patient/INS</code> renseigné et élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Patient/Statut_idpat</code> valorisé à <code class="language-plaintext highlighter-rouge">VALI</code>), créer la ressource <em>Patient</em> suivant le profil <a href="$FrCorePatientINS">FRCorePatientINS</a> (éventuellement directement sur le serveur ou dans la ressource <em>Bundle</em> représentant la prescription comme c’est le cas pour les exemples fournis) en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-patient-avec-INS-conceptmap].</li>
+      <li><a name="l806">​</a>Si le patient n’a pas d’INS qualifiée, créer la ressource <em>Patient</em> suivant le profil <a href="$FrCorePatient">FRCorePatient</a> (éventuellement directement sur le serveur ou dans la ressource <em>Bundle</em> représentant la prescription comme c’est le cas pour les exemples fournis) en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-patient-sans-INS-conceptmap].</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="encounter">Encounter</h4>
+
+<p>Dans le message PN13, à partir des sous-éléments de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Séjour</code> identifier si une ressource <em>Encounter</em> existe déjà:</p>
+
+<ul>
+  <li>S’il existe une ressource <em>Encounter</em> correspondante, récupérer <code class="language-plaintext highlighter-rouge">Encounter.id</code> pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.encounter.reference</code></li>
+  <li>S’il n’exite pas de ressource <em>Encounter</em> correspondante, comme seul l’identifiant du séjour est fourni dans le message PN13, utiliser <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Séjour/Id_séjour</code> pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.encounter.identifier.value</code> et éventuellement <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Séjour/DI_séjour</code> s’il est fourni pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.encounter.identifier.system</code> cf. ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-patient-id-seul-conceptmap].</li>
+</ul>
+
+<h4 id="observation">Observation</h4>
+
+<p>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Rens_compl</code> avec un sous élément <code class="language-plaintext highlighter-rouge">Code_rens_compl_1</code>, <code class="language-plaintext highlighter-rouge">Code_rens_compl_2</code>, <code class="language-plaintext highlighter-rouge">Code_rens_compl_3</code> ou <code class="language-plaintext highlighter-rouge">Code_rens_compl_5</code> dans le message PN13 créer une ressource <em>Observation</em> correspondante en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-observation-conceptmap].</p>
+
+<p><strong>Note 1</strong>: Des ressources <em>Observation</em> correspondantes pourraient déjà exister, mais étant donné le peu d’éléments sur lesquels faire la comparaison, il semble plus simple de créer les ressources <em>Observation</em> à chaque fois quitte à avoir quelques doublons.</p>
+
+<p><strong>Note 2</strong>: Les ressources <em>Observation</em> créées pour des sous-éléments <code class="language-plaintext highlighter-rouge">Code_rens_compl_1</code> et <code class="language-plaintext highlighter-rouge">Code_rens_compl_2</code> suivent des profils français nationaux identifiés dans la ressource ConceptMap.</p>
+
+<h4 id="practitioner">Practitioner</h4>
+
+<p>Dans le message PN13, à partir des sous-éléments de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur</code> ou <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur</code> identifier si une ressource <em>Practioner</em> existe déjà:</p>
+
+<ul>
+  <li>S’il existe une ressource <em>Practictioner</em> correspondante, récupérer <code class="language-plaintext highlighter-rouge">Ppractitioner.id</code> pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.requester.reference</code>.</li>
+  <li>S’il n’exite pas de ressource <em>Practitioner</em> correspondante:
+    <ul>
+      <li>Si l’élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur</code> est fourni, l’utiliser pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.requester.identifier.value</code> cf. ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-practitioner-id-seul-conceptmap].</li>
+      <li>Si l’élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant</code> est fourni seul ou avec uniquement <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification</code>, utiliser <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant</code> pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.requester.identifier.value</code>et éventuellement <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification</code> pour alimenter <code class="language-plaintext highlighter-rouge">MedicationRequest.requester.identifier.system</code> en le transformant si nécessaire pour être au format uri accepté par FHIR.</li>
+      <li><a name="l992">​</a>Si d’autres sous éléments de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur</code>sont renseignés en plus de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant</code>et éventuellement <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification</code>, créer la ressource <em>Practitioner</em> suivant le profil <a href="$FrCorePractitioner">FrCorePractitioner</a> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-practitioner-identite-conceptmap].</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="medication">Medication</h4>
+
+<ul>
+  <li>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> dans le message PN13:
+    <ul>
+      <li>si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d’information complémentaires aux informations présentes dans le Référentiel Unique d’Interopérabilité du Médicament, il est possible d’utiliser le code du médicament soit dans <code class="language-plaintext highlighter-rouge">MedicationRequest.medicationCodeableConcept</code>(dans le cas d’un médicament simple) soit dans <code class="language-plaintext highlighter-rouge">Medication.ingredient.itemCodeableConcept</code> (dans le cas d’un médicament composé cf. item 2) ou de créer une ressource <em>Medication</em> pour ce médicament (cf. item suivant sur la création de la ressource <em>Medication</em>);</li>
+      <li>si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d’Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l’information isVehicule…) une ressource <em>Medication</em> <strong>DOIT</strong> être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-medicationnoncompound-conceptmap].</li>
+    </ul>
+  </li>
+  <li>Si le message PN13 comporte plusieurs éléments <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> créer une ressource <em>Medication</em> suivant le profil [fr-medication-compound] en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-medicationcomp-conceptmap] :
+    <ul>
+      <li>qui référence chaque ressource créée à partir des éléments <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</code> via <code class="language-plaintext highlighter-rouge">Medication.ingredient.itemReference.reference</code>;</li>
+      <li>qui indique le code du médicament via <code class="language-plaintext highlighter-rouge">Medication.ingredient.itemCodeableConcept</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="medicationrequest">MedicationRequest</h4>
+
+<p><a name="l1091">​</a>Créer une ressource <em>MedicationRequest</em> suivant le profil <a href="StructureDefinition-fr-inpatient-medicationrequest">FrInpatientMedicationRequest</a> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-medicationrequest-conceptmap] et en référençant les ressources précédemment créées ou identifiées lors des étapes précédentes.</p>
+
+<p>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie</code> ne comportant pas d’élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début</code> valorisé à <code class="language-plaintext highlighter-rouge">4</code>, créer une instance de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction</code> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-dosageinstruction-conceptmap].</p>
+
+<p>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie</code> comportant un élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début</code> valorisé à <code class="language-plaintext highlighter-rouge">4</code> ET un autre élément (utilisation de <code class="language-plaintext highlighter-rouge">Type_événement_début</code> et de <code class="language-plaintext highlighter-rouge">Type_événement2_début</code>), créer une instance de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction</code> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-dosageinstruction-conceptmap].</p>
+
+<p>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie</code> comportant uniquement un (ou deux) élément(s) <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début</code> valorisé(s) à <code class="language-plaintext highlighter-rouge">4</code> utiliser la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-dosageinstruction-conceptmap] pour mettre à jour les instances de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction</code> précédemment créées auxquelles il s’applique.
+<em>Point d’attention:</em> Les <code class="language-plaintext highlighter-rouge">Type_événement_début</code>valorisés à <code class="language-plaintext highlighter-rouge">4</code>avec <code class="language-plaintext highlighter-rouge">Evénement_début</code>de type <code class="language-plaintext highlighter-rouge">1</code>ne sont pas forcément applicable à tous les autres <code class="language-plaintext highlighter-rouge">Elément_posologie</code>. En particulier, dans le cadre de la PCA (Patient Controled Analgesiae), ils ne s’appliquent qu’au bolus.</p>
+
+<h4 id="unité-dose-en-pn13">Unité dose en PN13</h4>
+<p>En PN13, il est possible d’exprimer le concept de dose au niveau de <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite</code> et de faire référence à cette dose dans <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie</code>. Cette possibilité n’existe pas en FHIR.
+Si l’unité référencée en PN13 dans <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Unité</code> est <code class="language-plaintext highlighter-rouge">dose</code> le processus de transformation suivant est à appliquer par ordre de priorité:</p>
+<ol>
+  <li>Si le médicament est un médicament simple:
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">value</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à calculer en multipliant <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Nombre</code> ou <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Débit/Nombre</code> par <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite/Nombre</code></li>
+      <li><code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">system</code> et/ou <code class="language-plaintext highlighter-rouge">unité</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à déterminer à partir de <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite/Unité</code> selon la logique décrite pour <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Unité</code> dans la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-dosageinstruction-conceptmap]</li>
+    </ol>
+  </li>
+  <li>Si le médicament est un médicament composé:
+    <ol>
+      <li>Si l’élément <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Référent_poso</code> est présent et valorisé à <code class="language-plaintext highlighter-rouge">1</code> sur un des composants préscrits:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">value</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à calculer en multipliant <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Nombre</code> ou <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Débit/Nombre</code> par <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite/Nombre</code> du composant prescrit avec <code class="language-plaintext highlighter-rouge">1</code> dans <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Référent_poso</code></li>
+          <li><code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">system</code> et/ou <code class="language-plaintext highlighter-rouge">unité</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à déterminer à partir de <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite/Unité</code> du composant prescrit avec <code class="language-plaintext highlighter-rouge">1</code> dans <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Référent_poso</code> selon la logique décrite pour <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Unité</code> dans la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-dosageinstruction-conceptmap]</li>
+        </ul>
+      </li>
+      <li>Si l’élément <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Véhicule</code> est présent et valorisé à <code class="language-plaintext highlighter-rouge">1</code> sur un des composants préscrits:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">value</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à calculer en multipliant <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Nombre</code> ou <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Débit/Nombre</code> par <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite/Nombre</code> du composant prescrit avec <code class="language-plaintext highlighter-rouge">1</code> dans <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Véhicule</code></li>
+          <li><code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">system</code> et/ou <code class="language-plaintext highlighter-rouge">unité</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à déterminer à partir de <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Quantité_composant_prescrite/Unité</code> du composant prescrit avec <code class="language-plaintext highlighter-rouge">1</code> dans <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Véhicule</code> selon la logique décrite pour <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Unité</code> dans la ressource <em>ConceptMap</em> [PN13-FHIR-prescmed-dosageinstruction-conceptmap]</li>
+        </ul>
+      </li>
+      <li>Si ni l’élément <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Référent_poso</code>, ni l’élément <code class="language-plaintext highlighter-rouge">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Véhicule</code>n’est présent ou qu’aucun des deux n’est valorisé à <code class="language-plaintext highlighter-rouge">1</code> sur un des composants préscrits:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">value</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est égal à <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Quantité/Nombre</code> ou <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Débit/Nombre</code></li>
+          <li><code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">system</code> et/ou <code class="language-plaintext highlighter-rouge">unité</code> dans la quantité ou dans le numérateur de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.doseAndRate</code> est à déterminer en fonction du médicament composé. Par exemple, pour les perfusions, le code EDQM <code class="language-plaintext highlighter-rouge">15005000</code>pour poche.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="requestgroup">RequestGroup</h4>
+
+<p>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié</code> dans le message PN13 faire une instance de <code class="language-plaintext highlighter-rouge">RequestGroup.action</code> d’une ressource <em>RequestGroup</em> unique liant les deux ressources <em>MedicationRequest</em> liées</p>
+
+<p>La définition de la ressource <em>ConceptMap</em> correspondante est prévue pour une version ultérieure du guide.</p>
+
+<h2 id="la-dispensation">La dispensation</h2>
+
+<p>Prévu pour une version ultérieure de ce guide.</p>
+
+<style> ul.new-content { padding-left: 25px !important; } </style>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 17, 2025 15:04+0000">2025-06-17</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/fhir/fr/medication/history.html" target="_blank">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

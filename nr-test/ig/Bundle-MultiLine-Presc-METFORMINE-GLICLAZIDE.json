@@ -1,0 +1,176 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "MultiLine-Presc-METFORMINE-GLICLAZIDE",
+  "meta" : {
+    "profile" : ["https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-Presc-METFORMINE",
+      "meta" : {
+        "profile" : ["https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-METFORMINE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-METFORMINE</b></p><a name=\"medicationrequest-Presc-METFORMINE\"> </a><a name=\"hcmedicationrequest-Presc-METFORMINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FrInpatientMedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400890020275}\">METFORMINE ACC 1000MG CPR</span></p><p><b>subject</b>: <a href=\"Patient/30002\">Patient/30002</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-3002\">Practitioner/smart-Practitioner-3002</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30002</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: at meals, 2</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>0.5 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+          "code" : "3400890020275",
+          "display" : "METFORMINE ACC 1000MG CPR"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/30002"
+      },
+      "authoredOn" : "2025-05-02T14:48:44.461Z",
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-3002"
+      },
+      "groupIdentifier" : {
+        "system" : "https://somehospital.fr/Prescrption-ID",
+        "value" : "Presc-30002"
+      },
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "boundsPeriod" : {
+              "start" : "2025-05-02T14:49:00Z",
+              "end" : "2025-05-31T14:48:59Z"
+            },
+            "frequency" : 2,
+            "periodUnit" : "d",
+            "when" : ["C"]
+          }
+        },
+        "route" : {
+          "coding" : [{
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "20053000",
+            "display" : "Voie orale"
+          }],
+          "text" : "Voie orale"
+        },
+        "doseAndRate" : [{
+          "doseQuantity" : {
+            "value" : 0.5,
+            "unit" : "Comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          }
+        }]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-Presc-GLICLAZIDE",
+      "meta" : {
+        "profile" : ["https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-GLICLAZIDE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-GLICLAZIDE</b></p><a name=\"medicationrequest-Presc-GLICLAZIDE\"> </a><a name=\"hcmedicationrequest-Presc-GLICLAZIDE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-inpatient-medicationrequest-exclusion.html\">FrInpatientMedicationRequestExclusion</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893541364}\">GLICLAZIDE ARW 30MG CPR LM</span></p><p><b>subject</b>: <a href=\"Patient/30002\">Patient/30002</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-3002\">Practitioner/smart-Practitioner-3002</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30002</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: at breakfast, Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>3 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "option",
+      "priority" : "routine",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+          "code" : "3400893541364",
+          "display" : "GLICLAZIDE ARW 30MG CPR LM"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/30002"
+      },
+      "authoredOn" : "2025-05-02T14:48:44.461Z",
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-3002"
+      },
+      "groupIdentifier" : {
+        "system" : "https://somehospital.fr/Prescrption-ID",
+        "value" : "Presc-30002"
+      },
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "boundsPeriod" : {
+              "start" : "2025-05-02T14:49:00Z",
+              "end" : "2025-05-31T14:48:59Z"
+            },
+            "when" : ["CM"]
+          }
+        },
+        "route" : {
+          "coding" : [{
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "20053000",
+            "display" : "Voie orale"
+          }],
+          "text" : "Voie orale"
+        },
+        "doseAndRate" : [{
+          "doseQuantity" : {
+            "value" : 3,
+            "unit" : "Comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          }
+        }]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "RequestGroup",
+      "id" : "requestgroup-Presc-METFORMINE-GLICLAZIDE",
+      "meta" : {
+        "profile" : ["https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RequestGroup_requestgroup-Presc-METFORMINE-GLICLAZIDE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RequestGroup requestgroup-Presc-METFORMINE-GLICLAZIDE</b></p><a name=\"requestgroup-Presc-METFORMINE-GLICLAZIDE\"> </a><a name=\"hcrequestgroup-Presc-METFORMINE-GLICLAZIDE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-requestgroup-for-prescription.html\">FrRequestGroupForPrescrption</a></p></div><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30002</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>subject</b>: <a href=\"Patient/30002\">Patient/30002</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action1</blockquote><p><b>description</b>: En cas d'intolérance digestive</p><h3>RelatedActions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Action2</td><td>Concurrent</td></tr></table><p><b>resource</b>: <code>#medicationrequest-Presc-GLICLAZIDE</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action2</blockquote><p><b>resource</b>: <code>#medicationrequest-Presc-METFORMINE</code></p></blockquote></div>"
+      },
+      "groupIdentifier" : {
+        "system" : "https://somehospital.fr/Prescrption-ID",
+        "value" : "Presc-30002"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "subject" : {
+        "reference" : "Patient/30002"
+      },
+      "action" : [{
+        "id" : "Action1",
+        "description" : "En cas d'intolérance digestive",
+        "relatedAction" : [{
+          "extension" : [{
+            "url" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-action-relationship",
+            "valueCode" : "ALT"
+          }],
+          "actionId" : "Action2",
+          "relationship" : "concurrent"
+        }],
+        "resource" : {
+          "reference" : "#medicationrequest-Presc-GLICLAZIDE"
+        }
+      },
+      {
+        "id" : "Action2",
+        "resource" : {
+          "reference" : "#medicationrequest-Presc-METFORMINE"
+        }
+      }]
+    }
+  }]
+}
