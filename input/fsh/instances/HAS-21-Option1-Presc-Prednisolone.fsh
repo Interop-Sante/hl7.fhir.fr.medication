@@ -1,10 +1,10 @@
-Instance: HAS-L13-1-Presc-Prednisolone
+Instance: HAS-21-Option1-Presc-Prednisolone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-L13-1-Presc-Prednisolone
+* entry[0].resource = medicationrequest-HAS-21-Option1-Presc-Prednisolone
 
-Instance: medicationrequest-HAS-L13-1-Presc-Prednisolone
+Instance: medicationrequest-HAS-21-Option1-Presc-Prednisolone
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -17,7 +17,7 @@ Usage: #inline
 * subject.reference = "Patient/14602"
 * authoredOn = "2025-06-06T14:48:44+02:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-HAS-L13-1"
+* groupIdentifier.value = "Presc-HAS-21-Option1"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction[0].sequence = 1
 * dosageInstruction[=].additionalInstruction.text = "Jusqu'à obtenir 3 bandelettes urinaires négatives"

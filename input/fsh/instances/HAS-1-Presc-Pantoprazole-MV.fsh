@@ -1,10 +1,10 @@
-Instance: HAS-L3-Presc-Pantoprazole-MV
+Instance: HAS-1-Presc-Pantoprazole-MV
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-L3-Presc-Pantoprazole-MV
+* entry[0].resource = medicationrequest-HAS-1-Presc-Pantoprazole-MV
 
-Instance: medicationrequest-HAS-L3-Presc-Pantoprazole-MV
+Instance: medicationrequest-HAS-1-Presc-Pantoprazole-MV
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -17,7 +17,7 @@ Usage: #inline
 * subject.reference = "Patient/14602"
 * authoredOn = "2025-06-04T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-HAS-L3-MV"
+* groupIdentifier.value = "Presc-HAS-1-MV"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-04T15:00:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-06-14T14:49:59Z"
