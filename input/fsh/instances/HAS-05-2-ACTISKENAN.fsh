@@ -16,7 +16,7 @@ Usage: #inline
 * medicationCodeableConcept = $UCD#3400892083926 "ACTISKENAN 10MG GELU"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dodageInstruction.text = "dix milligrammes par jour pendant sept jours"
+* dosageInstruction.text = "dix milligrammes par jour pendant sept jours"
 * dosageInstruction.timing.repeat.boundsDuration.value = 7
 * dosageInstruction.timing.repeat.boundsDuration.unit = "jour"
 * dosageInstruction.timing.repeat.boundsDuration.system = $unitsofmeasure

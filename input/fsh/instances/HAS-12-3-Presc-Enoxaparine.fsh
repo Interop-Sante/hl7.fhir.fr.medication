@@ -16,11 +16,11 @@ Usage: #inline
 * ingredient.strength.numerator.value = 4000
 * ingredient.strength.numerator.unit = "UI"
 * ingredient.strength.numerator.system = $unitsofmeasure
-* ingredient.strength.numerator.unit = #[UI]
+* ingredient.strength.numerator.code = #[UI]
 * ingredient.strength.denominator.value = 0.4
 * ingredient.strength.denominator.unit = "ml"
 * ingredient.strength.denominator.system = $unitsofmeasure
-* ingredient.strength.denominator.unit = #mL
+* ingredient.strength.denominator.code = #mL
 
 Instance: medicationrequest-HAS-12-3-Presc-Enoxaparine
 InstanceOf: FrInpatientMedicationRequest

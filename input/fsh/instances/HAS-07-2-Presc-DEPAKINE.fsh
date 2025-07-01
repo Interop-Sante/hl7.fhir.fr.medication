@@ -16,7 +16,7 @@ Usage: #inline
 * medicationCodeableConcept = $UCD#3400890250078 "DEPAKINE BUV SOL FL40ML"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dodageInstruction.text = "200 mg 3 fois par jour (soit 1 mL  3 fois par jour)"
+* dosageInstruction.text = "200 mg 3 fois par jour (soit 1 mL  3 fois par jour)"
 * dosageInstruction.timing.repeat.frequency = 3
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
