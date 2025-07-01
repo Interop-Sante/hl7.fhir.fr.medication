@@ -15,12 +15,7 @@ Usage: #inline
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00000557 "PARACETAMOL 500 mg gélule"
 * subject.reference = "Patient/14602"
-* authoredOn = "2025-06-05T15:00:00Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-HAS-7-1"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-05T15:00:00Z"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2025-06-15T15:00:00Z"
 * dosageInstruction.asNeededCodeableConcept = $sct#22253000 "douleur"
 * dosageInstruction.asNeededCodeableConcept.text = "Si douleurs"
 * dosageInstruction.maxDosePerPeriod.numerator = 4000 'mg' "mg"

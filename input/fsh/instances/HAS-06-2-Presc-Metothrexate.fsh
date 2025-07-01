@@ -15,12 +15,7 @@ Usage: #inline
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00003397 "METHOTREXATE 10 mg comprimé"
 * subject.reference = "Patient/14602"
-* authoredOn = "2025-06-04T14:47:12Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* groupIdentifier.value = "Presc-HAS-6-2"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.timing.repeat.boundsPeriod.start = "2025-06-04T15:00:00Z"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2021-06-04T14:59:59Z"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #wk
