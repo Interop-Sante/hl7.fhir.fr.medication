@@ -15,10 +15,12 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000091620 "tinzaparine sodique"
 * ingredient.strength.numerator.value = 10000
 * ingredient.strength.numerator.unit = "UI anti-Xa"
+* ingredient.strength.numerator.system = $unitsofmeasure
+* ingredient.strength.numerator.unit = #[anti'Xa'U]
 * ingredient.strength.denominator.value = 0.5
-* ingredient.strenght.denominator.unit = "ml"
-* ingredient.strenght.denominator.system = $unitsofmeasure
-* ingredient.strenght.denominator.unit = #mL
+* ingredient.strength.denominator.unit = "ml"
+* ingredient.strength.denominator.system = $unitsofmeasure
+* ingredient.strength.denominator.unit = #mL
 
 Instance: medicationrequest-HAS-3-Presc-Tinzaparine
 InstanceOf: FrInpatientMedicationRequest
@@ -32,10 +34,12 @@ Usage: #inline
 * medicationReference.reference = "#medication-HAS-3-Presc-Tinzaparine"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dosageInstruction.additionalInstruction = "soit 170UI anti-Xa /kg"
+* dosageInstruction.additionalInstruction.text = "soit 170UI anti-Xa /kg"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.route = $EDQM#20066000 "Voie sous-cutanée"
 * dosageInstruction.doseAndRate.doseQuantity.value = 12000
 * dosageInstruction.doseAndRate.doseQuantity.unit = "UI anti-Xa"
+* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
+* dosageInstruction.doseAndRate.doseQuantity.code = #[anti'Xa'U]

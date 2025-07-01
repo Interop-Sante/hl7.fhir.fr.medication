@@ -16,7 +16,7 @@ Usage: #inline
 * medicationCodeableConcept = $Medicabase#MV00001070 "FLUINDIONE 20 mg comprimé quadrisécable"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dodageInstruction.text = "3/4 cpr par jour (trois-quart de comprimé)"
+* dosageInstruction.text = "3/4 cpr par jour (trois-quart de comprimé)"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d

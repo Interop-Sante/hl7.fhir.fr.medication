@@ -15,10 +15,12 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000090152 "énoxaparine sodique"
 * ingredient.strength.numerator.value = 4000
 * ingredient.strength.numerator.unit = "UI"
+* ingredient.strength.numerator.system = $unitsofmeasure
+* ingredient.strength.numerator.unit = #[UI]
 * ingredient.strength.denominator.value = 0.4
-* ingredient.strenght.denominator.unit = "ml"
-* ingredient.strenght.denominator.system = $unitsofmeasure
-* ingredient.strenght.denominator.unit = #mL
+* ingredient.strength.denominator.unit = "ml"
+* ingredient.strength.denominator.system = $unitsofmeasure
+* ingredient.strength.denominator.unit = #mL
 
 Instance: medicationrequest-HAS-12-3-Presc-Enoxaparine
 InstanceOf: FrInpatientMedicationRequest
