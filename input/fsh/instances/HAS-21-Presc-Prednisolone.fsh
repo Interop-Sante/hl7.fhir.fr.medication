@@ -1,10 +1,10 @@
-Instance: HAS-21-Option1-Presc-Prednisolone
+Instance: HAS-21-Presc-Prednisolone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-21-Option1-Presc-Prednisolone
+* entry[0].resource = medicationrequest-HAS-21-Presc-Prednisolone
 
-Instance: medicationrequest-HAS-21-Option1-Presc-Prednisolone
+Instance: medicationrequest-HAS-21-Presc-Prednisolone
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
