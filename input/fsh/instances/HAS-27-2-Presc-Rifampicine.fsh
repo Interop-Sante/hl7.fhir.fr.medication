@@ -16,9 +16,7 @@ Usage: #inline
 * medicationCodeableConcept = $Medicabase#MV00002500 "RIFAMPICINE 300 mg en gélule"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-// est-ce que le MORN est nécessaire si dit avant le petit déjeuner et ça pose la quetion à quel when s'applique l'offset
-* dosageInstruction.timing.repeat.when[0] = #MORN
-* dosageInstruction.timing.repeat.when[+] = #ACM
+* dosageInstruction.timing.repeat.when = #ACM
 * dosageInstruction.timing.repeat.offset = 30
 * dosageInstruction.doseAndRate.doseQuantity = 2 $EDQM#15012000 "Gélule ou capsule molle"
 
