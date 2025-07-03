@@ -16,9 +16,9 @@ Usage: #inline
 * medicationCodeableConcept = $Medicabase#MV00002414 "PARACETAMOL 1000 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-// count ne marche pas parce que ça n'embarque pas le fait que c'est par jour"
-* dosageInstruction.timing.repeat.count = 3
-* dosageInstruction.timing.repeat.frequencyMax = 1
-* dosageInstruction.timing.repeat.period = 4
-* dosageInstruction.timing.repeat.periodUnit = #h
+* dosageInstruction.timing.repeat.frequency = 3
+* dosageInstruction.timing.repeat.period = 1
+* dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.doseAndRate.doseQuantity = 1 $EDQM#15054000 "Comprimé"
+* maxDosePerPeriod.numerator = 1 $EDQM#15054000 "Comprimé"
+* maxDosePerPeriod.denominator = 4 'h' "heure"
