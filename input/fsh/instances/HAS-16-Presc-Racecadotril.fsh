@@ -17,8 +17,7 @@ Usage: #inline
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.patientInstruction = "A poursuivre tant que la diarrhée persiste"
-* dosageInstruction.timing.repeat.durationMax = 7
-* dosageInstruction.timing.repeat.durationUnit = #d
+* dosageInstruction.timing.repeat.countMax = 21
 * dosageInstruction.timing.repeat.frequency = 3
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
