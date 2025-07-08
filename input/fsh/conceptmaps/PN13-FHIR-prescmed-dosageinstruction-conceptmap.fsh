@@ -28,10 +28,12 @@ Usage: #definition
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.frequency
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.timing.period
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Fréquence
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.period
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.timing.periodUnit
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Fréquence
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.periodUnit
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "la terminologie locale utilisée dans le message PN13 est à traduire entre timing.frequency, timing.period et timing.periodUnit"
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_échelle
@@ -1636,7 +1638,8 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "dose"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.value
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Débit/Nombre
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.value
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
