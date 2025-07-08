@@ -1630,15 +1630,13 @@ Usage: #definition
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
-* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Débit/Nombre1
-* group[=].element[=].target[0].equivalence = #disjoint
+* group[=].element[=].target[+].equivalence = #disjoint
 * group[=].element[=].target[=].comment = "Le débit maximal n'est pas mappé en FHIR"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "4"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Evt_structuré_début/Evénement_param_poso_cond
 * group[=].element[=].target[=].dependsOn[=].value = "4"
-* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Débit/Nombre2
-* group[=].element[=].target[0].equivalence = #disjoint
+* group[=].element[=].target[+].equivalence = #disjoint
 * group[=].element[=].target[=].comment = "Valable uniquement pour les versions de PN13 antérieures à la v3.3. Le débit maximal n'est pas mappé en FHIR"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "4"
@@ -1660,7 +1658,6 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.doseAndRate.rateQuantity.system
 * group[=].element[=].target[=].product[=].value = "http://unitsofmeasure.org"
-* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Débit/Unité1
-* group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.unit
+* group[=].element[=].target[+].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.unit
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Si Débit/Unité n'est pas exprimé en UCUM, il est recommander, si possible, de la traduire en UCUM (le cas échéant en utilisant le mapping Free Set CIO-DC UNITE) et d'utiliser rateQuantity.code ou de référencer la terminologie utilisée dans rateQuantity.system. Si ce n'est pas possible, doseQuantity.unit peut être utilisé."
