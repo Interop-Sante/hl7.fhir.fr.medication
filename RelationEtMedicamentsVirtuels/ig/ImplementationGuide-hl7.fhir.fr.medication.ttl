@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "hl7.fhir.fr.medication"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><a name=\"hl7.fhir.fr.medication-en-US\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/ImplementationGuide/hl7.fhir.fr.medication"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-12T17:48:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-07-08T15:57:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -44,7 +44,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.3.0" ]
+     fhir:version [ fhir:v "6.5.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1786,6 +1786,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medicationrequest" ]
+       ] ;
+       fhir:name [ fhir:v "FrMedicationRequest" ] ;
+       fhir:description [ fhir:v "French medication request profile" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -1906,6 +1924,780 @@
        fhir:example [
          a fhir:boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-1-Presc-Pantoprazole-DC> ;
+         fhir:reference [ fhir:v "Bundle/HAS-1-Presc-Pantoprazole-DC" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-1-Presc-Pantoprazole-DC" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-1-Presc-Pantoprazole-MV> ;
+         fhir:reference [ fhir:v "Bundle/HAS-1-Presc-Pantoprazole-MV" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-1-Presc-Pantoprazole-MV" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-10-Presc-Methotrexate> ;
+         fhir:reference [ fhir:v "Bundle/HAS-10-Presc-Methotrexate" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-10-Presc-Methotrexate" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-11-1-Presc-VitamineD> ;
+         fhir:reference [ fhir:v "Bundle/HAS-11-1-Presc-VitamineD" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-11-1-Presc-VitamineD" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-11-2-Presc-EVRA> ;
+         fhir:reference [ fhir:v "Bundle/HAS-11-2-Presc-EVRA" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-11-2-Presc-EVRA" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-12-1-Presc-BEPANTHEN> ;
+         fhir:reference [ fhir:v "Bundle/HAS-12-1-Presc-BEPANTHEN" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-12-1-Presc-BEPANTHEN" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-12-2-Presc-Methotrexate> ;
+         fhir:reference [ fhir:v "Bundle/HAS-12-2-Presc-Methotrexate" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-12-2-Presc-Methotrexate" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-12-3-Presc-Enoxaparine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-12-3-Presc-Enoxaparine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-12-3-Presc-Enoxaparine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-13-Presc-Desloratadine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-13-Presc-Desloratadine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-13-Presc-Desloratadine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-14-1-Presc-CODOLIPRANE> ;
+         fhir:reference [ fhir:v "Bundle/HAS-14-1-Presc-CODOLIPRANE" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-14-1-Presc-CODOLIPRANE" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-14-2-Presc-Betamethasone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-14-2-Presc-Betamethasone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-14-2-Presc-Betamethasone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-15-Presc-Morphine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-15-Presc-Morphine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-15-Presc-Morphine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-16-Presc-Racecadotril> ;
+         fhir:reference [ fhir:v "Bundle/HAS-16-Presc-Racecadotril" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-16-Presc-Racecadotril" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-17-Presc-Budesonide> ;
+         fhir:reference [ fhir:v "Bundle/HAS-17-Presc-Budesonide" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-17-Presc-Budesonide" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-17-Presc-Budesonide-MV> ;
+         fhir:reference [ fhir:v "Bundle/HAS-17-Presc-Budesonide-MV" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-17-Presc-Budesonide-MV" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-18-Presc-Budesonide-MV> ;
+         fhir:reference [ fhir:v "Bundle/HAS-18-Presc-Budesonide-MV" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-18-Presc-Budesonide-MV" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-19-Presc-Paracetamol> ;
+         fhir:reference [ fhir:v "Bundle/HAS-19-Presc-Paracetamol" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-19-Presc-Paracetamol" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-2-Presc-Fluindione> ;
+         fhir:reference [ fhir:v "Bundle/HAS-2-Presc-Fluindione" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-2-Presc-Fluindione" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-20-Presc-Hydrocortisone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-20-Presc-Hydrocortisone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-20-Presc-Hydrocortisone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-21-Presc-Prednisolone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-21-Presc-Prednisolone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-21-Presc-Prednisolone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-22-Presc-Prednisolone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-22-Presc-Prednisolone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-22-Presc-Prednisolone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-23-1-Presc-Fluindione> ;
+         fhir:reference [ fhir:v "Bundle/HAS-23-1-Presc-Fluindione" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-23-1-Presc-Fluindione" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-23-2-Presc-Amiodarone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-23-2-Presc-Amiodarone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-23-2-Presc-Amiodarone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-24-Topiramate> ;
+         fhir:reference [ fhir:v "Bundle/HAS-24-Topiramate" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-24-Topiramate" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-25-NOVORAPID> ;
+         fhir:reference [ fhir:v "Bundle/HAS-25-NOVORAPID" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-25-NOVORAPID" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-26-Diazepam> ;
+         fhir:reference [ fhir:v "Bundle/HAS-26-Diazepam" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-26-Diazepam" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-27-1-Metformine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-27-1-Metformine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-27-1-Metformine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-27-2-Rifampicine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-27-2-Rifampicine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-27-2-Rifampicine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-28-Presc-Enoxaparine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-28-Presc-Enoxaparine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-28-Presc-Enoxaparine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-29-Presc-Enoxaparine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-29-Presc-Enoxaparine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-29-Presc-Enoxaparine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-3-Presc-Tinzaparine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-3-Presc-Tinzaparine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-3-Presc-Tinzaparine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-30-1-Presc-Hydrocortisone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-30-1-Presc-Hydrocortisone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-30-1-Presc-Hydrocortisone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-30-2-Presc-Cetirizine> ;
+         fhir:reference [ fhir:v "Bundle/HAS-30-2-Presc-Cetirizine" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-30-2-Presc-Cetirizine" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-4-1-Presc-Paracetamol> ;
+         fhir:reference [ fhir:v "Bundle/HAS-4-1-Presc-Paracetamol" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-4-1-Presc-Paracetamol" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-4-2-Presc-DAFALGANCODEINE> ;
+         fhir:reference [ fhir:v "Bundle/HAS-4-2-Presc-DAFALGANCODEINE" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-4-2-Presc-DAFALGANCODEINE" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-5-1-Presc-Fluindione> ;
+         fhir:reference [ fhir:v "Bundle/HAS-5-1-Presc-Fluindione" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-5-1-Presc-Fluindione" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-5-2-Presc-ACTISKENAN> ;
+         fhir:reference [ fhir:v "Bundle/HAS-5-2-Presc-ACTISKENAN" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-5-2-Presc-ACTISKENAN" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-6-1-Presc-Methotrexate> ;
+         fhir:reference [ fhir:v "Bundle/HAS-6-1-Presc-Methotrexate" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-6-1-Presc-Methotrexate" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-6-2-Presc-Methotrexate> ;
+         fhir:reference [ fhir:v "Bundle/HAS-6-2-Presc-Methotrexate" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-6-2-Presc-Methotrexate" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-7-Presc-Paracetamol> ;
+         fhir:reference [ fhir:v "Bundle/HAS-7-Presc-Paracetamol" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-7-Presc-Paracetamol" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-8-1-Presc-Betamethasone> ;
+         fhir:reference [ fhir:v "Bundle/HAS-8-1-Presc-Betamethasone" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-8-1-Presc-Betamethasone" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-8-2-Presc-Paracetamol> ;
+         fhir:reference [ fhir:v "Bundle/HAS-8-2-Presc-Paracetamol" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-8-2-Presc-Paracetamol" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Bundle/HAS-9-Presc-Ropinirole> ;
+         fhir:reference [ fhir:v "Bundle/HAS-9-Presc-Ropinirole" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-9-Presc-Ropinirole" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
        ]
      ] [
        fhir:extension ( [

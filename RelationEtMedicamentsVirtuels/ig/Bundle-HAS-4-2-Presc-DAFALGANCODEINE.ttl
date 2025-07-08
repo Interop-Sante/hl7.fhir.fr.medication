@@ -1,0 +1,125 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/fhir/fr/medication/Bundle/HAS-4-2-Presc-DAFALGANCODEINE> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HAS-4-2-Presc-DAFALGANCODEINE"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE</b></p><a name=\"medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE\"> </a><a name=\"hcmedicationrequest-HAS-4-2-Presc-DAFALGANCODEINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FrInpatientMedicationRequest</a>, <a href=\"StructureDefinition-fr-inpatient-medicationrequest-exclusion.html\">FrInpatientMedicationRequestExclusion</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891479287}\">DAFALGAN CODEINE CPR</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>patientInstruction</b>: Selon l'intensité des douleurs. STOP SI NAUSEE</p><p><b>timing</b>: Once per 12 hours</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1-2 Comprimé</td></tr></table><p><b>maxDosePerPeriod</b>: 4 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span>/1 Jour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p><p><b>maxDosePerAdministration</b>: 2 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></p></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "option" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/UCD"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "3400891479287" ] ;
+           fhir:display [ fhir:v "DAFALGAN CODEINE CPR" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/fhir/fr/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:requester [
+         fhir:identifier [
+           fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "899999999999" ]
+         ]
+       ] ;
+       fhir:note ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "LIPRESCTXT"
+           ]
+         ] ) ;
+         fhir:text [ fhir:v "Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:patientInstruction [ fhir:v "Selon l'intensité des douleurs. STOP SI NAUSEE" ] ;
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Duration ;
+               fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "jour" ] ;
+               fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "d" ]
+             ] ;
+             fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+             fhir:period [ fhir:v "12"^^xsd:decimal ] ;
+             fhir:periodUnit [ fhir:v "h" ]
+           ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Range ;
+             fhir:low [
+               fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "Comprimé" ] ;
+               fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "15054000" ]
+             ] ;
+             fhir:high [
+               fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "Comprimé" ] ;
+               fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "15054000" ]
+             ]
+           ]
+         ] ) ;
+         fhir:maxDosePerPeriod [
+           fhir:numerator [
+             fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Jour" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "d" ]
+           ]
+         ] ;
+         fhir:maxDosePerAdministration [
+           fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "Comprimé" ] ;
+           fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "15054000" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

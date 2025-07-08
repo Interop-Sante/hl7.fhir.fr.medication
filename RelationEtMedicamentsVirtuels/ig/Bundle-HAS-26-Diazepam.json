@@ -1,0 +1,69 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "HAS-26-Diazepam",
+  "meta" : {
+    "profile" : ["https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-HAS-26-Diazepam",
+      "meta" : {
+        "profile" : ["https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-26-Diazepam\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-26-Diazepam</b></p><a name=\"medicationrequest-HAS-26-Diazepam\"> </a><a name=\"hcmedicationrequest-HAS-26-Diazepam\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FrInpatientMedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://BogusSystemMedicabase.com MV00000531}\">DIAZEPAM 10 mg (VALIUM) Comprimé bisécable</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: DIAZEPAM 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation​</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 6 hours</p><p><b>asNeeded</b>: <span title=\"Codes:{http://snomed.info/sct 24199005}\">Si agitation</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://BogusSystemMedicabase.com",
+          "code" : "MV00000531",
+          "display" : "DIAZEPAM 10 mg (VALIUM) Comprimé bisécable"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/14602"
+      },
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-71482713"
+      },
+      "note" : [{
+        "extension" : [{
+          "url" : "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope",
+          "valueCode" : "LIPRESCTXT"
+        }],
+        "text" : "Prescription textuelle: DIAZEPAM 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation​"
+      }],
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "frequency" : 1,
+            "period" : 6,
+            "periodUnit" : "h"
+          }
+        },
+        "asNeededCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "24199005",
+            "display" : "agitation"
+          }],
+          "text" : "Si agitation"
+        },
+        "doseAndRate" : [{
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          }
+        }]
+      }]
+    }
+  }]
+}
