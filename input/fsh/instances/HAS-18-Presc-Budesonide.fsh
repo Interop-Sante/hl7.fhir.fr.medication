@@ -2,7 +2,7 @@ Instance: HAS-18-Presc-Budesonide-MV
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medication-HAS-18-Presc-Budesonide
+* entry[0].resource = medication-HAS-18-Presc-BudesonideComp
 * entry[+].resource = medicationrequest-HAS-18-Presc-Budesonide
 
 Instance: medication-HAS-18-Presc-BudesonideComp
@@ -16,7 +16,7 @@ Usage: #inline
 * ingredient[+].itemCodeableConcept = $Medicabase#MV00004231 "Budésonide 1 mg/2 ml (0,5 mg/ml) suspension pour inhalation par nébuliseur en récipient unidose"
 * ingredient[=].strength.numerator = 2 $unitsofmeasure#mL "ml"
 
-Instance: medicationrequest-HAS-18-Presc-Budesonide-MV
+Instance: medicationrequest-HAS-18-Presc-Budesonide
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -25,7 +25,7 @@ Usage: #inline
 * priority = #routine
 * note[0].text = "Prescription textuelle: Préparation pour nébuliseur ultrasonique: 3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
-* medicationReference.reference = "#medication-HAS-18-Presc-BudesonideComp-MV"
+* medicationReference.reference = "#medication-HAS-18-Presc-BudesonideComp"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2023-03-26"

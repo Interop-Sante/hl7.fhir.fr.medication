@@ -20,5 +20,5 @@ Usage: #inline
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.doseAndRate.doseQuantity = 1 $EDQM#15054000 "Comprimé"
-* maxDosePerPeriod.numerator = 1 $EDQM#15054000 "Comprimé"
-* maxDosePerPeriod.denominator = 4 'h' "heure"
+* dosageInstruction.maxDosePerPeriod.numerator = 1 $EDQM#15054000 "Comprimé"
+* dosageInstruction.maxDosePerPeriod.denominator = 4 'h' "heure"

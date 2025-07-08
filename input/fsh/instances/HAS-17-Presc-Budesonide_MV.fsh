@@ -25,7 +25,7 @@ Usage: #inline
 * code.text = "3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur"
 * ingredient[0].itemCodeableConcept = $SMS#100000078023 "eau pour préparations injectables"
 * ingredient[=].strength.numerator = 3 $unitsofmeasure#mL "ml"
-* ingredient[+].itemReference = "#medication-HAS-17-Presc-Budesonide-MV"
+* ingredient[+].itemReference.reference = "#medication-HAS-17-Presc-Budesonide-MV"
 * ingredient[=].strength.numerator = 2 $unitsofmeasure#mL "ml"
 
 Instance: medicationrequest-HAS-17-Presc-Budesonide-MV

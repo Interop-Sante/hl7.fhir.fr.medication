@@ -4,7 +4,7 @@ Usage: #example
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-7-Presc-Paracetamol
 
-Instance: medicationrequest-HAS-1-Presc-Paracetamol
+Instance: medicationrequest-HAS-7-Presc-Paracetamol
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"

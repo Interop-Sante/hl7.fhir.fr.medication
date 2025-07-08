@@ -18,10 +18,10 @@ Usage: #inline
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction[0].additionalInstruction.text = "Si glycémie entre 1,5 et 2 g/L"
 * dosageInstruction[=].timing.repeat.when = #AC
-* dosageInstruction[=].doseAndRate.doseQuantity = 6 "U"
+* dosageInstruction[=].doseAndRate.doseQuantity = 6 $unitsofmeasure#[U] "U"
 * dosageInstruction[+].additionalInstruction.text = "Si glycémie entre 2 et 2,5 g/L"
 * dosageInstruction[=].timing.repeat.when = #AC
-* dosageInstruction[=].doseAndRate.doseQuantity = 8 "U"
+* dosageInstruction[=].doseAndRate.doseQuantity = 8 $unitsofmeasure#[U] "U"
 * dosageInstruction[+].additionalInstruction.text = "Si glycémie supérieure à 2,5 g/L"
 * dosageInstruction[=].timing.repeat.when = #AC
-* dosageInstruction[=].doseAndRate.doseQuantity = 10 "U"
+* dosageInstruction[=].doseAndRate.doseQuantity = 10 $unitsofmeasure#[U] "U"
