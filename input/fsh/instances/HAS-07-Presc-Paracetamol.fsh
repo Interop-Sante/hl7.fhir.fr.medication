@@ -1,17 +1,17 @@
-Instance: HAS-7-1-Presc-Paracetamol
+Instance: HAS-7-Presc-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-7-1-Presc-Paracetamol
+* entry[0].resource = medicationrequest-HAS-7-Presc-Paracetamol
 
-Instance: medicationrequest-HAS-7-1-Presc-Paracetamol
+Instance: medicationrequest-HAS-1-Presc-Paracetamol
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: PARACETAMOL 500 mg gélule - Si douleur - dose max/prise de 1000 milligramme - 4000 milligramme maximum par jour"
+* note[0].text = "Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00000557 "PARACETAMOL 500 mg gélule"
 * subject.reference = "Patient/14602"

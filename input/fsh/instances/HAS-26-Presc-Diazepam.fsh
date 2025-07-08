@@ -22,4 +22,3 @@ Usage: #inline
 * dosageInstruction.asNeededCodeableConcept = $sct#24199005 "agitation"
 * dosageInstruction.asNeededCodeableConcept.text = "Si agitation"
 * dosageInstruction.doseAndRate.doseQuantity = 1 $EDQM#15054000 "Comprimé"
-

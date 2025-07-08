@@ -11,7 +11,7 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: FLUINDIONE 20 mg comprimé quadrisécable : 0,25 comprimé par jour"
+* note[0].text = "Prescription textuelle: FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00001070 "FLUINDIONE 20 mg comprimé quadrisécable"
 * subject.reference = "Patient/14602"
@@ -19,4 +19,4 @@ Usage: #inline
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.doseAndRate.doseQuantity = 0.25 $EDQM#15054000 "Comprimé"
+* dosageInstruction.doseAndRate.doseQuantity = 0.5 $EDQM#15054000 "Comprimé"

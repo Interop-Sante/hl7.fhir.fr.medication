@@ -11,7 +11,7 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: METHOTREXATE  10 mg comprimé : 1,5 comprimé  1 fois par semaine"
+* note[0].text = "Prescription textuelle: METHOTREXATE  10 mg comprimé (sécable) : 2 comprimés, 1 fois par semaine, le mardi"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00003397 "METHOTREXATE 10 mg comprimé"
 * subject.reference = "Patient/14602"
@@ -19,7 +19,8 @@ Usage: #inline
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #wk
-* dosageInstruction.doseAndRate.doseQuantity.value = 1.5
+* dosageInstruction.timing.repeat.dayOfWeek = #tue
+* dosageInstruction.doseAndRate.doseQuantity.value = 2
 * dosageInstruction.doseAndRate.doseQuantity.unit = "comprimé"
 * dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000

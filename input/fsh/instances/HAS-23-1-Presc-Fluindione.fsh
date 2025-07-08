@@ -24,7 +24,7 @@ Usage: #inline
 * dosageInstruction[=].timing.repeat.period = 2
 * dosageInstruction[=].timing.repeat.periodUnit = #d
 * dosageInstruction[=].doseAndRate.doseQuantity = 0.5 $EDQM#15054000 "Comprimé"
-* dosageInstruction[+].sequence = 2
+* dosageInstruction[+].sequence = 1
 * dosageInstruction[=].additionalInstruction.text = "le second jour du cycle de 2 jours"
 * dosageInstruction[=].timing.repeat.boundsDuration = 1 'mo' "mois"
 * dosageInstruction[=].timing.repeat.frequency = 1

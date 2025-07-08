@@ -25,9 +25,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseRange.low.unit = "comprimé"
 * dosageInstruction.doseAndRate.doseRange.low.system = $EDQM
 * dosageInstruction.doseAndRate.doseRange.low.code = #15054000
-* dosageInstruction.doseAndRate.doseRange.high.value = 2
-* dosageInstruction.doseAndRate.doseRange.high.unit = "comprimé"
-* dosageInstruction.doseAndRate.doseRange.high.system = $EDQM
-* dosageInstruction.doseAndRate.doseRange.high.code = #15054000
+//* dosageInstruction.doseAndRate.doseRange.high.value = 2
+//* dosageInstruction.doseAndRate.doseRange.high.unit = "comprimé"
+//* dosageInstruction.doseAndRate.doseRange.high.system = $EDQM
+//* dosageInstruction.doseAndRate.doseRange.high.code = #15054000
 * dosageInstruction.maxDosePerPeriod.numerator = 8 $EDQM#15054000 "comprimé"
 * dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
+* dosageInstruction.maxDosePerAdministration = 2 $EDQM#15054000 "comprimé"
