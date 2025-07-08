@@ -92,7 +92,8 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
 * group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].product[=].value = "1"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.timing.repeat.period
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_durée
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.period
 * group[=].element[=].target[=].equivalence = #equal
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_filtre/Frq_filtreVal_1_J
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.dayOfWeek
@@ -183,7 +184,8 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
 * group[=].element[=].target[=].product[0].property = $FhirDosage#Dosage.timing.repeat.frequency
 * group[=].element[=].target[=].product[=].value = "1"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.timing.repeat.frequency
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_multiplicité
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.timing.repeat.frequency
 * group[=].element[=].target[=].equivalence = #equal
 * group[+].element[0].code = $PN13Schema-Posologie#Elément_posologie/Fréquence_structurée/Frq_libellé
 * group[=].element[=].target[0].code = $FhirDosage#Dosage.text
@@ -1200,7 +1202,8 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "dose"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.value
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Nombre
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.value
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Type_événement_début
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
@@ -1348,7 +1351,8 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "dose"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.code
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.doseQuantity.code
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité@Phast-nomenclature
 * group[=].element[=].target[=].dependsOn[=].value = "EDQM"
@@ -1658,7 +1662,8 @@ Usage: #definition
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}/{Valeur différente de 4}"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema-Posologie#Elément_posologie/Quantité/Unité
 * group[=].element[=].target[=].dependsOn[=].value = "dose"
-* group[=].element[=].target[+].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.code
+* group[=].element[+].code = $PN13Schema-Posologie#Elément_posologie/Débit/Unité
+* group[=].element[=].target[0].code = $FhirDosage#Dosage.doseAndRate.rateQuantity.code
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema-Posologie#Elément_posologie/Débit/Unité@Phast-nomenclature
 * group[=].element[=].target[=].dependsOn[=].value = "UCUM"

@@ -383,7 +383,8 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.medicationReference
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Voir les ressources concepMap PN13-FHIR-Prescmedi-medicationComp-conceptmap ou PN13-FHIR-Prescmedi-medicationNonComp-conceptmap pour le détail du mapping de cet élément"
-* group[=].element[=].target[+].code = #MedicationRequest.medicationCodeableConcept
+* group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit
+* group[=].element[=].target[0].code = #MedicationRequest.medicationCodeableConcept
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Si Composant_prescrit ne comporte pas d'information complémentaire à l'enregistrement du RUIM, medicationCodeableConcept peut être utilisé"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie
