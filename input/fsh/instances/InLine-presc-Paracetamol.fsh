@@ -1,4 +1,4 @@
-Instance: InLine-presc-Paracetamol
+Instance: InLine-presc-Paracetamol1
 InstanceOf: FrInpatientMedicationRequest
 Usage: #example
 * status = #active

@@ -23,7 +23,7 @@ Usage: #inline
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-08-11T18:21:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-17T18:20:59Z"
 * dosageInstruction.timing.repeat.frequencyMax = 1
-* dosageInstruction.timing.repeat.periodMax = 4
+* dosageInstruction.timing.repeat.period = 4
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.asNeededCodeableConcept = $sct#22253000 "douleur"
 * dosageInstruction.asNeededCodeableConcept.text = "Si douleurs"

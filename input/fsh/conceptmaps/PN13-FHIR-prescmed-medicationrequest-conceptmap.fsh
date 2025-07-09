@@ -131,11 +131,11 @@ Usage: #definition
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Libellé_élément_prescr
 * group[=].element[=].target[0].code = #MedicationRequest.note.text
 * group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Le texte est à préfixer par `Libellé textuel du médicament:`"
+* group[=].element[=].target[=].comment = "Le texte est à préfixer par `Prescription textuelle:`"
 * group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
 * group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
 * group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
-* group[=].element[=].target[=].product[=].value = "LIPRESCLIBMED"
+* group[=].element[=].target[=].product[=].value = "LIPRESCTXT"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Cré_arr_mod_val
 * group[=].element[=].target[0].equivalence = #unmatched
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Urgent
@@ -383,7 +383,8 @@ Usage: #definition
 * group[=].element[=].target[0].code = #MedicationRequest.medicationReference
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Voir les ressources concepMap PN13-FHIR-Prescmedi-medicationComp-conceptmap ou PN13-FHIR-Prescmedi-medicationNonComp-conceptmap pour le détail du mapping de cet élément"
-* group[=].element[=].target[+].code = #MedicationRequest.medicationCodeableConcept
+* group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit
+* group[=].element[=].target[0].code = #MedicationRequest.medicationCodeableConcept
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[=].target[=].comment = "Si Composant_prescrit ne comporte pas d'information complémentaire à l'enregistrement du RUIM, medicationCodeableConcept peut être utilisé"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie

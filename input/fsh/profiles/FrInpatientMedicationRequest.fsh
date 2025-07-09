@@ -18,6 +18,7 @@ Description: "French inpatient medication request profile"
 * medicationCodeableConcept.extension contains fr-medication-to-dispense named toDispense 0..1
 * medicationCodeableConcept.extension[toDispense] ^short = "Medication to be dispensed"
 * medicationCodeableConcept.extension[toDispense] ^definition = "If the value is negative, the patient already has the medication, no dispense is necessary"
+* medicationCodeableConcept from fr-medication-code (required) 
 * subject only Reference($FrCorePatient)
 * encounter only Reference($FrCoreEncounter)
 * supportingInformation.extension contains fr-uf-role named UFRole 0..1

@@ -2,7 +2,7 @@
 
 ## PARACETAMOL MYLAN CONSEIL 1000 MG en cas de douleur
 
-Cette prescription PN13 est traduite en FHIR dans l'instance [prescription-UCD-paracetamol-exemple](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-prescription-UCD-paracetamol-exemple.html).
+Cette prescription PN13 est traduite en FHIR dans l'instance [TradPN13FHIR-Presc-Paracetamol](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-Paracetamol.html).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -116,8 +116,8 @@ A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pen
 ## DOLIPRANE 1000 MG 3x/jour
 
 Cette prescription PN13 est traduite en FHIR:
-- dans l'instance [TradPN13FHIR-Presc-DOLIFRANE1000mg-3FoisParJour](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Bundle-Exemple-01-34-01.html) sans interpétation de la terminologie locale de fréquence;
-- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE1000mg-3FoisParJour-Interpret](https://interop-sante.github.io/hl7.fhir.fr.medication/FinalisationMappingPosologie/ig/Bundle-Bundle-Exemple-01-34-01-Interpret.html) avec interprétation de la terminologie locale de fréquence.
+- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-DOLIPRANE.html) sans interpétation de la terminologie locale de fréquence;
+- dans l'instance [TradPN13FHIR-Presc-DOLIPRANE-Interpret](https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-DOLIPRANE-Interpret.html) avec interprétation de la terminologie locale de fréquence.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -161,5 +161,127 @@ Cette prescription PN13 est traduite en FHIR:
             </Elément_prescr_médic>
         </Prescription>
     </M_Prescription_médicaments>
+</Messages>
+```
+
+## METFORMINE alternativement GLICLAZIDE
+
+Cette prescription PN13 est traduite en FHIR dans l'instance [Trad-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE](https://interop-sante.github.io/hl7.fhir.fr.medication/RelationEtMedicamentsVirtuels/ig/Bundle-TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE.html).
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Messages Phast-id_message="10543744" Phast-dh_émission="20250502145543" xmlns="http://www.phast.fr/SIPhII">
+	<M_Prescription_médicaments>
+		<Patient>
+			<Ipp>6032486</Ipp>
+			<Nom_usuel>ARASGAIN</Nom_usuel>
+			<Nom_naissance>CUIMEANACH</Nom_naissance>
+			<Premier_prénom>MARSALI</Premier_prénom>
+			<Prénoms>MARSALI MORAG MAIREAD</Prénoms>
+			<Date_naissance>19890102000000</Date_naissance>
+			<Lieu_naissance>29134</Lieu_naissance>
+			<Sexe>F</Sexe>
+			<DI>1.2.250.1.507454354.43654.2346659</DI>
+			<INS>289062913400149</INS>
+			<INS_OID>1.2.250.1.213.1.4.8</INS_OID>
+			<Statut_idpat>3</Statut_idpat>
+		</Patient>
+		<Séjour>
+			<Id_séjour>765093464568</Id_séjour>
+		</Séjour>
+		<Prescription>
+			<Mode_communication>1</Mode_communication>
+			<Dh_prescription>20250502144844</Dh_prescription>
+			<Unité_hébergement Phast-nomenclature="HM_UF">603</Unité_hébergement>
+			<Unité_resp_médicale Phast-nomenclature="HM_UF">506</Unité_resp_médicale>
+			<Elément_prescr_médic>
+				<Id_élément_prescr>20250502144844569</Id_élément_prescr>
+				<Type_élément_prescr Phast-nomenclature="SIPh_TypeEltPLA">1</Type_élément_prescr>
+				<Libellé_élément_prescr>Par voie orale : METFORMINE 1000MG 0,5 comprimé 2 fois par jour avec les repas -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00</Libellé_élément_prescr>
+				<Fourniture>1</Fourniture>
+				<Id_prescripteur>899999999999</Id_prescripteur>
+				<Voie_administration>54</Voie_administration>
+				<Dh_début>20250502190000</Dh_début>
+				<Dh_fin>20250531185959</Dh_fin>
+				<Composant_prescrit>
+					<Type_composant_1>1</Type_composant_1>
+					<Code_composant_1>3400890020275</Code_composant_1>
+					<Libellé_composant>METFORMINE ACC 1000MG CPR</Libellé_composant>
+				</Composant_prescrit>
+				<Elément_posologie>
+					<Fréquence_structurée>
+                        <Frq_échelle>4</Frq_échelle>
+                        <Frq_multiplicité>2</Frq_multiplicité>
+                        <Frq_libellé>Deux fois par jour</Frq_libellé>
+                    </Fréquence_structurée>
+					<Type_événement_début>2</Type_événement_début>
+					<Evt_structuré_début>
+						<Evénement_structuré>
+							<Evt_objet>
+								<Evt_nature>2</Evt_nature>
+								<Evt_typedeDonnée>2</Evt_typedeDonnée>
+								<Evt_activité>
+									<Evt_activité_code>1</Evt_activité_code>
+								</Evt_activité>
+							</Evt_objet>
+							<Evt_opérateur>5</Evt_opérateur>
+							<Evt_libellé>Avec le repas</Evt_libellé>
+						</Evénement_structuré>
+					</Evt_structuré_début>
+					<Type_événement2_début>3</Type_événement2_début>
+					<Evénement2_début>Sans intolérance digestive au METFORMINE</Evénement2_début>
+					<Quantité>
+						<Nombre>0.5</Nombre>
+						<Unité>cpr</Unité>
+					</Quantité>
+				</Elément_posologie>
+				<Elément_lié>
+					<Id_élément_lié>20250502144844570</Id_élément_lié>
+					<Type_liaison_élément>3</Type_liaison_élément>
+				</Elément_lié>
+			</Elément_prescr_médic>
+			<Elément_prescr_médic>
+				<Id_élément_prescr>20250502144844570</Id_élément_prescr>
+				<Type_élément_prescr Phast-nomenclature="SIPh_TypeEltPLA">1</Type_élément_prescr>
+				<Libellé_élément_prescr>Par voie orale : GLICLAZIDE 30MG 3 comprimés au petit déjeuner -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00</Libellé_élément_prescr>
+				<Fourniture>1</Fourniture>
+				<Id_prescripteur>899999999999</Id_prescripteur>
+				<Voie_administration>54</Voie_administration>
+				<Dh_début>20250502190000</Dh_début>
+				<Dh_fin>20250531185959</Dh_fin>
+				<Composant_prescrit>
+					<Type_composant_1>1</Type_composant_1>
+					<Code_composant_1>3400893541364</Code_composant_1>
+					<Libellé_composant>GLICLAZIDE ARW 30MG CPR LM</Libellé_composant>
+				</Composant_prescrit>
+				<Elément_posologie>
+					<Type_événement_début>2</Type_événement_début>
+					<Evt_structuré_début>
+						<Evénement_structuré>
+							<Evt_objet>
+								<Evt_nature>2</Evt_nature>
+								<Evt_typedeDonnée>2</Evt_typedeDonnée>
+								<Evt_activité>
+									<Evt_activité_code>4</Evt_activité_code>
+								</Evt_activité>
+							</Evt_objet>
+							<Evt_opérateur>5</Evt_opérateur>
+							<Evt_libellé>Au petit déjeuner</Evt_libellé>
+						</Evénement_structuré>
+					</Evt_structuré_début>
+					<Type_événement2_début>3</Type_événement2_début>
+					<Evénement2_début>En cas d'intolérance digestive au METFORMINE</Evénement2_début>
+					<Quantité>
+						<Nombre>3</Nombre>
+						<Unité>cpr</Unité>
+					</Quantité>
+				</Elément_posologie>
+				<Elément_lié>
+					<Id_élément_lié>20250502144844569</Id_élément_lié>
+					<Type_liaison_élément>3</Type_liaison_élément>
+				</Elément_lié>
+			</Elément_prescr_médic>
+		</Prescription>
+	</M_Prescription_médicaments>
 </Messages>
 ```
