@@ -11,12 +11,12 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le matin"
+* note[0].text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
 * note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00000792 "PANTOPRAZOLE 40 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dosageInstruction.timing.repeat.when = #MORN
+* dosageInstruction.timing.repeat.when = #EVE
 * dosageInstruction.doseAndRate.doseQuantity.value = 40
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
 * dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
