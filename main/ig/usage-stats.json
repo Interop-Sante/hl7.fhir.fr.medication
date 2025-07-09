@@ -4,6 +4,13 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
+      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship",
+      "title": "Additional relatedAction relationship",
+      "types": [
+        "code"
+      ]
+    },
+    {
       "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-when-values",
       "title": "Additional values for when element",
       "types": [
@@ -1040,14 +1047,14 @@
     ],
     "MedicationRequest": [
       {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest",
-        "title": "FrInpatientMedicationRequest"
+        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest",
+        "title": "FrMedicationRequest"
       }
     ],
     "Medication": [
       {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound",
-        "title": "FrMedicationNonCompound"
+        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual",
+        "title": "FrMedicationVirtual"
       }
     ],
     "Observation": [
@@ -1088,6 +1095,9 @@
     "http://hl7.org/fhir/StructureDefinition/event-basedOn": [
       "MedicationDispense"
     ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthPlace": [
+      "Bundle.entry.resource"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
     ],
@@ -1122,6 +1132,16 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability": [
+      "Bundle.entry.resource"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name": [
+      "Bundle.entry.resource.name"
+    ],
+    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship": [
+      "Bundle.entry.resource.action.relatedAction",
+      "RequestGroup.action.relatedAction"
     ],
     "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-when-values": [
       "MedicationRequest.dosageInstruction.timing.repeat"

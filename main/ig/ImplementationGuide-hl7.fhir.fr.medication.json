@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.fr.medication",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><a name=\"hl7.fhir.fr.medication-en-US\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
   },
   "url" : "https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication",
   "version" : "0.1.0",
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-05-05T10:03:44+00:00",
+  "date" : "2025-07-09T18:07:38+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -30,7 +30,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.3.0"
+    "version" : "6.5.0"
   },
   {
     "id" : "hl7ext",
@@ -609,6 +609,18 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-additional-action-relationship"
+      },
+      "name" : "Additional relatedAction relationship",
+      "description" : "Extension to specify relationship between action in a RequestGroup",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-additional-when-values"
       },
       "name" : "Additional values for when element",
@@ -971,6 +983,39 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Expl-med-MV-sulfate-morphine-1"
+      },
+      "name" : "Expl-med-MV-sulfate-morphine-1",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Expl-med-MV-sulfate-morphine-2"
+      },
+      "name" : "Expl-med-MV-sulfate-morphine-2",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Expl-med-sulfate-morphine"
+      },
+      "name" : "Expl-med-sulfate-morphine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1082,6 +1127,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+      },
+      "name" : "FrInpatientMedicationRequestExclusion",
+      "description" : "French inpatient medication request profile for excluded medication",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-medication"
       },
       "name" : "FrMedication",
@@ -1175,6 +1232,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medicationrequest"
+      },
+      "name" : "FrMedicationRequest",
+      "description" : "French medication request profile",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1182,6 +1251,18 @@
       },
       "name" : "FrMedicationStatementReconciliationProperties",
       "description" : "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-virtual"
+      },
+      "name" : "FrMedicationVirtual",
+      "description" : "Virtual medication composed of one to many substances.",
       "exampleBoolean" : false
     },
     {
@@ -1243,6 +1324,479 @@
       "name" : "FrRequestGroupForPrescrption",
       "description" : "RequestGroup for expressing links between lines of a prescription",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-1-Presc-Pantoprazole-DC"
+      },
+      "name" : "HAS-1-Presc-Pantoprazole-DC",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-1-Presc-Pantoprazole-MV"
+      },
+      "name" : "HAS-1-Presc-Pantoprazole-MV",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-10-Presc-Methotrexate"
+      },
+      "name" : "HAS-10-Presc-Methotrexate",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-11-1-Presc-VitamineD"
+      },
+      "name" : "HAS-11-1-Presc-VitamineD",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-11-2-Presc-EVRA"
+      },
+      "name" : "HAS-11-2-Presc-EVRA",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-12-1-Presc-BEPANTHEN"
+      },
+      "name" : "HAS-12-1-Presc-BEPANTHEN",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-12-2-Presc-Methotrexate"
+      },
+      "name" : "HAS-12-2-Presc-Methotrexate",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-12-3-Presc-Enoxaparine"
+      },
+      "name" : "HAS-12-3-Presc-Enoxaparine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-13-Presc-Desloratadine"
+      },
+      "name" : "HAS-13-Presc-Desloratadine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-14-1-Presc-CODOLIPRANE"
+      },
+      "name" : "HAS-14-1-Presc-CODOLIPRANE",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-14-2-Presc-Betamethasone"
+      },
+      "name" : "HAS-14-2-Presc-Betamethasone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-15-Presc-Morphine"
+      },
+      "name" : "HAS-15-Presc-Morphine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-16-Presc-Racecadotril"
+      },
+      "name" : "HAS-16-Presc-Racecadotril",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-17-Presc-Budesonide"
+      },
+      "name" : "HAS-17-Presc-Budesonide",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-17-Presc-Budesonide-MV"
+      },
+      "name" : "HAS-17-Presc-Budesonide-MV",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-18-Presc-Budesonide-MV"
+      },
+      "name" : "HAS-18-Presc-Budesonide-MV",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-19-Presc-Paracetamol"
+      },
+      "name" : "HAS-19-Presc-Paracetamol",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-2-Presc-Fluindione"
+      },
+      "name" : "HAS-2-Presc-Fluindione",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-20-Presc-Hydrocortisone"
+      },
+      "name" : "HAS-20-Presc-Hydrocortisone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-21-Presc-Prednisolone"
+      },
+      "name" : "HAS-21-Presc-Prednisolone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-22-Presc-Prednisolone"
+      },
+      "name" : "HAS-22-Presc-Prednisolone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-23-1-Presc-Fluindione"
+      },
+      "name" : "HAS-23-1-Presc-Fluindione",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-23-2-Presc-Amiodarone"
+      },
+      "name" : "HAS-23-2-Presc-Amiodarone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-24-Topiramate"
+      },
+      "name" : "HAS-24-Topiramate",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-25-NOVORAPID"
+      },
+      "name" : "HAS-25-NOVORAPID",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-26-Diazepam"
+      },
+      "name" : "HAS-26-Diazepam",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-27-1-Metformine"
+      },
+      "name" : "HAS-27-1-Metformine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-27-2-Rifampicine"
+      },
+      "name" : "HAS-27-2-Rifampicine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-28-Presc-Enoxaparine"
+      },
+      "name" : "HAS-28-Presc-Enoxaparine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-29-Presc-Enoxaparine"
+      },
+      "name" : "HAS-29-Presc-Enoxaparine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-3-Presc-Tinzaparine"
+      },
+      "name" : "HAS-3-Presc-Tinzaparine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-30-1-Presc-Hydrocortisone"
+      },
+      "name" : "HAS-30-1-Presc-Hydrocortisone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-30-2-Presc-Cetirizine"
+      },
+      "name" : "HAS-30-2-Presc-Cetirizine",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-4-1-Presc-Paracetamol"
+      },
+      "name" : "HAS-4-1-Presc-Paracetamol",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-4-2-Presc-DAFALGANCODEINE"
+      },
+      "name" : "HAS-4-2-Presc-DAFALGANCODEINE",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-5-1-Presc-Fluindione"
+      },
+      "name" : "HAS-5-1-Presc-Fluindione",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-5-2-Presc-ACTISKENAN"
+      },
+      "name" : "HAS-5-2-Presc-ACTISKENAN",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-6-1-Presc-Methotrexate"
+      },
+      "name" : "HAS-6-1-Presc-Methotrexate",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-6-2-Presc-Methotrexate"
+      },
+      "name" : "HAS-6-2-Presc-Methotrexate",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-7-Presc-Paracetamol"
+      },
+      "name" : "HAS-7-Presc-Paracetamol",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-8-1-Presc-Betamethasone"
+      },
+      "name" : "HAS-8-1-Presc-Betamethasone",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-8-2-Presc-Paracetamol"
+      },
+      "name" : "HAS-8-2-Presc-Paracetamol",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-9-Presc-Ropinirole"
+      },
+      "name" : "HAS-9-Presc-Ropinirole",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
       "extension" : [{
@@ -1316,9 +1870,9 @@
         "valueString" : "MedicationRequest"
       }],
       "reference" : {
-        "reference" : "MedicationRequest/InLine-presc-Paracetamol"
+        "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
       },
-      "name" : "InLine-presc-Paracetamol",
+      "name" : "InLine-presc-Paracetamol1",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
     },
     {
@@ -1331,6 +1885,30 @@
       },
       "name" : "InLine-presc-Paracetamol2",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/fr-additional-action-relationship-type"
+      },
+      "name" : "Interop'Santé code system - Additional codes for relationship between action",
+      "description" : "Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-additional-action-relationship-type-value-set"
+      },
+      "name" : "Interop'Santé value set - Additional codes for relationship between action",
+      "description" : "Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1450,6 +2028,50 @@
       },
       "name" : "Medication_Ingredient_Strength_Codes",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/MultiLine-Presc-MARSILID-ZOMIGORO"
+      },
+      "name" : "MultiLine-Presc-MARSILID-ZOMIGORO",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE"
+      },
+      "name" : "MultiLine-Presc-METFORMINE-GLICLAZIDE",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/MultiLine-Presc-METHOTREXATE-LEDERFOLINE"
+      },
+      "name" : "MultiLine-Presc-METHOTREXATE-LEDERFOLINE",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/MultiLine-Presc-Sucralfate-Paracetamol"
+      },
+      "name" : "MultiLine-Presc-Sucralfate-Paracetamol",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
       "extension" : [{
@@ -1825,6 +2447,17 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE"
+      },
+      "name" : "TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/TradPN13FHIR-Presc-DOLIPRANE"
       },
       "name" : "TradPN13FHIR-Presc-DOLIPRANE",
@@ -1839,6 +2472,17 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-DOLIPRANE-Interpret"
       },
       "name" : "TradPN13FHIR-Presc-DOLIPRANE-Interpret",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/TradPN13FHIR-Presc-Morphine-PCA"
+      },
+      "name" : "TradPN13FHIR-Presc-Morphine-PCA",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
