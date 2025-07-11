@@ -1,0 +1,290 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-document-type"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem fr-document-type</b></p><a name=\"fr-document-type\"> </a><a name=\"hcfr-document-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>isMedicationReconciliation</td><td>isMedicationReconciliation</td><td>boolean</td><td>Le document est une FCT (Fiche de Conciliation des Traitements médicamenteux).</td></tr><tr><td>isCurrentMedication</td><td>isCurrentMedication</td><td>boolean</td><td>Le document est une liste des Traitements Médicamenteux Courants.</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>isMedicationReconciliation</b></td><td><b>isCurrentMedication</b></td></tr><tr><td style=\"white-space:nowrap\">10000001<a name=\"fr-document-type-10000001\"> </a></td><td>FCT</td><td>Fiche de Conciliation des Traitements médicamenteux (sans autre précision)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000002<a name=\"fr-document-type-10000002\"> </a></td><td>FCT rétroactive d'admission</td><td>Fiche de Conciliation des Traitements médicamenteux rétroactive d'admission</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000003<a name=\"fr-document-type-10000003\"> </a></td><td>FCT proactive d'admission</td><td>Fiche de Conciliation des Traitements médicamenteux proactive d'admission</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000004<a name=\"fr-document-type-10000004\"> </a></td><td>FCT proactive de sortie</td><td>Fiche de Conciliation des Traitements médicamenteux proactive de sortie (retour à domicile)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000005<a name=\"fr-document-type-10000005\"> </a></td><td>FCT rétroactive de sortie</td><td>Fiche de Conciliation des Traitements médicamenteux rétroactive de sortie (retour à domicile)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000006<a name=\"fr-document-type-10000006\"> </a></td><td>FCT proactive de transfert</td><td>Fiche de Conciliation des Traitements médicamenteux proactive de transfert (dans une autre structure de soins)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000007<a name=\"fr-document-type-10000007\"> </a></td><td>FCT rétroactive de transfert</td><td>Fiche de Conciliation des Traitements médicamenteux rétroactive de transfert (dans une autre structure de soins)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000008<a name=\"fr-document-type-10000008\"> </a></td><td>FCT proactive de mutation</td><td>Fiche de Conciliation des Traitements médicamenteux proactive de mutation (dans une autre unité fonctionnelle ou médicale)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000009<a name=\"fr-document-type-10000009\"> </a></td><td>FCT rétroactive de mutation</td><td>Fiche de Conciliation des Traitements médicamenteux rétroactive de mutation (dans une autre unité fonctionnelle ou médicale)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000010<a name=\"fr-document-type-10000010\"> </a></td><td>FCT proactive de sortie du service</td><td>Fiche de Conciliation des Traitements médicamenteux proactive de sortie du service (tout mode de sortie administratif confondu)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000011<a name=\"fr-document-type-10000011\"> </a></td><td>FCT rétroactive de sortie du service</td><td>Fiche de Conciliation des Traitements médicamenteux rétroactive de sortie du service (tout mode de sortie administratif confondu)</td><td>true</td><td>false</td></tr><tr><td style=\"white-space:nowrap\">10000012<a name=\"fr-document-type-10000012\"> </a></td><td>Traitement Médicamenteux Courant</td><td>Traitement Médicamenteux Courant (sans autre précision)</td><td>false</td><td>true</td></tr><tr><td style=\"white-space:nowrap\">10000013<a name=\"fr-document-type-10000013\"> </a></td><td>OMA</td><td>OMA (Ordonnance Médicale d'Admission)</td><td>false</td><td>true</td></tr><tr><td style=\"white-space:nowrap\">10000014<a name=\"fr-document-type-10000014\"> </a></td><td>Traitement Médicamenteux de sortie/transfert/mutation</td><td>Traitement Médicamenteux de sortie/transfert/mutation</td><td>false</td><td>true</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrDocumentType"] ; # 
+  fhir:title [ fhir:v "code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-11T07:30:40+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le système de codage SIPh du type de document d'une ressource *Composition* du domaine Pharmacy"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "14"^^xsd:nonNegativeInteger] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+     fhir:description [ fhir:v "Le document est une FCT (Fiche de Conciliation des Traitements médicamenteux)." ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:code [ fhir:v "isCurrentMedication" ] ;
+     fhir:description [ fhir:v "Le document est une liste des Traitements Médicamenteux Courants." ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "10000001" ] ;
+     fhir:display [ fhir:v "FCT" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux (sans autre précision)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000002" ] ;
+     fhir:display [ fhir:v "FCT rétroactive d'admission" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux rétroactive d'admission" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000003" ] ;
+     fhir:display [ fhir:v "FCT proactive d'admission" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux proactive d'admission" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000004" ] ;
+     fhir:display [ fhir:v "FCT proactive de sortie" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux proactive de sortie (retour à domicile)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000005" ] ;
+     fhir:display [ fhir:v "FCT rétroactive de sortie" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux rétroactive de sortie (retour à domicile)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000006" ] ;
+     fhir:display [ fhir:v "FCT proactive de transfert" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux proactive de transfert (dans une autre structure de soins)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000007" ] ;
+     fhir:display [ fhir:v "FCT rétroactive de transfert" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux rétroactive de transfert (dans une autre structure de soins)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000008" ] ;
+     fhir:display [ fhir:v "FCT proactive de mutation" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux proactive de mutation (dans une autre unité fonctionnelle ou médicale)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000009" ] ;
+     fhir:display [ fhir:v "FCT rétroactive de mutation" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux rétroactive de mutation (dans une autre unité fonctionnelle ou médicale)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000010" ] ;
+     fhir:display [ fhir:v "FCT proactive de sortie du service" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux proactive de sortie du service (tout mode de sortie administratif confondu)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000011" ] ;
+     fhir:display [ fhir:v "FCT rétroactive de sortie du service" ] ;
+     fhir:definition [ fhir:v "Fiche de Conciliation des Traitements médicamenteux rétroactive de sortie du service (tout mode de sortie administratif confondu)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000012" ] ;
+     fhir:display [ fhir:v "Traitement Médicamenteux Courant" ] ;
+     fhir:definition [ fhir:v "Traitement Médicamenteux Courant (sans autre précision)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000013" ] ;
+     fhir:display [ fhir:v "OMA" ] ;
+     fhir:definition [ fhir:v "OMA (Ordonnance Médicale d'Admission)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10000014" ] ;
+     fhir:display [ fhir:v "Traitement Médicamenteux de sortie/transfert/mutation" ] ;
+     fhir:definition [ fhir:v "Traitement Médicamenteux de sortie/transfert/mutation" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "isMedicationReconciliation" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:code [ fhir:v "isCurrentMedication" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

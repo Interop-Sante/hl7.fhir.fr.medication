@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Conversion PN13 vers FHIR pour la ligne de prescription d'une prescription de médicaments - Guide d'implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"26.70"}
+    h3,h4,h5,h6{--heading-prefix:"26.70"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
+</div>
+
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l313">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Conversion PN13 vers FHIR pour la ligne de prescription d'une prescription de médicaments</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/ig/fhir/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">ConceptMap: Conversion PN13 vers FHIR pour la ligne de prescription d'une prescription de médicaments
+
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap<button data-clipboard-text="https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap" title="Click to copy URL" class="btn-copy"></button></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button data-clipboard-text="https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap|0.1.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2025-07-11
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>ConceptMap pour la conversion PN13 vers FHIR d’une ligne de prescription d’une prescritpion de médicament</p>
+
+</p>
+
+
+    <!-- insert intro if present -->
+  
+
+
+
+  <!-- <p>
+  Formats: <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.xml.html">XML</a>, <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.json.html">JSON</a>, <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.ttl.html">Turtle</a>
+  </p> -->
+
+  
+
+
+  <div><a name="PN13-FHIR-prescmed-medicationrequest-conceptmap"> </a><a name="hcPN13-FHIR-prescmed-medicationrequest-conceptmap"> </a><p>Mapping from https://interopsante.org/pn13/xsd to <a href="StructureDefinition-fr-inpatient-medicationrequest.html">FrInpatientMedicationRequest</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequestion.supportingInformation.extension.valueCode</b></td><td><b>MedicationRequest.groupIdentifier.system</b></td><td><b>MedicationRequestion.supportingInformation.extension.url</b></td><td><b>MedicationRequestion.supportingInformation.system</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages@Phast-id_message</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.groupIdentifier.value</td><td style="border-left-width: 0px"></td><td></td><td>{A attribuer par le systéme effectuant la traduction en fonction du système émetteur du message PN13}</td><td></td><td></td><td>Si l'identifiant de message n'est pas présent, le groupIdentifier est à attribuer par le système effectuant la traduction du message PN13 de manière à ce que le couple (identfier.value,identifier.system)  soit unique pour chaque prescription</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Mode_communication</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Dh_prescription</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.authoredOn</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td></td><td>La date et l'heure sont à mettre au format FHIR avec offset</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Unité_hébergement</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.supportingInformation.identifier</td><td style="border-left-width: 0px"></td><td>UFHEB</td><td></td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role</td><td>{A attribuer par le systéme effectuant la traduction}</td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Unité_resp_médicale</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.supportingInformation.identifier</td><td style="border-left-width: 0px"></td><td>UFMED</td><td></td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-uf-role</td><td>{A attribuer par le systéme effectuant la traduction}</td><td></td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>PRESCCOM</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Commentaire sur la prescription:`</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Rôle_auteur</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Identifiant</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.identifier.value</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Domaine_identification</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.identifier.system</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Nom_usage</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Prénom_usage</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Initiales</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Civilité</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Titre</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Nom_famille</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_auteur/Prénoms</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Rôle_destinataire</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Identification_destinataire</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Criticité</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Commentaire_structuré/Texte</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>PRESCCOM</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Commentaire sur la prescription:`</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>Valeur_rens_compl</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Rens_compl</td><td style="border-left-width: 0px"></td><td>{Absent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.supportingInformation.reference</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Ressource Observation à créer en se basant sur la ressourece conceptMap PN13-FHIR-observation-conceptmap et à référencer dans MedicationRequest.supportingInformation.reference</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Rens_compl/Valeur_rens_compl</td><td style="border-left-width: 0px"></td><td>{Présent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>LIPRESCRENSCOMP</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Reprendre la valeur de Valeur_rens_compl en la préfixant par le libellé du type de renseignement complémentaire (Code_rens_compl) issu de la terminologie SIPh_RensComplement</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="3"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.identifier.system</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.identifier.value</td><td style="border-left-width: 0px"></td><td>{A attribuer par le systéme effectuant la traduction en fonction du système émetteur du message PN13}</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>Urgent</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.priority</b></td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.medication[x].extension.url</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Type_élément_prescr</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Forme</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.medicationReference.reference</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td></td><td>Voir les ressources concepMap PN13-FHIR-Prescmedi-medicationComp-conceptmap ou PN13-FHIR-Prescmedi-medicationNonComp-conceptmap pour le détail du mapping de cet élément</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Libellé_élément_prescr</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td></td><td>LIPRESCTXT</td><td></td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Prescription textuelle:`</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Cré_arr_mod_val</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Urgent</td><td style="border-left-width: 0px"></td><td>true</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.priority</td><td style="border-left-width: 0px"></td><td>urgent</td><td></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Urgent</td><td style="border-left-width: 0px"></td><td>false</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.priority</td><td style="border-left-width: 0px"></td><td>routine</td><td></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Urgent</td><td style="border-left-width: 0px"></td><td>{Absent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.priority</td><td style="border-left-width: 0px"></td><td>routine</td><td></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Fourniture</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.medication[x].extension.valueBoolean</td><td style="border-left-width: 0px"></td><td></td><td></td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-to-dispense</td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.requester</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td></td><td>Voir la ressource concepMap PN13-FHIR-prescmed-practitioner-id-seul-conceptmap pour le détail du mapping de cet élément</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.requester</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td></td><td>Voir la ressource concepMap PN13-FHIR-presmed-practitioner-identite-conceptmap pour le détail du mapping de cet élément</td></tr></table><hr/><p><b>Group 6 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="3"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>Voie_administration@Phastnomenclature</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.dosageInstruction.route.coding.system</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration</td><td style="border-left-width: 0px"></td><td>EDQM</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.route.coding.code</td><td style="border-left-width: 0px"></td><td>http://standardterms.edqm.eu</td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration</td><td style="border-left-width: 0px"></td><td>SIPh-CIO_Voie_administration</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.route.coding.code</td><td style="border-left-width: 0px"></td><td>http://standardterms.edqm.eu</td><td>le code cible est à trouver dans le mapping Free Set CIO-DC VOIE</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration</td><td style="border-left-width: 0px"></td><td>{Absent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.route.coding.code</td><td style="border-left-width: 0px"></td><td>http://standardterms.edqm.eu</td><td>le code cible est à trouver dans le mapping Free Set CIO-DC VOIE</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration</td><td style="border-left-width: 0px"></td><td>SIPh-Voie_administration</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.route.text</td><td style="border-left-width: 0px"></td><td></td><td>Le code SIPh est à traduire en code EDQM si possible (le cas échéant en utilisant le mapping Free Set CIO-DC VOIE) à indiquer dans MedicationRequest.dosageInstruction.route.coding.code avec MedicationRequest.dosageInstruction.route.coding.system valorisé à http://standardterms.edqm.eu. Si ce n'est pas possible MedicationRequest.dosageInstruction.route.text peut être utilisé pour mettre le libellé de la voie d'administration</td></tr></table><hr/><p><b>Group 7 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="5"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.supportingInformation.type</b></td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Lieu_administration</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.dispenseRequest.performer.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dispositif_associé</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.supportingInformation.display</td><td style="border-left-width: 0px"></td><td>Device</td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Posologie</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td></td><td>LIPRESCPOS</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Libellé textuel de la posologie:`</td></tr></table><hr/><p><b>Group 8 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="4"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>Dh_début</b></td><td><b>Dh_fin</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début_prescrite</td><td style="border-left-width: 0px"></td><td>{Absent}</td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start</td><td style="border-left-width: 0px"></td><td>La date et l'heure sont à mettre au format FHIR avec offset</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début_prescrite</td><td style="border-left-width: 0px"></td><td>{Présent}</td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#disjoint" title="disjoint">is not related to</a></td><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>Dans le cas où l'élément Dh_début est présent, Dh_début_prescrite n'est pas mappé cf. la prescription - vue d'ensemble section Précisions sur dates et durée de prescription</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début</td><td style="border-left-width: 0px"></td><td></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start</td><td style="border-left-width: 0px"></td><td>La date et l'heure sont à mettre au format FHIR avec offset</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_fin_prescrite</td><td style="border-left-width: 0px"></td><td></td><td>{Absent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end</td><td style="border-left-width: 0px"></td><td>La date et l'heure sont à mettre au format FHIR avec offset</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_fin_prescrite</td><td style="border-left-width: 0px"></td><td></td><td>{Présent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#disjoint" title="disjoint">is not related to</a></td><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>Dans le cas où l'élément Dh_fin est présent, Dh_finprescrite n'est pas mappé cf. la prescription - vue d'ensemble section Précisions sur dates et durée de prescription</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_fin</td><td style="border-left-width: 0px"></td><td></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end</td><td style="border-left-width: 0px"></td><td>La date et l'heure sont à mettre au format FHIR avec offset</td></tr></table><hr/><p><b>Group 9 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Indication</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>LIPRESCIND</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Indication sur la ligne de prescription:`</td></tr></table><hr/><p><b>Group 10 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="4"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>LIPRESCCOMM</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Commentaire sur la ligne de prescription:`</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Rôle_auteur</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Identifiant</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.identifier.value</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Domaine_identification</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.identifier.system</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Nom_usage</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Prénom_usage</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Initiales</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Civilité</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Titre</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Nom_famille</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_auteur/Prénoms</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">MedicationRequest.note.authorReference.display</td><td style="border-left-width: 0px"></td><td></td><td></td><td>Peut être utilisé pour constituer display en concaténant tout ou partie des éléments relatedto</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Rôle_destinataire</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Identification_destinataire</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Criticité</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Commentaire_structuré/Texte</td><td style="border-left-width: 0px"></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>LIPRESCCOMM</td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Commentaire sur la ligne de prescription:`</td></tr></table><hr/><p><b>Group 11 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="3"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="6"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td><b>GoNogo</b></td><td></td><td colspan="2"><b>Codes</b> from </td><td><b>MedicationRequest.note.extension.valueCode</b></td><td><b>MedicationRequest.intent</b></td><td><b>MedicationRequest.status</b></td><td><b>MedicationRequest.note.extension.url</b></td><td></td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Rang_élément_prescr</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_protocole_prescrit</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/GoNogo</td><td style="border-left-width: 0px"></td><td>0</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.status</td><td style="border-left-width: 0px"></td><td></td><td>order</td><td>unknown</td><td></td><td></td></tr><tr><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>1</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.status</td><td style="border-left-width: 0px"></td><td></td><td>order</td><td>on-hold</td><td></td><td></td></tr><tr><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>2</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.status</td><td style="border-left-width: 0px"></td><td></td><td>order</td><td>active</td><td></td><td></td></tr><tr><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>3</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.status</td><td style="border-left-width: 0px"></td><td></td><td>order</td><td>active</td><td></td><td></td></tr><tr><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>4</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.status</td><td style="border-left-width: 0px"></td><td></td><td>order</td><td>cancelled</td><td></td><td></td></tr><tr><td style="border-right-width: 0px"></td><td style="border-left-width: 0px"></td><td>{Absent}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.status</td><td style="border-left-width: 0px"></td><td></td><td>order</td><td>active</td><td></td><td></td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Motif_attente</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">MedicationRequest.statusReason.text</td><td style="border-left-width: 0px"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Delta_dh_référence</td><td style="border-left-width: 0px"></td><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Conditions_application</td><td style="border-left-width: 0px"></td><td></td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">MedicationRequest.note.text</td><td style="border-left-width: 0px"></td><td>LIPRESCCONDAPPL</td><td></td><td></td><td>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope</td><td>Le texte est à préfixer par `Condition d'application sur la ligne de prescription:`</td></tr></table><hr/><p><b>Group 12 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>MedicationRequest.medicationReference</td><td>Voir les ressources concepMap PN13-FHIR-Prescmedi-medicationComp-conceptmap ou PN13-FHIR-Prescmedi-medicationNonComp-conceptmap pour le détail du mapping de cet élément</td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>MedicationRequest.medicationCodeableConcept</td><td>Si Composant_prescrit ne comporte pas d'information complémentaire à l'enregistrement du RUIM, medicationCodeableConcept peut être utilisé</td></tr></table><hr/><p><b>Group 13 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>MedicationRequest.dosageInstruction</td><td>Voir la ressource concepMap PN13-FHIR-prescmed-dosageinstruction-conceptmap pour le détail du mapping de cet élément</td></tr></table><hr/><p><b>Group 14 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Protocole_prescrit_médic</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table><hr/><p><b>Group 15 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Non_substituable</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>MedicationRequest.substitution.allowedBoolean</td><td>POINT D'ATTENTION - La logique de cet élément est inversée entre PN13 et FHIR. Ainsi Non-substituable à faux en PN13 est à traduire en substitution.allowedBoolean à vrai en FHIR. Par ailleurs, cet élément est au niveau de médicament dans PN13 et au niveau de la ligne de prescription en FHIR. En cas de médicament composé, un opérateur logique OU Inclusif est à utiliser sur les valeurs PN13: si au moins un composant d'un médicament composé est non substituable, la ligne de prescription est considérée comme non substituable et donc l'élément substitution.allowedBoolean est valorisé à faux.</td></tr></table><hr/><p><b>Group 16 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit/Référent_poso</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>MedicationRequest.dosageInstruction.doseAndRate.extension($fr-basis-of-dose-component).valueReference</td><td>Porte la référence à la ressource Medication traduisant l'élément Composant_prescrit de PN13 pour lequel Référent_poso est vrai</td></tr></table></div>
+
+    <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 07:32+0000">2025-07-11</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/ig/fhir/medication/history.html" target="_blank">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

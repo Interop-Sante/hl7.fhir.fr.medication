@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/HAS-30-1-Presc-Hydrocortisone> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HAS-30-1-Presc-Hydrocortisone"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-HAS-30-1-Presc-Hydrocortisone" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-30-1-Presc-Hydrocortisone\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-30-1-Presc-Hydrocortisone</b></p><a name=\"medicationrequest-HAS-30-1-Presc-Hydrocortisone\"> </a><a name=\"hcmedicationrequest-HAS-30-1-Presc-Hydrocortisone\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-medicationrequest.html\">FrMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://BogusSystemMedicabase.com MV00000089}\">HYDROCORTISONE 10 mg comprimé</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: HYDROCORTISONE 10 mg : 1 comprimé matin et 1 comprimé midi\nEn cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.\nAvec un maximum de 6 comprimés par jour.\nQSP 6 mois</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Morning, Noon, Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 6 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span>/1 jour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>patientInstruction</b>: En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important</p><p><b>timing</b>: Morning, Noon, Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 6 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span>/1 jour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>patientInstruction</b>: En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important</p><p><b>timing</b>: Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 6 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span>/1 jour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p></blockquote><blockquote><p><b>dispenseRequest</b></p><blockquote><p><b>initialFill</b></p><h3>Durations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Unit</b></td><td><b>System</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>6</td><td>mois</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ucum.html\">http://unitsofmeasure.org</a></td><td>mo</td></tr></table></blockquote></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://BogusSystemMedicabase.com"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "MV00000089" ] ;
+           fhir:display [ fhir:v "HYDROCORTISONE 10 mg comprimé" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:note ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "LIPRESCTXT"
+           ]
+         ] ) ;
+         fhir:text [ fhir:v "Prescription textuelle: HYDROCORTISONE 10 mg : 1 comprimé matin et 1 comprimé midi \nEn cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.\nAvec un maximum de 6 comprimés par jour.\nQSP 6 mois" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:when ( [ fhir:v "MORN" ] [ fhir:v "NOON" ] )
+           ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ]
+         ] ) ;
+         fhir:maxDosePerPeriod [
+           fhir:numerator [
+             fhir:value [ fhir:v "6"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "jour" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "d" ]
+           ]
+         ]
+       ] [
+         fhir:patientInstruction [ fhir:v "En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important" ] ;
+         fhir:timing [
+           fhir:repeat [
+             fhir:when ( [ fhir:v "MORN" ] [ fhir:v "NOON" ] )
+           ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ]
+         ] ) ;
+         fhir:maxDosePerPeriod [
+           fhir:numerator [
+             fhir:value [ fhir:v "6"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "jour" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "d" ]
+           ]
+         ]
+       ] [
+         fhir:patientInstruction [ fhir:v "En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important" ] ;
+         fhir:timing [
+           fhir:repeat [
+             fhir:timeOfDay ( [ fhir:v "16:00:00"^^xsd:time ] )
+           ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ]
+         ] ) ;
+         fhir:maxDosePerPeriod [
+           fhir:numerator [
+             fhir:value [ fhir:v "6"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "jour" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "d" ]
+           ]
+         ]
+       ] ) ;
+       fhir:dispenseRequest [
+         fhir:initialFill [
+           fhir:duration [
+             fhir:value [ fhir:v "6"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mois" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mo" ]
+           ]
+         ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

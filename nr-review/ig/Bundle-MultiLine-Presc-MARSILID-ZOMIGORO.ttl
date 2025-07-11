@@ -1,0 +1,186 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/MultiLine-Presc-MARSILID-ZOMIGORO> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MultiLine-Presc-MARSILID-ZOMIGORO"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-Presc-ZOMIGORO" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-ZOMIGORO\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-ZOMIGORO</b></p><a name=\"medicationrequest-Presc-ZOMIGORO\"> </a><a name=\"hcmedicationrequest-Presc-ZOMIGORO\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-inpatient-medicationrequest-exclusion.html\">FrInpatientMedicationRequestExclusion</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion</code></p></div><p><b>status</b>: Unknown</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892210339}\">ZOMIGORO 2,5MG CPR DISP</span></p><p><b>subject</b>: <a href=\"Patient/30001\">Patient/30001</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30001</p></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "unknown" ] ;
+       fhir:intent [ fhir:v "option" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/UCD"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "3400892210339" ] ;
+           fhir:display [ fhir:v "ZOMIGORO 2,5MG CPR DISP" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/30001> ;
+         fhir:reference [ fhir:v "Patient/30001" ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Presc-30001" ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-Presc-MARSILID" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-MARSILID\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-MARSILID</b></p><a name=\"medicationrequest-Presc-MARSILID\"> </a><a name=\"hcmedicationrequest-Presc-MARSILID\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FrInpatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892782287}\">MARSILID 50MG CPR</span></p><p><b>subject</b>: <a href=\"Patient/30001\">Patient/30001</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-30001\">Practitioner/smart-Practitioner-30001</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30001</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/UCD"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "3400892782287" ] ;
+           fhir:display [ fhir:v "MARSILID 50MG CPR" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/30001> ;
+         fhir:reference [ fhir:v "Patient/30001" ]
+       ] ;
+       fhir:authoredOn [ fhir:v "2025-05-02T14:48:44.461Z"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-30001> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-30001" ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Presc-30001" ]
+       ] ;
+       fhir:dosageInstruction ( [
+         fhir:sequence [ fhir:v 1 ] ;
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2025-05-02T14:49:00Z"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2025-05-31T14:48:59Z"^^xsd:dateTime ]
+             ] ;
+             fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+             fhir:periodUnit [ fhir:v "d" ]
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20053000" ] ;
+             fhir:display [ fhir:v "Voie orale" ]
+           ] ) ;
+           fhir:text [ fhir:v "Voie orale" ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Comprimé" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15054000" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:RequestGroup ;
+       fhir:id [ fhir:v "requestgroup-Presc-MARSILID-ZOMIGORO" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RequestGroup_requestgroup-Presc-MARSILID-ZOMIGORO\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RequestGroup requestgroup-Presc-MARSILID-ZOMIGORO</b></p><a name=\"requestgroup-Presc-MARSILID-ZOMIGORO\"> </a><a name=\"hcrequestgroup-Presc-MARSILID-ZOMIGORO\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-requestgroup-for-prescription.html\">FrRequestGroupForPrescrption</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription</code></p></div><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-30001</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>subject</b>: <a href=\"Patient/30001\">Patient/30001</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action1</blockquote><h3>Conditions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Kind</b></td></tr><tr><td style=\"display: none\">*</td><td>Stop</td></tr></table><h3>RelatedActions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>ActionId</b></td><td><b>Relationship</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Action2</td><td>Concurrent</td></tr></table><p><b>resource</b>: <code>#medicationrequest-Presc-ZOMIGORO</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action2</blockquote><p><b>resource</b>: <code>#medicationrequest-Presc-MARSILID</code></p></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Presc-30001" ]
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/30001> ;
+         fhir:reference [ fhir:v "Patient/30001" ]
+       ] ;
+       fhir:action ( [
+         fhir:id [ fhir:v "Action1" ] ;
+         fhir:condition ( [
+           fhir:kind [ fhir:v "stop" ]
+         ] ) ;
+         fhir:relatedAction ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship"^^xsd:anyURI ] ;
+             fhir:value [
+               a fhir:code ;
+               fhir:v "EXCL"
+             ]
+           ] ) ;
+           fhir:actionId [ fhir:v "Action2" ] ;
+           fhir:relationship [ fhir:v "concurrent" ]
+         ] ) ;
+         fhir:resource [
+           fhir:reference [ fhir:v "#medicationrequest-Presc-ZOMIGORO" ]
+         ]
+       ] [
+         fhir:id [ fhir:v "Action2" ] ;
+         fhir:resource [
+           fhir:reference [ fhir:v "#medicationrequest-Presc-MARSILID" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

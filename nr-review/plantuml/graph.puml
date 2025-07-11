@@ -1,0 +1,885 @@
+@startuml
+set namespaceSeparator ?
+hide circle
+hide class fields
+
+package IG #DDDDDD{
+
+     package Profiles #DDDDDD{
+
+        class FrRangeMedication{
+
+             Range.low => [None..None]
+             Range.high => [None..None]
+        } 
+
+        class FrRatioMedication{
+
+             Ratio.numerator => [None..None]
+             Ratio.denominator => [None..None]
+        } 
+
+        class FrSimpleQuantityMedication{
+
+             Quantity => [None..None]
+             Quantity.system => [1..None]
+             Quantity.code => [1..None]
+        } 
+
+        class FrCurrentMedicationComposition{
+
+             Composition.implicitRules => [None..0]
+             Composition.language => [None..None]
+             Composition.type => [None..None]
+             Composition.subject => [1..None]
+             Composition.subject.type => [1..None]
+             Composition.encounter => [None..None]
+             Composition.date => [None..None]
+             Composition.author => [None..1]
+             Composition.title => [None..None]
+             Composition.attester.party => [None..None]
+             Composition.section => [1..1]
+             Composition.section.title => [None..None]
+             Composition.section.author => [None..0]
+             Composition.section.focus => [None..0]
+             Composition.section.mode => [1..None]
+             Composition.section.orderedBy => [None..None]
+             Composition.section.entry => [None..None]
+             Composition.section.section => [None..0]
+        } 
+
+        class FrCurrentMedicationMedicationStatement{
+
+             MedicationStatement.implicitRules => [None..0]
+             MedicationStatement.language => [None..None]
+             MedicationStatement.status => [None..None]
+             MedicationStatement.medication[x] => [None..None]
+             MedicationStatement.medication[x].reference => [1..None]
+             MedicationStatement.medication[x].type => [None..None]
+             MedicationStatement.medication[x].identifier => [None..0]
+             MedicationStatement.subject => [None..None]
+             MedicationStatement.subject.type => [None..None]
+             MedicationStatement.dosage => [None..None]
+             MedicationStatement.dosage.doseAndRate => [None..None]
+             MedicationStatement.dosage.doseAndRate.dose[x] => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x] => [None..None]
+             MedicationStatement.dosage.maxDosePerPeriod => [None..None]
+             MedicationStatement.dosage.maxDosePerAdministration => [None..None]
+             MedicationStatement.dosage.maxDosePerLifetime => [None..None]
+        } 
+
+        class FrInpatientMedicationDispense{
+
+             MedicationDispense.medication[x] => [None..None]
+             MedicationDispense.subject => [None..None]
+             MedicationDispense.performer.actor => [None..None]
+             MedicationDispense.authorizingPrescription => [None..None]
+             MedicationDispense.receiver => [None..None]
+        } 
+
+        class FrInpatientMedicationRequestExclusion{
+
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
+             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
+             MedicationRequest.subject => [None..None]
+        } 
+
+        class FrInpatientMedicationRequest{
+
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
+             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
+             MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.medication[x]:medicationReference => [0..1]
+             MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept => [0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.subject => [None..None]
+             MedicationRequest.encounter => [None..None]
+             MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
+             MedicationRequest.requester => [1..None]
+             MedicationRequest.note.extension:noteScope => <&plus>[0..1]
+             MedicationRequest.dosageInstruction => [1..None]
+             MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.route => [None..None]
+             MedicationRequest.dosageInstruction.method => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.extension:BasisOfDoseComponent => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity => [0..1]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerAdministration => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerLifetime => [None..None]
+             MedicationRequest.dispenseRequest.initialFill => [None..0]
+             MedicationRequest.dispenseRequest.dispenseInterval => [None..0]
+             MedicationRequest.dispenseRequest.validityPeriod.start => [1..None]
+             MedicationRequest.dispenseRequest.validityPeriod.end => [None..None]
+             MedicationRequest.dispenseRequest.quantity => [None..0]
+             MedicationRequest.dispenseRequest.expectedSupplyDuration.comparator => [None..0]
+             MedicationRequest.dispenseRequest.performer => [None..0]
+        } 
+
+        class FrMedicationCompound{
+
+             Medication.code => [1..None]
+             Medication.code.text => [1..None]
+             Medication.form => [None..None]
+             Medication.ingredient => [1..None]
+             Medication.ingredient.extension => [None..None]
+             Medication.ingredient.extension:IsVehicle => <&plus>[0..1]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.item[x]:itemReference => [0..1]
+             Medication.batch => [None..0]
+        } 
+
+        class FrMedicationHistoryComposition{
+
+             Composition.implicitRules => [None..0]
+             Composition.language => [None..None]
+             Composition.type => [None..None]
+             Composition.type.coding => [1..1]
+             Composition.subject => [1..None]
+             Composition.subject.type => [None..None]
+             Composition.date => [None..None]
+             Composition.author => [None..None]
+             Composition.title => [None..None]
+             Composition.attester => [1..1]
+             Composition.attester.party => [1..None]
+             Composition.attester.party.reference => [1..None]
+             Composition.attester.party.identifier => [None..0]
+             Composition.section => [1..1]
+             Composition.section.extension => [None..None]
+             Composition.section.extension:compositionSourcing => <&plus>[0..*]
+             Composition.section.title => [None..None]
+             Composition.section.code.coding => [None..None]
+             Composition.section.author => [None..0]
+             Composition.section.focus => [None..0]
+             Composition.section.mode => [1..None]
+             Composition.section.orderedBy => [None..None]
+             Composition.section.entry => [None..None]
+             Composition.section.section => [None..0]
+        } 
+
+        class FrMedicationHistoryMedicationStatement{
+
+             MedicationStatement.meta.tag => [None..0]
+             MedicationStatement.implicitRules => [None..0]
+             MedicationStatement.language => [None..None]
+             MedicationStatement.extension => [None..None]
+             MedicationStatement.extension:statementSourcing => <&plus>[0..1]
+             MedicationStatement.status => [None..None]
+             MedicationStatement.medication[x] => [None..None]
+             MedicationStatement.medication[x].reference => [1..None]
+             MedicationStatement.medication[x].type => [None..None]
+             MedicationStatement.medication[x].identifier => [None..0]
+             MedicationStatement.subject => [None..None]
+             MedicationStatement.subject.type => [None..None]
+             MedicationStatement.informationSource => [None..0]
+             MedicationStatement.dosage => [None..None]
+             MedicationStatement.dosage.doseAndRate.dose[x] => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x] => [None..None]
+             MedicationStatement.dosage.maxDosePerPeriod => [None..None]
+             MedicationStatement.dosage.maxDosePerAdministration => [None..None]
+             MedicationStatement.dosage.maxDosePerLifetime => [None..None]
+        } 
+
+        class FrMedicationNonCompound{
+
+             Medication.extension => [None..None]
+             Medication.extension:drugCharacteristic => <&plus>[0..*]
+             Medication.code => [1..None]
+             Medication.code.coding => [1..None]
+             Medication.code.coding:nonCompoundCode => [1..1]
+             Medication.code.text => [None..None]
+             Medication.form => [None..None]
+             Medication.amount => [None..None]
+             Medication.ingredient => [None..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.strength => [None..None]
+             Medication.batch => [None..None]
+        } 
+
+        class FrMedicationReconciliationComposition{
+
+             Composition.implicitRules => [None..0]
+             Composition.language => [None..None]
+             Composition.status => [None..None]
+             Composition.type => [None..None]
+             Composition.subject => [1..None]
+             Composition.subject.type => [None..None]
+             Composition.author => [None..None]
+             Composition.author.type => [None..None]
+             Composition.attester.party => [1..None]
+             Composition.attester.party.reference => [1..None]
+             Composition.attester.party.type => [None..None]
+             Composition.attester.party.identifier => [None..0]
+             Composition.section => [3..3]
+             Composition.section:MedicationHistory => [1..1]
+             Composition.section:MedicationHistory.title => [1..None]
+             Composition.section:MedicationHistory.code => [None..None]
+             Composition.section:MedicationHistory.author => [None..0]
+             Composition.section:MedicationHistory.focus => [None..0]
+             Composition.section:MedicationHistory.mode => [1..None]
+             Composition.section:MedicationHistory.orderedBy => [None..None]
+             Composition.section:MedicationHistory.entry => [1..1]
+             Composition.section:MedicationHistory.section => [None..0]
+             Composition.section:CurrentMedication => [1..1]
+             Composition.section:CurrentMedication.title => [1..None]
+             Composition.section:CurrentMedication.author => [None..0]
+             Composition.section:CurrentMedication.focus => [None..0]
+             Composition.section:CurrentMedication.mode => [1..None]
+             Composition.section:CurrentMedication.orderedBy => [None..None]
+             Composition.section:CurrentMedication.entry => [1..1]
+             Composition.section:CurrentMedication.section => [None..0]
+             Composition.section:Reconciliation => [1..1]
+             Composition.section:Reconciliation.title => [1..None]
+             Composition.section:Reconciliation.author => [None..0]
+             Composition.section:Reconciliation.author.reference => [1..None]
+             Composition.section:Reconciliation.author.type => [None..None]
+             Composition.section:Reconciliation.author.identifier => [None..0]
+             Composition.section:Reconciliation.focus => [None..0]
+             Composition.section:Reconciliation.mode => [1..None]
+             Composition.section:Reconciliation.entry => [None..None]
+             Composition.section:Reconciliation.section => [None..0]
+        } 
+
+        class FrMedicationReconciliationMedicationStatement{
+
+             MedicationStatement.meta.tag => [None..0]
+             MedicationStatement.implicitRules => [None..0]
+             MedicationStatement.extension => [None..None]
+             MedicationStatement.extension:reconciliation => <&plus>[0..1]
+             MedicationStatement.status => [None..None]
+             MedicationStatement.medication[x] => [None..None]
+             MedicationStatement.subject => [None..None]
+             MedicationStatement.subject.reference => [1..None]
+             MedicationStatement.subject.type => [None..None]
+             MedicationStatement.subject.identifier => [None..0]
+             MedicationStatement.informationSource => [None..0]
+             MedicationStatement.derivedFrom => [1..2]
+             MedicationStatement.derivedFrom:fromMedicationHistory => [0..1]
+             MedicationStatement.derivedFrom:fromMedicationHistory.reference => [1..None]
+             MedicationStatement.derivedFrom:fromMedicationHistory.identifier => [None..0]
+             MedicationStatement.derivedFrom:fromCurrentMedication => [0..1]
+             MedicationStatement.derivedFrom:fromCurrentMedication.reference => [1..None]
+             MedicationStatement.derivedFrom:fromCurrentMedication.identifier => [None..0]
+             MedicationStatement.note => [None..None]
+             MedicationStatement.dosage.doseAndRate.dose[x] => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x] => [None..None]
+             MedicationStatement.dosage.maxDosePerPeriod => [None..None]
+             MedicationStatement.dosage.maxDosePerAdministration => [None..None]
+             MedicationStatement.dosage.maxDosePerLifetime => [None..None]
+        } 
+
+        class FrMedicationVirtual{
+
+             Medication.extension => [None..None]
+             Medication.extension:drugCharacteristic => <&plus>[0..*]
+             Medication.form => [1..None]
+             Medication.ingredient => [1..None]
+             Medication.ingredient.strength => [1..None]
+        } 
+
+        class FrMedication{
+
+             Medication.meta.profile => [None..None]
+             Medication.implicitRules => [None..0]
+             Medication.amount => [None..0]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.strength => [None..None]
+             Medication.batch => [None..0]
+        } 
+
+        class FrMedicationRequest{
+
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
+             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
+             MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.medication[x]:medicationReference => [0..1]
+             MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept => [0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.subject => [None..None]
+             MedicationRequest.encounter => [None..None]
+             MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
+             MedicationRequest.requester => [1..None]
+             MedicationRequest.note.extension:noteScope => <&plus>[0..1]
+             MedicationRequest.dosageInstruction => [1..None]
+             MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.route => [None..None]
+             MedicationRequest.dosageInstruction.method => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.extension:BasisOfDoseComponent => <&plus>[0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity => [0..1]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerAdministration => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerLifetime => [None..None]
+        } 
+
+        class FrMPSubstance{
+
+             CodeableConcept.coding => [None..None]
+        } 
+
+        class FrObservationForPrescription{
+
+             Observation.subject => [1..None]
+        } 
+
+        class FrOnAdmissionMedicationComposition{
+
+             Composition => [None..None]
+             Composition.type => [None..None]
+        } 
+
+        class FrOnAdmissionRetroactiveReconciliationComposition{
+
+             Composition => [None..None]
+             Composition.type => [None..None]
+             Composition.section:CurrentMedication => [None..None]
+             Composition.section:CurrentMedication.entry => [None..None]
+        } 
+
+        class FrPrescriptionBunbleForExample{
+
+             Bundle.implicitRules => [None..0]
+             Bundle.language => [None..None]
+             Bundle.type => [None..None]
+        } 
+
+        class FrRequestGroupForPrescription{
+
+             RequestGroup.groupIdentifier => [1..None]
+             RequestGroup.action.relatedAction.extension => [None..None]
+             RequestGroup.action.relatedAction.extension:additionalRelationship => <&plus>[0..1]
+         }
+
+     }
+     package extension #paleturquoise {
+
+     FrInpatientMedicationRequestExclusion -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
+     FrMedicationCompound -[#black,dashed,thickness=2]-> FrIsVehicle
+     FrMedicationHistoryComposition -[#black,dashed,thickness=2]-> FrMedicationHistorySources
+     FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
+     FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
+     FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
+     FrMedicationVirtual -[#black,dashed,thickness=2]-> FrDrugCharacteristic
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
+     FrMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
+     FrRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
+
+        class FrAdditionalActionRelationship{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrAdditionalWhenValues{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrBasisOfDoseComponent{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrDrugCharacteristic{
+
+          Extension.extension:type => [0..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:value => [0..*]
+          Extension.extension:value.extension => [None..0]
+          Extension.extension:value.url => [None..None]
+          Extension.extension:value.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrIsVehicle{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrMedicationHistorySources{
+
+          Extension.extension => [2..None]
+          Extension.extension:number => [1..1]
+          Extension.extension:number.extension => [None..0]
+          Extension.extension:number.url => [None..None]
+          Extension.extension:number.value[x] => [1..None]
+          Extension.extension:source => [1..*]
+          Extension.extension:source.extension => [1..None]
+          Extension.extension:source.extension:type => [1..1]
+          Extension.extension:source.extension:type.extension => [None..0]
+          Extension.extension:source.extension:type.url => [None..None]
+          Extension.extension:source.extension:type.value[x] => [1..None]
+          Extension.extension:source.extension:author => [0..1]
+          Extension.extension:source.extension:author.extension => [None..0]
+          Extension.extension:source.extension:author.url => [None..None]
+          Extension.extension:source.extension:author.value[x] => [1..None]
+          Extension.extension:source.url => [None..None]
+          Extension.extension:source.value[x] => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrMedicationToDispense{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrMedicationRequestNoteScope{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrMedicationStatementReconciliationProperties{
+
+          Extension.extension => [2..None]
+          Extension.extension:status => [1..1]
+          Extension.extension:status.extension => [1..None]
+          Extension.extension:status.extension:value => [1..*]
+          Extension.extension:status.extension:value.extension => [1..None]
+          Extension.extension:status.extension:value.extension:code => [1..1]
+          Extension.extension:status.extension:value.extension:code.extension => [None..0]
+          Extension.extension:status.extension:value.extension:code.url => [None..None]
+          Extension.extension:status.extension:value.extension:code.value[x] => [1..None]
+          Extension.extension:status.extension:value.extension:date => [0..1]
+          Extension.extension:status.extension:value.extension:date.extension => [None..0]
+          Extension.extension:status.extension:value.extension:date.url => [None..None]
+          Extension.extension:status.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:status.extension:value.extension:edStatus => [0..1]
+          Extension.extension:status.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:status.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:status.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:status.extension:value.extension:author => [0..1]
+          Extension.extension:status.extension:value.extension:author.extension => [None..0]
+          Extension.extension:status.extension:value.extension:author.url => [None..None]
+          Extension.extension:status.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:status.extension:value.url => [None..None]
+          Extension.extension:status.extension:value.value[x] => [None..0]
+          Extension.extension:status.url => [None..None]
+          Extension.extension:status.value[x] => [None..0]
+          Extension.extension:isDiscrepant => [1..1]
+          Extension.extension:isDiscrepant.extension => [1..None]
+          Extension.extension:isDiscrepant.extension:value => [1..*]
+          Extension.extension:isDiscrepant.extension:value.extension => [1..None]
+          Extension.extension:isDiscrepant.extension:value.extension:yesNo => [1..1]
+          Extension.extension:isDiscrepant.extension:value.extension:yesNo.extension => [None..0]
+          Extension.extension:isDiscrepant.extension:value.extension:yesNo.url => [None..None]
+          Extension.extension:isDiscrepant.extension:value.extension:yesNo.value[x] => [1..None]
+          Extension.extension:isDiscrepant.extension:value.extension:date => [0..1]
+          Extension.extension:isDiscrepant.extension:value.extension:date.extension => [None..0]
+          Extension.extension:isDiscrepant.extension:value.extension:date.url => [None..None]
+          Extension.extension:isDiscrepant.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:isDiscrepant.extension:value.extension:edStatus => [0..1]
+          Extension.extension:isDiscrepant.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:isDiscrepant.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:isDiscrepant.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:isDiscrepant.extension:value.extension:author => [0..*]
+          Extension.extension:isDiscrepant.extension:value.extension:author.extension => [None..0]
+          Extension.extension:isDiscrepant.extension:value.extension:author.url => [None..None]
+          Extension.extension:isDiscrepant.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:isDiscrepant.extension:value.url => [None..None]
+          Extension.extension:isDiscrepant.extension:value.value[x] => [None..0]
+          Extension.extension:isDiscrepant.url => [None..None]
+          Extension.extension:isDiscrepant.value[x] => [None..0]
+          Extension.extension:discrepancy => [0..1]
+          Extension.extension:discrepancy.extension => [1..None]
+          Extension.extension:discrepancy.extension:value => [1..*]
+          Extension.extension:discrepancy.extension:value.extension => [1..None]
+          Extension.extension:discrepancy.extension:value.extension:code => [1..1]
+          Extension.extension:discrepancy.extension:value.extension:code.extension => [None..0]
+          Extension.extension:discrepancy.extension:value.extension:code.url => [None..None]
+          Extension.extension:discrepancy.extension:value.extension:code.value[x] => [1..None]
+          Extension.extension:discrepancy.extension:value.extension:date => [0..1]
+          Extension.extension:discrepancy.extension:value.extension:date.extension => [None..0]
+          Extension.extension:discrepancy.extension:value.extension:date.url => [None..None]
+          Extension.extension:discrepancy.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:discrepancy.extension:value.extension:edStatus => [0..1]
+          Extension.extension:discrepancy.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:discrepancy.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:discrepancy.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:discrepancy.extension:value.extension:author => [0..*]
+          Extension.extension:discrepancy.extension:value.extension:author.extension => [None..0]
+          Extension.extension:discrepancy.extension:value.extension:author.url => [None..None]
+          Extension.extension:discrepancy.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:discrepancy.extension:value.url => [None..None]
+          Extension.extension:discrepancy.extension:value.value[x] => [None..0]
+          Extension.extension:discrepancy.url => [None..None]
+          Extension.extension:discrepancy.value[x] => [None..0]
+          Extension.extension:comment => [0..*]
+          Extension.extension:comment.extension => [1..None]
+          Extension.extension:comment.extension:value => [1..*]
+          Extension.extension:comment.extension:value.extension => [1..None]
+          Extension.extension:comment.extension:value.extension:text => [1..1]
+          Extension.extension:comment.extension:value.extension:text.extension => [None..0]
+          Extension.extension:comment.extension:value.extension:text.url => [None..None]
+          Extension.extension:comment.extension:value.extension:text.value[x] => [1..None]
+          Extension.extension:comment.extension:value.extension:date => [0..1]
+          Extension.extension:comment.extension:value.extension:date.extension => [None..0]
+          Extension.extension:comment.extension:value.extension:date.url => [None..None]
+          Extension.extension:comment.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:comment.extension:value.extension:edStatus => [0..1]
+          Extension.extension:comment.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:comment.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:comment.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:comment.extension:value.extension:author => [0..*]
+          Extension.extension:comment.extension:value.extension:author.extension => [None..0]
+          Extension.extension:comment.extension:value.extension:author.url => [None..None]
+          Extension.extension:comment.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:comment.extension:value.url => [None..None]
+          Extension.extension:comment.extension:value.value[x] => [None..0]
+          Extension.extension:comment.url => [None..None]
+          Extension.extension:comment.value[x] => [None..0]
+          Extension.extension:type => [0..1]
+          Extension.extension:type.extension => [1..None]
+          Extension.extension:type.extension:value => [1..*]
+          Extension.extension:type.extension:value.extension => [1..None]
+          Extension.extension:type.extension:value.extension:code => [1..1]
+          Extension.extension:type.extension:value.extension:code.extension => [None..0]
+          Extension.extension:type.extension:value.extension:code.url => [None..None]
+          Extension.extension:type.extension:value.extension:code.value[x] => [1..None]
+          Extension.extension:type.extension:value.extension:date => [0..1]
+          Extension.extension:type.extension:value.extension:date.extension => [None..0]
+          Extension.extension:type.extension:value.extension:date.url => [None..None]
+          Extension.extension:type.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:type.extension:value.extension:edStatus => [0..1]
+          Extension.extension:type.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:type.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:type.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:type.extension:value.extension:author => [0..*]
+          Extension.extension:type.extension:value.extension:author.extension => [None..0]
+          Extension.extension:type.extension:value.extension:author.url => [None..None]
+          Extension.extension:type.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:type.extension:value.url => [None..None]
+          Extension.extension:type.extension:value.value[x] => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..0]
+          Extension.extension:outcome => [0..1]
+          Extension.extension:outcome.extension => [1..None]
+          Extension.extension:outcome.extension:value => [1..*]
+          Extension.extension:outcome.extension:value.extension => [1..None]
+          Extension.extension:outcome.extension:value.extension:code => [1..1]
+          Extension.extension:outcome.extension:value.extension:code.extension => [None..0]
+          Extension.extension:outcome.extension:value.extension:code.url => [None..None]
+          Extension.extension:outcome.extension:value.extension:code.value[x] => [1..None]
+          Extension.extension:outcome.extension:value.extension:date => [0..1]
+          Extension.extension:outcome.extension:value.extension:date.extension => [None..0]
+          Extension.extension:outcome.extension:value.extension:date.url => [None..None]
+          Extension.extension:outcome.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:outcome.extension:value.extension:edStatus => [0..1]
+          Extension.extension:outcome.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:outcome.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:outcome.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:outcome.extension:value.extension:author => [0..*]
+          Extension.extension:outcome.extension:value.extension:author.extension => [None..0]
+          Extension.extension:outcome.extension:value.extension:author.url => [None..None]
+          Extension.extension:outcome.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:outcome.extension:value.url => [None..None]
+          Extension.extension:outcome.extension:value.value[x] => [None..0]
+          Extension.extension:outcome.url => [None..None]
+          Extension.extension:outcome.value[x] => [None..0]
+          Extension.extension:resolution => [0..1]
+          Extension.extension:resolution.extension => [1..None]
+          Extension.extension:resolution.extension:value => [1..*]
+          Extension.extension:resolution.extension:value.extension => [1..None]
+          Extension.extension:resolution.extension:value.extension:code => [1..1]
+          Extension.extension:resolution.extension:value.extension:code.extension => [None..0]
+          Extension.extension:resolution.extension:value.extension:code.url => [None..None]
+          Extension.extension:resolution.extension:value.extension:code.value[x] => [1..None]
+          Extension.extension:resolution.extension:value.extension:date => [0..1]
+          Extension.extension:resolution.extension:value.extension:date.extension => [None..0]
+          Extension.extension:resolution.extension:value.extension:date.url => [None..None]
+          Extension.extension:resolution.extension:value.extension:date.value[x] => [1..None]
+          Extension.extension:resolution.extension:value.extension:edStatus => [0..1]
+          Extension.extension:resolution.extension:value.extension:edStatus.extension => [None..0]
+          Extension.extension:resolution.extension:value.extension:edStatus.url => [None..None]
+          Extension.extension:resolution.extension:value.extension:edStatus.value[x] => [1..None]
+          Extension.extension:resolution.extension:value.extension:author => [0..*]
+          Extension.extension:resolution.extension:value.extension:author.extension => [None..0]
+          Extension.extension:resolution.extension:value.extension:author.url => [None..None]
+          Extension.extension:resolution.extension:value.extension:author.value[x] => [1..None]
+          Extension.extension:resolution.extension:value.url => [None..None]
+          Extension.extension:resolution.extension:value.value[x] => [None..0]
+          Extension.extension:resolution.url => [None..None]
+          Extension.extension:resolution.value[x] => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrStrengthCodeableConcept{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrTeatmentIntent{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrUFRole{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+         }
+     }
+     package valueset #PaleVioletRed{
+
+        class FrAdditionalRequestGroupRelationshipValueSet  
+
+     FrAdditionalActionRelationship -[#black,dotted,thickness=2]-> FrAdditionalRequestGroupRelationshipValueSet
+
+        class FrAdditionalWhenCodes  
+
+     FrAdditionalWhenValues -[#black,dotted,thickness=2]-> FrAdditionalWhenCodes
+
+        class FrCurrentMedicationDocumentType  
+
+     FrCurrentMedicationComposition -[#black,dotted,thickness=2]-> FrCurrentMedicationDocumentType
+
+        class FrMedicationCodes  
+
+     FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMedicationCodes
+
+        class FrRouteOfAdministration  
+
+     FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrRouteOfAdministration
+
+        class FrMethodOfAdministration  
+
+     FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
+
+        class FrMpDoseForm  
+
+     FrMedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
+
+        class FrMedicationHistorySourceType  
+
+     FrMedicationHistorySources -[#black,dotted,thickness=2]-> FrMedicationHistorySourceType
+
+        class FrMedicationCodes  
+
+     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMedicationCodes
+
+        class FrMpDoseForm  
+
+     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
+
+        class FrMedicationReconciliationDocumentType  
+
+     FrMedicationReconciliationComposition -[#black,dotted,thickness=2]-> FrMedicationReconciliationDocumentType
+
+        class FrMpDoseForm  
+
+     FrMedicationVirtual -[#black,dotted,thickness=2]-> FrMpDoseForm
+
+        class FrNoteScopeCodeValueSet  
+
+     FrMedicationRequestNoteScope -[#black,dotted,thickness=2]-> FrNoteScopeCodeValueSet
+
+        class FrMedicationCodes  
+
+     FrMedicationRequest -[#black,dotted,thickness=2]-> FrMedicationCodes
+
+        class FrRouteOfAdministration  
+
+     FrMedicationRequest -[#black,dotted,thickness=2]-> FrRouteOfAdministration
+
+        class FrMethodOfAdministration  
+
+     FrMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
+
+        class FrMedicationReconciliationStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationStatus
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrMedicationReconciliationQualifiedDiscrepancy  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationQualifiedDiscrepancy
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrMedicationReconciliationType  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationType
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrMedicationReconciliationOutcome  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationOutcome
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrMedicationReconciliationResolution  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationResolution
+
+        class FrEditorialStatus  
+
+     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FrSubstanceCode  
+
+     FrMPSubstance -[#black,dotted,thickness=2]-> FrSubstanceCode
+
+        class MedicationIngredientStrengthCodes  
+
+     FrStrengthCodeableConcept -[#black,dotted,thickness=2]-> MedicationIngredientStrengthCodes
+
+        class FrTreatmentIntent  
+
+     FrTeatmentIntent -[#black,dotted,thickness=2]-> FrTreatmentIntent
+
+        class FrUfRoleCodesForPrescriptionValueSet  
+
+     FrUFRole -[#black,dotted,thickness=2]-> FrUfRoleCodesForPrescriptionValueSet
+       }
+
+package "Ressources de base" #palegreen {
+
+ class "Range" as  class87ba2ecc8b6915e8bd6f5089918229fd 
+
+    class87ba2ecc8b6915e8bd6f5089918229fd --> FrRangeMedication
+
+ class "Ratio" as  class8334a158298fbcf163f4dcb4a387d150 
+
+    class8334a158298fbcf163f4dcb4a387d150 --> FrRatioMedication
+
+ class "SimpleQuantity" as  class2c391528ab21e799798c2a3a4ed7eed2 
+
+    class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityMedication
+
+ class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
+
+    class53eff24a355b7ae55f0aa2bef39bb24c --> FrCurrentMedicationComposition
+
+ class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
+
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrCurrentMedicationMedicationStatement
+
+ class "MedicationDispense" as  classfc53f5b9eccfc9aa8cc26374d1451ab5 
+
+    classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FrInpatientMedicationDispense
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequestExclusion
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationCompound
+
+ class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
+
+    class53eff24a355b7ae55f0aa2bef39bb24c --> FrMedicationHistoryComposition
+
+ class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
+
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationHistoryMedicationStatement
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationNonCompound
+
+ class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
+
+    class53eff24a355b7ae55f0aa2bef39bb24c --> FrMedicationReconciliationComposition
+
+ class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
+
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationReconciliationMedicationStatement
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationVirtual
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedication
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrMedicationRequest
+
+ class "CodeableConcept" as  class3521d6f1ff87d9b962b1c77766470bb9 
+
+    class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstance
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationForPrescription
+
+ class "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-current-medication-composition" as  classd8b29eb0f2ff53587bb5a7cd6df00fb9 
+
+    classd8b29eb0f2ff53587bb5a7cd6df00fb9 --> FrOnAdmissionMedicationComposition
+
+ class "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-reconciliation-composition" as  classdb1e04d052ff5397341716396617f4d0 
+
+    classdb1e04d052ff5397341716396617f4d0 --> FrOnAdmissionRetroactiveReconciliationComposition
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> FrPrescriptionBunbleForExample
+
+ class "RequestGroup" as  class55f9b414b19c569dcbf60f6417255621 
+
+    class55f9b414b19c569dcbf60f6417255621 --> FrRequestGroupForPrescription
+}
+@enduml

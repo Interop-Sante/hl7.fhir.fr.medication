@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Prescription PN13 médicament simple en DC - Guide d'implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"20"}
+    h3,h4,h5,h6{--heading-prefix:"20"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
+</div>
+
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l313">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Prescription PN13 médicament simple en DC</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/ig/fhir/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Prescription PN13 médicament simple en DC</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h1 id="exemples-pn13-de-prescritpion-en-dc">Exemples PN13 de prescritpion en DC</h1>
+
+<h2 id="paracétamol-en-cas-de-douleur">Paracétamol en cas de douleur</h2>
+
+<p>Cette prescription PN13 est traduite en FHIR dans l’instance <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/main/ig/Bundle-TradPN13FHIR-Presc-Paracetamol-SiDouleur.html">TradPN13FHIR-Presc-Paracetamol-SiDouleur</a></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
+<span class="nt">&lt;Messages</span> <span class="na">Phast-id_message=</span><span class="s">"10723"</span> <span class="na">Phast-dh_émission=</span><span class="s">"20220411164253"</span> <span class="na">xmlns=</span><span class="s">"http://www.phast.fr/SIPhII"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;M_Prescription_médicaments&gt;</span>
+        <span class="nt">&lt;Patient&gt;</span>
+            <span class="nt">&lt;Ipp&gt;</span>5000001820<span class="nt">&lt;/Ipp&gt;</span>
+            <span class="nt">&lt;Nom_usuel&gt;</span>AVION<span class="nt">&lt;/Nom_usuel&gt;</span>
+            <span class="nt">&lt;Nom_naissance&gt;</span>AVION<span class="nt">&lt;/Nom_naissance&gt;</span>
+            <span class="nt">&lt;Prénoms&gt;</span>JAUNE<span class="nt">&lt;/Prénoms&gt;</span>
+            <span class="nt">&lt;Date_naissance&gt;</span>19611125000000<span class="nt">&lt;/Date_naissance&gt;</span>
+        <span class="nt">&lt;/Patient&gt;</span>
+        <span class="nt">&lt;Séjour&gt;</span>
+            <span class="nt">&lt;Id_séjour&gt;</span>70101274<span class="nt">&lt;/Id_séjour&gt;</span>
+        <span class="nt">&lt;/Séjour&gt;</span>
+        <span class="nt">&lt;Prescription&gt;</span>
+            <span class="nt">&lt;Mode_communication&gt;</span>1<span class="nt">&lt;/Mode_communication&gt;</span>
+            <span class="nt">&lt;Dh_prescription&gt;</span>20220411164253<span class="nt">&lt;/Dh_prescription&gt;</span>
+            <span class="nt">&lt;Unité_resp_médicale</span> <span class="na">Phast-nomenclature=</span><span class="s">"LOCAL"</span><span class="nt">&gt;</span>2571<span class="nt">&lt;/Unité_resp_médicale&gt;</span>
+            <span class="nt">&lt;Rens_compl&gt;</span>
+                <span class="nt">&lt;Code_rens_compl_1&gt;</span>1<span class="nt">&lt;/Code_rens_compl_1&gt;</span>
+                <span class="nt">&lt;Dh_enreg_rens_compl/&gt;</span>
+                <span class="nt">&lt;Dh_rens_compl&gt;</span>20180621160510<span class="nt">&lt;/Dh_rens_compl&gt;</span>
+                <span class="nt">&lt;Valeur_rens_compl_1&gt;</span>
+                    <span class="nt">&lt;Nombre&gt;</span>120.0<span class="nt">&lt;/Nombre&gt;</span>
+                    <span class="nt">&lt;Unité&gt;</span>kg<span class="nt">&lt;/Unité&gt;</span>
+                <span class="nt">&lt;/Valeur_rens_compl_1&gt;</span>
+            <span class="nt">&lt;/Rens_compl&gt;</span>
+            <span class="nt">&lt;Rens_compl&gt;</span>
+                <span class="nt">&lt;Code_rens_compl_2&gt;</span>2<span class="nt">&lt;/Code_rens_compl_2&gt;</span>
+                <span class="nt">&lt;Dh_enreg_rens_compl/&gt;</span>
+                <span class="nt">&lt;Dh_rens_compl&gt;</span>20181025110606<span class="nt">&lt;/Dh_rens_compl&gt;</span>
+                <span class="nt">&lt;Valeur_rens_compl_2&gt;</span>
+                    <span class="nt">&lt;Nombre&gt;</span>189.0<span class="nt">&lt;/Nombre&gt;</span>
+                    <span class="nt">&lt;Unité&gt;</span>cm<span class="nt">&lt;/Unité&gt;</span>
+                <span class="nt">&lt;/Valeur_rens_compl_2&gt;</span>
+            <span class="nt">&lt;/Rens_compl&gt;</span>
+            <span class="nt">&lt;Elément_prescr_médic&gt;</span>
+                <span class="nt">&lt;Id_élément_prescr&gt;</span>31626<span class="nt">&lt;/Id_élément_prescr&gt;</span>
+                <span class="nt">&lt;Type_élément_prescr&gt;</span>0<span class="nt">&lt;/Type_élément_prescr&gt;</span>
+                <span class="nt">&lt;Libellé_élément_prescr&gt;</span>PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours <span class="nt">&lt;/Libellé_élément_prescr&gt;</span>
+                <span class="nt">&lt;Cré_arr_mod_val&gt;</span>C<span class="nt">&lt;/Cré_arr_mod_val&gt;</span>
+                <span class="nt">&lt;Urgent/&gt;</span>
+                <span class="nt">&lt;Fourniture&gt;</span>1<span class="nt">&lt;/Fourniture&gt;</span>
+                <span class="nt">&lt;Identification_prescripteur&gt;</span>
+                    <span class="nt">&lt;Identifiant&gt;</span>P082443<span class="nt">&lt;/Identifiant&gt;</span>
+                    <span class="nt">&lt;Domaine_identification</span> <span class="na">Phast-nomenclature=</span><span class="s">"SIPh-IDP_Domaine_Id"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Domaine_identification&gt;</span>
+                    <span class="nt">&lt;Nom_usage&gt;</span>LUIGGI<span class="nt">&lt;/Nom_usage&gt;</span>
+                    <span class="nt">&lt;Prénom_usage&gt;</span>DENIS<span class="nt">&lt;/Prénom_usage&gt;</span>
+                    <span class="nt">&lt;Nom_famille&gt;</span>LUIGGI<span class="nt">&lt;/Nom_famille&gt;</span>
+                    <span class="nt">&lt;Prénoms&gt;</span>DENIS<span class="nt">&lt;/Prénoms&gt;</span>
+                <span class="nt">&lt;/Identification_prescripteur&gt;</span>
+                <span class="nt">&lt;Voie_administration&gt;</span>54<span class="nt">&lt;/Voie_administration&gt;</span>
+                <span class="nt">&lt;Dh_début&gt;</span>20220412060000<span class="nt">&lt;/Dh_début&gt;</span>
+                <span class="nt">&lt;Dh_fin&gt;</span>20220415000000<span class="nt">&lt;/Dh_fin&gt;</span>
+                <span class="nt">&lt;Indication&gt;</span>En cas de douleur<span class="nt">&lt;/Indication&gt;</span>
+                <span class="nt">&lt;Commentaire&gt;</span>Test paracetamol DC 2 (à la demande)<span class="nt">&lt;/Commentaire&gt;</span>
+                <span class="nt">&lt;Composant_prescrit&gt;</span>
+                    <span class="nt">&lt;Type_composant_3&gt;</span>3<span class="nt">&lt;/Type_composant_3&gt;</span>
+                    <span class="nt">&lt;Code_composant_3&gt;</span>1181<span class="nt">&lt;/Code_composant_3&gt;</span>
+                    <span class="nt">&lt;Libellé_composant&gt;</span>PARACETAMOL<span class="nt">&lt;/Libellé_composant&gt;</span>
+                    <span class="nt">&lt;Quantité_composant_prescrite&gt;</span>
+                        <span class="nt">&lt;Nombre&gt;</span>1000.0<span class="nt">&lt;/Nombre&gt;</span>
+                        <span class="nt">&lt;Unité&gt;</span>mg<span class="nt">&lt;/Unité&gt;</span>
+                    <span class="nt">&lt;/Quantité_composant_prescrite&gt;</span>
+                <span class="nt">&lt;/Composant_prescrit&gt;</span>
+                <span class="nt">&lt;Elément_posologie&gt;</span>
+                    <span class="nt">&lt;Type_événement_début&gt;</span>3<span class="nt">&lt;/Type_événement_début&gt;</span>
+                    <span class="nt">&lt;Evt_structuré_début&gt;</span>
+                        <span class="nt">&lt;Evénement_structuré&gt;</span>
+                            <span class="nt">&lt;Evt_objet&gt;</span>
+                                <span class="nt">&lt;Evt_nature&gt;</span>1<span class="nt">&lt;/Evt_nature&gt;</span>
+                                <span class="nt">&lt;Evt_typedeDonnée&gt;</span>1<span class="nt">&lt;/Evt_typedeDonnée&gt;</span>
+                                <span class="nt">&lt;Evt_clinique&gt;</span>
+                                    <span class="nt">&lt;Evt_clinique_code&gt;</span>0<span class="nt">&lt;/Evt_clinique_code&gt;</span>
+                                <span class="nt">&lt;/Evt_clinique&gt;</span>
+                            <span class="nt">&lt;/Evt_objet&gt;</span>
+                            <span class="nt">&lt;Evt_libellé&gt;</span>Si besoin<span class="nt">&lt;/Evt_libellé&gt;</span>
+                        <span class="nt">&lt;/Evénement_structuré&gt;</span>
+                    <span class="nt">&lt;/Evt_structuré_début&gt;</span>
+                    <span class="nt">&lt;Quantité&gt;</span>
+                        <span class="nt">&lt;Nombre&gt;</span>1000.0<span class="nt">&lt;/Nombre&gt;</span>
+                        <span class="nt">&lt;Unité&gt;</span>mg<span class="nt">&lt;/Unité&gt;</span>
+                    <span class="nt">&lt;/Quantité&gt;</span>
+                <span class="nt">&lt;/Elément_posologie&gt;</span>
+                <span class="nt">&lt;Elément_posologie&gt;</span>
+                    <span class="nt">&lt;Type_événement_début&gt;</span>4<span class="nt">&lt;/Type_événement_début&gt;</span>
+                    <span class="nt">&lt;Evénement_début&gt;</span>1<span class="nt">&lt;/Evénement_début&gt;</span>
+                    <span class="nt">&lt;Quantité&gt;</span>
+                        <span class="nt">&lt;Nombre&gt;</span>6<span class="nt">&lt;/Nombre&gt;</span>
+                        <span class="nt">&lt;Unité&gt;</span>h<span class="nt">&lt;/Unité&gt;</span>
+                    <span class="nt">&lt;/Quantité&gt;</span>
+                <span class="nt">&lt;/Elément_posologie&gt;</span>
+                <span class="nt">&lt;Elément_posologie&gt;</span>
+                    <span class="nt">&lt;Type_événement_début&gt;</span>4<span class="nt">&lt;/Type_événement_début&gt;</span>
+                    <span class="nt">&lt;Evénement_début&gt;</span>3<span class="nt">&lt;/Evénement_début&gt;</span>
+                    <span class="nt">&lt;Quantité&gt;</span>
+                        <span class="nt">&lt;Nombre&gt;</span>4000.0<span class="nt">&lt;/Nombre&gt;</span>
+                        <span class="nt">&lt;Unité&gt;</span>mg<span class="nt">&lt;/Unité&gt;</span>
+                    <span class="nt">&lt;/Quantité&gt;</span>
+                <span class="nt">&lt;/Elément_posologie&gt;</span>
+            <span class="nt">&lt;/Elément_prescr_médic&gt;</span>
+        <span class="nt">&lt;/Prescription&gt;</span>
+    <span class="nt">&lt;/M_Prescription_médicaments&gt;</span>
+<span class="nt">&lt;/Messages&gt;</span>
+</code></pre></div></div>
+
+<h2 id="morphine-en-pca-patient-controled-analgesiae">Morphine en PCA (Patient Controled Analgesiae)</h2>
+
+<p>Cette prescription PN13 est traduite en FHIR dans l’instance <a href="https://interop-sante.github.io/hl7.fhir.fr.medication/RelationEtMedicamentsVirtuels/ig/Bundle-TradPN13FHIR-Presc-Morphine-PCA.html">TradPN13FHIR-Presc-Morphine-PCA</a></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span>
+<span class="nt">&lt;Messages</span> <span class="na">Phast-id_message=</span><span class="s">"10543745"</span> <span class="na">Phast-dh_émission=</span><span class="s">"20250507153801"</span> <span class="na">xmlns=</span><span class="s">"http://www.phast.fr/SIPhII"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;M_Prescription_médicaments&gt;</span>
+		<span class="nt">&lt;Patient&gt;</span>
+			<span class="nt">&lt;Ipp&gt;</span>6032486<span class="nt">&lt;/Ipp&gt;</span>
+			
+			<span class="nt">&lt;Nom_usuel&gt;</span>ARASGAIN<span class="nt">&lt;/Nom_usuel&gt;</span>
+			<span class="nt">&lt;Nom_naissance&gt;</span>CUIMEANACH<span class="nt">&lt;/Nom_naissance&gt;</span>
+			<span class="nt">&lt;Premier_prénom&gt;</span>MARSALI<span class="nt">&lt;/Premier_prénom&gt;</span>
+			<span class="nt">&lt;Prénoms&gt;</span>MARSALI MORAG MAIREAD<span class="nt">&lt;/Prénoms&gt;</span>
+			<span class="nt">&lt;Date_naissance&gt;</span>19890102000000<span class="nt">&lt;/Date_naissance&gt;</span>
+			<span class="nt">&lt;Lieu_naissance&gt;</span>29134<span class="nt">&lt;/Lieu_naissance&gt;</span>
+			<span class="nt">&lt;Sexe&gt;</span>F<span class="nt">&lt;/Sexe&gt;</span>
+			<span class="nt">&lt;DI&gt;</span>1.2.250.1.507454354.43654.2346659<span class="nt">&lt;/DI&gt;</span>
+			<span class="nt">&lt;INS&gt;</span>289062913400149<span class="nt">&lt;/INS&gt;</span>
+			<span class="nt">&lt;INS_OID&gt;</span>1.2.250.1.213.1.4.8<span class="nt">&lt;/INS_OID&gt;</span>
+			<span class="nt">&lt;Statut_idpat&gt;</span>3<span class="nt">&lt;/Statut_idpat&gt;</span>
+		<span class="nt">&lt;/Patient&gt;</span>
+		<span class="nt">&lt;Séjour&gt;</span>
+			<span class="nt">&lt;Id_séjour&gt;</span>765093464568<span class="nt">&lt;/Id_séjour&gt;</span>
+		<span class="nt">&lt;/Séjour&gt;</span>
+		<span class="nt">&lt;Prescription&gt;</span>
+			<span class="nt">&lt;Mode_communication&gt;</span>1<span class="nt">&lt;/Mode_communication&gt;</span>
+			<span class="nt">&lt;Dh_prescription&gt;</span>20250507153500<span class="nt">&lt;/Dh_prescription&gt;</span>
+			<span class="nt">&lt;Unité_hébergement</span> <span class="na">Phast-nomenclature=</span><span class="s">"HM_UF"</span><span class="nt">&gt;</span>603<span class="nt">&lt;/Unité_hébergement&gt;</span>
+			<span class="nt">&lt;Unité_resp_médicale</span> <span class="na">Phast-nomenclature=</span><span class="s">"HM_UF"</span><span class="nt">&gt;</span>506<span class="nt">&lt;/Unité_resp_médicale&gt;</span>
+			<span class="nt">&lt;Elément_prescr_médic&gt;</span>
+				<span class="nt">&lt;Id_élément_prescr&gt;</span>202500507153500547<span class="nt">&lt;/Id_élément_prescr&gt;</span>
+				<span class="nt">&lt;Type_élément_prescr</span> <span class="na">Phast-nomenclature=</span><span class="s">"SIPh_TypeEltPLA"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/Type_élément_prescr&gt;</span>
+				<span class="nt">&lt;Libellé_élément_prescr&gt;</span>Par voie intraveineuse : PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30<span class="nt">&lt;/Libellé_élément_prescr&gt;</span>
+				<span class="nt">&lt;Fourniture&gt;</span>1<span class="nt">&lt;/Fourniture&gt;</span>
+				<span class="nt">&lt;Id_prescripteur&gt;</span>899999999999<span class="nt">&lt;/Id_prescripteur&gt;</span>
+				<span class="nt">&lt;Voie_administration&gt;</span>49<span class="nt">&lt;/Voie_administration&gt;</span>
+				<span class="nt">&lt;Dh_début&gt;</span>20250507173000<span class="nt">&lt;/Dh_début&gt;</span>
+				<span class="nt">&lt;Dh_fin&gt;</span>20250511173000<span class="nt">&lt;/Dh_fin&gt;</span>
+				<span class="nt">&lt;Composant_prescrit&gt;</span>
+					<span class="nt">&lt;Type_composant_13&gt;</span>13<span class="nt">&lt;/Type_composant_13&gt;</span>
+					<span class="nt">&lt;Code_composant_13&gt;</span>100000091372<span class="nt">&lt;/Code_composant_13&gt;</span>
+					<span class="nt">&lt;Libellé_composant&gt;</span>morphine<span class="nt">&lt;/Libellé_composant&gt;</span>
+				<span class="nt">&lt;/Composant_prescrit&gt;</span>
+				<span class="nt">&lt;Elément_posologie&gt;</span>
+					<span class="nt">&lt;Type_événement_début&gt;</span>1<span class="nt">&lt;/Type_événement_début&gt;</span>
+					<span class="nt">&lt;Débit&gt;</span>
+						<span class="nt">&lt;Nombre&gt;</span>5<span class="nt">&lt;/Nombre&gt;</span>
+						<span class="nt">&lt;Unité&gt;</span>mg/h<span class="nt">&lt;/Unité&gt;</span>
+					<span class="nt">&lt;/Débit&gt;</span>
+				<span class="nt">&lt;/Elément_posologie&gt;</span>
+				<span class="nt">&lt;Elément_posologie&gt;</span>
+					<span class="nt">&lt;Type_événement_début&gt;</span>3<span class="nt">&lt;/Type_événement_début&gt;</span>
+					<span class="nt">&lt;Evénement_début&gt;</span>bolus<span class="nt">&lt;/Evénement_début&gt;</span>
+					<span class="nt">&lt;Quantité&gt;</span>
+						<span class="nt">&lt;Nombre&gt;</span>10<span class="nt">&lt;/Nombre&gt;</span>
+						<span class="nt">&lt;Unité&gt;</span>mg<span class="nt">&lt;/Unité&gt;</span>
+					<span class="nt">&lt;/Quantité&gt;</span>
+				<span class="nt">&lt;/Elément_posologie&gt;</span>
+				<span class="nt">&lt;Elément_posologie&gt;</span>
+					<span class="nt">&lt;Type_événement_début&gt;</span>4<span class="nt">&lt;/Type_événement_début&gt;</span>
+					<span class="nt">&lt;Evénement_début&gt;</span>1<span class="nt">&lt;/Evénement_début&gt;</span>
+					<span class="nt">&lt;Quantité&gt;</span>
+						<span class="nt">&lt;Nombre&gt;</span>2<span class="nt">&lt;/Nombre&gt;</span>
+						<span class="nt">&lt;Unité&gt;</span>h<span class="nt">&lt;/Unité&gt;</span>
+					<span class="nt">&lt;/Quantité&gt;</span>
+				<span class="nt">&lt;/Elément_posologie&gt;</span>
+			<span class="nt">&lt;/Elément_prescr_médic&gt;</span>
+		<span class="nt">&lt;/Prescription&gt;</span>
+	<span class="nt">&lt;/M_Prescription_médicaments&gt;</span>
+<span class="nt">&lt;/Messages&gt;</span>
+</code></pre></div></div>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 07:32+0000">2025-07-11</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/ig/fhir/medication/history.html" target="_blank">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
