@@ -135,8 +135,7 @@ ou
 **Date/heure de début effective et Date/heure de fin effective de la ligne de prescription**:
 
 Ces deux dates ne figurent pas dans *MedicationRequest* R4.
-Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément `effectiveDosePeriod` conçu pour accueillir ces deux dates a été ajouté.
-![EffectiveDosePeriodR5](Prescription4.jpg)
+Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément `[effectiveDosePeriod](https://www.hl7.org/fhir/medicationrequest-definitions.html#MedicationRequest.effectiveDosePeriod)` conçu pour accueillir ces deux dates a été ajouté.
 
 **Note PN13**:
 
