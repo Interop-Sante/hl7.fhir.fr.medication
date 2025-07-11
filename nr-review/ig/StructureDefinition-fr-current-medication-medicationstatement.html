@@ -365,24 +365,56 @@ Current Medication MedicationStatement resource profile</p>
 
 <h3 id="usage">Usage</h3>
 
-<p>Ce profil est utilisé pour les ressources <em>MedicationStatement</em> figurant dans le traitement médicamenteux courant.</p>
-
 <p>Chaque ressource <em>MedicationStatement</em> y représente une ligne de médicament du traitement médicamenteux courant.</p>
-
-<p>Les règles natives HL7-FHIR sont applicables et à respecter.</p>
 
 <p>When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:</p>
 
 <ul>
-  <li>\r1. MedicationStatement.status + MedicationStatement.wasNotTaken</li>
-  <li>\r2. Status=Active + NotTaken=T = Not currently taking</li>
-  <li>\r3. Status=Completed + NotTaken=T = Not taken in the past</li>
-  <li>\r4. Status=Intended + NotTaken=T = No intention of taking</li>
-  <li>\r5. Status=Active + NotTaken=F = Taking, but not as prescribed</li>
-  <li>\r6. Status=Active + NotTaken=F = Taking</li>
-  <li>\r7. Status=Intended +NotTaken= F = Will be taking (not started)</li>
-  <li>\r8. Status=Completed + NotTaken=F = Taken in past</li>
-  <li>\r9. Status=In Error + NotTaken=N/A = In Error.</li>
+  <li>
+    <ol>
+      <li>MedicationStatement.status + MedicationStatement.wasNotTaken</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Active + NotTaken=T = Not currently taking</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Completed + NotTaken=T = Not taken in the past</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Intended + NotTaken=T = No intention of taking</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Active + NotTaken=F = Taking, but not as prescribed</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Active + NotTaken=F = Taking</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Intended +NotTaken= F = Will be taking (not started)</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=Completed + NotTaken=F = Taken in past</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Status=In Error + NotTaken=N/A = In Error.</li>
+    </ol>
+  </li>
 </ul>
 
 
@@ -537,7 +569,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-FrSimpleQuantityMedication.html" title="Quantity">FrSimpleQuantityMedication</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Upper limit on medication per lifetime of the patient</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c6cdbe2-0ce9-4a6e-920d-4a01e5710b7d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 427b11dc-632d-4074-88ca-b04b01643691
 document.getElementById('cbfr-current-medication-medicationstatementK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('fr-current-medication-medicationstatementK'), 'binding', document.getElementById('cbfr-current-medication-medicationstatementK-binding').checked, document.getElementById('ppfr-current-medication-medicationstatementK'));
 document.getElementById('cbfr-current-medication-medicationstatementK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -685,7 +717,7 @@ filterDesc(document.getElementById('fr-current-medication-medicationstatementK')
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-FrSimpleQuantityMedication.html" title="Quantity">FrSimpleQuantityMedication</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Upper limit on medication per lifetime of the patient</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c6cdbe2-0ce9-4a6e-920d-4a01e5710b7d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 427b11dc-632d-4074-88ca-b04b01643691
 document.getElementById('cbfr-current-medication-medicationstatementD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('fr-current-medication-medicationstatementD'), 'binding', document.getElementById('cbfr-current-medication-medicationstatementD-binding').checked, document.getElementById('ppfr-current-medication-medicationstatementD'));
 document.getElementById('cbfr-current-medication-medicationstatementD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1024,7 +1056,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-FrSimpleQuantityMedication.html" title="Quantity">FrSimpleQuantityMedication</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Upper limit on medication per lifetime of the patient</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c6cdbe2-0ce9-4a6e-920d-4a01e5710b7d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 427b11dc-632d-4074-88ca-b04b01643691
 document.getElementById('cbfr-current-medication-medicationstatementS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('fr-current-medication-medicationstatementS'), 'binding', document.getElementById('cbfr-current-medication-medicationstatementS-binding').checked, document.getElementById('ppfr-current-medication-medicationstatementS'));
 document.getElementById('cbfr-current-medication-medicationstatementS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1322,7 +1354,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-FrSimpleQuantityMedication.html" title="Quantity">FrSimpleQuantityMedication</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Upper limit on medication per lifetime of the patient</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c6cdbe2-0ce9-4a6e-920d-4a01e5710b7d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 427b11dc-632d-4074-88ca-b04b01643691
 document.getElementById('cbfr-current-medication-medicationstatementKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('fr-current-medication-medicationstatementKA'), 'binding', document.getElementById('cbfr-current-medication-medicationstatementKA-binding').checked, document.getElementById('ppfr-current-medication-medicationstatementKA'));
 document.getElementById('cbfr-current-medication-medicationstatementKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1470,7 +1502,7 @@ filterDesc(document.getElementById('fr-current-medication-medicationstatementKA'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-FrSimpleQuantityMedication.html" title="Quantity">FrSimpleQuantityMedication</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Upper limit on medication per lifetime of the patient</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c6cdbe2-0ce9-4a6e-920d-4a01e5710b7d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 427b11dc-632d-4074-88ca-b04b01643691
 document.getElementById('cbfr-current-medication-medicationstatementDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('fr-current-medication-medicationstatementDA'), 'binding', document.getElementById('cbfr-current-medication-medicationstatementDA-binding').checked, document.getElementById('ppfr-current-medication-medicationstatementDA'));
 document.getElementById('cbfr-current-medication-medicationstatementDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1808,7 +1840,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-FrSimpleQuantityMedication.html" title="Quantity">FrSimpleQuantityMedication</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Upper limit on medication per lifetime of the patient</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6c6cdbe2-0ce9-4a6e-920d-4a01e5710b7d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 427b11dc-632d-4074-88ca-b04b01643691
 document.getElementById('cbfr-current-medication-medicationstatementSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('fr-current-medication-medicationstatementSA'), 'binding', document.getElementById('cbfr-current-medication-medicationstatementSA-binding').checked, document.getElementById('ppfr-current-medication-medicationstatementSA'));
 document.getElementById('cbfr-current-medication-medicationstatementSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2030,7 +2062,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 08:59+0000">2025-07-11</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 09:03+0000">2025-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
