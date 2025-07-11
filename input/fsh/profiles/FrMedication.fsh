@@ -4,9 +4,7 @@ Id: fr-medication
 Description: "profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp'Santé"
 * ^status = #draft
 * ^purpose = "décrit le médicament figurant dans une ressource InterOp'Santé (fr) MedicationStatement (Bilan Médicamenteux, Conciliation) ou MedicationRequest (prescription)"
-* meta.profile MS
-* meta.profile ^label = "Medication"
-* meta.profile ^requirements = "description du médicament figurant dans un InterOp'Santé (fr) MedicationStatement ou MedicationRequest"
+
 * implicitRules ..0
 * amount ..0 MS
 * amount ^requirements = "Le médicament d'une MedicationRequest ou MedicationStatement n'est pas une boite contenant plusieurs unités"

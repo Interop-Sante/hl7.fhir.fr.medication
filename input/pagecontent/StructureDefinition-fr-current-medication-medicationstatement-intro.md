@@ -4,7 +4,7 @@ Ce profil est utilisé pour les ressources *MedicationStatement* figurant dans l
 
 Chaque ressource *MedicationStatement* y représente une ligne de médicament du traitement médicamenteux courant.
 
-Les règles natives HL7-FHIR sont applicables et à respecter. 
+Les règles natives HL7-FHIR sont applicables et à respecter.
 
 When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:
 
