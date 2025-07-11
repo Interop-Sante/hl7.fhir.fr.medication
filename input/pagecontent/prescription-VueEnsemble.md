@@ -6,7 +6,7 @@ La prescription en tant que telle (le regroupement de lignes de prescription), n
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
-Le **médicament prescrit** est représenté par l'élément `medication\[x\]` (1..1) de la ressource *FrInpatientMedicationRequest* qui le contraint à faire référence à une ressource *Medication*.
+Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FrInpatientMedicationRequest*, celui-ci peut être représenté sous forme de ressource *Medication* ou de concept codé (CodeableConcept).
 
 Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
 
