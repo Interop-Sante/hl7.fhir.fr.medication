@@ -15,8 +15,10 @@ Selon que ce médicament prescrit est un **médicament simple** ou un **médicam
 
 Dépendance des ressources profilées par Interop'Santé
 
-<div class="figure" style="width:100%;">
-    <p>{% include prescription.svg %}</p>
+<div class="figure" style="width:100%; overflow-x:auto;">
+  <p style="margin: 0; padding: 0;">
+    <object type="image/svg+xml" data="prescription.svg" style="width: 100%; height: auto;"></object>
+  </p>
 </div>
 
 Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*.
