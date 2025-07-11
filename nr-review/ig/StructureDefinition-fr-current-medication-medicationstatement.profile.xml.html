@@ -357,7 +357,7 @@
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="0.1.0"/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="FrCurrentMedicationMedicationStatement"/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>="draft"/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>="2025-07-11T07:30:40+00:00"/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>="2025-07-11T07:36:43+00:00"/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="Interop'Santé"/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="Interop'Santé"/&gt;
@@ -369,8 +369,6 @@
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>
                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="Profil de la ressource *MedicationStatement* du traitement médicamenteux courant.
 Current Medication MedicationStatement resource profile"/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.purpose">purpose</a>
-           <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="Ce profil est utilisé pour les ressources *MedicationStatement* figurant dans le traitement médicamenteux courant. Chaque ressource *MedicationStatement* y représente une ligne de médicament du traitement médicamenteux courant."/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>="4.0.1"/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.mapping">mapping</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>="workflow"/&gt;
@@ -410,7 +408,7 @@ Current Medication MedicationStatement resource profile"/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier."/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:1. MedicationStatement.status + MedicationStatement.wasNotTaken2. Status=Active + NotTaken=T = Not currently taking3. Status=Completed + NotTaken=T = Not taken in the past4. Status=Intended + NotTaken=T = No intention of taking5. Status=Active + NotTaken=F = Taking, but not as prescribed6. Status=Active + NotTaken=F = Taking7. Status=Intended +NotTaken= F = Will be taking (not started)8. Status=Completed + NotTaken=F = Taken in past9. Status=In Error + NotTaken=N/A = In Error."/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:MedicationStatement.status + MedicationStatement.wasNotTakenStatus=Active + NotTaken=T = Not currently takingStatus=Completed + NotTaken=T = Not taken in the pastStatus=Intended + NotTaken=T = No intention of takingStatus=Active + NotTaken=F = Taking, but not as prescribedStatus=Active + NotTaken=F = TakingStatus=Intended +NotTaken= F = Will be taking (not started)Status=Completed + NotTaken=F = Taken in pastStatus=In Error + NotTaken=N/A = In Error."/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>="0"/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="*"/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
@@ -2889,8 +2887,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="Ligne de traitement médicamenteux du Traitement Médicamenteux Courant"/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier."/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>="Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:1. MedicationStatement.status + MedicationStatement.wasNotTaken2. Status=Active + NotTaken=T = Not currently taking3. Status=Completed + NotTaken=T = Not taken in the past4. Status=Intended + NotTaken=T = No intention of taking5. Status=Active + NotTaken=F = Taking, but not as prescribed6. Status=Active + NotTaken=F = Taking7. Status=Intended +NotTaken= F = Will be taking (not started)8. Status=Completed + NotTaken=F = Taken in past9. Status=In Error + NotTaken=N/A = In Error."/&gt;
     &lt;/element&gt;
     &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>="MedicationStatement.implicitRules"&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>="MedicationStatement.implicitRules"/&gt;
@@ -3041,7 +3037,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 07:32+0000">2025-07-11</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 07:38+0000">2025-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

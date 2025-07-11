@@ -17,7 +17,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "FrCurrentMedicationMedicationStatement"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-07-11T07:30:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-07-11T07:36:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -27,7 +27,6 @@
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Profil de la ressource *MedicationStatement* du traitement médicamenteux courant.\nCurrent Medication MedicationStatement resource profile"] ; # 
-  fhir:purpose [ fhir:v "Ce profil est utilisé pour les ressources *MedicationStatement* figurant dans le traitement médicamenteux courant. Chaque ressource *MedicationStatement* y représente une ligne de médicament du traitement médicamenteux courant."] ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
      fhir:identity [ fhir:v "workflow" ] ;
@@ -67,7 +66,7 @@
        fhir:path [ fhir:v "MedicationStatement" ] ;
        fhir:short [ fhir:v "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant" ] ;
        fhir:definition [ fhir:v "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier." ] ;
-       fhir:comment [ fhir:v "Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\r1. MedicationStatement.status + MedicationStatement.wasNotTaken\r2. Status=Active + NotTaken=T = Not currently taking\r3. Status=Completed + NotTaken=T = Not taken in the past\r4. Status=Intended + NotTaken=T = No intention of taking\r5. Status=Active + NotTaken=F = Taking, but not as prescribed\r6. Status=Active + NotTaken=F = Taking\r7. Status=Intended +NotTaken= F = Will be taking (not started)\r8. Status=Completed + NotTaken=F = Taken in past\r9. Status=In Error + NotTaken=N/A = In Error." ] ;
+       fhir:comment [ fhir:v "When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\rMedicationStatement.status + MedicationStatement.wasNotTaken\rStatus=Active + NotTaken=T = Not currently taking\rStatus=Completed + NotTaken=T = Not taken in the past\rStatus=Intended + NotTaken=T = No intention of taking\rStatus=Active + NotTaken=F = Taking, but not as prescribed\rStatus=Active + NotTaken=F = Taking\rStatus=Intended +NotTaken= F = Will be taking (not started)\rStatus=Completed + NotTaken=F = Taken in past\rStatus=In Error + NotTaken=N/A = In Error." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -2584,8 +2583,7 @@
        fhir:id [ fhir:v "MedicationStatement" ] ;
        fhir:path [ fhir:v "MedicationStatement" ] ;
        fhir:short [ fhir:v "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant" ] ;
-       fhir:definition [ fhir:v "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier." ] ;
-       fhir:comment [ fhir:v "Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\r1. MedicationStatement.status + MedicationStatement.wasNotTaken\r2. Status=Active + NotTaken=T = Not currently taking\r3. Status=Completed + NotTaken=T = Not taken in the past\r4. Status=Intended + NotTaken=T = No intention of taking\r5. Status=Active + NotTaken=F = Taking, but not as prescribed\r6. Status=Active + NotTaken=F = Taking\r7. Status=Intended +NotTaken= F = Will be taking (not started)\r8. Status=Completed + NotTaken=F = Taken in past\r9. Status=In Error + NotTaken=N/A = In Error." ]
+       fhir:definition [ fhir:v "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier." ]
      ] [
        fhir:id [ fhir:v "MedicationStatement.implicitRules" ] ;
        fhir:path [ fhir:v "MedicationStatement.implicitRules" ] ;

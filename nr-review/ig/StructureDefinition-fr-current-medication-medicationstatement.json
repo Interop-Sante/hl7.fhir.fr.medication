@@ -9,7 +9,7 @@
   "version" : "0.1.0",
   "name" : "FrCurrentMedicationMedicationStatement",
   "status" : "draft",
-  "date" : "2025-07-11T07:30:40+00:00",
+  "date" : "2025-07-11T07:36:43+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -19,7 +19,6 @@
     }]
   }],
   "description" : "Profil de la ressource *MedicationStatement* du traitement médicamenteux courant.\nCurrent Medication MedicationStatement resource profile",
-  "purpose" : "Ce profil est utilisé pour les ressources *MedicationStatement* figurant dans le traitement médicamenteux courant. Chaque ressource *MedicationStatement* y représente une ligne de médicament du traitement médicamenteux courant.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "workflow",
@@ -56,7 +55,7 @@
       "path" : "MedicationStatement",
       "short" : "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant",
       "definition" : "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier.",
-      "comment" : "Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\r1. MedicationStatement.status + MedicationStatement.wasNotTaken\r2. Status=Active + NotTaken=T = Not currently taking\r3. Status=Completed + NotTaken=T = Not taken in the past\r4. Status=Intended + NotTaken=T = No intention of taking\r5. Status=Active + NotTaken=F = Taking, but not as prescribed\r6. Status=Active + NotTaken=F = Taking\r7. Status=Intended +NotTaken= F = Will be taking (not started)\r8. Status=Completed + NotTaken=F = Taken in past\r9. Status=In Error + NotTaken=N/A = In Error.",
+      "comment" : "When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\rMedicationStatement.status + MedicationStatement.wasNotTaken\rStatus=Active + NotTaken=T = Not currently taking\rStatus=Completed + NotTaken=T = Not taken in the past\rStatus=Intended + NotTaken=T = No intention of taking\rStatus=Active + NotTaken=F = Taking, but not as prescribed\rStatus=Active + NotTaken=F = Taking\rStatus=Intended +NotTaken= F = Will be taking (not started)\rStatus=Completed + NotTaken=F = Taken in past\rStatus=In Error + NotTaken=N/A = In Error.",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -2324,8 +2323,7 @@
       "id" : "MedicationStatement",
       "path" : "MedicationStatement",
       "short" : "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant",
-      "definition" : "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier.",
-      "comment" : "Les règles natives HL7-FHIR sont applicables et à respecter. When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\r1. MedicationStatement.status + MedicationStatement.wasNotTaken\r2. Status=Active + NotTaken=T = Not currently taking\r3. Status=Completed + NotTaken=T = Not taken in the past\r4. Status=Intended + NotTaken=T = No intention of taking\r5. Status=Active + NotTaken=F = Taking, but not as prescribed\r6. Status=Active + NotTaken=F = Taking\r7. Status=Intended +NotTaken= F = Will be taking (not started)\r8. Status=Completed + NotTaken=F = Taken in past\r9. Status=In Error + NotTaken=N/A = In Error."
+      "definition" : "Ligne de traitement médicamenteux du Traitement Médicamenteux Courant hospitalier."
     },
     {
       "id" : "MedicationStatement.implicitRules",
