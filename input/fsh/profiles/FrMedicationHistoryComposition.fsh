@@ -7,12 +7,15 @@ Medication Assessment Composition resource profile."""
 * . ^short = "Bilan Médicamenteux"
 * . ^definition = "Bilan Médicamenteux : liste des traitements médicamenteux du patient avant son entrée à l'hôpital."
 * . ^comment = "Ce Bilan Médicamenteux est la première étape de la Conciliation Médicamenteuse. Voir [le guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante)."
+
 * implicitRules ..0
 * language ^defaultValueCode = #fr-FR
+
 * type MS
 * type ^requirements = "Coder le contexte *Bilan Médicamenteux* de cette Composition."
 * type.coding 1..1
 * type.coding = http://loinc.org#10160-0 "History of Medication use Narrative"
+
 * subject 1..
 * subject only Reference($FrCorePatient)
 * subject MS
