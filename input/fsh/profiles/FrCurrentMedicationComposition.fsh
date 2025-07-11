@@ -4,7 +4,6 @@ Id: fr-current-medication-composition
 Description: "Profil de la ressource Composition du traitement médicamenteux courant."
 * ^status = #draft
 * ^purpose = "Ce profil est utilisé pour la ressource *Composition* de tout document FHIR *Traitement médicamenteux courant*\\. Par exemple, celui résultant de la prescription d'admission intitulé *Ordonnance Médicale d'Admission* (OMA)."
-* ^copyright = "InterOp'Santé 2021"
 * . ^short = "Traitement Médicamenteux Courant"
 * . ^definition = "Traitement Médicamenteux Courant : liste des lignes de traitement médicamenteux courant hospitalier."
 * . ^comment = "En général, une ligne par médicament prescrit en cours. Des différences de construction des lignes peuvent exister d'un logiciel à un autre, liées à la structuration de la posologie (nombre de doses unitaires par période, quantité des doses unitaires, horaire des doses unitaires). Le jeu de tests de prescriptions intiales de référence permet l'évaluation de la capacité des logiciels à supporter la structuration de posologies complexes."

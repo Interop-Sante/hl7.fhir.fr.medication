@@ -23,13 +23,14 @@ Current Medication MedicationStatement resource profile"""
 * medication[x].type = "Medication"
 * medication[x].identifier 0..0 MS
 * medication[x].identifier ^requirements = "Identification du *médicament* uniquement par référence à une ressource *Medication* profilée *fr-medication*\\."
+
 * subject only Reference($FrCorePatient)
 * subject MS
 * subject ^short = "Le patient qui prend cette ligne de traitement médicamenteux"
 * subject ^definition = "Le patient qui prend cette ligne de traitement médicamenteux. Le Traitement Médicamenteux Courant ne concerne qu'un patient. Toutes ses lignes doivent référencer le même patient."
 * subject ^comment = "Obligatoire dans la ressource FHIR *MedicationStatement* originelle, donc DOIT ABSOLUMENT être identique à la personne à laquelle se rapporte ce document (voir element *subject* de la ressource parente *Composition*\\)."
 * subject ^requirements = "Le Traitement Médicamenteux Courant ne concerne qu'un seul et même patient. Toutes ses lignes doivent référencer le même patient, celui référencé par l'element *subject* de la ressource parente *Composition*\\."
-* subject.type 0..1
+
 * subject.type = "Patient"
 
 * dosage MS
@@ -41,6 +42,7 @@ Current Medication MedicationStatement resource profile"""
 
 * dosage.doseAndRate.rate[x] MS 
 * dosage.doseAndRate.rate[x] only FrRatioMedication
+
 * dosage.maxDosePerPeriod MS 
 * dosage.maxDosePerPeriod only FrRatioMedication
 * dosage.maxDosePerAdministration MS 

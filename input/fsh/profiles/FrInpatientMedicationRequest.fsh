@@ -3,14 +3,17 @@ Parent: MedicationRequest
 Id: fr-inpatient-medicationrequest
 Title: "FrInpatientMedicationRequest"
 Description: "French inpatient medication request profile"
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
+
 * extension contains fr-treatment-intent named treatmentIntent 0..1
 * extension[treatmentIntent] ^short = "overall treatment intent"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
 * extension[treatmentIntent] ^meaningWhenMissing = "overall intention of the treatment not specified"
 * extension[treatmentIntent].value[x].coding ^definition = "SNOMED CT code minimal value set for overall treatment intent (extensible)"
+
 * medicationReference.extension contains fr-medication-to-dispense named toDispense 0..1
 * medicationReference.extension[toDispense] ^short = "Medication to be dispensed"
 * medicationReference.extension[toDispense] ^definition = "If the value is negative, the patient already has the medication, no dispense is necessary"
