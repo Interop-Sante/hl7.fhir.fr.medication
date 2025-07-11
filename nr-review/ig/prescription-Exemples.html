@@ -62,6 +62,10 @@
             <span style="display:inline-block;">0.1.0 - ci-build
 
 
+
+  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+
+
             </span>
           </p>
         </div>
@@ -173,7 +177,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l313">​</a>
+      <li><a name="l315">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -225,6 +229,16 @@
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
           <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>La prescription - Exemples</b></li>
+
+          <span style="float:right;">
+
+            <a href="prescription-CasUsage.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="dispensation-Intro.html">next&gt;</a>
+
+          </span>
 
         </ul>
       </div>    <!-- /container -->
@@ -332,7 +346,7 @@ Ce formalisme n’est pas obligatoire, la manière dont les ressources FHIR cons
   <li><a href="Bundle-Presc-ParacetamolCodeine-500mg30mg.html">paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j</a></li>
   <li><a href="Bundle-Presc-PerfGl-NaCl-KCl-500ml.html">Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j</a></li>
   <li><a href="Bundle-Presc-PerfGl-NaCl-KCl-1l.html">Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j</a></li>
-  <li><a name="l670">​</a>marquer l’un des médicaments composant comme étant le soluté du médicament composé: <a href="Bundle-Presc-MiniperfCefotaxime-En20min-Pdt3j.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a> Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
+  <li><a name="l684">​</a>marquer l’un des médicaments composant comme étant le soluté du médicament composé: <a href="Bundle-Presc-MiniperfCefotaxime-En20min-Pdt3j.html">céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a> Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a>, &sect; concacré à l’extension <em>IsVehicle</em></li>
   <li><a href="Bundle-Presc-PerfDobutamine-Qsp40mL.html">dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</a></li>
 </ul>
 
@@ -411,7 +425,7 @@ Les niveaux de complexité supplémentaires adressent</p>
   <li>l’expression de la quantité d’une dose se référant à l’un des médicaments composant du médicament composé prescrit
     <ul>
       <li><a href="Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html">céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j</a></li>
-      <li><a name="l855">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
+      <li><a name="l869">​</a>Voir <a href="prescription-Exemples.html#perfusion-et-seringues-électriques">Perfusions et seringues électriques</a> &sect; concacré à l’extension <em>Basis of Dose Component</em>.</li>
     </ul>
   </li>
   <li>l’expression d’une dose réelle pertinente à partir d’une dose théorique fonction de paramètres patient
@@ -608,7 +622,7 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de rapporter l’expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1560">​</a>Cette information est portée par l’extension <a href="Bundle-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <code class="language-plaintext highlighter-rouge">doseAndRate</code> du type complex <em>Dosage</em> qui s’applique à l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code>* de la ressource <em>MedicationRequest</em>.</p>
+<p><a name="l1574">​</a>Cette information est portée par l’extension <a href="Bundle-FrBasisOfDoseComponent.html"><em>FrBasisOfDoseComponent</em></a> de l’élément <code class="language-plaintext highlighter-rouge">doseAndRate</code> du type complex <em>Dosage</em> qui s’applique à l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code>* de la ressource <em>MedicationRequest</em>.</p>
 
 <p>Voir exemple <a href="Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html">céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</a></p>
 
@@ -625,7 +639,7 @@ Il y deux façons d’exprimer un débit dans une dose FHIR :</p>
 
 <p>Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.</p>
 
-<p><a name="l1626">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.</p>
+<p><a name="l1640">​</a>Cette information est portée par l’extension <a href="StructureDefinition-FrIsVehicle.html"><em>FrIsVehicle</em></a>.</p>
 
 <p>Cette extension est appliquée à l’élément <code class="language-plaintext highlighter-rouge">ingredient</code> de la ressource <em>Medication</em> composée.</p>
 
@@ -773,9 +787,31 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
   <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
     <div class="container">    <!-- container -->
 
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="prescription-CasUsage.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="dispensation-Intro.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 12:26+0000">2025-07-11</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 11, 2025 12:31+0000">2025-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
