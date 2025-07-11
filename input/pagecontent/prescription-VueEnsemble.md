@@ -10,12 +10,12 @@ Le **médicament prescrit** est représenté par l'élément `medication\[x\]` (
 
 Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
 
-- *FrMedicationNonCompound*: médicament simplte exprimé en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521* ou médicament exprimé en DC (dénomination commune identifiée par son **code SMS** ou son **code technique ANSM** dans l'attente de l'attribution d'un code SMS )/ Ex: *paracétamol dont le code SMS est 100000090270*
+- *FrMedicationNonCompound*: médicament simple exprimé en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521* ou médicament exprimé en DC (dénomination commune identifiée par son **code SMS** ou son **code technique ANSM** dans l'attente de l'attribution d'un code SMS )/ Ex: *paracétamol dont le code SMS est 100000090270*
 - *FrMedicationCompound*: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: *glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g*.
 
 Dépendance des ressources profilées par Interop'Santé
 
-![IGMedicationDependanceRessourcesProfileesPrescription](Prescription1.jpg)
+{% include prescription.svg %}
 
 Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*.
 Ex: *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047*

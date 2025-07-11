@@ -1,0 +1,59 @@
+@startuml
+
+skinparam linetype ortho
+skinparam rectangle {
+  BackgroundColor White
+  BorderColor Black
+}
+
+' Contexte
+package "Informations contextuelles" {
+  class FrCorePatient [[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]
+  class FrCoreOrganization [[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization]]
+  class FrCoreEncounter [[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter]]
+  class FrCorePractitioner [[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner]]
+  class "Observation (*)" as Observation
+}
+
+package "Médicament prescrit" {
+  class FrMedicationNonCompound [[https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-non-compound]]
+  class FrMedicationCompound [[https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-compound]]
+}
+
+class "FrInpatientMedicationRequest" [[https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest]]
+
+
+class "FrMedicationNonCompound"
+class "FrMedicationCompound"
+
+' Notes pour les ValueSets
+note right of FrInpatientMedicationRequest
+  ValueSet:
+  - FRRouteOfAdministration
+  - FRMethodOfAdministration
+end note
+
+note right of FrMedicationNonCompound
+  ValueSet:
+  - FRMedicationCode
+  - MpSubstanceActive
+end note
+
+note right of FrMedicationCompound
+  ValueSet:
+  - FRMpDoseForm
+end note
+
+' Relations principales
+FrInpatientMedicationRequest --> FrCorePatient
+FrInpatientMedicationRequest --> FrCoreOrganization
+FrInpatientMedicationRequest --> FrCoreEncounter
+FrInpatientMedicationRequest --> FrCorePractitioner
+FrInpatientMedicationRequest --> Observation
+
+FrInpatientMedicationRequest --> FrMedicationNonCompound
+FrInpatientMedicationRequest --> FrMedicationCompound
+
+FrMedicationNonCompound --> FrMedicationCompound
+
+@enduml
