@@ -10,8 +10,13 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
+jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
-
+#La liste des paramètres ainsi que leur explication est disponible ici : https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
+parameters: 
+  shownav: 'true'
+  path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
+  pin-canonicals: pin-multiples # Avoid raising many warnings when there are no version for URLs. "pin-multiples": pinning the canonical reference will only happen if there is multiple versions found in the package dependencies
 
 dependencies:
   hl7.fhir.fr.core: 2.1.0
