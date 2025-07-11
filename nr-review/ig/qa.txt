@@ -1,9 +1,9 @@
 MED : Validation Results
 =========================================
 
-err = 1375, warn = 2600, info = 123
+err = 1375, warn = 2599, info = 123
 IG Publisher Version: 2.0.8
-Generated Fri Jul 11 07:46:24 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = https://hl7.fr/ig/fhir/medication)
+Generated Fri Jul 11 09:04:30 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = https://hl7.fr/ig/fhir/medication)
  Build Errors : 1329 / 104 / 0
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Bundle-HAS-1-Presc-Pantoprazole-DC : 15 / 10 / 6
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Bundle-HAS-1-Presc-Pantoprazole-MV : 8 / 6 / 3
@@ -163,7 +163,7 @@ Generated Fri Jul 11 07:46:24 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medic
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-mp-substance : 2 / 8 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-observation-for-prescription : 1 / 1 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-on-admission-medication-composition : 1 / 6 / 1
- /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-on-admission-retroactive-reconciliation-composition : 1 / 6 / 1
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-on-admission-retroactive-reconciliation-composition : 1 / 5 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-prescription-bundle-for-example : 2 / 0 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-requestgroup-for-prescription : 1 / 0 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-strength-codeableconcept : 1 / 1 / 1
@@ -5721,11 +5721,10 @@ WARNING: StructureDefinition/fr-on-admission-medication-composition: StructureDe
 ERROR: StructureDefinition.jurisdiction: The resource must declare its jurisdiction to match the package id (hl7.fhir.fr.medication, jurisdiction = urn:iso:std:iso:3166#FR instead of or as well as [null]) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#FR "null"')
 WARNING: StructureDefinition.where(url = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-medication-composition'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.json ==
-WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.snapshot.element[11].fixed.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type' could not be found, so the code cannot be validated
-WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.snapshot.element[11].fixed.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type'
-WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.differential.element[1].fixed.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type' could not be found, so the code cannot be validated
-WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.differential.element[1].fixed.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type'
-WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.snapshot.element[11].fixed.ofType(CodeableConcept): For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
+WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.snapshot.element[11].pattern.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.snapshot.element[11].pattern.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type'
+WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type'
 ERROR: StructureDefinition.jurisdiction: The resource must declare its jurisdiction to match the package id (hl7.fhir.fr.medication, jurisdiction = urn:iso:std:iso:3166#FR instead of or as well as [null]) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#FR "null"')
 WARNING: StructureDefinition.where(url = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-retroactive-reconciliation-composition'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-fr-prescription-bundle-for-example.json ==
