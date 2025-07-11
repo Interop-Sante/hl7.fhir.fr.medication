@@ -1,3 +1,11 @@
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> la partie dispensation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+    </p>
+    </blockquote>
+</div>
+
 # La dispensation nominative à délivrance reglobalisée
 
 C'est la délivrance en un temps de la dispensation d'un ensemble de prescriptions.

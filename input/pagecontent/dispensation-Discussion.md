@@ -1,3 +1,11 @@
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> la partie dispensation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+    </p>
+    </blockquote>
+</div>
+
 # Discussion
 
 ## Les médicaments délivrés qui n’ont pas de code UCD
