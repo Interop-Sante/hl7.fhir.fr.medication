@@ -17,7 +17,7 @@ Dépendance des ressources profilées par Interop'Santé
 
 <div class="figure" style="width:100%; overflow-x:auto;">
   <p style="margin: 0; padding: 0;">
-    <object type="image/svg+xml" data="prescription.svg" style="width: 100%; height: auto;"></object>
+    {% include prescription.svg %}
   </p>
 </div>
 
