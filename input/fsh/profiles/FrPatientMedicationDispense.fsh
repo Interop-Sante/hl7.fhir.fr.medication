@@ -1,6 +1,6 @@
 Profile: FrInpatientMedicationDispense
 Parent: MedicationDispense
-Id: fr-inpatient-medication-dispense
+Id: fr-patient-medication-dispense
 Description: "French medication dispense profile"
 * ^status = #draft
 * medication[x] only CodeableConcept or Reference(FrMedication)

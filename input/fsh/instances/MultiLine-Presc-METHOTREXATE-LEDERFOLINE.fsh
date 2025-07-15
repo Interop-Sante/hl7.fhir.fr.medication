@@ -10,7 +10,7 @@ Instance: medicationrequest-Presc-METHOTREXATE
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-METHOTREXATE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
@@ -36,7 +36,7 @@ Instance: medicationrequest-Presc-LEDERFOLINE
 InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-Presc-LEDERFOLINE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion"
 * status = #active
 * intent = #order
 * priority = #routine

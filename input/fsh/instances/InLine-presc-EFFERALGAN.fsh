@@ -1,7 +1,7 @@
 Instance: InLine-Presc-EFFERALGAN
 InstanceOf: FrInpatientMedicationRequest
 Usage: #example
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
