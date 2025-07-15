@@ -18,8 +18,8 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 
 
 // Posologie
-* posologie 0..* Base "posologie"
-* posologie.sequence 0..1 decimal "Numéro de séquence"
+* posologie 0..* Base "Structure de la posologie par séquences de prise."
+* posologie.sequence 0..1 decimal "Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
 * posologie.voieAdministration 0..1 code "Voie d'administration du traitement"
 * posologie.siteAdministration 0..1 code "région anatomique d'administration"
 
@@ -64,6 +64,6 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 * posologie.dateDebut 0..1 dateTime "Date de début de la séquence de traitement"
 * posologie.dateFin 0..1 dateTime "Date de fin de la séquence de traitement"
 
-* posologie.dureeTraitement 0..1 Base "durée du traitement"
+* posologie.dureeTraitement 0..1 Base "Durée du traitement - la durée du traitement peut être indiquée en coomplément ou à la place des dates de début et de fin de traitement"
 * posologie.dureeTraitement.valeur 0..1 string "Valeur de la durée de traitement"
 * posologie.dureeTraitement.unite 0..1 code "Unité de la durée de traitement"
