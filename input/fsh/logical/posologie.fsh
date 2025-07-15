@@ -1,7 +1,7 @@
 Logical: lignePrescription				
 Id: fr-ligne-prescription				
 Title: "Ligne de precription"				
-Description:  """Structuration de la posologie en fonction des critères de la HAS."""
+Description:  """Structuration d'une ligne de prescription en fonction des critères de la HAS. A rajouter : instruction au dispensateur, prescripteur, patient, ..."""
 
 // Description du médicament
 * traitement 0..1 base "traitement identifié"
@@ -10,6 +10,11 @@ Description:  """Structuration de la posologie en fonction des critères de la H
 * traitement.dosage.valeur 0..1 decimal "Valeur du dosage"
 * traitement.dosage.unite 0..1 code "Unité du dosage"
 * traitement.forme 0..1 code "Forme galénique"
+
+// A rajouter - Instruction au dispensateur
+
+* dateDebut 0..1 dateTime "Date de début de validité de la ligne de prescription"
+* dateFin 0..1 dateTime "Date de fin de validité de la ligne de prescription"
 
 
 // Posologie
@@ -20,20 +25,20 @@ Description:  """Structuration de la posologie en fonction des critères de la H
 
 // Une quantité poso par séquence
 * posologie.quantitéPrescrite 0..* base "quantité prescrite"
-* posologie.quantitéPrescrite.min 0..1 decimal "quantité minimale à prendre par prise"
-* posologie.quantitéPrescrite.max 0..1 decimal "quantité maximale par prise" // diffQuantitéMax ?
+* posologie.quantitéPrescrite.valeur 0..1 decimal "Quantité à prendre par prise"
+* posologie.quantitéPrescrite.valeurMax 0..1 decimal "Quantité maximale à prendre par prise"
 * posologie.quantitéPrescrite.unite 0..1 code "Unité de la quantité prescrite"
 
-* posologie.quantitéMax 0..* base "quantité maximale par unité de temps"
-* posologie.quantitéMax.valeur 0..1 decimal "Valeur maximale"
-* posologie.quantitéMax.uniteTemps 0..1 code "Unité de temps" // en FHIR : uniquement par administration et par lifetime
-* posologie.quantitéMax.uniteQuantite 0..1 code "Unité de la quantité"
+* posologie.quantitéMaxParPériode 0..* base "quantité maximale par unité de temps"
+* posologie.quantitéMaxParPériode.valeur 0..1 decimal "Valeur maximale"
+* posologie.quantitéMaxParPériode.uniteTemps 0..1 code "Unité de temps" // en FHIR : également par administration et par lifetime
+* posologie.quantitéMaxParPériode.uniteQuantite 0..1 code "Unité de la quantité"
 
-* posologie.evenementDéclenchant 0..* base "Evenement déclenchant de la prise" // Il devrait y en avoir une par fréquence non ?
+* posologie.evenementDéclenchant 0..* base "Evenement déclenchant de la prise"
 * posologie.evenementDeclenchant.code 0..1 CodeableConcept "Code ou texte de l'évènement déclenchant"
 * posologie.evenementDeclenchant.offset 0..1 unsignedInt "Temps en minute avant/après l'élément déclenchant"
 
-* posologie.condition 0..* CodeableConcept "condition de traitement"
+* posologie.condition 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
 
 * posologie.instructionPatient 0..* string "Instructions au patient sous forme textuelle"
 
@@ -42,24 +47,23 @@ Description:  """Structuration de la posologie en fonction des critères de la H
 // **********
 
 // Une fréquence par séquence
-* posologie.frequence 0..* base "Fréquence de prise"
-* posologie.frequence.valeur 0..1 decimal "Valeur maximale"
-* posologie.frequence.unite 0..1 code "Unité de temps"
+* posologie.frequence 0..1 base "Description de fréquence de prise"
+* posologie.frequence.valeur 0..1 decimal "Nombre de prise de la quantité \"quantitéPrescrite\" par période"
+* posologie.frequence.nombrePériode 0..1 code "nombre de prise parpar période (ex : le 3 dans une fois tous les trois jours)"
+* posologie.frequence.unitéPériode 0..1 code "unité de la période (ex : jour dans le 3 dans une fois tous les trois jours)"
 * posologie.frequence.jourSemaine 0..* code "Jour de la semaine de la prise"
 * posologie.frequence.heurePrise 0..1 time "Heure de la prise"
 * posologie.frequence.precision 0..1 string "Instruction additionelle"
 
-
-* posologie.dureeAdministration 0..1 base "durée d'administration"
+// durée utilisable en ville et à l'hôpital - ou rythme d'administration
+* posologie.dureeAdministration 0..1 base "Rythme d'administration"
 * posologie.dureeAdministration.duree 0..1 decimal "Durée de l'administration"
 * posologie.dureeAdministration.dureeUnite 0..1 code "Unité de la durée d'administration"
 * posologie.dureeAdministration.dureeMax 0..1 decimal "Durée maximale de l'administration"
 
-// les dates de début et de fin doivent être au niveau de la fréquence car il peut y avoir plusieurs séquences avec chacune un début et une fin
-* posologie.dateDebut 0..1 dateTime "Date de début de traitement"
-* posologie.dateFin 0..1 dateTime "Date de fin de traitement"
+* posologie.dateDebut 0..1 dateTime "Date de début de la séquence de traitement"
+* posologie.dateFin 0..1 dateTime "Date de fin de la séquence de traitement"
 
-// la durée du traitement doit être au niveau de la fréquence car il peut y avoir plusieurs séquences avec chacune une durée propre
 * posologie.dureeTraitement 0..1 base "durée du traitement"
 * posologie.dureeTraitement.valeur 0..1 string "Valeur de la durée de traitement"
 * posologie.dureeTraitement.unite 0..1 code "Unité de la durée de traitement"
