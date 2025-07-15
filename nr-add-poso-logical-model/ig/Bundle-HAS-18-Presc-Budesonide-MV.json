@@ -1,0 +1,115 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "HAS-18-Presc-Budesonide-MV",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Medication",
+      "id" : "medication-HAS-18-Presc-BudesonideComp",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-compound",
+        "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-HAS-18-Presc-BudesonideComp\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-HAS-18-Presc-BudesonideComp</b></p><a name=\"medication-HAS-18-Presc-BudesonideComp\"> </a><a name=\"hcmedication-HAS-18-Presc-BudesonideComp\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-medication-compound.html\">FrMedicationCompound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound</code></p></div><p><b>code</b>: <span title=\"Codes:\">3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000078023}\">eau pour préparations injectables</span></p><p><b>strength</b>: 3 ml<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span>/</p></blockquote><p><b style=\"color: maroon\">Exception Generating Narrative: Cannot invoke &quot;org.hl7.fhir.r5.renderers.utils.ResourceWrapper.has(String)&quot; because &quot;q&quot; is null </b></p></div>"
+      },
+      "code" : {
+        "text" : "3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur"
+      },
+      "ingredient" : [{
+        "itemCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+            "code" : "100000078023",
+            "display" : "eau pour préparations injectables"
+          }]
+        },
+        "strength" : {
+          "numerator" : {
+            "value" : 3,
+            "unit" : "ml",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mL"
+          }
+        }
+      },
+      {
+        "itemCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://BogusSystemMedicabase.com",
+            "code" : "MV00004231",
+            "display" : "Budésonide 1 mg/2 ml (0,5 mg/ml) suspension pour inhalation par nébuliseur en récipient unidose"
+          }]
+        },
+        "strength" : {
+          "numerator" : {
+            "value" : 2,
+            "unit" : "ml",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mL"
+          }
+        }
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-HAS-18-Presc-Budesonide",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest",
+        "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-18-Presc-Budesonide\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-18-Presc-Budesonide</b></p><a name=\"medicationrequest-HAS-18-Presc-Budesonide\"> </a><a name=\"hcmedicationrequest-HAS-18-Presc-Budesonide\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FrInpatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-HAS-18-Presc-BudesonideComp</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Préparation pour nébuliseur ultrasonique: 3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Duration 20?? , Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 inhalateur<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15026000 = 'Inhaler')</span></td></tr></table></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "medicationReference" : {
+        "reference" : "#medication-HAS-18-Presc-BudesonideComp"
+      },
+      "subject" : {
+        "reference" : "Patient/14602"
+      },
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-71482713"
+      },
+      "note" : [{
+        "extension" : [{
+          "url" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope",
+          "valueCode" : "LIPRESCTXT"
+        }],
+        "text" : "Prescription textuelle: Préparation pour nébuliseur ultrasonique: 3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
+      }],
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "boundsPeriod" : {
+              "end" : "2023-03-26"
+            },
+            "duration" : 20,
+            "durationUnit" : "min",
+            "timeOfDay" : ["08:00:00",
+            "14:00:00",
+            "18:00:00",
+            "22:00:00"]
+          }
+        },
+        "doseAndRate" : [{
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "inhalateur",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15026000"
+          }
+        }]
+      }]
+    }
+  }]
+}

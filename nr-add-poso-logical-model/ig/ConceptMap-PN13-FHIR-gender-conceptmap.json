@@ -1,0 +1,64 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "PN13-FHIR-gender-conceptmap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap PN13-FHIR-gender-conceptmap</b></p><a name=\"PN13-FHIR-gender-conceptmap\"> </a><a name=\"hcPN13-FHIR-gender-conceptmap\"> </a><p>Mapping from https://interopsante.org/pn13/SIPh_sexe to <a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html\">http://hl7.org/fhir/administrative-gender</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>M (Mâle)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>male</td><td/></tr><tr><td>F (Femelle)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>female</td><td/></tr><tr><td>U (Non connu)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>unknown</td><td/></tr><tr><td>O (Autre)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#inexact\" title=\"inexact\">maps loosely to</a></td><td>unknown</td><td>La terminologie FHIR pour le sexe administratif n'a pas d'équivalent pour le concept autre. Le mapping sur unknown est proposé pour permettre un passage de PN13 à FHIR</td></tr></table></div>"
+  },
+  "url" : "https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-gender-conceptmap",
+  "version" : "0.1.0",
+  "name" : "FrPN13FHIRGenderConceptMap",
+  "title" : "Conversion PN13 FHIR des code de sexe administratif",
+  "status" : "draft",
+  "date" : "2025-07-15T14:25:21+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR",
+  "sourceUri" : "https://interopsante.org/pn13/SIPh_sexe",
+  "targetUri" : "http://hl7.org/fhir/administrative-gender",
+  "group" : [{
+    "element" : [{
+      "code" : "M",
+      "display" : "Mâle",
+      "target" : [{
+        "code" : "male",
+        "display" : "Male",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "Femelle",
+      "target" : [{
+        "code" : "female",
+        "display" : "Female",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "Non connu",
+      "target" : [{
+        "code" : "unknown",
+        "display" : "Unknown",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "O",
+      "display" : "Autre",
+      "target" : [{
+        "code" : "unknown",
+        "display" : "Unknown",
+        "equivalence" : "inexact",
+        "comment" : "La terminologie FHIR pour le sexe administratif n'a pas d'équivalent pour le concept autre. Le mapping sur unknown est proposé pour permettre un passage de PN13 à FHIR"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Presc-Nicotine-15mgPar16h"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <Medication>
+        <id value="medication-Presc-Nicotine-15mgPar16h"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"/>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_medication-Presc-Nicotine-15mgPar16h"> </a><p class="res-header-id"><b>Generated Narrative: Medication medication-Presc-Nicotine-15mgPar16h</b></p><a name="medication-Presc-Nicotine-15mgPar16h"> </a><a name="hcmedication-Presc-Nicotine-15mgPar16h"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-fr-medication-noncompound.html">FrMedicationNonCompound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound</code></p></div><p><b>code</b>: <span title="Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000079991}">NICOTINE</span></p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://data.esante.gouv.fr/ansm/medicament/codeSMS"/>
+            <code value="100000079991"/>
+            <display value="nicotine"/>
+          </coding>
+          <text value="NICOTINE"/>
+        </code>
+      </Medication>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-Presc-Nicotine-15mgPar16h"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+          <profile value="https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-Presc-Nicotine-15mgPar16h"> </a><p class="res-header-id"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-Nicotine-15mgPar16h</b></p><a name="medicationrequest-Presc-Nicotine-15mgPar16h"> </a><a name="hcmedicationrequest-Presc-Nicotine-15mgPar16h"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-fr-inpatient-medicationrequest.html">FrInpatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-Nicotine-15mgPar16h</code></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-19 18:33:41+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-71482713">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14621</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20070000}">Voie transdermique</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Rate[x]</b></td></tr><tr><td style="display: none">*</td><td>15 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/16 h<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeh = 'h')</span></td></tr></table></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <medicationReference>
+          <reference value="#medication-Presc-Nicotine-15mgPar16h"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <authoredOn value="2021-07-19T18:33:41.714Z"/>
+        <requester>
+          <reference value="Practitioner/smart-Practitioner-71482713"/>
+        </requester>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-14621"/>
+        </groupIdentifier>
+        <dosageInstruction>
+          <sequence value="1"/>
+          <timing>
+            <repeat>
+              <boundsPeriod>
+                <start value="2021-07-19T18:33:00Z"/>
+                <end value="2021-08-02T18:32:59Z"/>
+              </boundsPeriod>
+              <timeOfDay value="07:00:00"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20070000"/>
+              <display value="Voie transdermique"/>
+            </coding>
+            <text value="Voie transdermique"/>
+          </route>
+          <doseAndRate>
+            <rateRatio>
+              <numerator>
+                <value value="15"/>
+                <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
+              </numerator>
+              <denominator>
+                <value value="16"/>
+                <unit value="h"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="h"/>
+              </denominator>
+            </rateRatio>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+</Bundle>
