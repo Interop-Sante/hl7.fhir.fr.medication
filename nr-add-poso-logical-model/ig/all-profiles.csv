@@ -1525,6 +1525,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Structure de la posologie par séquences de prise.","Structure de la posologie par séquences de prise.","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie",0,*,"",""
 "fr-ligne-prescription","fr-ligne-prescription.posologie.sequence","fr-ligne-prescription.posologie.sequence","","","",0,1,"","","","decimal {[]} {[]}
 ","Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément.","Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément.","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.sequence",0,1,"",""
+"fr-ligne-prescription","fr-ligne-prescription.posologie.evenementFinSequence","fr-ligne-prescription.posologie.evenementFinSequence","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Evenement de fin de la séquence","Evenement de fin de la séquence","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.evenementFinSequence",0,1,"",""
 "fr-ligne-prescription","fr-ligne-prescription.posologie.voieAdministration","fr-ligne-prescription.posologie.voieAdministration","","","",0,1,"","","","code {[]} {[]}
 ","Voie d'administration du traitement","Voie d'administration du traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.voieAdministration",0,1,"",""
 "fr-ligne-prescription","fr-ligne-prescription.posologie.siteAdministration","fr-ligne-prescription.posologie.siteAdministration","","","",0,1,"","","","code {[]} {[]}
@@ -1547,14 +1549,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Valeur du temps","Valeur du temps","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurTemps",0,1,"",""
 "fr-ligne-prescription","fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteTemps","fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteTemps","","","",0,1,"","","","code {[]} {[]}
 ","Unité de temps","Unité de temps","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteTemps",0,1,"",""
-"fr-ligne-prescription","fr-ligne-prescription.posologie.evenementDeclenchant","fr-ligne-prescription.posologie.evenementDeclenchant","","","",0,*,"","","","Base {[]} {[]}
-","Evenement déclenchant de la prise","Evenement déclenchant de la prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.evenementDeclenchant",0,*,"",""
-"fr-ligne-prescription","fr-ligne-prescription.posologie.evenementDeclenchant.code","fr-ligne-prescription.posologie.evenementDeclenchant.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Code ou texte de l'évènement déclenchant","Code ou texte de l'évènement déclenchant","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.evenementDeclenchant.code",0,1,"",""
-"fr-ligne-prescription","fr-ligne-prescription.posologie.evenementDeclenchant.offset","fr-ligne-prescription.posologie.evenementDeclenchant.offset","","","",0,1,"","","","unsignedInt {[]} {[]}
-","Temps en minute avant/après l'élément déclenchant","Temps en minute avant/après l'élément déclenchant","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.evenementDeclenchant.offset",0,1,"",""
-"fr-ligne-prescription","fr-ligne-prescription.posologie.condition","fr-ligne-prescription.posologie.condition","","","",0,*,"","","","CodeableConcept {[]} {[]}
-","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.condition",0,*,"",""
+"fr-ligne-prescription","fr-ligne-prescription.posologie.momentDePrise","fr-ligne-prescription.posologie.momentDePrise","","","",0,*,"","","","Base {[]} {[]}
+","moment de la prise au cours de la journée (ex : 30 minutes avant le repas)","moment de la prise au cours de la journée (ex : 30 minutes avant le repas)","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.momentDePrise",0,*,"",""
+"fr-ligne-prescription","fr-ligne-prescription.posologie.momentDePrise.code","fr-ligne-prescription.posologie.momentDePrise.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code ou texte du moment de prise","Code ou texte du moment de prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.momentDePrise.code",0,1,"",""
+"fr-ligne-prescription","fr-ligne-prescription.posologie.momentDePrise.offset","fr-ligne-prescription.posologie.momentDePrise.offset","","","",0,1,"","","","unsignedInt {[]} {[]}
+","Temps en minute avant/après l'élément déclenchant","Temps en minute avant/après l'élément déclenchant","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.momentDePrise.offset",0,1,"",""
+"fr-ligne-prescription","fr-ligne-prescription.posologie.conditionDePrise","fr-ligne-prescription.posologie.conditionDePrise","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.conditionDePrise",0,*,"",""
 "fr-ligne-prescription","fr-ligne-prescription.posologie.instructionPatient","fr-ligne-prescription.posologie.instructionPatient","","","",0,1,"","","","string {[]} {[]}
 ","Instruction au patient sous forme textuelle","Instruction au patient sous forme textuelle","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.instructionPatient",0,1,"",""
 "fr-ligne-prescription","fr-ligne-prescription.posologie.frequence","fr-ligne-prescription.posologie.frequence","","","",0,1,"","","","Base {[]} {[]}
