@@ -18,7 +18,11 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 
 // Posologie
 * posologie 0..* Base "Structure de la posologie par séquences de prise."
+
 * posologie.sequence 0..1 decimal "Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
+
+* posologie.evenementFinSequence 0..1 CodeableConcept "Evenement de fin de la séquence"
+
 * posologie.voieAdministration 0..1 code "Voie d'administration du traitement"
 * posologie.siteAdministration 0..1 code "Région anatomique d'administration du traitement"
 
@@ -35,11 +39,11 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 * posologie.quantiteMaxParPeriode.uniteTemps 0..1 code "Unité de temps" // en FHIR : également par administration et par lifetime
 
 
-* posologie.evenementDeclenchant 0..* Base "Evenement déclenchant de la prise"
-* posologie.evenementDeclenchant.code 0..1 CodeableConcept "Code ou texte de l'évènement déclenchant"
-* posologie.evenementDeclenchant.offset 0..1 unsignedInt "Temps en minute avant/après l'élément déclenchant"
+* posologie.momentDePrise 0..* Base "moment de la prise au cours de la journée (ex : 30 minutes avant le repas)"
+* posologie.momentDePrise.code 0..1 CodeableConcept "Code ou texte du moment de prise"
+* posologie.momentDePrise.offset 0..1 unsignedInt "Temps en minute avant/après l'élément déclenchant"
 
-* posologie.condition 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
+* posologie.conditionDePrise 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
 
 * posologie.instructionPatient 0..1 string "Instruction au patient sous forme textuelle"
 
