@@ -9,15 +9,19 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 * traitement 0..1 Base "Identification du traitement concerné par la ligne de prescription"
 * traitement.identifiant 0..1 Identifier "Identifiant du traitement prescrit"			
 * traitement.dosage 0..* Base "Quantité de substance active dans une unité de dispensation"
-* traitement.dosage.valeur 0..1 decimal "Valeur du dosage"
-* traitement.dosage.unite 0..1 code "Unité du dosage"
-* traitement.forme 0..1 code "Forme galénique"
+* traitement.dosage.valeur 0..1 decimal "Valeur du dosage dans une unité de dispensiation"
+* traitement.dosage.unite 0..1 code "Unité du dosage dans une unité de dispensiation"
+* traitement.forme 0..1 code "Forme galénique de l'unité de dispensation"
 
 * dateDebut 0..1 dateTime "Date de début de la ligne de prescription"
 * dateFin 0..1 dateTime "Date de fin de la ligne de prescription"
 
 // Posologie
 * posologie 0..* Base "Structure de la posologie par séquences de prise."
+
+* posologie.doseEtDebit 0..* Base "Quantité de médicament administré par prise"
+  * dose[x] 0..1 Quantity or Range "La quantité de médicament administrée par prise. (1 comprimé, 2-3 comprimés, 20ml)"
+  * rate[x] 0..1 Ratio or Quantity or Range "Durée pendant laquel une dose définie est administére  (pendant 1 heure, entre 5 et 10 minutes)"
 
 * posologie.sequence 0..1 decimal "Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
 
