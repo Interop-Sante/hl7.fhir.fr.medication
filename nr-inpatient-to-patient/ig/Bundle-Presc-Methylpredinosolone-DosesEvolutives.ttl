@@ -1,0 +1,171 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/Presc-Methylpredinosolone-DosesEvolutives> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Presc-Methylpredinosolone-DosesEvolutives"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-Presc-Methylpredinosolone-DosesEvolutives" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-Presc-Methylpredinosolone-DosesEvolutives\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-Presc-Methylpredinosolone-DosesEvolutives</b></p><a name=\"medication-Presc-Methylpredinosolone-DosesEvolutives\"> </a><a name=\"hcmedication-Presc-Methylpredinosolone-DosesEvolutives\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FrMedicationNonCompound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound</code></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091803}\">METHYLPREDNISOLONE</span></p></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "100000091803" ] ;
+           fhir:display [ fhir:v "méthylprednisolone" ]
+         ] ) ;
+         fhir:text [ fhir:v "METHYLPREDNISOLONE" ]
+       ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-Presc-Methylpredinosolone-DosesEvolutives" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-Methylpredinosolone-DosesEvolutives\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-Methylpredinosolone-DosesEvolutives</b></p><a name=\"medicationrequest-Presc-Methylpredinosolone-DosesEvolutives\"> </a><a name=\"hcmedicationrequest-Presc-Methylpredinosolone-DosesEvolutives\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-patient-medicationrequest.html\">FrPatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-Methylpredinosolone-DosesEvolutives</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-08-14 18:17:26+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14647</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>6 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>4 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#medication-Presc-Methylpredinosolone-DosesEvolutives" ]
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:authoredOn [ fhir:v "2021-08-14T18:17:26.372Z"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Presc-14647" ]
+       ] ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2021-08-14T18:17:00Z"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2021-08-16T18:16:59Z"^^xsd:dateTime ]
+             ] ;
+             fhir:timeOfDay ( [ fhir:v "07:00:00"^^xsd:time ] )
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20053000" ] ;
+             fhir:display [ fhir:v "Voie orale" ]
+           ] ) ;
+           fhir:text [ fhir:v "Voie orale" ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "6"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ] )
+       ] [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2021-08-16T18:17:00Z"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2021-08-18T18:16:59Z"^^xsd:dateTime ]
+             ] ;
+             fhir:timeOfDay ( [ fhir:v "07:00:00"^^xsd:time ] )
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20053000" ] ;
+             fhir:display [ fhir:v "Voie orale" ]
+           ] ) ;
+           fhir:text [ fhir:v "Voie orale" ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ] )
+       ] [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2021-08-18T18:17:00Z"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2021-08-20T18:16:59Z"^^xsd:dateTime ]
+             ] ;
+             fhir:timeOfDay ( [ fhir:v "07:00:00"^^xsd:time ] )
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20053000" ] ;
+             fhir:display [ fhir:v "Voie orale" ]
+           ] ) ;
+           fhir:text [ fhir:v "Voie orale" ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

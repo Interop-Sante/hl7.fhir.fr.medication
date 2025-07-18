@@ -1,0 +1,100 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "HAS-4-2-Presc-DAFALGANCODEINE",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest",
+        "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE</b></p><a name=\"medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE\"> </a><a name=\"hcmedicationrequest-HAS-4-2-Presc-DAFALGANCODEINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-patient-medicationrequest.html\">FrPatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891479287}\">DAFALGAN CODEINE CPR</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>patientInstruction</b>: Selon l'intensité des douleurs. STOP SI NAUSEE</p><p><b>timing</b>: Once per 12 hours</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1-2 Comprimé</td></tr></table><p><b>maxDosePerPeriod</b>: 4 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span>/1 Jour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p><p><b>maxDosePerAdministration</b>: 2 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></p></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "option",
+      "priority" : "routine",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+          "code" : "3400891479287",
+          "display" : "DAFALGAN CODEINE CPR"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/14602"
+      },
+      "requester" : {
+        "identifier" : {
+          "system" : "urn:oid:1.2.250.1.71.4.2.1",
+          "value" : "899999999999"
+        }
+      },
+      "note" : [{
+        "extension" : [{
+          "url" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope",
+          "valueCode" : "LIPRESCTXT"
+        }],
+        "text" : "Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES"
+      }],
+      "dosageInstruction" : [{
+        "patientInstruction" : "Selon l'intensité des douleurs. STOP SI NAUSEE",
+        "timing" : {
+          "repeat" : {
+            "boundsDuration" : {
+              "value" : 10,
+              "unit" : "jour",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "d"
+            },
+            "frequency" : 1,
+            "period" : 12,
+            "periodUnit" : "h"
+          }
+        },
+        "doseAndRate" : [{
+          "doseRange" : {
+            "low" : {
+              "value" : 1,
+              "unit" : "Comprimé",
+              "system" : "http://standardterms.edqm.eu",
+              "code" : "15054000"
+            },
+            "high" : {
+              "value" : 2,
+              "unit" : "Comprimé",
+              "system" : "http://standardterms.edqm.eu",
+              "code" : "15054000"
+            }
+          }
+        }],
+        "maxDosePerPeriod" : {
+          "numerator" : {
+            "value" : 4,
+            "unit" : "Comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          },
+          "denominator" : {
+            "value" : 1,
+            "unit" : "Jour",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "d"
+          }
+        },
+        "maxDosePerAdministration" : {
+          "value" : 2,
+          "unit" : "Comprimé",
+          "system" : "http://standardterms.edqm.eu",
+          "code" : "15054000"
+        }
+      }]
+    }
+  }]
+}

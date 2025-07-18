@@ -1,0 +1,258 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/TradPN13FHIR-Presc-Morphine-PCA> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TradPN13FHIR-Presc-Morphine-PCA"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Patient ;
+       fhir:id [ fhir:v "patient-Trad-Presc-Morphine-PCA" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-Trad-Presc-Morphine-PCA\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-Trad-Presc-Morphine-PCA</b></p><a name=\"patient-Trad-Presc-Morphine-PCA\"> </a><a name=\"hcpatient-Trad-Presc-Morphine-PCA\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html\">FR Core Patient INS Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">ARASGAIN  Female, DoB: 1989-01-02 ( Identifiant interne: 6032486 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">NIR définitif/289062913400149 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">MARSALI CUIMEANACH (Official)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\"></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI\">FR Core CodeSystem v2-0445 VALI</a>: Identité validée</li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "identityStatus"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:Coding ;
+             fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "VALI" ]
+           ]
+         ] ) ;
+         fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"^^xsd:anyURI ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Address ;
+           fhir:extension ( [
+             fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code"^^xsd:anyURI ] ;
+             fhir:value [
+               a fhir:Coding ;
+               fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "29134" ]
+             ]
+           ] )
+         ]
+       ] ) ;
+       fhir:identifier ( [
+         fhir:use [ fhir:v "official" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "INS-NIR" ] ;
+             fhir:display [ fhir:v "NIR définitif" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "urn:oid:1.2.250.1.213.1.4.8"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "289062913400149" ]
+       ] [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "INTRN" ] ;
+             fhir:display [ fhir:v "Identifiant interne" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "urn:oid:1.2.250.1.507454354.43654.2346659"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "6032486" ]
+       ] ) ;
+       fhir:name ( [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:family [ fhir:v "ARASGAIN" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "MARSALI MORAG MAIREAD"
+           ]
+         ] ) ;
+         fhir:use [ fhir:v "official" ] ;
+         fhir:family [ fhir:v "CUIMEANACH" ] ;
+         fhir:given ( [ fhir:v "MARSALI" ] )
+       ] ) ;
+       fhir:gender [ fhir:v "female" ] ;
+       fhir:birthDate [ fhir:v "1989-01-02"^^xsd:date ]
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-Trad-Presc-Morphine-PCA" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Trad-Presc-Morphine-PCA\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Trad-Presc-Morphine-PCA</b></p><a name=\"medicationrequest-Trad-Presc-Morphine-PCA\"> </a><a name=\"hcmedicationrequest-Trad-Presc-Morphine-PCA\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-patient-medicationrequest.html\">FrPatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest</code></p></div><p><b>identifier</b>: https://somehospital.fr/Medication-ID</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091372}\">morphine</span></p><p><b>subject</b>: <code>#patient-Trad-Presc-Morphine-PCA</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/765093464568</p><p><b>supportingInformation</b>: </p><ul><li>Identifier: <code>https://somehospital.fr/UF</code>/603</li><li>Identifier: <code>https://somehospital.fr/UF</code>/506</li></ul><p><b>authoredOn</b>: 2025-05-07 15:35:00+0200</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/10543745</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Par voie intraveineuse : PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Rate[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>5 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/1 h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeh = 'h')</span></td></tr></table></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 2 hours</p><p><b>asNeeded</b>: <span title=\"Codes:\">bolus</span></p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>10 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:identifier ( [
+         fhir:value [ fhir:v "https://somehospital.fr/Medication-ID" ]
+       ] ) ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "100000091372" ] ;
+           fhir:display [ fhir:v "morphine" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:reference [ fhir:v "#patient-Trad-Presc-Morphine-PCA" ]
+       ] ;
+       fhir:encounter [
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/Sejour"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "765093464568" ]
+         ]
+       ] ;
+       fhir:supportingInformation ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-uf-role"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "UFHEB"
+           ]
+         ] ) ;
+         fhir:type [ fhir:v "Organization"^^xsd:anyURI ] ;
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/UF"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "603" ]
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-uf-role"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "UFMED"
+           ]
+         ] ) ;
+         fhir:type [ fhir:v "Organization"^^xsd:anyURI ] ;
+         fhir:identifier [
+           fhir:system [ fhir:v "https://somehospital.fr/UF"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "506" ]
+         ]
+       ] ) ;
+       fhir:authoredOn [ fhir:v "2025-05-07T15:35:00+02:00"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:identifier [
+           fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "899999999999" ]
+         ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "10543745" ]
+       ] ;
+       fhir:note ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "LIPRESCTXT"
+           ]
+         ] ) ;
+         fhir:text [ fhir:v "Prescription textuelle: Par voie intraveineuse : PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2025-05-07T17:30:00+02:00"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2025-05-11T17:30:00+02:00"^^xsd:dateTime ]
+             ]
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20045000" ] ;
+             fhir:display [ fhir:v "Voie intraveineuse" ]
+           ] )
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:rate [
+             a fhir:Ratio ;
+             fhir:numerator [
+               fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "mg" ] ;
+               fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "mg" ]
+             ] ;
+             fhir:denominator [
+               fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "h" ] ;
+               fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "h" ]
+             ]
+           ]
+         ] )
+       ] [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2025-05-07T17:30:00+02:00"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2025-05-11T17:30:00+02:00"^^xsd:dateTime ]
+             ] ;
+             fhir:frequencyMax [ fhir:v "1"^^xsd:positiveInteger ] ;
+             fhir:period [ fhir:v "2"^^xsd:decimal ] ;
+             fhir:periodUnit [ fhir:v "h" ]
+           ]
+         ] ;
+         fhir:asNeeded [
+           a fhir:CodeableConcept ;
+           fhir:text [ fhir:v "bolus" ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20045000" ] ;
+             fhir:display [ fhir:v "Voie intraveineuse" ]
+           ] )
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

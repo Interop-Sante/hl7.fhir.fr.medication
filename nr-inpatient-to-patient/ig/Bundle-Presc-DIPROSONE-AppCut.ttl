@@ -1,0 +1,157 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/Presc-DIPROSONE-AppCut> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Presc-DIPROSONE-AppCut"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-Presc-DIPROSONE-AppCut" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-Presc-DIPROSONE-AppCut\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-Presc-DIPROSONE-AppCut</b></p><a name=\"medication-Presc-DIPROSONE-AppCut\"> </a><a name=\"hcmedication-Presc-DIPROSONE-AppCut\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FrMedicationNonCompound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound</code></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400890277334}\">DIPROSONE 0.05%, crème, tube 30 g</span></p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 0071}\">crème</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091947}\">BETAMETHASONE</span></td><td>true</td><td>0.5 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/ g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span></td></tr></table></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/UCD"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "3400890277334" ] ;
+           fhir:display [ fhir:v "DIPROSONE 0,05% CR TB30G" ]
+         ] ) ;
+         fhir:text [ fhir:v "DIPROSONE 0.05%, crème, tube 30 g" ]
+       ] ;
+       fhir:form [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "0071" ] ;
+           fhir:display [ fhir:v "crème" ]
+         ] ) ;
+         fhir:text [ fhir:v "crème" ]
+       ] ;
+       fhir:ingredient ( [
+         fhir:item [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "100000091947" ] ;
+             fhir:display [ fhir:v "bétaméthasone" ]
+           ] ) ;
+           fhir:text [ fhir:v "BETAMETHASONE" ]
+         ] ;
+         fhir:isActive [ fhir:v true ] ;
+         fhir:strength [
+           fhir:numerator [
+             fhir:value [ fhir:v 0.5 ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ] ;
+           fhir:denominator [
+             fhir:unit [ fhir:v "g" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "g" ]
+           ]
+         ]
+       ] )
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-Presc-DIPROSONE-AppCut" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-DIPROSONE-AppCut\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-Presc-DIPROSONE-AppCut</b></p><a name=\"medicationrequest-Presc-DIPROSONE-AppCut\"> </a><a name=\"hcmedicationrequest-Presc-DIPROSONE-AppCut\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-patient-medicationrequest.html\">FrPatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-DIPROSONE-AppCut</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-29 13:04:23+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14627</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20003000}\">Voie cutanée</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>1 Appln<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{Appln} = '{Appln}')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#medication-Presc-DIPROSONE-AppCut" ]
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:authoredOn [ fhir:v "2021-07-29T13:04:23.435Z"^^xsd:dateTime ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:groupIdentifier [
+         fhir:system [ fhir:v "https://somehospital.fr/Prescrption-ID"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Presc-14627" ]
+       ] ;
+       fhir:dosageInstruction ( [
+         fhir:sequence [ fhir:v 1 ] ;
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2021-07-29T13:04:00Z"^^xsd:dateTime ] ;
+               fhir:end [ fhir:v "2021-08-03T13:03:59Z"^^xsd:dateTime ]
+             ] ;
+             fhir:timeOfDay ( [ fhir:v "08:00:00"^^xsd:time ] )
+           ]
+         ] ;
+         fhir:route [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "20003000" ] ;
+             fhir:display [ fhir:v "Voie cutanée" ]
+           ] ) ;
+           fhir:text [ fhir:v "Voie cutanée" ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:type [
+             fhir:coding ( [
+               fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "ordered" ] ;
+               fhir:display [ fhir:v "Ordered" ]
+             ] ) ;
+             fhir:text [ fhir:v "Ordered" ]
+           ] ;
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "Appln" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "{Appln}" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

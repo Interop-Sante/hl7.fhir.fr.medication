@@ -1,0 +1,92 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "HAS-14-1-Presc-CODOLIPRANE",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-HAS-14-1-Presc-CODOLIPRANE",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest",
+        "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-14-1-Presc-CODOLIPRANE\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-14-1-Presc-CODOLIPRANE</b></p><a name=\"medicationrequest-HAS-14-1-Presc-CODOLIPRANE\"> </a><a name=\"hcmedicationrequest-HAS-14-1-Presc-CODOLIPRANE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-patient-medicationrequest.html\">FrPatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893936047}\">CODOLIPRANE 500/30MG CPR</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 4 hours</p><p><b>asNeeded</b>: <span title=\"Codes:{http://snomed.info/sct 22253000}\">Si douleurs</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1-? comprimé</td></tr></table><p><b>maxDosePerPeriod</b>: 8 comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span>/24 h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeh = 'h')</span></p><p><b>maxDosePerAdministration</b>: 2 comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15054000 = 'Tablet')</span></p></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+          "code" : "3400893936047",
+          "display" : "CODOLIPRANE 500/30MG CPR"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/14602"
+      },
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-71482713"
+      },
+      "note" : [{
+        "extension" : [{
+          "url" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope",
+          "valueCode" : "LIPRESCTXT"
+        }],
+        "text" : "Prescription textuelle: CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
+      }],
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "frequencyMax" : 1,
+            "period" : 4,
+            "periodUnit" : "h"
+          }
+        },
+        "asNeededCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "22253000",
+            "display" : "douleur"
+          }],
+          "text" : "Si douleurs"
+        },
+        "doseAndRate" : [{
+          "doseRange" : {
+            "low" : {
+              "value" : 1,
+              "unit" : "comprimé",
+              "system" : "http://standardterms.edqm.eu",
+              "code" : "15054000"
+            }
+          }
+        }],
+        "maxDosePerPeriod" : {
+          "numerator" : {
+            "value" : 8,
+            "unit" : "comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          },
+          "denominator" : {
+            "value" : 24,
+            "unit" : "h",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "h"
+          }
+        },
+        "maxDosePerAdministration" : {
+          "value" : 2,
+          "unit" : "comprimé",
+          "system" : "http://standardterms.edqm.eu",
+          "code" : "15054000"
+        }
+      }]
+    }
+  }]
+}

@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PN13-FHIR-prescmed-encounter-conceptmap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap PN13-FHIR-prescmed-encounter-conceptmap</b></p><a name=\"PN13-FHIR-prescmed-encounter-conceptmap\"> </a><a name=\"hcPN13-FHIR-prescmed-encounter-conceptmap\"> </a><p>Mapping from https://interopsante.org/pn13/xsd to <a href=\"StructureDefinition-fr-patient-medicationrequest.html\">FrPatientMedicationRequest</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Messages/M_prescription_médicaments/Séjour/Id_séjour</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>MedicationRequest.encounter.identifier.value</td><td/></tr><tr><td>Messages/M_prescription_médicaments/Séjour/DI_séjour</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationRequest.encounter.identifier.system</td><td>Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrPN13FHIRMedicationPrescriptionEncounterConceptMap"] ; # 
+  fhir:title [ fhir:v "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-07-18T11:35:07+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un séjour d'une prescritpion de médicament"] ; # 
+  fhir:source [
+     a fhir:uri ;
+     fhir:v "https://interopsante.org/pn13/xsd"^^xsd:anyURI
+  ] ; # 
+  fhir:target [
+     a fhir:uri ;
+     fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-patient-medicationrequest"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "Messages/M_prescription_médicaments/Séjour/Id_séjour" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationRequest.encounter.identifier.value" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Messages/M_prescription_médicaments/Séjour/DI_séjour" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationRequest.encounter.identifier.system" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
