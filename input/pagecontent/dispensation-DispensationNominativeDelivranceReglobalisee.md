@@ -6,7 +6,7 @@
     </blockquote>
 </div>
 
-# La dispensation nominative à délivrance reglobalisée
+### La dispensation nominative à délivrance reglobalisée
 
 C'est la délivrance en un temps de la dispensation d'un ensemble de prescriptions.
 
@@ -36,7 +36,7 @@ Exemple:
       - une ressource **Group** de `type` **person** est constituée pour référencer les patients `subject` de la délivrance reglobalisée
       - il n'y a pas de posologie globale (pas de `dosageInstruction`) pour cette délivrance reglobalisée.
 
-## Limites
+#### Limites
 
 L'usage de l'extension standard *event-basedOn* est discutable: elle ne s'applique qu'à un élément *Condition*
 

@@ -6,7 +6,7 @@
     </blockquote>
 </div>
 
-# La délivrance la plus simple, de la prescription la plus simple
+### La délivrance la plus simple, de la prescription la plus simple
 
 La *prescription la plus simple*
 

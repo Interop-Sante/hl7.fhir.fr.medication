@@ -1,13 +1,13 @@
-# Transformation FHIR vers PN13
+### Transformation FHIR vers PN13
 
-## La conciliation
-
-Prévu pour une version ultérieure de ce guide.
-
-## La prescription
+#### La conciliation
 
 Prévu pour une version ultérieure de ce guide.
 
-## La dispensation
+#### La prescription
+
+Prévu pour une version ultérieure de ce guide.
+
+#### La dispensation
 
 Prévu pour une version ultérieure de ce guide.

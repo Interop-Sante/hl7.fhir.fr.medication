@@ -6,9 +6,9 @@
     </blockquote>
 </div>
 
-# Discussion
+### Discussion
 
-## Les médicaments délivrés qui n’ont pas de code UCD
+#### Les médicaments délivrés qui n’ont pas de code UCD
 
 Les médicaments qui n’ont pas de code UCD sont les médicaments composés préparés à la demande (ex : perfusions, chimiothérapie), les préparations magistrales et les préparations hospitalières.
 
@@ -20,7 +20,7 @@ Pour les supporter explicitement, il nous faut des exemples caractéristiques de
 
 *À suivre.*
 
-## La complexité de la prescription
+#### La complexité de la prescription
 
 Le cas des prescriptions conditionnelles et des prescriptions dont la dose est exprimée en quantité par unité de poids ou de surface corporelle du patient est évoqué. Le guide d’implémentation de la prescription aborde ces éléments de complexité au travers d’exemples de base.
 
@@ -39,7 +39,7 @@ Les paramètres particuliers appliqués à la délivrance figureront dans les re
 
 - ex: la délivrance de ce médicament, ce jour, à cette UF, couvre telle(s) prescription(s), pour une période de 2 jours
 
-## Les différents types de délivrance
+#### Les différents types de délivrance
 
 - Délivrance nominative individualisée,
 - Délivrance nominative reglobalisée,
@@ -49,7 +49,7 @@ Le réassortiment d’armoire peut être tout-simple ou sur présentation des or
 
 Là encore, il faut bien faire la part de ce qui est fait par le logiciel (aide à la délivrance) et de ce qui se traduit dans la délivrance (le résultat).
 
-## Les paramètres de la délivrance
+#### Les paramètres de la délivrance
 
 Il faut faire la part de ce que fait le logiciel et de qui décrit la délivrance proprement dite.
 
@@ -69,7 +69,7 @@ Il faut faire la part de ce que fait le logiciel et de qui décrit la délivranc
 
 Note : pour les prescriptions longues ou à durée indéterminée, la délivrance est toujours fractionnée par période.
 
-## Le traçage des flux matière
+#### Le traçage des flux matière
 
 Il est important de pouvoir identifier les contenants (les caisses) dans lesquelles sont placés les médicaments délivrés et suivre leur acheminement jusqu’aux UF.
 

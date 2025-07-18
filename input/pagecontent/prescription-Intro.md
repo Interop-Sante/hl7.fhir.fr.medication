@@ -1,4 +1,4 @@
-# Prescription
+### Prescription
 
 Le domaine couvert se limite à la **prescription intrahospitalière**.
 Sont hors champ
@@ -6,7 +6,7 @@ Sont hors champ
 - les prescriptions hospitalières exécutables en ville (PHEV);
 - les prescriptions de médecine de ville.
 
-## Détail
+#### Détail
 
 - [Vue d'ensemble](prescription-VueEnsemble.html)
 - [Cas d'usage](prescription-CasUsage.html)

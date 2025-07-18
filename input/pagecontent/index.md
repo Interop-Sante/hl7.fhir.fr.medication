@@ -1,5 +1,5 @@
 
-# Introduction
+### Introduction
 
 {% if site.data.info.releaselabel == 'ci-build' %}
   <div style="width: 65%">
@@ -24,10 +24,10 @@ Cet IG est en développement continu. Certaines sections n’ont pas encore ét�
 
 L'IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformation-PN13-vers-FHIR.html) et inversement.
 
-## Dépendances
+#### Dépendances
 
 {% include dependency-table.xhtml %}
 
-## Propriété intellectuelle
+#### Propriété intellectuelle
 
 {% include ip-statements.xhtml %}

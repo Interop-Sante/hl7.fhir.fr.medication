@@ -1,4 +1,4 @@
-# Vue d'ensemble
+### Vue d'ensemble
 
 La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrInpatientMedicationRequest*.
 
@@ -41,7 +41,7 @@ Ces dates de début et de fin de prescription, de même que la durée de prescri
 
 En prescription intrahospitalière, il n'y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n'y a donc généralement pas usage de l'élément `.dispensationRequest`.
 
-## Précisions sur dates et durée de prescription
+#### Précisions sur dates et durée de prescription
 
 Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FrInPatientMedicationRequest*.
 

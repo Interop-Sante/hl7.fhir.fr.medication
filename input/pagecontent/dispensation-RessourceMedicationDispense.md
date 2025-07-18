@@ -6,14 +6,14 @@
     </blockquote>
 </div>
 
-# Ressource MedicationDispense
+### Ressource MedicationDispense
 
 La ressource MedicationDispense porte la délivrance d'un médicament et d'un seul.
 
 - Pour décrire la délivrance de plusieurs médicaments, il faudra générer autant de MedicationDispense qu'il y a de médicaments délivrés.
 - La gestion d'une délivrance multi médicaments n'est pas abordée. Entre les Bundle de type document (persistence) et les query (dynamique), FHIR offre une palette de possibilités parmi lesquelles aucune n'est à ce jour privilégiée au titre du présent guide.
 
-## Propriétés
+#### Propriétés
 
 voir spécification HL7 R4 : [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html)
 
@@ -37,7 +37,7 @@ voir spécification HL7 R4 : [MedicationDispense](https://hl7.org/fhir/R4/medica
 - `receiver` : la personne qui a (`status` = *completed*) ou doit (`status` ≠ *completed*) retirer le(s) médicament(s).
 - `note` : note information complémentaire, en texte libre, concernant la dispensation.
 
-## Diagramme d'état de la propiété `status`
+#### Diagramme d'état de la propiété `status`
 
 ![Dispendation-DiagrammeEtat](Dispensation1.png)
 

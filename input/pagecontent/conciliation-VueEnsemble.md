@@ -6,9 +6,9 @@
     </blockquote>
 </div>
 
-# Vue d’ensemble
+### Vue d’ensemble
 
-## Le contexte de réalisation de la conciliation
+#### Le contexte de réalisation de la conciliation
 
 Le contexte est défini selon 2 axes:
 
@@ -24,11 +24,11 @@ Le contexte est défini selon 2 axes:
 
 Ainsi, par exemple, la combinaison de la situation *rétroactive* et de l'événement *admission* définit la **conciliation rétroactive d'admission**.
 
-## Les 3 documents supports de la conciliation
+#### Les 3 documents supports de la conciliation
 
 ![DocumentsSupportsConciliation](Conciliation1.jpg)
 
-## Les ressources profilée par Interop'Santé
+#### Les ressources profilée par Interop'Santé
 
 Le profilage de ces ressources répond aux recommandations du [guide méthodologique de mise en œuvre de la conciliation médicamenteuse](https://www.has-sante.fr/jcms/c_2736453/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante) publié par la Haute Autorité de Santé.
 
@@ -37,7 +37,7 @@ Le profilage de ces ressources répond aux recommandations du [guide méthodolog
 
 La FCT fait référence au *bilan médicamenteux* (le traitement médicamenteux du patient avant hospitalisation) et au *traitement médicamenteux courant* (le traitement médicamenteux en cours lors de l'hospitalisation). De ce fait, le profil [FrCurrentMedicationComposition](StructureDefinition-fr-current-medication-composition.html) a été défini pour rendre compte de ce *traitement médicamenteux courant*.
 
-## Dépendance des ressources profilés par Interop'Santé
+#### Dépendance des ressources profilés par Interop'Santé
 
 ![IGMedicationDependanceRessourcesProfileesConciliation](Conciliation2.jpg)
 
