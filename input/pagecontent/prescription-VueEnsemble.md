@@ -1,12 +1,12 @@
 ### Vue d'ensemble
 
-La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrInpatientMedicationRequest*.
+La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FRInpatientMedicationRequest*.
 
 La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représenté par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *MedicationRequest.groupIdentifier*.
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
-Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FrInpatientMedicationRequest*, celui-ci peut être représenté sous forme de ressource *Medication* ou de concept codé (CodeableConcept).
+Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FRInpatientMedicationRequest*, celui-ci peut être représenté sous forme de ressource *Medication* ou de concept codé (CodeableConcept).
 
 Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
 
@@ -23,13 +23,13 @@ Dépendance des ressources profilées par Interop'Santé
 
 Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*. Ex : *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047* contenant paracétamol+codéine 500 mg+30 mg*
 
-La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FrInpatientMedicationRequest*.
+La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FRInpatientMedicationRequest*.
 
 **Date de début, date de fin** et **durée de prescription**
 
 Elles traduisent la période d'exécution de la prescription.
 
-Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedcationRequest* profilée par *FrInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
+Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedcationRequest* profilée par *FRInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
 
 - date de début : `.dosageInstruction.timing.repeat.boundsPeriod.start`
 - date de fin : `.dosageInstruction.timing.repeat.boundsPeriod.end`
@@ -41,7 +41,7 @@ En prescription intrahospitalière, il n'y a généralement pas de consigne de d
 
 #### Précisions sur dates et durée de prescription
 
-Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FrInPatientMedicationRequest*.
+Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FRInPatientMedicationRequest*.
 
 Elles concernent également les règles définissant la **première dose prescrite** et la **dernière dose prescrite**.
 
