@@ -34,7 +34,7 @@ Usage: #inline
 
 
 Instance: medicationrequest-Presc-GLICLAZIDE
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-GLICLAZIDE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
