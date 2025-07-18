@@ -29,7 +29,7 @@ La **posologie** est représentée par l'élément `dosageInstruction` de la res
 
 Elles traduisent la période d'exécution de la prescription.
 
-Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedcationRequest* profilée par *FRInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
+Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedicationRequest* profilée par *FRInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
 
 - date de début : `.dosageInstruction.timing.repeat.boundsPeriod.start`
 - date de fin : `.dosageInstruction.timing.repeat.boundsPeriod.end`
