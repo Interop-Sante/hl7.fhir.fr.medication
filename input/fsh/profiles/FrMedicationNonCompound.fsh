@@ -46,7 +46,7 @@ Description: "Simple prescribed, dispensed, administered or used medication comp
 * amount ^comment = "If the strenght of the ingredients is a concentration, it is the volume (liquid) or mass (ointment) in the Medication of the MedicationRequest, Dispense or Use (pka MedicationStatement).\r\nIf there is only one ingredient and the strenght is not defined, it is the quantity of the substance."
 * ingredient ^definition = "Identifies a particular constituent in the product."
 
-* ingredient.item[x] only FrMPSubstance
+* ingredient.item[x] only FRMPSubstance
 * ingredient.item[x] ^short = "Substance"
 * ingredient.item[x] ^definition = "The actual substance (simple ingredient) of the simple medication (ie. made of single component)."
 * ingredient.item[x] ^requirements = "The composition of the medication for this ingredient SHALL be defined for prescrption of virtual medication so that strength can be defined. It MAY be defined for other medication"

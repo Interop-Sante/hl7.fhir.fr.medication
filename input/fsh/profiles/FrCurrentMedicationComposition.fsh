@@ -66,7 +66,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * section.orderedBy ^short = "Ordre des lignes du Traitement Médicamenteux Courant"
 * section.orderedBy ^definition = "L'ordre des lignes de traitement du Traitement Médicamenteux Courant, c'est à dire, l'ordre des <*entry*\\> de son unique <*section*\\>."
 * section.orderedBy ^comment = "Il est recommandé d'utiliser la valeur codée ***user*** si l'ordre des <*entry*\\> provient d'un choix de l'auteur à travers l'IHM de son logiciel qui est conservé dans la génération de la ressource Traitement Médicamenteux Courant. Car, rappel des spécifications HL7-FHIR : *If there is no order specified, the order is unknown, though there may still be some order.*"
-* section.entry only Reference(FrCurrentMedicationMedicationStatement)
+* section.entry only Reference(FRCurrentMedicationMedicationStatement)
 * section.entry MS
 * section.entry ^short = "La ligne de traitement médicamenteux"
 * section.entry ^definition = "Référence à la ligne de traitement médicamenteux courant, ressource *MedicationStatement* profilée *fr-current-medication-medication-statement*\\."

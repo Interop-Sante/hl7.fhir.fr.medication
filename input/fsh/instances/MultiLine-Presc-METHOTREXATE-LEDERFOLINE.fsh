@@ -7,7 +7,7 @@ Usage: #example
 * entry[+].resource = requestgroup-Presc-METHOTREXATE-LEDERFOLINE
 
 Instance: medicationrequest-Presc-METHOTREXATE
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-METHOTREXATE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -33,7 +33,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15009000
 
 Instance: medicationrequest-Presc-LEDERFOLINE
-InstanceOf: FrInpatientMedicationRequestExclusion
+InstanceOf: FRInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-Presc-LEDERFOLINE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
@@ -59,7 +59,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: requestgroup-Presc-METHOTREXATE-LEDERFOLINE
-InstanceOf: FrRequestGroupForPrescription
+InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "Presc-30003"

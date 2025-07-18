@@ -1,5 +1,5 @@
 Instance: Expl-med-MV-sulfate-morphine-2
-InstanceOf: FrMedicationVirtual
+InstanceOf: FRMedicationVirtual
 Usage: #example
 * code.coding.code = #MV00000031
 * code.coding.system = "https://www.medicabase.fr/systemMV"

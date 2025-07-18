@@ -66,7 +66,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[MedicationHistory].mode ^requirements = "Contraindre une gestion univoque de cette liste représentant le Bilan Médicamenteux."
 * section[MedicationHistory].orderedBy ^comment = "Non concerné car il n'y a qu'une seule <*entry*\\> dans cette <*section*\\>. L'ordre des lignes du Bilan Médicamenteux attaché, sera porté par l'élément  *orderedBy* de la seule <*section*\\> de la *Composition* référencée."
 * section[MedicationHistory].entry 1..1 MS 
-* section[MedicationHistory].entry only Reference(FrMedicationHistoryComposition)
+* section[MedicationHistory].entry only Reference(FRMedicationHistoryComposition)
 * section[MedicationHistory].entry ^short = "La référence à la ressource *Composition* du Bilan Médicamenteux. Ce Bilan peut être vide si le patient ne prend pas de médicament en dehors de l'hospitalisation au titre de laquelle la Conciliation est réalisée."
 * section[MedicationHistory].entry ^comment = "Un Bilan Médicamenteux, même vide si la patient ne prenait pas de médicament avant son hospitalisation, doit être attaché à la FCT (Fiche de Concimaition des Traitements médicamenteux)."
 * section[MedicationHistory].section ..0 MS
@@ -93,7 +93,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[CurrentMedication].mode ^requirements = "Contraindre une gestion univoque de cette liste représentant le Traitement Médicamenteux Courant."
 * section[CurrentMedication].orderedBy ^comment = "Non concerné car il n'y a qu'une seule <*entry*\\> dans cette <*section*\\>. L'ordre des lignes du Traitement Médicamenteux Courant attaché, sera porté par l'élément  *orderedBy* de la seule <*section*\\> de la *Composition* référencée."
 * section[CurrentMedication].entry 1..1 MS 
-* section[CurrentMedication].entry only Reference(FrCurrentMedicationComposition)
+* section[CurrentMedication].entry only Reference(FRCurrentMedicationComposition)
 * section[CurrentMedication].entry ^short = "La référence à la ressource *Composition* du Traitement Médicamenteux Courant. Ce Traitement peut, formellement, être vide si le patient ne prend pas de médicament lors de son hospitalisation."
 * section[CurrentMedication].entry ^comment = "Un Traitement Médicamenteux Courant, même vide si la patient ne prend aucun médicament lors de son hospitalisation, doit être attaché à la FCT (Fiche de Concimaition des Traitements médicamenteux)."
 * section[CurrentMedication].section ..0 MS
@@ -125,7 +125,7 @@ Description: "Profil de la ressource *Composition* la Fiche de Conciliation des 
 * section[Reconciliation].entry ^requirements = "Décrire chaque ligne de traitement médicamenteux à concilier, avec ses propriétés de conciliation"
 * section[Reconciliation].entry ^meaningWhenMissing = "Pas de médicament dans le Bilan Médicaenteux ET pas de médicament prescrit à l'admission : TRES PEU PROBABLE"
 
-* section[Reconciliation].entry only Reference(FrMedicationReconciliationMedicationStatement)
+* section[Reconciliation].entry only Reference(FRMedicationReconciliationMedicationStatement)
 
 * section[Reconciliation].section ..0 MS
 * section[Reconciliation].section ^requirements = "pas de sous-section dans la fiche de conciliation (toutes les lignes de traitement conciliées sont au même niveau)"

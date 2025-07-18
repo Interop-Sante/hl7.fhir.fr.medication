@@ -1,4 +1,4 @@
-Extension: FrMedicationRequestNoteScope
+Extension: FRMedicationRequestNoteScope
 Id: fr-medicationrequest-note-scope
 Title: "Scope for note element in MedicationRequest"
 Description: "Scope of a note associated in a MedicationRequest resource"

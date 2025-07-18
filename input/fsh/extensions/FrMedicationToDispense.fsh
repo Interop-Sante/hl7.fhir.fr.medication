@@ -1,4 +1,4 @@
-Extension: FrMedicationToDispense
+Extension: FRMedicationToDispense
 Id: fr-medication-to-dispense
 Title: "Medication to be dispensed"
 Description: "This extension stated whether the medication has to be dispensed or not (e.g. when a patient has already the medication)."

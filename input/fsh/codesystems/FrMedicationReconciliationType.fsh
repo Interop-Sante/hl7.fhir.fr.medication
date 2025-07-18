@@ -1,4 +1,4 @@
-CodeSystem: FrMedicationReconciliationType
+CodeSystem: FRMedicationReconciliationType
 Id: fr-medication-reconciliation-type
 Title: "code system Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT"
 Description: "Le système de codage du type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."

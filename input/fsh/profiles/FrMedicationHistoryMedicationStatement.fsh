@@ -26,7 +26,7 @@ Medication History MedicationStatement resource profile"""
 * extension[statementSourcing] ^comment = "Nombre de sources concordantes pour cette ligne de traitement (quel que soit leur nombre), supérieur à zéro ET la liste de ces sources, au moins une."
 
 * status MS
-* medication[x] only Reference(FrMedication)
+* medication[x] only Reference(FRMedication)
 * medication[x] MS
 * medication[x] ^short = "Le médicament constitutif de cette ligne"
 * medication[x] ^definition = "Identifie le médicament constitutif de cette ligne. C'est lien vers une ressource Medication qui décrit ce médicament."

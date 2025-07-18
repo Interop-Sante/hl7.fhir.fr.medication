@@ -7,7 +7,7 @@ Usage: #example
 * entry[+].resource = requestgroup-Presc-MARSILID-ZOMIGORO
 
 Instance: medicationrequest-Presc-MARSILID
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-MARSILID"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -33,7 +33,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: medicationrequest-Presc-ZOMIGORO
-InstanceOf: FrInpatientMedicationRequestExclusion
+InstanceOf: FRInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-Presc-ZOMIGORO"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
@@ -46,7 +46,7 @@ Usage: #inline
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 
 Instance: requestgroup-Presc-MARSILID-ZOMIGORO
-InstanceOf: FrRequestGroupForPrescription
+InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "Presc-30001"

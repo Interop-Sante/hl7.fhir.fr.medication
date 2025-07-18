@@ -52,7 +52,7 @@ Medication Assessment Composition resource profile."""
 * section ^requirements = "Composition univoque de la ressource *Bilan Médicamenteux*"
 * section ^meaningWhenMissing = "absence de traitement médicamenteux avant l'hospitalisation"
 
-* section.extension contains FrMedicationHistorySources named compositionSourcing 0..* MS
+* section.extension contains FRMedicationHistorySources named compositionSourcing 0..* MS
 * section.extension[compositionSourcing] ^short = "sourcing du Bilan Médicamenteux"
 * section.extension[compositionSourcing] ^definition = "sources consultées pour réaliser le Bilan Médicamenteux"
 * section.extension[compositionSourcing] ^comment = "Ce sourcing est obligatoire : il n'est pas possible de réaliser un Bilan Médicamenteux sans jamais consulter aucune source."
@@ -80,7 +80,7 @@ Medication Assessment Composition resource profile."""
 * section.orderedBy ^short = "Ordre des lignes du Bilan Médicamenteux"
 * section.orderedBy ^definition = "L'ordre des lignes de traitement du Bilan Médicamenteux, c'est à dire, l'ordre des <*entry*\\> de son unique <*section*\\>."
 * section.orderedBy ^comment = "Il est recommandé d'utiliser la valeur codée *user* si l'ordre des <*entry*\\> provient d'un choix de l'auteur à travers l'IHM de son logiciel qui est conservé dans la génération de la ressource Bilan Médicamenteux. Car, rappel des spécifications HL7-FHIR : *If there is no order specified, the order is unknown, though there may still be some order.*"
-* section.entry only Reference(FrMedicationHistoryMedicationStatement) 
+* section.entry only Reference(FRMedicationHistoryMedicationStatement) 
 * section.entry MS
 * section.entry ^short = "La ligne de traitement médicamenteux"
 * section.entry ^definition = "Référence à la ligne de traitement médicamenteux, ressource *MedicationStatement* profilée *fr-medication-history-medication-statement*"

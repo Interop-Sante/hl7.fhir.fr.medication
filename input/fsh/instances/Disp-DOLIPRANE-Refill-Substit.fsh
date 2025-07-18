@@ -1,5 +1,5 @@
 Instance: Disp-DOLIPRANE-Refill-Substit
-InstanceOf: FrInpatientMedicationDispense
+InstanceOf: FRInpatientMedicationDispense
 Usage: #example
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"

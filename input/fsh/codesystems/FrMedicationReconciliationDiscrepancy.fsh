@@ -1,4 +1,4 @@
-CodeSystem: FrMedicationReconciliationDiscrepancy
+CodeSystem: FRMedicationReconciliationDiscrepancy
 Id: fr-medication-reconciliation-discrepancy
 Title: "code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT"
 Description: "Le système de codage de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."

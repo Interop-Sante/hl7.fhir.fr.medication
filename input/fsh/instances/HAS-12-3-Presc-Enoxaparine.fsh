@@ -23,7 +23,7 @@ Usage: #inline
 * ingredient.strength.denominator.code = #mL
 
 Instance: medicationrequest-HAS-12-3-Presc-Enoxaparine
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active

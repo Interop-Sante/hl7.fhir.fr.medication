@@ -1,5 +1,5 @@
 Instance: Disp-group01-2
-InstanceOf: FrInpatientMedicationDispense
+InstanceOf: FRInpatientMedicationDispense
 Usage: #example
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"

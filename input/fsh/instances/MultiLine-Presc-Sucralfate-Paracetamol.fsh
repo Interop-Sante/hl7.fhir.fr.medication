@@ -7,7 +7,7 @@ Usage: #example
 * entry[+].resource = requestgroup-Presc-Sucralfate-Paracetamol
 
 Instance: medicationrequest-MultiLine-Presc-Sucralfate
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Sucralfate"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -33,7 +33,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #g
 
 Instance: medicationrequest-MultiLine-Presc-Paracetamol
-InstanceOf: FrInpatientMedicationRequestExclusion
+InstanceOf: FRInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Paracetamol"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
@@ -67,7 +67,7 @@ Usage: #inline
 * dosageInstruction.maxDosePerPeriod.denominator.code = #d
 
 Instance: requestgroup-Presc-Sucralfate-Paracetamol
-InstanceOf: FrRequestGroupForPrescription
+InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "Presc-30004"
