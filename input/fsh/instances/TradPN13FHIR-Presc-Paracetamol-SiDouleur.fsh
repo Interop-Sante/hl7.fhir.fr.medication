@@ -87,9 +87,9 @@ Usage: #inline
 * valueQuantity.code = #kg
 
 Instance: medicationrequest-TradPN13FHIR-Presc-Paracetamol-SiDouleur
-InstanceOf: fr-patient-medicationrequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * identifier[0].value = "31626"
 * identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * status = #active

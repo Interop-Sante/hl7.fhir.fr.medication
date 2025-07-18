@@ -11,7 +11,7 @@ Usage: #definition
 * jurisdiction.coding.display = "France"
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
 * sourceUri = $PN13Schema
-* targetUri = Canonical(fr-patient-medicationrequest)
+* targetUri = Canonical(fr-inpatient-medicationrequest)
 * group[0].element[0].code =  $PN13Schema#Messages@Phast-id_message
 * group[=].element[=].target[0].code = #MedicationRequest.groupIdentifier.value
 * group[=].element[=].target[=].equivalence = #equal

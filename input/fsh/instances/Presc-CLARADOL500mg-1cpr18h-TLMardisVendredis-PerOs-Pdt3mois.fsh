@@ -7,7 +7,7 @@ Usage: #example
 Instance: medicationrequest-Presc-CLARADOL-TLMardisVendredis
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine

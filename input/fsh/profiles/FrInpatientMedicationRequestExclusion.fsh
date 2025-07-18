@@ -1,6 +1,6 @@
 Profile: FrInpatientMedicationRequestExclusion
 Parent: MedicationRequest
-Id: fr-patient-medicationrequest-exclusion
+Id: fr-inpatient-medicationrequest-exclusion
 Title: "FrInpatientMedicationRequestExclusion"
 Description: "French inpatient medication request profile for excluded medication"
 * extension ^slicing.discriminator.type = #value

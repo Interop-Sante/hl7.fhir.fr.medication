@@ -10,7 +10,7 @@ Instance: medicationrequest-Presc-MARSILID
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-MARSILID"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
@@ -36,7 +36,7 @@ Instance: medicationrequest-Presc-ZOMIGORO
 InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-Presc-ZOMIGORO"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
 * status = #unknown
 * intent = #option
 * priority = #routine

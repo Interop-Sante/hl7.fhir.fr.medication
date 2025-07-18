@@ -15,9 +15,9 @@ Usage: #inline
 * code.text = "DOLIPRANE 1 000 mg, cpr efferv"
 
 Instance: medicationrequest-TradPN13FHIR-Presc-DOLIPRANE
-InstanceOf: fr-patient-medicationrequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * identifier[0].value = "id1"
 * identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * status = #active

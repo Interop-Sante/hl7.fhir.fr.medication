@@ -188,9 +188,9 @@ Usage: #inline
 * valueQuantity.code = #umol/L
 
 Instance: medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants
-InstanceOf: fr-patient-medicationrequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
+* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * identifier[0].value = "6166"
 * identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * status = #active

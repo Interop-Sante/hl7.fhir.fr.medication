@@ -10,7 +10,7 @@ Instance: medicationrequest-MultiLine-Presc-Sucralfate
 InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Sucralfate"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
@@ -36,7 +36,7 @@ Instance: medicationrequest-MultiLine-Presc-Paracetamol
 InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Paracetamol"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
 * status = #active
 * intent = #order
 * priority = #routine
