@@ -19,7 +19,7 @@ Usage: #inline
 * authoredOn = "2025-05-02T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-3004"
 * groupIdentifier.value = "Presc-30004"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+* groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
 * dosageInstruction.timing.repeat.when[0] = #ACM
@@ -45,7 +45,7 @@ Usage: #inline
 * authoredOn = "2025-05-02T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-3004"
 * groupIdentifier.value = "Presc-30004"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+* groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
 * dosageInstruction.timing.repeat.frequency = 1
@@ -71,7 +71,7 @@ InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "Presc-30004"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+* groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * status = #active
 * intent = #order
 * priority = #routine

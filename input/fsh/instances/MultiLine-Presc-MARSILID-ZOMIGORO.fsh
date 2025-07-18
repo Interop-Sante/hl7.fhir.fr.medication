@@ -32,6 +32,20 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
+Instance: medicationrequest-Presc-ZOMIGORO
+InstanceOf: FrInpatientMedicationRequest
+Usage: #inline
+* id = "medicationrequest-Presc-ZOMIGORO"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* status = #unknown
+* intent = #option
+* priority = #routine
+* medicationCodeableConcept = $UCD#3400892210339 "ZOMIGORO 2,5MG CPR DISP"
+* subject.reference = "Patient/30001"
+* groupIdentifier.value = "Presc-30001"
+* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+
+
 Instance: requestgroup-Presc-MARSILID-ZOMIGORO
 InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
