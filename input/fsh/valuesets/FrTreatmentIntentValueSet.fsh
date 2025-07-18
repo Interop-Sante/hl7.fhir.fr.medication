@@ -1,7 +1,7 @@
 ValueSet: FrTreatmentIntent
 Id: fr-treatment-intent
 Title: "French overall intention of the treatment"
-Description: "Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FrInpatientMedicationRequest*."
+Description: "Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FrPatientMedicationRequest*."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #draft
 * ^experimental = false

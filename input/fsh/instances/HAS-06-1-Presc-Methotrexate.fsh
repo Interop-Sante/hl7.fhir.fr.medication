@@ -5,7 +5,7 @@ Usage: #example
 * entry[0].resource = medicationrequest-HAS-6-1-Presc-Methotrexate
 
 Instance: medicationrequest-HAS-6-1-Presc-Methotrexate
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

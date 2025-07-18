@@ -19,7 +19,7 @@ Dans le cas de prescription comportant des liens entre les lignes (ex. exclusivi
 ### Ressources FHIR créées par la transformation d'un flux PN13 de prescription en FHIR
 
 - Optionnellement 1 ressource *Bundle* d'un type adapté à l'usage parmi message, document et searchset (pour les exemples, le type searchset est utilisé). Selon les implémentations, cette ressource n'est pas nécessaire. Elle est utilisée pour les exemples à des fins de simplification de mise à disposition de toutes les ressources concernées par une prescription dans le même fichier d'exemple.
-- 1 à n ressource(s) *MedicationRequest* suivant le profil [FrInpatientMedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.html).  Chaque ressource *MedicationRequest* référence:
+- 1 à n ressource(s) *MedicationRequest* suivant le profil [FrPatientMedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.html).  Chaque ressource *MedicationRequest* référence:
   - 1 ressource *Patient* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Patient* référencée n'existe pas déjà).
   - 1 ressource *Encounter* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Encounter* référencée n'existe pas déjà).
   - 0 à n ressource(s) *Observation* cf. section **Existence préalable des ressources référencées** pour la ressource *ConceptMap* à utiliser (si la ressource *Observation* référencée n'existe pas déjà).
@@ -84,7 +84,7 @@ Dans le message PN13, à partir des sous-éléments de `Message/M_Prescription_m
 
 #### MedicationRequest
 
-Créer une ressource *MedicationRequest* suivant le profil [FrInpatientMedicationRequest](StructureDefinition-fr-inpatient-medicationrequest) en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationrequest-conceptmap] et en référençant les ressources précédemment créées ou identifiées lors des étapes précédentes.
+Créer une ressource *MedicationRequest* suivant le profil [FrPatientMedicationRequest](StructureDefinition-fr-inpatient-medicationrequest) en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationrequest-conceptmap] et en référençant les ressources précédemment créées ou identifiées lors des étapes précédentes.
 
 Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie` ne comportant pas d'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_posologie/Type_événement_début` valorisé à `4`, créer une instance de `MedicationRequest.dosageInstruction` en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-dosageinstruction-conceptmap].
 

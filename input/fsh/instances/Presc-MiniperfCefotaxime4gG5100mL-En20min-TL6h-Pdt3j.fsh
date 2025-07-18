@@ -41,7 +41,7 @@ Usage: #inline
 * ingredient[=].extension[IsVehicle].valueBoolean = true
 
 Instance: medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

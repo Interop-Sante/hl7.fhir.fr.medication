@@ -1,5 +1,5 @@
 Instance: InLine-presc-EFFERALGAN2
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #example
 * status = #active
 * intent = #order

@@ -5,7 +5,7 @@ Usage: #example
 * entry[0].resource = medicationrequest-HAS-12-1-Presc-BEPANTHEN
 
 Instance: medicationrequest-HAS-12-1-Presc-BEPANTHEN
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

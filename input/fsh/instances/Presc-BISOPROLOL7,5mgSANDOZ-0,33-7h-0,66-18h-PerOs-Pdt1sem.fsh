@@ -16,7 +16,7 @@ Usage: #inline
 * form.text = "comprimé"
 
 Instance: medicationrequest-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

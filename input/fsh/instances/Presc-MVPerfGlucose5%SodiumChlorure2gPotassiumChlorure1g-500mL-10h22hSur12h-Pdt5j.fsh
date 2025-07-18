@@ -28,7 +28,7 @@ Usage: #inline
 
 
 Instance: medicationrequest-Presc-MV-PerfGl-NaCl-KCl
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

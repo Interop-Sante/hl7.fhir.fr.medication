@@ -57,7 +57,7 @@ Usage: #inline
 * ingredient[+].itemReference.reference = "#medication-3-Presc-PerfGl-NaCl-KCl-1l"
 
 Instance: medicationrequest-Presc-PerfGl-NaCl-KCl-1l
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
