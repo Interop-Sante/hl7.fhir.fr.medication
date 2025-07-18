@@ -8,7 +8,7 @@ La complexité du *médicament prescrit*
 
 - Une spécialité
   - monosubstance dosée en quantité sous forme comprimé
-  - bisubstance doséee en quantité sous forme comprimé
+  - bisubstance dosée en quantité sous forme comprimé
   - monosubstance dosée en concentration et prescrite en dose-kg
   - monosubstance dosée en concentration et prescrite en application
   - monosubstance patch dosée en quantité sur durée du patch
