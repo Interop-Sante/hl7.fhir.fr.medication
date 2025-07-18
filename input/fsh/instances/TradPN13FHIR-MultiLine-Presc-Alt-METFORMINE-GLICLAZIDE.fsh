@@ -87,7 +87,7 @@ Instance: medicationrequest-Trad-Presc-Alt-GLICLAZIDE
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Alt-GLICLAZIDE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * identifier.value = "20250502144844570"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active

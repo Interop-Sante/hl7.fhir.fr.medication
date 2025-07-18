@@ -33,10 +33,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15009000
 
 Instance: medicationrequest-Presc-LEDERFOLINE
-InstanceOf: FRInpatientMedicationRequestExclusion
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-LEDERFOLINE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine

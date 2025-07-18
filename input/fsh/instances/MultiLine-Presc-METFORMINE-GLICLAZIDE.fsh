@@ -32,30 +32,6 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
-Instance: medicationrequest-Presc-GLICLAZIDE
-InstanceOf: FRInpatientMedicationRequestExclusion
-Usage: #inline
-* id = "medicationrequest-Presc-GLICLAZIDE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
-* status = #active
-* intent = #option
-* priority = #routine
-* medicationCodeableConcept = $UCD#3400893541364 "GLICLAZIDE ARW 30MG CPR LM"
-* subject.reference = "Patient/30002"
-* authoredOn = "2025-05-02T14:48:44.461Z"
-* requester.reference = "Practitioner/smart-Practitioner-3002"
-* groupIdentifier.value = "Presc-30002"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
-* dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
-* dosageInstruction.timing.repeat.when = #CM
-* dosageInstruction.route = $EDQM#20053000 "Voie orale"
-* dosageInstruction.route.text = "Voie orale"
-* dosageInstruction.doseAndRate.doseQuantity.value = 3
-* dosageInstruction.doseAndRate.doseQuantity.unit = "Comprimé"
-* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
-* dosageInstruction.doseAndRate.doseQuantity.code = #15054000
-
 Instance: requestgroup-Presc-METFORMINE-GLICLAZIDE
 InstanceOf: FRRequestGroupForPrescription
 Usage: #inline

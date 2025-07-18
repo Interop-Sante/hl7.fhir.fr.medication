@@ -38,6 +38,7 @@ Description: "French inpatient medication request profile"
 * note.extension[noteScope] ^short = "Scope of the note"
 * note.extension[noteScope] ^definition = "States where the content of the note comes from"
 * note.extension[noteScope] ^comment = "Extension used for translating PN13 messages into FHIR in order to discriminate the notes and not concatenate all the PN13 textual information into a single note which would be difficult to understand"
+
 * dosageInstruction 1..
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
@@ -53,6 +54,7 @@ Description: "French inpatient medication request profile"
 * dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityMedication
 * dosageInstruction.maxDosePerAdministration only FrSimpleQuantityMedication
 * dosageInstruction.maxDosePerLifetime only FrSimpleQuantityMedication
+
 * dispenseRequest.initialFill ..0
 * dispenseRequest.dispenseInterval ..0
 * dispenseRequest.validityPeriod.start 1..
