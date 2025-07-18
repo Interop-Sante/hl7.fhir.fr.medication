@@ -77,14 +77,6 @@ package IG #DDDDDD{
              MedicationDispense.receiver => [None..None]
         } 
 
-        class FRInpatientMedicationRequestExclusion{
-
-             MedicationRequest.extension => [None..None]
-             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
-             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
-             MedicationRequest.subject => [None..None]
-        } 
-
         class FRInpatientMedicationRequest{
 
              MedicationRequest.extension => [None..None]
@@ -368,7 +360,6 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
-     FRInpatientMedicationRequestExclusion -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
      FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
      FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
@@ -811,10 +802,6 @@ package "Ressources de base" #palegreen {
  class "MedicationDispense" as  classfc53f5b9eccfc9aa8cc26374d1451ab5 
 
     classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FRInpatientMedicationDispense
-
- class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
-
-    class2071abb7e1482ea8731af3cdcaed7225 --> FRInpatientMedicationRequestExclusion
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
