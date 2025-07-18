@@ -39,10 +39,6 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 * posologie.quantiteMaxParPeriode.uniteTemps 0..1 code "Unité de temps" // en FHIR : également par administration et par lifetime
 
 
-* posologie.momentDePrise 0..* Base "moment de la prise au cours de la journée (ex : 30 minutes avant le repas)"
-* posologie.momentDePrise.code 0..1 CodeableConcept "Code ou texte du moment de prise"
-* posologie.momentDePrise.offset 0..1 unsignedInt "Temps en minute avant/après l'élément déclenchant"
-
 * posologie.conditionDePrise 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
 
 * posologie.instructionPatient 0..1 string "Instruction au patient sous forme textuelle"
@@ -66,9 +62,17 @@ Description:  """Structuration d'une ligne de prescription en fonction des crit�
 * posologie.dureeAdministration.dureeUnite 0..1 code "Unité de la durée d'administration"
 * posologie.dureeAdministration.dureeMax 0..1 decimal "Durée maximale de l'administration"
 
-* posologie.dateDebut 0..1 dateTime "Date de début de la séquence de traitement"
-* posologie.dateFin 0..1 dateTime "Date de fin de la séquence de traitement"
+* posologie.date[x] 0..1 Period or duration or Range "Dates de début, de fin, durée ou intervalle de traitement (un parmi les trois)"
+* posologie.datePeriode 0..1 Period "Date de début et de fin de la séquence de traitement"
+* posologie.dateDurée 0..1 Quantity "Durée du traitement"
+* posologie.dateIntervalle 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
+
+* posologie.dateDePrise 0..1 dateTime "Date précise du moment de prise"
 
 * posologie.dureeTraitement 0..1 Base "Durée du traitement - la durée du traitement peut être indiquée en complément ou à la place des dates de début et de fin de traitement"
 * posologie.dureeTraitement.valeur 0..1 string "Valeur de la durée de traitement"
 * posologie.dureeTraitement.unite 0..1 code "Unité de la durée de traitement"
+
+* posologie.momentDePrise 0..* Base "moment de la prise au cours de la journée (ex : 30 minutes avant le repas)"
+* posologie.momentDePrise.code 0..1 CodeableConcept "Code ou texte du moment de prise"
+* posologie.momentDePrise.offset 0..1 unsignedInt "Temps en minute avant/après l'élément déclenchant"
