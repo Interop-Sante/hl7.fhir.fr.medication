@@ -53,9 +53,9 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 * dureeAdministration.dureeMax 0..1 decimal "Durée maximale de l'administration"
 
 * date[x] 0..1 Period or duration or Range "Dates de début, de fin, durée ou intervalle de traitement (un parmi les trois)"
-* datePeriode 0..1 Period "Date de début et de fin de la séquence de traitement"
-* dateDurée 0..1 Quantity "Durée du traitement"
-* dateIntervalle 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
+* datePeriod 0..1 Period "Date de début et de fin de la séquence de traitement"
+* dateDuration 0..1 Quantity "Durée du traitement"
+* dateRange 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
 
 * dateDePrise 0..1 dateTime "Date précise du moment de prise"
 
