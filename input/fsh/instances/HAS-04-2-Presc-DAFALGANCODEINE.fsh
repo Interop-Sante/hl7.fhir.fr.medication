@@ -5,9 +5,9 @@ Usage: #example
 * entry[+].resource = medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE
 
 Instance: medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion"
 * status = #active
 * intent = #option
 * priority = #routine

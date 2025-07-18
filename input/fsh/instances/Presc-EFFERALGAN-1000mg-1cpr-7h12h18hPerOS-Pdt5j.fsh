@@ -20,9 +20,9 @@ Usage: #inline
 * ingredient.strength.denominator = 1 '1'
 
 Instance: medicationrequest-Presc-EFFERALGAN
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine

@@ -90,9 +90,9 @@ Usage: #inline
 * valueQuantity.code = #kg
 
 Instance: medicationrequest-TradPN13FHIR-Presc-Paracetamol
-InstanceOf: fr-inpatient-medicationrequest
+InstanceOf: fr-patient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * identifier[0].value = "31626"
 * identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * status = #active

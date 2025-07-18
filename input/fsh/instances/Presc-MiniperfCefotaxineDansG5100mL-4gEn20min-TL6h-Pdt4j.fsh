@@ -40,9 +40,9 @@ Usage: #inline
 * ingredient[=].itemReference.reference = "#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j"
 
 Instance: medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt4j
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine

@@ -14,9 +14,9 @@ Usage: #inline
 * code.text = "NICOTINE"
 
 Instance: medicationrequest-Presc-Nicotine-15mgPar16h
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine

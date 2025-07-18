@@ -41,10 +41,10 @@ Usage: #inline
 * birthDate = "1989-01-02"
 
 Instance: medicationrequest-Trad-Presc-Morphine-PCA
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Morphine-PCA"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * identifier.value = "202500507153500547"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active

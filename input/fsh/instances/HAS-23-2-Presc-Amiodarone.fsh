@@ -5,9 +5,9 @@ Usage: #example
 * entry[0].resource = medicationrequest-HAS-23-2-Presc-Amiodarone
 
 Instance: medicationrequest-HAS-23-2-Presc-Amiodarone
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FrPatientMedicationRequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
