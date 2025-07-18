@@ -1,6 +1,7 @@
-Profile: FrCurrentMedicationComposition
+Profile: FRCurrentMedicationComposition
 Parent: Composition
 Id: fr-current-medication-composition
+Title: "FR Current Medication Composition"
 Description: "Profil de la ressource Composition du traitement médicamenteux courant."
 * ^status = #draft
 * ^purpose = "Ce profil est utilisé pour la ressource *Composition* de tout document FHIR *Traitement médicamenteux courant*\\. Par exemple, celui résultant de la prescription d'admission intitulé *Ordonnance Médicale d'Admission* (OMA)."

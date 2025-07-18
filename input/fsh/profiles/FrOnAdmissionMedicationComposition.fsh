@@ -1,6 +1,7 @@
-Profile: FrOnAdmissionMedicationComposition
-Parent: FrCurrentMedicationComposition
+Profile: FROnAdmissionMedicationComposition
+Parent: FRCurrentMedicationComposition
 Id: fr-on-admission-medication-composition
+Title: "FR On Admission Medication Composition"
 Description: "Profil de la ressource *Composition* du traitement médicamenteux prescrit à l'admmission."
 * ^status = #draft
 * . ^short = "Ordonnace médicale d'admission (OMA)"

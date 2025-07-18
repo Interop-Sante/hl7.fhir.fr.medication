@@ -1,7 +1,7 @@
-Profile: FrMedicationNonCompound
+Profile: FRMedicationNonCompound
 Parent: Medication
 Id: fr-medication-noncompound
-Title: "FrMedicationNonCompound"
+Title: "FR Medication Non Compound"
 Description: "Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."
 * ^status = #draft
 * ^experimental = false

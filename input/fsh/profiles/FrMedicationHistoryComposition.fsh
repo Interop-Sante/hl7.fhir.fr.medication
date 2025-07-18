@@ -1,6 +1,7 @@
-Profile: FrMedicationHistoryComposition
+Profile: FRMedicationHistoryComposition
 Parent: Composition
 Id: fr-medication-history-composition
+Title: "FR Medication History Composition"
 Description: """Profil de la ressource Composition du Bilan Médicamenteux.
 Medication Assessment Composition resource profile."""
 * ^purpose = "Ce profil est utilisé pour la Composition du Bundle portant le document FHIR Bilan Médicamenteux."

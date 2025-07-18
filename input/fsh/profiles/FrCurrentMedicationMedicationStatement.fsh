@@ -1,6 +1,7 @@
-Profile: FrCurrentMedicationMedicationStatement
+Profile: FRCurrentMedicationMedicationStatement
 Parent: MedicationStatement
 Id: fr-current-medication-medicationstatement
+Title: "FR Current Medication MedicationStatement"
 Description: """Profil de la ressource *MedicationStatement* du traitement médicamenteux courant.
 Current Medication MedicationStatement resource profile"""
 

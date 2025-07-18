@@ -1,6 +1,7 @@
-Profile: FrOnAdmissionRetroactiveReconciliationComposition
-Parent: FrMedicationReconciliationComposition
+Profile: FROnAdmissionRetroactiveReconciliationComposition
+Parent: FRMedicationReconciliationComposition
 Id: fr-on-admission-retroactive-reconciliation-composition
+Title: "FR On Admission Retroactive Reconciliation Composition"
 Description: "Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission."
 * ^status = #draft
 * ^purpose = "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission*\\."

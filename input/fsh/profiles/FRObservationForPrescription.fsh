@@ -1,10 +1,8 @@
-Profile: FrObservationForPrescription
+Profile: FRObservationForPrescription
 Parent: Observation
 Id: fr-observation-for-prescription
-Title: "FrObservationForPrescription"
+Title: "FR Observation For Prescription"
 Description: "Observation provided as context of the prescription (ex. weight, height...)"
-* ^version = "1.0.0"
 * ^status = #draft
-* ^experimental = false
 * subject 1..
 * subject only Reference($FrCorePatient)

@@ -1,6 +1,7 @@
-Profile: FrMedicationReconciliationComposition
+Profile: FRMedicationReconciliationComposition
 Parent: Composition
 Id: fr-medication-reconciliation-composition
+Title: "FR Medication Reconciliation Composition"
 Description: "Profil de la ressource *Composition* la Fiche de Conciliation des Traitements médicamenteux (FCT)."
 * ^purpose = "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT)*\\."
 * . ^short = "Fiche de Conciliation des Traitements médicamenteux (FCT)"

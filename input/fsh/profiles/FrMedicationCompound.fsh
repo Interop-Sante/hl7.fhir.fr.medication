@@ -1,7 +1,7 @@
-Profile: FrMedicationCompound
+Profile: FrRedicationCompound
 Parent: Medication
 Id: fr-medication-compound
-Title: "FrMedicationCompound"
+Title: "FR Medication Compound"
 Description: "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."
 * ^status = #draft
 * ^experimental = false

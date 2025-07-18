@@ -1,6 +1,7 @@
-Profile: FrMedicationReconciliationMedicationStatement
+Profile: FRMedicationReconciliationMedicationStatement
 Parent: MedicationStatement
 Id: fr-medication-reconciliation-statement
+Title: "FR Medication Reconciliation MedicationStatement"
 Description: "Profil de la ressource *MedicationStatement* référencée dans la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT)."
 * ^status = #draft
 * . ^short = "Ligne de traitement médicamenteux de la FCT (Fiche de Conciliation ds Traitements médicamenteux)"

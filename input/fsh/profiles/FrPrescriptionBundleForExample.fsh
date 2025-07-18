@@ -1,6 +1,7 @@
-Profile: FrPrescriptionBunbleForExample
+Profile: FRPrescriptionBundleForExample
 Parent: Bundle
 Id: fr-prescription-bundle-for-example
+Title: "FR Prescription Bundle For Example"
 Description: "Profil de la ressource Bundle pour la constitution d'exemples de prescription."
 * ^status = #draft
 * ^purpose = "Ce profil est utilisé pour la constitution d'exemples de prescription en FHIR. Toutes les prescriptions en FHIR ne sont pas forcément présentées sous la forme de ressource Bundle suivant ce profil, la représentation dépend de l'architecture du (ou des) serveur(s) FHIR interrogé(s). Cf. section 21 de la page sur la transformation PN13 vers FHIR pour plus de détail."

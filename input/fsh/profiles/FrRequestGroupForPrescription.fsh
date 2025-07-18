@@ -1,7 +1,7 @@
-Profile: FrRequestGroupForPrescription
+Profile: FRRequestGroupForPrescription
 Parent: RequestGroup
 Id: fr-requestgroup-for-prescription
-Title: "FrRequestGroupForPrescrption"
+Title: "FR RequestGroup For Prescription"
 Description: "RequestGroup for expressing links between lines of a prescription"
 * ^version = "1.0.0"
 * ^status = #draft
