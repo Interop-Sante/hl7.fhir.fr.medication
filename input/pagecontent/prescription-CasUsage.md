@@ -23,14 +23,14 @@ La complexité du *médicament prescrit*
   - Ce sont des médicaments fabriqués à la demande
     - par assemblage de médicaments simples
     - spécifiés soit en spécialité soit en DC
-  - Les cas d'usage sont les perfusions ou le seringies électriques
+  - Les cas d'usage sont les perfusions ou le seringues électriques
     - avec un ou plusieurs médicaments
     - dilués dans un soluté.
 - Préparations magistrales et préparations officinales
   - Elles sont définies dans le Code de la santé publique
     - préparation magistrale : « tout médicament préparé au vu de la prescription destinée à un patient déterminé... » ;
     - préparation officinale : « tout médicament préparé en pharmacie, inscrit à la pharmacopée ou au formulaire national... ».
-  - Dans le contexte de ce guide, elles sont modélisées comme des prescriptions Extemporanées 
+  - Dans le contexte de ce guide, elles sont modélisées comme des prescriptions Extemporanées
 
 *La complexité de la posologie*:
 
@@ -49,4 +49,4 @@ La complexité du *médicament prescrit*
 
 On entend par variation de la ligne prescription toute évolution de celle-ci **prescrite** par le médecin.
 
-Il s'agit donc d'une prescription, mais qui succède à la prescription ayant créé la ligne de prescription initiale et qui la reprend en en modifiant potentiellement tous les paramètres hormis la composition du médicament prescrit.
+Il s'agit donc d'une prescription, mais qui succède à la prescription ayant créé la ligne de prescription initiale et qui la reprend en modifiant potentiellement tous les paramètres hormis la composition du médicament prescrit.
