@@ -2,7 +2,7 @@ Profile: FrPatientMedicationRequest
 Parent: MedicationRequest
 Id: fr-patient-medicationrequest
 Title: "FrPatientMedicationRequest"
-Description: "French patient medication request profile"
+Description: "French inpatient medication request profile"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
