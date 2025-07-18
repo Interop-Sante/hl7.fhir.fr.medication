@@ -42,6 +42,7 @@ Usage: #inline
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400892210339 "ZOMIGORO 2,5MG CPR DISP"
 * subject.reference = "Patient/30001"
+* requester.reference = "Practitioner/smart-Practitioner-3001"
 * groupIdentifier.value = "Presc-30001"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 
