@@ -2,7 +2,7 @@
 
 La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrInpatientMedicationRequest*.
 
-La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représenté par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *groupeIdentifier*.
+La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représenté par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *MedicationRequest.groupIdentifier*.
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
