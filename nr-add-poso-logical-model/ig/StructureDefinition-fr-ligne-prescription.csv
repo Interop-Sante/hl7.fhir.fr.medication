@@ -1,6 +1,6 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
 "fr-ligne-prescription","fr-ligne-prescription","","","",0,*,"","","","null {[]} {[]}
-","Ligne de precription","Structuration d'une ligne de prescription en fonction des critères de la HAS.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+","Ligne de precription","Structuration d'une ligne de prescription [à compléter].","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "fr-ligne-prescription.traitement","fr-ligne-prescription.traitement","","","",0,1,"","","","Base {[]} {[]}
 ","Identification du traitement concerné par la ligne de prescription","Identification du traitement concerné par la ligne de prescription","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement",0,1,"",""
 "fr-ligne-prescription.traitement.identifiant","fr-ligne-prescription.traitement.identifiant","","","",0,1,"","","","Identifier {[]} {[]}
@@ -8,82 +8,14 @@
 "fr-ligne-prescription.traitement.dosage","fr-ligne-prescription.traitement.dosage","","","",0,*,"","","","Base {[]} {[]}
 ","Quantité de substance active dans une unité de dispensation","Quantité de substance active dans une unité de dispensation","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.dosage",0,*,"",""
 "fr-ligne-prescription.traitement.dosage.valeur","fr-ligne-prescription.traitement.dosage.valeur","","","",0,1,"","","","decimal {[]} {[]}
-","Valeur du dosage","Valeur du dosage","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.dosage.valeur",0,1,"",""
+","Valeur du dosage dans une unité de dispensiation","Valeur du dosage dans une unité de dispensiation","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.dosage.valeur",0,1,"",""
 "fr-ligne-prescription.traitement.dosage.unite","fr-ligne-prescription.traitement.dosage.unite","","","",0,1,"","","","code {[]} {[]}
-","Unité du dosage","Unité du dosage","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.dosage.unite",0,1,"",""
+","Unité du dosage dans une unité de dispensiation","Unité du dosage dans une unité de dispensiation","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.dosage.unite",0,1,"",""
 "fr-ligne-prescription.traitement.forme","fr-ligne-prescription.traitement.forme","","","",0,1,"","","","code {[]} {[]}
-","Forme galénique","Forme galénique","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.forme",0,1,"",""
+","Forme galénique de l'unité de dispensation","Forme galénique de l'unité de dispensation","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.traitement.forme",0,1,"",""
 "fr-ligne-prescription.dateDebut","fr-ligne-prescription.dateDebut","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date de début de la ligne de prescription","Date de début de la ligne de prescription","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.dateDebut",0,1,"",""
 "fr-ligne-prescription.dateFin","fr-ligne-prescription.dateFin","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date de fin de la ligne de prescription","Date de fin de la ligne de prescription","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.dateFin",0,1,"",""
-"fr-ligne-prescription.posologie","fr-ligne-prescription.posologie","","","",0,*,"","","","Base {[]} {[]}
+"fr-ligne-prescription.posologie","fr-ligne-prescription.posologie","","","",0,*,"","","","https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-posologie {[]} {[]}
 ","Structure de la posologie par séquences de prise.","Structure de la posologie par séquences de prise.","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie",0,*,"",""
-"fr-ligne-prescription.posologie.sequence","fr-ligne-prescription.posologie.sequence","","","",0,1,"","","","decimal {[]} {[]}
-","Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément.","Numéro de séquence. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément.","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.sequence",0,1,"",""
-"fr-ligne-prescription.posologie.evenementFinSequence","fr-ligne-prescription.posologie.evenementFinSequence","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Evenement de fin de la séquence","Evenement de fin de la séquence","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.evenementFinSequence",0,1,"",""
-"fr-ligne-prescription.posologie.voieAdministration","fr-ligne-prescription.posologie.voieAdministration","","","",0,1,"","","","code {[]} {[]}
-","Voie d'administration du traitement","Voie d'administration du traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.voieAdministration",0,1,"",""
-"fr-ligne-prescription.posologie.siteAdministration","fr-ligne-prescription.posologie.siteAdministration","","","",0,1,"","","","code {[]} {[]}
-","Région anatomique d'administration du traitement","Région anatomique d'administration du traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.siteAdministration",0,1,"",""
-"fr-ligne-prescription.posologie.quantitePrescrite","fr-ligne-prescription.posologie.quantitePrescrite","","","",0,*,"","","","Base {[]} {[]}
-","Quantité de traitement prescrite","Quantité de traitement prescrite","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantitePrescrite",0,*,"",""
-"fr-ligne-prescription.posologie.quantitePrescrite.valeur","fr-ligne-prescription.posologie.quantitePrescrite.valeur","","","",0,1,"","","","decimal {[]} {[]}
-","Quantité à prendre par prise","Quantité à prendre par prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantitePrescrite.valeur",0,1,"",""
-"fr-ligne-prescription.posologie.quantitePrescrite.valeurMax","fr-ligne-prescription.posologie.quantitePrescrite.valeurMax","","","",0,1,"","","","decimal {[]} {[]}
-","Quantité maximale à prendre par prise","Quantité maximale à prendre par prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantitePrescrite.valeurMax",0,1,"",""
-"fr-ligne-prescription.posologie.quantitePrescrite.unite","fr-ligne-prescription.posologie.quantitePrescrite.unite","","","",0,1,"","","","code {[]} {[]}
-","Unité de la quantité prescrite (ex : comprimé, mg, ...)","Unité de la quantité prescrite (ex : comprimé, mg, ...)","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantitePrescrite.unite",0,1,"",""
-"fr-ligne-prescription.posologie.quantiteMaxParPeriode","fr-ligne-prescription.posologie.quantiteMaxParPeriode","","","",0,*,"","","","Base {[]} {[]}
-","Quantité maximale par unité de temps","Quantité maximale par unité de temps","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode",0,*,"",""
-"fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurQuantite","fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurQuantite","","","",0,1,"","","","decimal {[]} {[]}
-","Valeur maximale pour l'unité de temps donnée","Valeur maximale pour l'unité de temps donnée","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurQuantite",0,1,"",""
-"fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteQuantite","fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteQuantite","","","",0,1,"","","","code {[]} {[]}
-","Unité de la quantité","Unité de la quantité","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteQuantite",0,1,"",""
-"fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurTemps","fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurTemps","","","",0,1,"","","","decimal {[]} {[]}
-","Valeur du temps","Valeur du temps","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode.valeurTemps",0,1,"",""
-"fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteTemps","fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteTemps","","","",0,1,"","","","code {[]} {[]}
-","Unité de temps","Unité de temps","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.quantiteMaxParPeriode.uniteTemps",0,1,"",""
-"fr-ligne-prescription.posologie.momentDePrise","fr-ligne-prescription.posologie.momentDePrise","","","",0,*,"","","","Base {[]} {[]}
-","moment de la prise au cours de la journée (ex : 30 minutes avant le repas)","moment de la prise au cours de la journée (ex : 30 minutes avant le repas)","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.momentDePrise",0,*,"",""
-"fr-ligne-prescription.posologie.momentDePrise.code","fr-ligne-prescription.posologie.momentDePrise.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Code ou texte du moment de prise","Code ou texte du moment de prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.momentDePrise.code",0,1,"",""
-"fr-ligne-prescription.posologie.momentDePrise.offset","fr-ligne-prescription.posologie.momentDePrise.offset","","","",0,1,"","","","unsignedInt {[]} {[]}
-","Temps en minute avant/après l'élément déclenchant","Temps en minute avant/après l'élément déclenchant","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.momentDePrise.offset",0,1,"",""
-"fr-ligne-prescription.posologie.conditionDePrise","fr-ligne-prescription.posologie.conditionDePrise","","","",0,*,"","","","CodeableConcept {[]} {[]}
-","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.conditionDePrise",0,*,"",""
-"fr-ligne-prescription.posologie.instructionPatient","fr-ligne-prescription.posologie.instructionPatient","","","",0,1,"","","","string {[]} {[]}
-","Instruction au patient sous forme textuelle","Instruction au patient sous forme textuelle","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.instructionPatient",0,1,"",""
-"fr-ligne-prescription.posologie.frequence","fr-ligne-prescription.posologie.frequence","","","",0,1,"","","","Base {[]} {[]}
-","Description de fréquence de prise","Description de fréquence de prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence",0,1,"",""
-"fr-ligne-prescription.posologie.frequence.valeur","fr-ligne-prescription.posologie.frequence.valeur","","","",0,1,"","","","decimal {[]} {[]}
-","Nombre de prise de la quantité ""quantitePrescrite"" par période","Nombre de prise de la quantité ""quantitePrescrite"" par période","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence.valeur",0,1,"",""
-"fr-ligne-prescription.posologie.frequence.repetitionPeriode","fr-ligne-prescription.posologie.frequence.repetitionPeriode","","","",0,1,"","","","code {[]} {[]}
-","nombre de prise par période (ex : le 3 dans une fois tous les trois jours)","nombre de prise par période (ex : le 3 dans une fois tous les trois jours)","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence.repetitionPeriode",0,1,"",""
-"fr-ligne-prescription.posologie.frequence.unitePeriode","fr-ligne-prescription.posologie.frequence.unitePeriode","","","",0,1,"","","","code {[]} {[]}
-","unité de la période (ex : jour dans le 3 dans une fois tous les trois jours)","unité de la période (ex : jour dans le 3 dans une fois tous les trois jours)","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence.unitePeriode",0,1,"",""
-"fr-ligne-prescription.posologie.frequence.jourSemaine","fr-ligne-prescription.posologie.frequence.jourSemaine","","","",0,*,"","","","code {[]} {[]}
-","Jour de la semaine de la prise","Jour de la semaine de la prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence.jourSemaine",0,*,"",""
-"fr-ligne-prescription.posologie.frequence.heurePrise","fr-ligne-prescription.posologie.frequence.heurePrise","","","",0,1,"","","","time {[]} {[]}
-","Heure de la prise","Heure de la prise","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence.heurePrise",0,1,"",""
-"fr-ligne-prescription.posologie.frequence.precision","fr-ligne-prescription.posologie.frequence.precision","","","",0,1,"","","","string {[]} {[]}
-","Instruction additionelle","Instruction additionelle","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.frequence.precision",0,1,"",""
-"fr-ligne-prescription.posologie.dureeAdministration","fr-ligne-prescription.posologie.dureeAdministration","","","",0,1,"","","","Base {[]} {[]}
-","Rythme d'administration","Rythme d'administration","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeAdministration",0,1,"",""
-"fr-ligne-prescription.posologie.dureeAdministration.duree","fr-ligne-prescription.posologie.dureeAdministration.duree","","","",0,1,"","","","decimal {[]} {[]}
-","Durée de l'administration","Durée de l'administration","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeAdministration.duree",0,1,"",""
-"fr-ligne-prescription.posologie.dureeAdministration.dureeUnite","fr-ligne-prescription.posologie.dureeAdministration.dureeUnite","","","",0,1,"","","","code {[]} {[]}
-","Unité de la durée d'administration","Unité de la durée d'administration","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeAdministration.dureeUnite",0,1,"",""
-"fr-ligne-prescription.posologie.dureeAdministration.dureeMax","fr-ligne-prescription.posologie.dureeAdministration.dureeMax","","","",0,1,"","","","decimal {[]} {[]}
-","Durée maximale de l'administration","Durée maximale de l'administration","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeAdministration.dureeMax",0,1,"",""
-"fr-ligne-prescription.posologie.dateDebut","fr-ligne-prescription.posologie.dateDebut","","","",0,1,"","","","dateTime {[]} {[]}
-","Date de début de la séquence de traitement","Date de début de la séquence de traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dateDebut",0,1,"",""
-"fr-ligne-prescription.posologie.dateFin","fr-ligne-prescription.posologie.dateFin","","","",0,1,"","","","dateTime {[]} {[]}
-","Date de fin de la séquence de traitement","Date de fin de la séquence de traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dateFin",0,1,"",""
-"fr-ligne-prescription.posologie.dureeTraitement","fr-ligne-prescription.posologie.dureeTraitement","","","",0,1,"","","","Base {[]} {[]}
-","Durée du traitement - la durée du traitement peut être indiquée en complément ou à la place des dates de début et de fin de traitement","Durée du traitement - la durée du traitement peut être indiquée en complément ou à la place des dates de début et de fin de traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeTraitement",0,1,"",""
-"fr-ligne-prescription.posologie.dureeTraitement.valeur","fr-ligne-prescription.posologie.dureeTraitement.valeur","","","",0,1,"","","","string {[]} {[]}
-","Valeur de la durée de traitement","Valeur de la durée de traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeTraitement.valeur",0,1,"",""
-"fr-ligne-prescription.posologie.dureeTraitement.unite","fr-ligne-prescription.posologie.dureeTraitement.unite","","","",0,1,"","","","code {[]} {[]}
-","Unité de la durée de traitement","Unité de la durée de traitement","","","","","","","","","",,,,,"",,,,"fr-ligne-prescription.posologie.dureeTraitement.unite",0,1,"",""

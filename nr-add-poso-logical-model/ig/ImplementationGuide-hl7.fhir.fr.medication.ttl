@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-07-17T07:34:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-07-18T15:58:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -2891,7 +2891,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-ligne-prescription" ]
        ] ;
        fhir:name [ fhir:v "Ligne de precription" ] ;
-       fhir:description [ fhir:v "Structuration d'une ligne de prescription en fonction des critères de la HAS." ] ;
+       fhir:description [ fhir:v "Structuration d'une ligne de prescription [à compléter]." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -3146,6 +3146,24 @@
          a fhir:canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
          fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-posologie> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-posologie" ]
+       ] ;
+       fhir:name [ fhir:v "Posologie" ] ;
+       fhir:description [ fhir:v "Structuration d'une posologie en fonction des critères de la HAS." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
