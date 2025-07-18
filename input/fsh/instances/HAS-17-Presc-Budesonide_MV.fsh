@@ -29,7 +29,7 @@ Usage: #inline
 * ingredient[=].strength.numerator = 2 $unitsofmeasure#mL "ml"
 
 Instance: medicationrequest-HAS-17-Presc-Budesonide-MV
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

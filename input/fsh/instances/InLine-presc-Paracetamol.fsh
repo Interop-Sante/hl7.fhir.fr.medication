@@ -1,5 +1,5 @@
 Instance: InLine-presc-Paracetamol1
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #example
 * status = #active
 * intent = #order

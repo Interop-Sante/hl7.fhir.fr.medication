@@ -7,7 +7,7 @@ Usage: #example
 * entry[+].resource = requestgroup-Presc-METFORMINE-GLICLAZIDE
 
 Instance: medicationrequest-Presc-METFORMINE
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-METFORMINE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
@@ -33,7 +33,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: medicationrequest-Presc-GLICLAZIDE
-InstanceOf: FrPatientMedicationRequestExclusion
+InstanceOf: FrInpatientMedicationRequestExclusion
 Usage: #inline
 * id = "medicationrequest-Presc-GLICLAZIDE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest-exclusion"

@@ -20,11 +20,11 @@ package "Médicament prescrit" {
   class FrMedicationCompound [[./StructureDefinition-fr-medication-compound.html]]
 }
 
-class "FrPatientMedicationRequest" [[./StructureDefinition-fr-inpatient-medicationrequest.html]]
+class "FrInpatientMedicationRequest" [[./StructureDefinition-fr-inpatient-medicationrequest.html]]
 
 
 ' Notes pour les ValueSets
-note right of FrPatientMedicationRequest
+note right of FrInpatientMedicationRequest
   ValueSet:
   - FRRouteOfAdministration
   - FRMethodOfAdministration
@@ -42,14 +42,14 @@ note right of FrMedicationCompound
 end note
 
 ' Relations principales
-FrPatientMedicationRequest --> FrCorePatient
-FrPatientMedicationRequest --> FrCoreOrganization
-FrPatientMedicationRequest --> FrCoreEncounter
-FrPatientMedicationRequest --> FrCorePractitioner
-FrPatientMedicationRequest --> Observation
+FrInpatientMedicationRequest --> FrCorePatient
+FrInpatientMedicationRequest --> FrCoreOrganization
+FrInpatientMedicationRequest --> FrCoreEncounter
+FrInpatientMedicationRequest --> FrCorePractitioner
+FrInpatientMedicationRequest --> Observation
 
-FrPatientMedicationRequest --> FrMedicationNonCompound
-FrPatientMedicationRequest --> FrMedicationCompound
+FrInpatientMedicationRequest --> FrMedicationNonCompound
+FrInpatientMedicationRequest --> FrMedicationCompound
 
 FrMedicationNonCompound --> FrMedicationCompound
 

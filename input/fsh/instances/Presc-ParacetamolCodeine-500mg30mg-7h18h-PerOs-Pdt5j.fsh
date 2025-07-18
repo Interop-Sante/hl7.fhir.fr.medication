@@ -20,7 +20,7 @@ Usage: #inline
 * ingredient[=].strength.numerator = 30 'mg' "mg"
 
 Instance: medicationrequest-Presc-ParacetamolCodeine-500mg30mg
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

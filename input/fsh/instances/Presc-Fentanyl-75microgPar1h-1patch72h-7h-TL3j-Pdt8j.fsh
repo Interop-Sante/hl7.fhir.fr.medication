@@ -19,7 +19,7 @@ Usage: #inline
 * ingredient[=].strength.denominator = 1 'h' "h"
 
 Instance: medicationrequest-Presc-Fentanyl-patch72h-TL3j
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

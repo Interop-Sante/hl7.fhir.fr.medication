@@ -21,7 +21,7 @@ Usage: #inline
 * ingredient.strength.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-DIPROSONE-AppCut
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

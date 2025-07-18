@@ -17,7 +17,7 @@ Usage: #inline
 * ingredient[=].strength.numerator = 1 $unitsofmeasure#[recipient_unidose] "récipient unidose"
 
 Instance: medicationrequest-HAS-17-Presc-Budesonide
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

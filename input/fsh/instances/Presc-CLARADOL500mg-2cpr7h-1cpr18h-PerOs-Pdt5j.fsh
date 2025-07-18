@@ -5,7 +5,7 @@ Usage: #example
 * entry.resource = medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
 
 Instance: medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active

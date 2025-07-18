@@ -14,7 +14,7 @@ Usage: #inline
 * code.text = "METHYLPREDNISOLONE"
 
 Instance: medicationrequest-Presc-Methylpredinosolone-DosesEvolutives
-InstanceOf: FrPatientMedicationRequest
+InstanceOf: FrInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-patient-medicationrequest"
 * status = #active
