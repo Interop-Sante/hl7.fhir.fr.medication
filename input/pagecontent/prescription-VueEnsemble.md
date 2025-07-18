@@ -114,7 +114,7 @@ Un interval *semi-ouvert*, par exemple \[ 2021-02-14T12:34:56, 201-05-14T12:34:5
 - *end* : 2021-05-14T12:34:55
 
 **Rappel**:
-Dans FHIR les horaires sont données à la seconde près : format *hh:mn:ss*. Il est précisé que l'utilisateur fait son affaire de la granularité à l'heure ou à la minute près en remplissant les minutes et les secondes manquantes par des *00*.
+Dans FHIR, le type datetime impose de donner les horaires à la seconde près lorsque l'heure est renseignée : format *hh:mn:ss*. Il est précisé que l'utilisateur fait son affaire de la granularité à l'heure ou à la minute près en remplissant les minutes et les secondes manquantes par des *00*.
 
 Néanmoins, pour exprimer l'horaire de fin exclu à la granularité horaire ou minute, il conviendra de remplir les minutes ou secondes manquantes par *59*.
 
