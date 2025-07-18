@@ -21,9 +21,7 @@ Dépendance des ressources profilées par Interop'Santé
   </p>
 </div>
 
-Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*.
-Ex: *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047*
-Ex: *paracétamol+codéine 500 mg+30 mg*
+Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*. Ex : *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047* contenant paracétamol+codéine 500 mg+30 mg*
 
 La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FrInpatientMedicationRequest*.
 
