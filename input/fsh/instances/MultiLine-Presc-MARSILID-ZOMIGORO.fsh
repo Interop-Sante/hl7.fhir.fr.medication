@@ -33,7 +33,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: medicationrequest-Presc-ZOMIGORO
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: FRMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Presc-ZOMIGORO"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
