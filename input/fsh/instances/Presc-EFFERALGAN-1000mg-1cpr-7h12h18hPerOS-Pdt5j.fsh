@@ -1,6 +1,7 @@
 Instance: Presc-EFFERALGAN
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-EFFERALGAN
 * entry[+].resource = medicationrequest-Presc-EFFERALGAN

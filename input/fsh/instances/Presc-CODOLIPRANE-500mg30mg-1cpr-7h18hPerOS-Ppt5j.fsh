@@ -1,6 +1,7 @@
 Instance: Presc-CODOLIPRANE-MedCodeableConcept
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
 
