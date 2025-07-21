@@ -6,6 +6,7 @@ Description: "French inpatient medication request profile"
 
 * supportingInformation.extension contains fr-uf-role named UFRole 0..1
 
+// extension noteScope déjà présente dans FrMedicationRequest mais il faut dupliquer la ligne pour éviter l'erreur sushi.
 * note.extension contains fr-medicationrequest-note-scope named noteScope 0..1
 
 * dispenseRequest.initialFill ..0
