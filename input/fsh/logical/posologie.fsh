@@ -57,12 +57,12 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 * dateDuration 0..1 Quantity "Durée du traitement"
 * dateRange 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
 
-* dateDePrise 0..1 dateTime "Date précise du moment de prise"
+* dateDePrise 0..* dateTime "Date précise du moment de prise"
 
 * dureeTraitement 0..1 Base "Durée du traitement - la durée du traitement peut être indiquée en complément ou à la place des dates de début et de fin de traitement"
 * dureeTraitement.valeur 0..1 string "Valeur de la durée de traitement"
 * dureeTraitement.unite 0..1 code "Unité de la durée de traitement"
 
-* momentDePrise 0..* Base "moment de la prise au cours de la journée (ex : 30 minutes avant le repas)"
+* momentDePrise 0..* Base "Définition du moment de prise au cours de la journée (ex : 30 minutes avant le repas)"
 * momentDePrise.code 0..1 CodeableConcept "Code ou texte du moment de prise"
 * momentDePrise.offset 0..1 unsignedInt "Temps en minute avant/après l'élément déclenchant"
