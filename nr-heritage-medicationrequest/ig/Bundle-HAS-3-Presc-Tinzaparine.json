@@ -1,0 +1,119 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "HAS-3-Presc-Tinzaparine",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Medication",
+      "id" : "medication-HAS-3-Presc-Tinzaparine",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound",
+        "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-HAS-3-Presc-Tinzaparine\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-HAS-3-Presc-Tinzaparine</b></p><a name=\"medication-HAS-3-Presc-Tinzaparine\"> </a><a name=\"hcmedication-HAS-3-Presc-Tinzaparine\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FrMedicationNonCompound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound</code></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091620}\">tinzaparine sodique</span></p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 11201000}\">Solution injectable</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091620}\">tinzaparine sodique</span></td><td>10000 UI anti-Xa<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[anti'Xa'U] = '[anti'Xa'U]')</span>/0.5 ml<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></td></tr></table></div>"
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+          "code" : "100000091620",
+          "display" : "tinzaparine sodique"
+        }]
+      },
+      "form" : {
+        "coding" : [{
+          "system" : "http://standardterms.edqm.eu",
+          "code" : "11201000",
+          "display" : "Solution injectable"
+        }]
+      },
+      "ingredient" : [{
+        "itemCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+            "code" : "100000091620",
+            "display" : "tinzaparine sodique"
+          }]
+        },
+        "strength" : {
+          "numerator" : {
+            "value" : 10000,
+            "unit" : "UI anti-Xa",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "[anti'Xa'U]"
+          },
+          "denominator" : {
+            "value" : 0.5,
+            "unit" : "ml",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mL"
+          }
+        }
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-HAS-3-Presc-Tinzaparine",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest",
+        "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-3-Presc-Tinzaparine\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest medicationrequest-HAS-3-Presc-Tinzaparine</b></p><a name=\"medicationrequest-HAS-3-Presc-Tinzaparine\"> </a><a name=\"hcmedicationrequest-HAS-3-Presc-Tinzaparine\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FrInpatientMedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-HAS-3-Presc-Tinzaparine</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstruction</b>: <span title=\"Codes:\">soit 170UI anti-Xa /kg</span></p><p><b>timing</b>: Once per 1 day</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20066000}\">Voie sous-cutanée</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>12000 UI anti-Xa<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[anti'Xa'U] = '[anti'Xa'U]')</span></td></tr></table></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "medicationReference" : {
+        "reference" : "#medication-HAS-3-Presc-Tinzaparine"
+      },
+      "subject" : {
+        "reference" : "Patient/14602"
+      },
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-71482713"
+      },
+      "note" : [{
+        "extension" : [{
+          "url" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope",
+          "valueCode" : "LIPRESCTXT"
+        }],
+        "text" : "Prescription textuelle: TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée"
+      }],
+      "dosageInstruction" : [{
+        "additionalInstruction" : [{
+          "text" : "soit 170UI anti-Xa /kg"
+        }],
+        "timing" : {
+          "repeat" : {
+            "frequency" : 1,
+            "period" : 1,
+            "periodUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [{
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "20066000",
+            "display" : "Voie sous-cutanée"
+          }]
+        },
+        "doseAndRate" : [{
+          "doseQuantity" : {
+            "value" : 12000,
+            "unit" : "UI anti-Xa",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "[anti'Xa'U]"
+          }
+        }]
+      }]
+    }
+  }]
+}
