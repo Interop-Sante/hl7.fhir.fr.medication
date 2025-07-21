@@ -3,9 +3,11 @@ Parent: MedicationRequest
 Id: fr-medicationrequest
 Title: "FrMedicationRequest"
 Description: "French medication request profile"
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
+
 * extension contains fr-treatment-intent named treatmentIntent 0..1
 * extension[treatmentIntent] ^short = "overall treatment intent"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
