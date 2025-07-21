@@ -6,6 +6,8 @@ Description: "French inpatient medication request profile"
 
 * supportingInformation.extension contains fr-uf-role named UFRole 0..1
 
+* note.extension contains fr-medicationrequest-note-scope named noteScope 0..1
+
 * dispenseRequest.initialFill ..0
 * dispenseRequest.dispenseInterval ..0
 * dispenseRequest.validityPeriod.start 1..
