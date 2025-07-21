@@ -42,14 +42,9 @@ note right of FrMedicationCompound
 end note
 
 ' Relations principales
-FrInpatientMedicationRequest --> FrCorePatient
-FrInpatientMedicationRequest --> FrCoreOrganization
-FrInpatientMedicationRequest --> FrCoreEncounter
-FrInpatientMedicationRequest --> FrCorePractitioner
-FrInpatientMedicationRequest --> Observation
+FrInpatientMedicationRequest --> "Informations contextuelles"
 
-FrInpatientMedicationRequest --> FrMedicationNonCompound
-FrInpatientMedicationRequest --> FrMedicationCompound
+FrInpatientMedicationRequest --> "Médicament prescrit"
 
 FrMedicationNonCompound --> FrMedicationCompound
 
