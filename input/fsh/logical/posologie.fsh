@@ -59,9 +59,6 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 
 * dateDePrise 0..* dateTime "Date précise du moment de prise"
 
-* dureeTraitement 0..1 Base "Durée du traitement - la durée du traitement peut être indiquée en complément ou à la place des dates de début et de fin de traitement"
-* dureeTraitement.valeur 0..1 string "Valeur de la durée de traitement"
-* dureeTraitement.unite 0..1 code "Unité de la durée de traitement"
 
 * momentDePrise 0..* Base "Définition du moment de prise au cours de la journée (ex : 30 minutes avant le repas)"
 * momentDePrise.code 0..1 CodeableConcept "Code ou texte du moment de prise"
