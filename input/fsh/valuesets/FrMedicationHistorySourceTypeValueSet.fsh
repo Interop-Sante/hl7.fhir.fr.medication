@@ -1,4 +1,4 @@
-ValueSet: FrMedicationHistorySourceType
+ValueSet: FRMedicationHistorySourceType
 Id: fr-medication-history-source-type
 Title: "value set SIPh - Nature des sources d'un Bilan Médicamenteux"
 Description: "Un jeu de valeurs à utiliser pour coder les sources d'un Bilan Médicamenteux."

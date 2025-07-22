@@ -1,5 +1,5 @@
 Instance: Disp-EFFERALGAN
-InstanceOf: FrInpatientMedicationDispense
+InstanceOf: FRInpatientMedicationDispense
 Usage: #example
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-EFFERALGAN"

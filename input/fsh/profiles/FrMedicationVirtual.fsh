@@ -1,7 +1,7 @@
-Profile: FrMedicationVirtual
+Profile: FRMedicationVirtual
 Parent: Medication
 Id: fr-medication-virtual
-Title: "FrMedicationVirtual"
+Title: "FR Medication Virtual"
 Description: "Virtual medication composed of one to many substances."
 * ^status = #draft
 * ^experimental = false

@@ -1,5 +1,5 @@
 Instance: Expl-med-MV-sulfate-morphine-1
-InstanceOf: FrMedicationVirtual
+InstanceOf: FRMedicationVirtual
 Usage: #example
 * form = $EDQM#10210000 "Gélule"
 * ingredient.itemCodeableConcept = $SMS#01099 "sulfate de morphine"

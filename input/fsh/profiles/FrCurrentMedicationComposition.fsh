@@ -1,10 +1,10 @@
-Profile: FrCurrentMedicationComposition
+Profile: FRCurrentMedicationComposition
 Parent: Composition
 Id: fr-current-medication-composition
+Title: "FR Current Medication Composition"
 Description: "Profil de la ressource Composition du traitement médicamenteux courant."
 * ^status = #draft
 * ^purpose = "Ce profil est utilisé pour la ressource *Composition* de tout document FHIR *Traitement médicamenteux courant*\\. Par exemple, celui résultant de la prescription d'admission intitulé *Ordonnance Médicale d'Admission* (OMA)."
-* ^copyright = "InterOp'Santé 2021"
 * . ^short = "Traitement Médicamenteux Courant"
 * . ^definition = "Traitement Médicamenteux Courant : liste des lignes de traitement médicamenteux courant hospitalier."
 * . ^comment = "En général, une ligne par médicament prescrit en cours. Des différences de construction des lignes peuvent exister d'un logiciel à un autre, liées à la structuration de la posologie (nombre de doses unitaires par période, quantité des doses unitaires, horaire des doses unitaires). Le jeu de tests de prescriptions intiales de référence permet l'évaluation de la capacité des logiciels à supporter la structuration de posologies complexes."
@@ -66,7 +66,7 @@ Description: "Profil de la ressource Composition du traitement médicamenteux co
 * section.orderedBy ^short = "Ordre des lignes du Traitement Médicamenteux Courant"
 * section.orderedBy ^definition = "L'ordre des lignes de traitement du Traitement Médicamenteux Courant, c'est à dire, l'ordre des <*entry*\\> de son unique <*section*\\>."
 * section.orderedBy ^comment = "Il est recommandé d'utiliser la valeur codée ***user*** si l'ordre des <*entry*\\> provient d'un choix de l'auteur à travers l'IHM de son logiciel qui est conservé dans la génération de la ressource Traitement Médicamenteux Courant. Car, rappel des spécifications HL7-FHIR : *If there is no order specified, the order is unknown, though there may still be some order.*"
-* section.entry only Reference(FrCurrentMedicationMedicationStatement)
+* section.entry only Reference(FRCurrentMedicationMedicationStatement)
 * section.entry MS
 * section.entry ^short = "La ligne de traitement médicamenteux"
 * section.entry ^definition = "Référence à la ligne de traitement médicamenteux courant, ressource *MedicationStatement* profilée *fr-current-medication-medication-statement*\\."

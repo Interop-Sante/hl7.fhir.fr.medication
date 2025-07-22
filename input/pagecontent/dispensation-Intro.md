@@ -1,11 +1,19 @@
-# La dispensation
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> la partie dispensation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+    </p>
+    </blockquote>
+</div>
+
+### La dispensation
 
 La dispensation est un concept français, qui recouvre 2 actions différentes :
 
 - la validation pharmaceutique de l’ordonnance, qui induit un dialogue éventuel avec le prescripteur
 - la délivrance du médicament, qui est la fourniture de la matière et des consignes d’administration
 
-## Objectif
+#### Objectif
 
 Principes
 
@@ -22,7 +30,7 @@ Les exemples seront fondés sur des prescriptions réputées validées par le ph
 
 Les éléments de complexité sont à définir, à l’instar de ceux définis pour la prescription.
 
-## Détail
+#### Détail
 
 - [Ressource MedicationDispense](dispensation-RessourceMedicationDispense.html)
 - [La délivrance la plus simple](dispensation-DelivrancePlusSimple.html)

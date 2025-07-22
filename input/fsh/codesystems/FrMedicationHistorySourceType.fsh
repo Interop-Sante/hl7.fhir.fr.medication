@@ -1,4 +1,4 @@
-CodeSystem: FrMedicationHistorySourceType
+CodeSystem: FRMedicationHistorySourceType
 Id: fr-medication-history-source-type
 Title: "code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux"
 Description: "Le système de codage des sources d'un Bilan Médicamenteux."

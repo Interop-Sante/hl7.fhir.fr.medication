@@ -1,4 +1,4 @@
-Extension: FrMedicationHistorySources
+Extension: FRMedicationHistorySources
 Id: fr-medication-history-sources
 Description: "Sources des lignes du Bilan Médicamenteux que représente la ressource *Composition* ou de chacune de ses lignes que représente la ressource *MedicationStatement* référencée par l'élément *entry* de la ressource *Composition* (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)"
 
@@ -50,7 +50,7 @@ Description: "Sources des lignes du Bilan Médicamenteux que représente la ress
 * extension[source].extension[type] ^requirements = "Le type de la source doit être identifié"
 * extension[source].extension[type].value[x] 1..
 * extension[source].extension[type].value[x] only Coding
-* extension[source].extension[type].value[x] from FrMedicationHistorySourceType (extensible)
+* extension[source].extension[type].value[x] from FRMedicationHistorySourceType (extensible)
 * extension[source].extension[type].value[x] ^short = "valeur codée du type de source"
 * extension[source].extension[type].value[x] ^definition = "Valeur du type codé (coding) de la source retenue. Attachée au jeu de valeurs ouvert (*extensible*) **fr-medication-history-source-type**, d'après [le guide de la HAS](https://www.has-sante.fr/jcms/c_2736442/fr/mettre-en-oeuvre-la-conciliation-des-traitements-medicamenteux-en-etablissement-de-sante)."
 * extension[source].extension[type].value[x] ^binding.description = "fr-medication-history-source-type"

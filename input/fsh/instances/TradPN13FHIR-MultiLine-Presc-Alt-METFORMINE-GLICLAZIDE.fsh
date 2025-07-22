@@ -43,7 +43,7 @@ Usage: #inline
 * birthDate = "1989-01-02"
 
 Instance: medicationrequest-Trad-Presc-Alt-METFORMINE
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Alt-METFORMINE"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -84,10 +84,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: medicationrequest-Trad-Presc-Alt-GLICLAZIDE
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Alt-GLICLAZIDE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * identifier.value = "20250502144844570"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active
@@ -123,7 +123,7 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: requestgroup-Trad-Presc-Alt-METFORMINE-GLICLAZIDE
-InstanceOf: FrRequestGroupForPrescription
+InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "10543744"

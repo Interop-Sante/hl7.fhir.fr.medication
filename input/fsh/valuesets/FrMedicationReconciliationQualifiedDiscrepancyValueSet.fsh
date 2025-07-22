@@ -1,4 +1,4 @@
-ValueSet: FrMedicationReconciliationQualifiedDiscrepancy
+ValueSet: FRMedicationReconciliationQualifiedDiscrepancy
 Id: fr-medication-reconciliation-qualified-discrepancy
 Title: "value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT"
 Description: "Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."

@@ -1,6 +1,7 @@
-Profile: FrMedicationReconciliationMedicationStatement
+Profile: FRMedicationReconciliationMedicationStatement
 Parent: MedicationStatement
 Id: fr-medication-reconciliation-statement
+Title: "FR Medication Reconciliation MedicationStatement"
 Description: "Profil de la ressource *MedicationStatement* référencée dans la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT)."
 * ^status = #draft
 * . ^short = "Ligne de traitement médicamenteux de la FCT (Fiche de Conciliation ds Traitements médicamenteux)"
@@ -10,13 +11,13 @@ Description: "Profil de la ressource *MedicationStatement* référencée dans la
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains FrMedicationStatementReconciliationProperties named reconciliation 0..1 MS
+* extension contains FRMedicationStatementReconciliationProperties named reconciliation 0..1 MS
 * extension[reconciliation] ^short = "Propriétés de la conciliation de cette ligne de traitement médicamenteux"
 * extension[reconciliation] ^definition = "Documentation de la conciliation : statut, divergence, commentaire, type d'erreur/écart, conséquence de l'erreur/écart, résolution de l'erreur/écart"
 * extension[reconciliation] ^comment = "La documentation de la conciliation est renseignée progressivement par le pharmacien puis le prescripteur lors du dialogue qui s'instaure entre eux-deux.\r\nL'élément complexe *reconciliation* peut porter tout l'historique de ce renseignement progressif ou ne porter que son état courant, c'est-à-dire pour chaque propriété, l'information à sa dernière date d'enregistrement par son ou ses auteurs."
 * extension[reconciliation] ^requirements = "Porter la documentation de la Conciliation Médicamenteuse selon les règles de gestion en vigueur en France"
 * status MS
-* medication[x] only Reference(FrMedication)
+* medication[x] only Reference(FRMedication)
 * medication[x] MS
 * medication[x] ^short = "Le médicament constitutif de cette ligne | What medication was taken"
 * medication[x] ^definition = "Identifie le médicament constitutif de cette ligne. C'est lien vers une ressource Medication qui décrit ce médicament. Identifies the medication being administered. This is a link to a resource representing the details of the medication."
@@ -43,7 +44,7 @@ Description: "Profil de la ressource *MedicationStatement* référencée dans la
 * derivedFrom contains
     fromMedicationHistory 0..1 MS and
     fromCurrentMedication 0..1 MS
-* derivedFrom[fromMedicationHistory] only Reference(FrMedicationHistoryMedicationStatement)
+* derivedFrom[fromMedicationHistory] only Reference(FRMedicationHistoryMedicationStatement)
 * derivedFrom[fromMedicationHistory] ^short = "Ligne du Bilan Médicamenteux"
 * derivedFrom[fromMedicationHistory] ^definition = "Ligne du Bilan Médicamenteux en relation avec cette ligne de la Fiche de Conciliation"
 * derivedFrom[fromMedicationHistory] ^comment = "Un ligne de la Fiche de Conciliation peut n'être en relation avec aucune des lignes du bilan Médicamenteux (ligne initiée lors de la Prescription d'Admission)"
@@ -52,7 +53,7 @@ Description: "Profil de la ressource *MedicationStatement* référencée dans la
 * derivedFrom[fromMedicationHistory].reference 1..
 * derivedFrom[fromMedicationHistory].identifier ..0
 * derivedFrom[fromMedicationHistory].identifier ^requirements = "identifier la ligne de Bilan Médicamenteux par référence à une ressource MedicationStatement profilée SiPh"
-* derivedFrom[fromCurrentMedication] only Reference(FrCurrentMedicationMedicationStatement)
+* derivedFrom[fromCurrentMedication] only Reference(FRCurrentMedicationMedicationStatement)
 * derivedFrom[fromCurrentMedication] ^short = "Ligne du Traitement Médicamenteux Courant"
 * derivedFrom[fromCurrentMedication] ^definition = "Ligne du Traitement Médicamenteux Courant en relation avec cette ligne de la Fiche de Conciliation"
 * derivedFrom[fromCurrentMedication] ^comment = "Un ligne de la Fiche de Conciliation peut n'être en relation avec aucune des lignes de la Prescription d'Admission (ligne arrêtée ou oubliée lors de la Prescription d'Admission)"
