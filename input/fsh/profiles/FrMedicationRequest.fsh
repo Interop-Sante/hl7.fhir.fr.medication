@@ -31,7 +31,7 @@ Description: "French medication request profile"
 
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
-* dosageInstruction.method from FrMethodOfAdministration (extensible)s
+* dosageInstruction.method from FrMethodOfAdministration (extensible)
 * dosageInstruction.doseAndRate.extension contains fr-basis-of-dose-component named BasisOfDoseComponent 0..1
 
 * dosageInstruction.doseAndRate.doseRange only FrRangeMedication
