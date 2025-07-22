@@ -87,6 +87,12 @@ package IG #DDDDDD{
 
         class FrInpatientMedicationRequest{
 
+             MedicationRequest.medication[x]:medicationReference => [None..None]
+             MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.medication[x]:medicationCodeableConcept => [None..None]
+             MedicationRequest.medication[x]:medicationCodeableConcept.extension:toDispense => <&plus>[0..1]
+             MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
+             MedicationRequest.note.extension:noteScope => <&plus>[0..1]
              MedicationRequest.dispenseRequest.initialFill => [None..0]
              MedicationRequest.dispenseRequest.dispenseInterval => [None..0]
              MedicationRequest.dispenseRequest.validityPeriod.start => [1..None]
@@ -288,14 +294,10 @@ package IG #DDDDDD{
              MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
              MedicationRequest.medication[x] => [None..None]
              MedicationRequest.medication[x]:medicationReference => [0..1]
-             MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
              MedicationRequest.medication[x]:medicationCodeableConcept => [0..1]
-             MedicationRequest.medication[x]:medicationCodeableConcept.extension:toDispense => <&plus>[0..1]
              MedicationRequest.subject => [None..None]
              MedicationRequest.encounter => [None..None]
-             MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
              MedicationRequest.requester => [1..None]
-             MedicationRequest.note.extension:noteScope => <&plus>[0..1]
              MedicationRequest.dosageInstruction => [1..None]
              MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
              MedicationRequest.dosageInstruction.route => [None..None]
@@ -398,6 +400,10 @@ package IG #DDDDDD{
      package extension #paleturquoise {
 
      FrInpatientMedicationRequestExclusion -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
+     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
      FrMedicationCompound -[#black,dashed,thickness=2]-> FrIsVehicle
      FrMedicationHistoryComposition -[#black,dashed,thickness=2]-> FrMedicationHistorySources
      FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
@@ -405,10 +411,6 @@ package IG #DDDDDD{
      FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
      FrMedicationVirtual -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FrMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
      FrMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
      FrMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
      FrRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
