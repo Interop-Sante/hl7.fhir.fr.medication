@@ -28,16 +28,20 @@ Description: "French medication request profile"
 * requester ^definition = "The prescriber that initiated the request and has responsibility for its activation."
 
 * dosageInstruction 1..
+
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
-* dosageInstruction.method from FrMethodOfAdministration (extensible)
+* dosageInstruction.method from FrMethodOfAdministration (extensible)s
 * dosageInstruction.doseAndRate.extension contains fr-basis-of-dose-component named BasisOfDoseComponent 0..1
+
 * dosageInstruction.doseAndRate.doseRange only FrRangeMedication
 * dosageInstruction.doseAndRate.doseQuantity only FrSimpleQuantityMedication
+
+* dosageInstruction.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time. Using a ratio, the denominator SHALL be a quantity of time. Using a simple quantity the UCUM unit SHALL be a unit of rate."
 * dosageInstruction.doseAndRate.rateRatio only FrRatioMedication
 * dosageInstruction.doseAndRate.rateRange only FrRangeMedication
 * dosageInstruction.doseAndRate.rateQuantity only FrSimpleQuantityMedication
-* dosageInstruction.doseAndRate.rate[x] ^definition = "Amount of medication per unit of time. Using a ratio, the denominator SHALL be a quantity of time. Using a simple quantity the UCUM unit SHALL be a unit of rate."
+
 * dosageInstruction.maxDosePerPeriod.numerator only FrSimpleQuantityMedication
 * dosageInstruction.maxDosePerPeriod.denominator only FrSimpleQuantityMedication
 * dosageInstruction.maxDosePerAdministration only FrSimpleQuantityMedication
