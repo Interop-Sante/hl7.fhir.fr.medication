@@ -62,6 +62,10 @@
             <span style="display:inline-block;">0.1.0 - ci-build
 
 
+
+  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+
+
             </span>
           </p>
         </div>
@@ -88,28 +92,6 @@
 <ul class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="conciliation-Intro.html">Introdution</a>
-      </li>
-      <li>
-        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
-      </li>
-      <li>
-        <a href="conciliation-CasUsage.html">Cas d'usage</a>
-      </li>
-      <li>
-        <a href="conciliation-Implementation.html">Implémentation</a>
-      </li>
-      <li>
-        <a href="conciliation-Exemples.html">Exemples</a>
-      </li>
-    </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
@@ -153,6 +135,28 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
       <b class="caret"></b>
     </a>
@@ -173,7 +177,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l313">​</a>
+      <li><a name="l315">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -226,6 +230,16 @@
         <ul class="breadcrumb">
           <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>La dispensation - Discussion</b></li>
 
+          <span style="float:right;">
+
+            <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="transformationPN13-FHIR-Intro.html">next&gt;</a>
+
+          </span>
+
         </ul>
       </div>    <!-- /container -->
     </div>    <!-- /segment-breadcrumb -->
@@ -263,9 +277,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
   <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
-<h1 id="discussion">Discussion</h1>
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> la partie dispensation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+    </p>
+    </blockquote>
+</div>
 
-<h2 id="les-médicaments-délivrés-qui-nont-pas-de-code-ucd">Les médicaments délivrés qui n’ont pas de code UCD</h2>
+<h3 id="discussion">Discussion</h3>
+
+<h4 id="les-médicaments-délivrés-qui-nont-pas-de-code-ucd">Les médicaments délivrés qui n’ont pas de code UCD</h4>
 
 <p>Les médicaments qui n’ont pas de code UCD sont les médicaments composés préparés à la demande (ex : perfusions, chimiothérapie), les préparations magistrales et les préparations hospitalières.</p>
 
@@ -277,7 +299,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><em>À suivre.</em></p>
 
-<h2 id="la-complexité-de-la-prescription">La complexité de la prescription</h2>
+<h4 id="la-complexité-de-la-prescription">La complexité de la prescription</h4>
 
 <p>Le cas des prescriptions conditionnelles et des prescriptions dont la dose est exprimée en quantité par unité de poids ou de surface corporelle du patient est évoqué. Le guide d’implémentation de la prescription aborde ces éléments de complexité au travers d’exemples de base.</p>
 
@@ -302,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>ex: la délivrance de ce médicament, ce jour, à cette UF, couvre telle(s) prescription(s), pour une période de 2 jours</li>
 </ul>
 
-<h2 id="les-différents-types-de-délivrance">Les différents types de délivrance</h2>
+<h4 id="les-différents-types-de-délivrance">Les différents types de délivrance</h4>
 
 <ul>
   <li>Délivrance nominative individualisée,</li>
@@ -314,7 +336,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Là encore, il faut bien faire la part de ce qui est fait par le logiciel (aide à la délivrance) et de ce qui se traduit dans la délivrance (le résultat).</p>
 
-<h2 id="les-paramètres-de-la-délivrance">Les paramètres de la délivrance</h2>
+<h4 id="les-paramètres-de-la-délivrance">Les paramètres de la délivrance</h4>
 
 <p>Il faut faire la part de ce que fait le logiciel et de qui décrit la délivrance proprement dite.</p>
 
@@ -345,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Note : pour les prescriptions longues ou à durée indéterminée, la délivrance est toujours fractionnée par période.</p>
 
-<h2 id="le-traçage-des-flux-matière">Le traçage des flux matière</h2>
+<h4 id="le-traçage-des-flux-matière">Le traçage des flux matière</h4>
 
 <p>Il est important de pouvoir identifier les contenants (les caisses) dans lesquelles sont placés les médicaments délivrés et suivre leur acheminement jusqu’aux UF.</p>
 
@@ -376,9 +398,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
     <div class="container">    <!-- container -->
 
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="transformationPN13-FHIR-Intro.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 21, 2025 09:50+0000">2025-07-21</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 22, 2025 19:11+0000">2025-07-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

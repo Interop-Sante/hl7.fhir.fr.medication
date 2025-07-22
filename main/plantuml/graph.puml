@@ -26,7 +26,7 @@ package IG #DDDDDD{
              Quantity.code => [1..None]
         } 
 
-        class FrCurrentMedicationComposition{
+        class FRCurrentMedicationComposition{
 
              Composition.implicitRules => [None..0]
              Composition.language => [None..None]
@@ -48,7 +48,7 @@ package IG #DDDDDD{
              Composition.section.section => [None..0]
         } 
 
-        class FrCurrentMedicationMedicationStatement{
+        class FRCurrentMedicationMedicationStatement{
 
              MedicationStatement.implicitRules => [None..0]
              MedicationStatement.language => [None..None]
@@ -68,7 +68,7 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
-        class FrInpatientMedicationDispense{
+        class FRInpatientMedicationDispense{
 
              MedicationDispense.medication[x] => [None..None]
              MedicationDispense.subject => [None..None]
@@ -77,15 +77,7 @@ package IG #DDDDDD{
              MedicationDispense.receiver => [None..None]
         } 
 
-        class FrInpatientMedicationRequestExclusion{
-
-             MedicationRequest.extension => [None..None]
-             MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
-             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
-             MedicationRequest.subject => [None..None]
-        } 
-
-        class FrInpatientMedicationRequest{
+        class FRInpatientMedicationRequest{
 
              MedicationRequest.extension => [None..None]
              MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
@@ -139,7 +131,7 @@ package IG #DDDDDD{
              fr-ligne-prescription.posologie => [0..*]
         } 
 
-        class FrMedicationCompound{
+        class FrRedicationCompound{
 
              Medication.code => [1..None]
              Medication.code.text => [1..None]
@@ -152,7 +144,7 @@ package IG #DDDDDD{
              Medication.batch => [None..0]
         } 
 
-        class FrMedicationHistoryComposition{
+        class FRMedicationHistoryComposition{
 
              Composition.implicitRules => [None..0]
              Composition.language => [None..None]
@@ -180,7 +172,7 @@ package IG #DDDDDD{
              Composition.section.section => [None..0]
         } 
 
-        class FrMedicationHistoryMedicationStatement{
+        class FRMedicationHistoryMedicationStatement{
 
              MedicationStatement.meta.tag => [None..0]
              MedicationStatement.implicitRules => [None..0]
@@ -203,7 +195,7 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
-        class FrMedicationNonCompound{
+        class FRMedicationNonCompound{
 
              Medication.extension => [None..None]
              Medication.extension:drugCharacteristic => <&plus>[0..*]
@@ -219,7 +211,7 @@ package IG #DDDDDD{
              Medication.batch => [None..None]
         } 
 
-        class FrMedicationReconciliationComposition{
+        class FRMedicationReconciliationComposition{
 
              Composition.implicitRules => [None..0]
              Composition.language => [None..None]
@@ -263,7 +255,7 @@ package IG #DDDDDD{
              Composition.section:Reconciliation.section => [None..0]
         } 
 
-        class FrMedicationReconciliationMedicationStatement{
+        class FRMedicationReconciliationMedicationStatement{
 
              MedicationStatement.meta.tag => [None..0]
              MedicationStatement.implicitRules => [None..0]
@@ -291,7 +283,7 @@ package IG #DDDDDD{
              MedicationStatement.dosage.maxDosePerLifetime => [None..None]
         } 
 
-        class FrMedicationVirtual{
+        class FRMedicationVirtual{
 
              Medication.extension => [None..None]
              Medication.extension:drugCharacteristic => <&plus>[0..*]
@@ -300,9 +292,8 @@ package IG #DDDDDD{
              Medication.ingredient.strength => [1..None]
         } 
 
-        class FrMedication{
+        class FRMedication{
 
-             Medication.meta.profile => [None..None]
              Medication.implicitRules => [None..0]
              Medication.amount => [None..0]
              Medication.ingredient.item[x] => [None..None]
@@ -310,11 +301,10 @@ package IG #DDDDDD{
              Medication.batch => [None..0]
         } 
 
-        class FrMedicationRequest{
+        class FRMedicationRequest{
 
              MedicationRequest.extension => [None..None]
              MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
-             MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
              MedicationRequest.medication[x] => [None..None]
              MedicationRequest.medication[x]:medicationReference => [0..1]
              MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
@@ -343,23 +333,23 @@ package IG #DDDDDD{
              MedicationRequest.dosageInstruction.maxDosePerLifetime => [None..None]
         } 
 
-        class FrMPSubstance{
+        class FRMPSubstance{
 
              CodeableConcept.coding => [None..None]
         } 
 
-        class FrObservationForPrescription{
+        class FRObservationForPrescription{
 
              Observation.subject => [1..None]
         } 
 
-        class FrOnAdmissionMedicationComposition{
+        class FROnAdmissionMedicationComposition{
 
              Composition => [None..None]
              Composition.type => [None..None]
         } 
 
-        class FrOnAdmissionRetroactiveReconciliationComposition{
+        class FROnAdmissionRetroactiveReconciliationComposition{
 
              Composition => [None..None]
              Composition.type => [None..None]
@@ -409,14 +399,14 @@ package IG #DDDDDD{
              fr-posologie.momentDePrise.offset => [0..1]
         } 
 
-        class FrPrescriptionBunbleForExample{
+        class FRPrescriptionBundleForExample{
 
              Bundle.implicitRules => [None..0]
              Bundle.language => [None..None]
              Bundle.type => [None..None]
         } 
 
-        class FrRequestGroupForPrescription{
+        class FRRequestGroupForPrescription{
 
              RequestGroup.groupIdentifier => [1..None]
              RequestGroup.action.relatedAction.extension => [None..None]
@@ -426,28 +416,27 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
-     FrInpatientMedicationRequestExclusion -[#black,dashed,thickness=2]-> FrTeatmentIntent
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
-     FrInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
-     FrMedicationCompound -[#black,dashed,thickness=2]-> FrIsVehicle
-     FrMedicationHistoryComposition -[#black,dashed,thickness=2]-> FrMedicationHistorySources
-     FrMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationHistorySources
-     FrMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
-     FrMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FrMedicationStatementReconciliationProperties
-     FrMedicationVirtual -[#black,dashed,thickness=2]-> FrDrugCharacteristic
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationToDispense
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrMedicationRequestNoteScope
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
-     FrMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
-     FrRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationRequestNoteScope
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
+     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
+     FrRedicationCompound -[#black,dashed,thickness=2]-> FrIsVehicle
+     FRMedicationHistoryComposition -[#black,dashed,thickness=2]-> FRMedicationHistorySources
+     FRMedicationHistoryMedicationStatement -[#black,dashed,thickness=2]-> FRMedicationHistorySources
+     FRMedicationNonCompound -[#black,dashed,thickness=2]-> FrDrugCharacteristic
+     FRMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FRMedicationStatementReconciliationProperties
+     FRMedicationVirtual -[#black,dashed,thickness=2]-> FrDrugCharacteristic
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationRequestNoteScope
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
+     FRMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
+     FRRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
 
         class FrAdditionalActionRelationship{
 
@@ -486,7 +475,7 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
-        class FrMedicationHistorySources{
+        class FRMedicationHistorySources{
 
           Extension.extension => [2..None]
           Extension.extension:number => [1..1]
@@ -508,19 +497,19 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
         } 
-        class FrMedicationToDispense{
+        class FRMedicationToDispense{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
-        class FrMedicationRequestNoteScope{
+        class FRMedicationRequestNoteScope{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
-        class FrMedicationStatementReconciliationProperties{
+        class FRMedicationStatementReconciliationProperties{
 
           Extension.extension => [2..None]
           Extension.extension:status => [1..1]
@@ -725,111 +714,111 @@ package IG #DDDDDD{
 
         class FrCurrentMedicationDocumentType  
 
-     FrCurrentMedicationComposition -[#black,dotted,thickness=2]-> FrCurrentMedicationDocumentType
+     FRCurrentMedicationComposition -[#black,dotted,thickness=2]-> FrCurrentMedicationDocumentType
 
-        class FrMedicationCodes  
+        class FRMedicationCodes  
 
-     FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMedicationCodes
+     FRInpatientMedicationRequest -[#black,dotted,thickness=2]-> FRMedicationCodes
 
         class FrRouteOfAdministration  
 
-     FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrRouteOfAdministration
+     FRInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrRouteOfAdministration
 
         class FrMethodOfAdministration  
 
-     FrInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
+     FRInpatientMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
 
         class FrMpDoseForm  
 
-     FrMedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
+     FrRedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
 
-        class FrMedicationHistorySourceType  
+        class FRMedicationHistorySourceType  
 
-     FrMedicationHistorySources -[#black,dotted,thickness=2]-> FrMedicationHistorySourceType
+     FRMedicationHistorySources -[#black,dotted,thickness=2]-> FRMedicationHistorySourceType
 
-        class FrMedicationCodes  
+        class FRMedicationCodes  
 
-     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMedicationCodes
-
-        class FrMpDoseForm  
-
-     FrMedicationNonCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
-
-        class FrMedicationReconciliationDocumentType  
-
-     FrMedicationReconciliationComposition -[#black,dotted,thickness=2]-> FrMedicationReconciliationDocumentType
+     FRMedicationNonCompound -[#black,dotted,thickness=2]-> FRMedicationCodes
 
         class FrMpDoseForm  
 
-     FrMedicationVirtual -[#black,dotted,thickness=2]-> FrMpDoseForm
+     FRMedicationNonCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
+
+        class FRMedicationReconciliationDocumentType  
+
+     FRMedicationReconciliationComposition -[#black,dotted,thickness=2]-> FRMedicationReconciliationDocumentType
+
+        class FrMpDoseForm  
+
+     FRMedicationVirtual -[#black,dotted,thickness=2]-> FrMpDoseForm
 
         class FrNoteScopeCodeValueSet  
 
-     FrMedicationRequestNoteScope -[#black,dotted,thickness=2]-> FrNoteScopeCodeValueSet
+     FRMedicationRequestNoteScope -[#black,dotted,thickness=2]-> FrNoteScopeCodeValueSet
 
-        class FrMedicationCodes  
+        class FRMedicationCodes  
 
-     FrMedicationRequest -[#black,dotted,thickness=2]-> FrMedicationCodes
+     FRMedicationRequest -[#black,dotted,thickness=2]-> FRMedicationCodes
 
         class FrRouteOfAdministration  
 
-     FrMedicationRequest -[#black,dotted,thickness=2]-> FrRouteOfAdministration
+     FRMedicationRequest -[#black,dotted,thickness=2]-> FrRouteOfAdministration
 
         class FrMethodOfAdministration  
 
-     FrMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
+     FRMedicationRequest -[#black,dotted,thickness=2]-> FrMethodOfAdministration
 
-        class FrMedicationReconciliationStatus  
+        class FRMedicationReconciliationStatus  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationStatus
-
-        class FrEditorialStatus  
-
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FRMedicationReconciliationStatus
 
         class FrEditorialStatus  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
-
-        class FrMedicationReconciliationQualifiedDiscrepancy  
-
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationQualifiedDiscrepancy
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
 
         class FrEditorialStatus  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FRMedicationReconciliationQualifiedDiscrepancy  
+
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FRMedicationReconciliationQualifiedDiscrepancy
 
         class FrEditorialStatus  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
-
-        class FrMedicationReconciliationType  
-
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationType
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
 
         class FrEditorialStatus  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
 
-        class FrMedicationReconciliationOutcome  
+        class FRMedicationReconciliationType  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationOutcome
-
-        class FrEditorialStatus  
-
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
-
-        class FrMedicationReconciliationResolution  
-
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrMedicationReconciliationResolution
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FRMedicationReconciliationType
 
         class FrEditorialStatus  
 
-     FrMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FRMedicationReconciliationOutcome  
+
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FRMedicationReconciliationOutcome
+
+        class FrEditorialStatus  
+
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
+
+        class FRMedicationReconciliationResolution  
+
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FRMedicationReconciliationResolution
+
+        class FrEditorialStatus  
+
+     FRMedicationStatementReconciliationProperties -[#black,dotted,thickness=2]-> FrEditorialStatus
 
         class FrSubstanceCode  
 
-     FrMPSubstance -[#black,dotted,thickness=2]-> FrSubstanceCode
+     FRMPSubstance -[#black,dotted,thickness=2]-> FrSubstanceCode
 
         class MedicationIngredientStrengthCodes  
 
@@ -860,23 +849,19 @@ package "Ressources de base" #palegreen {
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
-    class53eff24a355b7ae55f0aa2bef39bb24c --> FrCurrentMedicationComposition
+    class53eff24a355b7ae55f0aa2bef39bb24c --> FRCurrentMedicationComposition
 
  class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
 
-    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrCurrentMedicationMedicationStatement
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FRCurrentMedicationMedicationStatement
 
  class "MedicationDispense" as  classfc53f5b9eccfc9aa8cc26374d1451ab5 
 
-    classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FrInpatientMedicationDispense
+    classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FRInpatientMedicationDispense
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
-    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequestExclusion
-
- class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
-
-    class2071abb7e1482ea8731af3cdcaed7225 --> FrInpatientMedicationRequest
+    class2071abb7e1482ea8731af3cdcaed7225 --> FRInpatientMedicationRequest
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -884,55 +869,55 @@ package "Ressources de base" #palegreen {
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
-    class353bd6f65060d17097c3b03141e79cce --> FrMedicationCompound
+    class353bd6f65060d17097c3b03141e79cce --> FrRedicationCompound
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
-    class53eff24a355b7ae55f0aa2bef39bb24c --> FrMedicationHistoryComposition
+    class53eff24a355b7ae55f0aa2bef39bb24c --> FRMedicationHistoryComposition
 
  class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
 
-    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationHistoryMedicationStatement
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FRMedicationHistoryMedicationStatement
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
-    class353bd6f65060d17097c3b03141e79cce --> FrMedicationNonCompound
+    class353bd6f65060d17097c3b03141e79cce --> FRMedicationNonCompound
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
-    class53eff24a355b7ae55f0aa2bef39bb24c --> FrMedicationReconciliationComposition
+    class53eff24a355b7ae55f0aa2bef39bb24c --> FRMedicationReconciliationComposition
 
  class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
 
-    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationReconciliationMedicationStatement
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FRMedicationReconciliationMedicationStatement
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
-    class353bd6f65060d17097c3b03141e79cce --> FrMedicationVirtual
+    class353bd6f65060d17097c3b03141e79cce --> FRMedicationVirtual
 
  class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
 
-    class353bd6f65060d17097c3b03141e79cce --> FrMedication
+    class353bd6f65060d17097c3b03141e79cce --> FRMedication
 
  class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
 
-    class2071abb7e1482ea8731af3cdcaed7225 --> FrMedicationRequest
+    class2071abb7e1482ea8731af3cdcaed7225 --> FRMedicationRequest
 
  class "CodeableConcept" as  class3521d6f1ff87d9b962b1c77766470bb9 
 
-    class3521d6f1ff87d9b962b1c77766470bb9 --> FrMPSubstance
+    class3521d6f1ff87d9b962b1c77766470bb9 --> FRMPSubstance
 
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
-    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationForPrescription
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FRObservationForPrescription
 
  class "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-current-medication-composition" as  classd8b29eb0f2ff53587bb5a7cd6df00fb9 
 
-    classd8b29eb0f2ff53587bb5a7cd6df00fb9 --> FrOnAdmissionMedicationComposition
+    classd8b29eb0f2ff53587bb5a7cd6df00fb9 --> FROnAdmissionMedicationComposition
 
  class "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-reconciliation-composition" as  classdb1e04d052ff5397341716396617f4d0 
 
-    classdb1e04d052ff5397341716396617f4d0 --> FrOnAdmissionRetroactiveReconciliationComposition
+    classdb1e04d052ff5397341716396617f4d0 --> FROnAdmissionRetroactiveReconciliationComposition
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -940,10 +925,10 @@ package "Ressources de base" #palegreen {
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
-    class94c51f19c37f96ed231f5a0ae512b2a8 --> FrPrescriptionBunbleForExample
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> FRPrescriptionBundleForExample
 
  class "RequestGroup" as  class55f9b414b19c569dcbf60f6417255621 
 
-    class55f9b414b19c569dcbf60f6417255621 --> FrRequestGroupForPrescription
+    class55f9b414b19c569dcbf60f6417255621 --> FRRequestGroupForPrescription
 }
 @enduml
