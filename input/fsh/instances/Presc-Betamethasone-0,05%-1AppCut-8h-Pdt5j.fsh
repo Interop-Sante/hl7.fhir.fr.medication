@@ -16,7 +16,7 @@ Usage: #inline
 * amount.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-Betamethasone-ApplCut
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active

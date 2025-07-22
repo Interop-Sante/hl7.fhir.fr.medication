@@ -1,33 +1,35 @@
-# Vue d'ensemble
+### Vue d'ensemble
 
-La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrInpatientMedicationRequest*.
+La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FRInpatientMedicationRequest*.
 
-La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représenté par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *groupeIdentifier*.
+La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représenté par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *MedicationRequest.groupIdentifier*.
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
-Le **médicament prescrit** est représenté par l'élément `medication\[x\]` (1..1) de la ressource *FrInpatientMedicationRequest* qui le contraint à faire référence à une ressource *Medication*.
+Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FRInpatientMedicationRequest*, celui-ci peut être représenté sous forme de ressource *Medication* ou de concept codé (CodeableConcept).
 
 Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
 
-- *FrMedicationNonCompound*: médicament simplte exprimé en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521* ou médicament exprimé en DC (dénomination commune identifiée par son **code SMS** ou son **code technique ANSM** dans l'attente de l'attribution d'un code SMS )/ Ex: *paracétamol dont le code SMS est 100000090270*
+- *FrMedicationNonCompound*: médicament simple exprimé en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521* ou médicament exprimé en DC (dénomination commune identifiée par son **code SMS** ou son **code technique ANSM** dans l'attente de l'attribution d'un code SMS )/ Ex: *paracétamol dont le code SMS est 100000090270*
 - *FrMedicationCompound*: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: *glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g*.
 
 Dépendance des ressources profilées par Interop'Santé
 
-![IGMedicationDependanceRessourcesProfileesPrescription](Prescription1.jpg)
+<div class="figure" style="width:100%; overflow-x:auto;">
+  <p style="margin: 0; padding: 0;">
+    {% include prescription.svg %}
+  </p>
+</div>
 
-Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*.
-Ex: *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047*
-Ex: *paracétamol+codéine 500 mg+30 mg*
+Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*. Ex : *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047* contenant paracétamol+codéine 500 mg+30 mg*
 
-La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FrInpatientMedicationRequest*.
+La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FRInpatientMedicationRequest*.
 
 **Date de début, date de fin** et **durée de prescription**
 
 Elles traduisent la période d'exécution de la prescription.
 
-Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedcationRequest* profilée par *FrInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
+Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedicationRequest* profilée par *FRInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
 
 - date de début : `.dosageInstruction.timing.repeat.boundsPeriod.start`
 - date de fin : `.dosageInstruction.timing.repeat.boundsPeriod.end`
@@ -37,9 +39,9 @@ Ces dates de début et de fin de prescription, de même que la durée de prescri
 
 En prescription intrahospitalière, il n'y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n'y a donc généralement pas usage de l'élément `.dispensationRequest`.
 
-## Précisions sur dates et durée de prescription
+#### Précisions sur dates et durée de prescription
 
-Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FrInPatientMedicationRequest*.
+Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FRInPatientMedicationRequest*.
 
 Elles concernent également les règles définissant la **première dose prescrite** et la **dernière dose prescrite**.
 
@@ -112,7 +114,7 @@ Un interval *semi-ouvert*, par exemple \[ 2021-02-14T12:34:56, 201-05-14T12:34:5
 - *end* : 2021-05-14T12:34:55
 
 **Rappel**:
-Dans FHIR les horaires sont données à la seconde près : format *hh:mn:ss*. Il est précisé que l'utilisateur fait son affaire de la granularité à l'heure ou à la minute près en remplissant les minutes et les secondes manquantes par des *00*.
+Dans FHIR, le type datetime impose de donner les horaires à la seconde près lorsque l'heure est renseignée : format *hh:mn:ss*. Il est précisé que l'utilisateur fait son affaire de la granularité à l'heure ou à la minute près en remplissant les minutes et les secondes manquantes par des *00*.
 
 Néanmoins, pour exprimer l'horaire de fin exclu à la granularité horaire ou minute, il conviendra de remplir les minutes ou secondes manquantes par *59*.
 
@@ -131,8 +133,7 @@ ou
 **Date/heure de début effective et Date/heure de fin effective de la ligne de prescription**:
 
 Ces deux dates ne figurent pas dans *MedicationRequest* R4.
-Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément `effectiveDosePeriod` conçu pour accueillir ces deux dates a été ajouté.
-![EffectiveDosePeriodR5](Prescription4.jpg)
+Dans la [R5](https://hl7.org/fhir/medicationrequest.html), un élément `[effectiveDosePeriod](https://www.hl7.org/fhir/medicationrequest-definitions.html#MedicationRequest.effectiveDosePeriod)` conçu pour accueillir ces deux dates a été ajouté.
 
 **Note PN13**:
 

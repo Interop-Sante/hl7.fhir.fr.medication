@@ -1,4 +1,4 @@
-ValueSet: FrMedicationReconciliationDocumentType
+ValueSet: FRMedicationReconciliationDocumentType
 Id: fr-medication-reconciliation-document-type
 Title: "value set Interop'Santé - type de document de la ressource Composition d'une FCT"
 Description: "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."

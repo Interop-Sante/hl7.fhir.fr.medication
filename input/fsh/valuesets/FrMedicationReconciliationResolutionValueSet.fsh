@@ -1,4 +1,4 @@
-ValueSet: FrMedicationReconciliationResolution
+ValueSet: FRMedicationReconciliationResolution
 Id: fr-medication-reconciliation-resolution
 Title: "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"
 Description: "Un jeu de valeurs à utiliser pour coder la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."

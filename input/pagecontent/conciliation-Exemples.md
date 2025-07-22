@@ -1,4 +1,12 @@
-# Exemples
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> la partie conciliation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+    </p>
+    </blockquote>
+</div>
+
+### Exemples
 
 Aucun exemple
 

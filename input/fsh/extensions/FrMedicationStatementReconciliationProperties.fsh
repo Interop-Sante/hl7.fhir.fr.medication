@@ -1,4 +1,4 @@
-Extension: FrMedicationStatementReconciliationProperties
+Extension: FRMedicationStatementReconciliationProperties
 Id: fr-medicationstatement-reconciliation-properties
 Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)"
 
@@ -52,7 +52,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[status].extension[value].extension[code] ^requirements = "Contraindre l'usage d'une valeur codée et de son jeu de valeurs."
 * extension[status].extension[value].extension[code].value[x] 1..
 * extension[status].extension[value].extension[code].value[x] only Coding
-* extension[status].extension[value].extension[code].value[x] from FrMedicationReconciliationStatus (required)
+* extension[status].extension[value].extension[code].value[x] from FRMedicationReconciliationStatus (required)
 
 * extension[status].extension[value].extension[date] ^short = "date d'édition de la propriété *status*"
 * extension[status].extension[value].extension[date] ^definition = "date d'édition de l'information portée par l'élément *status* de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *edStatus* défini par son ou ses auteurs *author* dans son cycle d'édition."
@@ -176,7 +176,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[discrepancy].extension[value].extension[code] ^requirements = "Contraindre l'usage d'une valeur codée et de son jeu de valeurs."
 * extension[discrepancy].extension[value].extension[code].value[x] 1..
 * extension[discrepancy].extension[value].extension[code].value[x] only Coding
-* extension[discrepancy].extension[value].extension[code].value[x] from FrMedicationReconciliationQualifiedDiscrepancy (required)
+* extension[discrepancy].extension[value].extension[code].value[x] from FRMedicationReconciliationQualifiedDiscrepancy (required)
 * extension[discrepancy].extension[value].extension[code].value[x] ^binding.description = "fr-medication-reconciliation-qualified-discrepancy"
 * extension[discrepancy].extension[value].extension[date] ^short = "date d'édition de la propriété *discrepancy*"
 * extension[discrepancy].extension[value].extension[date] ^definition = "date d'édition de l'information portée par l'élément *discrepancy* de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *edStatus* défini par son ou ses auteurs *author* dans son cycle d'édition."
@@ -293,7 +293,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[type].extension[value].extension[code] ^requirements = "Contraindre l'usage d'une valeur codée et de son jeu de valeurs."
 * extension[type].extension[value].extension[code].value[x] 1..
 * extension[type].extension[value].extension[code].value[x] only Coding
-* extension[type].extension[value].extension[code].value[x] from FrMedicationReconciliationType (extensible)
+* extension[type].extension[value].extension[code].value[x] from FRMedicationReconciliationType (extensible)
 * extension[type].extension[value].extension[code].value[x] ^binding.description = "fr-medication-reconciliation-type"
 * extension[type].extension[value].extension[date] ^short = "date d'édition de la propriété *type*"
 * extension[type].extension[value].extension[date] ^definition = "date d'édition de l'information portée par l'élément *type* de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *status* défini par son ou ses auteurs *author* dans son cycle d'édition."
@@ -356,7 +356,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[outcome].extension[value].extension[code] ^requirements = "Contraindre l'usage d'une valeur codée et de son jeu de valeurs."
 * extension[outcome].extension[value].extension[code].value[x] 1..
 * extension[outcome].extension[value].extension[code].value[x] only Coding
-* extension[outcome].extension[value].extension[code].value[x] from FrMedicationReconciliationOutcome (required)
+* extension[outcome].extension[value].extension[code].value[x] from FRMedicationReconciliationOutcome (required)
 * extension[outcome].extension[value].extension[code].value[x] ^binding.description = "fr-medication-reconciliation-outcome"
 * extension[outcome].extension[value].extension[date] ^short = "date d'édition de la propriété *outcome*"
 * extension[outcome].extension[value].extension[date] ^definition = "date d'édition de l'information portée par l'élément *outcome*de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *edStatus* défini par son ou ses auteurs *author* dans son cycle d'édition."
@@ -417,7 +417,7 @@ Description: "Propiétés spécifiques de la ligne de médicament, ajoutée à l
 * extension[resolution].extension[value].extension[code] ^requirements = "Contraindre l'usage d'une valeur codée et de son jeu de valeurs."
 * extension[resolution].extension[value].extension[code].value[x] 1..
 * extension[resolution].extension[value].extension[code].value[x] only Coding
-* extension[resolution].extension[value].extension[code].value[x] from FrMedicationReconciliationResolution (extensible)
+* extension[resolution].extension[value].extension[code].value[x] from FRMedicationReconciliationResolution (extensible)
 * extension[resolution].extension[value].extension[code].value[x] ^binding.description = "fr-medication-reconciliation-resolution"
 * extension[resolution].extension[value].extension[date] ^short = "date d'édition de la propriété *resolution*"
 * extension[resolution].extension[value].extension[date] ^definition = "date d'édition de l'information portée par l'élément *resolution*de l'extension ReconciliationProperties de la ressource MedicationStatement de la Fiche de Conciliation des Traitements médicamenteux, au statut éditorial *edStatus* défini par son ou ses auteurs *author* dans son cycle d'édition."

@@ -1,5 +1,5 @@
 Instance: InLine-DOLIPRANE
-InstanceOf: FrMedication
+InstanceOf: FRMedication
 Usage: #example
 * code = $UCD#3400891996128 "DOLIPRANE 500MG GELU"
 * code.text = "DOLIPRANE 500 mg, gélule"

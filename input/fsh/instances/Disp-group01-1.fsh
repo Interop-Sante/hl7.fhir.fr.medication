@@ -1,5 +1,5 @@
 Instance: Disp-group01-1
-InstanceOf: FrInpatientMedicationDispense
+InstanceOf: FRInpatientMedicationDispense
 Usage: #example
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/event-basedOn"
 * extension[=].valueReference.reference = "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"

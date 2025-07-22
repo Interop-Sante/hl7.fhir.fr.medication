@@ -1,20 +1,20 @@
-# Suivi des versions
+### Suivi des versions
 
-## Version 1.0 - Version Initiale publiée en janvier 2022
+#### Version 1.0 - Version Initiale publiée en janvier 2022
 
-### La conciliation v1.0
+##### La conciliation v1.0
 
 Les travaux ont été initiés au sein de la communauté SIPh le 13 septembre 2018. Ils ont produit la version initiale des ressources dédiées à la conciliation. Le détail du suivi des travaux est consultable sur le [site de la communauté SIPh](https://siph.phast.fr/gt-fhir-prise-en-charge-medicamenteuse-du-patient/). Fin 2020, le fruit de ces travaux a été dévolu à l’association InterOp'Santé pour qu’elle en assure la promotion, le développement et la maintenance.
 Les ressources publiées sont au statut draft, en attente de retours des premières implémentations.
 
-### La prescription v1.0
+##### La prescription v1.0
 
 Les travaux ont été initiés également au sein de la communauté SIPh en 2019. Mais ils n'ont pas abouti à un premier niveau de ressources FHIR livrables.
 En 2021 le groupe Pharmacie d'InterOp'Santé a repris le projet pour aboutir à un profilage de la ressource MedicationRequest et de la ressource Medication adpaté à la prescription en DC et en spécialité identifiée par le code UCD.
 Cette première version, en date du 31 janvier 2022, voit ses ressources publiées au statut draft, en attente de retours des premières implémentations.
 Toute remarque, commentaire ou suggestion est bienvenu sur la [mailing list PN13-FHIR](https://groups.google.com/g/pn13-is---interopsante) animée par InterOp'Santé.
 
-#### Déroulé des travaux
+###### Déroulé des travaux
 
 - Le 16 août 2021, une version préliminaire est mise en concertation.
 - Le 15 septembre 2021, s'est tenue la première réunion.
@@ -28,13 +28,13 @@ Toute remarque, commentaire ou suggestion est bienvenu sur la [mailing list PN13
   - Le 31 janvier 2022, la version draft finalel est publiée.
     - L'étude d'un seul profil slicé de la ressource Medication n'a pas abouti à une solution valide (voir la page [Etude complémentaire](prescription-EtudeComplementaire.html)).
 
-### La dispensation v1.0
+##### La dispensation v1.0
 
 La communauté SIPh met à disposition les travaux préliminaires qu'elle entreprend sur la dispensation dans le cadre de la prise en charge médicamenteuse en DC.
 
-## Version 1.1 - Version en cours
+#### Version 1.1 - Version en cours
 
-### La prescription v1.1
+##### La prescription v1.1
 
 Les travaux du GT PN13 - FHIR sur la prescription se sont déroulés de janvier 2024 à XXX
 La concertation publique a eu lieu du XXX au XXX
@@ -43,15 +43,15 @@ Le mapping des données PN13 - FHIR
 L’intégration des extensions FrIsVehicle et  FrBasisOfDoseComponent dans les profils
 Prise en compte du [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med)
 
-## Version 1.2 - Prochaine version prévue
+#### Version 1.2 - Prochaine version prévue
 
-### La conciliation v1.2
+##### La conciliation v1.2
 
 Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR et la prise en compte du  [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med) pour la conciliation.
 
-## Liste des contributeurs
+#### Liste des contributeurs
 
-### Version 1.0
+##### Version 1.0
 
 - Alicia Bel-Létoile - Synapse Médecine
 - Clément Berard - OpenXtrem
@@ -82,7 +82,7 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
 - Clara Subts - Dedalus
 - Clotaire Thocquenne - Evolucare
 
-### Version 1.1
+##### Version 1.1
 
 - Pascal André - Cegisanté
 - Guillaume Arras - PHAST

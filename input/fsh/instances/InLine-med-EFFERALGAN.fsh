@@ -1,5 +1,5 @@
 Instance: InLine-med-EFFERALGAN
-InstanceOf: FrMedication
+InstanceOf: FRMedication
 Usage: #example
 * code = $UCD#3400893766521 "EFFERALGANMED 1000MG CPR"
 * code.text = "EFFERALGAN 1 000 mg, cpr"

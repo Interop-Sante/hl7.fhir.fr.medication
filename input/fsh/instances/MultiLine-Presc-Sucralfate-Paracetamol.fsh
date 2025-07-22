@@ -7,7 +7,7 @@ Usage: #example
 * entry[+].resource = requestgroup-Presc-Sucralfate-Paracetamol
 
 Instance: medicationrequest-MultiLine-Presc-Sucralfate
-InstanceOf: FrInpatientMedicationRequest
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Sucralfate"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
@@ -19,7 +19,7 @@ Usage: #inline
 * authoredOn = "2025-05-02T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-3004"
 * groupIdentifier.value = "Presc-30004"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+* groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
 * dosageInstruction.timing.repeat.when[0] = #ACM
@@ -33,10 +33,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #g
 
 Instance: medicationrequest-MultiLine-Presc-Paracetamol
-InstanceOf: FrInpatientMedicationRequestExclusion
+InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Paracetamol"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest-exclusion"
+* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order
 * priority = #routine
@@ -45,7 +45,7 @@ Usage: #inline
 * authoredOn = "2025-05-02T14:48:44.461Z"
 * requester.reference = "Practitioner/smart-Practitioner-3004"
 * groupIdentifier.value = "Presc-30004"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+* groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2025-05-02T14:49:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2025-05-31T14:48:59Z"
 * dosageInstruction.timing.repeat.frequency = 1
@@ -67,11 +67,11 @@ Usage: #inline
 * dosageInstruction.maxDosePerPeriod.denominator.code = #d
 
 Instance: requestgroup-Presc-Sucralfate-Paracetamol
-InstanceOf: FrRequestGroupForPrescription
+InstanceOf: FRRequestGroupForPrescription
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
 * groupIdentifier.value = "Presc-30004"
-* groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
+* groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * status = #active
 * intent = #order
 * priority = #routine

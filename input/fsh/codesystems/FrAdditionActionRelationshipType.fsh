@@ -7,5 +7,4 @@ Description: "Codes to specify relationship between action in a RequestGroup tha
 * ^experimental = false
 * ^content = #complete
 * ^count = 2
-* #EXCL "Si l'action est réalisée, l'action reliée ne doit pas être effectuée."
 * #ALT "Si l'action ne peut pas être réalisée, l'action reliée peut être réalisée à la place."
