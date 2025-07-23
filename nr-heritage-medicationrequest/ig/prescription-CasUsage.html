@@ -62,6 +62,10 @@
             <span style="display:inline-block;">0.1.0 - ci-build
 
 
+
+  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+
+
             </span>
           </p>
         </div>
@@ -88,28 +92,6 @@
 <ul class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="conciliation-Intro.html">Introdution</a>
-      </li>
-      <li>
-        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
-      </li>
-      <li>
-        <a href="conciliation-CasUsage.html">Cas d'usage</a>
-      </li>
-      <li>
-        <a href="conciliation-Implementation.html">Implémentation</a>
-      </li>
-      <li>
-        <a href="conciliation-Exemples.html">Exemples</a>
-      </li>
-    </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
@@ -153,6 +135,28 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
       <b class="caret"></b>
     </a>
@@ -173,7 +177,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l313">​</a>
+      <li><a name="l315">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -226,6 +230,16 @@
         <ul class="breadcrumb">
           <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>La prescription - Cas d'usage</b></li>
 
+          <span style="float:right;">
+
+            <a href="prescription-VueEnsemble.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="prescription-Exemples.html">next&gt;</a>
+
+          </span>
+
         </ul>
       </div>    <!-- /container -->
     </div>    <!-- /segment-breadcrumb -->
@@ -263,9 +277,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
   <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
-<h1 id="cas-dusage">Cas d’usage</h1>
+<h3 id="cas-dusage">Cas d’usage</h3>
 
-<h2 id="la-ligne-de-prescription-initale">La ligne de prescription initale</h2>
+<h4 id="la-ligne-de-prescription-initale">La ligne de prescription initale</h4>
 
 <p>En situation réelle, n’émettre que des lignes de prescription initiales est rarement suffisant. Néanmoins, c’est la base qui permet d’explorer la complexité de la prescription selon deux axes, le médicament prescrit et la posologie.</p>
 
@@ -275,7 +289,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Une spécialité
     <ul>
       <li>monosubstance dosée en quantité sous forme comprimé</li>
-      <li>bisubstance doséee en quantité sous forme comprimé</li>
+      <li>bisubstance dosée en quantité sous forme comprimé</li>
       <li>monosubstance dosée en concentration et prescrite en dose-kg</li>
       <li>monosubstance dosée en concentration et prescrite en application</li>
       <li>monosubstance patch dosée en quantité sur durée du patch</li>
@@ -302,7 +316,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           <li>spécifiés soit en spécialité soit en DC</li>
         </ul>
       </li>
-      <li>Les cas d’usage sont les perfusions ou le seringies électriques
+      <li>Les cas d’usage sont les perfusions ou le seringues électriques
         <ul>
           <li>avec un ou plusieurs médicaments</li>
           <li>dilués dans un soluté.</li>
@@ -344,11 +358,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="les-différentes-variations-de-la-ligne-de-prescription-initiale">Les différentes variations de la ligne de prescription initiale</h2>
+<h4 id="les-différentes-variations-de-la-ligne-de-prescription-initiale">Les différentes variations de la ligne de prescription initiale</h4>
 
 <p>On entend par variation de la ligne prescription toute évolution de celle-ci <strong>prescrite</strong> par le médecin.</p>
 
-<p>Il s’agit donc d’une prescription, mais qui succède à la prescription ayant créé la ligne de prescription initiale et qui la reprend en en modifiant potentiellement tous les paramètres hormis la composition du médicament prescrit.</p>
+<p>Il s’agit donc d’une prescription qui succède à la prescription ayant créé la ligne de prescription initiale et qui en reprend le contenu en modifiant certains paramètres à l’exception de la composition du médicament prescrit.</p>
 
 
 
@@ -367,9 +381,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
     <div class="container">    <!-- container -->
 
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="prescription-VueEnsemble.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="prescription-Exemples.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 22, 2025 07:45+0000">2025-07-22</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 23, 2025 07:27+0000">2025-07-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

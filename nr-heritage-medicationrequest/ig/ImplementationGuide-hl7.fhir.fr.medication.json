@@ -3,20 +3,27 @@
   "id" : "hl7.fhir.fr.medication",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><h2>MED</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><h2>MED</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
   },
   "url" : "https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication",
   "version" : "0.1.0",
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-07-22T07:44:08+00:00",
+  "date" : "2025-07-23T07:26:17+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
     "telecom" : [{
       "system" : "url",
       "value" : "http://interopsante.org/"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
     }]
   }],
   "packageId" : "hl7.fhir.fr.medication",
@@ -68,6 +75,39 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-expansion-params"
+      },
+      {
+        "url" : "value",
+        "valueString" : "../../expansion-params.json"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -347,6 +387,39 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-expansion-params"
+      },
+      {
+        "url" : "value",
+        "valueString" : "../../expansion-params.json"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1021,7 +1094,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-current-medication-composition"
       },
-      "name" : "FrCurrentMedicationComposition",
+      "name" : "FR Current Medication Composition",
       "description" : "Profil de la ressource Composition du traitement médicamenteux courant.",
       "exampleBoolean" : false
     },
@@ -1033,68 +1106,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-current-medication-medicationstatement"
       },
-      "name" : "FrCurrentMedicationMedicationStatement",
+      "name" : "FR Current Medication MedicationStatement",
       "description" : "Profil de la ressource *MedicationStatement* du traitement médicamenteux courant.\nCurrent Medication MedicationStatement resource profile",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/fr-mp-dose-form"
-      },
-      "name" : "French Medicinal product Dose form",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *doseForm* des ressources *FrMedicationUcd*, *FrMedicationUcdPart* ou *FrMedicationNonProprietaryName*.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/FrMethodOfAdministration"
-      },
-      "name" : "French Method Of Administration",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FrMedicationRequest*.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/fr-treatment-intent"
-      },
-      "name" : "French overall intention of the treatment",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FrInpatientMedicationRequest*.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/fr-route-of-administration"
-      },
-      "name" : "French Route of Administration",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.route* de la ressource *FrMedicationRequest*.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:complex-type"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-mp-substance"
-      },
-      "name" : "French Substance of a Medicinal Product",
-      "description" : "code for the medicinal product substance",
       "exampleBoolean" : false
     },
     {
@@ -1105,7 +1118,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-inpatient-medication-dispense"
       },
-      "name" : "FrInpatientMedicationDispense",
+      "name" : "FR Inpatient MedicationDispense",
       "description" : "French medication dispense profile",
       "exampleBoolean" : false
     },
@@ -1117,20 +1130,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-inpatient-medicationrequest"
       },
-      "name" : "FrInpatientMedicationRequest",
+      "name" : "FR Inpatient MedicationRequest",
       "description" : "French inpatient medication request profile",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-inpatient-medicationrequest-exclusion"
-      },
-      "name" : "FrInpatientMedicationRequestExclusion",
-      "description" : "French inpatient medication request profile for excluded medication",
       "exampleBoolean" : false
     },
     {
@@ -1141,7 +1142,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication"
       },
-      "name" : "FrMedication",
+      "name" : "FR Medication",
       "description" : "profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp'Santé",
       "exampleBoolean" : false
     },
@@ -1153,7 +1154,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-compound"
       },
-      "name" : "FrMedicationCompound",
+      "name" : "FR Medication Compound",
       "description" : "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.",
       "exampleBoolean" : false
     },
@@ -1165,7 +1166,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-history-composition"
       },
-      "name" : "FrMedicationHistoryComposition",
+      "name" : "FR Medication History Composition",
       "description" : "Profil de la ressource Composition du Bilan Médicamenteux.\nMedication Assessment Composition resource profile.",
       "exampleBoolean" : false
     },
@@ -1177,20 +1178,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-history-medicationstatement"
       },
-      "name" : "FrMedicationHistoryMedicationStatement",
+      "name" : "FR Medication History MedicationStatement",
       "description" : "Profil de la ressource *MedicationStatement* du Bilan médicamenteux.\nMedication History MedicationStatement resource profile",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-medication-history-sources"
-      },
-      "name" : "FrMedicationHistorySources",
-      "description" : "Sources des lignes du Bilan Médicamenteux que représente la ressource *Composition* ou de chacune de ses lignes que représente la ressource *MedicationStatement* référencée par l'élément *entry* de la ressource *Composition* (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)",
       "exampleBoolean" : false
     },
     {
@@ -1201,7 +1190,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-noncompound"
       },
-      "name" : "FrMedicationNonCompound",
+      "name" : "FR Medication Non Compound",
       "description" : "Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined.",
       "exampleBoolean" : false
     },
@@ -1213,7 +1202,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-reconciliation-composition"
       },
-      "name" : "FrMedicationReconciliationComposition",
+      "name" : "FR Medication Reconciliation Composition",
       "description" : "Profil de la ressource *Composition* la Fiche de Conciliation des Traitements médicamenteux (FCT).",
       "exampleBoolean" : false
     },
@@ -1225,7 +1214,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-reconciliation-statement"
       },
-      "name" : "FrMedicationReconciliationMedicationStatement",
+      "name" : "FR Medication Reconciliation MedicationStatement",
       "description" : "Profil de la ressource *MedicationStatement* référencée dans la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT).",
       "exampleBoolean" : false
     },
@@ -1237,20 +1226,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medicationrequest"
       },
-      "name" : "FrMedicationRequest",
+      "name" : "FR Medication Request",
       "description" : "French medication request profile",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-medicationstatement-reconciliation-properties"
-      },
-      "name" : "FrMedicationStatementReconciliationProperties",
-      "description" : "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)",
       "exampleBoolean" : false
     },
     {
@@ -1261,8 +1238,20 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-medication-virtual"
       },
-      "name" : "FrMedicationVirtual",
+      "name" : "FR Medication Virtual",
       "description" : "Virtual medication composed of one to many substances.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-mp-substance"
+      },
+      "name" : "FR Meditinal Product Substance",
+      "description" : "code for the medicinal product substance",
       "exampleBoolean" : false
     },
     {
@@ -1273,7 +1262,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-observation-for-prescription"
       },
-      "name" : "FrObservationForPrescription",
+      "name" : "FR Observation For Prescription",
       "description" : "Observation provided as context of the prescription (ex. weight, height...)",
       "exampleBoolean" : false
     },
@@ -1285,8 +1274,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-on-admission-medication-composition"
       },
-      "name" : "FrOnAdmissionMedicationComposition",
-      "description" : "Profil de la ressource *Composition* du traitement médicamenteux prescrit à l'admmission.",
+      "name" : "FR On Admission Medication Composition",
+      "description" : "Profil de la ressource *Composition* du traitement médicamenteux prescrit à l'admission.",
       "exampleBoolean" : false
     },
     {
@@ -1297,7 +1286,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-on-admission-retroactive-reconciliation-composition"
       },
-      "name" : "FrOnAdmissionRetroactiveReconciliationComposition",
+      "name" : "FR On Admission Retroactive Reconciliation Composition",
       "description" : "Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission.",
       "exampleBoolean" : false
     },
@@ -1309,7 +1298,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-prescription-bundle-for-example"
       },
-      "name" : "FrPrescriptionBunbleForExample",
+      "name" : "FR Prescription Bundle For Example",
       "description" : "Profil de la ressource Bundle pour la constitution d'exemples de prescription.",
       "exampleBoolean" : false
     },
@@ -1321,8 +1310,80 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-requestgroup-for-prescription"
       },
-      "name" : "FrRequestGroupForPrescrption",
+      "name" : "FR RequestGroup For Prescription",
       "description" : "RequestGroup for expressing links between lines of a prescription",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-mp-dose-form"
+      },
+      "name" : "French Medicinal product Dose form",
+      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *doseForm* des ressources *FRMedicationUcd*, *FRMedicationUcdPart* ou *FRMedicationNonProprietaryName*.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/FrMethodOfAdministration"
+      },
+      "name" : "French Method Of Administration",
+      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FRMedicationRequest*.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-treatment-intent"
+      },
+      "name" : "French overall intention of the treatment",
+      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FRInpatientMedicationRequest*.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-route-of-administration"
+      },
+      "name" : "French Route of Administration",
+      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.route* de la ressource *FRMedicationRequest*.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-history-sources"
+      },
+      "name" : "FRMedicationHistorySources",
+      "description" : "Sources des lignes du Bilan Médicamenteux que représente la ressource *Composition* ou de chacune de ses lignes que représente la ressource *MedicationStatement* référencée par l'élément *entry* de la ressource *Composition* (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medicationstatement-reconciliation-properties"
+      },
+      "name" : "FRMedicationStatementReconciliationProperties",
+      "description" : "Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)",
       "exampleBoolean" : false
     },
     {
@@ -2047,17 +2108,6 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/MultiLine-Presc-MARSILID-ZOMIGORO"
-      },
-      "name" : "MultiLine-Presc-MARSILID-ZOMIGORO",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
         "reference" : "Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE"
       },
       "name" : "MultiLine-Presc-METFORMINE-GLICLAZIDE",
@@ -2183,6 +2233,7 @@
         "reference" : "Bundle/Presc-CODOLIPRANE-MedCodeableConcept"
       },
       "name" : "Presc-CODOLIPRANE-MedCodeableConcept",
+      "description" : "CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2216,6 +2267,7 @@
         "reference" : "Bundle/Presc-EFFERALGAN"
       },
       "name" : "Presc-EFFERALGAN",
+      "description" : "EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
