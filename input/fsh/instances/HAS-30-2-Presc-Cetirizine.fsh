@@ -12,7 +12,6 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * note[0].text = "Prescription textuelle: CETIRIZINE 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire)"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationCodeableConcept = $Medicabase#MV00000524 "Cétirizine dichlorhydrate 10 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
