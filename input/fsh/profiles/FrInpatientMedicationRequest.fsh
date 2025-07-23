@@ -1,5 +1,5 @@
 Profile: FRInpatientMedicationRequest
-Parent: FrMedicationRequest
+Parent: FRMedicationRequest
 Id: fr-inpatient-medicationrequest
 Title: "FR Inpatient MedicationRequest"
 Description: "French inpatient medication request profile"
