@@ -7,7 +7,7 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 * doseEtDebit 0..* Base "Quantité de médicament administrée par prise"
   * dose[x] 0..1 Quantity or Range "La quantité de médicament administrée par prise"
   * dose[x] ^example[0].label = "- 1 comprimé, 2-3 comprimés, 20ml"
-  * rate[x] 0..1 Ratio or Quantity or Range "Durée pendant laquelle une dose définie est administrée  (pendant 1 heure, entre 5 et 10 minutes)"
+  * rate[x] 0..1 Ratio or Quantity or Range "Période temporelle pendant laquelle une dose définie est administrée (pendant 1 heure, entre 5 et 10 minutes)"
   * rate[x] ^example[0].label = "- pendant 1 heure, entre 5 et 10 minutes"
 
 * sequence 0..1 decimal "Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
@@ -25,7 +25,7 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 // En FHIR, il y a également une quantité max par administration et par durée de vie
 * quantiteMaxParPeriode 0..* Base "Quantité maximale par unité de temps"
   * quantite 0..1 SimpleQuantity "Quantité maximale à administrer pour l'unité de temps donnée"
-  * duree 0..1 duration "La quantité maximale concerne une durée donnée" 
+  * duree 0..1 duration "Durée pour laquelle il y a une quantité maximale administrable" 
   * duree ^example[0].label = "- Par jour, par semaine, par mois, ..."
 
 * conditionDePrise 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
@@ -46,8 +46,8 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * precision 0..1 string "Instruction additionelle"
 
 // durée utilisable en ville et à l'hôpital - ou rythme d'administration
-* dureeAdministration 0..1 Base "Durée ou rythme d'administration - indique le temps d'administration"
-* dureeAdministration ^example[0].label = "- La durée d'administration est par exemple pertinente pour les perfusion : durée de 10 minutes"
+* dureeAdministration 0..1 Base "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence"
+* dureeAdministration ^example[0].label = "- La durée d'administration est par exemple utile dans le cas des perfusion : durée de 10 minutes"
   * duree 0..1 decimal "Durée de l'administration"
   * dureeUnite 0..1 code "Unité de la durée d'administration"
   * dureeMax 0..1 decimal "Durée maximale de l'administration"
