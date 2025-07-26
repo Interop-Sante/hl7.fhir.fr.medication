@@ -26,7 +26,7 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 * quantiteMaxParPeriode 0..* Base "Quantité maximale par unité de temps"
   * quantite 0..1 simpleQuantity "Quantité maximale à administrer pour l'unité de temps donnée"
   * duree 0..1 duration "La quantité maximale concerne une durée donnée" 
-  * duree ^example[0].label "Par jour, par semaine, par mois, ..."
+  * duree ^example[0].label = "- Par jour, par semaine, par mois, ..."
 
 * conditionDePrise 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
 
