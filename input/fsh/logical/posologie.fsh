@@ -4,7 +4,7 @@ Title: "Posologie"
 Description:  """Structuration d'une posologie en fonction des critères de la HAS."""
 
 // Posologie
-* doseEtDebit 0..* Base "Quantité de médicament administré par prise"
+* doseEtDebit 0..* Base "Quantité de médicament administrée par prise"
   * dose[x] 0..1 Quantity or Range "La quantité de médicament administrée par prise"
   * dose[x] ^example[0].label = "- 1 comprimé, 2-3 comprimés, 20ml"
   * rate[x] 0..1 Ratio or Quantity or Range "Durée pendant laquelle une dose définie est administrée  (pendant 1 heure, entre 5 et 10 minutes)"
