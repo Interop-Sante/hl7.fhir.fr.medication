@@ -53,10 +53,11 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * dureeUnite 0..1 code "Unité de la durée d'administration"
   * dureeMax 0..1 decimal "Durée maximale de l'administration"
 
-* date[x] 0..1 Period or duration or Range "Dates de début, de fin, durée ou intervalle de traitement (un parmi les trois)"
-* datePeriod 0..1 Period "Date de début et de fin de la séquence de traitement"
-* dateDuration 0..1 Quantity "Durée du traitement (ex : pendant 5 jours)"
-* dateRange 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
+* date[x] 0..1 Period or duration or Range "Période de la séquence (date de début et de fin), durée ou intervalle de traitement (un parmi les trois)"
+* date[x] ^example[0].label = "La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours))"
+// * datePeriod 0..1 Period "Date de début et de fin de la séquence de traitement"
+// * dateDuration 0..1 Quantity "Durée du traitement (ex : pendant 5 jours)"
+// * dateRange 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
 
 * dateDePrise 0..* dateTime "Date précise du moment de prise"
 
