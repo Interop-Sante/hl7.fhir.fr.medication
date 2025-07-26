@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "fr-medication-reconciliation-document-type",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs fr-medication-reconciliation-document-type</b></p><a name=\"fr-medication-reconciliation-document-type\"> </a><a name=\"hcfr-medication-reconciliation-document-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include codes provenant de<a href=\"CodeSystem-fr-document-type.html\"><code>https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type</code></a> où isMedicationReconciliation  = true</li></ul></div>"
+  },
+  "url" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-document-type",
+  "version" : "0.1.0",
+  "name" : "FRMedicationReconciliationDocumentType",
+  "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-07-26T07:31:15+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
+  "description" : "Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type",
+      "filter" : [{
+        "property" : "isMedicationReconciliation",
+        "op" : "=",
+        "value" : "true"
+      }]
+    }]
+  }
+}

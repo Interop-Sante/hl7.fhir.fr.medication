@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>La prescription - Vue d'ensemble - Guide d'implémentation du médicament v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
+</div>
+
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="prescription-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="prescription-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Dispensation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dispensation-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
+      </li>
+      <li>
+        <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
+      </li>
+      <li>
+        <a href="dispensation-DispensationNominativeDelivranceReglobalisee.html">La dispensation nominative à délivrance reglobalisée</a>
+      </li>
+      <li>
+        <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformationPN13-FHIR-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="transformation-PN13-vers-FHIR.html">Transformation PN13 vers FHIR</a>
+      </li>
+      <li>
+        <a href="transformation-FHIR-vers-PN13.html">Transformation FHIR vers PN13</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l315">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="suivitravaux.html">Historique des travaux</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usages</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>La prescription - Vue d'ensemble</b></li>
+
+          <span style="float:right;">
+
+            <a href="prescription-Intro.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="prescription-CasUsage.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://hl7.fr/ig/fhir/medication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>La prescription - Vue d'ensemble</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h3 id="vue-densemble">Vue d’ensemble</h3>
+
+<p>La prescription est un ensemble de <strong>lignes de prescription</strong>, représentées chacune par une ressource <em>MedicationRequest</em> profilée <em>FRInpatientMedicationRequest</em>.</p>
+
+<p>La prescription en tant que telle (le regroupement de lignes de prescription), n’est pas représenté par une ressource FHIR. En accord avec les guidelines d’HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l’élément <em>MedicationRequest.groupIdentifier</em>.</p>
+
+<p>Chaque <strong>ligne de prescription</strong> est composée d’un <strong>médicament prescrit</strong> et de sa <strong>posologie</strong>.</p>
+
+<p>Le <strong>médicament prescrit</strong> est représenté par l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.medication[x]</code> (1..1) du profil <em>FRInpatientMedicationRequest</em>, celui-ci peut être représenté sous forme de ressource <em>Medication</em> ou de concept codé (CodeableConcept).</p>
+
+<p>Selon que ce médicament prescrit est un <strong>médicament simple</strong> ou un <strong>médicament composé</strong> de plusieurs médicaments simples, le <strong>médicament prescrit</strong> est représenté par deux variantes de ressource <em>Medication</em>:</p>
+
+<ul>
+  <li><em>FrMedicationNonCompound</em>: médicament simple exprimé en spécialité identifié par son <strong>code UCD</strong>. Ex: <em>EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521</em> ou médicament exprimé en DC (dénomination commune identifiée par son <strong>code SMS</strong> ou son <strong>code technique ANSM</strong> dans l’attente de l’attribution d’un code SMS )/ Ex: <em>paracétamol dont le code SMS est 100000090270</em></li>
+  <li><em>FrMedicationCompound</em>: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: <em>glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g</em>.</li>
+</ul>
+
+<p>Dépendance des ressources profilées par Interop’Santé</p>
+
+<div style="width:100%; overflow-x:auto;" class="figure">
+  <p style="margin: 0; padding: 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 1116 331" zoomAndPan="magnify" data-diagram-type="CLASS" preserveAspectRatio="none" width="1116px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:1116px;height:331px;background:#FFFFFF;" version="1.1" height="331px"><defs></defs><g>  <!-- cluster Informations contextuelles --><g data-entity="Informations contextuelles" id="cluster_Informations contextuelles" data-uid="ent0002" class="cluster" data-source-line="9"><path d="M14.5,89.5 L228.2891,89.5 A3.75,3.75 0 0 1 230.7891,92 L237.7891,111.7969 L592.5,111.7969 A2.5,2.5 0 0 1 595,114.2969 L595,321.5 A2.5,2.5 0 0 1 592.5,324 L14.5,324 A2.5,2.5 0 0 1 12,321.5 L12,92 A2.5,2.5 0 0 1 14.5,89.5" style="stroke:#000000;stroke-width:1.5;" fill="none"></path><line y1="111.7969" x1="12" y2="111.7969" style="stroke:#000000;stroke-width:1.5;" x2="237.7891"></line><text font-weight="bold" lengthAdjust="spacing" x="16" font-size="14" textLength="212.7891" y="104.4951" font-family="sans-serif" fill="#000000">Informations contextuelles</text></g>  <!-- cluster M?dicament prescrit --><g data-entity="Médicament prescrit" id="cluster_Médicament prescrit" data-uid="ent0008" class="cluster" data-source-line="17"><path d="M637.5,89.5 L801.5576,89.5 A3.75,3.75 0 0 1 804.0576,92 L811.0576,111.7969 L925.5,111.7969 A2.5,2.5 0 0 1 928,114.2969 L928,321.5 A2.5,2.5 0 0 1 925.5,324 L637.5,324 A2.5,2.5 0 0 1 635,321.5 L635,92 A2.5,2.5 0 0 1 637.5,89.5" style="stroke:#000000;stroke-width:1.5;" fill="none"></path><line y1="111.7969" x1="635" y2="111.7969" style="stroke:#000000;stroke-width:1.5;" x2="811.0576"></line><text font-weight="bold" lengthAdjust="spacing" x="639" font-size="14" textLength="163.0576" y="104.4951" font-family="sans-serif" fill="#000000">Médicament prescrit</text></g>  <!-- class FrCorePatient --><a xlink:type="simple" xlink:show="new" xlink:title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" xlink:actuate="onRequest" title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" xlink:href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" target="_top"><g data-entity="FrCorePatient" id="entity_FrCorePatient" data-uid="ent0003" class="entity" data-source-line="10"><rect rx="2.5" ry="2.5" width="127.8945" x="55" y="132.5" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="70" cy="148.5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M72.9688,154.1406 Q72.3906,154.4375 71.75,154.5781 Q71.1094,154.7344 70.4063,154.7344 Q67.9063,154.7344 66.5781,153.0938 Q65.2656,151.4375 65.2656,148.3125 Q65.2656,145.1875 66.5781,143.5313 Q67.9063,141.875 70.4063,141.875 Q71.1094,141.875 71.75,142.0313 Q72.4063,142.1875 72.9688,142.4844 L72.9688,145.2031 Q72.3438,144.625 71.75,144.3594 Q71.1563,144.0781 70.5313,144.0781 Q69.1875,144.0781 68.5,145.1563 Q67.8125,146.2188 67.8125,148.3125 Q67.8125,150.4063 68.5,151.4844 Q69.1875,152.5469 70.5313,152.5469 Q71.1563,152.5469 71.75,152.2813 Q72.3438,152 72.9688,151.4219 L72.9688,154.1406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="84" font-size="14" textLength="95.8945" y="153.3467" font-family="sans-serif" fill="#000000">FrCorePatient</text><line y1="164.5" x1="56" y2="164.5" style="stroke:#181818;stroke-width:0.5;" x2="181.8945"></line><line y1="172.5" x1="56" y2="172.5" style="stroke:#181818;stroke-width:0.5;" x2="181.8945"></line></g></a>  <!-- class FrCoreOrganization --><a xlink:type="simple" xlink:show="new" xlink:title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" xlink:actuate="onRequest" title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" xlink:href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" target="_top"><g data-entity="FrCoreOrganization" id="entity_FrCoreOrganization" data-uid="ent0004" class="entity" data-source-line="11"><rect rx="2.5" ry="2.5" width="168.2676" x="218" y="132.5" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="233" cy="148.5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M235.9688,154.1406 Q235.3906,154.4375 234.75,154.5781 Q234.1094,154.7344 233.4063,154.7344 Q230.9063,154.7344 229.5781,153.0938 Q228.2656,151.4375 228.2656,148.3125 Q228.2656,145.1875 229.5781,143.5313 Q230.9063,141.875 233.4063,141.875 Q234.1094,141.875 234.75,142.0313 Q235.4063,142.1875 235.9688,142.4844 L235.9688,145.2031 Q235.3438,144.625 234.75,144.3594 Q234.1563,144.0781 233.5313,144.0781 Q232.1875,144.0781 231.5,145.1563 Q230.8125,146.2188 230.8125,148.3125 Q230.8125,150.4063 231.5,151.4844 Q232.1875,152.5469 233.5313,152.5469 Q234.1563,152.5469 234.75,152.2813 Q235.3438,152 235.9688,151.4219 L235.9688,154.1406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="247" font-size="14" textLength="136.2676" y="153.3467" font-family="sans-serif" fill="#000000">FrCoreOrganization</text><line y1="164.5" x1="219" y2="164.5" style="stroke:#181818;stroke-width:0.5;" x2="385.2676"></line><line y1="172.5" x1="219" y2="172.5" style="stroke:#181818;stroke-width:0.5;" x2="385.2676"></line></g></a>  <!-- class FrCoreEncounter --><a xlink:type="simple" xlink:show="new" xlink:title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" xlink:actuate="onRequest" title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" xlink:href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" target="_top"><g data-entity="FrCoreEncounter" id="entity_FrCoreEncounter" data-uid="ent0005" class="entity" data-source-line="12"><rect rx="2.5" ry="2.5" width="150.1045" x="421" y="132.5" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="436" cy="148.5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M438.9688,154.1406 Q438.3906,154.4375 437.75,154.5781 Q437.1094,154.7344 436.4063,154.7344 Q433.9063,154.7344 432.5781,153.0938 Q431.2656,151.4375 431.2656,148.3125 Q431.2656,145.1875 432.5781,143.5313 Q433.9063,141.875 436.4063,141.875 Q437.1094,141.875 437.75,142.0313 Q438.4063,142.1875 438.9688,142.4844 L438.9688,145.2031 Q438.3438,144.625 437.75,144.3594 Q437.1563,144.0781 436.5313,144.0781 Q435.1875,144.0781 434.5,145.1563 Q433.8125,146.2188 433.8125,148.3125 Q433.8125,150.4063 434.5,151.4844 Q435.1875,152.5469 436.5313,152.5469 Q437.1563,152.5469 437.75,152.2813 Q438.3438,152 438.9688,151.4219 L438.9688,154.1406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="450" font-size="14" textLength="118.1045" y="153.3467" font-family="sans-serif" fill="#000000">FrCoreEncounter</text><line y1="164.5" x1="422" y2="164.5" style="stroke:#181818;stroke-width:0.5;" x2="570.1045"></line><line y1="172.5" x1="422" y2="172.5" style="stroke:#181818;stroke-width:0.5;" x2="570.1045"></line></g></a>  <!-- class FrCorePractitioner --><a xlink:type="simple" xlink:show="new" xlink:title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" xlink:actuate="onRequest" title="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" xlink:href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" target="_top"><g data-entity="FrCorePractitioner" id="entity_FrCorePractitioner" data-uid="ent0006" class="entity" data-source-line="13"><rect rx="2.5" ry="2.5" width="159.5586" x="55" y="252" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="70" cy="268" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M72.9688,273.6406 Q72.3906,273.9375 71.75,274.0781 Q71.1094,274.2344 70.4063,274.2344 Q67.9063,274.2344 66.5781,272.5938 Q65.2656,270.9375 65.2656,267.8125 Q65.2656,264.6875 66.5781,263.0313 Q67.9063,261.375 70.4063,261.375 Q71.1094,261.375 71.75,261.5313 Q72.4063,261.6875 72.9688,261.9844 L72.9688,264.7031 Q72.3438,264.125 71.75,263.8594 Q71.1563,263.5781 70.5313,263.5781 Q69.1875,263.5781 68.5,264.6563 Q67.8125,265.7188 67.8125,267.8125 Q67.8125,269.9063 68.5,270.9844 Q69.1875,272.0469 70.5313,272.0469 Q71.1563,272.0469 71.75,271.7813 Q72.3438,271.5 72.9688,270.9219 L72.9688,273.6406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="84" font-size="14" textLength="127.5586" y="272.8467" font-family="sans-serif" fill="#000000">FrCorePractitioner</text><line y1="284" x1="56" y2="284" style="stroke:#181818;stroke-width:0.5;" x2="213.5586"></line><line y1="292" x1="56" y2="292" style="stroke:#181818;stroke-width:0.5;" x2="213.5586"></line></g></a>  <!-- class Observation --><g data-entity="Observation" id="entity_Observation" data-uid="ent0007" class="entity" data-source-line="14"><rect rx="2.5" ry="2.5" width="139.625" x="250" y="252" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="265" cy="268" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M267.9688,273.6406 Q267.3906,273.9375 266.75,274.0781 Q266.1094,274.2344 265.4063,274.2344 Q262.9063,274.2344 261.5781,272.5938 Q260.2656,270.9375 260.2656,267.8125 Q260.2656,264.6875 261.5781,263.0313 Q262.9063,261.375 265.4063,261.375 Q266.1094,261.375 266.75,261.5313 Q267.4063,261.6875 267.9688,261.9844 L267.9688,264.7031 Q267.3438,264.125 266.75,263.8594 Q266.1563,263.5781 265.5313,263.5781 Q264.1875,263.5781 263.5,264.6563 Q262.8125,265.7188 262.8125,267.8125 Q262.8125,269.9063 263.5,270.9844 Q264.1875,272.0469 265.5313,272.0469 Q266.1563,272.0469 266.75,271.7813 Q267.3438,271.5 267.9688,270.9219 L267.9688,273.6406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="279" font-size="14" textLength="107.625" y="272.8467" font-family="sans-serif" fill="#000000">Observation (*)</text><line y1="284" x1="251" y2="284" style="stroke:#181818;stroke-width:0.5;" x2="388.625"></line><line y1="292" x1="251" y2="292" style="stroke:#181818;stroke-width:0.5;" x2="388.625"></line></g>  <!-- class FrMedicationNonCompound --><a xlink:type="simple" xlink:show="new" xlink:title="./StructureDefinition-fr-medication-noncompound.html" href="./StructureDefinition-fr-medication-noncompound.html" xlink:actuate="onRequest" title="./StructureDefinition-fr-medication-noncompound.html" xlink:href="./StructureDefinition-fr-medication-noncompound.html" target="_top"><g data-entity="FrMedicationNonCompound" id="entity_FrMedicationNonCompound" data-uid="ent0009" class="entity" data-source-line="18"><rect rx="2.5" ry="2.5" width="226.3457" x="678" y="132.5" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="693" cy="148.5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M695.9688,154.1406 Q695.3906,154.4375 694.75,154.5781 Q694.1094,154.7344 693.4063,154.7344 Q690.9063,154.7344 689.5781,153.0938 Q688.2656,151.4375 688.2656,148.3125 Q688.2656,145.1875 689.5781,143.5313 Q690.9063,141.875 693.4063,141.875 Q694.1094,141.875 694.75,142.0313 Q695.4063,142.1875 695.9688,142.4844 L695.9688,145.2031 Q695.3438,144.625 694.75,144.3594 Q694.1563,144.0781 693.5313,144.0781 Q692.1875,144.0781 691.5,145.1563 Q690.8125,146.2188 690.8125,148.3125 Q690.8125,150.4063 691.5,151.4844 Q692.1875,152.5469 693.5313,152.5469 Q694.1563,152.5469 694.75,152.2813 Q695.3438,152 695.9688,151.4219 L695.9688,154.1406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="707" font-size="14" textLength="194.3457" y="153.3467" font-family="sans-serif" fill="#000000">FrMedicationNonCompound</text><line y1="164.5" x1="679" y2="164.5" style="stroke:#181818;stroke-width:0.5;" x2="903.3457"></line><line y1="172.5" x1="679" y2="172.5" style="stroke:#181818;stroke-width:0.5;" x2="903.3457"></line></g></a>  <!-- class FrMedicationCompound --><a xlink:type="simple" xlink:show="new" xlink:title="./StructureDefinition-fr-medication-compound.html" href="./StructureDefinition-fr-medication-compound.html" xlink:actuate="onRequest" title="./StructureDefinition-fr-medication-compound.html" xlink:href="./StructureDefinition-fr-medication-compound.html" target="_top"><g data-entity="FrMedicationCompound" id="entity_FrMedicationCompound" data-uid="ent0010" class="entity" data-source-line="19"><rect rx="2.5" ry="2.5" width="198.4346" x="699" y="252" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="714" cy="268" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M716.9688,273.6406 Q716.3906,273.9375 715.75,274.0781 Q715.1094,274.2344 714.4063,274.2344 Q711.9063,274.2344 710.5781,272.5938 Q709.2656,270.9375 709.2656,267.8125 Q709.2656,264.6875 710.5781,263.0313 Q711.9063,261.375 714.4063,261.375 Q715.1094,261.375 715.75,261.5313 Q716.4063,261.6875 716.9688,261.9844 L716.9688,264.7031 Q716.3438,264.125 715.75,263.8594 Q715.1563,263.5781 714.5313,263.5781 Q713.1875,263.5781 712.5,264.6563 Q711.8125,265.7188 711.8125,267.8125 Q711.8125,269.9063 712.5,270.9844 Q713.1875,272.0469 714.5313,272.0469 Q715.1563,272.0469 715.75,271.7813 Q716.3438,271.5 716.9688,270.9219 L716.9688,273.6406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="728" font-size="14" textLength="166.4346" y="272.8467" font-family="sans-serif" fill="#000000">FrMedicationCompound</text><line y1="284" x1="700" y2="284" style="stroke:#181818;stroke-width:0.5;" x2="896.4346"></line><line y1="292" x1="700" y2="292" style="stroke:#181818;stroke-width:0.5;" x2="896.4346"></line></g></a>  <!-- class FrInpatientMedicationRequest --><a xlink:type="simple" xlink:show="new" xlink:title="./StructureDefinition-fr-inpatient-medicationrequest.html" href="./StructureDefinition-fr-inpatient-medicationrequest.html" xlink:actuate="onRequest" title="./StructureDefinition-fr-inpatient-medicationrequest.html" xlink:href="./StructureDefinition-fr-inpatient-medicationrequest.html" target="_top"><g data-entity="FrInpatientMedicationRequest" id="entity_FrInpatientMedicationRequest" data-uid="ent0011" class="entity" data-source-line="22"><rect rx="2.5" ry="2.5" width="242.6904" x="209.5" y="9.5" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="48"></rect><ellipse cx="224.5" cy="25.5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M227.4688,31.1406 Q226.8906,31.4375 226.25,31.5781 Q225.6094,31.7344 224.9063,31.7344 Q222.4063,31.7344 221.0781,30.0938 Q219.7656,28.4375 219.7656,25.3125 Q219.7656,22.1875 221.0781,20.5313 Q222.4063,18.875 224.9063,18.875 Q225.6094,18.875 226.25,19.0313 Q226.9063,19.1875 227.4688,19.4844 L227.4688,22.2031 Q226.8438,21.625 226.25,21.3594 Q225.6563,21.0781 225.0313,21.0781 Q223.6875,21.0781 223,22.1563 Q222.3125,23.2188 222.3125,25.3125 Q222.3125,27.4063 223,28.4844 Q223.6875,29.5469 225.0313,29.5469 Q225.6563,29.5469 226.25,29.2813 Q226.8438,29 227.4688,28.4219 L227.4688,31.1406 Z " fill="#000000"></path><text lengthAdjust="spacing" x="238.5" font-size="14" textLength="210.6904" y="30.3467" font-family="sans-serif" fill="#000000">FrInpatientMedicationRequest</text><line y1="41.5" x1="210.5" y2="41.5" style="stroke:#181818;stroke-width:0.5;" x2="451.1904"></line><line y1="49.5" x1="210.5" y2="49.5" style="stroke:#181818;stroke-width:0.5;" x2="451.1904"></line></g></a><g data-entity="GMN12" id="entity_GMN12" data-uid="ent0013" class="entity" data-source-line="27"><path d="M487.5,6 L487.5,30 L452.54,34 L487.5,38 L487.5,61.3984 A0,0 0 0 0 487.5,61.3984 L692.7534,61.3984 A0,0 0 0 0 692.7534,61.3984 L692.7534,16 L682.7534,6 L487.5,6 A0,0 0 0 0 487.5,6" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD"></path><path d="M682.7534,6 L682.7534,16 L692.7534,16 L682.7534,6" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD"></path><text lengthAdjust="spacing" x="493.5" font-size="13" textLength="62.4355" y="23.0669" font-family="sans-serif" fill="#000000">ValueSet:</text><text lengthAdjust="spacing" x="493.5" font-size="13" textLength="173.8179" y="38.1997" font-family="sans-serif" fill="#000000">- FRRouteOfAdministration</text><text lengthAdjust="spacing" x="493.5" font-size="13" textLength="184.2534" y="53.3325" font-family="sans-serif" fill="#000000">- FRMethodOfAdministration</text></g><g data-entity="GMN15" id="entity_GMN15" data-uid="ent0016" class="entity" data-source-line="33"><path d="M952,121 L952,153 L904.32,157 L952,161 L952,191.5313 A0,0 0 0 0 952,191.5313 L1109.6968,191.5313 A0,0 0 0 0 1109.6968,191.5313 L1109.6968,131 L1099.6968,121 L952,121 A0,0 0 0 0 952,121" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD"></path><path d="M1099.6968,121 L1099.6968,131 L1109.6968,131 L1099.6968,121" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD"></path><text lengthAdjust="spacing" x="958" font-size="13" textLength="62.4355" y="138.0669" font-family="sans-serif" fill="#000000">ValueSet:</text><text lengthAdjust="spacing" x="958" font-size="13" textLength="129.708" y="153.1997" font-family="sans-serif" fill="#000000">- FRMedicationCode</text><text lengthAdjust="spacing" x="958" font-size="13" textLength="136.6968" y="168.3325" font-family="sans-serif" fill="#000000">- MpSubstanceActive</text><text lengthAdjust="spacing" x="958" font-size="13" textLength="110.9761" y="183.4653" font-family="sans-serif" fill="#000000">- FRMpDoseForm</text></g><g data-entity="GMN18" id="entity_GMN18" data-uid="ent0019" class="entity" data-source-line="40"><path d="M952,256 L952,272 L897.06,276 L952,280 L952,296.2656 A0,0 0 0 0 952,296.2656 L1083.9761,296.2656 A0,0 0 0 0 1083.9761,296.2656 L1083.9761,266 L1073.9761,256 L952,256 A0,0 0 0 0 952,256" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD"></path><path d="M1073.9761,256 L1073.9761,266 L1083.9761,266 L1073.9761,256" style="stroke:#181818;stroke-width:0.5;" fill="#FEFFDD"></path><text lengthAdjust="spacing" x="958" font-size="13" textLength="62.4355" y="273.0669" font-family="sans-serif" fill="#000000">ValueSet:</text><text lengthAdjust="spacing" x="958" font-size="13" textLength="110.9761" y="288.1997" font-family="sans-serif" fill="#000000">- FRMpDoseForm</text></g>  <!-- link FrInpatientMedicationRequest to Informations contextuelles --><g data-entity-2="Informations contextuelles" data-entity-1="FrInpatientMedicationRequest" id="link_FrInpatientMedicationRequest_Informations contextuelles" data-uid="lnk21" class="link" data-source-line="45"><path codeLine="45" d="M209.42,34 C122.2,34 20,34 20,34 C20,34 20,40.955 20,51.5506 C20,56.8484 20,63.0564 20,69.7602 C20,73.1121 20,76.588 20,80.1361 C20,81.9101 20,83.7022 20,85.5058 C20,86.4077 20,87.3124 20,88.2192 C20,88.4459 20,82.6727 20,82.8996" style="stroke:#181818;stroke-width:1;" id="FrInpatientMedicationRequest-to-Informations contextuelles" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="20,88.8996,24,79.8996,20,83.8996,16,79.8996,20,88.8996"></polygon></g>  <!-- link FrInpatientMedicationRequest to M?dicament prescrit --><g data-entity-2="Médicament prescrit" data-entity-1="FrInpatientMedicationRequest" id="link_FrInpatientMedicationRequest_Médicament prescrit" data-uid="lnk22" class="link" data-source-line="47"><path codeLine="47" d="M436.75,57.55 C436.75,73.31 436.75,91 436.75,91 C436.75,91 488.3125,91 539.875,91 C565.6563,91 591.4375,91 610.7734,91 C620.4414,91 628.498,91 634.1377,91 C634.3139,91 628.4878,91 628.6593,91" style="stroke:#181818;stroke-width:1;" id="FrInpatientMedicationRequest-to-Médicament prescrit" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="634.6593,91,625.6593,87,629.6593,91,625.6593,95,634.6593,91"></polygon></g>  <!-- link FrMedicationNonCompound to FrMedicationCompound --><g data-entity-2="FrMedicationCompound" data-entity-1="FrMedicationNonCompound" id="link_FrMedicationNonCompound_FrMedicationCompound" data-uid="lnk23" class="link" data-source-line="49"><path codeLine="49" d="M798,180.68 C798,201.42 798,225.13 798,245.85" style="stroke:#181818;stroke-width:1;" id="FrMedicationNonCompound-to-FrMedicationCompound" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="798,251.85,802,242.85,798,246.85,794,242.85,798,251.85"></polygon></g></g></svg>
+  </p>
+</div>
+
+<p>Noter qu’un médicament simple peut être une association de plusieurs principes actifs. Ce n’en est pas moins un médicament simple représenté par une ressource <em>FrMedicationNonCompound</em>. Ex : <em>CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047</em> contenant paracétamol+codéine 500 mg+30 mg*</p>
+
+<p>La <strong>posologie</strong> est représentée par l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de la ressource <em>FRInpatientMedicationRequest</em>.</p>
+
+<p><strong>Date de début, date de fin</strong> et <strong>durée de prescription</strong></p>
+
+<p>Elles traduisent la période d’exécution de la prescription.</p>
+
+<p>Cette information est portée indivuellement par chaque ligne de prescription, c’est à dire au niveau de la ressource <em>MedicationRequest</em> profilée par <em>FRInpatientMedicationRequest</em>, comme paramètre de la posologie prescrite, dans l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de type <em>Dosage</em>, sous-élément <code class="language-plaintext highlighter-rouge">timing</code> de type <em>Timing</em></p>
+
+<ul>
+  <li>date de début : <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsPeriod.start</code></li>
+  <li>date de fin : <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsPeriod.end</code></li>
+  <li>durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu’au niveau de l’IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.</li>
+</ul>
+
+<p>Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments <code class="language-plaintext highlighter-rouge">.validityPeriod</code> et <code class="language-plaintext highlighter-rouge">.expectedSupplyDuration</code> de l’élément <code class="language-plaintext highlighter-rouge">.dispensationRequest</code>.</p>
+
+<p>En prescription intrahospitalière, il n’y a généralement pas de consigne de dispensation formulée par le prescripteur. Il n’y a donc généralement pas usage de l’élément <code class="language-plaintext highlighter-rouge">.dispensationRequest</code>.</p>
+
+<h4 id="précisions-sur-dates-et-durée-de-prescription">Précisions sur dates et durée de prescription</h4>
+
+<p>Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource <em>MedicationRequest</em> profilée <em>FRInPatientMedicationRequest</em>.</p>
+
+<p>Elles concernent également les règles définissant la <strong>première dose prescrite</strong> et la <strong>dernière dose prescrite</strong>.</p>
+
+<p>Deux dates, de début et de fin, de la ligne de prescription doivent être considérées :</p>
+
+<ul>
+  <li>La date de début et de fin <strong>prescrite</strong> : le plus souvent, “à partir de maintenant et pendant x jours”</li>
+  <li>La date de début et de fin <strong>effective</strong> : la date/heure à partir de laquelle commence effectivement la ligne prescription, c’est-à-dire la date/heure de <strong>début d’administration de la premier dose</strong>, et la date/heure effective de fin de la ligne de prescription, c’est-à-dire la date/heure de <strong>fin d’administration de la dernière dose</strong>.</li>
+</ul>
+
+<p><strong>Date/heure de fin prescrite</strong> de la ligne de prescription (<em>MedicationRequest</em>)</p>
+
+<p>Définit la date/heure de fin exprimée par le médecin lors de sa prescription.</p>
+
+<p><strong>La première dose prescrite</strong>:</p>
+
+<ul>
+  <li>celle dont la date/heure de début d’administration est <em>immédiatement postérieure ou égale à la date/heure de début prescrite</em>.</li>
+  <li>calculée à partir de la <em>date/heure de début prescrite</em>, en fonction de la posologie définie par la collection de <em>dosageInstruction</em>.</li>
+</ul>
+
+<p><strong>Date/heure de fin prescrite</strong> de la ligne de prescription (<em>MedicationRequest</em>)</p>
+
+<p>Définit la date/heure de fin exprimée par le médecin lors de sa prescription.</p>
+
+<p><strong>La dernière dose prescrite</strong>:</p>
+
+<ul>
+  <li>celle dont la date/heure de début d’administration est <em>immédiatement inférieure à la date/heure de fin prescrite</em></li>
+  <li>calculée à partir de la <em>date/heure de fin prescrite</em>, en fonction de la posologie définie par la collection <code class="language-plaintext highlighter-rouge">dosageInstruction</code></li>
+</ul>
+
+<p>La <em>date/heure de fin d’administration</em> de la dernière dose (sa date/heure de début + sa durée d’administration) peut être supérieure à <em>date/heure de fin prescrite</em>.</p>
+
+<p><strong>Durée de prescription</strong>:</p>
+
+<p>Elle est liée aux deux paramétres précédents. Quand ces trois paramètres sont exposés à l’utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.</p>
+
+<p>Les unités UCUM suivantes sont utilisées :</p>
+
+<ol>
+  <li>
+    <p><em>jour</em> (code = d) : égale 24h.</p>
+
+    <ul>
+      <li>Ce n’est pas le <em>jour calendaire</em>.</li>
+      <li>Ainsi, 3 jours à partir de J0 07:12:34 donne comme <em>date de fin</em> J3 07:12:33.</li>
+      <li>Et non pas J2 23:59:59 correspondant au décompte de 3 jours calendaires.</li>
+    </ul>
+  </li>
+  <li><em>semaine</em> (code = wk) : égale 7 jours.</li>
+  <li>
+    <p><em>mois</em> (code = mo) : égale 28, 29, 30 ou 31 jours selon les mois impliqués.</p>
+
+    <ul>
+      <li>Ce n’est pas le <em>mois julien moyen</em> de 30,4375 jours défini par UCUM.</li>
+      <li>Ainsi, 3 mois à partir du 2021-02-14T12:34:56 donne comme <em>date de fin</em> 2021-05-14T12:34:55.</li>
+      <li>Et non pas 2021-04-16T20:04:55, correspondant à 2021-02-14T12:34:56 + 91 jours 7 heures 30 minutes, découlant de 3*365,25/12=91,3125 jours.</li>
+    </ul>
+  </li>
+  <li><em>année</em> (code = a) : égale 1 année <em>julienne moyenne</em>, soit 365,25 jours</li>
+</ol>
+
+<p><strong>Garantie du nombre de doses prescrites sur une période donnée</strong>:</p>
+
+<p>Pour garantir qu’une prescription de, par exemple, 3 doses par jour pendant 5 jours, donne bien systématiquement 15 doses prescrites, comme logiquement attendu, et non pas 15 ou 16 en fonction des circonstances, il est spécifié dans ce guide d’implémentation que la <em>date/heure</em> de <em>fin prescrite</em> est exclue. En d’autres termes, l’intervalle [ date de début prescrite, date de fin prescrite [ est semi-ouvert.</p>
+
+<p><em>Illustration</em>
+Date de fin prescrite exclue : 15 doses (3/j x 5j = 15)</p>
+
+<p><img src="Prescription2.jpg" alt="IllustrationDateFinPrescriteExclue"/></p>
+
+<p>En effet, si la date de début prescrite est égale à la date de début de la premiére dose, un intervalle fermé incluant de la date de fin prescrite conduira à la prescription de 16 doses.</p>
+
+<p><em>Illustration</em>
+Si la date de fin prescrite était incluse : 16 doses (3/j x 5j = 16) !
+<img src="Prescription3.jpg" alt="IllustrationDateFinPrescriteIncluse"/></p>
+
+<p><strong>Note</strong>:
+Dans FHIR, le type <em>Period</em>, utilisé pour porter le couple (<em>date de début</em>, <em>date de fin</em>), stipule que les bornes, <em>start</em> et <em>end</em>, sont incluses. L’interval est <em>fermé</em>.</p>
+
+<p>Un interval <em>semi-ouvert</em>, par exemple [ 2021-02-14T12:34:56, 201-05-14T12:34:56 [, se traduira par un élément <em>Period</em> dans lequel</p>
+
+<ul>
+  <li><em>start</em> : 2021-02-14T12:34:56</li>
+  <li><em>end</em> : 2021-05-14T12:34:55</li>
+</ul>
+
+<p><strong>Rappel</strong>:
+Dans FHIR, le type datetime impose de donner les horaires à la seconde près lorsque l’heure est renseignée : format <em>hh:mn:ss</em>. Il est précisé que l’utilisateur fait son affaire de la granularité à l’heure ou à la minute près en remplissant les minutes et les secondes manquantes par des <em>00</em>.</p>
+
+<p>Néanmoins, pour exprimer l’horaire de fin exclu à la granularité horaire ou minute, il conviendra de remplir les minutes ou secondes manquantes par <em>59</em>.</p>
+
+<p>Par exemple
+3j à partir du 14 fév 2021 12h34 (résolution à la minute)</p>
+
+<ul>
+  <li><em>start</em> : 2021-02-14T12:34:00</li>
+  <li><em>end</em> : 2021-05-14T12:33:59</li>
+</ul>
+
+<p>ou
+3j à partir du 14 fév 2021 12h (résolution à la tranche horaire)</p>
+
+<ul>
+  <li><em>start</em> : 2021-02-14T12:00:00</li>
+  <li><em>end</em> : 2021-05-14T11:59:59</li>
+</ul>
+
+<p><strong>Date/heure de début effective et Date/heure de fin effective de la ligne de prescription</strong>:</p>
+
+<p>Ces deux dates ne figurent pas dans <em>MedicationRequest</em> R4.
+Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un élément <code class="language-plaintext highlighter-rouge">[effectiveDosePeriod](https://www.hl7.org/fhir/medicationrequest-definitions.html#MedicationRequest.effectiveDosePeriod)</code> conçu pour accueillir ces deux dates a été ajouté.</p>
+
+<p><strong>Note PN13</strong>:</p>
+
+<ul>
+  <li>Ces deux dates figurent dans l’objet ELEMENT DE PRESCRIPTION, éléments <em>Dh_début</em> et <em>Dh_fin</em>.</li>
+</ul>
+
+<p>Les règles de gestion suivantes doivent être appliquées pour définir ces deux dates en fonction de la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code> associée au <em>MedicationRequest</em>. Elles reprennent celles de PN13 et sont conformes à la <a href="https://hl7.org/fhir/medicationrequest.html">définition de la R5</a>.</p>
+
+<ol>
+  <li>La Date/heure de début effective doit être égale à la date/heure de début d’administration de la première dose décrite par la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code>.</li>
+  <li>La Date/heure de fin effective doit être égale à la date/heure de fin d’administration de la dernière dose décrite par la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code>.</li>
+</ol>
+
+<p><em>Illustration</em>
+1 comprimé 3 fois par jour (7h, 12h, 18h) pendant 5 jours, prescrit à 10h30, à partir de maintenant (10h30), donc 1ère dose à 12h.
+<img src="Prescription5.jpg" alt="DateEffective1"/></p>
+
+<p>Notes</p>
+
+<ol>
+  <li>
+    <p>Dans cet exemple,</p>
+
+    <ul>
+      <li>la Date/heure début prescrite est J1 10h30 ;</li>
+      <li>la Date/heure fin prescrite est J6 10h30 (J1 10h30 + 5j = J6 10h30) ;</li>
+      <li>la dernière dose est celle dont la date/heure d’administration précède la Date/heure fin prescrite (J6 10h30). Cette dernière dose a comme date/heure d’administration J6 7h. Ce qui conduit à une Date/heure fin effective de la ligne de prescription à J6 7h.</li>
+    </ul>
+  </li>
+  <li>Si l’administration s’effectue sur une certaine durée, perfusion, seringue électrique, etc., le calcul de la date/heure de fin d’administration de la dernière dose à partir de <em>dosageInstruction</em> doit ajouter la durée de l’administration, <code class="language-plaintext highlighter-rouge">dosageInstruction.doseAndRate.RateRatio.denominator</code>, à la date/heure de début d’administration de cette dernière dose.</li>
+  <li>Pour les posologies complexes, impliquant une description au travers d’une collection d’éléments <code class="language-plaintext highlighter-rouge">dosageInstruction</code> rattachés à <em>MedicationRequest</em>, c’est l’interprétation de la collection de <code class="language-plaintext highlighter-rouge">dosageInstruction</code> qui doit conduire au calcul de ces dates/heures début/fin effectives de <em>MedicationRequest</em> (fonction min() pour les dates de début, fonction max() pour les date de fin).</li>
+</ol>
+
+<p><em>Illustration</em>
+G5 1L sur 12h, 2 fois par jour (10h, 22h) pendant 5 jours, prescrit à 9h30, à partir de maintenant (9h30), donc 1ère dose à 10h.
+<img src="Prescription6.jpg" alt="DateEffective2"/></p>
+
+<p>Note
+Dans cet exemple</p>
+
+<ul>
+  <li>la Date/heure début prescrite est J1 9h30 ;</li>
+  <li>la Date/heure fin prescrite est J6 9h30 (J1 9h30 + 5 j = J6 9h30) ;</li>
+  <li>la dernière dose est celle dont la date/heure de début d’administration précède la Date/heure fin prescrite (J6 9h30). Cette dernière dose a comme date/heure de début d’administration J5 22h et durée d’administration 12h. Ce qui conduit à une Date/heure fin effective prescription à J6 10h.</li>
+</ul>
+
+<p>Pour les <strong>posologies conditionnelles d’un évènement aléatoire</strong>, « si douleur » par exemple, il faut prendre comme dates/heures de début/fin de <em>MedicationRequest</em> celles de la période de prise en compte de l’évènement.</p>
+
+<ul>
+  <li>Exemple : Paracétamol 1 g si douleur de J0 à J+3.</li>
+  <li>Les dates/heures début/fin de MedicationRequest sont respectivement J0 et J+3.</li>
+</ul>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="prescription-Intro.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="prescription-CasUsage.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jul 26, 2025 07:32+0000">2025-07-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/ig/fhir/medication/history.html" target="_blank">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "resourceType" : "MedicationDispense",
+  "id" : "Disp-group01-2",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : DispensationMédicaments Disp-group01-2</b></p><a name=\"Disp-group01-2\"> </a><a name=\"hcDisp-group01-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medication-dispense.html\">FR Inpatient MedicationDispense</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"Medication/InLine-med-DOLIPRANE\">Medication/InLine-med-DOLIPRANE</a></p><p><b>subject</b>: <a href=\"Group/InLine-patient-group01\">Group/InLine-patient-group01</a></p><p><b>supportingInformation</b>: </p><ul><li><a href=\"MedicationDispense-Disp-DOLIPRANE-Refill-presc-DC.html\">MedicationDispense : status = completed; medication[x] = -&gt;Medication/InLine-med-DOLIPRANE; type = Refill - Part; quantity = 6 1; daysSupply = 2 jours; whenPrepared = 2021-07-16 10:10:00+0000; whenHandedOver = 2021-07-16 10:24:00+0000</a></li><li><a href=\"MedicationDispense-Disp-DOLIPRANE-Refill-Compl-presc-DC.html\">MedicationDispense : status = completed; medication[x] = -&gt;Medication/InLine-med-DOLIPRANE; type = Refill - Complete; quantity = 2 1; daysSupply = 2 jours; whenPrepared = 2021-07-16 10:10:00+0000; whenHandedOver = 2021-07-16 10:24:00+0000</a></li><li><a href=\"MedicationDispense-Disp-DOLIPRANE-Refill-Substit.html\">MedicationDispense : status = completed; medication[x] = -&gt;Medication/InLine-med-DOLIPRANE; type = Refill - Part; quantity = 6 1; daysSupply = 2 jours; whenPrepared = 2021-07-16 10:10:00+0000; whenHandedOver = 2021-07-16 10:24:00+0000</a></li></ul><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner/smart-Practitioner-7148xxxx\">Practitioner/smart-Practitioner-7148xxxx</a></td></tr></table><p><b>authorizingPrescription</b>: </p><ul><li><a href=\"MedicationRequest-InLine-presc-Paracetamol1.html\">MedicationRequest : status = active; intent = order; medication[x] = -&gt;Medication paracétamol; authoredOn = 2021-07-13 08:48:39+0000; groupIdentifier = Presc-24625</a></li><li><a href=\"MedicationRequest-InLine-presc-Paracetamol2.html\">MedicationRequest : status = active; intent = order; medication[x] = -&gt;Medication paracétamol; authoredOn = 2021-07-14 09:07:28+0000</a></li><li><a href=\"MedicationRequest-InLine-presc-EFFERALGAN2.html\">MedicationRequest : status = active; intent = order; medication[x] = -&gt;Medication EFFERALGANMED 1000MG CPR; authoredOn = 2021-07-15 11:02:39+0000</a></li></ul><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode RFP}\">Refill - Part</span></p><p><b>quantity</b>: 14 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>daysSupply</b>: 2 jours<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p><p><b>whenPrepared</b>: 2021-07-16 10:10:00+0000</p><p><b>whenHandedOver</b>: 2021-07-16 10:24:00+0000</p></div>"
+  },
+  "status" : "completed",
+  "medicationReference" : {
+    "reference" : "Medication/InLine-med-DOLIPRANE"
+  },
+  "subject" : {
+    "reference" : "Group/InLine-patient-group01"
+  },
+  "supportingInformation" : [{
+    "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
+  },
+  {
+    "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"
+  },
+  {
+    "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Substit"
+  }],
+  "performer" : [{
+    "actor" : {
+      "reference" : "Practitioner/smart-Practitioner-7148xxxx"
+    }
+  }],
+  "authorizingPrescription" : [{
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
+  },
+  {
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
+  },
+  {
+    "reference" : "MedicationRequest/InLine-presc-EFFERALGAN2"
+  }],
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "RFP",
+      "display" : "Refill - Part"
+    }]
+  },
+  "quantity" : {
+    "value" : 14,
+    "system" : "http://unitsofmeasure.org",
+    "code" : "1"
+  },
+  "daysSupply" : {
+    "value" : 2,
+    "unit" : "jours",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "d"
+  },
+  "whenPrepared" : "2021-07-16T10:10:00Z",
+  "whenHandedOver" : "2021-07-16T10:24:00Z"
+}

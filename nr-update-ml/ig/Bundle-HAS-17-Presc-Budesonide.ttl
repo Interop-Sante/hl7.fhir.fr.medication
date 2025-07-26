@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/HAS-17-Presc-Budesonide> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HAS-17-Presc-Budesonide"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "medication-HAS-17-Presc-BudesonideComp" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-compound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-compound>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-HAS-17-Presc-BudesonideComp\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-HAS-17-Presc-BudesonideComp</b></p><a name=\"medication-HAS-17-Presc-BudesonideComp\"> </a><a name=\"hcmedication-HAS-17-Presc-BudesonideComp\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-fr-medication-compound.html\">FR Medication Compound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound</code></p></div><p><b>code</b>: <span title=\"Codes:\">3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000078023}\">eau pour préparations injectables</span></p><p><b>strength</b>: 3 ml<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span>/</p></blockquote><p><b style=\"color: maroon\">Exception Generating Narrative: Cannot invoke \"org.hl7.fhir.r5.renderers.utils.ResourceWrapper.has(String)\" because \"q\" is null </b></p></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:code [
+         fhir:text [ fhir:v "3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur" ]
+       ] ;
+       fhir:ingredient ( [
+         fhir:item [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "100000078023" ] ;
+             fhir:display [ fhir:v "eau pour préparations injectables" ]
+           ] )
+         ] ;
+         fhir:strength [
+           fhir:numerator [
+             fhir:value [ fhir:v "3"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "ml" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mL" ]
+           ]
+         ]
+       ] [
+         fhir:item [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://BogusSystemMedicabase.com"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "MV00004231" ] ;
+             fhir:display [ fhir:v "Budésonide 1 mg/2 ml (0,5 mg/ml) suspension pour inhalation par nébuliseur en récipient unidose" ]
+           ] )
+         ] ;
+         fhir:strength [
+           fhir:numerator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "récipient unidose" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "[recipient_unidose]" ]
+           ]
+         ]
+       ] )
+     ] )
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-HAS-17-Presc-Budesonide" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] [
+           fhir:v "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-17-Presc-Budesonide\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-17-Presc-Budesonide</b></p><a name=\"medicationrequest-HAS-17-Presc-Budesonide\"> </a><a name=\"hcmedicationrequest-HAS-17-Presc-Budesonide\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-HAS-17-Presc-BudesonideComp</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Préparation pour nébuliseur ultrasonique: 3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Durée 20?? , Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 inhalateur<span style=\"background: LightGoldenRodYellow\"> (Details: standardterms.edqm.eu  code15026000 = 'Inhaler')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:reference [ fhir:v "#medication-HAS-17-Presc-BudesonideComp" ]
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:note ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:code ;
+             fhir:v "LIPRESCTXT"
+           ]
+         ] ) ;
+         fhir:text [ fhir:v "Prescription textuelle: Préparation pour nébuliseur ultrasonique: 3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:bounds [
+               a fhir:Period ;
+               fhir:start [ fhir:v "2023-03-16"^^xsd:date ]
+             ] ;
+             fhir:duration [ fhir:v "20"^^xsd:decimal ] ;
+             fhir:durationUnit [ fhir:v "min" ] ;
+             fhir:timeOfDay ( [ fhir:v "08:00:00"^^xsd:time ] [ fhir:v "14:00:00"^^xsd:time ] [ fhir:v "18:00:00"^^xsd:time ] [ fhir:v "22:00:00"^^xsd:time ] )
+           ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "inhalateur" ] ;
+             fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "15026000" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
