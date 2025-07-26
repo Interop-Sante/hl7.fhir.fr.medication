@@ -1,7 +1,7 @@
 MED : Validation Results
 =========================================
 
-err = 1322, warn = 2486, info = 131
+err = 1330, warn = 2482, info = 133
 $--
 Generated $--. FHIR version $-- for hl7.fhir.fr.medication#$-- (canonical = https://hl7.fr/ig/fhir/medication)
  Build Errors : 1330 / 100 / 0
@@ -163,7 +163,7 @@ Generated $--. FHIR version $-- for hl7.fhir.fr.medication#$-- (canonical = http
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-observation-for-prescription : 0 / 1 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-on-admission-medication-composition : 0 / 4 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-on-admission-retroactive-reconciliation-composition : 0 / 3 / 1
- /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-posologie : 3 / 70 / 3
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-posologie : 11 / 66 / 5
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-prescription-bundle-for-example : 1 / 0 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-requestgroup-for-prescription : 0 / 0 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/StructureDefinition-fr-strength-codeableconcept : 0 / 1 / 1
@@ -1410,7 +1410,7 @@ ERROR: StructureDefinition-fr-posologie-examples.html#/html/body/div/div/nav/div
 ERROR: StructureDefinition-fr-posologie-mappings.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 185, column 10: The link 'PN13-exemples-Intro.html' for "Inroduction" cannot be resolved
 ERROR: StructureDefinition-fr-posologie-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 185, column 10: The link 'PN13-exemples-Intro.html' for "Inroduction" cannot be resolved
 ERROR: StructureDefinition-fr-posologie.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 185, column 10: The link 'PN13-exemples-Intro.html' for "Inroduction" cannot be resolved
-ERROR: StructureDefinition-fr-posologie.html#/html/body/div/div/div/div/div/p/a at Line 2066, column 97: The link 'StructureDefinition-fr-posologie.xlsx' for "Excel" cannot be resolved
+ERROR: StructureDefinition-fr-posologie.html#/html/body/div/div/div/div/div/p/a at Line 2004, column 97: The link 'StructureDefinition-fr-posologie.xlsx' for "Excel" cannot be resolved
 ERROR: StructureDefinition-fr-posologie.profile.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 185, column 10: The link 'PN13-exemples-Intro.html' for "Inroduction" cannot be resolved
 ERROR: StructureDefinition-fr-posologie.profile.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 189, column 10: The link 'PN13-exemples-Intro.html' for "Inroduction" cannot be resolved
 ERROR: StructureDefinition-fr-posologie.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 189, column 10: The link 'PN13-exemples-Intro.html' for "Inroduction" cannot be resolved
@@ -5521,11 +5521,15 @@ WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composit
 WARNING: StructureDefinition/fr-on-admission-retroactive-reconciliation-composition: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type' could not be found, so the code cannot be validated
 WARNING: StructureDefinition.where(url = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-retroactive-reconciliation-composition'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-fr-posologie.json ==
-INFORMATION: StructureDefinition.snapshot.element[30].type[1].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
-INFORMATION: StructureDefinition.differential.element[30].type[1].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+INFORMATION: StructureDefinition.snapshot.element[13].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+INFORMATION: StructureDefinition.snapshot.element[27].type[1].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+INFORMATION: StructureDefinition.differential.element[13].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+INFORMATION: StructureDefinition.differential.element[27].type[1].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[2].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[3].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
@@ -5536,6 +5540,7 @@ WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[13].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
@@ -5546,22 +5551,23 @@ WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[23].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[27].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[27]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[28]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[29]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-ERROR: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[30].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[30]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[31]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[32]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/fr-posologie: StructureDefinition.snapshot.element[34]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.differential.element[2].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.differential.element[3].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
@@ -5572,6 +5578,7 @@ WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.elem
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.differential.element[13].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
@@ -5582,19 +5589,18 @@ WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.elem
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.differential.element[23].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+ERROR: StructureDefinition/fr-posologie: StructureDefinition.differential.element[27].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[27]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[28]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[29]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-ERROR: StructureDefinition/fr-posologie: StructureDefinition.differential.element[30].example[0]: ElementDefinition.example.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[30]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[31]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[32]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
-WARNING: StructureDefinition/fr-posologie: StructureDefinition.differential.element[34]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 ERROR: StructureDefinition: Error Rendering Resource: type == null
 == fsh-generated/resources/StructureDefinition-fr-prescription-bundle-for-example.json ==
 ERROR: StructureDefinition/fr-prescription-bundle-for-example: StructureDefinition: Constraint failed: sdf-21: 'Default values can only be specified on specializations'

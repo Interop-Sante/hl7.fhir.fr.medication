@@ -364,7 +364,6 @@ package IG #DDDDDD{
              fr-posologie.doseEtDebit.dose[x] => [0..1]
              fr-posologie.doseEtDebit.rate[x] => [0..1]
              fr-posologie.sequence => [0..1]
-             fr-posologie.evenementFinSequence => [0..1]
              fr-posologie.voieAdministration => [0..1]
              fr-posologie.siteAdministration => [0..1]
              fr-posologie.quantitePrescrite => [0..*]
@@ -372,10 +371,8 @@ package IG #DDDDDD{
              fr-posologie.quantitePrescrite.valeurMax => [0..1]
              fr-posologie.quantitePrescrite.unite => [0..1]
              fr-posologie.quantiteMaxParPeriode => [0..*]
-             fr-posologie.quantiteMaxParPeriode.valeurQuantite => [0..1]
-             fr-posologie.quantiteMaxParPeriode.uniteQuantite => [0..1]
-             fr-posologie.quantiteMaxParPeriode.valeurTemps => [0..1]
-             fr-posologie.quantiteMaxParPeriode.uniteTemps => [0..1]
+             fr-posologie.quantiteMaxParPeriode.quantite => [0..1]
+             fr-posologie.quantiteMaxParPeriode.duree => [0..1]
              fr-posologie.conditionDePrise => [0..*]
              fr-posologie.instructionPatient => [0..1]
              fr-posologie.frequence => [0..1]
@@ -394,6 +391,7 @@ package IG #DDDDDD{
              fr-posologie.momentDePrise => [0..*]
              fr-posologie.momentDePrise.code => [0..1]
              fr-posologie.momentDePrise.offset => [0..1]
+             fr-posologie.evenementFinSequence => [0..1]
         } 
 
         class FRPrescriptionBundleForExample{
