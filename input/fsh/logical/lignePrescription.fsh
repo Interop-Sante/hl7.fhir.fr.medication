@@ -1,7 +1,7 @@
 Logical: LignePrescription				
 Id: fr-ligne-prescription				
-Title: "Ligne de precription"				
-Description:  """Structuration d'une ligne de prescription [à compléter]."""
+Title: "Ligne de prescription"				
+Description:  """Structuration d'une ligne de prescription [WIP - à compléter]."""
 
 // A rajouter : instruction au dispensateur, prescripteur, patient, ...
 
