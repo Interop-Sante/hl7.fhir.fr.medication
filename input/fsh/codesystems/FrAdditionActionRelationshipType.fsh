@@ -6,5 +6,4 @@ Description: "Codes to specify relationship between action in a RequestGroup tha
 * ^status = #draft
 * ^experimental = false
 * ^content = #complete
-* ^count = 2
 * #ALT "Si l'action ne peut pas être réalisée, l'action reliée peut être réalisée à la place."
