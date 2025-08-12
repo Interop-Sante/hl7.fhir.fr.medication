@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="PN13-FHIR-prescmed-practitioner-identite-conceptmap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CarteDeConcepts PN13-FHIR-prescmed-practitioner-identite-conceptmap</b></p><a name="PN13-FHIR-prescmed-practitioner-identite-conceptmap"> </a><a name="hcPN13-FHIR-prescmed-practitioner-identite-conceptmap"> </a><p>Mapping from https://interopsante.org/pn13/xsd to <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html">FR Core Practitioner Profile</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td>Practitioner.identifier.value</td><td/></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Practitioner.identifier.system</td><td>Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>relation</b></td><td colspan="3"><b>Target Concept Details</b></td><td><b>Commentaire</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Practitioner.name.use</b></td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Nom_usage</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Practitioner.name.family</td><td style="border-left-width: 0px"/><td>usual</td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Prénom_usage</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Practitioner.name.given</td><td style="border-left-width: 0px"/><td/><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Civilité</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">Practitioner.name.prefix</td><td style="border-left-width: 0px"/><td/><td>Les civilités sont libres dans PN13 alors qu'elles proviennent d'un jeu de valeurs extensible dans le profil FrCorePractitioner</td></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Titre</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">Practitioner.name.suffix</td><td style="border-left-width: 0px"/><td/><td>Les titres sont libres dans PN13 alors qu'ils proviennent d'un jeu de valeurs extensible dans le profil FrCorePractitioner</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>relation</b></td><td colspan="3"><b>Target Concept Details</b></td><td><b>Commentaire</b></td></tr><tr><td colspan="2"><b>Codes</b> from </td><td/><td colspan="2"><b>Codes</b> from </td><td><b>Practitioner.name.use</b></td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Nom_famille</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Practitioner.name.family</td><td style="border-left-width: 0px"/><td>official</td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Prénoms</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">Practitioner.name.given</td><td style="border-left-width: 0px"/><td/><td>L'élément PN13 contient une liste de prénoms difficile à parser pour en extraire les différents prénoms à mettre dans une répétition de given en FHIR</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Initiales</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  </text>
+  <url value="https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap"/>
+  <version value="0.1.0"/>
+  <name value="FrPN13FHIRMedicationPrescriptionPractitionerIdentiteConceptMap"/>
+  <title value="Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant"/>
+  <status value="draft"/>
+  <date value="2025-08-12T15:44:18+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <description value="ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec d'autres éléments qu'uniquement l'identifiant"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <sourceUri value="https://interopsante.org/pn13/xsd"/>
+  <targetUri value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"/>
+  <group>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant"/>
+      <target>
+        <code value="Practitioner.identifier.value"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification"/>
+      <target>
+        <code value="Practitioner.identifier.system"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le domaine d'identification PN13 doit être exprimé sous le format uri pour alimenter patient.identifer.system. Par exemple, les domaines d'identification sous forme d'OID doivent être préfixés par urn:oid:"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Nom_usage"/>
+      <target>
+        <code value="Practitioner.name.family"/>
+        <equivalence value="equal"/>
+        <product>
+          <property value="Practitioner.name.use"/>
+          <value value="usual"/>
+        </product>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Prénom_usage"/>
+      <target>
+        <code value="Practitioner.name.given"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Civilité"/>
+      <target>
+        <code value="Practitioner.name.prefix"/>
+        <equivalence value="equivalent"/>
+        <comment value="Les civilités sont libres dans PN13 alors qu'elles proviennent d'un jeu de valeurs extensible dans le profil FrCorePractitioner"/>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Titre"/>
+      <target>
+        <code value="Practitioner.name.suffix"/>
+        <equivalence value="equivalent"/>
+        <comment value="Les titres sont libres dans PN13 alors qu'ils proviennent d'un jeu de valeurs extensible dans le profil FrCorePractitioner"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Nom_famille"/>
+      <target>
+        <code value="Practitioner.name.family"/>
+        <equivalence value="equal"/>
+        <product>
+          <property value="Practitioner.name.use"/>
+          <value value="official"/>
+        </product>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Prénoms"/>
+      <target>
+        <code value="Practitioner.name.given"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément PN13 contient une liste de prénoms difficile à parser pour en extraire les différents prénoms à mettre dans une répétition de given en FHIR"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <element>
+      <code value="Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Initiales"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
