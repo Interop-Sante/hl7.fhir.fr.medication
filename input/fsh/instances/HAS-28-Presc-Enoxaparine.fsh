@@ -25,6 +25,7 @@ Usage: #inline
 Instance: medicationrequest-HAS-28-Presc-Enoxaparine
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
+Description: "ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order

@@ -1,6 +1,7 @@
 Instance: HAS-27-1-Metformine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METFORMINE 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-27-1-Metformine
 

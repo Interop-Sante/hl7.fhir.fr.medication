@@ -7,6 +7,7 @@ Usage: #example
 Instance: medicationrequest-HAS-22-Presc-Prednisolone
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
+Description: "PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * status = #active
 * intent = #order

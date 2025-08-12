@@ -1,6 +1,7 @@
 Instance: HAS-18-Presc-Budesonide-MV
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Préparation pour nébuliseur ultrasonique: 3 mL Eau Pour Preparation Injectable + 1 récipient unidose ( soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
 * type = #searchset
 * entry[0].resource = medication-HAS-18-Presc-BudesonideComp
 * entry[+].resource = medicationrequest-HAS-18-Presc-Budesonide

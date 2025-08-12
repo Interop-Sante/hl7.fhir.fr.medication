@@ -1,6 +1,7 @@
 Instance: HAS-25-NOVORAPID
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "NOVORAPID Flexpen® 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-25-NOVORAPID
 

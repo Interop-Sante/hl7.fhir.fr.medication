@@ -1,6 +1,7 @@
 Instance: HAS-29-Presc-Enoxaparine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible."
 * type = #searchset
 * entry[0].resource = medication-HAS-29-Presc-Enoxaparine
 * entry[+].resource = medicationrequest-HAS-29-Presc-Enoxaparine

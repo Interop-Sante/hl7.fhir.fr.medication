@@ -1,6 +1,7 @@
 Instance: HAS-20-Presc-Hydrocortisone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-20-Presc-Hydrocortisone
 

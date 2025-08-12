@@ -1,6 +1,7 @@
 Instance: MultiLine-Presc-Sucralfate-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Paracetamol 2h après Sucralfate"
 * type = #searchset
 * entry[0].resource = medicationrequest-MultiLine-Presc-Sucralfate
 * entry[+].resource = medicationrequest-MultiLine-Presc-Paracetamol

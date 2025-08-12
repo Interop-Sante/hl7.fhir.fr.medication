@@ -1,6 +1,7 @@
 Instance: HAS-26-Diazepam
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "DIAZEPAM 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-26-Diazepam
 

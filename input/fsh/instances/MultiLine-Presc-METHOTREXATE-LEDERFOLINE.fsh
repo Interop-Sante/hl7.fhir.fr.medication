@@ -1,6 +1,7 @@
 Instance: MultiLine-Presc-METHOTREXATE-LEDERFOLINE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METHOTREX et LEDERFOLINE à prendre en même temps"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-METHOTREXATE
 * entry[+].resource = medicationrequest-Presc-LEDERFOLINE

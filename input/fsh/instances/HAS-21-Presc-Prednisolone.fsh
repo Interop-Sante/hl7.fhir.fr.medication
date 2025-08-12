@@ -1,6 +1,7 @@
 Instance: HAS-21-Presc-Prednisolone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-21-Presc-Prednisolone
 
