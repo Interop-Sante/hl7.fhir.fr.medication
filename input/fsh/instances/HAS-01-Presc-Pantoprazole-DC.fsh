@@ -1,7 +1,7 @@
 Instance: HAS-01-Presc-Pantoprazole-DC
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "DC: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
+Description: "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC"
 * type = #searchset
 * entry[0].resource = medication-HAS-1-Presc-Pantoprazole-DC
 * entry[+].resource = medicationrequest-HAS-1-Presc-Pantoprazole-DC

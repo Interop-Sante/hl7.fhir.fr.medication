@@ -1,6 +1,7 @@
-Instance: HAS-2-Presc-Fluindione
+Instance: HAS-02-Presc-Fluindione
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-2-Presc-Fluindione
 

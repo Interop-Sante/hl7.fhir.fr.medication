@@ -1,6 +1,7 @@
-Instance: HAS-1-Presc-Pantoprazole-MV
+Instance: HAS-01-Presc-Pantoprazole-MV
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-1-Presc-Pantoprazole-MV
 
