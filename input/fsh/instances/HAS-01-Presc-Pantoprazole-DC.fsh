@@ -1,6 +1,7 @@
-Instance: HAS-1-Presc-Pantoprazole-DC
+Instance: HAS-01-Presc-Pantoprazole-DC
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "DC: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
 * type = #searchset
 * entry[0].resource = medication-HAS-1-Presc-Pantoprazole-DC
 * entry[+].resource = medicationrequest-HAS-1-Presc-Pantoprazole-DC
@@ -19,11 +20,10 @@ Instance: medicationrequest-HAS-1-Presc-Pantoprazole-DC
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* extension[posologieTextuelle].valueMarkdown = "40 mg le soir"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
 * medicationReference.reference = "#medication-HAS-1-Presc-Pantoprazole-DC"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
