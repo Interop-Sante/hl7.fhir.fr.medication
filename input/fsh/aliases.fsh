@@ -40,3 +40,6 @@ Alias: $PN13Schema-Posologie = https://interopsante.org/pn13/xsd/M_prescription_
 Alias: $FhirDosage = https://hl7.org/fhir/R4/dosage
 Alias: $FhirObservation = https://hl7.org/fhir/R4/observation
 
+
+// R5 aliases
+Alias: $medicationrequest-rendereddosageinstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction

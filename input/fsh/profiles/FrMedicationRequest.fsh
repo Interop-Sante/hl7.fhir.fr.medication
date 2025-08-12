@@ -8,6 +8,9 @@ Description: "French medication request profile"
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 
+* extension contains $medicationrequest-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
+* extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
+
 * extension contains fr-treatment-intent named treatmentIntent 0..1
 * extension[treatmentIntent] ^short = "overall treatment intent"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
