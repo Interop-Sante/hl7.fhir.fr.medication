@@ -1,5 +1,5 @@
 Profile: FRMedicationNonCompound
-Parent: Medication
+Parent: MedicationEuMpd
 Id: fr-medication-noncompound
 Title: "FR Medication Non Compound"
 Description: "Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."
