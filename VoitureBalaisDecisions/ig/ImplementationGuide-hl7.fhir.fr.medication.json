@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-08-12T14:34:38+00:00",
+  "date" : "2025-08-12T15:19:17+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -1056,6 +1056,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/eu-rendered-instruction"
+      },
+      "name" : "European extension for renderedDosageInstruction",
+      "description" : "Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Medication"
       }],
       "reference" : {
@@ -1392,9 +1404,10 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/HAS-1-Presc-Pantoprazole-DC"
+        "reference" : "Bundle/HAS-01-Presc-Pantoprazole-DC"
       },
-      "name" : "HAS-1-Presc-Pantoprazole-DC",
+      "name" : "HAS-01-Presc-Pantoprazole-DC",
+      "description" : "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1403,9 +1416,22 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/HAS-1-Presc-Pantoprazole-MV"
+        "reference" : "Bundle/HAS-01-Presc-Pantoprazole-MV"
       },
-      "name" : "HAS-1-Presc-Pantoprazole-MV",
+      "name" : "HAS-01-Presc-Pantoprazole-MV",
+      "description" : "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-02-Presc-Fluindione"
+      },
+      "name" : "HAS-02-Presc-Fluindione",
+      "description" : "FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1571,17 +1597,6 @@
         "reference" : "Bundle/HAS-19-Presc-Paracetamol"
       },
       "name" : "HAS-19-Presc-Paracetamol",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-2-Presc-Fluindione"
-      },
-      "name" : "HAS-2-Presc-Fluindione",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {

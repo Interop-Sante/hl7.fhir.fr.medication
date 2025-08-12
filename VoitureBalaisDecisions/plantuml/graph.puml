@@ -283,6 +283,7 @@ package IG #DDDDDD{
              MedicationRequest.extension => [None..None]
              MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
              MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
+             MedicationRequest.extension:posologieTextuelle => <&plus>[0..1]
              MedicationRequest.medication[x] => [None..None]
              MedicationRequest.medication[x]:medicationReference => [0..1]
              MedicationRequest.medication[x]:medicationCodeableConcept => [0..1]
@@ -396,10 +397,17 @@ package IG #DDDDDD{
      FRMedicationReconciliationMedicationStatement -[#black,dashed,thickness=2]-> FRMedicationStatementReconciliationProperties
      FRMedicationVirtual -[#black,dashed,thickness=2]-> FrDrugCharacteristic
      FRMedicationRequest -[#black,dashed,thickness=2]-> FrTeatmentIntent
+     FRMedicationRequest -[#black,dashed,thickness=2]-> EuRenderedInstruction
      FRMedicationRequest -[#black,dashed,thickness=2]-> FrAdditionalWhenValues
      FRMedicationRequest -[#black,dashed,thickness=2]-> FrBasisOfDoseComponent
      FRRequestGroupForPrescription -[#black,dashed,thickness=2]-> FrAdditionalActionRelationship
 
+        class EuRenderedInstruction{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class FrAdditionalActionRelationship{
 
           Extension.extension => [None..0]

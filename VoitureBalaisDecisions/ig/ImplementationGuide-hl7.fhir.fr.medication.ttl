@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-08-12T14:34:38+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-12T15:19:17+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1505,6 +1505,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/eu-rendered-instruction> ;
+         fhir:reference [ fhir:v "StructureDefinition/eu-rendered-instruction" ]
+       ] ;
+       fhir:name [ fhir:v "European extension for renderedDosageInstruction" ] ;
+       fhir:description [ fhir:v "Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Medication"
          ]
        ] ) ;
@@ -2013,10 +2031,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://hl7.fr/ig/fhir/medication/Bundle/HAS-1-Presc-Pantoprazole-DC> ;
-         fhir:reference [ fhir:v "Bundle/HAS-1-Presc-Pantoprazole-DC" ]
+         fhir:link <https://hl7.fr/ig/fhir/medication/Bundle/HAS-01-Presc-Pantoprazole-DC> ;
+         fhir:reference [ fhir:v "Bundle/HAS-01-Presc-Pantoprazole-DC" ]
        ] ;
-       fhir:name [ fhir:v "HAS-1-Presc-Pantoprazole-DC" ] ;
+       fhir:name [ fhir:v "HAS-01-Presc-Pantoprazole-DC" ] ;
+       fhir:description [ fhir:v "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
@@ -2031,10 +2050,30 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://hl7.fr/ig/fhir/medication/Bundle/HAS-1-Presc-Pantoprazole-MV> ;
-         fhir:reference [ fhir:v "Bundle/HAS-1-Presc-Pantoprazole-MV" ]
+         fhir:link <https://hl7.fr/ig/fhir/medication/Bundle/HAS-01-Presc-Pantoprazole-MV> ;
+         fhir:reference [ fhir:v "Bundle/HAS-01-Presc-Pantoprazole-MV" ]
        ] ;
-       fhir:name [ fhir:v "HAS-1-Presc-Pantoprazole-MV" ] ;
+       fhir:name [ fhir:v "HAS-01-Presc-Pantoprazole-MV" ] ;
+       fhir:description [ fhir:v "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Bundle/HAS-02-Presc-Fluindione> ;
+         fhir:reference [ fhir:v "Bundle/HAS-02-Presc-Fluindione" ]
+       ] ;
+       fhir:name [ fhir:v "HAS-02-Presc-Fluindione" ] ;
+       fhir:description [ fhir:v "FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
@@ -2305,24 +2344,6 @@
          fhir:reference [ fhir:v "Bundle/HAS-19-Presc-Paracetamol" ]
        ] ;
        fhir:name [ fhir:v "HAS-19-Presc-Paracetamol" ] ;
-       fhir:example [
-         a fhir:canonical ;
-         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
-         fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Bundle"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://hl7.fr/ig/fhir/medication/Bundle/HAS-2-Presc-Fluindione> ;
-         fhir:reference [ fhir:v "Bundle/HAS-2-Presc-Fluindione" ]
-       ] ;
-       fhir:name [ fhir:v "HAS-2-Presc-Fluindione" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;

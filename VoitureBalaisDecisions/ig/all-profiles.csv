@@ -60,6 +60,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FrSimpleQuantityMedication","Quantity.code","Quantity.code","","","",1,1,"","","Y","code {[]} {[]}
 ","Coded form of the unit","A computer processable form of the unit in some unit representation system.","UCUM or EDQM code required.","Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.","","","","","","","",,,,,"",,,,"Quantity.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"eu-rendered-instruction","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","European extension for renderedDosageInstruction","Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"eu-rendered-instruction","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"eu-rendered-instruction","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"eu-rendered-instruction","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://hl7.fr/ig/fhir/medication/StructureDefinition/eu-rendered-instruction""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"eu-rendered-instruction","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","markdown {[]} {[]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
 "fr-additional-action-relationship","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","Additional relatedAction relationship","Extension to specify relationship between action in a RequestGroup. If present, RequestGroup.action.relatedAction.relationship shall be concurrent","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -770,6 +785,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "fr-inpatient-medicationrequest","MedicationRequest.extension:treatmentIntent.value[x].text","MedicationRequest.extension.value[x].text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"fr-inpatient-medicationrequest","MedicationRequest.extension:posologieTextuelle","MedicationRequest.extension","posologieTextuelle","","",0,1,"","","","Extension {[CanonicalType[https://hl7.fr/ig/fhir/medication/StructureDefinition/eu-rendered-instruction]]} {[]}
+","European extension for renderedDosageInstruction","Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "fr-inpatient-medicationrequest","MedicationRequest.modifierExtension","MedicationRequest.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -3150,6 +3169,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "fr-medicationrequest","MedicationRequest.extension:treatmentIntent.value[x].text","MedicationRequest.extension.value[x].text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"fr-medicationrequest","MedicationRequest.extension:posologieTextuelle","MedicationRequest.extension","posologieTextuelle","","",0,1,"","","","Extension {[CanonicalType[https://hl7.fr/ig/fhir/medication/StructureDefinition/eu-rendered-instruction]]} {[]}
+","European extension for renderedDosageInstruction","Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "fr-medicationrequest","MedicationRequest.modifierExtension","MedicationRequest.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.

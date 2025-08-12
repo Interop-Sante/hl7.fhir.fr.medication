@@ -10,7 +10,7 @@
   <name value="MED"/>
   <title value="Guide d'implémentation du médicament"/>
   <status value="draft"/>
-  <date value="2025-08-12T14:34:38+00:00"/>
+  <date value="2025-08-12T15:19:17+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -849,6 +849,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/eu-rendered-instruction"/>
+      </reference>
+      <name value="European extension for renderedDosageInstruction"/>
+      <description value="Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Medication"/>
       </extension>
       <reference>
@@ -1157,9 +1168,10 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/HAS-1-Presc-Pantoprazole-DC"/>
+        <reference value="Bundle/HAS-01-Presc-Pantoprazole-DC"/>
       </reference>
-      <name value="HAS-1-Presc-Pantoprazole-DC"/>
+      <name value="HAS-01-Presc-Pantoprazole-DC"/>
+      <description value="PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC"/>
       <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
     </resource>
     <resource>
@@ -1167,9 +1179,21 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/HAS-1-Presc-Pantoprazole-MV"/>
+        <reference value="Bundle/HAS-01-Presc-Pantoprazole-MV"/>
       </reference>
-      <name value="HAS-1-Presc-Pantoprazole-MV"/>
+      <name value="HAS-01-Presc-Pantoprazole-MV"/>
+      <description value="PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-02-Presc-Fluindione"/>
+      </reference>
+      <name value="HAS-02-Presc-Fluindione"/>
+      <description value="FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"/>
       <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
     </resource>
     <resource>
@@ -1320,16 +1344,6 @@
         <reference value="Bundle/HAS-19-Presc-Paracetamol"/>
       </reference>
       <name value="HAS-19-Presc-Paracetamol"/>
-      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/HAS-2-Presc-Fluindione"/>
-      </reference>
-      <name value="HAS-2-Presc-Fluindione"/>
       <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
     </resource>
     <resource>
