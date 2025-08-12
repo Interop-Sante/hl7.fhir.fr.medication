@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-code> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-medication-code"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs fr-medication-code</b></p><a name=\"fr-medication-code\"> </a><a name=\"hcfr-medication-code\"> </a><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <code>http://data.esante.gouv.fr/ansm/medicament/UCD</code></li><li>Inclut tous les codes définis dans <code>http://data.esante.gouv.fr/ansm/medicament/codeSMS</code></li><li>Inclut tous les codes définis dans <code>http://data.esante.gouv.fr/ansm/medicament/substance</code></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-code"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FRMedicationCodes"] ; # 
+  fhir:title [ fhir:v "value set Interop'Santé - Codes identifiant les médicaments"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-08-12T14:34:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v false] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/UCD"^^xsd:anyURI ]
+     ] [
+       fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/codeSMS"^^xsd:anyURI ]
+     ] [
+       fhir:system [ fhir:v "http://data.esante.gouv.fr/ansm/medicament/substance"^^xsd:anyURI ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

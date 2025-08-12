@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-medication-reconciliation-status"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem fr-medication-reconciliation-status</b></p><a name=\"fr-medication-reconciliation-status\"> </a><a name=\"hcfr-medication-reconciliation-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This  code system <code>https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\">10000001<a name=\"fr-medication-reconciliation-status-10000001\"> </a></td><td>Continué</td><td>La spécialité et la posologie de la ligne du Traitement Courant sont identiques à celles de la ligne du traitement antérieur (Bilan Médicamenteux).</td></tr><tr><td style=\"white-space:nowrap\">10000002<a name=\"fr-medication-reconciliation-status-10000002\"> </a></td><td>Équivalence</td><td>La ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie dans le Traitement Courant, mais avec un médicament équivalent. Il s'agit souvent de substituer la spécialité du traitement antérieur par la spécialité au Livret de l'établissement.</td></tr><tr><td style=\"white-space:nowrap\">10000003<a name=\"fr-medication-reconciliation-status-10000003\"> </a></td><td>Arrêté</td><td>La ligne de traitement antérieur (Bilan Médicamenteux) ne figure pas dans le Traitement Courant. Cette ligne de traitement a donc été arrêtée.</td></tr><tr><td style=\"white-space:nowrap\">10000004<a name=\"fr-medication-reconciliation-status-10000004\"> </a></td><td>Modifié</td><td>L'intention thérapeutique de la ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie mais avec modification du principe actif et/ou de la forme galénique et/ou de la voie d'adminisitration et/ou des modialités d'administration et/ou de la posologie.</td></tr><tr><td style=\"white-space:nowrap\">10000005<a name=\"fr-medication-reconciliation-status-10000005\"> </a></td><td>Initié</td><td>La ligne du traitement courant ne figure pas dans le traitement antérieur (Bilan Médicamenteux). Cette ligne de traitement a donc été initiée/démarrée.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FRMedicationReconciliationStatus"] ; # 
+  fhir:title [ fhir:v "code system Interop'Santé - Statut d'une ligne de traitement d'une FCT"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-08-12T14:34:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le système de codage du statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "10000001" ] ;
+     fhir:display [ fhir:v "Continué" ] ;
+     fhir:definition [ fhir:v "La spécialité et la posologie de la ligne du Traitement Courant sont identiques à celles de la ligne du traitement antérieur (Bilan Médicamenteux)." ]
+  ] [
+     fhir:code [ fhir:v "10000002" ] ;
+     fhir:display [ fhir:v "Équivalence" ] ;
+     fhir:definition [ fhir:v "La ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie dans le Traitement Courant, mais avec un médicament équivalent. Il s'agit souvent de substituer la spécialité du traitement antérieur par la spécialité au Livret de l'établissement." ]
+  ] [
+     fhir:code [ fhir:v "10000003" ] ;
+     fhir:display [ fhir:v "Arrêté" ] ;
+     fhir:definition [ fhir:v "La ligne de traitement antérieur (Bilan Médicamenteux) ne figure pas dans le Traitement Courant. Cette ligne de traitement a donc été arrêtée." ]
+  ] [
+     fhir:code [ fhir:v "10000004" ] ;
+     fhir:display [ fhir:v "Modifié" ] ;
+     fhir:definition [ fhir:v "L'intention thérapeutique de la ligne du traitement antérieur (Bilan Médicamenteux) est poursuivie mais avec modification du principe actif et/ou de la forme galénique et/ou de la voie d'adminisitration et/ou des modialités d'administration et/ou de la posologie." ]
+  ] [
+     fhir:code [ fhir:v "10000005" ] ;
+     fhir:display [ fhir:v "Initié" ] ;
+     fhir:definition [ fhir:v "La ligne du traitement courant ne figure pas dans le traitement antérieur (Bilan Médicamenteux). Cette ligne de traitement a donc été initiée/démarrée." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
