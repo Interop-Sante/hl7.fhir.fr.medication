@@ -1,5 +1,5 @@
 Profile: FRMedicationRequest
-Parent: MedicationRequest
+Parent: MedicationRequestEuMpd
 Id: fr-medicationrequest
 Title: "FR Medication Request"
 Description: "French medication request profile"
