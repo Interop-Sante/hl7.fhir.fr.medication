@@ -1,6 +1,7 @@
-Instance: HAS-8-2-Presc-Paracetamol
+Instance: HAS-08-2-Presc-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "PARACETAMOL 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C."
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-8-2-Presc-Paracetamol
 

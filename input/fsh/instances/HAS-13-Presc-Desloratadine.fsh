@@ -1,6 +1,7 @@
 Instance: HAS-13-Presc-Desloratadine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "DESLORATADINE 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-13-Presc-Desloratadine
 

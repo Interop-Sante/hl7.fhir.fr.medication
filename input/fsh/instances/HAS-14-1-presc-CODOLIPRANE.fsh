@@ -1,6 +1,7 @@
 Instance: HAS-14-1-Presc-CODOLIPRANE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-14-1-Presc-CODOLIPRANE
 

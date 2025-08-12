@@ -1,6 +1,7 @@
-Instance: HAS-7-Presc-Paracetamol
+Instance: HAS-07-Presc-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-7-Presc-Paracetamol
 

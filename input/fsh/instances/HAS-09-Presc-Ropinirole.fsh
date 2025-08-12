@@ -1,6 +1,7 @@
-Instance: HAS-9-Presc-Ropinirole
+Instance: HAS-09-Presc-Ropinirole
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "ROPINIROLE comprimé 1mg : 1 comprimé à 7h, 12h 18h"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-9-Presc-Roprinirole
 

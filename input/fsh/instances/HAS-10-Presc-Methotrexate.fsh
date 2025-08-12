@@ -1,6 +1,7 @@
 Instance: HAS-10-Presc-Methotrexate
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METHOTREXATE 10 mg comprimé : 1 comprimé 1 fois par semaine, le mardi"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-10-Presc-Methotrexate
 

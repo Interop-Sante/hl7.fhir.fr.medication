@@ -1,6 +1,7 @@
-Instance: HAS-5-2-Presc-ACTISKENAN
+Instance: HAS-05-2-Presc-ACTISKENAN
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-5-2-Presc-ACTISKENAN
 

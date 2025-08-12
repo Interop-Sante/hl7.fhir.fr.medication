@@ -1,6 +1,7 @@
-Instance: HAS-8-1-Presc-Betamethasone
+Instance: HAS-08-1-Presc-Betamethasone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-8-1-Presc-Betamethasone
 

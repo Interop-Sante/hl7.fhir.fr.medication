@@ -1,6 +1,7 @@
 Instance: HAS-12-3-Presc-Enoxaparine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"
 * type = #searchset
 * entry[0].resource = medication-HAS-12-3-Presc-Enoxaparine
 * entry[+].resource = medicationrequest-HAS-12-3-Presc-Enoxaparine

@@ -1,6 +1,7 @@
 Instance: HAS-15-Presc-Morphine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-15-Presc-Morphine
 

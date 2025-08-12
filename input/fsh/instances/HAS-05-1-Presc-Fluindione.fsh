@@ -1,6 +1,7 @@
-Instance: HAS-5-1-Presc-Fluindione
+Instance: HAS-05-1-Presc-Fluindione
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "FLUINDIONE 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé)"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-5-1-Presc-Fluindione
 

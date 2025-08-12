@@ -1,6 +1,7 @@
 Instance: HAS-12-2-Presc-Methotrexate
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-12-2-Presc-Methotrexate
 

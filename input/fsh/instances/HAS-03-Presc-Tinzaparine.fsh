@@ -1,6 +1,7 @@
-Instance: HAS-3-Presc-Tinzaparine
+Instance: HAS-03-Presc-Tinzaparine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée"
 * type = #searchset
 * entry[0].resource = medication-HAS-3-Presc-Tinzaparine
 * entry[+].resource = medicationrequest-HAS-3-Presc-Tinzaparine

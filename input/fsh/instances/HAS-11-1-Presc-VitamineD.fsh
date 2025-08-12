@@ -1,6 +1,7 @@
 Instance: HAS-11-1-Presc-VitamineD
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "VITAMINE D 100 000 UI solution buvable : 1 ampoule, le premier jour de chaque mois"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-11-1-Presc-VitamineD
 

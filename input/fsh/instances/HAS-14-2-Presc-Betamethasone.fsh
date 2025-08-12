@@ -1,6 +1,7 @@
 Instance: HAS-14-2-Presc-Betamethasone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter. Ne pas dépasser 2 applications par jour"
 * type = #searchset
 * entry[0].resource = medicationrequest-HAS-14-2-Presc-Betamethasone
 

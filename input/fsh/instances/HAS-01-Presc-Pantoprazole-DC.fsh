@@ -20,7 +20,7 @@ Instance: medicationrequest-HAS-1-Presc-Pantoprazole-DC
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
-* extension[posologieTextuelle].valueMarkdown = "40 mg le soir"
+* extension[renderedDosageInstruction].valueMarkdown = "40 mg le soir"
 * status = #active
 * intent = #order
 * priority = #routine
