@@ -34,7 +34,7 @@
   <name value="FRInpatientMedicationRequest"/>
   <title value="FR Inpatient MedicationRequest"/>
   <status value="draft"/>
-  <date value="2025-08-12T15:19:17+00:00"/>
+  <date value="2025-08-12T15:54:36+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -373,6 +373,50 @@
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
+    <element id="MedicationRequest.extension:renderedDosageInstruction">
+      <path value="MedicationRequest.extension"/>
+      <sliceName value="renderedDosageInstruction"/>
+      <short value="Full representation of the dosage instructions"/>
+      <definition value="Optional Extension Element - found in all resources."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
     <element id="MedicationRequest.extension:treatmentIntent">
       <path value="MedicationRequest.extension"/>
       <sliceName value="treatmentIntent"/>
@@ -690,42 +734,6 @@
         <identity value="orim"/>
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
       </mapping>
-    </element>
-    <element id="MedicationRequest.extension:posologieTextuelle">
-      <path value="MedicationRequest.extension"/>
-      <sliceName value="posologieTextuelle"/>
-      <short value="European extension for renderedDosageInstruction"/>
-      <definition value="Equivalent to FHIR R5 MedicationRequest.renderedDosageInstruction"/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/eu-rendered-instruction"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="MedicationRequest.modifierExtension">
       <path value="MedicationRequest.modifierExtension"/>
