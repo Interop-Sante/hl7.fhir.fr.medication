@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for MED</h1>
- <p>Generated Wed Aug 13 16:14:21 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = <a href="https://hl7.fr/ig/fhir/medication">https://hl7.fr/ig/fhir/medication</a> (<a href="https://hl7.fr/ig/fhir/medication/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Wed Aug 13 16:49:34 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = <a href="https://hl7.fr/ig/fhir/medication">https://hl7.fr/ig/fhir/medication</a> (<a href="https://hl7.fr/ig/fhir/medication/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.13</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.fr.medication, Canonical = https://hl7.fr/ig/fhir/medication</td></tr>
@@ -16573,13 +16573,13 @@ hl7.terminology.r4#6.0.2:     <a href="http://terminology.hl7.org/6.0.2/CodeSyst
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[0]&#8203;.constraint[0]&#8203;.source (l1&#8203;/c18718)</b></td><td><b>error</b></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Quantity)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE</span></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[0]&#8203;.constraint[0]&#8203;.source (l1&#8203;/c18740)</b></td><td><b>error</b></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Quantity)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[0]&#8203;.constraint[0] (l1&#8203;/c18719)</b></td><td><b>error</b></td><td><b>The invariant ele-1 defined in the differential must have no source, or the source must be the same as the profile (Quantity vs https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">ED_INVARIANT_DIFF_NO_SOURCE</span></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[0]&#8203;.constraint[0] (l1&#8203;/c18741)</b></td><td><b>error</b></td><td><b>The invariant ele-1 defined in the differential must have no source, or the source must be the same as the profile (Quantity vs https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">ED_INVARIANT_DIFF_NO_SOURCE</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[0]&#8203;.constraint[3] (l1&#8203;/c10099)</b></td><td><b>error</b></td><td><b>Error in constraint 'fr-med-smpl-quant-1' with expression 'code.exists() implies (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`)': Error evaluating FHIRPath expression: The name 'http://standardterms.edqm.eu' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Quantity] (@char 33)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">ED_INVARIANT_EXPRESSION_ERROR</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[0]&#8203;.constraint[3] (l1&#8203;/c10121)</b></td><td><b>error</b></td><td><b>Error in constraint 'fr-med-smpl-quant-1' with expression 'code.exists() implies (system.exists() and (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`))': Error evaluating FHIRPath expression: The name 'http://standardterms.edqm.eu' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Quantity] (@char 54)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">ED_INVARIANT_EXPRESSION_ERROR</span></td>
    </tr>
 </table>
 <hr/>
@@ -21844,7 +21844,7 @@ hl7.terminology.r4#6.0.2:     <a href="http://terminology.hl7.org/6.0.2/CodeSyst
 <h2>ED_INVARIANT_EXPRESSION_ERROR</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-FrSimpleQuantityMedication.html">fsh-generated/resources/StructureDefinition-FrSimpleQuantityMedication.json</a></td><td><b>Error in constraint 'fr-med-smpl-quant-1' with expression 'code.exists() implies (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`)': Error evaluating FHIRPath expression: The name 'http://standardterms.edqm.eu' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Quantity] (@char 33)</b></td>
+     <td><a href="StructureDefinition-FrSimpleQuantityMedication.html">fsh-generated/resources/StructureDefinition-FrSimpleQuantityMedication.json</a></td><td><b>Error in constraint 'fr-med-smpl-quant-1' with expression 'code.exists() implies (system.exists() and (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`))': Error evaluating FHIRPath expression: The name 'http://standardterms.edqm.eu' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Quantity] (@char 54)</b></td>
    </tr>
 </table>
 <hr/>

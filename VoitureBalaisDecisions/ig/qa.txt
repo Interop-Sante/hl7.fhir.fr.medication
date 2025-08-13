@@ -3,7 +3,7 @@ MED : Validation Results
 
 err = 1257, warn = 2356, info = 120
 IG Publisher Version: 2.0.13
-Generated Wed Aug 13 16:14:21 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = https://hl7.fr/ig/fhir/medication)
+Generated Wed Aug 13 16:49:34 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = https://hl7.fr/ig/fhir/medication)
  Build Errors : 1308 / 3 / 0
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Bundle-HAS-01-Presc-Pantoprazole-DC : 15 / 8 / 6
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Bundle-HAS-01-Presc-Pantoprazole-MV : 8 / 5 / 3
@@ -5169,7 +5169,7 @@ ERROR: MedicationRequest.text.div: Hyperlink 'Practitioner/smart-Practitioner-71
 == fsh-generated/resources/StructureDefinition-FrSimpleQuantityMedication.json ==
 ERROR: StructureDefinition/FrSimpleQuantityMedication: StructureDefinition.differential.element[0].constraint[0].source: Canonical URLs must be absolute URLs if they are not fragment references (Quantity)
 ERROR: StructureDefinition/FrSimpleQuantityMedication: StructureDefinition.differential.element[0].constraint[0]: The invariant ele-1 defined in the differential must have no source, or the source must be the same as the profile (Quantity vs https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication)
-ERROR: StructureDefinition/FrSimpleQuantityMedication: StructureDefinition.snapshot.element[0].constraint[3]: Error in constraint 'fr-med-smpl-quant-1' with expression 'code.exists() implies (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`)': Error evaluating FHIRPath expression: The name 'http://standardterms.edqm.eu' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Quantity] (@char 33)
+ERROR: StructureDefinition/FrSimpleQuantityMedication: StructureDefinition.snapshot.element[0].constraint[3]: Error in constraint 'fr-med-smpl-quant-1' with expression 'code.exists() implies (system.exists() and (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`))': Error evaluating FHIRPath expression: The name 'http://standardterms.edqm.eu' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Quantity] (@char 54)
 == fsh-generated/resources/StructureDefinition-fr-additional-action-relationship.json ==
 == fsh-generated/resources/StructureDefinition-fr-additional-when-values.json ==
 WARNING: StructureDefinition.where(url = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-when-values'): The Implementation Guide contains no examples for this extension

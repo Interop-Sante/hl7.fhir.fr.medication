@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "FrSimpleQuantityMedication"] ; # 
   fhir:title [ fhir:v "SimpleQuantity with UCUM or EDQM codes or code not used"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-08-13T16:08:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-13T16:43:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -109,7 +109,7 @@
          fhir:key [ fhir:v "fr-med-smpl-quant-1" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "system SHALL be UCUM or EDQM if code is used" ] ;
-         fhir:expression [ fhir:v "code.exists() implies (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`)" ] ;
+         fhir:expression [ fhir:v "code.exists() implies (system.exists() and (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`))" ] ;
          fhir:source [
            fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"^^xsd:anyURI ;
            fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication>
@@ -443,7 +443,7 @@
          fhir:key [ fhir:v "fr-med-smpl-quant-1" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "system SHALL be UCUM or EDQM if code is used" ] ;
-         fhir:expression [ fhir:v "code.exists() implies (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`)" ] ;
+         fhir:expression [ fhir:v "code.exists() implies (system.exists() and (system = `http://standardterms.edqm.eu` or system = `http://unitsofmeasure.org`))" ] ;
          fhir:source [
            fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"^^xsd:anyURI ;
            fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication>
