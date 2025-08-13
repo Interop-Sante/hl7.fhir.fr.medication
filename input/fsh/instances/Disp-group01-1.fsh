@@ -1,6 +1,7 @@
 Instance: Disp-group01-1
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Délivrance reglobalisée, cumulant 3 dispensations nominatives"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/event-basedOn"
 * extension[=].valueReference.reference = "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/event-basedOn"

@@ -1,6 +1,7 @@
 Instance: Disp-EFFERALGAN-presc-DC
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Dispensation complète de Paracétamol sur une prescription d'EFFERALGAN"
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-EFFERALGAN"
 * subject.reference = "Patient/14602"

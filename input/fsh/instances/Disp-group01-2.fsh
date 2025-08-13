@@ -1,6 +1,7 @@
 Instance: Disp-group01-2
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Délivrance reglobalisée, cumulant 3 dispensations nominatives - Option 2"
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
 * subject.reference = "Group/InLine-patient-group01"

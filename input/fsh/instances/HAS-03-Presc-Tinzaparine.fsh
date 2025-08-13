@@ -16,8 +16,6 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000091620 "tinzaparine sodique"
 * ingredient.strength.numerator.value = 10000
 * ingredient.strength.numerator.unit = "UI anti-Xa"
-* ingredient.strength.numerator.system = $unitsofmeasure
-* ingredient.strength.numerator.code = #[anti'Xa'U]
 * ingredient.strength.denominator.value = 0.5
 * ingredient.strength.denominator.unit = "ml"
 * ingredient.strength.denominator.system = $unitsofmeasure
@@ -42,5 +40,3 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20066000 "Voie sous-cutanée"
 * dosageInstruction.doseAndRate.doseQuantity.value = 12000
 * dosageInstruction.doseAndRate.doseQuantity.unit = "UI anti-Xa"
-* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate.doseQuantity.code = #[anti'Xa'U]

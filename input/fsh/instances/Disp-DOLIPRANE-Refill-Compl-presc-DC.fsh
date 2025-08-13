@@ -1,6 +1,7 @@
 Instance: Disp-DOLIPRANE-Refill-Compl-presc-DC
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Prescription complémentaire et finale de DOLIPRANE sur une prescription de Paracétamol"
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
 * subject.reference = "Patient/14603"

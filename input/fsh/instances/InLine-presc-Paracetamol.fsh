@@ -1,6 +1,7 @@
 Instance: InLine-presc-Paracetamol1
 InstanceOf: FRInpatientMedicationRequest
 Usage: #example
+Description: "Prescription de Paracétamol pour exemple de dispensation"
 * status = #active
 * intent = #order
 * medicationReference.reference = "Medication/InLine-med-Paracetamol"
