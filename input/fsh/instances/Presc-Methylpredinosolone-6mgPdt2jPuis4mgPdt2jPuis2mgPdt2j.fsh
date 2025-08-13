@@ -1,6 +1,7 @@
 Instance: Presc-Methylpredinosolone-DosesEvolutives
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Méthylprednisolone à 7h 6mg pdt 2j puis 4mg pdt 2j puis 2 mg pdt 2 j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Methylpredinosolone-DosesEvolutives
 * entry[+].resource = medicationrequest-Presc-Methylpredinosolone-DosesEvolutives

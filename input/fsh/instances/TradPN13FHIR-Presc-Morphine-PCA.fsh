@@ -1,6 +1,7 @@
 Instance: TradPN13FHIR-Presc-Morphine-PCA
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30 - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-Trad-Presc-Morphine-PCA
 * entry[+].resource = medicationrequest-Trad-Presc-Morphine-PCA

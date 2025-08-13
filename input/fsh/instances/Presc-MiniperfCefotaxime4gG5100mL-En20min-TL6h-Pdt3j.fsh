@@ -1,6 +1,7 @@
 Instance: Presc-MiniperfCefotaxime-En20min-Pdt3j
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Perfusion Céfotaxime + glucose 4g/20mn toutes les 6h pdt 3j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-MiniperfCefotaxime-En20min-Pdt3j
 * entry[+].resource = medication-2-Presc-MiniperfCefotaxime-En20min-Pdt3j

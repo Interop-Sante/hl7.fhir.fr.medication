@@ -2,6 +2,7 @@ Instance: TradPN13FHIR-Presc-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de UCD-2 
 Usage: #example
+Description: "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - Si douleur :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-TradPN13FHIR-Presc-Paracetamol
 * entry[+].resource = practitioner-TradPN13FHIR-Presc-Paracetamol

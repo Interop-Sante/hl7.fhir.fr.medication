@@ -1,6 +1,7 @@
 Instance: Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-ParacetamolCodeine-500mg30mg
 * entry[+].resource = medicationrequest-Presc-ParacetamolCodeine-500mg30mg

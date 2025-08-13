@@ -9,11 +9,11 @@ Instance: medicationrequest-HAS-5-2-Presc-ACTISKENAN
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* extension[renderedDosageInstruction].valueMarkdown = "dix milligrammes par jour pendant sept jours"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours"
 * medicationCodeableConcept = $UCD#3400892083926 "ACTISKENAN 10MG GELU"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

@@ -1,6 +1,7 @@
 Instance: Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-PerfDobutamine-Qsp40mL
 * entry[+].resource = medication-2-Presc-PerfDobutamine-Qsp40mL

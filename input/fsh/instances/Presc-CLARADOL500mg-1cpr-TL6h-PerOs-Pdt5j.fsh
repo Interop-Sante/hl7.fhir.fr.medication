@@ -1,6 +1,7 @@
 Instance: Presc-CLARADOL-TL6h-MedCodeableConcept
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CLARADOL 1 cpr toute les 6h"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-CLARADOL-TL6h-MedCodeableConcept
 

@@ -1,6 +1,7 @@
 Instance: Presc-DOLIPRANE-20DoseParKG
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "DOLIPRANE BUV 20 dose_kg à 7h et 18h"
 * type = #searchset
 * entry[0].resource = medication-Presc-DOLIPRANE-20DoseParKG
 * entry[+].resource = medicationrequest-Presc-DOLIPRANE-20DoseParKG

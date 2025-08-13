@@ -1,6 +1,7 @@
 Instance: Presc-Paracetamol-TL6h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "paracétamol, 500 mg toutes les 6 h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Paracetamol-TL6h
 * entry[+].resource = medicationrequest-Presc-Paracetamol-TL6h

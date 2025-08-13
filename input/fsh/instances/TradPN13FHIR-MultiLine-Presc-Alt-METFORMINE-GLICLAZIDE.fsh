@@ -1,6 +1,7 @@
 Instance: TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METFORMINE ou GLICLAZIDE en cas d'intolérance digestive à la METFORMINE - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE
 * entry[+].resource = medicationrequest-Trad-Presc-Alt-METFORMINE

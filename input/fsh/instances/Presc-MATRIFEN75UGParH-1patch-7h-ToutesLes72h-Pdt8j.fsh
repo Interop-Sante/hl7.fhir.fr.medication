@@ -1,6 +1,7 @@
 Instance: Presc-MATRIFEN-patch-TL72h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "MATRIFEN 75µg/h 1 patch 72h à 7h toutes les 72h"
 * type = #searchset
 * entry[0].resource = medication-Presc-MATRIFEN-patch-TL72h
 * entry[+].resource = medicationrequest-Presc-MATRIFEN-patch-TL72h

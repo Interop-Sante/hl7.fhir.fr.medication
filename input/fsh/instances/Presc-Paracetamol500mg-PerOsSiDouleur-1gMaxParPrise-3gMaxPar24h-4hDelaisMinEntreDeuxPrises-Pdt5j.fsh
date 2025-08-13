@@ -1,6 +1,7 @@
 Instance: Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
 * entry[+].resource = medicationrequest-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin

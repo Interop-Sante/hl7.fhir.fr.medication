@@ -1,6 +1,7 @@
 Instance: Presc-MV-PerfGl-NaCl-KCl
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Perf GL-NaCL-KCl 1 pche de 500ml en 12h"
 * type = #searchset
 * entry[0].resource = medication-Presc-MV-PerfGl-NaCl-KCl
 * entry[+].resource = medicationrequest-Presc-MV-PerfGl-NaCl-KCl

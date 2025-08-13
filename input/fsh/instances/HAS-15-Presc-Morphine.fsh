@@ -9,11 +9,11 @@ Instance: medicationrequest-HAS-15-Presc-Morphine
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* extension[renderedDosageInstruction].valueMarkdown = "une gélule le soir (à 20h) pendant huit jours"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"
 * medicationCodeableConcept = $Medicabase#MV00001636 "MORPHINE LP 10mg gélule microgranulé à libération prolongée"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

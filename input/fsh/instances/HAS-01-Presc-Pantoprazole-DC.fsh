@@ -24,6 +24,7 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
+* note.text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
 * medicationReference.reference = "#medication-HAS-1-Presc-Pantoprazole-DC"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

@@ -1,6 +1,7 @@
 Instance: Presc-NICOREETESKIN-patch
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "NICORETTESKIN 1 patch 15mg/16h à 7h pdt 2 sem"
 * type = #searchset
 * entry[0].resource = medication-Presc-NICOREETESKIN-patch
 * entry[+].resource = medicationrequest-Presc-NICOREETESKIN-patch

@@ -1,6 +1,7 @@
 Instance: Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Perfusion BIONOLYTE 500ml sur 12h à 10h et 22h pdt 5 jrs"
 * type = #searchset
 * entry[0].resource = medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 * entry[+].resource = medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
@@ -14,21 +15,6 @@ Usage: #inline
 * code.text = "BIONOLYTE G5, sol pr perf, flac 500 mL"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
-* ingredient[0].itemCodeableConcept = $SMS#100000078171 "glucose"
-* ingredient[=].itemCodeableConcept.text = "GLUCOSE"
-* ingredient[=].isActive = true
-* ingredient[=].strength.numerator = 50 'mg' "mg"
-* ingredient[=].strength.denominator = $unitsofmeasure#mL "mL"
-* ingredient[+].itemCodeableConcept = $SMS#100000092115 "clhorure de sodium"
-* ingredient[=].itemCodeableConcept.text = "SODIUM CHLORURE"
-* ingredient[=].isActive = true
-* ingredient[=].strength.numerator = 2 'g' "g"
-* ingredient[=].strength.denominator = 1 '1'
-* ingredient[+].itemCodeableConcept = $SMS#100000091807 "chlorure de potassium"
-* ingredient[=].itemCodeableConcept.text = "POTASSIUM CHLORURE"
-* ingredient[=].isActive = true
-* ingredient[=].strength.numerator = 1 'g' "g"
-* ingredient[=].strength.denominator = 1 '1'
 
 Instance: medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: FRInpatientMedicationRequest

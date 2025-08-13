@@ -1,6 +1,7 @@
 Instance: Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-PerfGl-NaCl-KCl-1l
 * entry[+].resource = medication-2-Presc-PerfGl-NaCl-KCl-1l

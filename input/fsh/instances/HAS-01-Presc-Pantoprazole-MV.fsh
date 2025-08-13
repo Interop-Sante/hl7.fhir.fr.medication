@@ -9,11 +9,11 @@ Instance: medicationrequest-HAS-1-Presc-Pantoprazole-MV
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* extension[renderedDosageInstruction].valueMarkdown = "40 mg le soir"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
 * medicationCodeableConcept = $Medicabase#MV00000792 "PANTOPRAZOLE 40 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

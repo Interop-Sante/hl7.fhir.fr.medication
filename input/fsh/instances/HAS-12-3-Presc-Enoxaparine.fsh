@@ -27,11 +27,11 @@ Instance: medicationrequest-HAS-12-3-Presc-Enoxaparine
 InstanceOf: FRInpatientMedicationRequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* extension[renderedDosageInstruction].valueMarkdown = "1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"
 * medicationReference.reference = "#medication-HAS-12-3-Presc-Enoxaparine"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

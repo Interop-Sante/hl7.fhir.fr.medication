@@ -1,6 +1,7 @@
 Instance: Presc-DIPROSONE-AppCut
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "DIPROSONE 1 application à 8h"
 * type = #searchset
 * entry[0].resource = medication-Presc-DIPROSONE-AppCut
 * entry[+].resource = medicationrequest-Presc-DIPROSONE-AppCut
@@ -42,9 +43,3 @@ Usage: #inline
 * dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate.type.text = "Ordered"
 * dosageInstruction.doseAndRate.doseQuantity = 1 '{appln}' "appln"
-* dosageInstruction.doseAndRate[0].type = $dose-rate-type#ordered "Ordered"
-* dosageInstruction.doseAndRate[=].type.text = "Ordered"
-* dosageInstruction.doseAndRate[=].doseQuantity.value = 1
-* dosageInstruction.doseAndRate[=].doseQuantity.unit = "Appln"
-* dosageInstruction.doseAndRate[=].doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate[=].doseQuantity.code = #{Appln}

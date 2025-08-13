@@ -1,6 +1,7 @@
 Instance: Presc-CLARADOL-TLMardisVendredis
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CLARADOL 1 cpr les mardis et vendredis à 18h"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-TLMardisVendredis
 

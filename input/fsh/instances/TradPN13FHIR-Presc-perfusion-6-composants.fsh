@@ -2,6 +2,7 @@ Instance: TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de Compound-6166 
 Usage: #example
+Description: "Perf  6composants en UCD en continu sur 12h00 par jour - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-TradPN13FHIR-Presc-perfusion-6-composants
 * entry[+].resource = practitioner-TradPN13FHIR-Presc-perfusion-6-composants

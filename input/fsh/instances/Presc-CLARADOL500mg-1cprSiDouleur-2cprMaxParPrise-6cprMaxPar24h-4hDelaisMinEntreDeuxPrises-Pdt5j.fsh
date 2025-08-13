@@ -1,6 +1,7 @@
 Instance: Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CLARADOL 1 cpr toutes les 4h si doubleur 2 cpr max par prise 6 cpr max par jour"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 

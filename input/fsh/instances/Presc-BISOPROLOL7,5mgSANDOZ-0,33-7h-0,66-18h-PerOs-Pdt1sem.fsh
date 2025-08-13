@@ -1,6 +1,7 @@
 Instance: Presc-BISOPROLOL-SANDOZ-DosesRationnelles
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "BISOPROLOL 1/3 de comprimé à 7h et 2/3 de comprimé à 18h"
 * type = #searchset
 * entry[0].resource = medication-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
 * entry[+].resource = medicationrequest-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
