@@ -2,7 +2,7 @@ Instance: TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de DC-2 
 Usage: #example
-Desription: "PARACETAMOL (Voie orale) si douleur:  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13"
+Description: "PARACETAMOL (Voie orale) si douleur:  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 * entry[+].resource = practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur
