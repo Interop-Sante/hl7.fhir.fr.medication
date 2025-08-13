@@ -45,5 +45,3 @@ Usage: #inline
 * dosageInstruction.doseAndRate[=].type.text = "Ordered"
 * dosageInstruction.doseAndRate[=].doseQuantity.value = 20
 * dosageInstruction.doseAndRate[=].doseQuantity.unit = "dose_kg"
-* dosageInstruction.doseAndRate[=].doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate[=].doseQuantity.code = #{dose_kg}

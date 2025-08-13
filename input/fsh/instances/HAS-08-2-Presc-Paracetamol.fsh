@@ -23,5 +23,5 @@ Usage: #inline
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
 * dosageInstruction.doseAndRate.doseQuantity.unit = "dose correspondant à la graduation de 7 kg"
-* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate.doseQuantity.code = #[dose_correspondant_graduation_7kg]
+* dosageInstruction.doseAndRate.doseQuantity.system = "https://bogussystem.eu"
+* dosageInstruction.doseAndRate.doseQuantity.code = #Grad7kg

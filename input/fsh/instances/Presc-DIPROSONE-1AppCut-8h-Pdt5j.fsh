@@ -42,4 +42,4 @@ Usage: #inline
 * dosageInstruction.route.text = "Voie cutanée"
 * dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate.type.text = "Ordered"
-* dosageInstruction.doseAndRate.doseQuantity = 1 '{appln}' "appln"
+* dosageInstruction.doseAndRate.doseQuantity = 1 "application"

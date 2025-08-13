@@ -23,7 +23,5 @@ Usage: #inline
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
 * dosageInstruction.doseAndRate.doseQuantity.unit = "Application"
-* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate.doseQuantity.code = #{Appln}
-* dosageInstruction.maxDosePerPeriod.numerator = 2 $unitsofmeasure#{Appln} "Application"
+* dosageInstruction.maxDosePerPeriod.numerator = 2 "Application"
 * dosageInstruction.maxDosePerPeriod.denominator = 1 'd' "jour"

@@ -16,8 +16,6 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000090152 "énoxaparine sodique"
 * ingredient.strength.numerator.value = 4000
 * ingredient.strength.numerator.unit = "UI"
-* ingredient.strength.numerator.system = $unitsofmeasure
-* ingredient.strength.numerator.code = #[UI]
 * ingredient.strength.denominator.value = 0.4
 * ingredient.strength.denominator.unit = "ml"
 * ingredient.strength.denominator.system = $unitsofmeasure
