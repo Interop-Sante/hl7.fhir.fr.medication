@@ -53,7 +53,6 @@
   <sch:pattern>
     <sch:title>f:MedicationRequest/f:dispenseRequest</sch:title>
     <sch:rule context="f:MedicationRequest/f:dispenseRequest">
-      <sch:assert test="count(f:initialFill) &lt;= 0">initialFill: maximum cardinality of 'initialFill' is 0</sch:assert>
       <sch:assert test="count(f:dispenseInterval) &lt;= 0">dispenseInterval: maximum cardinality of 'dispenseInterval' is 0</sch:assert>
       <sch:assert test="count(f:quantity) &lt;= 0">quantity: maximum cardinality of 'quantity' is 0</sch:assert>
       <sch:assert test="count(f:performer) &lt;= 0">performer: maximum cardinality of 'performer' is 0</sch:assert>
