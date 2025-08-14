@@ -160,10 +160,22 @@ Usage: #definition
 * group[=].element[=].target[=].product[0].property = #MedicationRequest.priority
 * group[=].element[=].target[=].product[=].value = "routine"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Fourniture
-* group[=].element[=].target[0].code = #MedicationRequest.medication[x].extension.valueBoolean
-* group[=].element[=].target[=].equivalence = #equal
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.medication[x].extension.url
-* group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-to-dispense"
+* group[=].element[=].target[0].code = #MedicationRequest.dispenseRequest.initialFill.quantity
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Fourniture
+* group[=].element[=].target[=].dependsOn[=].value = "false"
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.dispenseRequest.initialFill.quantity.value
+* group[=].element[=].target[=].product[=].value = "0"
+* group[=].element[=].target[+].code = #MedicationRequest.dispenseRequest.initialFill.quantity
+* group[=].element[=].target[=].equivalence = #disjoint
+* group[=].element[=].target[=].comment = "En l'absence d'autres indication, #MedicationRequest.dispenseRequest.initialFill n'est pas renseigné"
+* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Fourniture
+* group[=].element[=].target[=].dependsOn[=].value = "true"
+* group[=].element[=].target[+].code = #MedicationRequest.dispenseRequest.initialFill.quantity
+* group[=].element[=].target[=].equivalence = #disjoint
+* group[=].element[=].target[=].comment = "En l'absence d'autres indication, #MedicationRequest.dispenseRequest.initialFill n'est pas renseigné"
+* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Fourniture
+* group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur
 * group[=].element[=].target[0].code = #MedicationRequest.requester
 * group[=].element[=].target[=].equivalence = #relatedto
