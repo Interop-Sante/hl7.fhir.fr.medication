@@ -1,7 +1,7 @@
 Instance: Presc-DIPROSONE-AppCut
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "DIPROSONE 1 application à 8h"
+Description: "DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-DIPROSONE-AppCut
 * entry[+].resource = medicationrequest-Presc-DIPROSONE-AppCut

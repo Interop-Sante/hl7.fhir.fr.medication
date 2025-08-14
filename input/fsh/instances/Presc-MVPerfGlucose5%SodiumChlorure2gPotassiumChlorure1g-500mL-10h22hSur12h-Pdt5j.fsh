@@ -1,7 +1,7 @@
 Instance: Presc-MV-PerfGl-NaCl-KCl
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Perf GL-NaCL-KCl 1 pche de 500ml en 12h"
+Description: "MV - glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-MV-PerfGl-NaCl-KCl
 * entry[+].resource = medicationrequest-Presc-MV-PerfGl-NaCl-KCl

@@ -6,7 +6,7 @@ Description: "METHOTREXATE 10 mg comprimé : 1 comprimé 1 fois par semaine, le 
 * entry[0].resource = medicationrequest-HAS-10-Presc-Methotrexate
 
 Instance: medicationrequest-HAS-10-Presc-Methotrexate
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "1 comprimé 1 fois par semaine, le mardi"

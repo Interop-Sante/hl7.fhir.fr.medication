@@ -1,7 +1,7 @@
 Instance: Presc-CLARADOL-TLMardisVendredis
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CLARADOL 1 cpr les mardis et vendredis à 18h"
+Description: "CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-TLMardisVendredis
 

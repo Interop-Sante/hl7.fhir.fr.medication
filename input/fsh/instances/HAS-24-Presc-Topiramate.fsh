@@ -6,7 +6,7 @@ Description: "TOPIRAMATE 15 mg gélule: 1 gélule par jour. Si difficulté à pr
 * entry[0].resource = medicationrequest-HAS-24-Topiramate
 
 Instance: medicationrequest-HAS-24-Topiramate
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote"
@@ -17,7 +17,7 @@ Usage: #inline
 * medicationCodeableConcept = $Medicabase#MV00002365 "TOPIRAMATE 15 mg gélule"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dosageInstruction.patientInstruction = "Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote."
+* dosageInstruction.additionalInstruction.text = "Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote."
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d

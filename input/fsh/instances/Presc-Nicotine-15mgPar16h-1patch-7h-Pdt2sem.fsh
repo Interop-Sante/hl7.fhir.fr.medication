@@ -1,7 +1,7 @@
 Instance: Presc-Nicotine-15mgPar16h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Nicotine 15mg/16h à 7h"
+Description: "nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
 * type = #searchset
 * entry[0].resource = medication-Presc-Nicotine-15mgPar16h
 * entry[+].resource = medicationrequest-Presc-Nicotine-15mgPar16h

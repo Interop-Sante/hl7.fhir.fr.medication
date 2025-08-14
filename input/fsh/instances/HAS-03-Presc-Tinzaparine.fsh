@@ -22,7 +22,7 @@ Usage: #inline
 * ingredient.strength.denominator.code = #mL
 
 Instance: medicationrequest-HAS-3-Presc-Tinzaparine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée"

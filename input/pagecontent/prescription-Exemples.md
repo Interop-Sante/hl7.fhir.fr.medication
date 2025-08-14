@@ -233,7 +233,7 @@ Ex: Permet de rapporter l'expression de la quantié 4g de la dose, au médicamen
 
 Cette information est portée par l'extension [*FrBasisOfDoseComponent*](Bundle-FrBasisOfDoseComponent.html) de l'élément `doseAndRate` du type complex *Dosage* qui s'applique à l'élément `dosageInstruction`* de la ressource *MedicationRequest*.
 
-Voir exemple [céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
+Voir exemple [céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 4j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
 
 Note PN13:
 

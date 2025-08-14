@@ -6,7 +6,7 @@ Description: "EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendan
 * entry[0].resource = medicationrequest-HAS-11-2-Presc-EVRA
 
 Instance: medicationrequest-HAS-11-2-Presc-EVRA
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique"
@@ -17,7 +17,7 @@ Usage: #inline
 * medicationCodeableConcept = $UCD#3400892571720 "EVRA 203µG/33,9µG DISP TRANS"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dosageInstruction.patientInstruction = "Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique"
+* dosageInstruction.additionalInstruction.text = "Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique"
 * dosageInstruction.timing.repeat.boundsDuration.value = 6
 * dosageInstruction.timing.repeat.boundsDuration.unit = "mois"
 * dosageInstruction.timing.repeat.boundsDuration.system = $unitsofmeasure

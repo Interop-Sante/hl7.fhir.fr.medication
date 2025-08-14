@@ -22,7 +22,7 @@ Usage: #inline
 * ingredient.strength.denominator.code = #mL
 
 Instance: medicationrequest-HAS-28-Presc-Enoxaparine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention"

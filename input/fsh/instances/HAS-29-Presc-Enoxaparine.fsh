@@ -18,7 +18,7 @@ Usage: #inline
 * ingredient.strength.numerator.unit = "UI"
 
 Instance: medicationrequest-HAS-29-Presc-Enoxaparine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible"

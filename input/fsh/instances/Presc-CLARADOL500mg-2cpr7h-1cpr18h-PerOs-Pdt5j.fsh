@@ -1,7 +1,7 @@
 Instance: Presc-CLARADOL-DoseDiffParHoraire
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CLARADOL 2 cpr à 7h et 1 cpr à 18h"
+Description: "CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
 

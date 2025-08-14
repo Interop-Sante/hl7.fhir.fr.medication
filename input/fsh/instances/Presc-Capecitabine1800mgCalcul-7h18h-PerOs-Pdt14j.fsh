@@ -1,7 +1,7 @@
 Instance: Presc-Capecitabine-Dose-Calculee
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CAPECITABINE 1800mg à 7h et 18h (dose calculée)"
+Description: "capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Capecitabine-Dose-Calculee
 * entry[+].resource = medicationrequest-Presc-Capecitabine-Dose-Calculee

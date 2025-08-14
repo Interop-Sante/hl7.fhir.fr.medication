@@ -6,7 +6,7 @@ Description: "Préparation pour nébuliseur ultrasonique: 1 récipient unidose (
 * entry.resource = medicationrequest-HAS-18-Presc-Budesonide
 
 Instance: medicationrequest-HAS-18-Presc-Budesonide
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "A administrer en 20 min à 8h, 14h, 18h, et 22h jusqu'au 16/03/2023"

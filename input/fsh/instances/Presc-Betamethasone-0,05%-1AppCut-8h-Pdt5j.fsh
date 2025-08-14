@@ -1,7 +1,7 @@
 Instance: Presc-Betamethasone-ApplCut
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Betamethasone 1 application à 8h"
+Description: "bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Betamethasone-ApplCut
 * entry[+].resource = medicationrequest-Presc-Betamethasone-ApplCut

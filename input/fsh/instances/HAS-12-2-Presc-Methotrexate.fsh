@@ -6,7 +6,7 @@ Description: "METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"
 * entry[0].resource = medicationrequest-HAS-12-2-Presc-Methotrexate
 
 Instance: medicationrequest-HAS-12-2-Presc-Methotrexate
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "20 mg, 1 fois par semaine, le mardi"

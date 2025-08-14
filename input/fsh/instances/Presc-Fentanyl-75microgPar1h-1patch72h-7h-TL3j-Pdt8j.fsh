@@ -1,7 +1,7 @@
 Instance: Presc-Fentanyl-patch72h-TL3j
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Fentanyle 75µg/h 1 patch 72h à 7h tous les 3 jours"
+Description: "fentanyl 75 µg/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Fentanyl-patch72h-TL3j
 * entry[+].resource = medicationrequest-Presc-Fentanyl-patch72h-TL3j

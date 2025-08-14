@@ -1,7 +1,7 @@
 Instance: Presc-Paracetamol-DoseEvolutive
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Paracétamol 1g à 7h et 500 mg à 18h pdt 5j"
+Description: "paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Paracetamol-DoseEvolutive
 * entry[+].resource = medicationrequest-Presc-Paracetamol-DoseEvolutive

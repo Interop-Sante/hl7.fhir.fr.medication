@@ -6,7 +6,7 @@ Description: "PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3
 * entry[0].resource = medicationrequest-HAS-22-Presc-Prednisolone
 
 Instance: medicationrequest-HAS-22-Presc-Prednisolone
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution"

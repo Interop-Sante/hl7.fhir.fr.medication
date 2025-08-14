@@ -1,7 +1,7 @@
 Instance: Presc-CLARADOL-TL6h-MedCodeableConcept
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CLARADOL 1 cpr toute les 6h"
+Description: "CLARADOL 500 mg, 1 cpr toutes les 6h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-CLARADOL-TL6h-MedCodeableConcept
 

@@ -8,7 +8,7 @@ Avec un maximum de 6 comprimés par jour."
 * entry[0].resource = medicationrequest-HAS-30-1-Presc-Hydrocortisone
 
 Instance: medicationrequest-HAS-30-1-Presc-Hydrocortisone
-InstanceOf: FRMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "1 comprimé matin et 1 comprimé midi 
@@ -30,7 +30,7 @@ QSP 6 mois"
 * dosageInstruction[=].doseAndRate.doseQuantity = 1 $EDQM#15054000 "Comprimé"
 * dosageInstruction[=].maxDosePerPeriod.numerator = 6 $EDQM#15054000 "Comprimé"
 * dosageInstruction[=].maxDosePerPeriod.denominator = 1 'd' "jour"
-* dosageInstruction[+].patientInstruction = "En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important"
+* dosageInstruction[+].additionalInstruction.text = "En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important"
 * dosageInstruction[=].timing.repeat.boundsDuration = 1 'mo' "mois"
 * dosageInstruction[=].timing.repeat.when[0] = #MORN
 * dosageInstruction[=].timing.repeat.when[+] = #NOON
@@ -38,7 +38,7 @@ QSP 6 mois"
 * dosageInstruction[=].maxDosePerPeriod.numerator = 6 $EDQM#15054000 "Comprimé"
 * dosageInstruction[=].maxDosePerPeriod.denominator = 1 'd' "jour"
 // difficulté de rendre l'option de prise à 16:00:00. Pourrait éventuellement être doseRange entre 0 et 2 mais il y a une possibilité qu'un seul comprimé soit pris à 16:00:00
-* dosageInstruction[+].patientInstruction = "En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important"
+* dosageInstruction[+].additionalInstruction.text = "En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important"
 * dosageInstruction[=].timing.repeat.boundsDuration = 1 'mo' "mois"
 * dosageInstruction[=].timing.repeat.timeOfDay = "16:00:00"
 * dosageInstruction[=].doseAndRate.doseQuantity = 2 $EDQM#15054000 "Comprimé"

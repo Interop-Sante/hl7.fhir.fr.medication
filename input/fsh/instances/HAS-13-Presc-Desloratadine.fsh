@@ -6,7 +6,7 @@ Description: "DESLORATADINE 5 mg comprimé 1 comprimé « 1 à  2 fois par jour 
 * entry[0].resource = medicationrequest-HAS-13-Presc-Desloratadine
 
 Instance: medicationrequest-HAS-13-Presc-Desloratadine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique"
@@ -17,7 +17,7 @@ Usage: #inline
 * medicationCodeableConcept = $Medicabase#MV00000161 "DESLORATADINE 5 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* dosageInstruction.patientInstruction = "en fonction de la gêne allergique"
+* dosageInstruction.additionalInstruction.text = "en fonction de la gêne allergique"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.frequencyMax = 2
 * dosageInstruction.timing.repeat.period = 1

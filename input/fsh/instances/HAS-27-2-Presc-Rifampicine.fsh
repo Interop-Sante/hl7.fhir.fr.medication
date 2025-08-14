@@ -6,7 +6,7 @@ Description: "RIFAMPICINE 300 mg en gélule 2 gélules le matin 30 minutes avant
 * entry[0].resource = medicationrequest-HAS-27-2-Rifampicine
 
 Instance: medicationrequest-HAS-27-2-Rifampicine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "2 gélules le matin 30 minutes avant le petit-déjeuner"

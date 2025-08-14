@@ -6,7 +6,7 @@ Description: "MORPHINE SULFATE LP 10 mg gélule microgranule à libération prol
 * entry[0].resource = medicationrequest-HAS-15-Presc-Morphine
 
 Instance: medicationrequest-HAS-15-Presc-Morphine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
 * extension[renderedDosageInstruction].valueMarkdown = "une gélule le soir (à 20h) pendant huit jours"

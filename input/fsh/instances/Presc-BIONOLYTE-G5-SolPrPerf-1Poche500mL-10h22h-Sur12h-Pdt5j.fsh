@@ -1,7 +1,7 @@
 Instance: Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Perfusion BIONOLYTE 500ml sur 12h à 10h et 22h pdt 5 jrs"
+Description: "BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 * entry[+].resource = medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
