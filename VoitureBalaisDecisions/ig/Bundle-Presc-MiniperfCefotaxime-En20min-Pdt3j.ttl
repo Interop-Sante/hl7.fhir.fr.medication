@@ -123,13 +123,15 @@
          ] )
        ] ;
        fhir:text [
-         fhir:status [ fhir:v "generated" ] ;
-         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j</b></p><a name=\"medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><a name=\"hcmedication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-fr-medication-compound.html\">FR Medication Compound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound</code></p></div><p><b>code</b>: <span title=\"Codes:\">Céfotaxine 4g dans miniperf G5 100 mL</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Item[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><code>#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt3j</code></td></tr></table></div>"^^rdf:XMLLiteral
-       ] ;
-       fhir:code [
-         fhir:text [ fhir:v "Céfotaxine 4g dans miniperf G5 100 mL" ]
+         fhir:status [ fhir:v "extensions" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j</b></p><a name=\"medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><a name=\"hcmedication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-fr-medication-compound.html\">FR Medication Compound</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound</code></p></div><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-1-Presc-MiniperfCefotaxime-En20min-Pdt3j</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>Medication component which is the vehicle of the compound Medication</b>: true</p><p><b>item</b>: <code>#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt3j</code></p></blockquote></div>"^^rdf:XMLLiteral
        ] ;
        fhir:ingredient ( [
+         fhir:item [
+           a fhir:Reference ;
+           fhir:reference [ fhir:v "#medication-1-Presc-MiniperfCefotaxime-En20min-Pdt3j" ]
+         ]
+       ] [
          fhir:extension ( [
            fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle"^^xsd:anyURI ] ;
            fhir:value [
@@ -158,7 +160,7 @@
        ] ;
        fhir:text [
          fhir:status [ fhir:v "generated" ] ;
-         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j</b></p><a name=\"medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><a name=\"hcmedicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-10-02 17:22:25+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14650</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once per 6 hours</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Rate[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>4 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span>/20 min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemin = 'min')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j</b></p><a name=\"medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><a name=\"hcmedicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profils: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a>, <code>https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest</code></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-10-02 17:22:25+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14650</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 6 hours</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Rate[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>4 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span>/20 min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemin = 'min')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
        ] ;
        fhir:status [ fhir:v "active" ] ;
        fhir:intent [ fhir:v "order" ] ;
@@ -181,7 +183,6 @@
          fhir:value [ fhir:v "Presc-14650" ]
        ] ;
        fhir:dosageInstruction ( [
-         fhir:sequence [ fhir:v 1 ] ;
          fhir:timing [
            fhir:repeat [
              fhir:bounds [
@@ -189,6 +190,7 @@
                fhir:start [ fhir:v "2021-10-02T17:22:00Z"^^xsd:dateTime ] ;
                fhir:end [ fhir:v "2021-10-05T17:21:59Z"^^xsd:dateTime ]
              ] ;
+             fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
              fhir:period [ fhir:v "6"^^xsd:decimal ] ;
              fhir:periodUnit [ fhir:v "h" ]
            ]
