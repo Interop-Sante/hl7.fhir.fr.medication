@@ -1,7 +1,7 @@
 Instance: Presc-MiniperfCefotaxime-En20min-Pdt3j
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Perfusion Céfotaxime + glucose 4g/20mn toutes les 6h pdt 3j"
+Description: "céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-MiniperfCefotaxime-En20min-Pdt3j
 * entry[+].resource = medication-2-Presc-MiniperfCefotaxime-En20min-Pdt3j
@@ -36,9 +36,8 @@ InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
-* code.text = "Céfotaxine 4g dans miniperf G5 100 mL"
 * ingredient[0].itemReference.reference = "#medication-1-Presc-MiniperfCefotaxime-En20min-Pdt3j"
-* ingredient[=].itemReference.reference = "#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt3j"
+* ingredient[+].itemReference.reference = "#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt3j"
 * ingredient[=].extension[IsVehicle].valueBoolean = true
 
 Instance: medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt3j
@@ -54,9 +53,9 @@ Usage: #inline
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * groupIdentifier.value = "Presc-14650"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-10-02T17:22:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-10-05T17:21:59Z"
+* dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 6
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"

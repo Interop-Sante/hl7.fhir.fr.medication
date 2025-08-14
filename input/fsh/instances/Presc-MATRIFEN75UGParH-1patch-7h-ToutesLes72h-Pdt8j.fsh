@@ -37,16 +37,13 @@ Usage: #inline
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-29T16:14:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-06T16:13:59Z"
+* dosageInstruction.timing.repeat.frequency = 1
+* dosageInstruction.timing.repeat.period = 72
+* dosageInstruction.timing.repeat.period = #h
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate[0].type = $dose-rate-type#ordered "Ordered"
-* dosageInstruction.doseAndRate[=].type.text = "Ordered"
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.value = 1
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.unit = "Patch"
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.system = $EDQM
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #15036000
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.value = 72
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.unit = "h"
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.system = $unitsofmeasure
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.code = #h
+* dosageInstruction.doseAndRate.doseQuantity.value = 1
+* dosageInstruction.doseAndRate.doseQuantity.unit = "Patch"
+* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
+* dosageInstruction.doseAndRate.doseQuantity.code = #15036000

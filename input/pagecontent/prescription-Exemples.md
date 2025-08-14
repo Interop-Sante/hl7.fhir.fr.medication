@@ -72,7 +72,7 @@ Les niveaux de complexité supplémentaires adressent
 - les doses progessives ou dégressives par palier
   - [méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j](Bundle-Presc-Methylpredinosolone-DosesEvolutives.html)
 - l'expression de la quantité d'une dose se référant à l'un des médicaments composant du médicament composé prescrit
-  - [céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 3j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
+  - [céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 4j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
   - Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques) § concacré à l'extension *Basis of Dose Component*.
 - l'expression d'une dose réelle pertinente à partir d'une dose théorique fonction de paramètres patient
   - [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Bundle-Presc-Capecitabine-Dose-Calculee.html)

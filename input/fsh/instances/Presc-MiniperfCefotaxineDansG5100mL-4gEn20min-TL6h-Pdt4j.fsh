@@ -1,7 +1,7 @@
 Instance: Presc-MiniperfCefotaxime-En20min-Pdt4j
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Perfusion Céfotaxime + glucose 4g/20mn toutes les 6h pdt 3j"
+Description: "céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 4j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-MiniperfCefotaxime-En20min-Pdt4j
 * entry[+].resource = medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j
@@ -36,9 +36,8 @@ InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-Presc-MiniperfCefotaxime-En20min-Pdt4j"
 * meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
-* code.text = "Céfotaxine 4g dans miniperf G5 100 mL"
 * ingredient[0].itemReference.reference = "#medication-1-Presc-MiniperfCefotaxime-En20min-Pdt4j"
-* ingredient[=].itemReference.reference = "#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j"
+* ingredient[+].itemReference.reference = "#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j"
 
 Instance: medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt4j
 InstanceOf: FRInpatientMedicationRequest

@@ -1,7 +1,7 @@
 Instance: Presc-Methylpredinosolone-DosesEvolutives
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Méthylprednisolone à 7h 6mg pdt 2j puis 4mg pdt 2j puis 2 mg pdt 2 j"
+Description: "méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Methylpredinosolone-DosesEvolutives
 * entry[+].resource = medicationrequest-Presc-Methylpredinosolone-DosesEvolutives
@@ -27,20 +27,20 @@ Usage: #inline
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * groupIdentifier.value = "Presc-14647"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction[0].timing.repeat.boundsPeriod.start = "2021-08-14T18:17:00Z"
-* dosageInstruction[=].timing.repeat.boundsPeriod.end = "2021-08-16T18:16:59Z"
+* dosageInstruction[0].sequence = 1
+* dosageInstruction[=].timing.repeat.boundsDuration = 2 'd' "jour"
 * dosageInstruction[=].timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * dosageInstruction[=].route.text = "Voie orale"
 * dosageInstruction[=].doseAndRate.doseQuantity = 6 'mg' "mg"
-* dosageInstruction[+].timing.repeat.boundsPeriod.start = "2021-08-16T18:17:00Z"
-* dosageInstruction[=].timing.repeat.boundsPeriod.end = "2021-08-18T18:16:59Z"
+* dosageInstruction[+].sequence = 2
+* dosageInstruction[=].timing.repeat.boundsDuration = 2 'd' "jour"
 * dosageInstruction[=].timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * dosageInstruction[=].route.text = "Voie orale"
 * dosageInstruction[=].doseAndRate.doseQuantity = 4 'mg' "mg"
-* dosageInstruction[+].timing.repeat.boundsPeriod.start = "2021-08-18T18:17:00Z"
-* dosageInstruction[=].timing.repeat.boundsPeriod.end = "2021-08-20T18:16:59Z"
+* dosageInstruction[+].sequence = 3
+* dosageInstruction[=].timing.repeat.boundsDuration = 2 'd' "jour"
 * dosageInstruction[=].timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * dosageInstruction[=].route.text = "Voie orale"

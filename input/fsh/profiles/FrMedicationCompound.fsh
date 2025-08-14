@@ -9,15 +9,15 @@ Description: "A complex medication composed of two to many simple medication. Th
 * . ^short = "Definition of a Medication compound of a MedicinalRequest, Dispense or Usage"
 * . ^definition = "Medication compound of a Medication representing the composition of a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement). For instance, Glucose 5% 1L part of an infusion made of 3 compounds, Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g."
 
-* code 1..
-* code ^short = "No code that identify this medication unless possibly if it is a magistral preparation, a hospital preparation or a virtual medication"
-* code ^definition = "Defines the text of the compound detailed in this compound Medication."
-* code ^requirements = "Text of compound SHALL be provided. Code MAY be provided"
+//* code 1..
+//* code ^short = "No code that identify this medication unless possibly if it is a magistral preparation, a hospital preparation or a virtual medication"
+//* code ^definition = "Defines the text of the compound detailed in this compound Medication."
+//* code ^requirements = "Text of compound SHALL be provided. Code MAY be provided"
 //* code.coding ^short = "Generaly no code for compound medicinal product unless possibly if it is a magistral preparation, a hospital preparation or a virtual medication"
 //* code.coding ^definition = "A code identifing the compound medicinal product. Generaly none : no code defined for G5 1L + NaCl 3g + KCl 2g. May exist as local code for magistral preparation or hospital preparation. May exist as a medication database code for virtual medication"
 
-* code.text 1..
-* code.text ^requirements = "Although a code might not be available for a compoud medicinal product, there is alway a denomination for it."
+//* code.text 1..
+//* code.text ^requirements = "Although a code might not be available for a compoud medicinal product, there is alway a denomination for it."
 
 * form from FrMpDoseForm (extensible)
 //* amount only FrRatioMedication
