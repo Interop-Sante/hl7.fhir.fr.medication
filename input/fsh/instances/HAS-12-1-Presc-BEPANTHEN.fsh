@@ -17,7 +17,7 @@ Usage: #inline
 * medicationCodeableConcept = $UCD#3400892402086 "BEPANTHEN 5% CR TB100G"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-* ddosageInstruction.additionalInstruction.text = "en couche mince"
+* dosageInstruction.additionalInstruction.text = "en couche mince"
 * dosageInstruction.timing.repeat.frequency = 2
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
