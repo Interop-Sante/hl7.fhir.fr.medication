@@ -39,7 +39,7 @@ Usage: #inline
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-06T16:13:59Z"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 72
-* dosageInstruction.timing.repeat.period = #h
+* dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
