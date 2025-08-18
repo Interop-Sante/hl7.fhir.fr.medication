@@ -10,7 +10,7 @@ Instance: medication-Presc-DIPROSONE-AppCut
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-DIPROSONE-AppCut"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400890277334 "DIPROSONE 0,05% CR TB30G"
 * code.text = "DIPROSONE 0.05%, crème, tube 30 g"
 * form = $EDQM#0071 "crème"
@@ -22,9 +22,9 @@ Usage: #inline
 * ingredient.strength.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-DIPROSONE-AppCut
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

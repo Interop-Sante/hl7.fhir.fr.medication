@@ -10,7 +10,7 @@ Instance: medication-Presc-MATRIFEN-patch-TL72h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-MATRIFEN-patch-TL72h"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893183014 "MATRIFEN 75µG/H DISP TRANS"
 * code.text = "MATRIFEN 75 ug/h, dispositif transdermique"
 * form = $EDQM#10517500 "patch cutané"
@@ -22,9 +22,9 @@ Usage: #inline
 * ingredient.strength.denominator = $unitsofmeasure#h "h"
 
 Instance: medicationrequest-Presc-MATRIFEN-patch-TL72h
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: Ffr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

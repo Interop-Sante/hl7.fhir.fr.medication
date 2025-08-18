@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-11-2-Presc-EVRA
+* entry.resource = medicationrequest-HAS-11-2-Presc-EVRA
 
 Instance: medicationrequest-HAS-11-2-Presc-EVRA
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique"
 * status = #active
 * intent = #order

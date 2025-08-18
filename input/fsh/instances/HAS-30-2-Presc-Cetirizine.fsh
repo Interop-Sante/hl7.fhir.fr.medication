@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "CETIRIZINE 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire)"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-30-2-Presc-Cetirizine
+* entry.resource = medicationrequest-HAS-30-2-Presc-Cetirizine
 
 Instance: medicationrequest-HAS-30-2-Presc-Cetirizine
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "1 à 4 comprimés par jour selon les symptômes (urticaire)"
 * status = #active
 * intent = #order

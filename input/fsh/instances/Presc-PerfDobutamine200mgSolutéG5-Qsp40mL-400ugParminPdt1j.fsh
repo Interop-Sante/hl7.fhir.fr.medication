@@ -12,7 +12,7 @@ Instance: medication-1-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-1-Presc-PerfDobutamine-Qsp40mL"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000081844 "dobutamine"
 * code.text = "DOBUTAMINE"
 * amount.numerator = 200 'mg' "mg"
@@ -21,7 +21,7 @@ Instance: medication-2-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-2-Presc-PerfDobutamine-Qsp40mL"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000078171 "glucose"
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
@@ -35,7 +35,7 @@ Instance: medication-C-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-Presc-PerfDobutamine-Qsp40mL"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * code.text = "Dobutamine 200 mg dans G5 qsp 40 mL"
 * amount.numerator = 40 'ml' "ml"
 * ingredient[0].itemReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"
@@ -43,9 +43,9 @@ Usage: #inline
 * ingredient[=].extension[IsVehicle].valueBoolean = true
 
 Instance: medicationrequest-Presc-PerfDobutamine-Qsp40mL
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

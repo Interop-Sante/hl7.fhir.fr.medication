@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "FLUINDIONE 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé)"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-5-1-Presc-Fluindione
+* entry.resource = medicationrequest-HAS-5-1-Presc-Fluindione
 
 Instance: medicationrequest-HAS-5-1-Presc-Fluindione
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "3/4 cpr par jour (trois-quart de comprimé)"
 * status = #active
 * intent = #order

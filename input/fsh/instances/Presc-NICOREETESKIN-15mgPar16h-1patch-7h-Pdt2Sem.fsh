@@ -10,7 +10,7 @@ Instance: medication-Presc-NICOREETESKIN-patch
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-NICOREETESKIN-patch"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893539354 "NICORETTESKIN 15MG/16H DISP"
 * code.text = "NICOTINE"
 * form = $EDQM#10519000 "Patch transdermique"
@@ -22,9 +22,9 @@ Usage: #inline
 * ingredient.strength.denominator = 1 '1'
 
 Instance: medicationrequest-Presc-NICOREETESKIN-patch
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

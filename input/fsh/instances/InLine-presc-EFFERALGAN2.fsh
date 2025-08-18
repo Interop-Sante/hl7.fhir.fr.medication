@@ -1,5 +1,5 @@
 Instance: InLine-presc-EFFERALGAN2
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
 Description: "Prescription d'EFFERALGAN pour exemple de dispensation"
 * status = #active

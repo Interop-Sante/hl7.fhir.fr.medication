@@ -8,10 +8,10 @@ Description: "METHOTREX et LEDERFOLINE à prendre en même temps"
 * entry[+].resource = requestgroup-Presc-METHOTREXATE-LEDERFOLINE
 
 Instance: medicationrequest-Presc-METHOTREXATE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Presc-METHOTREXATE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -34,10 +34,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15009000
 
 Instance: medicationrequest-Presc-LEDERFOLINE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Presc-LEDERFOLINE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -60,9 +60,9 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: requestgroup-Presc-METHOTREXATE-LEDERFOLINE
-InstanceOf: FRRequestGroupForPrescription
+InstanceOf: fr-requestgroup-for-prescription
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
+* meta.profile = Canonical(fr-requestgroup-for-prescription)
 * groupIdentifier.value = "Presc-30003"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * status = #active

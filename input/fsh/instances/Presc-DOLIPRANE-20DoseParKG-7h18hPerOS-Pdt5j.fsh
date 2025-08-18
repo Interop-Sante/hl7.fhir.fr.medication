@@ -10,7 +10,7 @@ Instance: medication-Presc-DOLIPRANE-20DoseParKG
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-DOLIPRANE-20DoseParKG"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400892028057 "DOLIPRANE 2,4% BUV FV100ML"
 * code.text = "DOLIPRANE 2.4% ss sucre, susp buv"
 * form = $EDQM#10106000 "suspension buvable"
@@ -22,9 +22,9 @@ Usage: #inline
 * ingredient.strength.denominator = 1 '1'
 
 Instance: medicationrequest-Presc-DOLIPRANE-20DoseParKG
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

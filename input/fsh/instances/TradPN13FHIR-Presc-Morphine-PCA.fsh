@@ -10,7 +10,7 @@ Instance: patient-Trad-Presc-Morphine-PCA
 InstanceOf: Patient
 Usage: #inline
 * id = "patient-Trad-Presc-Morphine-PCA"
-* meta.profile[0] = $FrCorePatientINS
+* meta.profile = $FrCorePatientINS
 * extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
 * extension[=].extension[0].url = "identityStatus"
 * extension[=].extension[=].valueCoding.system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"
@@ -42,10 +42,10 @@ Usage: #inline
 * birthDate = "1989-01-02"
 
 Instance: medicationrequest-Trad-Presc-Morphine-PCA
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Morphine-PCA"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * identifier.value = "202500507153500547"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active

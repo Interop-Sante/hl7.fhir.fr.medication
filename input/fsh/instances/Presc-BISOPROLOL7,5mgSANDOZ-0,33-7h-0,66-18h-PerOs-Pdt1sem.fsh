@@ -10,16 +10,16 @@ Instance: medication-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-BISOPROLOL-SANDOZ-DosesRationnelles"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893320921 "BISOPROLOL SDZ 7,5MG CPR"
 * code.text = "BISOPROLOL 7.5 mg SANDOZ, cpr séc"
 * form = $EDQM#10219000 "comprimé"
 * form.text = "comprimé"
 
 Instance: medicationrequest-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

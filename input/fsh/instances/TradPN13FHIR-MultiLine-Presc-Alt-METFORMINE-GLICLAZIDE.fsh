@@ -12,7 +12,7 @@ Instance: patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE
 InstanceOf: Patient
 Usage: #inline
 * id = "patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE"
-* meta.profile[0] = $FrCorePatientINS
+* meta.profile = $FrCorePatientINS
 * extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
 * extension[=].extension[0].url = "identityStatus"
 * extension[=].extension[=].valueCoding.system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"
@@ -44,10 +44,10 @@ Usage: #inline
 * birthDate = "1989-01-02"
 
 Instance: medicationrequest-Trad-Presc-Alt-METFORMINE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Alt-METFORMINE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * identifier.value = "20250502144844569"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active
@@ -85,10 +85,10 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: medicationrequest-Trad-Presc-Alt-GLICLAZIDE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Alt-GLICLAZIDE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * identifier.value = "20250502144844570"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active
@@ -124,9 +124,9 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: requestgroup-Trad-Presc-Alt-METFORMINE-GLICLAZIDE
-InstanceOf: FRRequestGroupForPrescription
+InstanceOf: fr-requestgroup-for-prescription
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
+* meta.profile = Canonical(fr-requestgroup-for-prescription)
 * groupIdentifier.value = "10543744"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * status = #active

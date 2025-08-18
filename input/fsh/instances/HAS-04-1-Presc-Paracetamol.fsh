@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-4-1-Presc-Paracetamol
+* entry.resource = medicationrequest-HAS-4-1-Presc-Paracetamol
 
 Instance: medicationrequest-HAS-4-1-Presc-Paracetamol
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "2 gélules toutes les 6 h pendant 10 jours si douleurs"
 * status = #active
 * intent = #order

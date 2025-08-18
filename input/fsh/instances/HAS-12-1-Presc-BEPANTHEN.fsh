@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "BEPANTHEN®5% crème : 1 application, 2 fois par jour, en couche mince"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-12-1-Presc-BEPANTHEN
+* entry.resource = medicationrequest-HAS-12-1-Presc-BEPANTHEN
 
 Instance: medicationrequest-HAS-12-1-Presc-BEPANTHEN
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "1 application, 2 fois par jour, en couche mince"
 * status = #active
 * intent = #order

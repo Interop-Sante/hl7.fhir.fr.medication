@@ -1,12 +1,12 @@
 ### Vue d'ensemble
 
-La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FRInpatientMedicationRequest*.
+La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FRMedicationRequest* pour les prescriptions de médecine de villet et les prescriptions hospitalières exécutables en ville (PHEV) et *FRInPatientMedicationRequest* pour les prescriptions intrahospitalières.
 
-La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représenté par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *MedicationRequest.groupIdentifier*.
+La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représentée par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *MedicationRequest.groupIdentifier*.
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
-Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FRInpatientMedicationRequest*, celui-ci peut être représenté sous forme de ressource *Medication* ou de concept codé (CodeableConcept).
+Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FrMedicationRequest* ou *FRInpatientMedicationRequest*, celui-ci peut être représenté sous forme d'une référence vers une ressource *Medication* suivant le profil idoine (cf. paragraphe suivant) ou d'un concept codé (CodeableConcept).
 
 Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
 

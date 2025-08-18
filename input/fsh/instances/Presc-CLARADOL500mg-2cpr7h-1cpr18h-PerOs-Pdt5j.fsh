@@ -6,9 +6,9 @@ Description: "CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j"
 * entry.resource = medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
 
 Instance: medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

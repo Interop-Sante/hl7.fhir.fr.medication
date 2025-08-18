@@ -10,16 +10,16 @@ Instance: medication-Presc-Betamethasone-ApplCut
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-Betamethasone-ApplCut"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091947 "bétaméthasone"
 * code.text = "BETAMETHASONE"
 * amount.numerator = 0.5 'mg' "mg"
 * amount.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-Betamethasone-ApplCut
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-2-Presc-Fluindione
+* entry.resource = medicationrequest-HAS-2-Presc-Fluindione
 
 Instance: medicationrequest-HAS-2-Presc-Fluindione
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "0,5 comprimé par jour"
 * status = #active
 * intent = #order

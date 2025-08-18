@@ -10,7 +10,7 @@ Instance: medication-HAS-3-Presc-Tinzaparine
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-HAS-3-Presc-Tinzaparine"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091620 "tinzaparine sodique"
 * form = $EDQM#11201000 "Solution injectable"
 * ingredient.itemCodeableConcept = $SMS#100000091620 "tinzaparine sodique"
@@ -24,7 +24,7 @@ Usage: #inline
 Instance: medicationrequest-HAS-3-Presc-Tinzaparine
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée"
 * status = #active
 * intent = #order

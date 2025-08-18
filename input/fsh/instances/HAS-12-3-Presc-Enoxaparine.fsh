@@ -10,7 +10,7 @@ Instance: medication-HAS-12-3-Presc-Enoxaparine
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-HAS-12-3-Presc-Enoxaparine"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000090152 "énoxaparine sodique"
 * form = $EDQM#11201000 "Solution injectable"
 * ingredient.itemCodeableConcept = $SMS#100000090152 "énoxaparine sodique"
@@ -24,7 +24,7 @@ Usage: #inline
 Instance: medicationrequest-HAS-12-3-Presc-Enoxaparine
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"
 * status = #active
 * intent = #order

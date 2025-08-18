@@ -13,7 +13,7 @@ Instance: medication-1-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-1-Presc-PerfGl-NaCl-KCl-500ml"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000078171 "glucose"
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
@@ -28,7 +28,7 @@ Instance: medication-2-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-2-Presc-PerfGl-NaCl-KCl-500ml"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000092115 "chlorure de sodium"
 * code.text = "SODIUM CHLORURE"
 * amount.numerator = 2 'g' "g"
@@ -37,7 +37,7 @@ Instance: medication-3-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-3-Presc-PerfGl-NaCl-KCl-500ml"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091807 "chlorure de potassium"
 * code.text = "POTASSIUM CHLORURE"
 * amount.numerator = 1 'g' "g"
@@ -46,7 +46,7 @@ Instance: medication-C-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-Presc-PerfGl-NaCl-KCl-500ml"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * code.text = "G5 500mL + NaCl 2g + KCl 1g"
 * ingredient[0].extension[IsVehicle].valueBoolean = true
 * ingredient[=].itemReference.reference = "#medication-1-Presc-PerfGl-NaCl-KCl-500ml"
@@ -54,9 +54,9 @@ Usage: #inline
 * ingredient[+].itemReference.reference = "#medication-3-Presc-PerfGl-NaCl-KCl-500ml"
 
 Instance: medicationrequest-Presc-PerfGl-NaCl-KCl-500ml
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

@@ -5,12 +5,12 @@ Description: "HYDROCORTISONE 10 mg : 1 comprimé matin et 1 comprimé midi
 En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.
 Avec un maximum de 6 comprimés par jour."
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-30-1-Presc-Hydrocortisone
+* entry.resource = medicationrequest-HAS-30-1-Presc-Hydrocortisone
 
 Instance: medicationrequest-HAS-30-1-Presc-Hydrocortisone
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "1 comprimé matin et 1 comprimé midi 
 En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.
 Avec un maximum de 6 comprimés par jour"

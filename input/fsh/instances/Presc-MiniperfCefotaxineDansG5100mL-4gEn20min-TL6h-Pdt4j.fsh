@@ -12,7 +12,7 @@ Instance: medication-1-Presc-MiniperfCefotaxime-En20min-Pdt4j
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-1-Presc-MiniperfCefotaxime-En20min-Pdt4j"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000092662 "céfotaxime"
 * code.text = "CEFOTAXINE"
 
@@ -20,7 +20,7 @@ Instance: medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000078171 "glucose"
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
@@ -35,14 +35,14 @@ Instance: medication-C-Presc-MiniperfCefotaxime-En20min-Pdt4j
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-Presc-MiniperfCefotaxime-En20min-Pdt4j"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * ingredient[0].itemReference.reference = "#medication-1-Presc-MiniperfCefotaxime-En20min-Pdt4j"
 * ingredient[+].itemReference.reference = "#medication-2-Presc-MiniperfCefotaxime-En20min-Pdt4j"
 
 Instance: medicationrequest-Presc-MiniperfCefotaxime-En20min-Pdt4j
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

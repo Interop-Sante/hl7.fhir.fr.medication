@@ -1,5 +1,5 @@
 Instance: InLine-presc-Paracetamol1
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
 Description: "Prescription de Paracétamol pour exemple de dispensation"
 * status = #active

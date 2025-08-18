@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "ROPINIROLE comprimé 1mg : 1 comprimé à 7h, 12h 18h"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-9-Presc-Roprinirole
+* entry.resource = medicationrequest-HAS-9-Presc-Roprinirole
 
 Instance: medicationrequest-HAS-9-Presc-Roprinirole
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "1 comprimé à 7h, 12h 18h"
 * status = #active
 * intent = #order

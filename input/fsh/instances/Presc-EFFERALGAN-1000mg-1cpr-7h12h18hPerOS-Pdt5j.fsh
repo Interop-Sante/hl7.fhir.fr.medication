@@ -10,7 +10,7 @@ Instance: medication-Presc-EFFERALGAN
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-EFFERALGAN"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893766521 "EFFERALGANMED 1000MG CPR"
 * code.text = "EFFERALGAN 1 000 mg, cpr"
 * form = $EDQM#10219000 "Comprimé"
@@ -21,9 +21,9 @@ Usage: #inline
 * ingredient.strength.denominator = 1 '1'
 
 Instance: medicationrequest-Presc-EFFERALGAN
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

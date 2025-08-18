@@ -10,7 +10,7 @@ Instance: medication-Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-Presc-ParacetamolCodeine-500mg30mg"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * code.text = "PARACETAMOL+CODEINE 500mg+30mg"
 * form = $EDQM#10219000 "Comprimé"
 * ingredient[0].itemCodeableConcept = $SMS#100000090270 "paracétamol"
@@ -21,9 +21,9 @@ Usage: #inline
 * ingredient[=].strength.numerator = 30 'mg' "mg"
 
 Instance: medicationrequest-Presc-ParacetamolCodeine-500mg30mg
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

@@ -3,12 +3,12 @@ InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-8-1-Presc-Betamethasone
+* entry.resource = medicationrequest-HAS-8-1-Presc-Betamethasone
 
 Instance: medicationrequest-HAS-8-1-Presc-Betamethasone
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter"
 * status = #active
 * intent = #order

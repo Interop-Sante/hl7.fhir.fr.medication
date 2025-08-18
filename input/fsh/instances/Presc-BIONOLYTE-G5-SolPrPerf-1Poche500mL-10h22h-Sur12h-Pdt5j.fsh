@@ -10,16 +10,16 @@ Instance: medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893093542 "BIONOLYTE G5 INJ FPE500ML"
 * code.text = "BIONOLYTE G5, sol pr perf, flac 500 mL"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
 
 Instance: medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

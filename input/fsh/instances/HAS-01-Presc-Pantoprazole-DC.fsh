@@ -10,7 +10,7 @@ Instance: medication-HAS-1-Presc-Pantoprazole-DC
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-HAS-1-Presc-Pantoprazole-DC"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000092491 "pantoprazole"
 * form = $EDQM#10219000 "comprimé"
 * ingredient.itemCodeableConcept = $SMS#100000092491 "pantoprazole"
@@ -19,7 +19,7 @@ Usage: #inline
 Instance: medicationrequest-HAS-1-Presc-Pantoprazole-DC
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical (fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "40 mg le soir"
 * status = #active
 * intent = #order

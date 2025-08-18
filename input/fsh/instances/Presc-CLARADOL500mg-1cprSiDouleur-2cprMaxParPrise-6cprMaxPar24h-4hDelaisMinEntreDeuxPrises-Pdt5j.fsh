@@ -6,9 +6,9 @@ Description: "CLARADOL 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max 
 * entry.resource = medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 
 Instance: medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
