@@ -279,18 +279,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="vue-densemble">Vue d’ensemble</h3>
 
-<p>La prescription est un ensemble de <strong>lignes de prescription</strong>, représentées chacune par une ressource <em>MedicationRequest</em> profilée <em>FRMedicationRequest</em> pour les prescriptions de médecine de villet et les prescriptions hospitalières exécutables en ville (PHEV) et <em>FRInPatientMedicationRequest</em> pour les prescriptions intrahospitalières.</p>
+<p>La prescription est un ensemble de <strong>lignes de prescription</strong>, représentées chacune par une ressource <em>MedicationRequest</em> profilée <em>FrMedicationRequest</em> pour les prescriptions de médecine de villet et les prescriptions hospitalières exécutables en ville (PHEV) et <em>FrInPatientMedicationRequest</em> pour les prescriptions intrahospitalières.</p>
 
 <p>La prescription en tant que telle (le regroupement de lignes de prescription), n’est pas représentée par une ressource FHIR. En accord avec les guidelines d’HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l’élément <em>MedicationRequest.groupIdentifier</em>.</p>
 
 <p>Chaque <strong>ligne de prescription</strong> est composée d’un <strong>médicament prescrit</strong> et de sa <strong>posologie</strong>.</p>
 
-<p>Le <strong>médicament prescrit</strong> est représenté par l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.medication[x]</code> (1..1) du profil <em>FrMedicationRequest</em> ou <em>FRInpatientMedicationRequest</em>, celui-ci peut être représenté sous forme d’une référence vers une ressource <em>Medication</em> suivant le profil idoine (cf. paragraphe suivant) ou d’un concept codé (CodeableConcept).</p>
+<p>Le <strong>médicament prescrit</strong> est représenté par l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.medication[x]</code> (1..1) du profil <em>FrMedicationRequest</em> ou <em>FrInpatientMedicationRequest</em>, celui-ci peut être représenté sous forme d’une référence vers une ressource <em>Medication</em> suivant le profil idoine (cf. paragraphe suivant) ou d’un concept codé (CodeableConcept).</p>
 
-<p>Selon que ce médicament prescrit est un <strong>médicament simple</strong> ou un <strong>médicament composé</strong> de plusieurs médicaments simples, le <strong>médicament prescrit</strong> est représenté par deux variantes de ressource <em>Medication</em>:</p>
+<p>Selon qu’un médicament prescrit référencé est un <strong>médicament simple</strong> ou un <strong>médicament composé</strong> de plusieurs médicaments simples, le <strong>médicament prescrit</strong> est représenté par deux variantes de ressource <em>Medication</em>:</p>
 
 <ul>
-  <li><em>FrMedicationNonCompound</em>: médicament simple exprimé en spécialité identifié par son <strong>code UCD</strong>. Ex: <em>EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521</em> ou médicament exprimé en DC (dénomination commune identifiée par son <strong>code SMS</strong> ou son <strong>code technique ANSM</strong> dans l’attente de l’attribution d’un code SMS )/ Ex: <em>paracétamol dont le code SMS est 100000090270</em></li>
+  <li><em>FrMedicationNonCompound</em>: médicament simple exprimé:
+    <ul>
+      <li>en spécialité identifié par son <strong>code UCD</strong>. Ex: <em>EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521</em></li>
+      <li>en DC (dénomination commune) identifié par son <strong>code SMS</strong> ou son <strong>code technique ANSM</strong> (dans l’attente de l’attribution d’un code SMS). Ex: <em>paracétamol dont le code SMS est 100000090270</em></li>
+      <li>en MV (médicament virtuel) identifié par son <strong>code Medicabase</strong>. Ex. <em>BETAMETHASONE 0,05% voie cutanée pom dont le code Medicabase est MV00000063</em></li>
+    </ul>
+  </li>
   <li><em>FrMedicationCompound</em>: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: <em>glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g</em>.</li>
 </ul>
 
@@ -302,20 +308,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </p>
 </div>
 
-<p>Noter qu’un médicament simple peut être une association de plusieurs principes actifs. Ce n’en est pas moins un médicament simple représenté par une ressource <em>FrMedicationNonCompound</em>. Ex : <em>CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047</em> contenant paracétamol+codéine 500 mg+30 mg*</p>
+<p>Noter qu’un médicament simple peut être une association de plusieurs principes actifs. Ce n’en est pas moins un médicament simple représenté par une ressource <em>FrMedicationNonCompound</em>. Ex : <em>CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047</em> contenant 500 mg de paracétamol et 30 mg de codéine*</p>
 
-<p>La <strong>posologie</strong> est représentée par l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de la ressource <em>FRInpatientMedicationRequest</em>.</p>
+<p>La <strong>posologie</strong> est représentée par l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de la ressource <em>MedicationRequest</em>.</p>
 
 <p><strong>Date de début, date de fin</strong> et <strong>durée de prescription</strong></p>
 
 <p>Elles traduisent la période d’exécution de la prescription.</p>
 
-<p>Cette information est portée indivuellement par chaque ligne de prescription, c’est à dire au niveau de la ressource <em>MedicationRequest</em> profilée par <em>FRInpatientMedicationRequest</em>, comme paramètre de la posologie prescrite, dans l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de type <em>Dosage</em>, sous-élément <code class="language-plaintext highlighter-rouge">timing</code> de type <em>Timing</em></p>
+<p>Cette information est portée indivuellement par chaque ligne de prescription, c’est à dire au niveau de la ressource <em>MedicationRequest</em> profilée par <em>FRMedicationRequest</em> ou <em>FrInpatientMedicationRequest</em>, comme paramètre de la posologie prescrite, dans l’élément <code class="language-plaintext highlighter-rouge">dosageInstruction</code> de type <em>Dosage</em>, sous-élément <code class="language-plaintext highlighter-rouge">timing</code> de type <em>Timing</em></p>
 
 <ul>
   <li>date de début : <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsPeriod.start</code></li>
   <li>date de fin : <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsPeriod.end</code></li>
-  <li>durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu’au niveau de l’IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.</li>
+  <li>durée : dans FHIR la durée est exclusive des dates de début et date de fin:
+    <ul>
+      <li>Si elle est exprimée dans <code class="language-plaintext highlighter-rouge">.dosageInstruction.timing.repeat.boundsDuration</code>, les date de début et date de fin ne figurent pas dans la ressource (dans le cas des prescriptions de médecine de ville ou des prescritpions hospitalières à exécution en ville).</li>
+      <li>Si les dates de début et de fin sont exprimées, la durée ne peut exister qu’au niveau de l’IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.</li>
+    </ul>
+  </li>
 </ul>
 
 <p>Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments <code class="language-plaintext highlighter-rouge">.validityPeriod</code> et <code class="language-plaintext highlighter-rouge">.expectedSupplyDuration</code> de l’élément <code class="language-plaintext highlighter-rouge">.dispensationRequest</code>.</p>
@@ -324,44 +335,66 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="précisions-sur-dates-et-durée-de-prescription">Précisions sur dates et durée de prescription</h4>
 
-<p>Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource <em>MedicationRequest</em> profilée <em>FRInPatientMedicationRequest</em>.</p>
+<p>Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource <em>MedicationRequest</em> profilée <em>FrMedicationRequest</em> ou <em>FrInPatientMedicationRequest</em>.</p>
 
 <p>Elles concernent également les règles définissant la <strong>première dose prescrite</strong> et la <strong>dernière dose prescrite</strong>.</p>
 
 <p>Deux dates, de début et de fin, de la ligne de prescription doivent être considérées :</p>
 
 <ul>
-  <li>La date de début et de fin <strong>prescrite</strong> : le plus souvent, “à partir de maintenant et pendant x jours”</li>
+  <li>La date de début et de fin <strong>prescrite</strong> : le plus souvent, “à partir de maintenant et pendant x jours” (ce qui se traduit à FHIR par une date de début renseignée et une date de fin calculée à partir de la date de début et la durée renseignées)</li>
   <li>La date de début et de fin <strong>effective</strong> : la date/heure à partir de laquelle commence effectivement la ligne prescription, c’est-à-dire la date/heure de <strong>début d’administration de la premier dose</strong>, et la date/heure effective de fin de la ligne de prescription, c’est-à-dire la date/heure de <strong>fin d’administration de la dernière dose</strong>.</li>
 </ul>
 
-<p><strong>Date/heure de fin prescrite</strong> de la ligne de prescription (<em>MedicationRequest</em>)</p>
+<p><strong>Date/heure de début prescrite</strong> de la ligne de prescription (<em>MedicationRequest</em>)</p>
 
-<p>Définit la date/heure de fin exprimée par le médecin lors de sa prescription.</p>
+<p>Définit la date/heure de début exprimée par le médecin lors de sa prescription.
+<strong>Note:</strong> Si seule la durée du traitement est exprimé, la date de début correspond à la date de la première prise.</p>
 
 <p><strong>La première dose prescrite</strong>:</p>
 
 <ul>
-  <li>celle dont la date/heure de début d’administration est <em>immédiatement postérieure ou égale à la date/heure de début prescrite</em>.</li>
-  <li>calculée à partir de la <em>date/heure de début prescrite</em>, en fonction de la posologie définie par la collection de <em>dosageInstruction</em>.</li>
+  <li>si la date de début est exprimée:
+    <ul>
+      <li>celle dont la date/heure de début d’administration est <em>immédiatement postérieure ou égale à la date/heure de début prescrite</em>.</li>
+      <li>calculée à partir de la <em>date/heure de début prescrite</em>, en fonction de la posologie définie par la collection de <em>dosageInstruction</em>.</li>
+    </ul>
+  </li>
+  <li>si la date de début n’est pas exprimée:
+    <ul>
+      <li>date/heure de la première prise</li>
+    </ul>
+  </li>
 </ul>
 
 <p><strong>Date/heure de fin prescrite</strong> de la ligne de prescription (<em>MedicationRequest</em>)</p>
 
-<p>Définit la date/heure de fin exprimée par le médecin lors de sa prescription.</p>
+<p>Définit la date/heure de fin exprimée par le médecin lors de sa prescription.
+<strong>Note:</strong> Si seule la durée du traitement est exprimé, la date de fin correspond à la durée du traitement après la date de la première prise.</p>
 
 <p><strong>La dernière dose prescrite</strong>:</p>
 
 <ul>
-  <li>celle dont la date/heure de début d’administration est <em>immédiatement inférieure à la date/heure de fin prescrite</em></li>
-  <li>calculée à partir de la <em>date/heure de fin prescrite</em>, en fonction de la posologie définie par la collection <code class="language-plaintext highlighter-rouge">dosageInstruction</code></li>
+  <li>si la date de fin est expimée:
+    <ul>
+      <li>celle dont la date/heure de début d’administration est <em>immédiatement inférieure à la date/heure de fin prescrite</em></li>
+      <li>calculée à partir de la <em>date/heure de fin prescrite</em>, en fonction de la posologie définie par la collection <code class="language-plaintext highlighter-rouge">dosageInstruction</code></li>
+    </ul>
+  </li>
+  <li>si la date de fin n’est pas exprimée:
+    <ul>
+      <li>celle dont la date/heure de début d’administration est *immédiatement inférieure à la date de fin calculée (durée du traitement après la date de la première prise)</li>
+      <li>calculée à partir de la <em>durée de prescription</em>, en fonction de la date de la première prise et de la posologie définie par la collection <code class="language-plaintext highlighter-rouge">dosageInstruction</code></li>
+    </ul>
+  </li>
 </ul>
 
 <p>La <em>date/heure de fin d’administration</em> de la dernière dose (sa date/heure de début + sa durée d’administration) peut être supérieure à <em>date/heure de fin prescrite</em>.</p>
 
 <p><strong>Durée de prescription</strong>:</p>
 
-<p>Elle est liée aux deux paramétres précédents. Quand ces trois paramètres sont exposés à l’utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.</p>
+<p>Elle est liée aux deux paramétres précédents. Quand ces trois paramètres sont exposés à l’utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.
+Pour les prescriptions de médecine de ville ou les prescriptions hospitalières à éxecution en ville, il est possible que seule la durée de prescription soit exprimée les dates de début et fin dépendant de quand le patient se fait délivrer les médicaments.</p>
 
 <p>Les unités UCUM suivantes sont utilisées :</p>
 
@@ -533,7 +566,7 @@ Dans cet exemple</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 18, 2025 13:26+0000">2025-08-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 18, 2025 17:37+0000">2025-08-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
