@@ -22,7 +22,7 @@ Usage: #inline
 * ingredient.strength.denominator = $unitsofmeasure#h "h"
 
 Instance: medicationrequest-Presc-MATRIFEN-patch-TL72h
-InstanceOf: Ffr-inpatient-medicationrequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active

@@ -8,7 +8,7 @@ Description: "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV"
 Instance: medicationrequest-HAS-1-Presc-Pantoprazole-MV
 InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile = Cononical(fr-medicationrequest)
+* meta.profile = Canonical(fr-medicationrequest)
 * extension[renderedDosageInstruction].valueMarkdown = "40 mg le soir"
 * status = #active
 * intent = #order

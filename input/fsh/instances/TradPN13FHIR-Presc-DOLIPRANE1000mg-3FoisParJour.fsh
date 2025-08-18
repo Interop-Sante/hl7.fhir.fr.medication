@@ -11,7 +11,7 @@ Instance: medication-TradPN13FHIR-Presc-DOLIPRANE
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-TradPN13FHIR-Presc-DOLIPRANE"
-* meta.profile = Canonical(fr-medication-noncompound)"https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400892169026 "DOLIPRANE 1000MG CPR EFFV"
 * code.text = "DOLIPRANE 1 000 mg, cpr efferv"
 
