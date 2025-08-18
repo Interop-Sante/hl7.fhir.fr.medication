@@ -23,4 +23,3 @@ Usage: #inline
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
 * dosageInstruction.doseAndRate.doseQuantity.unit = "Application"
-* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure

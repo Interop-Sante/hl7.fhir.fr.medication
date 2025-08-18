@@ -1,7 +1,7 @@
 Instance: HAS-06-2-Presc-Methotrexate
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "METHOTREXATE  10 mg comprimé (sécable) : 20 mg, 1 fois par semaine, le mardi"
+Description: "METHOTREXATE 10 mg comprimé (sécable) : 20 mg, 1 fois par semaine, le mardi"
 * type = #searchset
 * entry.resource = medicationrequest-HAS-6-2-Presc-Methotrexate
 

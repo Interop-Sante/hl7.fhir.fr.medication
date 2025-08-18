@@ -1,7 +1,7 @@
 Instance: Presc-CLARADOL-TLMardisVendredis
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CLARADOL 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois"
+Description: "CLARADOL® 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-TLMardisVendredis
 
@@ -13,7 +13,7 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400891705256 "CLARADOL 500MG CPR"
-* medicationCodeableConcept.text = "CLARADOL 500 mg, cpr séc"
+* medicationCodeableConcept.text = "CLARADOL® 500 mg, cpr séc"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-08-13T09:28:14.342Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

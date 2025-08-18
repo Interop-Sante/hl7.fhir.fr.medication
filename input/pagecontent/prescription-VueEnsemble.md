@@ -1,16 +1,19 @@
 ### Vue d'ensemble
 
-La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FRMedicationRequest* pour les prescriptions de médecine de villet et les prescriptions hospitalières exécutables en ville (PHEV) et *FRInPatientMedicationRequest* pour les prescriptions intrahospitalières.
+La prescription est un ensemble de **lignes de prescription**, représentées chacune par une ressource *MedicationRequest* profilée *FrMedicationRequest* pour les prescriptions de médecine de villet et les prescriptions hospitalières exécutables en ville (PHEV) et *FrInPatientMedicationRequest* pour les prescriptions intrahospitalières.
 
 La prescription en tant que telle (le regroupement de lignes de prescription), n'est pas représentée par une ressource FHIR. En accord avec les guidelines d'HL7 International, le lien entre les différentes ressources regroupées dans une prescription est représenté par l'élément *MedicationRequest.groupIdentifier*.
 
 Chaque **ligne de prescription** est composée d'un **médicament prescrit** et de sa **posologie**.
 
-Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FrMedicationRequest* ou *FRInpatientMedicationRequest*, celui-ci peut être représenté sous forme d'une référence vers une ressource *Medication* suivant le profil idoine (cf. paragraphe suivant) ou d'un concept codé (CodeableConcept).
+Le **médicament prescrit** est représenté par l'élément `MedicationRequest.medication[x]` (1..1) du profil *FrMedicationRequest* ou *FrInpatientMedicationRequest*, celui-ci peut être représenté sous forme d'une référence vers une ressource *Medication* suivant le profil idoine (cf. paragraphe suivant) ou d'un concept codé (CodeableConcept).
 
-Selon que ce médicament prescrit est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
+Selon qu'un médicament prescrit référencé est un **médicament simple** ou un **médicament composé** de plusieurs médicaments simples, le **médicament prescrit** est représenté par deux variantes de ressource *Medication*:
 
-- *FrMedicationNonCompound*: médicament simple exprimé en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521* ou médicament exprimé en DC (dénomination commune identifiée par son **code SMS** ou son **code technique ANSM** dans l'attente de l'attribution d'un code SMS )/ Ex: *paracétamol dont le code SMS est 100000090270*
+- *FrMedicationNonCompound*: médicament simple exprimé: 
+  - en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521*
+  - en DC (dénomination commune) identifié par son **code SMS** ou son **code technique ANSM** (dans l'attente de l'attribution d'un code SMS). Ex: *paracétamol dont le code SMS est 100000090270*
+  - en MV (médicament virtuel) identifié par son **code Medicabase**. Ex. *BETAMETHASONE 0,05% voie cutanée pom dont le code Medicabase est MV00000063*
 - *FrMedicationCompound*: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: *glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g*.
 
 Dépendance des ressources profilées par Interop'Santé
@@ -21,19 +24,21 @@ Dépendance des ressources profilées par Interop'Santé
   </p>
 </div>
 
-Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*. Ex : *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047* contenant paracétamol+codéine 500 mg+30 mg*
+Noter qu'un médicament simple peut être une association de plusieurs principes actifs. Ce n'en est pas moins un médicament simple représenté par une ressource *FrMedicationNonCompound*. Ex : *CODOLIPRANE 500 mg/30 mg, cpr dont le code UCD est 3400893936047* contenant 500 mg de paracétamol et 30 mg de codéine*
 
-La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *FRInpatientMedicationRequest*.
+La **posologie** est représentée par l'élément `dosageInstruction` de la ressource *MedicationRequest*.
 
 **Date de début, date de fin** et **durée de prescription**
 
 Elles traduisent la période d'exécution de la prescription.
 
-Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedicationRequest* profilée par *FRInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
+Cette information est portée indivuellement par chaque ligne de prescription, c'est à dire au niveau de la ressource *MedicationRequest* profilée par *FRMedicationRequest* ou *FrInpatientMedicationRequest*, comme paramètre de la posologie prescrite, dans l'élément `dosageInstruction` de type *Dosage*, sous-élément `timing` de type *Timing*
 
 - date de début : `.dosageInstruction.timing.repeat.boundsPeriod.start`
 - date de fin : `.dosageInstruction.timing.repeat.boundsPeriod.end`
-- durée : la durée ne figure pas dans la ressource. Elle ne peut exister qu'au niveau de l'IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.
+- durée : dans FHIR la durée est exclusive des dates de début et date de fin:
+  - Si elle est exprimée dans `.dosageInstruction.timing.repeat.boundsDuration`, les date de début et date de fin ne figurent pas dans la ressource (dans le cas des prescriptions de médecine de ville ou des prescritpions hospitalières à exécution en ville).
+  - Si les dates de début et de fin sont exprimées, la durée ne peut exister qu'au niveau de l'IHM. Quand elle est saisie, elle permet de calculer la date de fin à partir la date de début. Quand elle est affichée, elle est calculée à partir de la date de début et de la date de fin.
 
 Ces dates de début et de fin de prescription, de même que la durée de prescription, ne sont pas des consignes de dispensation. Elles ne figurent donc pas dans les éléments `.validityPeriod` et `.expectedSupplyDuration` de l'élément `.dispensationRequest`.
 
@@ -41,38 +46,48 @@ En prescription intrahospitalière, il n'y a généralement pas de consigne de d
 
 #### Précisions sur dates et durée de prescription
 
-Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FRInPatientMedicationRequest*.
+Ces précisions concernent les dates et durée de prescription de la ligne de prescription représentée par une ressource *MedicationRequest* profilée *FrMedicationRequest* ou *FrInPatientMedicationRequest*.
 
 Elles concernent également les règles définissant la **première dose prescrite** et la **dernière dose prescrite**.
 
 Deux dates, de début et de fin, de la ligne de prescription doivent être considérées :
 
-- La date de début et de fin **prescrite** : le plus souvent, "à partir de maintenant et pendant x jours"
+- La date de début et de fin **prescrite** : le plus souvent, "à partir de maintenant et pendant x jours" (ce qui se traduit à FHIR par une date de début renseignée et une date de fin calculée à partir de la date de début et la durée renseignées)
 - La date de début et de fin **effective** : la date/heure à partir de laquelle commence effectivement la ligne prescription, c'est-à-dire la date/heure de **début d'administration de la premier dose**, et la date/heure effective de fin de la ligne de prescription, c'est-à-dire la date/heure de **fin d'administration de la dernière dose**.
 
-**Date/heure de fin prescrite** de la ligne de prescription (*MedicationRequest*)
+**Date/heure de début prescrite** de la ligne de prescription (*MedicationRequest*)
 
-Définit la date/heure de fin exprimée par le médecin lors de sa prescription.
+Définit la date/heure de début exprimée par le médecin lors de sa prescription.
+**Note:** Si seule la durée du traitement est exprimé, la date de début correspond à la date de la première prise.
 
 **La première dose prescrite**:
 
-- celle dont la date/heure de début d’administration est *immédiatement postérieure ou égale à la date/heure de début prescrite*.
-- calculée à partir de la *date/heure de début prescrite*, en fonction de la posologie définie par la collection de *dosageInstruction*.
+- si la date de début est exprimée:
+  - celle dont la date/heure de début d’administration est *immédiatement postérieure ou égale à la date/heure de début prescrite*.
+  - calculée à partir de la *date/heure de début prescrite*, en fonction de la posologie définie par la collection de *dosageInstruction*.
+- si la date de début n'est pas exprimée:
+  - date/heure de la première prise
 
 **Date/heure de fin prescrite** de la ligne de prescription (*MedicationRequest*)
 
 Définit la date/heure de fin exprimée par le médecin lors de sa prescription.
+**Note:** Si seule la durée du traitement est exprimé, la date de fin correspond à la durée du traitement après la date de la première prise.
 
 **La dernière dose prescrite**:
 
-- celle dont la date/heure de début d’administration est *immédiatement inférieure à la date/heure de fin prescrite*
-- calculée à partir de la *date/heure de fin prescrite*, en fonction de la posologie définie par la collection `dosageInstruction`
+- si la date de fin est expimée:
+  - celle dont la date/heure de début d’administration est *immédiatement inférieure à la date/heure de fin prescrite*
+  - calculée à partir de la *date/heure de fin prescrite*, en fonction de la posologie définie par la collection `dosageInstruction`
+- si la date de fin n'est pas exprimée:
+  - celle dont la date/heure de début d'administration est *immédiatement inférieure à la date de fin calculée (durée du traitement après la date de la première prise)
+  - calculée à partir de la *durée de prescription*, en fonction de la date de la première prise et de la posologie définie par la collection `dosageInstruction`
 
 La *date/heure de fin d’administration* de la dernière dose (sa date/heure de début + sa durée d'administration) peut être supérieure à *date/heure de fin prescrite*.
 
 **Durée de prescription**:
 
 Elle est liée aux deux paramétres précédents. Quand ces trois paramètres sont exposés à l'utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.
+Pour les prescriptions de médecine de ville ou les prescriptions hospitalières à éxecution en ville, il est possible que seule la durée de prescription soit exprimée les dates de début et fin dépendant de quand le patient se fait délivrer les médicaments.
 
 Les unités UCUM suivantes sont utilisées :
 

@@ -1,7 +1,7 @@
 Instance: MultiLine-Presc-METFORMINE-GLICLAZIDE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "METFORMINE ou GLICLAZIDE en cas d'intolérance digestive à la METFORMINE"
+Description: "METFORMINE® ou GLICLAZIDE® en cas d'intolérance digestive à la METFORMINE"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-METFORMINE
 * entry[+].resource = medicationrequest-Presc-GLICLAZIDE

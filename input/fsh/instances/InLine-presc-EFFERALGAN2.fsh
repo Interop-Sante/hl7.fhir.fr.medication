@@ -1,7 +1,7 @@
 Instance: InLine-presc-EFFERALGAN2
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
-Description: "Prescription d'EFFERALGAN pour exemple de dispensation"
+Description: "Prescription d'EFFERALGAN® pour exemple de dispensation"
 * status = #active
 * intent = #order
 * medicationReference.reference = "Medication/InLine-med-EFFERALGAN"

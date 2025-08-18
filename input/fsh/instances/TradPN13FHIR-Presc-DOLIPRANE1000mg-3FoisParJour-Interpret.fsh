@@ -2,7 +2,7 @@ Instance: TradPN13FHIR-Presc-DOLIPRANE-Interpret
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de PN13-IS.4.0.Exemples_01.34.01 avec interprétation du code de fréquence
 Usage: #example
-Description: "DOLIPRANE 1000mg 3x/j pdt 2j - Traduction de PN13 en interprétant le code de fréquence"
+Description: "DOLIPRANE® 1000mg 3x/j pdt 2j - Traduction de PN13 en interprétant le code de fréquence"
 * type = #searchset
 * entry[0].resource = medication-TradPN13FHIR-Presc-DOLIPRANE-Interpret
 * entry[+].resource = medicationrequest-TradPN13FHIR-Presc-DOLIPRANE-Interpret

@@ -1,7 +1,7 @@
 Instance: HAS-16-Presc-Racecadotril
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "RACECADOTRIL 100 mg gélule: 1 gélule 3 fois par jour au début de chaque repas. A poursuivre tant que la diarrhée persiste avec un maximum de 7 jours."
+Description: "RACECADOTRIL 100 mg gélule: 1 gélule 3 fois par jour au début de chaque repas. A poursuivre tant que la diarrhée persiste avec un maximum de 7 jours"
 * type = #searchset
 * entry.resource = medicationrequest-HAS-16-Presc-Racecadotril
 

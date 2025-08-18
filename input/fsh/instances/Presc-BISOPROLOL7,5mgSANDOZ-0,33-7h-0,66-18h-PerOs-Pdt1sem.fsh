@@ -1,7 +1,7 @@
 Instance: Presc-BISOPROLOL-SANDOZ-DosesRationnelles
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "BISOPROLOL 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine"
+Description: "BISOPROLOL® 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine"
 * type = #searchset
 * entry[0].resource = medication-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
 * entry[+].resource = medicationrequest-Presc-BISOPROLOL-SANDOZ-DosesRationnelles
@@ -12,7 +12,7 @@ Usage: #inline
 * id = "medication-Presc-BISOPROLOL-SANDOZ-DosesRationnelles"
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893320921 "BISOPROLOL SDZ 7,5MG CPR"
-* code.text = "BISOPROLOL 7.5 mg SANDOZ, cpr séc"
+* code.text = "BISOPROLOL® 7.5 mg SANDOZ, cpr séc"
 * form = $EDQM#10219000 "comprimé"
 * form.text = "comprimé"
 

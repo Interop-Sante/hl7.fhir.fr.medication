@@ -1,7 +1,7 @@
 Instance: InLine-Presc-EFFERALGAN
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
-Description: "Prescription d'EFFERALGAN pour exemple de dispensation"
+Description: "Prescription d'EFFERALGAN® pour exemple de dispensation"
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order

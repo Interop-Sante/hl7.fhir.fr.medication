@@ -1,7 +1,7 @@
 Instance: Presc-DIPROSONE-AppCut
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "DIPROSONE 0.05%, 1 application cutanée à 8h, pendant 5j"
+Description: "DIPROSONE® 0.05%, 1 application cutanée à 8h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-DIPROSONE-AppCut
 * entry[+].resource = medicationrequest-Presc-DIPROSONE-AppCut
@@ -12,7 +12,7 @@ Usage: #inline
 * id = "medication-Presc-DIPROSONE-AppCut"
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400890277334 "DIPROSONE 0,05% CR TB30G"
-* code.text = "DIPROSONE 0.05%, crème, tube 30 g"
+* code.text = "DIPROSONE® 0.05%, crème, tube 30 g"
 * form = $EDQM#0071 "crème"
 * form.text = "crème"
 * ingredient.itemCodeableConcept = $SMS#100000091947 "bétaméthasone"

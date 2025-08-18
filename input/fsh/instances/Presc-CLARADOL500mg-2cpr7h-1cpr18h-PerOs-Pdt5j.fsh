@@ -1,7 +1,7 @@
 Instance: Presc-CLARADOL-DoseDiffParHoraire
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CLARADOL 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j"
+Description: "CLARADOL® 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-DoseDiffPraHoraire
 
@@ -13,7 +13,7 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400891705256 "CLARADOL 500MG CPR"
-* medicationCodeableConcept.text = "CLARADOL 500 mg, cpr séc"
+* medicationCodeableConcept.text = "CLARADOL® 500 mg, cpr séc"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-08-12T14:08:35.552Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

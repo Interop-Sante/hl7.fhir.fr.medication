@@ -1,7 +1,7 @@
 Instance: Presc-NICOREETESKIN-patch
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "NICOREETESKIN 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
+Description: "NICOREETESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
 * type = #searchset
 * entry[0].resource = medication-Presc-NICOREETESKIN-patch
 * entry[+].resource = medicationrequest-Presc-NICOREETESKIN-patch
@@ -12,7 +12,7 @@ Usage: #inline
 * id = "medication-Presc-NICOREETESKIN-patch"
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893539354 "NICORETTESKIN 15MG/16H DISP"
-* code.text = "NICOTINE"
+* code.text = "NICORETTESKIN® 15MG/16H DISP"
 * form = $EDQM#10519000 "Patch transdermique"
 * form.text = "dispositif transdermique"
 * ingredient.itemCodeableConcept = $SMS#100000079991 "nicotine"

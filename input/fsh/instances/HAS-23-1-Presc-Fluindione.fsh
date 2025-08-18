@@ -1,7 +1,7 @@
 Instance: HAS-23-1-Presc-Fluindione
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois."
+Description: "FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois"
 * type = #searchset
 * entry.resource = medicationrequest-HAS-23-1-Presc-Fluindione
 

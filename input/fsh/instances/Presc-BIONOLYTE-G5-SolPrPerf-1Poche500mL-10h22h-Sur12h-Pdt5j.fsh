@@ -1,7 +1,7 @@
 Instance: Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "BIONOLYTE G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j"
+Description: "BIONOLYTE® G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 * entry[+].resource = medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
@@ -12,7 +12,7 @@ Usage: #inline
 * id = "medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893093542 "BIONOLYTE G5 INJ FPE500ML"
-* code.text = "BIONOLYTE G5, sol pr perf, flac 500 mL"
+* code.text = "BIONOLYTE® G5, sol pr perf, flac 500 mL"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
 

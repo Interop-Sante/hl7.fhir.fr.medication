@@ -1,7 +1,7 @@
 Instance: Presc-DOLIPRANE-20DoseParKG
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "DOLIPRANE 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j"
+Description: "DOLIPRANE® 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-DOLIPRANE-20DoseParKG
 * entry[+].resource = medicationrequest-Presc-DOLIPRANE-20DoseParKG
@@ -12,7 +12,7 @@ Usage: #inline
 * id = "medication-Presc-DOLIPRANE-20DoseParKG"
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400892028057 "DOLIPRANE 2,4% BUV FV100ML"
-* code.text = "DOLIPRANE 2.4% ss sucre, susp buv"
+* code.text = "DOLIPRANE® 2.4% ss sucre, susp buv"
 * form = $EDQM#10106000 "suspension buvable"
 * form.text = "suspension buvable"
 * ingredient.itemCodeableConcept = $SMS#100000090270 "paracétamol"

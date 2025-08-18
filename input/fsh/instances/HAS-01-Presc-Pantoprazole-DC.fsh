@@ -14,7 +14,7 @@ Usage: #inline
 * code = $SMS#100000092491 "pantoprazole"
 * form = $EDQM#10219000 "comprimé"
 * ingredient.itemCodeableConcept = $SMS#100000092491 "pantoprazole"
-* ingredient.strength.numerator = 40 'mg' "mg"
+* ingredient.strength.numerator = 40 $unitsofmeasure#mg "mg"
 
 Instance: medicationrequest-HAS-1-Presc-Pantoprazole-DC
 InstanceOf: fr-medicationrequest

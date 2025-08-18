@@ -1,7 +1,7 @@
 Instance: Presc-CODOLIPRANE-MedCodeableConcept
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j"
+Description: "CODOLIPRANE® 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
 
@@ -13,7 +13,7 @@ Usage: #inline
 * intent = #order
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400893936047 "CODOLIPRANE 500/30MG CPR"
-* medicationCodeableConcept.text = "CODOLIPRANE 500 mg/30 mg, cpr"
+* medicationCodeableConcept.text = "CODOLIPRANE® 500 mg/30 mg, cpr"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-28T15:12:37.603Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
