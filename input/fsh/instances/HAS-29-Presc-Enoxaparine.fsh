@@ -16,6 +16,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000090152 "énoxaparine sodique"
 * ingredient.strength.numerator.value = 6000
 * ingredient.strength.numerator.unit = "UI"
+* ingredient.strength.denominator.value = 1
 
 Instance: medicationrequest-HAS-29-Presc-Enoxaparine
 InstanceOf: fr-medicationrequest

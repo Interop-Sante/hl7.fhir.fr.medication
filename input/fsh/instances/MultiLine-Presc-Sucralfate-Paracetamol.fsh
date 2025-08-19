@@ -13,7 +13,7 @@ Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Sucralfate"
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $SMS#100000091545 "sucralfate"
 * subject.reference = "Patient/30004"
@@ -39,7 +39,7 @@ Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Paracetamol"
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $SMS#100000090270 "paracétamol"
 * subject.reference = "Patient/30004"

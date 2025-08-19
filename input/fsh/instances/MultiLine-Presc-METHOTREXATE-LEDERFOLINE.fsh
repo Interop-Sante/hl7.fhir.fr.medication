@@ -13,7 +13,7 @@ Usage: #inline
 * id = "medicationrequest-Presc-METHOTREXATE"
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400894357391 "METHOTREX.ACC 25MG/ML FL2ML"
 * subject.reference = "Patient/30003"
@@ -39,7 +39,7 @@ Usage: #inline
 * id = "medicationrequest-Presc-LEDERFOLINE"
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400891463088 "LEDERFOLINE 25MG CPR"
 * subject.reference = "Patient/30003"

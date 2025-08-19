@@ -16,9 +16,11 @@ Usage: #inline
 * ingredient[0].itemCodeableConcept = $SMS#100000090270 "paracétamol"
 * ingredient[=].itemCodeableConcept.text = "PARACETAMOL"
 * ingredient[=].strength.numerator = 500 $unitsofmeasure#mg "mg"
+* indredient[=].strength.denominator.value = 1
 * ingredient[+].itemCodeableConcept = $SMS#100000079790 "codéine"
 * ingredient[=].itemCodeableConcept.text = "CODEINE"
 * ingredient[=].strength.numerator = 30 $unitsofmeasure#mg "mg"
+* indredient[=].strength.denominator.value = 1
 
 Instance: medicationrequest-Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-inpatient-medicationrequest

@@ -18,6 +18,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept.text = "PARACETAMOL"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 1000 $unitsofmeasure#mg "mg"
+* indredient.strength.denominator.value = 1
 
 Instance: medicationrequest-Presc-EFFERALGAN
 InstanceOf: fr-inpatient-medicationrequest

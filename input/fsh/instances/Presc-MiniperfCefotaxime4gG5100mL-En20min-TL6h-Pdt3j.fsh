@@ -26,6 +26,7 @@ Usage: #inline
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
 * amount.numerator = 100 $unitsofmeasure#mL "mL"
+* amount.denominator.value = 1
 * ingredient.itemCodeableConcept = $SMS#100000078171 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
 * ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"

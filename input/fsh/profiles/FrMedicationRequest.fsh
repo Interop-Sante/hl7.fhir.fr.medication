@@ -34,6 +34,7 @@ Description: "French medication request profile"
 
 * dosageInstruction 1..
 
+* dosageInstruction.patientInstruction ..0
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
 * dosageInstruction.method from FrMethodOfAdministration (extensible)

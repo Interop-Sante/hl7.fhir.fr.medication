@@ -16,6 +16,7 @@ Usage: #inline
 * code = $SMS#100000081844 "dobutamine"
 * code.text = "DOBUTAMINE"
 * amount.numerator = 200 $unitsofmeasure#mg "mg"
+* amount.denominator.value = 1
 
 Instance: medication-2-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-noncompound
@@ -38,6 +39,7 @@ Usage: #inline
 * meta.profile = Canonical(fr-medication-compound)
 * code.text = "Dobutamine 200 mg dans G5 qsp 40 mL"
 * amount.numerator = 40 $unitsofmeasure#ml "ml"
+* amount.denominator.value = 1
 * ingredient[0].itemReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"
 * ingredient[=].itemReference.reference = "#medication-2-Presc-PerfDobutamine-Qsp40mL"
 * ingredient[=].extension[IsVehicle].valueBoolean = true

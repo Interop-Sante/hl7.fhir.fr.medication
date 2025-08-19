@@ -51,7 +51,7 @@ Usage: #inline
 * identifier.value = "20250502144844569"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400890020275 "METFORMINE ACC 1000MG CPR"
 * subject.reference = "#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE"

@@ -17,16 +17,13 @@ Usage: #inline
 * medicationCodeableConcept = $Medicabase#MV00001070 "FLUINDIONE 20 mg comprimé quadrisécable"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
-// la séquence n'est pas satisfaisante si sequence différente, risque de ne pas mettre en oeuvre le 0.75 dans le mois du cycle (attente de la fin de la première séquence), si séquence identique, risque de 1,25 tous les deux jours
-* dosageInstruction[0].sequence = 1
-* dosageInstruction[=].additionalInstruction.text = "le premier jour du cycle de 2 jours"
+* dosageInstruction[0].additionalInstruction.text = "le premier jour du cycle de 2 jours"
 * dosageInstruction[=].timing.repeat.boundsDuration = 1 $unitsofmeasure#mo "mois"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 2
 * dosageInstruction[=].timing.repeat.periodUnit = #d
 * dosageInstruction[=].doseAndRate.doseQuantity = 0.5 $EDQM#15054000 "Comprimé"
-* dosageInstruction[+].sequence = 1
-* dosageInstruction[=].additionalInstruction.text = "le second jour du cycle de 2 jours"
+* dosageInstruction[+].additionalInstruction.text = "le second jour du cycle de 2 jours"
 * dosageInstruction[=].timing.repeat.boundsDuration = 1 $unitsofmeasure#mo "mois"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 2

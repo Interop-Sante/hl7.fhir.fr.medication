@@ -19,6 +19,7 @@ Usage: #inline
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
 * amount.numerator = 1 $unitsofmeasure#L "L"
+* amount.denominator.value = 1
 * ingredient.itemCodeableConcept = $sct#67079006 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
 * ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
@@ -34,6 +35,7 @@ Usage: #inline
 * form = $EDQM#11201000 "solution injectable"
 * form.text = "solution injectable"
 * amount.numerator = 3 $unitsofmeasure#g "g"
+* amount.denominator.value = 1
 
 Instance: medication-3-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
@@ -45,6 +47,7 @@ Usage: #inline
 * form = $EDQM#11201000 "solution injectable"
 * form.text = "solution injectable"
 * amount.numerator = 2 $unitsofmeasure#g "g"
+* amount.denominator.value = 1
 
 
 Instance: medication-C-Presc-PerfGl-NaCl-KCl-1l

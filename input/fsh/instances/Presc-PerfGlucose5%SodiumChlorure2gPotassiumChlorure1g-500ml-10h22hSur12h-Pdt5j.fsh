@@ -19,6 +19,7 @@ Usage: #inline
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
 * amount.numerator = 500 $unitsofmeasure#mL "mL"
+* amount.denominator.value = 1
 * ingredient.itemCodeableConcept = $SMS#100000078171 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
 * ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
@@ -32,6 +33,7 @@ Usage: #inline
 * code = $SMS#100000092115 "chlorure de sodium"
 * code.text = "SODIUM CHLORURE"
 * amount.numerator = 2 $unitsofmeasure#g "g"
+* amount.denominator.value = 1
 
 Instance: medication-3-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-noncompound
@@ -41,6 +43,7 @@ Usage: #inline
 * code = $SMS#100000091807 "chlorure de potassium"
 * code.text = "POTASSIUM CHLORURE"
 * amount.numerator = 1 $unitsofmeasure#g "g"
+* amount.denominator.value = 1
 
 Instance: medication-C-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-compound

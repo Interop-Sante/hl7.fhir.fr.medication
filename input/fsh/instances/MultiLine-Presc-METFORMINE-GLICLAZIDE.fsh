@@ -13,7 +13,7 @@ Usage: #inline
 * id = "medicationrequest-Presc-METFORMINE"
 * meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400890020275 "METFORMINE ACC 1000MG CPR"
 * subject.reference = "Patient/30002"

@@ -64,7 +64,7 @@ Les niveaux de complexité supplémentaires adressent
     - 1/2 : 0.5
     - 2/3 : 0.666667
     - 3/4 : 0.75
-  - ***spécificité ville*** les doses rationelles doivent pouvoir être exprimées en toutes lettres dans une partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`)
+  - ***spécificité ville*** les doses rationelles doivent pouvoir être exprimées en toutes lettres dans la posologie textuelle (i.e. dans l'extension `renderedDosageInstruction`)
     - [HAS - fluindione 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé) (id_poso=5)](Bundle-HAS-05-1-Presc-Fluindione.html)
 - les doses différentes entre horaires
   - [CLARADOL® 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j](Bundle-Presc-CLARADOL-DoseDiffParHoraire.html)
@@ -340,6 +340,11 @@ En [R5](https://hl7.org/fhir/medication.html), la ressource *Medication* voit l'
 
 **Note**:
 En R5 l'élément amount est renommé **totalVolume** pour lever toute ambiguité avec les volumes pouvant figurer dans les `ingredient.strength\[x\]`.
+
+***spécifité ville*** La Q.S.P que l'on peut retrouver sur certaines ordonances de ville n'a pas la même signification qu'à l'hôpital, elle est à comprendrs comme une durée de traitement. De ce fait, elle est traduite:
+
+- soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsDuration`si aucune date de début n'est mentionée
+- soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsPeriod.end` si une date de début est mentionnée
 
 #### Patches
 

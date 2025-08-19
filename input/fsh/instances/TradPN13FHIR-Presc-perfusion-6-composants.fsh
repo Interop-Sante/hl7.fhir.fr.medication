@@ -62,6 +62,7 @@ Usage: #inline
 * amount.numerator.system = $EDQM
 * amount.numerator.code = #15002000
 * amount.numerator.unit = "Ampoule"
+* amount.denominator.value = 1
 
 Instance: medication-2-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
@@ -74,6 +75,7 @@ Usage: #inline
 * amount.numerator.system = $EDQM
 * amount.numerator.code = #15002000
 * amount.numerator.unit = "Ampoule"
+* amount.denominator.value = 1
 
 Instance: medication-3-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
@@ -86,6 +88,7 @@ Usage: #inline
 * amount.numerator.system = $EDQM
 * amount.numerator.code = #15002000
 * amount.numerator.unit = "Ampoule"
+* amount.denominator.value = 1
 
 Instance: medication-4-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
@@ -98,6 +101,7 @@ Usage: #inline
 * amount.numerator.system = $EDQM
 * amount.numerator.code = #15060000
 * amount.numerator.unit = "Flacon"
+* amount.denominator.value = 1
 
 Instance: medication-5-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
@@ -110,6 +114,7 @@ Usage: #inline
 * amount.numerator.system = $EDQM
 * amount.numerator.code = #15060000
 * amount.numerator.unit = "Flacon"
+* amount.denominator.value = 1
 
 Instance: medication-6-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-noncompound
@@ -122,6 +127,7 @@ Usage: #inline
 * amount.numerator.system = $EDQM
 * amount.numerator.code = #15005000
 * amount.numerator.unit = "Poche"
+* amount.denominator.value = 1
 
 Instance: medication-C-TradPN13FHIR-Presc-perfusion-6-composants
 InstanceOf: fr-medication-compound
