@@ -10,4 +10,4 @@ Description: "Medication DOLIPRANE® pour exemple de dispensation"
 * ingredient.itemCodeableConcept.text = "PARACETAMOL"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 500 $unitsofmeasure#mg "mg"
-* ingredient.strength.denominator = 1
+* ingredient.strength.denominator.value = 1
