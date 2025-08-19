@@ -359,7 +359,7 @@ Les niveaux de complexité supplémentaires adressent</p>
           <li>3/4 : 0.75</li>
         </ul>
       </li>
-      <li><strong><em>spécificité ville</em></strong> les doses rationelles doivent pouvoir être exprimées en toutes lettres dans une partie textuelle (i.e. dans <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code>)
+      <li><strong><em>spécificité ville</em></strong> les doses rationelles doivent pouvoir être exprimées en toutes lettres dans la posologie textuelle (i.e. dans l’extension <code class="language-plaintext highlighter-rouge">renderedDosageInstruction</code>)
         <ul>
           <li><a href="Bundle-HAS-05-1-Presc-Fluindione.html">HAS - fluindione 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé) (id_poso=5)</a></li>
         </ul>
@@ -749,6 +749,13 @@ il est prescrit explicitement que le soluté est en Q.S.P. le volume cible de la
 <p><strong>Note</strong>:
 En R5 l’élément amount est renommé <strong>totalVolume</strong> pour lever toute ambiguité avec les volumes pouvant figurer dans les <code class="language-plaintext highlighter-rouge">ingredient.strength\[x\]</code>.</p>
 
+<p><strong><em>spécifité ville</em></strong> La Q.S.P que l’on peut retrouver sur certaines ordonances de ville n’a pas la même signification qu’à l’hôpital, elle est à comprendrs comme une durée de traitement. De ce fait, elle est traduite:</p>
+
+<ul>
+  <li>soit par <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.timing.repeat.bondsDuration</code>si aucune date de début n’est mentionée</li>
+  <li>soit par <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.timing.repeat.bondsPeriod.end</code> si une date de début est mentionnée</li>
+</ul>
+
 <h4 id="patches">Patches</h4>
 
 <h5 id="propriétés-du-patch">Propriétés du patch</h5>
@@ -880,7 +887,7 @@ Mais c’est un autre cas d’usage, qui, quand bien même il déboucherait sur 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 19, 2025 08:40+0000">2025-08-19</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 19, 2025 16:42+0000">2025-08-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
