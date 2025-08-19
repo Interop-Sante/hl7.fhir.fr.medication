@@ -17,6 +17,6 @@ Description: "Délivrance reglobalisée, cumulant 3 dispensations nominatives"
 * authorizingPrescription[+].reference = "MedicationRequest/InLine-presc-EFFERALGAN2"
 * type = $v3-ActCode#RFP "Refill - Part"
 * quantity = 14 '1'
-* daysSupply = 2 'd' "jours"
+* daysSupply = 2 $unitsofmeasure#d "jours"
 * whenPrepared = "2021-07-16T10:10:00Z"
 * whenHandedOver = "2021-07-16T10:24:00Z"

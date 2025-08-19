@@ -28,4 +28,4 @@ Usage: #inline
 * dosageInstruction.doseAndRate.rateRatio.numerator.unit = "ml"
 * dosageInstruction.doseAndRate.rateRatio.numerator.system = $unitsofmeasure
 * dosageInstruction.doseAndRate.rateRatio.numerator.code = #mL
-* dosageInstruction.doseAndRate.rateRatio.denominator = 12 'h' "h"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 12 $unitsofmeasure#h "h"

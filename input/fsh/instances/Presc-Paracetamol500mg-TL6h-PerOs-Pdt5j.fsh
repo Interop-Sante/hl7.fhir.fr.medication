@@ -34,4 +34,4 @@ Usage: #inline
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.route.text = "Voie orale"
-* dosageInstruction.doseAndRate.doseQuantity = 500 'mg' "mg"
+* dosageInstruction.doseAndRate.doseQuantity = 500 $unitsofmeasure#mg "mg"

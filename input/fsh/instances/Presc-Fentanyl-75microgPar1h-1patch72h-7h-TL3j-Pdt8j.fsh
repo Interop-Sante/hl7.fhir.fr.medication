@@ -16,8 +16,8 @@ Usage: #inline
 * form = $EDQM#0061 "Patch"
 * ingredient[0].itemCodeableConcept = $SMS#100000090377 "fentanyl"
 * ingredient[=].itemCodeableConcept.text = "FENTANYL"
-* ingredient[=].strength.numerator = 75 'ug' "µg"
-* ingredient[=].strength.denominator = 1 'h' "h"
+* ingredient[=].strength.numerator = 75 $unitsofmeasure#ug "µg"
+* ingredient[=].strength.denominator = 1 $unitsofmeasure#h "h"
 
 Instance: medicationrequest-Presc-Fentanyl-patch72h-TL3j
 InstanceOf: fr-inpatient-medicationrequest

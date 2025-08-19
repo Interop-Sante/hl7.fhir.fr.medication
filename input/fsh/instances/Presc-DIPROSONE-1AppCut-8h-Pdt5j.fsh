@@ -18,7 +18,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000091947 "bétaméthasone"
 * ingredient.itemCodeableConcept.text = "BETAMETHASONE"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 0.5 'mg' "mg"
+* ingredient.strength.numerator = 0.5 $unitsofmeasure#mg "mg"
 * ingredient.strength.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-DIPROSONE-AppCut

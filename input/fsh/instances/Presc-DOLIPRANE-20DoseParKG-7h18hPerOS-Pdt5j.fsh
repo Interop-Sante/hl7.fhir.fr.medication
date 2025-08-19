@@ -18,8 +18,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000090270 "paracétamol"
 * ingredient.itemCodeableConcept.text = "PARACETAMOL"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 15 'mg' "mg"
-* ingredient.strength.denominator = 1 '1'
+* ingredient.strength.numerator = 15 $unitsofmeasure#mg "mg"
 
 Instance: medicationrequest-Presc-DOLIPRANE-20DoseParKG
 InstanceOf: fr-inpatient-medicationrequest

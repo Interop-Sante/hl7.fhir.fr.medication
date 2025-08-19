@@ -15,7 +15,7 @@ Usage: #inline
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000081844 "dobutamine"
 * code.text = "DOBUTAMINE"
-* amount.numerator = 200 'mg' "mg"
+* amount.numerator = 200 $unitsofmeasure#mg "mg"
 
 Instance: medication-2-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-noncompound
@@ -28,8 +28,8 @@ Usage: #inline
 * form.text = "solution pour perfusion"
 * ingredient.itemCodeableConcept = $SMS#100000078171 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
-* ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 'mL' "mL"
+* ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator = 1 $unitsofmeasure#mL "mL"
 
 Instance: medication-C-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-compound
@@ -37,7 +37,7 @@ Usage: #inline
 * id = "medication-C-Presc-PerfDobutamine-Qsp40mL"
 * meta.profile = Canonical(fr-medication-compound)
 * code.text = "Dobutamine 200 mg dans G5 qsp 40 mL"
-* amount.numerator = 40 'ml' "ml"
+* amount.numerator = 40 $unitsofmeasure#ml "ml"
 * ingredient[0].itemReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"
 * ingredient[=].itemReference.reference = "#medication-2-Presc-PerfDobutamine-Qsp40mL"
 * ingredient[=].extension[IsVehicle].valueBoolean = true
@@ -61,5 +61,5 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.extension[fr-basis-of-dose-component].valueReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 400 'ug' "µg"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'min' "min"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 400 $unitsofmeasure#ug "µg"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 $unitsofmeasure#min "min"

@@ -27,5 +27,5 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseRange.low.system = $EDQM
 * dosageInstruction.doseAndRate.doseRange.low.code = #15054000
 * dosageInstruction.maxDosePerPeriod.numerator = 8 $EDQM#15054000 "comprimé"
-* dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
+* dosageInstruction.maxDosePerPeriod.denominator = 24 $unitsofmeasure#h "h"
 * dosageInstruction.maxDosePerAdministration = 2 $EDQM#15054000 "comprimé"

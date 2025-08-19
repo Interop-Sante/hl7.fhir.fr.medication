@@ -33,11 +33,11 @@ Usage: #inline
 * dosageInstruction[=].timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * dosageInstruction[=].route.text = "Voie orale"
-* dosageInstruction[=].doseAndRate.doseQuantity = 1 'g' "g"
+* dosageInstruction[=].doseAndRate.doseQuantity = 1 $unitsofmeasure#g "g"
 * dosageInstruction[+].sequence = 1
 * dosageInstruction[=].timing.repeat.boundsPeriod.start = "2021-08-12T14:29:00Z"
 * dosageInstruction[=].timing.repeat.boundsPeriod.end = "2021-08-17T14:28:59Z"
 * dosageInstruction[=].timing.repeat.timeOfDay = "18:00:00"
 * dosageInstruction[=].route = $EDQM#20053000 "Voie orale"
 * dosageInstruction[=].route.text = "Voie orale"
-* dosageInstruction[=].doseAndRate.doseQuantity = 500 'mg' "mg"
+* dosageInstruction[=].doseAndRate.doseQuantity = 500 $unitsofmeasure#mg "mg"

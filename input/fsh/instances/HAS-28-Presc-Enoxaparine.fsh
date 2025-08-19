@@ -45,7 +45,7 @@ Usage: #inline
 * dosageInstruction[=].doseAndRate.doseQuantity.code = #15052000
 * dosageInstruction[+].sequence = 2
 * dosageInstruction[=].additionalInstruction.text = "après l'intervention"
-* dosageInstruction[=].timing.repeat.boundsDuration = 10 'd' "jour"
+* dosageInstruction[=].timing.repeat.boundsDuration = 10 $unitsofmeasure#d "jour"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
 * dosageInstruction[=].timing.repeat.periodUnit = #d

@@ -18,11 +18,11 @@ Usage: #inline
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
-* amount.numerator = 1 'L' "L"
+* amount.numerator = 1 $unitsofmeasure#L "L"
 * ingredient.itemCodeableConcept = $sct#67079006 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
-* ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 'mL' "mL"
+* ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator = 1 $unitsofmeasure#mL "mL"
 
 Instance: medication-2-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
@@ -33,7 +33,7 @@ Usage: #inline
 * code.text = "SODIUM CHLORURE"
 * form = $EDQM#11201000 "solution injectable"
 * form.text = "solution injectable"
-* amount.numerator = 3 'g' "g"
+* amount.numerator = 3 $unitsofmeasure#g "g"
 
 Instance: medication-3-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
@@ -44,7 +44,7 @@ Usage: #inline
 * code.text = "POTASSIUM CHLORURE"
 * form = $EDQM#11201000 "solution injectable"
 * form.text = "solution injectable"
-* amount.numerator = 2 'g' "g"
+* amount.numerator = 2 $unitsofmeasure#g "g"
 
 
 Instance: medication-C-Presc-PerfGl-NaCl-KCl-1l
@@ -78,4 +78,4 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 1 $EDQM#15005000 "Poche"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 12 'h' "h"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 12 $unitsofmeasure#h "h"

@@ -12,7 +12,6 @@ Description: "Prescription d'EFFERALGAN® pour exemple de dispensation"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * groupIdentifier.value = "Presc-24624"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-28T14:52:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-02T14:51:59Z"
 * dosageInstruction.timing.repeat.timeOfDay[0] = "07:00:00"

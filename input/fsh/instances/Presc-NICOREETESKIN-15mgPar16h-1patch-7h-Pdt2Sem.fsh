@@ -18,8 +18,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000079991 "nicotine"
 * ingredient.itemCodeableConcept.text = "NICOTINE"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 15 'mg' "mg"
-* ingredient.strength.denominator = 1 '1'
+* ingredient.strength.numerator = 15 $unitsofmeasure#mg "mg"
 
 Instance: medicationrequest-Presc-NICOREETESKIN-patch
 InstanceOf: fr-inpatient-medicationrequest

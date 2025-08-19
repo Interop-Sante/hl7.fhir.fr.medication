@@ -13,7 +13,7 @@ Usage: #inline
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091947 "bétaméthasone"
 * code.text = "BETAMETHASONE"
-* amount.numerator = 0.5 'mg' "mg"
+* amount.numerator = 0.5 $unitsofmeasure#mg "mg"
 * amount.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-Betamethasone-ApplCut

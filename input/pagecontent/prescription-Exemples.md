@@ -127,7 +127,7 @@ Les niveaux de complexité supplémentaires adressent
   - Voir [Perfusions et seringues électriques](prescription-Exemples.html#perfusion-et-seringues-électriques) § concacré à l'extension *Basis of Dose Component*.
 - l'expression d'une dose réelle pertinente à partir d'une dose théorique fonction de paramètres patient
   - [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Bundle-Presc-Capecitabine-Dose-Calculee.html)
-  - ***spécifité ville*** La dose réélle pertinente (valeur aboslue) doit être la seule indiquée dans la partie structuré de la posologie. La dose théorique en fonction de paramètres patient (valeur relative) peut être exprimée dans une partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`)
+  - ***spécifité ville*** La dose réélle pertinente (valeur aboslue) doit être la seule indiquée dans la partie structurée de la posologie. La dose théorique en fonction de paramètres patient (valeur relative) peut être exprimée dans une partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`)
     - [HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-Tinzaparine.html)
 - les modulation de doses
   - [HAS - NOVORAPID Flexpen® 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L (id_poso=25)](Bundle-HAS-25-NOVORAPID.html)

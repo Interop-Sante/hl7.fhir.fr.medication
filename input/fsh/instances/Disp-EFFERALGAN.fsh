@@ -9,7 +9,7 @@ Description: "Dispensation complète d'EFFERALGANT sur une prescription d'EFFERA
 * authorizingPrescription.reference = "MedicationRequest/medicationrequest-Presc-EFFERALGAN"
 * type = $v3-ActCode#FFC "First Fill - Complete"
 * quantity = 15 '1'
-* daysSupply = 5 'd' "jours"
+* daysSupply = 5 $unitsofmeasure#d "jours"
 * whenPrepared = "2021-07-28T15:25:00Z"
 * whenHandedOver = "2021-07-28T16:41:00Z"
 * dosageInstruction.sequence = 1

@@ -9,7 +9,7 @@ Description: "Dispensation complémentaire et partielle de DOLIPRANE sur une pre
 * authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol1"
 * type = $v3-ActCode#RFP "Refill - Part"
 * quantity = 6 '1'
-* daysSupply = 2 'd' "jours"
+* daysSupply = 2 $unitsofmeasure#d "jour"
 * whenPrepared = "2021-07-16T10:10:00Z"
 * whenHandedOver = "2021-07-16T10:24:00Z"
 * dosageInstruction.sequence = 1

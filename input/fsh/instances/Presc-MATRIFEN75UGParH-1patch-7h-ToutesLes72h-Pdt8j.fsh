@@ -18,7 +18,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $SMS#100000090377 "fentanyl"
 * ingredient.itemCodeableConcept.text = "FENTANYL"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 75 'ug' "µg"
+* ingredient.strength.numerator = 75 $unitsofmeasure#ug "µg"
 * ingredient.strength.denominator = $unitsofmeasure#h "h"
 
 Instance: medicationrequest-Presc-MATRIFEN-patch-TL72h

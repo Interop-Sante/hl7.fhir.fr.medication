@@ -18,11 +18,11 @@ Usage: #inline
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
-* amount.numerator = 500 'mL' "mL"
+* amount.numerator = 500 $unitsofmeasure#mL "mL"
 * ingredient.itemCodeableConcept = $SMS#100000078171 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
-* ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 'mL' "mL"
+* ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator = 1 $unitsofmeasure#mL "mL"
 
 Instance: medication-2-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-noncompound
@@ -31,7 +31,7 @@ Usage: #inline
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000092115 "chlorure de sodium"
 * code.text = "SODIUM CHLORURE"
-* amount.numerator = 2 'g' "g"
+* amount.numerator = 2 $unitsofmeasure#g "g"
 
 Instance: medication-3-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-noncompound
@@ -40,7 +40,7 @@ Usage: #inline
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091807 "chlorure de potassium"
 * code.text = "POTASSIUM CHLORURE"
-* amount.numerator = 1 'g' "g"
+* amount.numerator = 1 $unitsofmeasure#g "g"
 
 Instance: medication-C-Presc-PerfGl-NaCl-KCl-500ml
 InstanceOf: fr-medication-compound
@@ -74,4 +74,4 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 1 $EDQM#15005000 "Poche"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 12 'h' "h"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 12 $unitsofmeasure#h "h"

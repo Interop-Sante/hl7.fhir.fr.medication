@@ -33,5 +33,5 @@ Usage: #inline
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 15 'mg' "mg"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 16 'h' "h"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 15 $unitsofmeasure#mg "mg"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 16 $unitsofmeasure#h "h"

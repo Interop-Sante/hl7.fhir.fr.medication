@@ -9,5 +9,4 @@ Description: "Medication DOLIPRANE® pour exemple de dispensation"
 * ingredient.itemCodeableConcept = $SMS#100000090270 "paracétamol"
 * ingredient.itemCodeableConcept.text = "PARACETAMOL"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 500 'mg' "mg"
-* ingredient.strength.denominator = 1 '1'
+* ingredient.strength.numerator = 500 $unitsofmeasure#mg "mg"

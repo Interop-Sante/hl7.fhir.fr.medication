@@ -38,7 +38,7 @@ Usage: #inline
 * dosageInstruction.maxDosePerPeriod.numerator.unit = "Comprimé"
 * dosageInstruction.maxDosePerPeriod.numerator.system = $EDQM
 * dosageInstruction.maxDosePerPeriod.numerator.code = #15054000
-* dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
+* dosageInstruction.maxDosePerPeriod.denominator = 24 $unitsofmeasure#h "h"
 * dosageInstruction.maxDosePerAdministration.value = 2
 * dosageInstruction.maxDosePerAdministration.unit = "Comprimé"
 * dosageInstruction.maxDosePerAdministration.system = $EDQM

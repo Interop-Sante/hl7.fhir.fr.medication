@@ -25,11 +25,11 @@ Usage: #inline
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
-* amount.numerator = 100 'mL' "mL"
+* amount.numerator = 100 $unitsofmeasure#mL "mL"
 * ingredient.itemCodeableConcept = $SMS#100000078171 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
-* ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 'mL' "mL"
+* ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator = 1 $unitsofmeasure#mL "mL"
 
 Instance: medication-C-Presc-MiniperfCefotaxime-En20min-Pdt3j
 InstanceOf: fr-medication-compound
@@ -61,5 +61,5 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.extension[fr-basis-of-dose-component].valueReference.reference = "#medication-1-Presc-MiniperfCefotaxime-En20min-Pdt3j"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 4 'g' "g"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 20 'min' "min"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 4 $unitsofmeasure#g "g"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 20 $unitsofmeasure#min "min"
