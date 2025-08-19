@@ -10,4 +10,4 @@ Description: "Medication EFFERALGAN® pour exemple de dispensation"
 * ingredient.itemCodeableConcept.text = "PARACETAMOL"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 1000 $unitsofmeasure#mg "mg"
-* indredient.strength.denominator.value = 1
+* ingredient.strength.denominator.value = 1

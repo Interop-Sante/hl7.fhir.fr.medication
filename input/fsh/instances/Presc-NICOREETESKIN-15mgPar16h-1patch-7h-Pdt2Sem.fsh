@@ -19,7 +19,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept.text = "NICOTINE"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 15 $unitsofmeasure#mg "mg"
-* indredient.strength.denominator.value = 1
+* ingredient.strength.denominator.value = 1
 
 Instance: medicationrequest-Presc-NICOREETESKIN-patch
 InstanceOf: fr-inpatient-medicationrequest
