@@ -1,9 +1,9 @@
 MED : Validation Results
 =========================================
 
-err = 1051, warn = 2079, info = 117
+err = 1052, warn = 2078, info = 117
 IG Publisher Version: 2.0.13
-Generated Tue Aug 19 16:45:38 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = https://hl7.fr/ig/fhir/medication)
+Generated Wed Aug 20 14:16:19 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medication#0.1.0 (canonical = https://hl7.fr/ig/fhir/medication)
  Build Errors : 1306 / 3 / 0
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Bundle-HAS-01-Presc-Pantoprazole-DC : 12 / 4 / 6
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/Bundle-HAS-01-Presc-Pantoprazole-MV : 7 / 3 / 3
@@ -95,7 +95,7 @@ Generated Tue Aug 19 16:45:38 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medic
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-fr-medication-reconciliation-resolution : 1 / 0 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-fr-medication-reconciliation-status : 1 / 0 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-fr-medication-reconciliation-type : 1 / 1 / 2
- /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-fr-note-scope-codes : 1 / 1 / 2
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-fr-note-scope-codes : 2 / 1 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-fr-uf-role-codes : 1 / 1 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/CodeSystem-medication-ingredient-strength-codes : 5 / 2 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-FreeSetCIODC-Forme-ConceptMap : 4 / 327 / 1
@@ -107,7 +107,7 @@ Generated Tue Aug 19 16:45:38 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.medic
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-encounter-conceptmap : 2 / 3 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-medicationcomp-conceptmap : 2 / 8 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-medicationnoncompound-conceptmap : 2 / 48 / 1
- /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap : 2 / 107 / 1
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap : 2 / 106 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap : 2 / 40 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-patient-id-seul-conceptmap : 2 / 5 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap : 2 / 26 / 1
@@ -3015,6 +3015,7 @@ ERROR: CodeSystem/fr-medication-reconciliation-type: CodeSystem: Code systems pu
 WARNING: CodeSystem/fr-medication-reconciliation-type: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == fsh-generated/resources/CodeSystem-fr-note-scope-codes.json ==
 INFORMATION: CodeSystem/fr-note-scope-codes: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+ERROR: CodeSystem/fr-note-scope-codes: CodeSystem.count: The code system is complete, but the number of concepts (9) does not match the stated total number (10)
 ERROR: CodeSystem/fr-note-scope-codes: CodeSystem: Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 WARNING: CodeSystem/fr-note-scope-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == fsh-generated/resources/CodeSystem-fr-uf-role-codes.json ==
@@ -4393,8 +4394,7 @@ WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.
 WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[5].element[2].target[0].product[0].property: No definition could be found for URL value 'MedicationRequest.dosageInstruction.route.coding.system'
 WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[5].element[3].target[0].dependsOn[0].property: No definition could be found for URL value 'Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Voie_administration@Phast-nomenclature'
 WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[6].element[1].target[0].product[0].property: No definition could be found for URL value 'MedicationRequest.supportingInformation.type'
-WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[6].element[2].target[0].product[0].property: No definition could be found for URL value 'MedicationRequest.note.extension.url'
-WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[6].element[2].target[0].product[1].property: No definition could be found for URL value 'MedicationRequest.note.extension.valueCode'
+WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[6].element[2].target[0].product[0].property: No definition could be found for URL value 'MedicationRequest.extension.url'
 WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[7].element[0].target[0].dependsOn[0].property: No definition could be found for URL value 'Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début'
 WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[7].element[1].target[0].dependsOn[0].property: No definition could be found for URL value 'Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début'
 WARNING: ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap: ConceptMap.group[7].element[3].target[0].dependsOn[0].property: No definition could be found for URL value 'Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_fin'
