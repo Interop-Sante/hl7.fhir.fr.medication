@@ -84,54 +84,107 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
 
 ##### Version 1.1
 
-- Pascal André - Cegisanté
-- Guillaume Arras - PHAST
-- Michel Blondel - PHAST
-- Aymeric Boffa - Bimedoc
-- Abdellali Boussadi - ANS
-- Yann Briand - ANS
-- Loïc Brotons - Galeon
-- Christophe Brucker - Nammu Lab
-- Mathilde Carca - Pharmia
-- Georges-Alexandre Chastin - Enovacom
-- Jean-Christophe Cauvin - Dedalus
-- Frédéric Dechanet Maincare
-- Denis Delamarre - CHU Rennes
-- Emmanuel Delvas - Maincaire
-- Cloé Demars - Vidal
-- Catherine Duclos - APHP
-- Eric Dufour - Selic
-- Jean-Michel Estrade - Evolucare
-- Alexandre Frerot - Vidal
-- Nawra Georgi - MaPUI
-- Isabelle Gibaud - ANS
-- Mathieu Grivois - Dedalus
-- Alexandre Grosbois - Xperis
-- Maxime Guerreiro - Ordoclic
-- Baptiste Guilbert - CHU Rennes
-- Thomas Haquet - Normand’e-Santé
-- Lucy Laporte - Collective Thinking
-- Frédéric Laurent - CHU Rennes
-- Nolwenn Le Buhan - Kereval
-- Sarah Leroy - Kereval
-- Pierre Liot - HAS
-- Pierre Luce - Posos
-- François Macary - Use&Share
-- Anne Maheust - Use&Share
-- Patrick Mazaud - CNOP
-- Manuel Metz - Lifen
-- Thierry Mitouard - Vidal
-- Mirojane Mohammad - HAS
-- Malek Mouazer - APHP
-- Julien Monteuil - PHAST
-- Thierry Morvand - Santé Service Bayonne
-- Alexandre Petit - Bowmedical
-- Alain Perie - ANS
-- Cassandre Piraud - Magellan Consulting
-- Yohann Poiron - Xtrem Santé puis ANS
-- Alain Ribault - Kereval
-- Tristan Rieu - Kereval
-- Nicolas Riss - ANS
-- Fanny Serre Kereval
-- Benoit Tissot - APHP
-- Eliott Tourtois - Posos
+- Lifen
+  - Manuel Metz
+- Phast
+  - Guillame Arras
+  - Julien Montreuil
+  - Michel Blondel
+- Posos
+  - Eliott Toutois
+  - Pierre Luce
+  - Eric Ros
+- UseShare
+  - Anne Maheust
+  - François Macary
+- ANS
+  - Nicolas Riss
+  - Yann Briant
+  - Isabelle Gibeau
+  - Abdelali Boussaidi
+  - Yohann Poiron
+  - Alain Perié
+  - Elisabeth Serrot-Damalte
+- Enovacom
+  - Georges-Alexandre Chastin
+- Vidal
+  - Alexandre Frérot
+  - Cloé Demars
+  - Marine Rodriguez
+  - Frédéric Doc
+  - Thierry Mitouard
+- HAS
+  - Mirojane Mohammad
+  - Pierre Liot
+  - Julie Marc
+  - Philippe Zimmerman
+- Kereval
+  - Tristant Rieu
+  - Sarah Leroy
+  - Fanny Serre
+  - Nolween Lebuhan
+  - Alain Ribault
+- APHP
+  - David Ouagne
+  - Malek Mouazier
+  - Catherine Duclos
+  - Benoit Tissot
+- Dedalus
+  - Mathieu Grivois
+  - Vincent Gagnaire
+  - Jean-Christophe Cauvin
+- Bimedoc
+  - Aymeric Boffa
+- Incare
+  - Samuel Simeon
+- Cegisanté
+  - Pascal André
+- CHU de Rennes
+  - Frédéric Laurent
+  - Denis Delamarre
+  - Baptiste Guilbert
+  - Baptiste Houede
+- CHU de Toulouse
+  - Paul Ortéga
+- CNOP
+  - Patrick Mazaud
+- Selic
+  - Erci Dufour
+- Ordoclic
+  - Maxime Guerreiro
+- Xperis
+  - Alexandre Grosbois
+  - Jean-Daniel Larcheveque
+- Evolucare
+  - Jean-Michel Estrade
+- Magellan Consulting
+  - Cassandre Piraud
+- Maincare
+  - Emmanuel Delvas
+- APHM
+  - Marjorie Roudot
+- Normand'e-Santé
+  - Thomas Hacquet
+- Unicancer
+  - Claire Fournier
+  - Paloma Mouyade
+- Bowmedical
+  - Alexandre Petit
+- Collective Thinking
+  - Lucy Laporte
+- Galeon
+  - Loïc Brotons
+- MaPUI
+  - Nawra Georgi
+- Nammu Lab
+  - Christophe Brucker
+- Pharmia
+  - Mathilde Carca
+- Santé Service Bayonne
+  - Thierry Morvan
+- Softway medical
+  - William Degryse
+- Urbansih
+  - Damien Mazoyer
+- Xtrem Santé
+  - Yohann Poiron
