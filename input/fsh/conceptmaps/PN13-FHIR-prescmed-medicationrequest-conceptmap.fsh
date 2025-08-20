@@ -222,13 +222,10 @@ Usage: #definition
 * group[=].element[=].target[=].product[0].property = #MedicationRequest.supportingInformation.type
 * group[=].element[=].target[=].product[=].value = "Device"
 * group[=].element[+].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Posologie
-* group[=].element[=].target[0].code = #MedicationRequest.note.text
-* group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Le texte est à préfixer par `Libellé textuel de la posologie:`"
-* group[=].element[=].target[=].product[0].property = #MedicationRequest.note.extension.url
-* group[=].element[=].target[=].product[=].value = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medicationrequest-note-scope"
-* group[=].element[=].target[=].product[+].property = #MedicationRequest.note.extension.valueCode
-* group[=].element[=].target[=].product[=].value = "LIPRESCPOS"
+* group[=].element[=].target[0].code = #MedicationRequest.extension.valueMarkdown
+* group[=].element[=].target[=].equivalence = #equal
+* group[=].element[=].target[=].product[0].property = #MedicationRequest.extension.url
+* group[=].element[=].target[=].product[=].value = "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction"
 * group[+].element[0].code = $PN13Schema#Messages/M_prescription_médicaments/Prescription/Elément_prescr_médic/Dh_début_prescrite
 * group[=].element[=].target[0].code = #MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start
 * group[=].element[=].target[=].equivalence = #equivalent

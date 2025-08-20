@@ -112,9 +112,58 @@ Si l'unité référencée en PN13 dans `Message/M_Prescription_médicaments/Pres
 
 ###### RequestGroup
 
-Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié` dans le message PN13 faire une instance de `RequestGroup.action` d'une ressource *RequestGroup* unique liant les deux ressources *MedicationRequest* liées
+Les liens entre lignes de prescription peuvent être traduits par une ressource `RequestGroup` selon le type de relation indiqué dans le message PN13
 
-La définition de la ressource *ConceptMap* correspondante est prévue pour une version ultérieure du guide.
+**Lien de type "Complément"**
+
+Le lien de type "Complément" en PN13 est purament indicatif. Etant donné qu'il est indicatif et qu'il n'est pas possible de le traduire de façon standard en FHIR, il a été choisi de ne pas proposer une traduction en FHIR de ce type de lien. 
+
+**Lien de type "Alternance"**
+
+Par manque d'exemples d'implémentation de ce type de lien en PN13 et étant donné la complexité de représentation d'un alternance via une ressource `RequestGroup`, il a été décidé de ne pas proposer de processus de traduction PN13 vers FHIR pour ce type de relation.
+
+Un mapping pourrait être proposé ultérieurement si des exemples d'implémentation de ce type de lien étaient fournis.
+
+**Lien de type "Alternative"**
+
+Losrqu'un message PN13 contient au moins un `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié` avec `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié/Type_liaison_élément`de valeur 3, une ressource `RequestGroup`est à créer avec les éléments suivants:
+
+- `RequestGroup.meta.profile`est fixé à `https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription`
+- `RequestGroup.groupIdentifier.value`et`RequestGroup.groupIdentifier.system`prennent les mêmes valeurs que pour les ressources `MedicationRequest`créées lors de la traduction du message PN13 (cf. [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html))
+- `RequestGroup.status` prend la même valeur que la ligne de prescritpion portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
+- `RequestGroup.intent`prend la valeur `order`
+- `RequestGroup.priority` prend la même valeur que la ligne de prescritpion portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
+- `RequestGroup.subject`référence le même patient que les ressources `MedicationRequest`créées lors de la traduction du message PN13
+- une occurrence de `RequestGroup.action`est créée pour chaque ligne de prescription (`Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic`) lié à une autre dans le message PN13. Elle est renseigné de la manière suivante:
+  - `RequestGroup.action.id`prend la valeur de `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr`
+  - `RequestGroup.action.description` est renseigné avec la condition de prise de l'alternative (ex. en cas d'intolérance au médicament A). En général cette condition est présentée dans un élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Evénement_début` ou `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Evénement2_début` correspondant à un `Type_événement_début`ou `Type_événement2_début`de valeur 3
+  - `RequestGroup.action.relatedAction.extension.url`est fixé à `https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship`
+  - `RequestGroup.action.relatedAction.extension.valueCode`est fixé à `ALT`
+  - `RequestGroup.action.relatedAction.actionId`est renseigné avec la valeur de `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié/Id_élément_lié`
+  - `RequestGroup.action.relatedAction.relationship`est fixé à `concurrent`(pas de valeur plus adaptée)
+  - `RequestGroup.action.ressource`référence la ressource `MedicationRequest`créée pour représenter la ligne de prescription portant la relation (i.e. l'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/` traduit)
+
+***Point d'attention***
+Afin de respecter les spécifications FHIR, les ressources `MedicationRequest`créées lors de la traduction du message PN13 en FHIR doivent avoir `MedicationRequest.intent`valorisé à `option`. Cette valeur remplace la valeur définie par l'application de la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
+
+***Note:***
+Etant donné la complexité du processus de traduction pour un lien de type "Alternative" (nécessité d'aller retouver la priorité, pas d'emplacement fixe pour la condition d'alternative...), il ne fait pas l'objet d'une ressource de type `ConceptMap`.
+
+**Lien de type "Dispensation DC"**
+
+Le lien de type "Dispensation DC" est utilisé dans le cas d'usage de la dispensation, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide
+
+**Lien de type "Modification"**
+
+Le lien de type "Modification" est utilisé dans le cas d'usage de l'analyse pharmaceutique, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide
+
+**Lien de type "Suggestion"**
+
+Le lien de type "Suggestion" est utilisé dans le cas d'usage de l'analyse pharmaceutique, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide
+
+**Lien de type "Remplacement"**
+
+Le lien de type "Remplacement" est utilisé dans le cas d'usage de l'analyse pharmaceutique, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide
 
 #### La dispensation
 
