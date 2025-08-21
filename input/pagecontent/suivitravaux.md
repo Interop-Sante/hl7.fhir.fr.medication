@@ -119,7 +119,7 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
   - Julie Marc
   - Philippe Zimmerman
 - Kereval
-  - Tristant Rieu
+  - Tristan Rieu
   - Sarah Leroy
   - Fanny Serre
   - Nolween Lebuhan
