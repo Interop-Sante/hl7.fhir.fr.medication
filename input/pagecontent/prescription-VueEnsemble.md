@@ -128,7 +128,7 @@ Deux dates, de début et de fin, de la ligne de prescription doivent être consi
 **Date/heure de début prescrite** de la ligne de prescription (*MedicationRequest*)
 
 Définit la date/heure de début exprimée par le médecin lors de sa prescription.
-**Note:** Si seule la durée du traitement est exprimé, la date de début correspond à la date de la première prise.
+**Note:** Si seule la durée du traitement est exprimée, la date de début correspond à la date de la première prise.
 
 **La première dose prescrite**:
 
