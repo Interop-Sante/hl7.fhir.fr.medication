@@ -268,7 +268,7 @@ L'utilisation de la ressource `RequestGroup` impose que les `MedicationRequest`l
 
 **Médicaments à prendre en même temps**
 
-Les lignes de prescription correspondant à des médicaments à prendre en même temps sont liées par une ressource `RequestGroup`référençant chaque ligne dans un occurrence de `RequestGroup.action`(via `RequestGroup.action.resource.reference`). La prise en même temps est représentée par une relation de type `concurrent`entre les deux actions.
+Les lignes de prescription correspondant à des médicaments à prendre en même temps sont liées par une ressource `RequestGroup`référençant chaque ligne dans un occurrence de `RequestGroup.action`(via `RequestGroup.action.resource.reference`). La prise en même temps est représentée par une relation de type `concurrent` entre les deux actions.
 
 - ex: [METHOTREX® et LEDERFOLINE® à prendre en même temps](Bundle-MultiLine-Presc-METHOTREXATE-LEDERFOLINE.html)
 
