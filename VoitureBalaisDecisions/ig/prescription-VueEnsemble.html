@@ -470,7 +470,7 @@ Toute unité utilisée pour une posologie qui ne correspond pas à un code natif
 <p><strong>Date/heure de fin prescrite</strong> de la ligne de prescription (<em>MedicationRequest</em>)</p>
 
 <p>Définit la date/heure de fin exprimée par le médecin lors de sa prescription.
-<strong>Note:</strong> Si seule la durée du traitement est exprimé, la date de fin correspond à la durée du traitement après la date de la première prise.</p>
+<strong>Note:</strong> Si seule la durée du traitement est exprimée, la date de fin correspond à la durée du traitement après la date de la première prise.</p>
 
 <p><strong>La dernière dose prescrite</strong>:</p>
 
@@ -627,7 +627,7 @@ Dans cet exemple</p>
 
 <h4 id="précision-sur-les-liens-entre-lignes-de-prescription">Précision sur les liens entre lignes de prescription</h4>
 
-<p>Les liens entre lignes de prescription peuvent bien sûr être indiqués dans les éléments <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code>. Cependant, afin de faciliter la constitution automatisé de plan de prise, il est possible d’en modéliser certains via une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>. La ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>utilisée pour représenter ces liens est liée au <code class="language-plaintext highlighter-rouge">MedicationRequest</code>concernées par l’élément <code class="language-plaintext highlighter-rouge">groupIdentifier</code></p>
+<p>Les liens entre lignes de prescription peuvent bien sûr être indiqués dans les éléments <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code>. Cependant, afin de faciliter la constitution automatisée de plan de prise et assurer une meilleure sécurité de prise, il est possible d’en modéliser certains via une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>. La ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code> utilisée pour représenter ces liens est liée aux ressources <code class="language-plaintext highlighter-rouge">MedicationRequest</code>concernées par l’élément <code class="language-plaintext highlighter-rouge">groupIdentifier</code></p>
 
 <p><strong><em>Point d’attention</em></strong>
 L’utilisation de la ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>impose que les <code class="language-plaintext highlighter-rouge">MedicationRequest</code>liées aient comme valeur <code class="language-plaintext highlighter-rouge">option</code>pour <code class="language-plaintext highlighter-rouge">MedicationRequest.intent</code>. Il est donc primordiale pour toute <code class="language-plaintext highlighter-rouge">MedicationRequest</code>avec <code class="language-plaintext highlighter-rouge">option</code>comme <code class="language-plaintext highlighter-rouge">intent</code> de rechercher d’éventuelle ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>ayant le même <code class="language-plaintext highlighter-rouge">groupIdentifier</code>pour vérifier s’il s’agit d’une ligne de prescription liée à une autre.</p>
@@ -697,7 +697,7 @@ L’utilisation de la ressource <code class="language-plaintext highlighter-roug
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 07:18+0000">2025-08-21</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 07:23+0000">2025-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
