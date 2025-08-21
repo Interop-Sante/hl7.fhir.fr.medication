@@ -132,7 +132,7 @@ Losrqu'un message PN13 contient au moins un `Message/M_Prescription_médicaments
 - `RequestGroup.groupIdentifier.value`et`RequestGroup.groupIdentifier.system`prennent les mêmes valeurs que pour les ressources `MedicationRequest`créées lors de la traduction du message PN13 (cf. [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html))
 - `RequestGroup.status` prend la même valeur que la ligne de prescription portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
 - `RequestGroup.intent`prend la valeur `order`
-- `RequestGroup.priority` prend la même valeur que la ligne de prescritpion portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
+- `RequestGroup.priority` prend la même valeur que la ligne de prescription portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
 - `RequestGroup.subject`référence le même patient que les ressources `MedicationRequest`créées lors de la traduction du message PN13
 - une occurrence de `RequestGroup.action`est créée pour chaque ligne de prescription (`Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic`) lié à une autre dans le message PN13. Elle est renseigné de la manière suivante:
   - `RequestGroup.action.id`prend la valeur de `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr`
