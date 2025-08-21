@@ -30,7 +30,7 @@ La complexité du *médicament prescrit*
   - Elles sont définies dans le Code de la santé publique
     - préparation magistrale : « tout médicament préparé au vu de la prescription destinée à un patient déterminé... » ;
     - préparation officinale : « tout médicament préparé en pharmacie, inscrit à la pharmacopée ou au formulaire national... ».
-  - Dans le contexte de ce guide, elles sont modélisées comme des prescriptions Extemporanées dont les ingrédients sont à indiquer dans les ressources `Medication` les prerésentant
+  - Dans le contexte de ce guide, elles sont modélisées comme des prescriptions Extemporanées dont les ingrédients sont à indiquer dans les ressources `Medication` les représentant
 
 *La complexité de la posologie*:
 
