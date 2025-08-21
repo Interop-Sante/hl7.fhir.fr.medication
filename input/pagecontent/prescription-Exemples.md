@@ -341,7 +341,7 @@ En [R5](https://hl7.org/fhir/medication.html), la ressource *Medication* voit l'
 **Note**:
 En R5 l'élément amount est renommé **totalVolume** pour lever toute ambiguité avec les volumes pouvant figurer dans les `ingredient.strength\[x\]`.
 
-***spécifité ville*** La Q.S.P que l'on peut retrouver sur certaines ordonances de ville n'a pas la même signification qu'à l'hôpital, elle est à comprendrs comme une durée de traitement. De ce fait, elle est traduite:
+***spécifité ville*** La Q.S.P que l'on peut retrouver sur certaines ordonances de ville n'a pas la même signification qu'à l'hôpital, elle est à comprendre comme une durée de traitement. De ce fait, elle est traduite:
 
 - soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsDuration`si aucune date de début n'est mentionée
 - soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsPeriod.end` si une date de début est mentionnée
