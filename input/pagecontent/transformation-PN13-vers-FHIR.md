@@ -126,7 +126,7 @@ Un mapping pourrait être proposé ultérieurement si des exemples d'implémenta
 
 **Lien de type "Alternative"**
 
-Losrqu'un message PN13 contient au moins un `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié` avec `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié/Type_liaison_élément`de valeur 3, une ressource `RequestGroup`est à créer avec les éléments suivants:
+Lorsqu'un message PN13 contient au moins un `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié` avec `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié/Type_liaison_élément` de valeur 3, une ressource `RequestGroup` est à créer avec les éléments suivants:
 
 - `RequestGroup.meta.profile`est fixé à `https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription`
 - `RequestGroup.groupIdentifier.value`et`RequestGroup.groupIdentifier.system`prennent les mêmes valeurs que pour les ressources `MedicationRequest`créées lors de la traduction du message PN13 (cf. [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html))
