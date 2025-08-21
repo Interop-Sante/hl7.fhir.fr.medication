@@ -31,10 +31,10 @@
     <![endif] -->
 
       <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -489,26 +489,26 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-FrRangeMedication.html" title="StructureDefinition/FrRangeMedication">Range with UCUM or EDQM quantity units</a>
+               <a href="StructureDefinition-FrRangeMedication.html" title="StructureDefinition/FrRangeMedication">Range with UCUM or EDQM codes if code is used</a>
             </td>
             <td>
-<p>Range with low and high unit UCUM or EDQM encoded</p>
+<p>Range with low and high unit UCUM or EDQM codes if code is used</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-FrRatioMedication.html" title="StructureDefinition/FrRatioMedication">Ratio with UCUM or EDQM quantity units</a>
+               <a href="StructureDefinition-FrRatioMedication.html" title="StructureDefinition/FrRatioMedication">Ratio with UCUM or EDQM codes if code is used</a>
             </td>
             <td>
-<p>Ratio with numerator and denominator unit UCUM or EDQM encoded</p>
+<p>Ratio with numerator and denominator unit UCUM or EDQM encoded if code is used</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-FrSimpleQuantityMedication.html" title="StructureDefinition/FrSimpleQuantityMedication">SimpleQuantity with UCUM or EDQM quantity unit</a>
+               <a href="StructureDefinition-FrSimpleQuantityMedication.html" title="StructureDefinition/FrSimpleQuantityMedication">SimpleQuantity with UCUM or EDQM codes or code not used</a>
             </td>
             <td>
-<p>simple quantity datatype requiring a UCUM or EDQM unit</p>
+<p>simple quantity datatype requiring a UCUM or EDQM code or no code (only unti)</p>
 </td>
          </tr>
       </tbody>
@@ -577,14 +577,6 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-medication-to-dispense.html" title="StructureDefinition/fr-medication-to-dispense">Medication to be dispensed</a>
-            </td>
-            <td>
-<p>This extension stated whether the medication has to be dispensed or not (e.g. when a patient has already the medication).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-fr-treatment-intent.html" title="StructureDefinition/fr-treatment-intent">MedicationRequest overall treatment intent</a>
             </td>
             <td>
@@ -628,7 +620,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="ValueSet-fr-mp-dose-form.html" title="ValueSet/fr-mp-dose-form">French Medicinal product Dose form</a>
             </td>
             <td>
-<p>Le jeu de valeurs à utiliser pour coder l’élément <em>doseForm</em> des ressources <em>FRMedicationUcd</em>, <em>FRMedicationUcdPart</em> ou <em>FRMedicationNonProprietaryName</em>.</p>
+<p>Le jeu de valeurs à utiliser pour coder l’élément <em>doseForm</em> des ressources <em>FrMedication</em>.</p>
 </td>
          </tr>
          <tr>
@@ -1036,7 +1028,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-DOLIPRANE-Refill-Compl-presc-DC.html" title="MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC">Disp-DOLIPRANE-Refill-Compl-presc-DC</a>
             </td>
             <td>
-
+<p>Prescription complémentaire et finale de DOLIPRANE sur une prescription de Paracétamol</p>
 </td>
          </tr>
          <tr>
@@ -1044,7 +1036,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-DOLIPRANE-Refill-Substit.html" title="MedicationDispense/Disp-DOLIPRANE-Refill-Substit">Disp-DOLIPRANE-Refill-Substit</a>
             </td>
             <td>
-
+<p>Dispensation complémentaire et partielle de DOLIPRANE sur une prescription d’EFFERALGAN</p>
 </td>
          </tr>
          <tr>
@@ -1052,7 +1044,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-DOLIPRANE-Refill-presc-DC.html" title="MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC">Disp-DOLIPRANE-Refill-presc-DC</a>
             </td>
             <td>
-
+<p>Dispensation complémentaire et partielle de DOLIPRANE sur une prescription de Paracétamol</p>
 </td>
          </tr>
          <tr>
@@ -1060,7 +1052,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-EFFERALGAN.html" title="MedicationDispense/Disp-EFFERALGAN">Disp-EFFERALGAN</a>
             </td>
             <td>
-
+<p>Dispensation complète d’EFFERALGANT sur une prescription d’EFFERALGAN</p>
 </td>
          </tr>
          <tr>
@@ -1068,7 +1060,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-EFFERALGAN-presc-DC.html" title="MedicationDispense/Disp-EFFERALGAN-presc-DC">Disp-EFFERALGAN-presc-DC</a>
             </td>
             <td>
-
+<p>Dispensation complète de Paracétamol sur une prescription d’EFFERALGAN</p>
 </td>
          </tr>
          <tr>
@@ -1076,7 +1068,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-group01-1.html" title="MedicationDispense/Disp-group01-1">Disp-group01-1</a>
             </td>
             <td>
-
+<p>Délivrance reglobalisée, cumulant 3 dispensations nominatives</p>
 </td>
          </tr>
          <tr>
@@ -1084,47 +1076,119 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationDispense-Disp-group01-2.html" title="MedicationDispense/Disp-group01-2">Disp-group01-2</a>
             </td>
             <td>
-
+<p>Délivrance reglobalisée, cumulant 3 dispensations nominatives - Option 2</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Expl-med-MV-sulfate-morphine-1.html" title="Medication/Expl-med-MV-sulfate-morphine-1">Expl-med-MV-sulfate-morphine-1</a>
+               <a href="Bundle-HAS-01-Presc-Pantoprazole-DC.html" title="Bundle/HAS-01-Presc-Pantoprazole-DC">HAS-01-Presc-Pantoprazole-DC</a>
             </td>
             <td>
-
+<p>PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Expl-med-MV-sulfate-morphine-2.html" title="Medication/Expl-med-MV-sulfate-morphine-2">Expl-med-MV-sulfate-morphine-2</a>
+               <a href="Bundle-HAS-01-Presc-Pantoprazole-MV.html" title="Bundle/HAS-01-Presc-Pantoprazole-MV">HAS-01-Presc-Pantoprazole-MV</a>
             </td>
             <td>
-
+<p>PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Expl-med-sulfate-morphine.html" title="Medication/Expl-med-sulfate-morphine">Expl-med-sulfate-morphine</a>
+               <a href="Bundle-HAS-02-Presc-Fluindione.html" title="Bundle/HAS-02-Presc-Fluindione">HAS-02-Presc-Fluindione</a>
             </td>
             <td>
-
+<p>FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Bundle-HAS-1-Presc-Pantoprazole-DC.html" title="Bundle/HAS-1-Presc-Pantoprazole-DC">HAS-1-Presc-Pantoprazole-DC</a>
+               <a href="Bundle-HAS-03-Presc-Tinzaparine.html" title="Bundle/HAS-03-Presc-Tinzaparine">HAS-03-Presc-Tinzaparine</a>
             </td>
             <td>
-
+<p>TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Bundle-HAS-1-Presc-Pantoprazole-MV.html" title="Bundle/HAS-1-Presc-Pantoprazole-MV">HAS-1-Presc-Pantoprazole-MV</a>
+               <a href="Bundle-HAS-04-1-Presc-Paracetamol.html" title="Bundle/HAS-04-1-Presc-Paracetamol">HAS-04-1-Presc-Paracetamol</a>
             </td>
             <td>
-
+<p>PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-04-2-Presc-DAFALGANCODEINE.html" title="Bundle/HAS-04-2-Presc-DAFALGANCODEINE">HAS-04-2-Presc-DAFALGANCODEINE</a>
+            </td>
+            <td>
+<p>DAFALGAN CODEINE&reg;, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-05-1-Presc-Fluindione.html" title="Bundle/HAS-05-1-Presc-Fluindione">HAS-05-1-Presc-Fluindione</a>
+            </td>
+            <td>
+<p>FLUINDIONE 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-05-2-Presc-ACTISKENAN.html" title="Bundle/HAS-05-2-Presc-ACTISKENAN">HAS-05-2-Presc-ACTISKENAN</a>
+            </td>
+            <td>
+<p>ACTISKENAN&reg; 10 mg gélule : dix milligrammes par jour pendant sept jours</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-06-1-Presc-Methotrexate.html" title="Bundle/HAS-06-1-Presc-Methotrexate">HAS-06-1-Presc-Methotrexate</a>
+            </td>
+            <td>
+<p>METHOTREXATE 10 mg comprimé (sécable) : 2 comprimés, 1 fois par semaine, le mardi</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-06-2-Presc-Methotrexate.html" title="Bundle/HAS-06-2-Presc-Methotrexate">HAS-06-2-Presc-Methotrexate</a>
+            </td>
+            <td>
+<p>METHOTREXATE 10 mg comprimé (sécable) : 20 mg, 1 fois par semaine, le mardi</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-07-Presc-Paracetamol.html" title="Bundle/HAS-07-Presc-Paracetamol">HAS-07-Presc-Paracetamol</a>
+            </td>
+            <td>
+<p>PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-08-1-Presc-Betamethasone.html" title="Bundle/HAS-08-1-Presc-Betamethasone">HAS-08-1-Presc-Betamethasone</a>
+            </td>
+            <td>
+<p>BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-08-2-Presc-Paracetamol.html" title="Bundle/HAS-08-2-Presc-Paracetamol">HAS-08-2-Presc-Paracetamol</a>
+            </td>
+            <td>
+<p>PARACETAMOL 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HAS-09-Presc-Ropinirole.html" title="Bundle/HAS-09-Presc-Ropinirole">HAS-09-Presc-Ropinirole</a>
+            </td>
+            <td>
+<p>ROPINIROLE comprimé 1mg : 1 comprimé à 7h, 12h 18h</p>
 </td>
          </tr>
          <tr>
@@ -1132,7 +1196,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-10-Presc-Methotrexate.html" title="Bundle/HAS-10-Presc-Methotrexate">HAS-10-Presc-Methotrexate</a>
             </td>
             <td>
-
+<p>METHOTREXATE 10 mg comprimé : 1 comprimé 1 fois par semaine, le mardi</p>
 </td>
          </tr>
          <tr>
@@ -1140,7 +1204,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-11-1-Presc-VitamineD.html" title="Bundle/HAS-11-1-Presc-VitamineD">HAS-11-1-Presc-VitamineD</a>
             </td>
             <td>
-
+<p>VITAMINE D 100 000 UI solution buvable : 1 ampoule, le premier jour de chaque mois</p>
 </td>
          </tr>
          <tr>
@@ -1148,7 +1212,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-11-2-Presc-EVRA.html" title="Bundle/HAS-11-2-Presc-EVRA">HAS-11-2-Presc-EVRA</a>
             </td>
             <td>
-
+<p>EVRA&reg; 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique</p>
 </td>
          </tr>
          <tr>
@@ -1156,7 +1220,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-12-1-Presc-BEPANTHEN.html" title="Bundle/HAS-12-1-Presc-BEPANTHEN">HAS-12-1-Presc-BEPANTHEN</a>
             </td>
             <td>
-
+<p>BEPANTHEN&reg;5% crème : 1 application, 2 fois par jour, en couche mince</p>
 </td>
          </tr>
          <tr>
@@ -1164,7 +1228,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-12-2-Presc-Methotrexate.html" title="Bundle/HAS-12-2-Presc-Methotrexate">HAS-12-2-Presc-Methotrexate</a>
             </td>
             <td>
-
+<p>METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi</p>
 </td>
          </tr>
          <tr>
@@ -1172,7 +1236,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-12-3-Presc-Enoxaparine.html" title="Bundle/HAS-12-3-Presc-Enoxaparine">HAS-12-3-Presc-Enoxaparine</a>
             </td>
             <td>
-
+<p>ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée</p>
 </td>
          </tr>
          <tr>
@@ -1180,7 +1244,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-13-Presc-Desloratadine.html" title="Bundle/HAS-13-Presc-Desloratadine">HAS-13-Presc-Desloratadine</a>
             </td>
             <td>
-
+<p>DESLORATADINE 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique</p>
 </td>
          </tr>
          <tr>
@@ -1188,7 +1252,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-14-1-Presc-CODOLIPRANE.html" title="Bundle/HAS-14-1-Presc-CODOLIPRANE">HAS-14-1-Presc-CODOLIPRANE</a>
             </td>
             <td>
-
+<p>CODOLIPRANE&reg;: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises</p>
 </td>
          </tr>
          <tr>
@@ -1196,7 +1260,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-14-2-Presc-Betamethasone.html" title="Bundle/HAS-14-2-Presc-Betamethasone">HAS-14-2-Presc-Betamethasone</a>
             </td>
             <td>
-
+<p>BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter. Ne pas dépasser 2 applications par jour</p>
 </td>
          </tr>
          <tr>
@@ -1204,7 +1268,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-15-Presc-Morphine.html" title="Bundle/HAS-15-Presc-Morphine">HAS-15-Presc-Morphine</a>
             </td>
             <td>
-
+<p>MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours</p>
 </td>
          </tr>
          <tr>
@@ -1212,7 +1276,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-16-Presc-Racecadotril.html" title="Bundle/HAS-16-Presc-Racecadotril">HAS-16-Presc-Racecadotril</a>
             </td>
             <td>
-
+<p>RACECADOTRIL 100 mg gélule: 1 gélule 3 fois par jour au début de chaque repas. A poursuivre tant que la diarrhée persiste avec un maximum de 7 jours</p>
 </td>
          </tr>
          <tr>
@@ -1220,15 +1284,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-17-Presc-Budesonide.html" title="Bundle/HAS-17-Presc-Budesonide">HAS-17-Presc-Budesonide</a>
             </td>
             <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-17-Presc-Budesonide-MV.html" title="Bundle/HAS-17-Presc-Budesonide-MV">HAS-17-Presc-Budesonide-MV</a>
-            </td>
-            <td>
-
+<p>Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023</p>
 </td>
          </tr>
          <tr>
@@ -1236,7 +1292,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-18-Presc-Budesonide-MV.html" title="Bundle/HAS-18-Presc-Budesonide-MV">HAS-18-Presc-Budesonide-MV</a>
             </td>
             <td>
-
+<p>Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h jusqu’au 16/03/2023</p>
 </td>
          </tr>
          <tr>
@@ -1244,15 +1300,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-19-Presc-Paracetamol.html" title="Bundle/HAS-19-Presc-Paracetamol">HAS-19-Presc-Paracetamol</a>
             </td>
             <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-2-Presc-Fluindione.html" title="Bundle/HAS-2-Presc-Fluindione">HAS-2-Presc-Fluindione</a>
-            </td>
-            <td>
-
+<p>PARACETAMOL 1000 mg comprimé: 1 comprimé,  3 prises par jour, espacés d’au moins 4 heures</p>
 </td>
          </tr>
          <tr>
@@ -1260,7 +1308,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-20-Presc-Hydrocortisone.html" title="Bundle/HAS-20-Presc-Hydrocortisone">HAS-20-Presc-Hydrocortisone</a>
             </td>
             <td>
-
+<p>HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h</p>
 </td>
          </tr>
          <tr>
@@ -1268,7 +1316,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-21-Presc-Prednisolone.html" title="Bundle/HAS-21-Presc-Prednisolone">HAS-21-Presc-Prednisolone</a>
             </td>
             <td>
-
+<p>PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu’à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l’arrêt selon évolution</p>
 </td>
          </tr>
          <tr>
@@ -1276,7 +1324,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-22-Presc-Prednisolone.html" title="Bundle/HAS-22-Presc-Prednisolone">HAS-22-Presc-Prednisolone</a>
             </td>
             <td>
-
+<p>PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu’à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l’arrêt selon évolution</p>
 </td>
          </tr>
          <tr>
@@ -1284,7 +1332,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-23-1-Presc-Fluindione.html" title="Bundle/HAS-23-1-Presc-Fluindione">HAS-23-1-Presc-Fluindione</a>
             </td>
             <td>
-
+<p>FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois</p>
 </td>
          </tr>
          <tr>
@@ -1292,7 +1340,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-23-2-Presc-Amiodarone.html" title="Bundle/HAS-23-2-Presc-Amiodarone">HAS-23-2-Presc-Amiodarone</a>
             </td>
             <td>
-
+<p>AMIODARONE 200 mg comprimé: 1 comprimé pendant 5 jours (du lundi au vendredi), et puis arrêt 2 jours (samedi, dimanche). Recommencer le cycle de 7 jours, à répéter sur le mois</p>
 </td>
          </tr>
          <tr>
@@ -1300,7 +1348,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-24-Topiramate.html" title="Bundle/HAS-24-Topiramate">HAS-24-Topiramate</a>
             </td>
             <td>
-
+<p>TOPIRAMATE 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l’ouvrir et en administrer le contenu avec un peu de compote</p>
 </td>
          </tr>
          <tr>
@@ -1308,7 +1356,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-25-NOVORAPID.html" title="Bundle/HAS-25-NOVORAPID">HAS-25-NOVORAPID</a>
             </td>
             <td>
-
+<p>NOVORAPID Flexpen&reg; 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L</p>
 </td>
          </tr>
          <tr>
@@ -1316,7 +1364,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-26-Diazepam.html" title="Bundle/HAS-26-Diazepam">HAS-26-Diazepam</a>
             </td>
             <td>
-
+<p>DIAZEPAM 10 mg comprimé bisécable (VALIUM&reg;): 1 comprimé toutes les 6 heures - si agitation</p>
 </td>
          </tr>
          <tr>
@@ -1324,7 +1372,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-27-1-Metformine.html" title="Bundle/HAS-27-1-Metformine">HAS-27-1-Metformine</a>
             </td>
             <td>
-
+<p>METFORMINE 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas</p>
 </td>
          </tr>
          <tr>
@@ -1332,7 +1380,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-27-2-Rifampicine.html" title="Bundle/HAS-27-2-Rifampicine">HAS-27-2-Rifampicine</a>
             </td>
             <td>
-
+<p>RIFAMPICINE 300 mg en gélule 2 gélules le matin 30 minutes avant le petit-déjeuner</p>
 </td>
          </tr>
          <tr>
@@ -1340,7 +1388,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-28-Presc-Enoxaparine.html" title="Bundle/HAS-28-Presc-Enoxaparine">HAS-28-Presc-Enoxaparine</a>
             </td>
             <td>
-
+<p>ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l’intervention chirurgicale. à poursuivre pendant 10 jours après l’intervention.</p>
 </td>
          </tr>
          <tr>
@@ -1348,15 +1396,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-29-Presc-Enoxaparine.html" title="Bundle/HAS-29-Presc-Enoxaparine">HAS-29-Presc-Enoxaparine</a>
             </td>
             <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-3-Presc-Tinzaparine.html" title="Bundle/HAS-3-Presc-Tinzaparine">HAS-3-Presc-Tinzaparine</a>
-            </td>
-            <td>
-
+<p>ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible</p>
 </td>
          </tr>
          <tr>
@@ -1364,7 +1404,9 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-30-1-Presc-Hydrocortisone.html" title="Bundle/HAS-30-1-Presc-Hydrocortisone">HAS-30-1-Presc-Hydrocortisone</a>
             </td>
             <td>
-
+<p>HYDROCORTISONE 10 mg : 1 comprimé matin et 1 comprimé midi 
+En cas de fièvre, de forte chaleur, d’infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.
+Avec un maximum de 6 comprimés par jour.</p>
 </td>
          </tr>
          <tr>
@@ -1372,87 +1414,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-HAS-30-2-Presc-Cetirizine.html" title="Bundle/HAS-30-2-Presc-Cetirizine">HAS-30-2-Presc-Cetirizine</a>
             </td>
             <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-4-1-Presc-Paracetamol.html" title="Bundle/HAS-4-1-Presc-Paracetamol">HAS-4-1-Presc-Paracetamol</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-4-2-Presc-DAFALGANCODEINE.html" title="Bundle/HAS-4-2-Presc-DAFALGANCODEINE">HAS-4-2-Presc-DAFALGANCODEINE</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-5-1-Presc-Fluindione.html" title="Bundle/HAS-5-1-Presc-Fluindione">HAS-5-1-Presc-Fluindione</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-5-2-Presc-ACTISKENAN.html" title="Bundle/HAS-5-2-Presc-ACTISKENAN">HAS-5-2-Presc-ACTISKENAN</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-6-1-Presc-Methotrexate.html" title="Bundle/HAS-6-1-Presc-Methotrexate">HAS-6-1-Presc-Methotrexate</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-6-2-Presc-Methotrexate.html" title="Bundle/HAS-6-2-Presc-Methotrexate">HAS-6-2-Presc-Methotrexate</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-7-Presc-Paracetamol.html" title="Bundle/HAS-7-Presc-Paracetamol">HAS-7-Presc-Paracetamol</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-8-1-Presc-Betamethasone.html" title="Bundle/HAS-8-1-Presc-Betamethasone">HAS-8-1-Presc-Betamethasone</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-8-2-Presc-Paracetamol.html" title="Bundle/HAS-8-2-Presc-Paracetamol">HAS-8-2-Presc-Paracetamol</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Bundle-HAS-9-Presc-Ropinirole.html" title="Bundle/HAS-9-Presc-Ropinirole">HAS-9-Presc-Ropinirole</a>
-            </td>
-            <td>
-
+<p>CETIRIZINE 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire)</p>
 </td>
          </tr>
          <tr>
@@ -1460,7 +1422,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Medication-InLine-DOLIPRANE.html" title="Medication/InLine-DOLIPRANE">InLine-DOLIPRANE</a>
             </td>
             <td>
-
+<p>Medication DOLIPRANE&reg; pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1468,7 +1430,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationRequest-InLine-Presc-EFFERALGAN.html" title="MedicationRequest/InLine-Presc-EFFERALGAN">InLine-Presc-EFFERALGAN</a>
             </td>
             <td>
-
+<p>Prescription d’EFFERALGAN&reg; pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1476,7 +1438,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Medication-InLine-med-EFFERALGAN.html" title="Medication/InLine-med-EFFERALGAN">InLine-med-EFFERALGAN</a>
             </td>
             <td>
-
+<p>Medication EFFERALGAN&reg; pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1484,7 +1446,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Medication-InLine-med-Paracetamol.html" title="Medication/InLine-med-Paracetamol">InLine-med-Paracetamol</a>
             </td>
             <td>
-
+<p>Medication Paracétamol pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1492,7 +1454,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Group-InLine-patient-group-01.html" title="Group/InLine-patient-group-01">InLine-patient-group-01</a>
             </td>
             <td>
-
+<p>Groupe de patient pour exemple de délivrance reglobalisée</p>
 </td>
          </tr>
          <tr>
@@ -1500,7 +1462,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationRequest-InLine-presc-EFFERALGAN2.html" title="MedicationRequest/InLine-presc-EFFERALGAN2">InLine-presc-EFFERALGAN2</a>
             </td>
             <td>
-
+<p>Prescription d’EFFERALGAN&reg; pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1508,7 +1470,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationRequest-InLine-presc-Paracetamol1.html" title="MedicationRequest/InLine-presc-Paracetamol1">InLine-presc-Paracetamol1</a>
             </td>
             <td>
-
+<p>Prescription de Paracétamol pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1516,7 +1478,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="MedicationRequest-InLine-presc-Paracetamol2.html" title="MedicationRequest/InLine-presc-Paracetamol2">InLine-presc-Paracetamol2</a>
             </td>
             <td>
-
+<p>Prescription de Paracétamol pour exemple de dispensation</p>
 </td>
          </tr>
          <tr>
@@ -1524,7 +1486,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-MultiLine-Presc-METFORMINE-GLICLAZIDE.html" title="Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE">MultiLine-Presc-METFORMINE-GLICLAZIDE</a>
             </td>
             <td>
-
+<p>METFORMINE&reg; ou GLICLAZIDE&reg; en cas d’intolérance digestive à la METFORMINE</p>
 </td>
          </tr>
          <tr>
@@ -1532,7 +1494,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-MultiLine-Presc-METHOTREXATE-LEDERFOLINE.html" title="Bundle/MultiLine-Presc-METHOTREXATE-LEDERFOLINE">MultiLine-Presc-METHOTREXATE-LEDERFOLINE</a>
             </td>
             <td>
-
+<p>METHOTREX&reg; et LEDERFOLINE&reg; à prendre en même temps</p>
 </td>
          </tr>
          <tr>
@@ -1540,7 +1502,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-MultiLine-Presc-Sucralfate-Paracetamol.html" title="Bundle/MultiLine-Presc-Sucralfate-Paracetamol">MultiLine-Presc-Sucralfate-Paracetamol</a>
             </td>
             <td>
-
+<p>Paracetamol 2h après Sucralfate</p>
 </td>
          </tr>
          <tr>
@@ -1548,7 +1510,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-BISOPROLOL-SANDOZ-DosesRationnelles.html" title="Bundle/Presc-BISOPROLOL-SANDOZ-DosesRationnelles">Presc-BISOPROLOL-SANDOZ-DosesRationnelles</a>
             </td>
             <td>
-
+<p>BISOPROLOL&reg; 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine</p>
 </td>
          </tr>
          <tr>
@@ -1556,7 +1518,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Betamethasone-ApplCut.html" title="Bundle/Presc-Betamethasone-ApplCut">Presc-Betamethasone-ApplCut</a>
             </td>
             <td>
-
+<p>bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1564,7 +1526,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-CLARADOL-DoseDiffParHoraire.html" title="Bundle/Presc-CLARADOL-DoseDiffParHoraire">Presc-CLARADOL-DoseDiffParHoraire</a>
             </td>
             <td>
-
+<p>CLARADOL&reg; 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1572,7 +1534,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin.html" title="Bundle/Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin">Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin</a>
             </td>
             <td>
-
+<p>CLARADOL&reg; 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1580,7 +1542,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-CLARADOL-TL6h-MedCodeableConcept.html" title="Bundle/Presc-CLARADOL-TL6h-MedCodeableConcept">Presc-CLARADOL-TL6h-MedCodeableConcept</a>
             </td>
             <td>
-
+<p>CLARADOL&reg; 500 mg, 1 cpr toutes les 6h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1588,7 +1550,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-CLARADOL-TLMardisVendredis.html" title="Bundle/Presc-CLARADOL-TLMardisVendredis">Presc-CLARADOL-TLMardisVendredis</a>
             </td>
             <td>
-
+<p>CLARADOL&reg; 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois</p>
 </td>
          </tr>
          <tr>
@@ -1596,7 +1558,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-CODOLIPRANE-MedCodeableConcept.html" title="Bundle/Presc-CODOLIPRANE-MedCodeableConcept">Presc-CODOLIPRANE-MedCodeableConcept</a>
             </td>
             <td>
-<p>CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j</p>
+<p>CODOLIPRANE&reg; 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1604,7 +1566,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Capecitabine-Dose-Calculee.html" title="Bundle/Presc-Capecitabine-Dose-Calculee">Presc-Capecitabine-Dose-Calculee</a>
             </td>
             <td>
-
+<p>capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j</p>
 </td>
          </tr>
          <tr>
@@ -1612,7 +1574,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-DIPROSONE-AppCut.html" title="Bundle/Presc-DIPROSONE-AppCut">Presc-DIPROSONE-AppCut</a>
             </td>
             <td>
-
+<p>DIPROSONE&reg; 0.05%, 1 application cutanée à 8h, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1620,7 +1582,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-DOLIPRANE-20DoseParKG.html" title="Bundle/Presc-DOLIPRANE-20DoseParKG">Presc-DOLIPRANE-20DoseParKG</a>
             </td>
             <td>
-
+<p>DOLIPRANE&reg; 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1628,7 +1590,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-EFFERALGAN.html" title="Bundle/Presc-EFFERALGAN">Presc-EFFERALGAN</a>
             </td>
             <td>
-<p>EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j</p>
+<p>EFFERALGAN&reg; 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1636,7 +1598,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Fentanyl-patch72h-TL3j.html" title="Bundle/Presc-Fentanyl-patch72h-TL3j">Presc-Fentanyl-patch72h-TL3j</a>
             </td>
             <td>
-
+<p>fentanyl 75 µg/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j</p>
 </td>
          </tr>
          <tr>
@@ -1644,7 +1606,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-MATRIFEN-patch-TL72h.html" title="Bundle/Presc-MATRIFEN-patch-TL72h">Presc-MATRIFEN-patch-TL72h</a>
             </td>
             <td>
-
+<p>MATRIFEN&reg; 75 µg/h, patch, 1 à 7h, toutes les 72h, pendant 8j</p>
 </td>
          </tr>
          <tr>
@@ -1652,7 +1614,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-MV-PerfGl-NaCl-KCl.html" title="Bundle/Presc-MV-PerfGl-NaCl-KCl">Presc-MV-PerfGl-NaCl-KCl</a>
             </td>
             <td>
-
+<p>MV - glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1660,7 +1622,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Methylpredinosolone-DosesEvolutives.html" title="Bundle/Presc-Methylpredinosolone-DosesEvolutives">Presc-Methylpredinosolone-DosesEvolutives</a>
             </td>
             <td>
-
+<p>méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j</p>
 </td>
          </tr>
          <tr>
@@ -1668,7 +1630,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-MiniperfCefotaxime-En20min-Pdt3j.html" title="Bundle/Presc-MiniperfCefotaxime-En20min-Pdt3j">Presc-MiniperfCefotaxime-En20min-Pdt3j</a>
             </td>
             <td>
-
+<p>céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j</p>
 </td>
          </tr>
          <tr>
@@ -1676,7 +1638,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html" title="Bundle/Presc-MiniperfCefotaxime-En20min-Pdt4j">Presc-MiniperfCefotaxime-En20min-Pdt4j</a>
             </td>
             <td>
-
+<p>céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 4j</p>
 </td>
          </tr>
          <tr>
@@ -1684,7 +1646,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-NICOREETESKIN-patch.html" title="Bundle/Presc-NICOREETESKIN-patch">Presc-NICOREETESKIN-patch</a>
             </td>
             <td>
-
+<p>NICOREETESKIN&reg; 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</p>
 </td>
          </tr>
          <tr>
@@ -1692,7 +1654,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Nicotine-15mgPar16h.html" title="Bundle/Presc-Nicotine-15mgPar16h">Presc-Nicotine-15mgPar16h</a>
             </td>
             <td>
-
+<p>nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines</p>
 </td>
          </tr>
          <tr>
@@ -1700,7 +1662,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Paracetamol.html" title="Bundle/Presc-Paracetamol">Presc-Paracetamol</a>
             </td>
             <td>
-
+<p>paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1708,7 +1670,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Paracetamol-DoseEvolutive.html" title="Bundle/Presc-Paracetamol-DoseEvolutive">Presc-Paracetamol-DoseEvolutive</a>
             </td>
             <td>
-
+<p>paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1716,7 +1678,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin.html" title="Bundle/Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin">Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin</a>
             </td>
             <td>
-
+<p>paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1724,7 +1686,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-Paracetamol-TL6h.html" title="Bundle/Presc-Paracetamol-TL6h">Presc-Paracetamol-TL6h</a>
             </td>
             <td>
-
+<p>paracétamol, 500 mg toutes les 6 h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1732,7 +1694,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-ParacetamolCodeine-500mg30mg.html" title="Bundle/Presc-ParacetamolCodeine-500mg30mg">Presc-ParacetamolCodeine-500mg30mg</a>
             </td>
             <td>
-
+<p>paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1740,7 +1702,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-PerfDobutamine-Qsp40mL.html" title="Bundle/Presc-PerfDobutamine-Qsp40mL">Presc-PerfDobutamine-Qsp40mL</a>
             </td>
             <td>
-
+<p>dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j</p>
 </td>
          </tr>
          <tr>
@@ -1748,7 +1710,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-PerfGl-NaCl-KCl-1l.html" title="Bundle/Presc-PerfGl-NaCl-KCl-1l">Presc-PerfGl-NaCl-KCl-1l</a>
             </td>
             <td>
-
+<p>Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1756,7 +1718,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-PerfGl-NaCl-KCl-500ml.html" title="Bundle/Presc-PerfGl-NaCl-KCl-500ml">Presc-PerfGl-NaCl-KCl-500ml</a>
             </td>
             <td>
-
+<p>Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1764,7 +1726,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html" title="Bundle/Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h">Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h</a>
             </td>
             <td>
-
+<p>BIONOLYTE&reg; G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j</p>
 </td>
          </tr>
          <tr>
@@ -1772,7 +1734,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE.html" title="Bundle/TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE">TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE</a>
             </td>
             <td>
-
+<p>METFORMINE&reg; ou GLICLAZIDE&reg; en cas d’intolérance digestive à la METFORMINE - Traduction de PN13</p>
 </td>
          </tr>
          <tr>
@@ -1780,7 +1742,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-Presc-DOLIPRANE.html" title="Bundle/TradPN13FHIR-Presc-DOLIPRANE">TradPN13FHIR-Presc-DOLIPRANE</a>
             </td>
             <td>
-
+<p>DOLIPRANE&reg; 1000mg 3x/j pdt 2j - Traduction de PN13 sans interpretation du code de fréquence</p>
 </td>
          </tr>
          <tr>
@@ -1788,7 +1750,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-Presc-DOLIPRANE-Interpret.html" title="Bundle/TradPN13FHIR-Presc-DOLIPRANE-Interpret">TradPN13FHIR-Presc-DOLIPRANE-Interpret</a>
             </td>
             <td>
-
+<p>DOLIPRANE&reg; 1000mg 3x/j pdt 2j - Traduction de PN13 en interprétant le code de fréquence</p>
 </td>
          </tr>
          <tr>
@@ -1796,7 +1758,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-Presc-Morphine-PCA.html" title="Bundle/TradPN13FHIR-Presc-Morphine-PCA">TradPN13FHIR-Presc-Morphine-PCA</a>
             </td>
             <td>
-
+<p>PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h – À partir du 07/05/2025 à 17:30 jusqu’au 11/05/2025 à 17h30 - Traduction de PN13</p>
 </td>
          </tr>
          <tr>
@@ -1804,7 +1766,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-Presc-Paracetamol.html" title="Bundle/TradPN13FHIR-Presc-Paracetamol">TradPN13FHIR-Presc-Paracetamol</a>
             </td>
             <td>
-
+<p>PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - Si douleur :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13</p>
 </td>
          </tr>
          <tr>
@@ -1812,7 +1774,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-Presc-Paracetamol-SiDouleur.html" title="Bundle/TradPN13FHIR-Presc-Paracetamol-SiDouleur">TradPN13FHIR-Presc-Paracetamol-SiDouleur</a>
             </td>
             <td>
-
+<p>PARACETAMOL (Voie orale) si douleur:  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13</p>
 </td>
          </tr>
          <tr>
@@ -1820,7 +1782,7 @@ Medication History MedicationStatement resource profile</p>
                <a href="Bundle-TradPN13FHIR-Presc-perfusion-6-composants.html" title="Bundle/TradPN13FHIR-Presc-perfusion-6-composants">TradPN13FHIR-Presc-perfusion-6-composants</a>
             </td>
             <td>
-
+<p>Perf  6composants en UCD en continu sur 12h00 par jour - Traduction de PN13</p>
 </td>
          </tr>
       </tbody>
@@ -1865,7 +1827,7 @@ Medication History MedicationStatement resource profile</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 8, 2025 09:44+0000">2025-08-08</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 08:06+0000">2025-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

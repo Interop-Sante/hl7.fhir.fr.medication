@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-08-08T09:43:11+00:00",
+  "date" : "2025-08-21T08:04:49+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -985,6 +985,7 @@
         "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"
       },
       "name" : "Disp-DOLIPRANE-Refill-Compl-presc-DC",
+      "description" : "Prescription complémentaire et finale de DOLIPRANE sur une prescription de Paracétamol",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
     },
     {
@@ -996,6 +997,7 @@
         "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
       },
       "name" : "Disp-DOLIPRANE-Refill-presc-DC",
+      "description" : "Dispensation complémentaire et partielle de DOLIPRANE sur une prescription de Paracétamol",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
     },
     {
@@ -1007,6 +1009,7 @@
         "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Substit"
       },
       "name" : "Disp-DOLIPRANE-Refill-Substit",
+      "description" : "Dispensation complémentaire et partielle de DOLIPRANE sur une prescription d'EFFERALGAN",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
     },
     {
@@ -1018,6 +1021,7 @@
         "reference" : "MedicationDispense/Disp-EFFERALGAN"
       },
       "name" : "Disp-EFFERALGAN",
+      "description" : "Dispensation complète d'EFFERALGANT sur une prescription d'EFFERALGAN",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
     },
     {
@@ -1029,6 +1033,7 @@
         "reference" : "MedicationDispense/Disp-EFFERALGAN-presc-DC"
       },
       "name" : "Disp-EFFERALGAN-presc-DC",
+      "description" : "Dispensation complète de Paracétamol sur une prescription d'EFFERALGAN",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
     },
     {
@@ -1040,6 +1045,7 @@
         "reference" : "MedicationDispense/Disp-group01-1"
       },
       "name" : "Disp-group01-1",
+      "description" : "Délivrance reglobalisée, cumulant 3 dispensations nominatives",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
     },
     {
@@ -1051,40 +1057,8 @@
         "reference" : "MedicationDispense/Disp-group01-2"
       },
       "name" : "Disp-group01-2",
+      "description" : "Délivrance reglobalisée, cumulant 3 dispensations nominatives - Option 2",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Expl-med-MV-sulfate-morphine-1"
-      },
-      "name" : "Expl-med-MV-sulfate-morphine-1",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Expl-med-MV-sulfate-morphine-2"
-      },
-      "name" : "Expl-med-MV-sulfate-morphine-2",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Expl-med-sulfate-morphine"
-      },
-      "name" : "Expl-med-sulfate-morphine",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
     },
     {
       "extension" : [{
@@ -1323,7 +1297,7 @@
         "reference" : "ValueSet/fr-mp-dose-form"
       },
       "name" : "French Medicinal product Dose form",
-      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *doseForm* des ressources *FRMedicationUcd*, *FRMedicationUcdPart* ou *FRMedicationNonProprietaryName*.",
+      "description" : "Le jeu de valeurs à utiliser pour coder l'élément *doseForm* des ressources *FrMedication*.",
       "exampleBoolean" : false
     },
     {
@@ -1392,9 +1366,10 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/HAS-1-Presc-Pantoprazole-DC"
+        "reference" : "Bundle/HAS-01-Presc-Pantoprazole-DC"
       },
-      "name" : "HAS-1-Presc-Pantoprazole-DC",
+      "name" : "HAS-01-Presc-Pantoprazole-DC",
+      "description" : "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1403,9 +1378,154 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/HAS-1-Presc-Pantoprazole-MV"
+        "reference" : "Bundle/HAS-01-Presc-Pantoprazole-MV"
       },
-      "name" : "HAS-1-Presc-Pantoprazole-MV",
+      "name" : "HAS-01-Presc-Pantoprazole-MV",
+      "description" : "PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-02-Presc-Fluindione"
+      },
+      "name" : "HAS-02-Presc-Fluindione",
+      "description" : "FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-03-Presc-Tinzaparine"
+      },
+      "name" : "HAS-03-Presc-Tinzaparine",
+      "description" : "TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-04-1-Presc-Paracetamol"
+      },
+      "name" : "HAS-04-1-Presc-Paracetamol",
+      "description" : "PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-04-2-Presc-DAFALGANCODEINE"
+      },
+      "name" : "HAS-04-2-Presc-DAFALGANCODEINE",
+      "description" : "DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-05-1-Presc-Fluindione"
+      },
+      "name" : "HAS-05-1-Presc-Fluindione",
+      "description" : "FLUINDIONE 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé)",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-05-2-Presc-ACTISKENAN"
+      },
+      "name" : "HAS-05-2-Presc-ACTISKENAN",
+      "description" : "ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-06-1-Presc-Methotrexate"
+      },
+      "name" : "HAS-06-1-Presc-Methotrexate",
+      "description" : "METHOTREXATE 10 mg comprimé (sécable) : 2 comprimés, 1 fois par semaine, le mardi",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-06-2-Presc-Methotrexate"
+      },
+      "name" : "HAS-06-2-Presc-Methotrexate",
+      "description" : "METHOTREXATE 10 mg comprimé (sécable) : 20 mg, 1 fois par semaine, le mardi",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-07-Presc-Paracetamol"
+      },
+      "name" : "HAS-07-Presc-Paracetamol",
+      "description" : "PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-08-1-Presc-Betamethasone"
+      },
+      "name" : "HAS-08-1-Presc-Betamethasone",
+      "description" : "BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-08-2-Presc-Paracetamol"
+      },
+      "name" : "HAS-08-2-Presc-Paracetamol",
+      "description" : "PARACETAMOL 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C.",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HAS-09-Presc-Ropinirole"
+      },
+      "name" : "HAS-09-Presc-Ropinirole",
+      "description" : "ROPINIROLE comprimé 1mg : 1 comprimé à 7h, 12h 18h",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1417,6 +1537,7 @@
         "reference" : "Bundle/HAS-10-Presc-Methotrexate"
       },
       "name" : "HAS-10-Presc-Methotrexate",
+      "description" : "METHOTREXATE 10 mg comprimé : 1 comprimé 1 fois par semaine, le mardi",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1428,6 +1549,7 @@
         "reference" : "Bundle/HAS-11-1-Presc-VitamineD"
       },
       "name" : "HAS-11-1-Presc-VitamineD",
+      "description" : "VITAMINE D 100 000 UI solution buvable : 1 ampoule, le premier jour de chaque mois",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1439,6 +1561,7 @@
         "reference" : "Bundle/HAS-11-2-Presc-EVRA"
       },
       "name" : "HAS-11-2-Presc-EVRA",
+      "description" : "EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1450,6 +1573,7 @@
         "reference" : "Bundle/HAS-12-1-Presc-BEPANTHEN"
       },
       "name" : "HAS-12-1-Presc-BEPANTHEN",
+      "description" : "BEPANTHEN®5% crème : 1 application, 2 fois par jour, en couche mince",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1461,6 +1585,7 @@
         "reference" : "Bundle/HAS-12-2-Presc-Methotrexate"
       },
       "name" : "HAS-12-2-Presc-Methotrexate",
+      "description" : "METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1472,6 +1597,7 @@
         "reference" : "Bundle/HAS-12-3-Presc-Enoxaparine"
       },
       "name" : "HAS-12-3-Presc-Enoxaparine",
+      "description" : "ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1483,6 +1609,7 @@
         "reference" : "Bundle/HAS-13-Presc-Desloratadine"
       },
       "name" : "HAS-13-Presc-Desloratadine",
+      "description" : "DESLORATADINE 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1494,6 +1621,7 @@
         "reference" : "Bundle/HAS-14-1-Presc-CODOLIPRANE"
       },
       "name" : "HAS-14-1-Presc-CODOLIPRANE",
+      "description" : "CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1505,6 +1633,7 @@
         "reference" : "Bundle/HAS-14-2-Presc-Betamethasone"
       },
       "name" : "HAS-14-2-Presc-Betamethasone",
+      "description" : "BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter. Ne pas dépasser 2 applications par jour",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1516,6 +1645,7 @@
         "reference" : "Bundle/HAS-15-Presc-Morphine"
       },
       "name" : "HAS-15-Presc-Morphine",
+      "description" : "MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1527,6 +1657,7 @@
         "reference" : "Bundle/HAS-16-Presc-Racecadotril"
       },
       "name" : "HAS-16-Presc-Racecadotril",
+      "description" : "RACECADOTRIL 100 mg gélule: 1 gélule 3 fois par jour au début de chaque repas. A poursuivre tant que la diarrhée persiste avec un maximum de 7 jours",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1538,17 +1669,7 @@
         "reference" : "Bundle/HAS-17-Presc-Budesonide"
       },
       "name" : "HAS-17-Presc-Budesonide",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-17-Presc-Budesonide-MV"
-      },
-      "name" : "HAS-17-Presc-Budesonide-MV",
+      "description" : "Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1560,6 +1681,7 @@
         "reference" : "Bundle/HAS-18-Presc-Budesonide-MV"
       },
       "name" : "HAS-18-Presc-Budesonide-MV",
+      "description" : "Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h jusqu'au 16/03/2023",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1571,17 +1693,7 @@
         "reference" : "Bundle/HAS-19-Presc-Paracetamol"
       },
       "name" : "HAS-19-Presc-Paracetamol",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-2-Presc-Fluindione"
-      },
-      "name" : "HAS-2-Presc-Fluindione",
+      "description" : "PARACETAMOL 1000 mg comprimé: 1 comprimé,  3 prises par jour, espacés d’au moins 4 heures",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1593,6 +1705,7 @@
         "reference" : "Bundle/HAS-20-Presc-Hydrocortisone"
       },
       "name" : "HAS-20-Presc-Hydrocortisone",
+      "description" : "HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1604,6 +1717,7 @@
         "reference" : "Bundle/HAS-21-Presc-Prednisolone"
       },
       "name" : "HAS-21-Presc-Prednisolone",
+      "description" : "PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1615,6 +1729,7 @@
         "reference" : "Bundle/HAS-22-Presc-Prednisolone"
       },
       "name" : "HAS-22-Presc-Prednisolone",
+      "description" : "PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1626,6 +1741,7 @@
         "reference" : "Bundle/HAS-23-1-Presc-Fluindione"
       },
       "name" : "HAS-23-1-Presc-Fluindione",
+      "description" : "FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1637,6 +1753,7 @@
         "reference" : "Bundle/HAS-23-2-Presc-Amiodarone"
       },
       "name" : "HAS-23-2-Presc-Amiodarone",
+      "description" : "AMIODARONE 200 mg comprimé: 1 comprimé pendant 5 jours (du lundi au vendredi), et puis arrêt 2 jours (samedi, dimanche). Recommencer le cycle de 7 jours, à répéter sur le mois",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1648,6 +1765,7 @@
         "reference" : "Bundle/HAS-24-Topiramate"
       },
       "name" : "HAS-24-Topiramate",
+      "description" : "TOPIRAMATE 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1659,6 +1777,7 @@
         "reference" : "Bundle/HAS-25-NOVORAPID"
       },
       "name" : "HAS-25-NOVORAPID",
+      "description" : "NOVORAPID Flexpen® 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1670,6 +1789,7 @@
         "reference" : "Bundle/HAS-26-Diazepam"
       },
       "name" : "HAS-26-Diazepam",
+      "description" : "DIAZEPAM 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1681,6 +1801,7 @@
         "reference" : "Bundle/HAS-27-1-Metformine"
       },
       "name" : "HAS-27-1-Metformine",
+      "description" : "METFORMINE 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1692,6 +1813,7 @@
         "reference" : "Bundle/HAS-27-2-Rifampicine"
       },
       "name" : "HAS-27-2-Rifampicine",
+      "description" : "RIFAMPICINE 300 mg en gélule 2 gélules le matin 30 minutes avant le petit-déjeuner",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1703,6 +1825,7 @@
         "reference" : "Bundle/HAS-28-Presc-Enoxaparine"
       },
       "name" : "HAS-28-Presc-Enoxaparine",
+      "description" : "ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention.",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1714,17 +1837,7 @@
         "reference" : "Bundle/HAS-29-Presc-Enoxaparine"
       },
       "name" : "HAS-29-Presc-Enoxaparine",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-3-Presc-Tinzaparine"
-      },
-      "name" : "HAS-3-Presc-Tinzaparine",
+      "description" : "ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1736,6 +1849,7 @@
         "reference" : "Bundle/HAS-30-1-Presc-Hydrocortisone"
       },
       "name" : "HAS-30-1-Presc-Hydrocortisone",
+      "description" : "HYDROCORTISONE 10 mg : 1 comprimé matin et 1 comprimé midi \nEn cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.\nAvec un maximum de 6 comprimés par jour.",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1747,116 +1861,7 @@
         "reference" : "Bundle/HAS-30-2-Presc-Cetirizine"
       },
       "name" : "HAS-30-2-Presc-Cetirizine",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-4-1-Presc-Paracetamol"
-      },
-      "name" : "HAS-4-1-Presc-Paracetamol",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-4-2-Presc-DAFALGANCODEINE"
-      },
-      "name" : "HAS-4-2-Presc-DAFALGANCODEINE",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-5-1-Presc-Fluindione"
-      },
-      "name" : "HAS-5-1-Presc-Fluindione",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-5-2-Presc-ACTISKENAN"
-      },
-      "name" : "HAS-5-2-Presc-ACTISKENAN",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-6-1-Presc-Methotrexate"
-      },
-      "name" : "HAS-6-1-Presc-Methotrexate",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-6-2-Presc-Methotrexate"
-      },
-      "name" : "HAS-6-2-Presc-Methotrexate",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-7-Presc-Paracetamol"
-      },
-      "name" : "HAS-7-Presc-Paracetamol",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-8-1-Presc-Betamethasone"
-      },
-      "name" : "HAS-8-1-Presc-Betamethasone",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-8-2-Presc-Paracetamol"
-      },
-      "name" : "HAS-8-2-Presc-Paracetamol",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/HAS-9-Presc-Ropinirole"
-      },
-      "name" : "HAS-9-Presc-Ropinirole",
+      "description" : "CETIRIZINE 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire)",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -1868,6 +1873,7 @@
         "reference" : "Medication/InLine-DOLIPRANE"
       },
       "name" : "InLine-DOLIPRANE",
+      "description" : "Medication DOLIPRANE® pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
     },
     {
@@ -1879,6 +1885,7 @@
         "reference" : "Medication/InLine-med-EFFERALGAN"
       },
       "name" : "InLine-med-EFFERALGAN",
+      "description" : "Medication EFFERALGAN® pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
     },
     {
@@ -1890,6 +1897,7 @@
         "reference" : "Medication/InLine-med-Paracetamol"
       },
       "name" : "InLine-med-Paracetamol",
+      "description" : "Medication Paracétamol pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
     },
     {
@@ -1901,6 +1909,7 @@
         "reference" : "Group/InLine-patient-group-01"
       },
       "name" : "InLine-patient-group-01",
+      "description" : "Groupe de patient pour exemple de délivrance reglobalisée",
       "exampleBoolean" : true
     },
     {
@@ -1912,6 +1921,7 @@
         "reference" : "MedicationRequest/InLine-Presc-EFFERALGAN"
       },
       "name" : "InLine-Presc-EFFERALGAN",
+      "description" : "Prescription d'EFFERALGAN® pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
     },
     {
@@ -1923,6 +1933,7 @@
         "reference" : "MedicationRequest/InLine-presc-EFFERALGAN2"
       },
       "name" : "InLine-presc-EFFERALGAN2",
+      "description" : "Prescription d'EFFERALGAN® pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
     },
     {
@@ -1934,6 +1945,7 @@
         "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
       },
       "name" : "InLine-presc-Paracetamol1",
+      "description" : "Prescription de Paracétamol pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
     },
     {
@@ -1945,6 +1957,7 @@
         "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
       },
       "name" : "InLine-presc-Paracetamol2",
+      "description" : "Prescription de Paracétamol pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
     },
     {
@@ -2058,18 +2071,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-medication-to-dispense"
-      },
-      "name" : "Medication to be dispensed",
-      "description" : "This extension stated whether the medication has to be dispensed or not (e.g. when a patient has already the medication).",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -2111,6 +2112,7 @@
         "reference" : "Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE"
       },
       "name" : "MultiLine-Presc-METFORMINE-GLICLAZIDE",
+      "description" : "METFORMINE® ou GLICLAZIDE® en cas d'intolérance digestive à la METFORMINE",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2122,6 +2124,7 @@
         "reference" : "Bundle/MultiLine-Presc-METHOTREXATE-LEDERFOLINE"
       },
       "name" : "MultiLine-Presc-METHOTREXATE-LEDERFOLINE",
+      "description" : "METHOTREX® et LEDERFOLINE® à prendre en même temps",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2133,6 +2136,7 @@
         "reference" : "Bundle/MultiLine-Presc-Sucralfate-Paracetamol"
       },
       "name" : "MultiLine-Presc-Sucralfate-Paracetamol",
+      "description" : "Paracetamol 2h après Sucralfate",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2156,6 +2160,7 @@
         "reference" : "Bundle/Presc-Betamethasone-ApplCut"
       },
       "name" : "Presc-Betamethasone-ApplCut",
+      "description" : "bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2167,6 +2172,7 @@
         "reference" : "Bundle/Presc-BISOPROLOL-SANDOZ-DosesRationnelles"
       },
       "name" : "Presc-BISOPROLOL-SANDOZ-DosesRationnelles",
+      "description" : "BISOPROLOL® 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2178,6 +2184,7 @@
         "reference" : "Bundle/Presc-Capecitabine-Dose-Calculee"
       },
       "name" : "Presc-Capecitabine-Dose-Calculee",
+      "description" : "capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2189,6 +2196,7 @@
         "reference" : "Bundle/Presc-CLARADOL-DoseDiffParHoraire"
       },
       "name" : "Presc-CLARADOL-DoseDiffParHoraire",
+      "description" : "CLARADOL® 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2200,6 +2208,7 @@
         "reference" : "Bundle/Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin"
       },
       "name" : "Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin",
+      "description" : "CLARADOL® 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2211,6 +2220,7 @@
         "reference" : "Bundle/Presc-CLARADOL-TL6h-MedCodeableConcept"
       },
       "name" : "Presc-CLARADOL-TL6h-MedCodeableConcept",
+      "description" : "CLARADOL® 500 mg, 1 cpr toutes les 6h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2222,6 +2232,7 @@
         "reference" : "Bundle/Presc-CLARADOL-TLMardisVendredis"
       },
       "name" : "Presc-CLARADOL-TLMardisVendredis",
+      "description" : "CLARADOL® 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2233,7 +2244,7 @@
         "reference" : "Bundle/Presc-CODOLIPRANE-MedCodeableConcept"
       },
       "name" : "Presc-CODOLIPRANE-MedCodeableConcept",
-      "description" : "CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j",
+      "description" : "CODOLIPRANE® 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2245,6 +2256,7 @@
         "reference" : "Bundle/Presc-DIPROSONE-AppCut"
       },
       "name" : "Presc-DIPROSONE-AppCut",
+      "description" : "DIPROSONE® 0.05%, 1 application cutanée à 8h, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2256,6 +2268,7 @@
         "reference" : "Bundle/Presc-DOLIPRANE-20DoseParKG"
       },
       "name" : "Presc-DOLIPRANE-20DoseParKG",
+      "description" : "DOLIPRANE® 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2267,7 +2280,7 @@
         "reference" : "Bundle/Presc-EFFERALGAN"
       },
       "name" : "Presc-EFFERALGAN",
-      "description" : "EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j",
+      "description" : "EFFERALGAN® 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2279,6 +2292,7 @@
         "reference" : "Bundle/Presc-Fentanyl-patch72h-TL3j"
       },
       "name" : "Presc-Fentanyl-patch72h-TL3j",
+      "description" : "fentanyl 75 µg/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2290,6 +2304,7 @@
         "reference" : "Bundle/Presc-MATRIFEN-patch-TL72h"
       },
       "name" : "Presc-MATRIFEN-patch-TL72h",
+      "description" : "MATRIFEN® 75 µg/h, patch, 1 à 7h, toutes les 72h, pendant 8j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2301,6 +2316,7 @@
         "reference" : "Bundle/Presc-Methylpredinosolone-DosesEvolutives"
       },
       "name" : "Presc-Methylpredinosolone-DosesEvolutives",
+      "description" : "méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2312,6 +2328,7 @@
         "reference" : "Bundle/Presc-MiniperfCefotaxime-En20min-Pdt3j"
       },
       "name" : "Presc-MiniperfCefotaxime-En20min-Pdt3j",
+      "description" : "céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2323,6 +2340,7 @@
         "reference" : "Bundle/Presc-MiniperfCefotaxime-En20min-Pdt4j"
       },
       "name" : "Presc-MiniperfCefotaxime-En20min-Pdt4j",
+      "description" : "céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 4j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2334,6 +2352,7 @@
         "reference" : "Bundle/Presc-MV-PerfGl-NaCl-KCl"
       },
       "name" : "Presc-MV-PerfGl-NaCl-KCl",
+      "description" : "MV - glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2345,6 +2364,7 @@
         "reference" : "Bundle/Presc-NICOREETESKIN-patch"
       },
       "name" : "Presc-NICOREETESKIN-patch",
+      "description" : "NICOREETESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2356,6 +2376,7 @@
         "reference" : "Bundle/Presc-Nicotine-15mgPar16h"
       },
       "name" : "Presc-Nicotine-15mgPar16h",
+      "description" : "nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2367,6 +2388,7 @@
         "reference" : "Bundle/Presc-Paracetamol"
       },
       "name" : "Presc-Paracetamol",
+      "description" : "paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2378,6 +2400,7 @@
         "reference" : "Bundle/Presc-Paracetamol-DoseEvolutive"
       },
       "name" : "Presc-Paracetamol-DoseEvolutive",
+      "description" : "paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2389,6 +2412,7 @@
         "reference" : "Bundle/Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin"
       },
       "name" : "Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin",
+      "description" : "paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2400,6 +2424,7 @@
         "reference" : "Bundle/Presc-Paracetamol-TL6h"
       },
       "name" : "Presc-Paracetamol-TL6h",
+      "description" : "paracétamol, 500 mg toutes les 6 h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2411,6 +2436,7 @@
         "reference" : "Bundle/Presc-ParacetamolCodeine-500mg30mg"
       },
       "name" : "Presc-ParacetamolCodeine-500mg30mg",
+      "description" : "paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2422,6 +2448,7 @@
         "reference" : "Bundle/Presc-PerfDobutamine-Qsp40mL"
       },
       "name" : "Presc-PerfDobutamine-Qsp40mL",
+      "description" : "dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2433,6 +2460,7 @@
         "reference" : "Bundle/Presc-PerfGl-NaCl-KCl-1l"
       },
       "name" : "Presc-PerfGl-NaCl-KCl-1l",
+      "description" : "Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2444,6 +2472,7 @@
         "reference" : "Bundle/Presc-PerfGl-NaCl-KCl-500ml"
       },
       "name" : "Presc-PerfGl-NaCl-KCl-500ml",
+      "description" : "Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2455,6 +2484,7 @@
         "reference" : "Bundle/Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"
       },
       "name" : "Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h",
+      "description" : "BIONOLYTE® G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2465,8 +2495,8 @@
       "reference" : {
         "reference" : "StructureDefinition/FrRangeMedication"
       },
-      "name" : "Range with UCUM or EDQM quantity units",
-      "description" : "Range with low and high unit UCUM or EDQM encoded",
+      "name" : "Range with UCUM or EDQM codes if code is used",
+      "description" : "Range with low and high unit UCUM or EDQM codes if code is used",
       "exampleBoolean" : false
     },
     {
@@ -2477,8 +2507,8 @@
       "reference" : {
         "reference" : "StructureDefinition/FrRatioMedication"
       },
-      "name" : "Ratio with UCUM or EDQM quantity units",
-      "description" : "Ratio with numerator and denominator unit UCUM or EDQM encoded",
+      "name" : "Ratio with UCUM or EDQM codes if code is used",
+      "description" : "Ratio with numerator and denominator unit UCUM or EDQM encoded if code is used",
       "exampleBoolean" : false
     },
     {
@@ -2501,8 +2531,8 @@
       "reference" : {
         "reference" : "StructureDefinition/FrSimpleQuantityMedication"
       },
-      "name" : "SimpleQuantity with UCUM or EDQM quantity unit",
-      "description" : "simple quantity datatype requiring a UCUM or EDQM unit",
+      "name" : "SimpleQuantity with UCUM or EDQM codes or code not used",
+      "description" : "simple quantity datatype requiring a UCUM or EDQM code or no code (only unti)",
       "exampleBoolean" : false
     },
     {
@@ -2526,6 +2556,7 @@
         "reference" : "Bundle/TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE"
       },
       "name" : "TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE",
+      "description" : "METFORMINE® ou GLICLAZIDE® en cas d'intolérance digestive à la METFORMINE - Traduction de PN13",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2537,6 +2568,7 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-DOLIPRANE"
       },
       "name" : "TradPN13FHIR-Presc-DOLIPRANE",
+      "description" : "DOLIPRANE® 1000mg 3x/j pdt 2j - Traduction de PN13 sans interpretation du code de fréquence",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2548,6 +2580,7 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-DOLIPRANE-Interpret"
       },
       "name" : "TradPN13FHIR-Presc-DOLIPRANE-Interpret",
+      "description" : "DOLIPRANE® 1000mg 3x/j pdt 2j - Traduction de PN13 en interprétant le code de fréquence",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2559,6 +2592,7 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-Morphine-PCA"
       },
       "name" : "TradPN13FHIR-Presc-Morphine-PCA",
+      "description" : "PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30 - Traduction de PN13",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2570,6 +2604,7 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-Paracetamol"
       },
       "name" : "TradPN13FHIR-Presc-Paracetamol",
+      "description" : "PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - Si douleur :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2581,6 +2616,7 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-Paracetamol-SiDouleur"
       },
       "name" : "TradPN13FHIR-Presc-Paracetamol-SiDouleur",
+      "description" : "PARACETAMOL (Voie orale) si douleur:  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {
@@ -2592,6 +2628,7 @@
         "reference" : "Bundle/TradPN13FHIR-Presc-perfusion-6-composants"
       },
       "name" : "TradPN13FHIR-Presc-perfusion-6-composants",
+      "description" : "Perf  6composants en UCD en continu sur 12h00 par jour - Traduction de PN13",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
     },
     {

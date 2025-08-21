@@ -22,8 +22,6 @@ package IG #DDDDDD{
         class FrSimpleQuantityMedication{
 
              Quantity => [None..None]
-             Quantity.system => [1..None]
-             Quantity.code => [1..None]
         } 
 
         class FRCurrentMedicationComposition{
@@ -79,13 +77,8 @@ package IG #DDDDDD{
 
         class FRInpatientMedicationRequest{
 
-             MedicationRequest.medication[x]:medicationReference => [None..None]
-             MedicationRequest.medication[x]:medicationReference.extension:toDispense => <&plus>[0..1]
-             MedicationRequest.medication[x]:medicationCodeableConcept => [None..None]
-             MedicationRequest.medication[x]:medicationCodeableConcept.extension:toDispense => <&plus>[0..1]
              MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
              MedicationRequest.note.extension:noteScope => <&plus>[0..1]
-             MedicationRequest.dispenseRequest.initialFill => [None..0]
              MedicationRequest.dispenseRequest.dispenseInterval => [None..0]
              MedicationRequest.dispenseRequest.validityPeriod.start => [1..None]
              MedicationRequest.dispenseRequest.validityPeriod.end => [None..None]
@@ -110,8 +103,6 @@ package IG #DDDDDD{
 
         class FrRedicationCompound{
 
-             Medication.code => [1..None]
-             Medication.code.text => [1..None]
              Medication.form => [None..None]
              Medication.ingredient => [1..None]
              Medication.ingredient.extension => [None..None]
@@ -281,6 +272,7 @@ package IG #DDDDDD{
         class FRMedicationRequest{
 
              MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:renderedDosageInstruction => <&plus>[0..1]
              MedicationRequest.extension:treatmentIntent => <&plus>[0..1]
              MedicationRequest.extension:treatmentIntent.value[x].coding => <&plus>[None..None]
              MedicationRequest.medication[x] => [None..None]
@@ -290,6 +282,7 @@ package IG #DDDDDD{
              MedicationRequest.encounter => [None..None]
              MedicationRequest.requester => [1..None]
              MedicationRequest.dosageInstruction => [1..None]
+             MedicationRequest.dosageInstruction.patientInstruction => [None..0]
              MedicationRequest.dosageInstruction.timing.repeat.extension:AdditionalWhenValues => <&plus>[0..1]
              MedicationRequest.dosageInstruction.route => [None..None]
              MedicationRequest.dosageInstruction.method => [None..None]
@@ -385,8 +378,6 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
-     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
-     FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationToDispense
      FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FrUFRole
      FRInpatientMedicationRequest -[#black,dashed,thickness=2]-> FRMedicationRequestNoteScope
      FrRedicationCompound -[#black,dashed,thickness=2]-> FrIsVehicle
@@ -458,12 +449,6 @@ package IG #DDDDDD{
           Extension.extension:source.value[x] => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
-        } 
-        class FRMedicationToDispense{
-
-          Extension.extension => [None..0]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..None]
         } 
         class FRMedicationRequestNoteScope{
 

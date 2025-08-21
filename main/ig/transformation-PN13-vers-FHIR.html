@@ -31,10 +31,10 @@
     <![endif] -->
 
       <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -438,9 +438,63 @@ Si l’unité référencée en PN13 dans <code class="language-plaintext highlig
 
 <h6 id="requestgroup">RequestGroup</h6>
 
-<p>Pour chaque élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié</code> dans le message PN13 faire une instance de <code class="language-plaintext highlighter-rouge">RequestGroup.action</code> d’une ressource <em>RequestGroup</em> unique liant les deux ressources <em>MedicationRequest</em> liées</p>
+<p>Les liens entre lignes de prescription peuvent être traduits par une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code> selon le type de relation indiqué dans le message PN13</p>
 
-<p>La définition de la ressource <em>ConceptMap</em> correspondante est prévue pour une version ultérieure du guide.</p>
+<p><strong>Lien de type “Complément”</strong></p>
+
+<p>Le lien de type “Complément” en PN13 est purement indicatif. Etant donné qu’il est indicatif et qu’il n’est pas possible de le traduire de façon standard en FHIR, il a été choisi de ne pas proposer une traduction en FHIR de ce type de lien.</p>
+
+<p><strong>Lien de type “Alternance”</strong></p>
+
+<p>Par manque d’exemples d’implémentation de ce type de lien en PN13 et étant donné la complexité de représentation d’un alternance via une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>, il a été décidé de ne pas proposer de processus de traduction PN13 vers FHIR pour ce type de relation.</p>
+
+<p>Un mapping pourrait être proposé ultérieurement si des exemples d’implémentation de ce type de lien étaient fournis.</p>
+
+<p><strong>Lien de type “Alternative”</strong></p>
+
+<p>Lorsqu’un message PN13 contient au moins un <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié</code> avec <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié/Type_liaison_élément</code> de valeur 3, une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code> est à créer avec les éléments suivants:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">RequestGroup.meta.profile</code>est fixé à <code class="language-plaintext highlighter-rouge">https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RequestGroup.groupIdentifier.value</code>et<code class="language-plaintext highlighter-rouge">RequestGroup.groupIdentifier.system</code>prennent les mêmes valeurs que pour les ressources <code class="language-plaintext highlighter-rouge">MedicationRequest</code>créées lors de la traduction du message PN13 (cf. <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">ConceptMap pour les lignes de prescription</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">RequestGroup.status</code> prend la même valeur que la ligne de prescription portant l’élément lié telle que définie par la ressource <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">ConceptMap pour les lignes de prescription</a></li>
+  <li><code class="language-plaintext highlighter-rouge">RequestGroup.intent</code>prend la valeur <code class="language-plaintext highlighter-rouge">order</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RequestGroup.priority</code> prend la même valeur que la ligne de prescription portant l’élément lié telle que définie par la ressource <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">ConceptMap pour les lignes de prescription</a></li>
+  <li><code class="language-plaintext highlighter-rouge">RequestGroup.subject</code>référence le même patient que les ressources <code class="language-plaintext highlighter-rouge">MedicationRequest</code>créées lors de la traduction du message PN13</li>
+  <li>une occurrence de <code class="language-plaintext highlighter-rouge">RequestGroup.action</code>est créée pour chaque ligne de prescription (<code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic</code>) lié à une autre dans le message PN13. Elle est renseigné de la manière suivante:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.id</code>prend la valeur de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_élément_prescr</code></li>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.description</code> est renseigné avec la condition de prise de l’alternative (ex. en cas d’intolérance au médicament A). En général cette condition est présentée dans un élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Evénement_début</code> ou <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Evénement2_début</code> correspondant à un <code class="language-plaintext highlighter-rouge">Type_événement_début</code>ou <code class="language-plaintext highlighter-rouge">Type_événement2_début</code>de valeur 3</li>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction.extension.url</code>est fixé à <code class="language-plaintext highlighter-rouge">https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship</code></li>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction.extension.valueCode</code>est fixé à <code class="language-plaintext highlighter-rouge">ALT</code></li>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction.actionId</code>est renseigné avec la valeur de <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Elément_lié/Id_élément_lié</code></li>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction.relationship</code>est fixé à <code class="language-plaintext highlighter-rouge">concurrent</code>(pas de valeur plus adaptée)</li>
+      <li><code class="language-plaintext highlighter-rouge">RequestGroup.action.ressource</code>référence la ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code>créée pour représenter la ligne de prescription portant la relation (i.e. l’élément <code class="language-plaintext highlighter-rouge">Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/</code> traduit)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong><em>Point d’attention</em></strong>
+Afin de respecter les spécifications FHIR, les ressources <code class="language-plaintext highlighter-rouge">MedicationRequest</code>créées lors de la traduction du message PN13 en FHIR doivent avoir <code class="language-plaintext highlighter-rouge">MedicationRequest.intent</code>valorisé à <code class="language-plaintext highlighter-rouge">option</code>. Cette valeur remplace la valeur définie par l’application de la ressource <a href="ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html">ConceptMap pour les lignes de prescription</a></p>
+
+<p><strong><em>Note:</em></strong>
+Etant donné la complexité du processus de traduction pour un lien de type “Alternative” (nécessité d’aller retouver la priorité, pas d’emplacement fixe pour la condition d’alternative…), il ne fait pas l’objet d’une ressource de type <code class="language-plaintext highlighter-rouge">ConceptMap</code>.</p>
+
+<p><strong>Lien de type “Dispensation DC”</strong></p>
+
+<p>Le lien de type “Dispensation DC” est utilisé dans le cas d’usage de la dispensation, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide</p>
+
+<p><strong>Lien de type “Modification”</strong></p>
+
+<p>Le lien de type “Modification” est utilisé dans le cas d’usage de l’analyse pharmaceutique, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide</p>
+
+<p><strong>Lien de type “Suggestion”</strong></p>
+
+<p>Le lien de type “Suggestion” est utilisé dans le cas d’usage de l’analyse pharmaceutique, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide</p>
+
+<p><strong>Lien de type “Remplacement”</strong></p>
+
+<p>Le lien de type “Remplacement” est utilisé dans le cas d’usage de l’analyse pharmaceutique, le mapping PN13 FHIR sera réalisé dans une version ultérieure de ce guide</p>
 
 <h4 id="la-dispensation">La dispensation</h4>
 
@@ -489,7 +543,7 @@ Si l’unité référencée en PN13 dans <code class="language-plaintext highlig
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 8, 2025 09:44+0000">2025-08-08</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 08:06+0000">2025-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
