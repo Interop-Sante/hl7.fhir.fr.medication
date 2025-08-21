@@ -99,7 +99,7 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
   - François Macary
 - ANS
   - Nicolas Riss
-  - Yann Briant
+  - Yann Briand
   - Isabelle Gibeau
   - Abdelali Boussaidi
   - Yohann Poiron
