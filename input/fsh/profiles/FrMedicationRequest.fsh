@@ -34,6 +34,7 @@ Description: "French medication request profile"
 
 * dosageInstruction 1..
 
+// Cet attribut a été interdit pour éviter la difficulté d'avoir à choisir entre patientInstruction et additionalInstruction.
 * dosageInstruction.patientInstruction ..0
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
