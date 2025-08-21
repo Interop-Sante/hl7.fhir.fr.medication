@@ -116,7 +116,7 @@ Les liens entre lignes de prescription peuvent être traduits par une ressource 
 
 **Lien de type "Complément"**
 
-Le lien de type "Complément" en PN13 est purament indicatif. Etant donné qu'il est indicatif et qu'il n'est pas possible de le traduire de façon standard en FHIR, il a été choisi de ne pas proposer une traduction en FHIR de ce type de lien. 
+Le lien de type "Complément" en PN13 est purement indicatif. Etant donné qu'il est indicatif et qu'il n'est pas possible de le traduire de façon standard en FHIR, il a été choisi de ne pas proposer une traduction en FHIR de ce type de lien. 
 
 **Lien de type "Alternance"**
 
