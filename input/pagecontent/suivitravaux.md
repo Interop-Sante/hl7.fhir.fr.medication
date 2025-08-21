@@ -101,7 +101,7 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
   - Nicolas Riss
   - Yann Briand
   - Isabelle Gibaud
-  - Abdelali Boussaidi
+  - Abdelali Boussadi
   - Yohann Poiron
   - Alain Perié
   - Elisabeth Serrot-Damalte
