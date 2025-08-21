@@ -264,7 +264,7 @@ Pour les **posologies conditionnelles d’un évènement aléatoire**, « si dou
 Les liens entre lignes de prescription peuvent bien sûr être indiqués dans les éléments `MedicationRequest.dosageInstruction.additionalInstruction.text`. Cependant, afin de faciliter la constitution automatisée de plan de prise et assurer une meilleure sécurité de prise, il est possible d'en modéliser certains via une ressource `RequestGroup`. La ressource `RequestGroup` utilisée pour représenter ces liens est liée aux ressources `MedicationRequest`concernées par l'élément `groupIdentifier`
 
 ***Point d'attention***
-L'utilisation de la ressource `RequestGroup`impose que les `MedicationRequest`liées aient comme valeur `option`pour `MedicationRequest.intent`. Il est donc primordiale pour toute `MedicationRequest`avec `option`comme `intent` de rechercher d'éventuelle ressource `RequestGroup`ayant le même `groupIdentifier`pour vérifier s'il s'agit d'une ligne de prescription liée à une autre.
+L'utilisation de la ressource `RequestGroup` impose que les `MedicationRequest`liées aient comme valeur `option`pour `MedicationRequest.intent`. Il est donc primordial pour toute `MedicationRequest` avec `option` comme `intent` de rechercher d'éventuelles ressources `RequestGroup` ayant le même `groupIdentifier` pour vérifier s'il s'agit d'une ligne de prescription liée à une autre.
 
 **Médicaments à prendre en même temps**
 
