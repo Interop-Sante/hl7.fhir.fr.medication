@@ -130,7 +130,7 @@ Losrqu'un message PN13 contient au moins un `Message/M_Prescription_médicaments
 
 - `RequestGroup.meta.profile`est fixé à `https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription`
 - `RequestGroup.groupIdentifier.value`et`RequestGroup.groupIdentifier.system`prennent les mêmes valeurs que pour les ressources `MedicationRequest`créées lors de la traduction du message PN13 (cf. [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html))
-- `RequestGroup.status` prend la même valeur que la ligne de prescritpion portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
+- `RequestGroup.status` prend la même valeur que la ligne de prescription portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
 - `RequestGroup.intent`prend la valeur `order`
 - `RequestGroup.priority` prend la même valeur que la ligne de prescritpion portant l'élément lié telle que définie par la ressource [ConceptMap pour les lignes de prescription](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.html)
 - `RequestGroup.subject`référence le même patient que les ressources `MedicationRequest`créées lors de la traduction du message PN13
