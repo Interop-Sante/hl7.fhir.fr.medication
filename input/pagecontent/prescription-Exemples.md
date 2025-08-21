@@ -4,7 +4,7 @@ Pour des raisons de lisibilité, les exemples présentés en FHIR sont considér
 Ce formalisme n'est pas obligatoire, la manière dont les ressources FHIR constituant une prescription sont mises à disposition dépend du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de `_include` et de `_revInclude`)
 
 Les travaux de la HAS sur la structuration de la posologie des prescriptions de médecine de ville (lien à venir lorsque ces travaux seront publiés) ont été intégrés aux exemples. Ils sont identifiées par le prefixe HAS et le suffixe entre parenthèses id_poso indiqué dans le document de la HAS.
-Dans le cas où ils représentent des spécificités opur les prescriptions de médecine de ville (qui valent également pour les prescriptions hospitalières à exécution en ville), il sont précédés par la mention ***spécificité ville***
+Dans le cas où ils représentent des spécificités pour les prescriptions de médecine de ville (qui valent également pour les prescriptions hospitalières à exécution en ville), il sont précédés par la mention ***spécificité ville***
 
 #### Exemples généraux
 
