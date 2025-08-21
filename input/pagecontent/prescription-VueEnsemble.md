@@ -83,7 +83,7 @@ Dans le cas d'une dose calculée, si elle est fournie en plus de la valeur absol
 
 **Version textuelle de la posologie**
 
-Afin de permettre l'affichage de la posologie par tous les logiciels, y compris ceux qui n'ont pas la possibilité d'interpréter la structuration de la posologie, la posologie associée à une ligne de prescription est à indiquer dans l'extention européenne `renderedDosageInstruction`qui préfigure l'élément `MedicationRequest.renderedDosageInstruction`en FHIR R5.
+Afin de permettre l'affichage de la posologie par tous les logiciels, y compris ceux qui n'ont pas la possibilité d'interpréter la structuration de la posologie, la posologie associée à une ligne de prescription est à indiquer dans l'extension `renderedDosageInstruction` qui préfigure l'élément `MedicationRequest.renderedDosageInstruction`en FHIR R5.
 
 - ex: "40mg le soir" [HAS - pantoprazole 40 mg comprimé: 40 mg le soir en MV (id_poso=1)](Bundle-HAS-01-Presc-Pantoprazole-MV.html)
 
