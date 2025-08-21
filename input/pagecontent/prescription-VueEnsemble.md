@@ -77,7 +77,7 @@ Certains éléments de posologie ne peuvent pas être représentés de manière 
 
 ***Spécificité ville***
 
-Dans le cas d'une dose calculée, si elle est fourni en plus de la valeur absolue, la valeur reative (ex. formule de calcul) doit être indiquée textuellement dans `MedicationRequest.doseInstruction.additionalInstruction.text` et non indiqué dans la partie structurée.
+Dans le cas d'une dose calculée, si elle est fournie en plus de la valeur absolue, la valeur reative (ex. formule de calcul) doit être indiquée textuellement dans `MedicationRequest.doseInstruction.additionalInstruction.text` et non indiquée dans la partie structurée.
 
 - ex: "soit 170UI anti-Xa /kg" [HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-Tinzaparine.html)
 
