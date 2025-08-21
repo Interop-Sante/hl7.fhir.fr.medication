@@ -1,18 +1,19 @@
 Instance: MultiLine-Presc-METFORMINE-GLICLAZIDE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METFORMINE® ou GLICLAZIDE® en cas d'intolérance digestive à la METFORMINE"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-METFORMINE
 * entry[+].resource = medicationrequest-Presc-GLICLAZIDE
 * entry[+].resource = requestgroup-Presc-METFORMINE-GLICLAZIDE
 
 Instance: medicationrequest-Presc-METFORMINE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Presc-METFORMINE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400890020275 "METFORMINE ACC 1000MG CPR"
 * subject.reference = "Patient/30002"
@@ -34,10 +35,10 @@ Usage: #inline
 
 
 Instance: medicationrequest-Presc-GLICLAZIDE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Presc-GLICLAZIDE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical (fr-inpatient-medicationrequest)
 * status = #active
 * intent = #option
 * priority = #routine
@@ -58,9 +59,9 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: requestgroup-Presc-METFORMINE-GLICLAZIDE
-InstanceOf: FRRequestGroupForPrescription
+InstanceOf: fr-requestgroup-for-prescription
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
+* meta.profile = Canonical(fr-requestgroup-for-prescription)
 * groupIdentifier.value = "Presc-30002"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * status = #active

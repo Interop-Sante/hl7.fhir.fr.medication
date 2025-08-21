@@ -1,6 +1,7 @@
 Instance: Presc-NICOREETESKIN-patch
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "NICOREETESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
 * type = #searchset
 * entry[0].resource = medication-Presc-NICOREETESKIN-patch
 * entry[+].resource = medicationrequest-Presc-NICOREETESKIN-patch
@@ -9,21 +10,21 @@ Instance: medication-Presc-NICOREETESKIN-patch
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-NICOREETESKIN-patch"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893539354 "NICORETTESKIN 15MG/16H DISP"
-* code.text = "NICOTINE"
+* code.text = "NICORETTESKIN® 15MG/16H DISP"
 * form = $EDQM#10519000 "Patch transdermique"
 * form.text = "dispositif transdermique"
 * ingredient.itemCodeableConcept = $SMS#100000079991 "nicotine"
 * ingredient.itemCodeableConcept.text = "NICOTINE"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 15 'mg' "mg"
-* ingredient.strength.denominator = 1 '1'
+* ingredient.strength.numerator = 15 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator.value = 1
 
 Instance: medicationrequest-Presc-NICOREETESKIN-patch
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile[0] = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

@@ -1,6 +1,7 @@
 Instance: Presc-Betamethasone-ApplCut
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Betamethasone-ApplCut
 * entry[+].resource = medicationrequest-Presc-Betamethasone-ApplCut
@@ -9,16 +10,16 @@ Instance: medication-Presc-Betamethasone-ApplCut
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-Betamethasone-ApplCut"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091947 "bétaméthasone"
 * code.text = "BETAMETHASONE"
-* amount.numerator = 0.5 'mg' "mg"
+* amount.numerator = 0.5 $unitsofmeasure#mg "mg"
 * amount.denominator = $unitsofmeasure#g "g"
 
 Instance: medicationrequest-Presc-Betamethasone-ApplCut
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -36,5 +37,3 @@ Usage: #inline
 * dosageInstruction.route.text = "Voie cutanée"
 * dosageInstruction.doseAndRate.doseQuantity.value = 1
 * dosageInstruction.doseAndRate.doseQuantity.unit = "Appln"
-* dosageInstruction.doseAndRate.doseQuantity.system = $unitsofmeasure
-* dosageInstruction.doseAndRate.doseQuantity.code = #{Appln}

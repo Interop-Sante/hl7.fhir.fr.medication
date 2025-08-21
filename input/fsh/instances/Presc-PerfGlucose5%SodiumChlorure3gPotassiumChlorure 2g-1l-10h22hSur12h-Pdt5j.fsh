@@ -1,6 +1,7 @@
 Instance: Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-PerfGl-NaCl-KCl-1l
 * entry[+].resource = medication-2-Presc-PerfGl-NaCl-KCl-1l
@@ -12,54 +13,57 @@ Instance: medication-1-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-1-Presc-PerfGl-NaCl-KCl-1l"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000078171 "glucose"
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
-* amount.numerator = 1 'L' "L"
+* amount.numerator = 1 $unitsofmeasure#L "L"
+* amount.denominator.value = 1
 * ingredient.itemCodeableConcept = $sct#67079006 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
-* ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 'mL' "mL"
+* ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator = 1 $unitsofmeasure#mL "mL"
 
 Instance: medication-2-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-2-Presc-PerfGl-NaCl-KCl-1l"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000092115 "chlorure de sodium"
 * code.text = "SODIUM CHLORURE"
 * form = $EDQM#11201000 "solution injectable"
 * form.text = "solution injectable"
-* amount.numerator = 3 'g' "g"
+* amount.numerator = 3 $unitsofmeasure#g "g"
+* amount.denominator.value = 1
 
 Instance: medication-3-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-3-Presc-PerfGl-NaCl-KCl-1l"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000091807 "chlorure de potassium"
 * code.text = "POTASSIUM CHLORURE"
 * form = $EDQM#11201000 "solution injectable"
 * form.text = "solution injectable"
-* amount.numerator = 2 'g' "g"
+* amount.numerator = 2 $unitsofmeasure#g "g"
+* amount.denominator.value = 1
 
 
 Instance: medication-C-Presc-PerfGl-NaCl-KCl-1l
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-14638"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * code.text = "G5 1L + NaCl 3g + KCl 2g"
 * ingredient[0].itemReference.reference = "#medication-1-Presc-PerfGl-NaCl-KCl-1l"
 * ingredient[+].itemReference.reference = "#medication-2-Presc-PerfGl-NaCl-KCl-1l"
 * ingredient[+].itemReference.reference = "#medication-3-Presc-PerfGl-NaCl-KCl-1l"
 
 Instance: medicationrequest-Presc-PerfGl-NaCl-KCl-1l
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -77,4 +81,4 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 1 $EDQM#15005000 "Poche"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 12 'h' "h"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 12 $unitsofmeasure#h "h"

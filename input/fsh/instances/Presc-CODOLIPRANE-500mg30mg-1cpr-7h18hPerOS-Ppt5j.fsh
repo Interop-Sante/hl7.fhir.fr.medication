@@ -1,19 +1,19 @@
 Instance: Presc-CODOLIPRANE-MedCodeableConcept
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "CODOLIPRANE 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j"
+Description: "CODOLIPRANE® 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j"
 * type = #searchset
-* entry[0].resource = medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
+* entry.resource = medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
 
 Instance: medicationrequest-Presc-CODOLIPRANE-MedCodeableConcept
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400893936047 "CODOLIPRANE 500/30MG CPR"
-* medicationCodeableConcept.text = "CODOLIPRANE 500 mg/30 mg, cpr"
+* medicationCodeableConcept.text = "CODOLIPRANE® 500 mg/30 mg, cpr"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-28T15:12:37.603Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

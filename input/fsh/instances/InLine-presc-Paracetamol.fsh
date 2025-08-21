@@ -1,6 +1,7 @@
 Instance: InLine-presc-Paracetamol1
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
+Description: "Prescription de Paracétamol pour exemple de dispensation"
 * status = #active
 * intent = #order
 * medicationReference.reference = "Medication/InLine-med-Paracetamol"
@@ -17,4 +18,4 @@ Usage: #example
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate.type.text = "Ordered"
-* dosageInstruction.doseAndRate.doseQuantity = 1 'g' "g"
+* dosageInstruction.doseAndRate.doseQuantity = 1 $unitsofmeasure#g "g"

@@ -1,6 +1,7 @@
 Instance: TradPN13FHIR-Presc-Morphine-PCA
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30 - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-Trad-Presc-Morphine-PCA
 * entry[+].resource = medicationrequest-Trad-Presc-Morphine-PCA
@@ -9,7 +10,7 @@ Instance: patient-Trad-Presc-Morphine-PCA
 InstanceOf: Patient
 Usage: #inline
 * id = "patient-Trad-Presc-Morphine-PCA"
-* meta.profile[0] = $FrCorePatientINS
+* meta.profile = $FrCorePatientINS
 * extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
 * extension[=].extension[0].url = "identityStatus"
 * extension[=].extension[=].valueCoding.system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"
@@ -41,10 +42,10 @@ Usage: #inline
 * birthDate = "1989-01-02"
 
 Instance: medicationrequest-Trad-Presc-Morphine-PCA
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Trad-Presc-Morphine-PCA"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * identifier.value = "202500507153500547"
 * identifier.value = "https://somehospital.fr/Medication-ID"
 * status = #active

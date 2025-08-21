@@ -1,10 +1,7 @@
 ### Prescription
 
-Le domaine couvert se limite à la **prescription intrahospitalière**.
-Sont hors champ
-
-- les prescriptions hospitalières exécutables en ville (PHEV);
-- les prescriptions de médecine de ville.
+Le domaine couvert inclut les prescriptions hospitalières, les  prescriptions de médecine de ville ainsi que les prescriptions hospitalières exécutables en ville (PHEV).
+Les spécifications sont issues des travaux du groupe de travail Interop'Santé. Ils s'appuient sur la version précédente du Guide d'Integration, des travaux de la HAS sur la structuration de la posologie pour les prescriptions de médecine de ville (lien à venir lorsque ces travaux seront publiés) et s'inspirent des profils européens pour la [prescription](http://hl7.eu/fhir/mpd) (profils en concertation lorsque ces travaux ont été menés).
 
 #### Détail
 

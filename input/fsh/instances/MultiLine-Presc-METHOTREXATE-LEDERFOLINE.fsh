@@ -1,18 +1,19 @@
 Instance: MultiLine-Presc-METHOTREXATE-LEDERFOLINE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METHOTREX® et LEDERFOLINE® à prendre en même temps"
 * type = #searchset
 * entry[0].resource = medicationrequest-Presc-METHOTREXATE
 * entry[+].resource = medicationrequest-Presc-LEDERFOLINE
 * entry[+].resource = requestgroup-Presc-METHOTREXATE-LEDERFOLINE
 
 Instance: medicationrequest-Presc-METHOTREXATE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Presc-METHOTREXATE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400894357391 "METHOTREX.ACC 25MG/ML FL2ML"
 * subject.reference = "Patient/30003"
@@ -33,12 +34,12 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15009000
 
 Instance: medicationrequest-Presc-LEDERFOLINE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-Presc-LEDERFOLINE"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400891463088 "LEDERFOLINE 25MG CPR"
 * subject.reference = "Patient/30003"
@@ -59,9 +60,9 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #15054000
 
 Instance: requestgroup-Presc-METHOTREXATE-LEDERFOLINE
-InstanceOf: FRRequestGroupForPrescription
+InstanceOf: fr-requestgroup-for-prescription
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
+* meta.profile = Canonical(fr-requestgroup-for-prescription)
 * groupIdentifier.value = "Presc-30003"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
 * status = #active

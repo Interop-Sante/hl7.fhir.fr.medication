@@ -1,18 +1,19 @@
 Instance: HAS-20-Presc-Hydrocortisone
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-20-Presc-Hydrocortisone
+* entry.resource = medicationrequest-HAS-20-Presc-Hydrocortisone
 
 Instance: medicationrequest-HAS-20-Presc-Hydrocortisone
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
+* extension[renderedDosageInstruction].valueMarkdown = "20 mg à 8h et 10 mg à 12h"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h"
 * medicationCodeableConcept = $Medicabase#MV00000089 "HYDROCORTISONE 10 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

@@ -1,6 +1,7 @@
 Instance: Disp-EFFERALGAN-presc-DC
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Dispensation complète de Paracétamol sur une prescription d'EFFERALGAN"
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-EFFERALGAN"
 * subject.reference = "Patient/14602"
@@ -8,7 +9,7 @@ Usage: #example
 * authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol1"
 * type = $v3-ActCode#FFC "First Fill - Complete"
 * quantity = 15 '1'
-* daysSupply = 5 'd' "jours"
+* daysSupply = 5 $unitsofmeasure#d "jours"
 * whenPrepared = "2021-07-13T10:37:00Z"
 * whenHandedOver = "2021-07-13T11:16:00Z"
 * dosageInstruction.sequence = 1

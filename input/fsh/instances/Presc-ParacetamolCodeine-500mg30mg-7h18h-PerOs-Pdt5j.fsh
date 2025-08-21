@@ -1,6 +1,7 @@
 Instance: Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-ParacetamolCodeine-500mg30mg
 * entry[+].resource = medicationrequest-Presc-ParacetamolCodeine-500mg30mg
@@ -9,20 +10,22 @@ Instance: medication-Presc-ParacetamolCodeine-500mg30mg
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-Presc-ParacetamolCodeine-500mg30mg"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * code.text = "PARACETAMOL+CODEINE 500mg+30mg"
 * form = $EDQM#10219000 "Comprimé"
 * ingredient[0].itemCodeableConcept = $SMS#100000090270 "paracétamol"
 * ingredient[=].itemCodeableConcept.text = "PARACETAMOL"
-* ingredient[=].strength.numerator = 500 'mg' "mg"
+* ingredient[=].strength.numerator = 500 $unitsofmeasure#mg "mg"
+* ingredient[=].strength.denominator.value = 1
 * ingredient[+].itemCodeableConcept = $SMS#100000079790 "codéine"
 * ingredient[=].itemCodeableConcept.text = "CODEINE"
-* ingredient[=].strength.numerator = 30 'mg' "mg"
+* ingredient[=].strength.numerator = 30 $unitsofmeasure#mg "mg"
+* ingredient[=].strength.denominator.value = 1
 
 Instance: medicationrequest-Presc-ParacetamolCodeine-500mg30mg
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

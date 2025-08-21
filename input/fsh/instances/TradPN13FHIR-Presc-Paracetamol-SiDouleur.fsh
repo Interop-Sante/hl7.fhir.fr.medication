@@ -2,6 +2,7 @@ Instance: TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-prescription-bundle-for-example
 // exemple de traduction de DC-2 
 Usage: #example
+Description: "PARACETAMOL (Voie orale) si douleur:  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13"
 * type = #searchset
 * entry[0].resource = patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 * entry[+].resource = practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur
@@ -14,7 +15,7 @@ Instance: patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Patient
 Usage: #inline
 * id = "patient-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
-* meta.profile[0] = $FrCorePatient
+* meta.profile = $FrCorePatient
 * identifier[0].use = #usual
 * identifier[=].type.coding[0].system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"
 * identifier[=].type.coding[=].code = #INTRN
@@ -32,7 +33,7 @@ Instance: practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Practitioner
 Usage: #inline
 * id = "practitioner-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
-* meta.profile[0] = $FrCorePractitioner
+* meta.profile = $FrCorePractitioner
 * identifier[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[=].type.coding[=].code = #EI
 * identifier[=].system = "https://somehospital.fr/EI"
@@ -48,7 +49,7 @@ Instance: medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"
 
@@ -56,7 +57,7 @@ Instance: observation-1-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Observation
 Usage: #inline
 * id = "observation-1-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
-* meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
+* meta.profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-height"
 * status = #final
 * category.coding[0].code = #vital-signs
 * category.coding[=].system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -73,7 +74,7 @@ Instance: observation-2-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: Observation
 Usage: #inline
 * id = "observation-2-TradPN13FHIR-Presc-Paracetamol-SiDouleur"
-* meta.profile[0] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
+* meta.profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-observation-body-weight"
 * status = #final
 * category.coding[0].code = #vital-signs
 * category.coding[=].system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -89,7 +90,7 @@ Usage: #inline
 Instance: medicationrequest-TradPN13FHIR-Presc-Paracetamol-SiDouleur
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * identifier[0].value = "31626"
 * identifier[=].system = "https://somehospital.fr/PrescrptionLine-ID"
 * status = #active

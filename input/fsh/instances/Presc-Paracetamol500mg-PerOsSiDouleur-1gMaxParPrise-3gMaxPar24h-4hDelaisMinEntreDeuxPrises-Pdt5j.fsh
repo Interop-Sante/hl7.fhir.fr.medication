@@ -1,6 +1,7 @@
 Instance: Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
 * entry[+].resource = medicationrequest-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
@@ -9,14 +10,14 @@ Instance: medication-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"
 
 Instance: medicationrequest-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -37,7 +38,7 @@ Usage: #inline
 * dosageInstruction.asNeededCodeableConcept.text = "Si douleurs"
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.route.text = "Voie orale"
-* dosageInstruction.doseAndRate.doseQuantity = 500 'mg' "mg"
-* dosageInstruction.maxDosePerPeriod.numerator = 3 'g' "g"
-* dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
-* dosageInstruction.maxDosePerAdministration = 1 'g' "g"
+* dosageInstruction.doseAndRate.doseQuantity = 500 $unitsofmeasure#mg "mg"
+* dosageInstruction.maxDosePerPeriod.numerator = 3 $unitsofmeasure#g "g"
+* dosageInstruction.maxDosePerPeriod.denominator = 24 $unitsofmeasure#h "h"
+* dosageInstruction.maxDosePerAdministration = 1 $unitsofmeasure#g "g"

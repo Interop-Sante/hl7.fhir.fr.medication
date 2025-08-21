@@ -1,18 +1,19 @@
 Instance: Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CLARADOL® 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j"
 * type = #searchset
 * entry.resource = medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
 
 Instance: medicationrequest-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400891705256 "CLARADOL 500MG CPR"
-* medicationCodeableConcept.text = "CLARADOL 500 mg, cpr séc"
+* medicationCodeableConcept.text = "CLARADOL® 500 mg, cpr séc"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-08-11T18:21:20.641Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
@@ -37,7 +38,7 @@ Usage: #inline
 * dosageInstruction.maxDosePerPeriod.numerator.unit = "Comprimé"
 * dosageInstruction.maxDosePerPeriod.numerator.system = $EDQM
 * dosageInstruction.maxDosePerPeriod.numerator.code = #15054000
-* dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
+* dosageInstruction.maxDosePerPeriod.denominator = 24 $unitsofmeasure#h "h"
 * dosageInstruction.maxDosePerAdministration.value = 2
 * dosageInstruction.maxDosePerAdministration.unit = "Comprimé"
 * dosageInstruction.maxDosePerAdministration.system = $EDQM

@@ -1,6 +1,7 @@
 Instance: Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j"
 * type = #searchset
 * entry[0].resource = medication-1-Presc-PerfDobutamine-Qsp40mL
 * entry[+].resource = medication-2-Presc-PerfDobutamine-Qsp40mL
@@ -11,40 +12,42 @@ Instance: medication-1-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-1-Presc-PerfDobutamine-Qsp40mL"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000081844 "dobutamine"
 * code.text = "DOBUTAMINE"
-* amount.numerator = 200 'mg' "mg"
+* amount.numerator = 200 $unitsofmeasure#mg "mg"
+* amount.denominator.value = 1
 
 Instance: medication-2-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-2-Presc-PerfDobutamine-Qsp40mL"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000078171 "glucose"
 * code.text = "GLUCOSE"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
 * ingredient.itemCodeableConcept = $SMS#100000078171 "glucose"
 * ingredient.itemCodeableConcept.text = "GLUCOSE"
-* ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 'mL' "mL"
+* ingredient.strength.numerator = 50 $unitsofmeasure#mg "mg"
+* ingredient.strength.denominator = 1 $unitsofmeasure#mL "mL"
 
 Instance: medication-C-Presc-PerfDobutamine-Qsp40mL
 InstanceOf: fr-medication-compound
 Usage: #inline
 * id = "medication-C-Presc-PerfDobutamine-Qsp40mL"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-compound"
+* meta.profile = Canonical(fr-medication-compound)
 * code.text = "Dobutamine 200 mg dans G5 qsp 40 mL"
-* amount.numerator = 40 'ml' "ml"
+* amount.numerator = 40 $unitsofmeasure#ml "ml"
+* amount.denominator.value = 1
 * ingredient[0].itemReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"
 * ingredient[=].itemReference.reference = "#medication-2-Presc-PerfDobutamine-Qsp40mL"
 * ingredient[=].extension[IsVehicle].valueBoolean = true
 
 Instance: medicationrequest-Presc-PerfDobutamine-Qsp40mL
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -60,5 +63,5 @@ Usage: #inline
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.extension[fr-basis-of-dose-component].valueReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 400 'ug' "µg"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'min' "min"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 400 $unitsofmeasure#ug "µg"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 $unitsofmeasure#min "min"

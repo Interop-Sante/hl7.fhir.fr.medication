@@ -1,18 +1,19 @@
 Instance: HAS-14-1-Presc-CODOLIPRANE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-14-1-Presc-CODOLIPRANE
+* entry.resource = medicationrequest-HAS-14-1-Presc-CODOLIPRANE
 
 Instance: medicationrequest-HAS-14-1-Presc-CODOLIPRANE
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
+* extension[renderedDosageInstruction].valueMarkdown = "1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
 * medicationCodeableConcept = $UCD#3400893936047 "CODOLIPRANE 500/30MG CPR"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
@@ -25,10 +26,6 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseRange.low.unit = "comprimé"
 * dosageInstruction.doseAndRate.doseRange.low.system = $EDQM
 * dosageInstruction.doseAndRate.doseRange.low.code = #15054000
-//* dosageInstruction.doseAndRate.doseRange.high.value = 2
-//* dosageInstruction.doseAndRate.doseRange.high.unit = "comprimé"
-//* dosageInstruction.doseAndRate.doseRange.high.system = $EDQM
-//* dosageInstruction.doseAndRate.doseRange.high.code = #15054000
 * dosageInstruction.maxDosePerPeriod.numerator = 8 $EDQM#15054000 "comprimé"
-* dosageInstruction.maxDosePerPeriod.denominator = 24 'h' "h"
+* dosageInstruction.maxDosePerPeriod.denominator = 24 $unitsofmeasure#h "h"
 * dosageInstruction.maxDosePerAdministration = 2 $EDQM#15054000 "comprimé"

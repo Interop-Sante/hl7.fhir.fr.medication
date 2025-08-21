@@ -1,6 +1,7 @@
 Instance: Disp-DOLIPRANE-Refill-presc-DC
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Dispensation complémentaire et partielle de DOLIPRANE sur une prescription de Paracétamol"
 * status = #completed
 * medicationReference.reference = "Medication/InLine-med-DOLIPRANE"
 * subject.reference = "Patient/14602"
@@ -8,7 +9,7 @@ Usage: #example
 * authorizingPrescription.reference = "MedicationRequest/InLine-presc-Paracetamol1"
 * type = $v3-ActCode#RFP "Refill - Part"
 * quantity = 6 '1'
-* daysSupply = 2 'd' "jours"
+* daysSupply = 2 $unitsofmeasure#d "jour"
 * whenPrepared = "2021-07-16T10:10:00Z"
 * whenHandedOver = "2021-07-16T10:24:00Z"
 * dosageInstruction.sequence = 1

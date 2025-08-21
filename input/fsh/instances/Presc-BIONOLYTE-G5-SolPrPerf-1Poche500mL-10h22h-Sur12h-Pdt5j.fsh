@@ -1,6 +1,7 @@
 Instance: Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "BIONOLYTE® G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 * entry[+].resource = medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
@@ -9,31 +10,16 @@ Instance: medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893093542 "BIONOLYTE G5 INJ FPE500ML"
-* code.text = "BIONOLYTE G5, sol pr perf, flac 500 mL"
+* code.text = "BIONOLYTE® G5, sol pr perf, flac 500 mL"
 * form = $EDQM#11210000 "solution pour perfusion"
 * form.text = "solution pour perfusion"
-* ingredient[0].itemCodeableConcept = $SMS#100000078171 "glucose"
-* ingredient[=].itemCodeableConcept.text = "GLUCOSE"
-* ingredient[=].isActive = true
-* ingredient[=].strength.numerator = 50 'mg' "mg"
-* ingredient[=].strength.denominator = $unitsofmeasure#mL "mL"
-* ingredient[+].itemCodeableConcept = $SMS#100000092115 "clhorure de sodium"
-* ingredient[=].itemCodeableConcept.text = "SODIUM CHLORURE"
-* ingredient[=].isActive = true
-* ingredient[=].strength.numerator = 2 'g' "g"
-* ingredient[=].strength.denominator = 1 '1'
-* ingredient[+].itemCodeableConcept = $SMS#100000091807 "chlorure de potassium"
-* ingredient[=].itemCodeableConcept.text = "POTASSIUM CHLORURE"
-* ingredient[=].isActive = true
-* ingredient[=].strength.numerator = 1 'g' "g"
-* ingredient[=].strength.denominator = 1 '1'
 
 Instance: medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] =  "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine

@@ -1,6 +1,7 @@
 Instance: Presc-Nicotine-15mgPar16h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
 * type = #searchset
 * entry[0].resource = medication-Presc-Nicotine-15mgPar16h
 * entry[+].resource = medicationrequest-Presc-Nicotine-15mgPar16h
@@ -9,14 +10,14 @@ Instance: medication-Presc-Nicotine-15mgPar16h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-Nicotine-15mgPar16h"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000079991 "nicotine"
 * code.text = "NICOTINE"
 
 Instance: medicationrequest-Presc-Nicotine-15mgPar16h
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -32,5 +33,5 @@ Usage: #inline
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 15 'mg' "mg"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 16 'h' "h"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 15 $unitsofmeasure#mg "mg"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 16 $unitsofmeasure#h "h"

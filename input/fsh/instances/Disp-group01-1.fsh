@@ -1,6 +1,7 @@
 Instance: Disp-group01-1
 InstanceOf: FRInpatientMedicationDispense
 Usage: #example
+Description: "Délivrance reglobalisée, cumulant 3 dispensations nominatives"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/event-basedOn"
 * extension[=].valueReference.reference = "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/event-basedOn"
@@ -16,6 +17,6 @@ Usage: #example
 * authorizingPrescription[+].reference = "MedicationRequest/InLine-presc-EFFERALGAN2"
 * type = $v3-ActCode#RFP "Refill - Part"
 * quantity = 14 '1'
-* daysSupply = 2 'd' "jours"
+* daysSupply = 2 $unitsofmeasure#d "jours"
 * whenPrepared = "2021-07-16T10:10:00Z"
 * whenHandedOver = "2021-07-16T10:24:00Z"

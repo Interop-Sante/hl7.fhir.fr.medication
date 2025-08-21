@@ -16,4 +16,3 @@ Description: "Le système de codage pour la qualification du périmètre des not
 * #MEDCOM "Commentaire au niveau du médicament prescrit"
 * #LIPRESCCONDAPPL "Conditions d’application de la ligne de prescription"
 * #LIPRESCLIBMED "Libellé textuel du médicament prescrit"
-* #LIPRESCPOS "Libellé textuel de la posologie"

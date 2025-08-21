@@ -1,6 +1,7 @@
 Instance: Presc-Paracetamol-TL6h
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "paracétamol, 500 mg toutes les 6 h per os, pendant 5j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Paracetamol-TL6h
 * entry[+].resource = medicationrequest-Presc-Paracetamol-TL6h
@@ -9,14 +10,14 @@ Instance: medication-Presc-Paracetamol-TL6h
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-Paracetamol-TL6h"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000090270 "paracétamol"
 * code.text = "PARACETAMOL"
 
 Instance: medicationrequest-Presc-Paracetamol-TL6h
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -33,4 +34,4 @@ Usage: #inline
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.route = $EDQM#20053000 "Voie orale"
 * dosageInstruction.route.text = "Voie orale"
-* dosageInstruction.doseAndRate.doseQuantity = 500 'mg' "mg"
+* dosageInstruction.doseAndRate.doseQuantity = 500 $unitsofmeasure#mg "mg"

@@ -1,18 +1,19 @@
 Instance: MultiLine-Presc-Sucralfate-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "Paracetamol 2h après Sucralfate"
 * type = #searchset
 * entry[0].resource = medicationrequest-MultiLine-Presc-Sucralfate
 * entry[+].resource = medicationrequest-MultiLine-Presc-Paracetamol
 * entry[+].resource = requestgroup-Presc-Sucralfate-Paracetamol
 
 Instance: medicationrequest-MultiLine-Presc-Sucralfate
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Sucralfate"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $SMS#100000091545 "sucralfate"
 * subject.reference = "Patient/30004"
@@ -33,12 +34,12 @@ Usage: #inline
 * dosageInstruction.doseAndRate.doseQuantity.code = #g
 
 Instance: medicationrequest-MultiLine-Presc-Paracetamol
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * id = "medicationrequest-MultiLine-Presc-Paracetamol"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
-* intent = #order
+* intent = #option
 * priority = #routine
 * medicationCodeableConcept = $SMS#100000090270 "paracétamol"
 * subject.reference = "Patient/30004"
@@ -67,9 +68,9 @@ Usage: #inline
 * dosageInstruction.maxDosePerPeriod.denominator.code = #d
 
 Instance: requestgroup-Presc-Sucralfate-Paracetamol
-InstanceOf: FRRequestGroupForPrescription
+InstanceOf: fr-requestgroup-for-prescription
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-requestgroup-for-prescription"
+* meta.profile = Canonical(fr-requestgroup-for-prescription)
 * groupIdentifier.value = "Presc-30004"
 * groupIdentifier.system = "https://somehospital.fr/Prescription-ID"
 * status = #active

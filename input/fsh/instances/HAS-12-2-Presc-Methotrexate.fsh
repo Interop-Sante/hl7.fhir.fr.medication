@@ -1,18 +1,19 @@
 Instance: HAS-12-2-Presc-Methotrexate
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-12-2-Presc-Methotrexate
+* entry.resource = medicationrequest-HAS-12-2-Presc-Methotrexate
 
 Instance: medicationrequest-HAS-12-2-Presc-Methotrexate
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
+* extension[renderedDosageInstruction].valueMarkdown = "20 mg, 1 fois par semaine, le mardi"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"
 * medicationCodeableConcept = $Medicabase#MV00003397 "METHOTREXATE 10 mg comprimé"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

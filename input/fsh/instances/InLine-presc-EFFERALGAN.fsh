@@ -1,7 +1,8 @@
 Instance: InLine-Presc-EFFERALGAN
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+Description: "Prescription d'EFFERALGAN® pour exemple de dispensation"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -11,7 +12,6 @@ Usage: #example
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * groupIdentifier.value = "Presc-24624"
 * groupIdentifier.system = "https://somehospital.fr/Prescrption-ID"
-* dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-28T14:52:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-02T14:51:59Z"
 * dosageInstruction.timing.repeat.timeOfDay[0] = "07:00:00"

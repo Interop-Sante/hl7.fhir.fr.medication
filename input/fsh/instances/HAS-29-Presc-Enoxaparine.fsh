@@ -1,6 +1,7 @@
 Instance: HAS-29-Presc-Enoxaparine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible"
 * type = #searchset
 * entry[0].resource = medication-HAS-29-Presc-Enoxaparine
 * entry[+].resource = medicationrequest-HAS-29-Presc-Enoxaparine
@@ -9,24 +10,23 @@ Instance: medication-HAS-29-Presc-Enoxaparine
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-HAS-29-Presc-Enoxaparine"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000090152 "énoxaparine sodique"
 * form = $EDQM#11201000 "Solution injectable"
 * ingredient.itemCodeableConcept = $SMS#100000090152 "énoxaparine sodique"
 * ingredient.strength.numerator.value = 6000
 * ingredient.strength.numerator.unit = "UI"
-* ingredient.strength.numerator.system = $unitsofmeasure
-* ingredient.strength.numerator.code = #[UI]
+* ingredient.strength.denominator.value = 1
 
 Instance: medicationrequest-HAS-29-Presc-Enoxaparine
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
+* extension[renderedDosageInstruction].valueMarkdown = "1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible."
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible."
 * medicationReference.reference = "#medication-HAS-29-Presc-Enoxaparine"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

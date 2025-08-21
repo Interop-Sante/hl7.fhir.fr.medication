@@ -1,6 +1,7 @@
 Instance: Presc-Capecitabine-Dose-Calculee
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j"
 * type = #searchset
 * entry[0].resource = medication-Presc-Capecitabine-Dose-Calculee
 * entry[+].resource = medicationrequest-Presc-Capecitabine-Dose-Calculee
@@ -9,14 +10,14 @@ Instance: medication-Presc-Capecitabine-Dose-Calculee
 InstanceOf: fr-medication-noncompound
 Usage: #inline
 * id = "medication-Presc-Capecitabine-Dose-Calculee"
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-medication-noncompound"
+* meta.profile = Canonical(fr-medication-noncompound)
 * code = $SMS#100000089303 "capécitabine"
 * code.text = "CAPECITABINE"
 
 Instance: medicationrequest-Presc-Capecitabine-Dose-Calculee
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
@@ -34,7 +35,7 @@ Usage: #inline
 * dosageInstruction.route.text = "Voie orale"
 * dosageInstruction.doseAndRate[0].type = $dose-rate-type#calculated "Calculated"
 * dosageInstruction.doseAndRate[=].type.text = "Calculated"
-* dosageInstruction.doseAndRate[=].doseQuantity = 1000 'mg/m2' "mg/m²"
+* dosageInstruction.doseAndRate[=].doseQuantity = 1000 $unitsofmeasure#mg/m2 "mg/m²"
 * dosageInstruction.doseAndRate[+].type = $dose-rate-type#ordered "Ordered"
 * dosageInstruction.doseAndRate[=].type.text = "Ordered"
-* dosageInstruction.doseAndRate[=].doseQuantity = 1800 'mg' "mg"
+* dosageInstruction.doseAndRate[=].doseQuantity = 1800 $unitsofmeasure#mg "mg"

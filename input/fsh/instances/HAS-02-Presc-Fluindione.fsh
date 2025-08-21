@@ -1,18 +1,19 @@
-Instance: HAS-2-Presc-Fluindione
+Instance: HAS-02-Presc-Fluindione
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
+Description: "FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"
 * type = #searchset
-* entry[0].resource = medicationrequest-HAS-2-Presc-Fluindione
+* entry.resource = medicationrequest-HAS-2-Presc-Fluindione
 
 Instance: medicationrequest-HAS-2-Presc-Fluindione
-InstanceOf: FRInpatientMedicationRequest
+InstanceOf: fr-medicationrequest
 Usage: #inline
-* meta.profile[0] = "https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-inpatient-medicationrequest"
+* meta.profile = Canonical(fr-medicationrequest)
+* extension[renderedDosageInstruction].valueMarkdown = "0,5 comprimé par jour"
 * status = #active
 * intent = #order
 * priority = #routine
-* note[0].text = "Prescription textuelle: FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"
-* note[=].extension[noteScope].valueCode = #LIPRESCTXT
+* note.text = "Prescription textuelle: FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"
 * medicationCodeableConcept = $Medicabase#MV00001070 "FLUINDIONE 20 mg comprimé quadrisécable"
 * subject.reference = "Patient/14602"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

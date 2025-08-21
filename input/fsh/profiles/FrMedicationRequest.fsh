@@ -8,6 +8,11 @@ Description: "French medication request profile"
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 
+// Cette extension mimant l'attribut R5 renderedDosageInstruction est rajoutée à ce profil au niveau européen et pourra être supprimée lorsque l'héritage sera établi
+* extension contains $medicationrequest-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
+* extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
+ 
+
 * extension contains fr-treatment-intent named treatmentIntent 0..1
 * extension[treatmentIntent] ^short = "overall treatment intent"
 * extension[treatmentIntent] ^definition = "the overall intention of the treatment"
@@ -29,6 +34,8 @@ Description: "French medication request profile"
 
 * dosageInstruction 1..
 
+// Cet attribut a été interdit pour éviter la difficulté d'avoir à choisir entre patientInstruction et additionalInstruction.
+* dosageInstruction.patientInstruction ..0
 * dosageInstruction.timing.repeat.extension contains fr-additional-when-values named AdditionalWhenValues 0..1
 * dosageInstruction.route from FrRouteOfAdministration (extensible)
 * dosageInstruction.method from FrMethodOfAdministration (extensible)
