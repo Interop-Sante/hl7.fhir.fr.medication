@@ -149,7 +149,7 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
 - CNOP
   - Patrick Mazaud
 - Selic
-  - Erci Dufour
+  - Eric Dufour
 - Ordoclic
   - Maxime Guerreiro
 - Xperis
