@@ -46,7 +46,7 @@ En prescription intrahospitalière, il n'y a généralement pas de consigne de d
 
 #### Précision sur les parties textuelles
 
-Les prescritpions FHIR peuvent contenir plusieurs parties textuelles:
+Les prescriptions FHIR peuvent contenir plusieurs parties textuelles:
 
 - pour indiquer des éléments qui ne peuvent pas être codés
 - pour donner une version "humainement lisible" des éléments codés
