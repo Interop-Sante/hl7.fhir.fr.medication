@@ -8,7 +8,7 @@ Description: "French medication request profile"
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 
-// Cette extension est définie au niveau du profil européen et pourra être supprimée lorsque l'héritage sera établi
+// Cette extension mimant l'attribut R5 renderedDosageInstruction est rajoutée à ce profil au niveau européen et pourra être supprimée lorsque l'héritage sera établi
 * extension contains $medicationrequest-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
 * extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
  
