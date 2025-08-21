@@ -141,7 +141,7 @@ Définit la date/heure de début exprimée par le médecin lors de sa prescripti
 **Date/heure de fin prescrite** de la ligne de prescription (*MedicationRequest*)
 
 Définit la date/heure de fin exprimée par le médecin lors de sa prescription.
-**Note:** Si seule la durée du traitement est exprimé, la date de fin correspond à la durée du traitement après la date de la première prise.
+**Note:** Si seule la durée du traitement est exprimée, la date de fin correspond à la durée du traitement après la date de la première prise.
 
 **La dernière dose prescrite**:
 
