@@ -1,0 +1,111 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Presc-Capecitabine-Dose-Calculee",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"]
+  },
+  "type" : "searchset",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Medication",
+      "id" : "medication-Presc-Capecitabine-Dose-Calculee",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-Presc-Capecitabine-Dose-Calculee\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-Presc-Capecitabine-Dose-Calculee</b></p><a name=\"medication-Presc-Capecitabine-Dose-Calculee\"> </a><a name=\"hcmedication-Presc-Capecitabine-Dose-Calculee\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000089303}\">CAPECITABINE</span></p></div>"
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+          "code" : "100000089303",
+          "display" : "capécitabine"
+        }],
+        "text" : "CAPECITABINE"
+      }
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "medicationrequest-Presc-Capecitabine-Dose-Calculee",
+      "meta" : {
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-Capecitabine-Dose-Calculee\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-Capecitabine-Dose-Calculee</b></p><a name=\"medicationrequest-Presc-Capecitabine-Dose-Calculee\"> </a><a name=\"hcmedicationrequest-Presc-Capecitabine-Dose-Calculee\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-Capecitabine-Dose-Calculee</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-10-15 20:06:12+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14652</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><blockquote><p><b>doseAndRate</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type calculated}\">Calculated</span></p><p><b>dose</b>: 1000 mg/m²<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/m2 = 'mg/m2')</span></p></blockquote><blockquote><p><b>doseAndRate</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></p><p><b>dose</b>: 1800 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></p></blockquote></blockquote></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "priority" : "routine",
+      "medicationReference" : {
+        "reference" : "#medication-Presc-Capecitabine-Dose-Calculee"
+      },
+      "subject" : {
+        "reference" : "Patient/14602"
+      },
+      "authoredOn" : "2021-10-15T20:06:12.345Z",
+      "requester" : {
+        "reference" : "Practitioner/smart-Practitioner-71482713"
+      },
+      "groupIdentifier" : {
+        "system" : "https://somehospital.fr/Prescrption-ID",
+        "value" : "Presc-14652"
+      },
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "boundsPeriod" : {
+              "start" : "2021-10-15T20:06:00Z",
+              "end" : "2021-10-29T20:05:59Z"
+            },
+            "timeOfDay" : ["07:00:00",
+            "18:00:00"]
+          }
+        },
+        "route" : {
+          "coding" : [{
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "20053000",
+            "display" : "Voie orale"
+          }],
+          "text" : "Voie orale"
+        },
+        "doseAndRate" : [{
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+              "code" : "calculated",
+              "display" : "Calculated"
+            }],
+            "text" : "Calculated"
+          },
+          "doseQuantity" : {
+            "value" : 1000,
+            "unit" : "mg/m²",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mg/m2"
+          }
+        },
+        {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+              "code" : "ordered",
+              "display" : "Ordered"
+            }],
+            "text" : "Ordered"
+          },
+          "doseQuantity" : {
+            "value" : 1800,
+            "unit" : "mg",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mg"
+          }
+        }]
+      }]
+    }
+  }]
+}

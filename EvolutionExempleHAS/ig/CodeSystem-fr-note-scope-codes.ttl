@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/CodeSystem/fr-note-scope-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-note-scope-codes"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem fr-note-scope-codes</b></p><a name=\"fr-note-scope-codes\"> </a><a name=\"hcfr-note-scope-codes\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This  code system <code>https://hl7.fr/ig/fhir/medication/CodeSystem/fr-note-scope-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">PRESCCOM<a name=\"fr-note-scope-codes-PRESCCOM\"> </a></td><td>Commentaire au niveau de la prescription</td></tr><tr><td style=\"white-space:nowrap\">LIPRESCTXT<a name=\"fr-note-scope-codes-LIPRESCTXT\"> </a></td><td>Formulation textuelle d'une ligne de prescription par le prescripteur (vs élément .text généré automatiquement)</td></tr><tr><td style=\"white-space:nowrap\">LIPRESCIND<a name=\"fr-note-scope-codes-LIPRESCIND\"> </a></td><td>Indication textuelle au niveau de la ligne de prescription</td></tr><tr><td style=\"white-space:nowrap\">LIPRESCCOMM<a name=\"fr-note-scope-codes-LIPRESCCOMM\"> </a></td><td>Commentaire au niveau de la ligne de prescription</td></tr><tr><td style=\"white-space:nowrap\">LIPRESCRENSCOMP<a name=\"fr-note-scope-codes-LIPRESCRENSCOMP\"> </a></td><td>Renseignement complémentaire textuel</td></tr><tr><td style=\"white-space:nowrap\">MEDIND<a name=\"fr-note-scope-codes-MEDIND\"> </a></td><td>Indication au niveau du médicament prescrit</td></tr><tr><td style=\"white-space:nowrap\">MEDCOM<a name=\"fr-note-scope-codes-MEDCOM\"> </a></td><td>Commentaire au niveau du médicament prescrit</td></tr><tr><td style=\"white-space:nowrap\">LIPRESCCONDAPPL<a name=\"fr-note-scope-codes-LIPRESCCONDAPPL\"> </a></td><td>Conditions d’application de la ligne de prescription</td></tr><tr><td style=\"white-space:nowrap\">LIPRESCLIBMED<a name=\"fr-note-scope-codes-LIPRESCLIBMED\"> </a></td><td>Libellé textuel du médicament prescrit</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-note-scope-codes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrNoteScopeCodes"] ; # 
+  fhir:title [ fhir:v "code system Interop'Santé - Codes pour le périmètre des notes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-09-15T15:37:35+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le système de codage pour la qualification du périmètre des notes en FHIR."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "PRESCCOM" ] ;
+     fhir:display [ fhir:v "Commentaire au niveau de la prescription" ]
+  ] [
+     fhir:code [ fhir:v "LIPRESCTXT" ] ;
+     fhir:display [ fhir:v "Formulation textuelle d'une ligne de prescription par le prescripteur (vs élément .text généré automatiquement)" ]
+  ] [
+     fhir:code [ fhir:v "LIPRESCIND" ] ;
+     fhir:display [ fhir:v "Indication textuelle au niveau de la ligne de prescription" ]
+  ] [
+     fhir:code [ fhir:v "LIPRESCCOMM" ] ;
+     fhir:display [ fhir:v "Commentaire au niveau de la ligne de prescription" ]
+  ] [
+     fhir:code [ fhir:v "LIPRESCRENSCOMP" ] ;
+     fhir:display [ fhir:v "Renseignement complémentaire textuel" ]
+  ] [
+     fhir:code [ fhir:v "MEDIND" ] ;
+     fhir:display [ fhir:v "Indication au niveau du médicament prescrit" ]
+  ] [
+     fhir:code [ fhir:v "MEDCOM" ] ;
+     fhir:display [ fhir:v "Commentaire au niveau du médicament prescrit" ]
+  ] [
+     fhir:code [ fhir:v "LIPRESCCONDAPPL" ] ;
+     fhir:display [ fhir:v "Conditions d’application de la ligne de prescription" ]
+  ] [
+     fhir:code [ fhir:v "LIPRESCLIBMED" ] ;
+     fhir:display [ fhir:v "Libellé textuel du médicament prescrit" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

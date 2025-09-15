@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-presc-Paracetamol2> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "InLine-presc-Paracetamol2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO InLine-presc-Paracetamol2</b></p><a name=\"InLine-presc-Paracetamol2\"> </a><a name=\"hcInLine-presc-Paracetamol2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href=\"Medication-InLine-med-Paracetamol.html\">Medication paracétamol</a></p><p><b>subject</b>: <a href=\"Patient/14603\">Patient/14603</a></p><p><b>authoredOn</b>: 2021-07-14 09:07:28+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <https://hl7.fr/ig/fhir/medication/Medication/InLine-med-Paracetamol> ;
+     fhir:reference [ fhir:v "Medication/InLine-med-Paracetamol" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14603> ;
+     fhir:reference [ fhir:v "Patient/14603" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2021-07-14T09:07:28.914Z"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2021-07-14T09:07:00Z"^^xsd:dateTime ] ;
+           fhir:end [ fhir:v "2021-07-17T09:06:59Z"^^xsd:dateTime ]
+         ] ;
+         fhir:timeOfDay ( [ fhir:v "07:00:00"^^xsd:time ] [ fhir:v "18:00:00"^^xsd:time ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "20053000" ] ;
+         fhir:display [ fhir:v "Voie orale" ]
+       ] ) ;
+       fhir:text [ fhir:v "Voie orale" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ordered" ] ;
+           fhir:display [ fhir:v "Ordered" ]
+         ] ) ;
+         fhir:text [ fhir:v "Ordered" ]
+       ] ;
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

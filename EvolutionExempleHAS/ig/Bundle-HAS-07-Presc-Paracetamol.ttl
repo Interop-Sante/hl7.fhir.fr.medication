@@ -1,0 +1,99 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/HAS-07-Presc-Paracetamol> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HAS-07-Presc-Paracetamol"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-HAS-7-Presc-Paracetamol" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "extensions" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-7-Presc-Paracetamol\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-7-Presc-Paracetamol</b></p><a name=\"medicationrequest-HAS-7-Presc-Paracetamol\"> </a><a name=\"hcmedicationrequest-HAS-7-Presc-Paracetamol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medicationrequest.html\">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)</p>\n</div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://BogusSystemMedicabase.com MV00000557}\">PARACETAMOL 500 mg gélule</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)</p>\n</div></blockquote><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AsNeeded[x]</b></td><td><b>MaxDosePerPeriod</b></td><td><b>MaxDosePerAdministration</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 22253000}\">Si douleurs</span></td><td>4000 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/24 h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeh = 'h')</span></td><td>1000 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:markdown ;
+           fhir:v "Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
+         ]
+       ] ) ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://BogusSystemMedicabase.com"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "MV00000557" ] ;
+           fhir:display [ fhir:v "PARACETAMOL 500 mg gélule" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:note ( [
+         fhir:text [ fhir:v "Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:asNeeded [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a sct:22253000 ;
+             fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "22253000" ] ;
+             fhir:display [ fhir:v "douleur" ]
+           ] ) ;
+           fhir:text [ fhir:v "Si douleurs" ]
+         ] ;
+         fhir:maxDosePerPeriod [
+           fhir:numerator [
+             fhir:value [ fhir:v "4000"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "24"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "h" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "h" ]
+           ]
+         ] ;
+         fhir:maxDosePerAdministration [
+           fhir:value [ fhir:v "1000"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mg" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
