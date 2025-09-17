@@ -23,7 +23,7 @@ La complexité du *médicament prescrit*
   - Ce sont des médicaments fabriqués à la demande
     - par assemblage de médicaments simples
     - spécifiés soit en spécialité soit en DC
-  - Les cas d'usage sont les perfusions ou le seringues électriques
+  - Les cas d'usage sont les perfusions ou les seringues électriques
     - avec un ou plusieurs médicaments
     - dilués dans un soluté.
 - Préparations magistrales et préparations officinales

@@ -7,7 +7,4 @@ Les spécifications sont issues des travaux du groupe de travail Interop'Santé.
 
 - [Vue d'ensemble](prescription-VueEnsemble.html)
 - [Cas d'usage](prescription-CasUsage.html)
-- [Ressources](prescription-Ressources.html)
-- [Implémentation](prescription-Implementation.html)
 - [Exemples](prescription-Exemples.html)
-- [Etude complémentaire](prescription-EtudeComplementaire.html)

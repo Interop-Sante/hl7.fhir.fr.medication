@@ -21,12 +21,12 @@ Alias: $fr-additional-when-codes = https://hl7.fr/fhir/fr/medication/ValueSet/fr
 Alias: $fr-additional-when-values = https://hl7.fr/fhir/fr/medication/StructureDefinition/fr-additional-when-values
 
 // FrCore aliases
-Alias: $FrCoreEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter
-Alias: $FrCorePractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner
-Alias: $FrCorePractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role
-Alias: $FrCorePatient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient
-Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins
-Alias: $FrCoreRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person
+Alias: $FrCoreEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition-fr-core-encounter
+Alias: $FrCorePractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition-fr-core-practitioner
+Alias: $FrCorePractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition-fr-core-practitioner-role
+Alias: $FrCorePatient = https://hl7.fr/ig/fhir/core/StructureDefinition-fr-core-patient
+Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition-fr-core-patient-ins 
+Alias: $FrCoreRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition-fr-core-related-person
 
 // Mapping PN13 aliases
 Alias: $PN13Schema = https://interopsante.org/pn13/xsd

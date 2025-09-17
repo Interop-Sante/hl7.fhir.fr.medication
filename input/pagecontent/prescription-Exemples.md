@@ -217,7 +217,7 @@ Quand elle n'est pas négligeable, sa valeur exprimée **DOIT** figurer au déno
 
 Cf. [Requirements](https://hl7.org/fhir/R4/dosage-definitions.html#Dosage.doseAndRate.rate_x_) de l'élément `MedicationRequest.dosageInstruction.doseAndRate.rateRatio`
 
-Si une durée d'administration n'est pas spécifiée par le prescripteur, cela siginifie qu'elle est négilgeable. Par exemple pour l'administration d'un comprimé ou l'injection direct d'une solution.
+Si une durée d'administration n'est pas spécifiée par le prescripteur, cela signifie qu'elle est négligeable. Par exemple pour l'administration d'un comprimé ou l'injection direct d'une solution.
 
 ##### Cas particuliers
 
@@ -292,7 +292,7 @@ Dans un médicament composé, permet d'exprimer à quel médicament composant, q
 
 Ex: Permet de rapporter l'expression de la quantié 4g de la dose, au médicament céfotaxine du médicament composé céfotaxine dans 100 mL de glucose 5%.
 
-Cette information est portée par l'extension [*FrBasisOfDoseComponent*](Bundle-FrBasisOfDoseComponent.html) de l'élément `doseAndRate` du type complex *Dosage* qui s'applique à l'élément `dosageInstruction`* de la ressource *MedicationRequest*.
+Cette information est portée par l'extension [*FrBasisOfDoseComponent*](StructureDefinition-fr-basis-of-dose-component.html) de l'élément `doseAndRate` du type complex *Dosage* qui s'applique à l'élément `dosageInstruction`* de la ressource *MedicationRequest*.
 
 Voir exemple [céfotaxine dans G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 4j](Bundle-Presc-MiniperfCefotaxime-En20min-Pdt4j.html)
 
@@ -307,7 +307,7 @@ Dans un médicament composé, permet d'exprimer quel composant, quelle ressource
 
 Ex: Permet de marquer le glucose 5% comme étant le soluté dans le médicament composé céfotaxine dans 100 mL de glucose 5%.
 
-Cette information est portée par l'extension [*FrIsVehicle*](StructureDefinition-FrIsVehicle.html).
+Cette information est portée par l'extension [*FrIsVehicle*](StructureDefinition-fr-is-vehicle.html).
 
 Cette extension est appliquée à l'élément `ingredient` de la ressource *Medication* composée.
 
@@ -346,7 +346,7 @@ En R5 l'élément amount est renommé **totalVolume** pour lever toute ambiguit�
 - soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsDuration`si aucune date de début n'est mentionée
 - soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsPeriod.end` si une date de début est mentionnée
 
-#### Patches
+#### Patchs
 
 ##### Propriétés du patch
 
@@ -369,7 +369,7 @@ La durée d'administration du patch est un choix du prescipteur.
 
 Il **DOIT** être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est identique à la durée maximale garantie par le dispositif intégré.
 
-Le guide d'implémentation n'assigne à la durée d'administration, aucune valeur par défaut qui serait particulière aux patches.
+Le guide d'implémentation n'assigne à la durée d'administration, aucune valeur par défaut qui serait particulière aux patchs.
 
 #### Dose calculée / dose prescrite
 

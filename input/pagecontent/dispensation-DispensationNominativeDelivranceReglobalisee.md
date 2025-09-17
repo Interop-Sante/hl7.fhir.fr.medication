@@ -15,7 +15,7 @@ Exemple:
 
 - soit 3 prescriptions
 
-    1. [paracétamol 1 g à 7h, 12h et 18h per os, du 13/07 08:48 au 18/07 08:47 (5j)](MedicationRequest-InLine-presc-Paracetamol.html)
+    1. [paracétamol 1 g à 7h, 12h et 18h per os, du 13/07 08:48 au 18/07 08:47 (5j)](MedicationRequest-InLine-presc-Paracetamol1.html)
     1. [paracétamol 500 mg à 7h et 18 per os, du 14/07 09:07 au 17/07 09:06 (3j)](MedicationRequest-InLine-presc-Paracetamol2.html)
     1. [EFFERALGAN 1000 mg, cpr à 7h, 12h et 18h per os, du 15/07 11:02 au 25/07 11:01 (10j)](MedicationRequest-InLine-presc-EFFERALGAN2.html)
 

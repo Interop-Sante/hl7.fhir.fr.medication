@@ -27,6 +27,8 @@ Description: "French medication request profile"
 
 * encounter only Reference($FrCoreEncounter)
 
+* authoredOn 1..
+
 * requester 1..
 * requester only Reference($FrCorePractitioner)
 * requester ^short = "Who requested the Request"

@@ -14,7 +14,7 @@ Selon qu'un médicament prescrit référencé est un **médicament simple** ou u
   - en spécialité identifié par son **code UCD**. Ex: *EFFERALGAN 1 000 mg, cpr dont le code UCD est 3400893766521*
   - en DC (dénomination commune) identifié par son **code SMS** ou son **code technique ANSM** (dans l'attente de l'attribution d'un code SMS). Ex: *paracétamol dont le code SMS est 100000090270*
   - en MV (médicament virtuel) identifié par son **code Medicabase**. Ex. *BETAMETHASONE 0,05% voie cutanée pom dont le code Medicabase est MV00000063*
-- *FrMedicationCompound*: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: *glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g*.
+- *FrMedicationCompound*: médicament composé de plusieurs médicaments simples exprimés en DC ou en spécialité. Ex: *glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g*.
 
 Dépendance des ressources profilées par Interop'Santé
 
@@ -55,29 +55,29 @@ Les prescriptions FHIR peuvent contenir plusieurs parties textuelles:
 
 Certains éléments de posologie ne peuvent pas être représentés de manière complètement structurée ou doivent obligatoirement être représentés sous forme textuelle. Ces éléments sont renseignés dans un élément `MedicationRequest.dosageInstruction.additionalInstruction.text`. 
 
-*Note 1:* L'élément `MedicationRequest.dosageInstruction.patientInstruction` pourrait également être utilisé pour certaines indications complémentaires pour la posologie. Mais le choix entre `MedicationRequest.dosageInstruction.patientInstruction` et `MedicationRequest.dosageInstruction.additionalInstruction.text` n'est pas toujours évident. Afin de simplifier le profil, il a été décider de n'utiliser que `MedicationRequest.dosageInstruction.additionalInstruction.text` qui peut être multivalué et éventuellement associé à un code. En conséquence, le profil `FrMedicationRequest`interdit l'usage de `MedicationRequest.dosageInstruction.patientInstruction`
+*Note 1:* L'élément `MedicationRequest.dosageInstruction.patientInstruction` pourrait également être utilisé pour certaines indications complémentaires pour la posologie. Mais le choix entre `MedicationRequest.dosageInstruction.patientInstruction` et `MedicationRequest.dosageInstruction.additionalInstruction.text` n'est pas toujours évident. Afin de simplifier le profil, il a été décidé de n'utiliser que `MedicationRequest.dosageInstruction.additionalInstruction.text` qui peut être multivalué et éventuellement associé à un code. En conséquence, le profil `FrMedicationRequest`interdit l'usage de `MedicationRequest.dosageInstruction.patientInstruction`
 
-*Note 2:* Lélement `MedicationRequest.dosageInstruction.additionalInstruction.text` est réservé pour les éléments de posologie qui ont été renseignés "à la main" et ne peuvent pas être représentés de manière structurée. Il ne doit pas être utilisé pour du texte généré automatiquement à partir de données structurées.
+*Note 2:* L'élement `MedicationRequest.dosageInstruction.additionalInstruction.text` est réservé pour les éléments de posologie qui ont été renseignés "à la main" et ne peuvent pas être représentés de manière structurée. Il ne doit pas être utilisé pour du texte généré automatiquement à partir de données structurées.
 
 ***Exemples d'éléments de posologie non structurés***
 
 - indication spécifique de prise.
   - ex: "administrer le contenu avec un peu de compote" [HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)](Bundle-HAS-24-Topiramate.html)
-- moment de prise non codé dans le jeu de valeurs FHIR [event-timing](https://hl7.org/fhir/R4/valueset-event-timing.html) associé à l'élément `MedicationRequest.dosageInstruction.timing.repeat.when`ni dans le jeu de valeurs complémentaire [fr-additional-when-codes](ValueSet-fr-additional-when-codes.html) associé à l'extension [fr-additional-when-values](StructureDefinition-fr-additional-when-values.html)
+- moment de prise non codé dans le jeu de valeurs FHIR [event-timing](https://hl7.org/fhir/R4/valueset-event-timing.html) associé à l'élément `MedicationRequest.dosageInstruction.timing.repeat.when` ni dans le jeu de valeurs complémentaire [fr-additional-when-codes](ValueSet-fr-additional-when-codes.html) associé à l'extension [fr-additional-when-values](StructureDefinition-fr-additional-when-values.html)
   - ex: "à débuter 12 heures avant l'intervention chirurgicale" [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention. (id_poso=28)](Bundle-HAS-28-Presc-Enoxaparine)
 - multiplicité des caractéristiques de moment de prise qui ne peuvent pas être codés dans `MedicationRequest.dosageInstruction.timing.repeat.when` qui est monovalué
   - ex: "matin et soir, au cours ou à la fin des repas​" [HAS - metformine 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)](Bundle-HAS-27-1-Metformine.html)
-- indication de condition de prise qui ne sont pas facilement codables dans l'élément `MedicationRequest.dosageInstruction.asNeededCodeableConcept`
+- indication de condition de prise qui n'est pas facilement codable dans l'élément `MedicationRequest.dosageInstruction.asNeededCodeableConcept`
   - ex: "en fonction de la gène allergique" [HAS - desloratadine 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique (id_poso=13)](Bundle-HAS-13-Presc-Desloratadine.html)
 - contrainte calendaire ne pouvant pas être exprimée en FHIR
   - ex: "le premier jour de chaque mois" [HAS - vitamine D 100 000 UI solution buvable : 1 ampoule, le premier jour de chaque mois (id_poso=11)](Bundle-HAS-11-1-Presc-VitamineD.html)
   - ex: "1er, 8e et 15e jours du cycle" [HAS - EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique (id_poso=11)](Bundle-HAS-11-2-Presc-EVRA.html)
-- les alternances de doses ne pouvant pas être représenté en FHIR
+- l'alternance de doses ne pouvant pas être représentée en FHIR
   - "0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours" [HAS - fluindione 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois (id_poso=23)](Bundle-HAS-23-1-Presc-Fluindione)
 
 ***Spécificité ville***
 
-Dans le cas d'une dose calculée, si elle est fournie en plus de la valeur absolue, la valeur reative (ex. formule de calcul) doit être indiquée textuellement dans `MedicationRequest.doseInstruction.additionalInstruction.text` et non indiquée dans la partie structurée.
+Dans le cas d'une dose calculée, si elle est fournie en plus de la valeur absolue, la valeur relative (ex. formule de calcul) doit être indiquée textuellement dans `MedicationRequest.doseInstruction.additionalInstruction.text` et non indiquée dans la partie structurée.
 
 - ex: "soit 170UI anti-Xa /kg" [HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-Tinzaparine.html)
 
@@ -89,18 +89,18 @@ Afin de permettre l'affichage de la posologie par tous les logiciels, y compris 
 
 **Version textuelle de la prescription**
 
-Même si une version textuelle de la prescription est produite automatiquement dans `MedicationRequest.text`, elle est souvent difficile à comprendre quand on ne maitrise pas FHIR. Une version textuelle de l'ensemble de la ligne de prescription représentée par la ressource `MedicationRequest`peut être renseigné dans l'élément `MedicationRequest.note.text`. Dans l'éventualité où la ressource `MedicationRequest`aurait plusieurs éléments `MedicationRequest.note`il est recommandé d'ajouter le préfixe "Prescription textuelle:" à l'élément `MedicationRequest.note`afin de simplifier la compréhension.
+Même si une version textuelle de la prescription est produite automatiquement dans `MedicationRequest.text`, elle est souvent difficile à comprendre quand on ne maitrise pas FHIR. Une version textuelle de l'ensemble de la ligne de prescription représentée par la ressource `MedicationRequest` peut être renseigné dans l'élément `MedicationRequest.note.text`. Dans l'éventualité où la ressource `MedicationRequest` aurait plusieurs éléments `MedicationRequest.note` il est recommandé d'ajouter le préfixe "Prescription textuelle:" à l'élément `MedicationRequest.note` afin de simplifier la compréhension.
 
 - ex: "PARACETAMOL 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C." [HAS - paracetamol 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C.(id_poso=8)](Bundle-HAS-08-2-Presc-Paracetamol.html)
 
 **Cas particulier de la traduction PN13 en FHIR**
 
-PN13 intègre beaucoup d'éléments textuels qui ne peuvent être indiqués que dans l'élément `MedicationRequest.note`. Afin de permettre de discriminer la portée de chaque note, l'extension [fr-medicationrequest-note-scope](/StructureDefinition-fr-medicationrequest-note-scope.html) a été créée. Elle n'est utilisée que dans le cas de prescription initalement en PN13 retranscrites en FHIR.
+PN13 intègre beaucoup d'éléments textuels qui ne peuvent être indiqués que dans l'élément `MedicationRequest.note`. Afin de permettre de discriminer la portée de chaque note, l'extension [fr-medicationrequest-note-scope](StructureDefinition-fr-medicationrequest-note-scope.html) a été créée. Elle n'est utilisée que dans le cas de prescription initalement en PN13 retranscrites en FHIR.
 
 #### Précisions sur les terminologies utilisables pour les unités
 
 Les deux terminologies utilisables pour représenter les unités d'administration dans les posologies sont UCUM et EDQM.
-Toute unité utilisée pour une posologie qui ne correspond pas à un code natif de ces terminologies ne doit être exprimé que par l'élément `unit` du datatype `Quantity`et des datatypes dérivés, les éléments `code`et `system`ne doivent pas à utiliser.
+Toute unité utilisée pour une posologie qui ne correspond pas à un code natif de ces terminologies ne doit être exprimé que par l'élément `unit` du datatype `Quantity` et des datatypes dérivés, les éléments `code` et `system` ne doivent pas à utiliser.
 
 En particulier, les non unit UCUM (code entre accolades {} ou entre crochets []) ne doivent pas être utilisées.
 
@@ -108,7 +108,7 @@ En particulier, les non unit UCUM (code entre accolades {} ou entre crochets [])
 
 ***Recommandation pour faciliter la dispensation***
 
-Lorsqu'une unités d'administration n'est pas en UCUM et EDQM et qu'il est donc difficile de traduire la prescription en nombre de "boite" de médicament à dispenser, il est recommandé que le prescripteur mette une indication de ce qui doit être dispensé dans une unité "convertible". 
+Lorsqu'une unité d'administration n'est pas en UCUM et EDQM et qu'il est donc difficile de traduire la prescription en nombre de "boite" de médicament à dispenser, il est recommandé que le prescripteur mette une indication de ce qui doit être dispensé dans une unité "convertible". L'extension `prescribedQuantity`, héritée du profil européen, est à utiliser dans ce cas.  
 
 #### Précision sur le rattrapage de dose
 
@@ -156,7 +156,7 @@ La *date/heure de fin d’administration* de la dernière dose (sa date/heure de
 
 **Durée de prescription**:
 
-Elle est liée aux deux paramétres précédents. Quand ces trois paramètres sont exposés à l'utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.
+Elle est liée aux deux paramètres précédents. Quand ces trois paramètres sont exposés à l'utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.
 Pour les prescriptions de médecine de ville ou les prescriptions hospitalières à éxecution en ville, il est possible que seule la durée de prescription soit exprimée les dates de début et fin dépendant de quand le patient se fait délivrer les médicaments.
 
 Les unités UCUM suivantes sont utilisées :
@@ -248,6 +248,7 @@ G5 1L sur 12h, 2 fois par jour (10h, 22h) pendant 5 jours, prescrit à 9h30, à 
 ![DateEffective2](Prescription6.jpg)
 
 Note
+
 Dans cet exemple
 
 - la Date/heure début prescrite est J1 9h30 ;
@@ -280,7 +281,7 @@ Les lignes de prescription correspondant à des médicaments à prendre avec un 
 
 **Alternative entre deux médicaments**
 
-Les lignes de prescription correspondant une alternative sont liées par une ressource `RequestGroup`référençant chaque ligne dans un occurrence de `RequestGroup.action`(via `RequestGroup.action.resource.reference`). L'alternative est représentée par la valeur `ALT` dans l'extension [fr-additional-action-relationship](tructureDefinition-fr-additional-action-relationship.html) au niveau de l'élément `RequestGroup.action.relatedAction`, la valeur de `RequestGroup.action.relatedAction.relationship` étant fixée à `concurrent`. L'action qui porte cette relation référence le médicamnt de "seconde intension" si le premier n'est pas adapté. Les conditions d'utilisation du médicament de "seconde intension" sont à indiquer dans `RequestGroup.action.description`
+Les lignes de prescription correspondant une alternative sont liées par une ressource `RequestGroup`référençant chaque ligne dans un occurrence de `RequestGroup.action`(via `RequestGroup.action.resource.reference`). L'alternative est représentée par la valeur `ALT` dans l'extension [fr-additional-action-relationship](StructureDefinition-fr-additional-action-relationship.html) au niveau de l'élément `RequestGroup.action.relatedAction`, la valeur de `RequestGroup.action.relatedAction.relationship` étant fixée à `concurrent`. L'action qui porte cette relation référence le médicament de "seconde intension" si le premier n'est pas adapté. Les conditions d'utilisation du médicament de "seconde intension" sont à indiquer dans `RequestGroup.action.description`
 
 - ex: [METFORMINE® ou GLICLAZIDE® en cas d’intolérance digestive à la METFORMINE®](Bundle-MultiLine-Presc-METFORMINE-GLICLAZIDE.html)
 
