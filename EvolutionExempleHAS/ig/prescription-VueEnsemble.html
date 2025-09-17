@@ -297,7 +297,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>en MV (médicament virtuel) identifié par son <strong>code Medicabase</strong>. Ex. <em>BETAMETHASONE 0,05% voie cutanée pom dont le code Medicabase est MV00000063</em></li>
     </ul>
   </li>
-  <li><em>FrMedicationCompound</em>: médicament composé de plusieurs médicaments simples exprimées en DC ou en spécialité. Ex: <em>glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g</em>.</li>
+  <li><em>FrMedicationCompound</em>: médicament composé de plusieurs médicaments simples exprimés en DC ou en spécialité. Ex: <em>glucose 5% 1L + sodium chlorure 3g + potassium chlorure 2g, composé de 3 médicaments simples, glucose, sodium chlorure et potassium chlorure, en quantités de 1L, 3g et 2g</em>.</li>
 </ul>
 
 <p>Dépendance des ressources profilées par Interop’Santé</p>
@@ -346,9 +346,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Certains éléments de posologie ne peuvent pas être représentés de manière complètement structurée ou doivent obligatoirement être représentés sous forme textuelle. Ces éléments sont renseignés dans un élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code>.</p>
 
-<p><em>Note 1:</em> L’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.patientInstruction</code> pourrait également être utilisé pour certaines indications complémentaires pour la posologie. Mais le choix entre <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.patientInstruction</code> et <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code> n’est pas toujours évident. Afin de simplifier le profil, il a été décider de n’utiliser que <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code> qui peut être multivalué et éventuellement associé à un code. En conséquence, le profil <code class="language-plaintext highlighter-rouge">FrMedicationRequest</code>interdit l’usage de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.patientInstruction</code></p>
+<p><em>Note 1:</em> L’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.patientInstruction</code> pourrait également être utilisé pour certaines indications complémentaires pour la posologie. Mais le choix entre <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.patientInstruction</code> et <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code> n’est pas toujours évident. Afin de simplifier le profil, il a été décidé de n’utiliser que <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code> qui peut être multivalué et éventuellement associé à un code. En conséquence, le profil <code class="language-plaintext highlighter-rouge">FrMedicationRequest</code>interdit l’usage de <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.patientInstruction</code></p>
 
-<p><em>Note 2:</em> Lélement <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code> est réservé pour les éléments de posologie qui ont été renseignés “à la main” et ne peuvent pas être représentés de manière structurée. Il ne doit pas être utilisé pour du texte généré automatiquement à partir de données structurées.</p>
+<p><em>Note 2:</em> L’élement <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.additionalInstruction.text</code> est réservé pour les éléments de posologie qui ont été renseignés “à la main” et ne peuvent pas être représentés de manière structurée. Il ne doit pas être utilisé pour du texte généré automatiquement à partir de données structurées.</p>
 
 <p><strong><em>Exemples d’éléments de posologie non structurés</em></strong></p>
 
@@ -358,7 +358,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>ex: “administrer le contenu avec un peu de compote” <a href="Bundle-HAS-24-Topiramate.html">HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l’ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)</a></li>
     </ul>
   </li>
-  <li>moment de prise non codé dans le jeu de valeurs FHIR <a href="https://hl7.org/fhir/R4/valueset-event-timing.html">event-timing</a> associé à l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.timing.repeat.when</code>ni dans le jeu de valeurs complémentaire <a href="ValueSet-fr-additional-when-codes.html">fr-additional-when-codes</a> associé à l’extension <a href="StructureDefinition-fr-additional-when-values.html">fr-additional-when-values</a>
+  <li>moment de prise non codé dans le jeu de valeurs FHIR <a href="https://hl7.org/fhir/R4/valueset-event-timing.html">event-timing</a> associé à l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.timing.repeat.when</code> ni dans le jeu de valeurs complémentaire <a href="ValueSet-fr-additional-when-codes.html">fr-additional-when-codes</a> associé à l’extension <a href="StructureDefinition-fr-additional-when-values.html">fr-additional-when-values</a>
     <ul>
       <li><a name="l930">​</a>ex: “à débuter 12 heures avant l’intervention chirurgicale” <a href="Bundle-HAS-28-Presc-Enoxaparine">HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l’intervention chirurgicale. à poursuivre pendant 10 jours après l’intervention. (id_poso=28)</a></li>
     </ul>
@@ -368,7 +368,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>ex: “matin et soir, au cours ou à la fin des repas​” <a href="Bundle-HAS-27-1-Metformine.html">HAS - metformine 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)</a></li>
     </ul>
   </li>
-  <li>indication de condition de prise qui ne sont pas facilement codables dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.asNeededCodeableConcept</code>
+  <li>indication de condition de prise qui n’est pas facilement codable dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.asNeededCodeableConcept</code>
     <ul>
       <li>ex: “en fonction de la gène allergique” <a href="Bundle-HAS-13-Presc-Desloratadine.html">HAS - desloratadine 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique (id_poso=13)</a></li>
     </ul>
@@ -379,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>ex: “1er, 8e et 15e jours du cycle” <a href="Bundle-HAS-11-2-Presc-EVRA.html">HAS - EVRA&reg; 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique (id_poso=11)</a></li>
     </ul>
   </li>
-  <li>les alternances de doses ne pouvant pas être représenté en FHIR
+  <li>l’alternance de doses ne pouvant pas être représentée en FHIR
     <ul>
       <li><a name="l985">​</a>“0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours” <a href="Bundle-HAS-23-1-Presc-Fluindione">HAS - fluindione 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois (id_poso=23)</a></li>
     </ul>
@@ -388,7 +388,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong><em>Spécificité ville</em></strong></p>
 
-<p>Dans le cas d’une dose calculée, si elle est fournie en plus de la valeur absolue, la valeur reative (ex. formule de calcul) doit être indiquée textuellement dans <code class="language-plaintext highlighter-rouge">MedicationRequest.doseInstruction.additionalInstruction.text</code> et non indiquée dans la partie structurée.</p>
+<p>Dans le cas d’une dose calculée, si elle est fournie en plus de la valeur absolue, la valeur relative (ex. formule de calcul) doit être indiquée textuellement dans <code class="language-plaintext highlighter-rouge">MedicationRequest.doseInstruction.additionalInstruction.text</code> et non indiquée dans la partie structurée.</p>
 
 <ul>
   <li>ex: “soit 170UI anti-Xa /kg” <a href="Bundle-HAS-03-Presc-Tinzaparine.html">HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)</a></li>
@@ -404,7 +404,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Version textuelle de la prescription</strong></p>
 
-<p>Même si une version textuelle de la prescription est produite automatiquement dans <code class="language-plaintext highlighter-rouge">MedicationRequest.text</code>, elle est souvent difficile à comprendre quand on ne maitrise pas FHIR. Une version textuelle de l’ensemble de la ligne de prescription représentée par la ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code>peut être renseigné dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.note.text</code>. Dans l’éventualité où la ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code>aurait plusieurs éléments <code class="language-plaintext highlighter-rouge">MedicationRequest.note</code>il est recommandé d’ajouter le préfixe “Prescription textuelle:” à l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.note</code>afin de simplifier la compréhension.</p>
+<p>Même si une version textuelle de la prescription est produite automatiquement dans <code class="language-plaintext highlighter-rouge">MedicationRequest.text</code>, elle est souvent difficile à comprendre quand on ne maitrise pas FHIR. Une version textuelle de l’ensemble de la ligne de prescription représentée par la ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code> peut être renseigné dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.note.text</code>. Dans l’éventualité où la ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code> aurait plusieurs éléments <code class="language-plaintext highlighter-rouge">MedicationRequest.note</code> il est recommandé d’ajouter le préfixe “Prescription textuelle:” à l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.note</code> afin de simplifier la compréhension.</p>
 
 <ul>
   <li>ex: “PARACETAMOL 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C.” <a href="Bundle-HAS-08-2-Presc-Paracetamol.html">HAS - paracetamol 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C.(id_poso=8)</a></li>
@@ -412,12 +412,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Cas particulier de la traduction PN13 en FHIR</strong></p>
 
-<p>PN13 intègre beaucoup d’éléments textuels qui ne peuvent être indiqués que dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.note</code>. Afin de permettre de discriminer la portée de chaque note, l’extension <a href="/StructureDefinition-fr-medicationrequest-note-scope.html">fr-medicationrequest-note-scope</a> a été créée. Elle n’est utilisée que dans le cas de prescription initalement en PN13 retranscrites en FHIR.</p>
+<p>PN13 intègre beaucoup d’éléments textuels qui ne peuvent être indiqués que dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.note</code>. Afin de permettre de discriminer la portée de chaque note, l’extension <a href="StructureDefinition-fr-medicationrequest-note-scope.html">fr-medicationrequest-note-scope</a> a été créée. Elle n’est utilisée que dans le cas de prescription initalement en PN13 retranscrites en FHIR.</p>
 
 <h4 id="précisions-sur-les-terminologies-utilisables-pour-les-unités">Précisions sur les terminologies utilisables pour les unités</h4>
 
 <p>Les deux terminologies utilisables pour représenter les unités d’administration dans les posologies sont UCUM et EDQM.
-Toute unité utilisée pour une posologie qui ne correspond pas à un code natif de ces terminologies ne doit être exprimé que par l’élément <code class="language-plaintext highlighter-rouge">unit</code> du datatype <code class="language-plaintext highlighter-rouge">Quantity</code>et des datatypes dérivés, les éléments <code class="language-plaintext highlighter-rouge">code</code>et <code class="language-plaintext highlighter-rouge">system</code>ne doivent pas à utiliser.</p>
+Toute unité utilisée pour une posologie qui ne correspond pas à un code natif de ces terminologies ne doit être exprimé que par l’élément <code class="language-plaintext highlighter-rouge">unit</code> du datatype <code class="language-plaintext highlighter-rouge">Quantity</code> et des datatypes dérivés, les éléments <code class="language-plaintext highlighter-rouge">code</code> et <code class="language-plaintext highlighter-rouge">system</code> ne doivent pas à utiliser.</p>
 
 <p>En particulier, les non unit UCUM (code entre accolades {} ou entre crochets []) ne doivent pas être utilisées.</p>
 
@@ -427,7 +427,7 @@ Toute unité utilisée pour une posologie qui ne correspond pas à un code natif
 
 <p><strong><em>Recommandation pour faciliter la dispensation</em></strong></p>
 
-<p>Lorsqu’une unités d’administration n’est pas en UCUM et EDQM et qu’il est donc difficile de traduire la prescription en nombre de “boite” de médicament à dispenser, il est recommandé que le prescripteur mette une indication de ce qui doit être dispensé dans une unité “convertible”.</p>
+<p>Lorsqu’une unité d’administration n’est pas en UCUM et EDQM et qu’il est donc difficile de traduire la prescription en nombre de “boite” de médicament à dispenser, il est recommandé que le prescripteur mette une indication de ce qui doit être dispensé dans une unité “convertible”. L’extension <code class="language-plaintext highlighter-rouge">prescribedQuantity</code>, héritée du profil européen, est à utiliser dans ce cas.</p>
 
 <h4 id="précision-sur-le-rattrapage-de-dose">Précision sur le rattrapage de dose</h4>
 
@@ -493,7 +493,7 @@ Toute unité utilisée pour une posologie qui ne correspond pas à un code natif
 
 <p><strong>Durée de prescription</strong>:</p>
 
-<p>Elle est liée aux deux paramétres précédents. Quand ces trois paramètres sont exposés à l’utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.
+<p>Elle est liée aux deux paramètres précédents. Quand ces trois paramètres sont exposés à l’utilisateur pour saisie, en général il en fixe deux et le troisième est calculé.
 Pour les prescriptions de médecine de ville ou les prescriptions hospitalières à éxecution en ville, il est possible que seule la durée de prescription soit exprimée les dates de début et fin dépendant de quand le patient se fait délivrer les médicaments.</p>
 
 <p>Les unités UCUM suivantes sont utilisées :</p>
@@ -609,8 +609,9 @@ Dans la <a href="https://hl7.org/fhir/medicationrequest.html">R5</a>, un éléme
 G5 1L sur 12h, 2 fois par jour (10h, 22h) pendant 5 jours, prescrit à 9h30, à partir de maintenant (9h30), donc 1ère dose à 10h.
 <img src="Prescription6.jpg" alt="DateEffective2"/></p>
 
-<p>Note
-Dans cet exemple</p>
+<p>Note</p>
+
+<p>Dans cet exemple</p>
 
 <ul>
   <li>la Date/heure début prescrite est J1 9h30 ;</li>
@@ -650,7 +651,7 @@ L’utilisation de la ressource <code class="language-plaintext highlighter-roug
 
 <p><strong>Alternative entre deux médicaments</strong></p>
 
-<p><a name="l1767">​</a>Les lignes de prescription correspondant une alternative sont liées par une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>référençant chaque ligne dans un occurrence de <code class="language-plaintext highlighter-rouge">RequestGroup.action</code>(via <code class="language-plaintext highlighter-rouge">RequestGroup.action.resource.reference</code>). L’alternative est représentée par la valeur <code class="language-plaintext highlighter-rouge">ALT</code> dans l’extension <a href="tructureDefinition-fr-additional-action-relationship.html">fr-additional-action-relationship</a> au niveau de l’élément <code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction</code>, la valeur de <code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction.relationship</code> étant fixée à <code class="language-plaintext highlighter-rouge">concurrent</code>. L’action qui porte cette relation référence le médicamnt de “seconde intension” si le premier n’est pas adapté. Les conditions d’utilisation du médicament de “seconde intension” sont à indiquer dans <code class="language-plaintext highlighter-rouge">RequestGroup.action.description</code></p>
+<p>Les lignes de prescription correspondant une alternative sont liées par une ressource <code class="language-plaintext highlighter-rouge">RequestGroup</code>référençant chaque ligne dans un occurrence de <code class="language-plaintext highlighter-rouge">RequestGroup.action</code>(via <code class="language-plaintext highlighter-rouge">RequestGroup.action.resource.reference</code>). L’alternative est représentée par la valeur <code class="language-plaintext highlighter-rouge">ALT</code> dans l’extension <a href="StructureDefinition-fr-additional-action-relationship.html">fr-additional-action-relationship</a> au niveau de l’élément <code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction</code>, la valeur de <code class="language-plaintext highlighter-rouge">RequestGroup.action.relatedAction.relationship</code> étant fixée à <code class="language-plaintext highlighter-rouge">concurrent</code>. L’action qui porte cette relation référence le médicament de “seconde intension” si le premier n’est pas adapté. Les conditions d’utilisation du médicament de “seconde intension” sont à indiquer dans <code class="language-plaintext highlighter-rouge">RequestGroup.action.description</code></p>
 
 <ul>
   <li>ex: <a href="Bundle-MultiLine-Presc-METFORMINE-GLICLAZIDE.html">METFORMINE&reg; ou GLICLAZIDE&reg; en cas d’intolérance digestive à la METFORMINE&reg;</a></li>
@@ -697,7 +698,7 @@ L’utilisation de la ressource <code class="language-plaintext highlighter-roug
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 15, 2025 15:38+0000">2025-09-15</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 17, 2025 08:53+0000">2025-09-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
