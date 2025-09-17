@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: DIAZEPAM 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation​"
 * medicationCodeableConcept = $Medicabase#MV00000531 "DIAZEPAM 10 mg (VALIUM) Comprimé bisécable"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 6

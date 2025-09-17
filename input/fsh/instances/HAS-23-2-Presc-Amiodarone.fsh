@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: AMIODARONE 200 mg comprimé: 1 comprimé pendant 5 jours (du lundi au vendredi), et puis arrêt 2 jours (samedi, dimanche). Recommencer le cycle de 7 jours, à répéter sur le mois."
 * medicationCodeableConcept = $Medicabase#MV00002542 "AMIODARONE 200 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.duration = 1
 * dosageInstruction.timing.repeat.durationUnit = #mo

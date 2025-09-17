@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: BEPANTHEN®5% crème : 1 application, 2 fois par jour, en couche mince"
 * medicationCodeableConcept = $UCD#3400892402086 "BEPANTHEN 5% CR TB100G"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "en couche mince"
 * dosageInstruction.timing.repeat.frequency = 2

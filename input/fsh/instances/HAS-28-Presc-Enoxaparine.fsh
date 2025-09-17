@@ -32,6 +32,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."
 * medicationReference.reference = "#medication-HAS-28-Presc-Enoxaparine"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction[0].sequence = 1
 * dosageInstruction[=].additionalInstruction.text = "à débuter 12 heures avant l'intervention chirurgicale"

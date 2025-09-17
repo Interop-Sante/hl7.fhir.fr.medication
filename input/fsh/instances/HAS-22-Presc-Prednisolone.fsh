@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution"
 * medicationCodeableConcept = $Medicabase#MV00002248 "PREDNISOLONE 20 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction[0].sequence = 1
 * dosageInstruction[=].additionalInstruction.text = "Jusqu'à obtenir 3 bandelettes urinaires négatives"

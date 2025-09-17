@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: METFORMINE 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas​"
 * medicationCodeableConcept = $Medicabase#MV00002702 "Metformine embonate 700 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "au cours ou à la fin du repas"
 * dosageInstruction.timing.repeat.when[0] = #MORN

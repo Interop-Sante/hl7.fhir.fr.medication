@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"
 * medicationCodeableConcept = $UCD#3400893936047 "CODOLIPRANE 500/30MG CPR"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.asNeededCodeableConcept = $sct#22253000 "douleur"
 * dosageInstruction.asNeededCodeableConcept.text = "Si douleurs"

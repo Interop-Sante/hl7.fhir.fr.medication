@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: TOPIRAMATE 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote."
 * medicationCodeableConcept = $Medicabase#MV00002365 "TOPIRAMATE 15 mg gélule"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote."
 * dosageInstruction.timing.repeat.frequency = 1

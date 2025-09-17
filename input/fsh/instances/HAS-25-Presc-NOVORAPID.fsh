@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: NOVORAPID Flexpen® 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L​"
 * medicationCodeableConcept = $UCD#3400892402437 "NOVORAPID FLEXPEN STYLO3ML"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction[0].additionalInstruction.text = "Si glycémie entre 1,5 et 2 g/L"
 * dosageInstruction[=].timing.repeat.when = #AC

@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"
 * medicationCodeableConcept = $Medicabase#MV00003397 "METHOTREXATE 10 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1

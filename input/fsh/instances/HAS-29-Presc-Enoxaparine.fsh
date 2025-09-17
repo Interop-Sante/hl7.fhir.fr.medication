@@ -29,6 +29,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible."
 * medicationReference.reference = "#medication-HAS-29-Presc-Enoxaparine"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "jusqu’à ce que l’INR soit dans la zone thérapeutique cible."
 * dosageInstruction.timing.repeat.frequency = 1

@@ -23,6 +23,7 @@ Avec un maximum de 6 comprimés par jour.
 QSP 6 mois"
 * medicationCodeableConcept = $Medicabase#MV00000089 "HYDROCORTISONE 10 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction[0].timing.repeat.boundsDuration = 1 $unitsofmeasure#mo "mois"
 * dosageInstruction[=].timing.repeat.when[0] = #MORN

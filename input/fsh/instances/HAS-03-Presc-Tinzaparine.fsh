@@ -32,6 +32,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée"
 * medicationReference.reference = "#medication-HAS-3-Presc-Tinzaparine"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "soit 170UI anti-Xa /kg"
 * dosageInstruction.timing.repeat.frequency = 1

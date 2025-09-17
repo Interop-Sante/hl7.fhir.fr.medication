@@ -15,6 +15,7 @@ Usage: #inline
 * priority = #routine
 * medicationCodeableConcept = $UCD#3400891479287 "DAFALGAN CODEINE CPR"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.identifier.value = "899999999999"
 * requester.identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 * note.text = "Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES"
