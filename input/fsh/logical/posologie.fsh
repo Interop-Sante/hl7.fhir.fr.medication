@@ -22,8 +22,17 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * dose[x] ^example[1].valueRange.high.code = #15054000
 
 
-  * rate[x] 0..1 Ratio or Quantity or Range "Période temporelle pendant laquelle une dose définie est administrée (pendant 1 heure, entre 5 et 10 minutes)"
-  * rate[x] ^example[0].label = "- pendant 1 heure, entre 5 et 10 minutes"
+  * rate[x] 0..1 Ratio or Quantity or Range "Période temporelle pendant laquelle une dose définie est administrée, typiquement pour les perfusions ou les patchs"
+  * rate[x] ^example[0].label = "- 15mg pendant 16h heure (patch)"
+  * rate[x] ^example[0].valueRatio.numerator.value = 15
+  * rate[x] ^example[0].valueRatio.numerator.unit = "mg"
+  * rate[x] ^example[0].valueRatio.numerator.system = "http://unitsofmeasure.org"
+  * rate[x] ^example[0].valueRatio.numerator.code = #mg
+  
+  * rate[x] ^example[0].valueRatio.denominator.value = 16
+  * rate[x] ^example[0].valueRatio.denominator.unit = "h"
+  * rate[x] ^example[0].valueRatio.denominator.system = "http://unitsofmeasure.org"
+  * rate[x] ^example[0].valueRatio.denominator.code = #h
 
 * sequence 0..1 decimal "Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
 
