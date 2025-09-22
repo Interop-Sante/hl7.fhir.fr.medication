@@ -1,0 +1,2731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.fr.medication"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.medication</b></p><a name="hl7.fhir.fr.medication"> </a><a name="hchl7.fhir.fr.medication"> </a><h2>MED</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>
+  </text>
+  <url value="https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication"/>
+  <version value="0.1.0"/>
+  <name value="MED"/>
+  <title value="Guide d'implémentation du médicament"/>
+  <status value="draft"/>
+  <date value="2025-09-22T14:56:04+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.fr.medication"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="6.5.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_fr_core">
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <packageId value="hl7.fhir.fr.core"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../expansion-params.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://hl7.fr/ig/fhir/medication/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../expansion-params.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://hl7.fr/ig/fhir/medication/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-additional-action-relationship"/>
+      </reference>
+      <name value="Additional relatedAction relationship"/>
+      <description value="Extension to specify relationship between action in a RequestGroup"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-additional-when-values"/>
+      </reference>
+      <name value="Additional values for when element"/>
+      <description value="Additional values for Timing.repeat.when"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-additional-when-codes"/>
+      </reference>
+      <name value="code system Interop'Santé - Codes additionnels pour l'élément when"/>
+      <description value="Le système de codage pour des périodes d'occurrence qui ne sont pas définies dans FHIR."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-note-scope-codes"/>
+      </reference>
+      <name value="code system Interop'Santé - Codes pour le périmètre des notes"/>
+      <description value="Le système de codage pour la qualification du périmètre des notes en FHIR."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-uf-role-codes"/>
+      </reference>
+      <name value="code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient"/>
+      <description value="Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-medication-reconciliation-discrepancy"/>
+      </reference>
+      <name value="code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT"/>
+      <description value="Le système de codage de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-medication-reconciliation-outcome"/>
+      </reference>
+      <name value="code system Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT"/>
+      <description value="Le système de codage de la gravité de l'erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-medication-history-source-type"/>
+      </reference>
+      <name value="code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux"/>
+      <description value="Le système de codage des sources d'un Bilan Médicamenteux."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-medication-reconciliation-resolution"/>
+      </reference>
+      <name value="code system Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"/>
+      <description value="Le système de codage de la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-medication-reconciliation-status"/>
+      </reference>
+      <name value="code system Interop'Santé - Statut d'une ligne de traitement d'une FCT"/>
+      <description value="Le système de codage du statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-editorial-status"/>
+      </reference>
+      <name value="code system Interop'Santé - Statut éditorial d'une valeur"/>
+      <description value="Le système de codage du statut éditorial d'une valeur."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-medication-reconciliation-type"/>
+      </reference>
+      <name value="code system Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT"/>
+      <description value="Le système de codage du type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-document-type"/>
+      </reference>
+      <name value="code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy"/>
+      <description value="Le système de codage SIPh du type de document d'une ressource *Composition* du domaine Pharmacy"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-gender-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 FHIR des code de sexe administratif"/>
+      <description value="ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationrequest-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour la ligne de prescription d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'une ligne de prescription d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-dosageinstruction-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour la posologie d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'une posologie d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-patient-id-seul-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour le patient d'une prescription de médicaments avec uniquement un identifiant fourni"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR du patient d'une prescritpion de médicament avec uniquement un identifiant fourni"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-practitioner-identite-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec d'autres éléments qu'uniquement l'identifiant"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-practitioner-id-seul-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec uniquement un identifiant fourni"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-observation-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour les renseignements complémentaires d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un renseignement complémentare d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationcomp-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament composé d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-medicationnoncompound-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un médicament non composé d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un médicament non composé d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un patient avec INS qualifiée d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-patient-sans-INS-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un patient sans INS qualifiée d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un patient sans INS qualifiée d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-prescmed-encounter-conceptmap"/>
+      </reference>
+      <name value="Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments"/>
+      <description value="ConceptMap pour la conversion PN13 vers FHIR d'un séjour d'une prescritpion de médicament"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"/>
+      </reference>
+      <name value="Disp-DOLIPRANE-Refill-Compl-presc-DC"/>
+      <description value="Prescription complémentaire et finale de DOLIPRANE sur une prescription de Paracétamol"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"/>
+      </reference>
+      <name value="Disp-DOLIPRANE-Refill-presc-DC"/>
+      <description value="Dispensation complémentaire et partielle de DOLIPRANE sur une prescription de Paracétamol"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-DOLIPRANE-Refill-Substit"/>
+      </reference>
+      <name value="Disp-DOLIPRANE-Refill-Substit"/>
+      <description value="Dispensation complémentaire et partielle de DOLIPRANE sur une prescription d'EFFERALGAN"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-EFFERALGAN"/>
+      </reference>
+      <name value="Disp-EFFERALGAN"/>
+      <description value="Dispensation complète d'EFFERALGANT sur une prescription d'EFFERALGAN"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-EFFERALGAN-presc-DC"/>
+      </reference>
+      <name value="Disp-EFFERALGAN-presc-DC"/>
+      <description value="Dispensation complète de Paracétamol sur une prescription d'EFFERALGAN"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-group01-1"/>
+      </reference>
+      <name value="Disp-group01-1"/>
+      <description value="Délivrance reglobalisée, cumulant 3 dispensations nominatives"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/Disp-group01-2"/>
+      </reference>
+      <name value="Disp-group01-2"/>
+      <description value="Délivrance reglobalisée, cumulant 3 dispensations nominatives - Option 2"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-current-medication-composition"/>
+      </reference>
+      <name value="FR Current Medication Composition"/>
+      <description value="Profil de la ressource Composition du traitement médicamenteux courant."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-current-medication-medicationstatement"/>
+      </reference>
+      <name value="FR Current Medication MedicationStatement"/>
+      <description value="Profil de la ressource *MedicationStatement* du traitement médicamenteux courant.&#xA;Current Medication MedicationStatement resource profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-inpatient-medication-dispense"/>
+      </reference>
+      <name value="FR Inpatient MedicationDispense"/>
+      <description value="French medication dispense profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-inpatient-medicationrequest"/>
+      </reference>
+      <name value="FR Inpatient MedicationRequest"/>
+      <description value="French inpatient medication request profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication"/>
+      </reference>
+      <name value="FR Medication"/>
+      <description value="profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp'Santé"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-compound"/>
+      </reference>
+      <name value="FR Medication Compound"/>
+      <description value="A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-history-composition"/>
+      </reference>
+      <name value="FR Medication History Composition"/>
+      <description value="Profil de la ressource Composition du Bilan Médicamenteux.&#xA;Medication Assessment Composition resource profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-history-medicationstatement"/>
+      </reference>
+      <name value="FR Medication History MedicationStatement"/>
+      <description value="Profil de la ressource *MedicationStatement* du Bilan médicamenteux.&#xA;Medication History MedicationStatement resource profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-noncompound"/>
+      </reference>
+      <name value="FR Medication Non Compound"/>
+      <description value="Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-reconciliation-composition"/>
+      </reference>
+      <name value="FR Medication Reconciliation Composition"/>
+      <description value="Profil de la ressource *Composition* la Fiche de Conciliation des Traitements médicamenteux (FCT)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-reconciliation-statement"/>
+      </reference>
+      <name value="FR Medication Reconciliation MedicationStatement"/>
+      <description value="Profil de la ressource *MedicationStatement* référencée dans la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medicationrequest"/>
+      </reference>
+      <name value="FR Medication Request"/>
+      <description value="French medication request profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-virtual"/>
+      </reference>
+      <name value="FR Medication Virtual"/>
+      <description value="Virtual medication composed of one to many substances."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-mp-substance"/>
+      </reference>
+      <name value="FR Meditinal Product Substance"/>
+      <description value="code for the medicinal product substance"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-observation-for-prescription"/>
+      </reference>
+      <name value="FR Observation For Prescription"/>
+      <description value="Observation provided as context of the prescription (ex. weight, height...)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-on-admission-medication-composition"/>
+      </reference>
+      <name value="FR On Admission Medication Composition"/>
+      <description value="Profil de la ressource *Composition* du traitement médicamenteux prescrit à l'admission."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-on-admission-retroactive-reconciliation-composition"/>
+      </reference>
+      <name value="FR On Admission Retroactive Reconciliation Composition"/>
+      <description value="Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-prescription-bundle-for-example"/>
+      </reference>
+      <name value="FR Prescription Bundle For Example"/>
+      <description value="Profil de la ressource Bundle pour la constitution d'exemples de prescription."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-requestgroup-for-prescription"/>
+      </reference>
+      <name value="FR RequestGroup For Prescription"/>
+      <description value="RequestGroup for expressing links between lines of a prescription"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-mp-dose-form"/>
+      </reference>
+      <name value="French Medicinal product Dose form"/>
+      <description value="Le jeu de valeurs à utiliser pour coder l'élément *doseForm* des ressources *FrMedication*."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/FrMethodOfAdministration"/>
+      </reference>
+      <name value="French Method Of Administration"/>
+      <description value="Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FRMedicationRequest*."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-treatment-intent"/>
+      </reference>
+      <name value="French overall intention of the treatment"/>
+      <description value="Le jeu de valeurs à utiliser pour coder l'élément *treatmentIntent* de la ressource *FRInpatientMedicationRequest*."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-route-of-administration"/>
+      </reference>
+      <name value="French Route of Administration"/>
+      <description value="Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.route* de la ressource *FRMedicationRequest*."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medication-history-sources"/>
+      </reference>
+      <name value="FRMedicationHistorySources"/>
+      <description value="Sources des lignes du Bilan Médicamenteux que représente la ressource *Composition* ou de chacune de ses lignes que représente la ressource *MedicationStatement* référencée par l'élément *entry* de la ressource *Composition* (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medicationstatement-reconciliation-properties"/>
+      </reference>
+      <name value="FRMedicationStatementReconciliationProperties"/>
+      <description value="Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-01-Presc-Pantoprazole-DC"/>
+      </reference>
+      <name value="HAS-01-Presc-Pantoprazole-DC"/>
+      <description value="PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en DC"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-01-Presc-Pantoprazole-MV"/>
+      </reference>
+      <name value="HAS-01-Presc-Pantoprazole-MV"/>
+      <description value="PANTOPRAZOLE 40 mg comprimé: 40 mg le soir en MV"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-02-Presc-Fluindione"/>
+      </reference>
+      <name value="HAS-02-Presc-Fluindione"/>
+      <description value="FLUINDIONE 20 mg comprimé : 0,5 comprimé par jour"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-03-Presc-Tinzaparine"/>
+      </reference>
+      <name value="HAS-03-Presc-Tinzaparine"/>
+      <description value="TINZAPARINE SODIQUE 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-04-1-Presc-Paracetamol"/>
+      </reference>
+      <name value="HAS-04-1-Presc-Paracetamol"/>
+      <description value="PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-04-2-Presc-DAFALGANCODEINE"/>
+      </reference>
+      <name value="HAS-04-2-Presc-DAFALGANCODEINE"/>
+      <description value="DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-05-1-Presc-Fluindione"/>
+      </reference>
+      <name value="HAS-05-1-Presc-Fluindione"/>
+      <description value="FLUINDIONE 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé)"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-05-2-Presc-ACTISKENAN"/>
+      </reference>
+      <name value="HAS-05-2-Presc-ACTISKENAN"/>
+      <description value="ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-06-1-Presc-Methotrexate"/>
+      </reference>
+      <name value="HAS-06-1-Presc-Methotrexate"/>
+      <description value="METHOTREXATE 10 mg comprimé (sécable) : 2 comprimés, 1 fois par semaine, le mardi"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-06-2-Presc-Methotrexate"/>
+      </reference>
+      <name value="HAS-06-2-Presc-Methotrexate"/>
+      <description value="METHOTREXATE 10 mg comprimé (sécable) : 20 mg, 1 fois par semaine, le mardi"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-07-Presc-Paracetamol"/>
+      </reference>
+      <name value="HAS-07-Presc-Paracetamol"/>
+      <description value="PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-08-1-Presc-Betamethasone"/>
+      </reference>
+      <name value="HAS-08-1-Presc-Betamethasone"/>
+      <description value="BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-08-2-Presc-Paracetamol"/>
+      </reference>
+      <name value="HAS-08-2-Presc-Paracetamol"/>
+      <description value="PARACETAMOL 24 mg/mL (DOLIPRANE 2.4%), susp buv, flac 100 mL : 1 dose correspondant à la graduation de 7 kg, toutes les 6 heures - Si température supérieure ou égale à 38,5°C."/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-09-Presc-Ropinirole"/>
+      </reference>
+      <name value="HAS-09-Presc-Ropinirole"/>
+      <description value="ROPINIROLE comprimé 1mg : 1 comprimé à 7h, 12h 18h"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-10-Presc-Methotrexate"/>
+      </reference>
+      <name value="HAS-10-Presc-Methotrexate"/>
+      <description value="METHOTREXATE 10 mg comprimé : 1 comprimé 1 fois par semaine, le mardi"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-11-1-Presc-VitamineD"/>
+      </reference>
+      <name value="HAS-11-1-Presc-VitamineD"/>
+      <description value="VITAMINE D 100 000 UI solution buvable : 1 ampoule, le premier jour de chaque mois"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-11-2-Presc-EVRA"/>
+      </reference>
+      <name value="HAS-11-2-Presc-EVRA"/>
+      <description value="EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-12-1-Presc-BEPANTHEN"/>
+      </reference>
+      <name value="HAS-12-1-Presc-BEPANTHEN"/>
+      <description value="BEPANTHEN®5% crème : 1 application, 2 fois par jour, en couche mince"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-12-2-Presc-Methotrexate"/>
+      </reference>
+      <name value="HAS-12-2-Presc-Methotrexate"/>
+      <description value="METHOTREXATE cp 10 mg :  20 mg, 1 fois par semaine, le mardi"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-12-3-Presc-Enoxaparine"/>
+      </reference>
+      <name value="HAS-12-3-Presc-Enoxaparine"/>
+      <description value="ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-13-Presc-Desloratadine"/>
+      </reference>
+      <name value="HAS-13-Presc-Desloratadine"/>
+      <description value="DESLORATADINE 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-14-1-Presc-CODOLIPRANE"/>
+      </reference>
+      <name value="HAS-14-1-Presc-CODOLIPRANE"/>
+      <description value="CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-14-2-Presc-Betamethasone"/>
+      </reference>
+      <name value="HAS-14-2-Presc-Betamethasone"/>
+      <description value="BETHAMETHASONE 0,05% - 1 à 2 applications par jour en couche mince et uniforme sur la zone à traiter. Ne pas dépasser 2 applications par jour"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-15-Presc-Morphine"/>
+      </reference>
+      <name value="HAS-15-Presc-Morphine"/>
+      <description value="MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-16-Presc-Racecadotril"/>
+      </reference>
+      <name value="HAS-16-Presc-Racecadotril"/>
+      <description value="RACECADOTRIL 100 mg gélule: 1 gélule 3 fois par jour au début de chaque repas. A poursuivre tant que la diarrhée persiste avec un maximum de 7 jours"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-17-Presc-Budesonide"/>
+      </reference>
+      <name value="HAS-17-Presc-Budesonide"/>
+      <description value="Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-18-Presc-Budesonide-MV"/>
+      </reference>
+      <name value="HAS-18-Presc-Budesonide-MV"/>
+      <description value="Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h jusqu'au 16/03/2023"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-19-Presc-Paracetamol"/>
+      </reference>
+      <name value="HAS-19-Presc-Paracetamol"/>
+      <description value="PARACETAMOL 1000 mg comprimé: 1 comprimé,  3 prises par jour, espacés d’au moins 4 heures"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-20-Presc-Hydrocortisone"/>
+      </reference>
+      <name value="HAS-20-Presc-Hydrocortisone"/>
+      <description value="HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-21-Presc-Prednisolone"/>
+      </reference>
+      <name value="HAS-21-Presc-Prednisolone"/>
+      <description value="PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-22-Presc-Prednisolone"/>
+      </reference>
+      <name value="HAS-22-Presc-Prednisolone"/>
+      <description value="PREDNISOLONE 20 mg comprimé (sécable) : 60 mg jusqu'à obtenir 3 bandelettes urinaires négatives, puis 50 mg pendant 1 semaine, puis 40 mg pendant 1 semaine, puis 30 mg pendant 1 semaine, puis 20 mg pendant 1 semaine, puis 10 mg pendant 1 semaine, puis revoir pour l'arrêt selon évolution"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-23-1-Presc-Fluindione"/>
+      </reference>
+      <name value="HAS-23-1-Presc-Fluindione"/>
+      <description value="FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-23-2-Presc-Amiodarone"/>
+      </reference>
+      <name value="HAS-23-2-Presc-Amiodarone"/>
+      <description value="AMIODARONE 200 mg comprimé: 1 comprimé pendant 5 jours (du lundi au vendredi), et puis arrêt 2 jours (samedi, dimanche). Recommencer le cycle de 7 jours, à répéter sur le mois"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-24-Topiramate"/>
+      </reference>
+      <name value="HAS-24-Topiramate"/>
+      <description value="TOPIRAMATE 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-25-NOVORAPID"/>
+      </reference>
+      <name value="HAS-25-NOVORAPID"/>
+      <description value="NOVORAPID Flexpen® 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-26-Diazepam"/>
+      </reference>
+      <name value="HAS-26-Diazepam"/>
+      <description value="DIAZEPAM 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-27-1-Metformine"/>
+      </reference>
+      <name value="HAS-27-1-Metformine"/>
+      <description value="METFORMINE 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-27-2-Rifampicine"/>
+      </reference>
+      <name value="HAS-27-2-Rifampicine"/>
+      <description value="RIFAMPICINE 300 mg en gélule 2 gélules le matin 30 minutes avant le petit-déjeuner"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-28-Presc-Enoxaparine"/>
+      </reference>
+      <name value="HAS-28-Presc-Enoxaparine"/>
+      <description value="ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-29-Presc-Enoxaparine"/>
+      </reference>
+      <name value="HAS-29-Presc-Enoxaparine"/>
+      <description value="ENOXAPARINE sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-30-1-Presc-Hydrocortisone"/>
+      </reference>
+      <name value="HAS-30-1-Presc-Hydrocortisone"/>
+      <description value="HYDROCORTISONE 10 mg : 1 comprimé matin et 1 comprimé midi &#xA;En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h.&#xA;Avec un maximum de 6 comprimés par jour."/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HAS-30-2-Presc-Cetirizine"/>
+      </reference>
+      <name value="HAS-30-2-Presc-Cetirizine"/>
+      <description value="CETIRIZINE 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire)"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/InLine-DOLIPRANE"/>
+      </reference>
+      <name value="InLine-DOLIPRANE"/>
+      <description value="Medication DOLIPRANE® pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/InLine-med-EFFERALGAN"/>
+      </reference>
+      <name value="InLine-med-EFFERALGAN"/>
+      <description value="Medication EFFERALGAN® pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/InLine-med-Paracetamol"/>
+      </reference>
+      <name value="InLine-med-Paracetamol"/>
+      <description value="Medication Paracétamol pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Group"/>
+      </extension>
+      <reference>
+        <reference value="Group/InLine-patient-group-01"/>
+      </reference>
+      <name value="InLine-patient-group-01"/>
+      <description value="Groupe de patient pour exemple de délivrance reglobalisée"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/InLine-Presc-EFFERALGAN"/>
+      </reference>
+      <name value="InLine-Presc-EFFERALGAN"/>
+      <description value="Prescription d'EFFERALGAN® pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/InLine-presc-EFFERALGAN2"/>
+      </reference>
+      <name value="InLine-presc-EFFERALGAN2"/>
+      <description value="Prescription d'EFFERALGAN® pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/InLine-presc-Paracetamol1"/>
+      </reference>
+      <name value="InLine-presc-Paracetamol1"/>
+      <description value="Prescription de Paracétamol pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/InLine-presc-Paracetamol2"/>
+      </reference>
+      <name value="InLine-presc-Paracetamol2"/>
+      <description value="Prescription de Paracétamol pour exemple de dispensation"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/fr-additional-action-relationship-type"/>
+      </reference>
+      <name value="Interop'Santé code system - Additional codes for relationship between action"/>
+      <description value="Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-additional-action-relationship-type-value-set"/>
+      </reference>
+      <name value="Interop'Santé value set - Additional codes for relationship between action"/>
+      <description value="Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-ligne-prescription"/>
+      </reference>
+      <name value="Ligne de prescription"/>
+      <description value="Structuration d'une ligne de prescription [WIP - à compléter]."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-FreeSetCIODC-Forme-ConceptMap"/>
+      </reference>
+      <name value="Mapping Free Set CIO-DC FORME"/>
+      <description value="Conversion des codes CIO de forme de médicament en codes des terminologies EQDM Standard Terms et SNOMED-CT"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-FreeSetCIODC-Unite-ConceptMap"/>
+      </reference>
+      <name value="Mapping Free Set CIO-DC UNITE"/>
+      <description value="Conversion des codes CIO d'unité d'administration de médicaments en codes du référentiel UCUM et du référentiel EDQM"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PN13-FHIR-FreeSetCIODC-Voie-ConceptMap"/>
+      </reference>
+      <name value="Mapping Free Set CIO-DC VOIE"/>
+      <description value="Conversion des codes CIO de voie d'administration des médicaments en codes des terminologies EQDM Standard Terms et SNOMED-CT"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-basis-of-dose-component"/>
+      </reference>
+      <name value="Medication component Basis of dose"/>
+      <description value="When the medication element of the resource in which a dose applies is compound, this extension references the Medication resource component of the medication element which is the Basis of the dose quantity or volume."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-is-vehicle"/>
+      </reference>
+      <name value="Medication component which is the vehicle of the compound Medication"/>
+      <description value="Medication component which is the vehicle of the compound Medication"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-drug-characteristic"/>
+      </reference>
+      <name value="Medication descriptive properties"/>
+      <description value="Specifies descriptive properties of the medicine"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-ingredient-strength-codes"/>
+      </reference>
+      <name value="MedicationIngredientStrengthCodes"/>
+      <description value="Medication Ingredient Strength Codes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-treatment-intent"/>
+      </reference>
+      <name value="MedicationRequest overall treatment intent"/>
+      <description value="The overall intention of the treatment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medication-ingredient-strength-codes"/>
+      </reference>
+      <name value="Medication_Ingredient_Strength_Codes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE"/>
+      </reference>
+      <name value="MultiLine-Presc-METFORMINE-GLICLAZIDE"/>
+      <description value="METFORMINE® ou GLICLAZIDE® en cas d'intolérance digestive à la METFORMINE"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/MultiLine-Presc-METHOTREXATE-LEDERFOLINE"/>
+      </reference>
+      <name value="MultiLine-Presc-METHOTREXATE-LEDERFOLINE"/>
+      <description value="METHOTREX® et LEDERFOLINE® à prendre en même temps"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/MultiLine-Presc-Sucralfate-Paracetamol"/>
+      </reference>
+      <name value="MultiLine-Presc-Sucralfate-Paracetamol"/>
+      <description value="Paracetamol 2h après Sucralfate"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-posologie"/>
+      </reference>
+      <name value="Posologie"/>
+      <description value="Structuration d'une posologie en fonction des critères de la HAS. Cette structuration prend en compte le modèle de donnée [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Betamethasone-ApplCut"/>
+      </reference>
+      <name value="Presc-Betamethasone-ApplCut"/>
+      <description value="bêtaméthasone 0.05%, 1 application cutanée à 8h, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-BISOPROLOL-SANDOZ-DosesRationnelles"/>
+      </reference>
+      <name value="Presc-BISOPROLOL-SANDOZ-DosesRationnelles"/>
+      <description value="BISOPROLOL® 7.5 mg SANDOZ, 1/3cpr à 7h et 2/3 à 18h per os, pendant 1 semaine"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Capecitabine-Dose-Calculee"/>
+      </reference>
+      <name value="Presc-Capecitabine-Dose-Calculee"/>
+      <description value="capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-CLARADOL-DoseDiffParHoraire"/>
+      </reference>
+      <name value="Presc-CLARADOL-DoseDiffParHoraire"/>
+      <description value="CLARADOL® 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin"/>
+      </reference>
+      <name value="Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin"/>
+      <description value="CLARADOL® 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-CLARADOL-TL6h-MedCodeableConcept"/>
+      </reference>
+      <name value="Presc-CLARADOL-TL6h-MedCodeableConcept"/>
+      <description value="CLARADOL® 500 mg, 1 cpr toutes les 6h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-CLARADOL-TLMardisVendredis"/>
+      </reference>
+      <name value="Presc-CLARADOL-TLMardisVendredis"/>
+      <description value="CLARADOL® 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-CODOLIPRANE-MedCodeableConcept"/>
+      </reference>
+      <name value="Presc-CODOLIPRANE-MedCodeableConcept"/>
+      <description value="CODOLIPRANE® 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-DIPROSONE-AppCut"/>
+      </reference>
+      <name value="Presc-DIPROSONE-AppCut"/>
+      <description value="DIPROSONE® 0.05%, 1 application cutanée à 8h, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-DOLIPRANE-20DoseParKG"/>
+      </reference>
+      <name value="Presc-DOLIPRANE-20DoseParKG"/>
+      <description value="DOLIPRANE® 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-EFFERALGAN"/>
+      </reference>
+      <name value="Presc-EFFERALGAN"/>
+      <description value="EFFERALGAN® 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Fentanyl-patch72h-TL3j"/>
+      </reference>
+      <name value="Presc-Fentanyl-patch72h-TL3j"/>
+      <description value="fentanyl 75 µg/h, patch 72h, 1 à 7h, tous les 3j, pendant 8j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-MATRIFEN-patch-TL72h"/>
+      </reference>
+      <name value="Presc-MATRIFEN-patch-TL72h"/>
+      <description value="MATRIFEN® 75 µg/h, patch, 1 à 7h, toutes les 72h, pendant 8j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Methylpredinosolone-DosesEvolutives"/>
+      </reference>
+      <name value="Presc-Methylpredinosolone-DosesEvolutives"/>
+      <description value="méthylpredinosolone, 6 mg pendant 2j, puis 4 mg pendant 2j, puis 2 mg pendant 2j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-MiniperfCefotaxime-En20min-Pdt3j"/>
+      </reference>
+      <name value="Presc-MiniperfCefotaxime-En20min-Pdt3j"/>
+      <description value="céfotaxine dans miniperf G5 100 mL, 4g céfotaxine en 20 min toutes les 6h pendant 3j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-MiniperfCefotaxime-En20min-Pdt4j"/>
+      </reference>
+      <name value="Presc-MiniperfCefotaxime-En20min-Pdt4j"/>
+      <description value="céfotaxine dans G5 100 mL, 4g (céfotaxine) en 20 min toutes les 6h pendant 4j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-MV-PerfGl-NaCl-KCl"/>
+      </reference>
+      <name value="Presc-MV-PerfGl-NaCl-KCl"/>
+      <description value="MV - glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-NICOREETESKIN-patch"/>
+      </reference>
+      <name value="Presc-NICOREETESKIN-patch"/>
+      <description value="NICOREETESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Nicotine-15mgPar16h"/>
+      </reference>
+      <name value="Presc-Nicotine-15mgPar16h"/>
+      <description value="nicotine 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Paracetamol"/>
+      </reference>
+      <name value="Presc-Paracetamol"/>
+      <description value="paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Paracetamol-DoseEvolutive"/>
+      </reference>
+      <name value="Presc-Paracetamol-DoseEvolutive"/>
+      <description value="paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin"/>
+      </reference>
+      <name value="Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin"/>
+      <description value="paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-Paracetamol-TL6h"/>
+      </reference>
+      <name value="Presc-Paracetamol-TL6h"/>
+      <description value="paracétamol, 500 mg toutes les 6 h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-ParacetamolCodeine-500mg30mg"/>
+      </reference>
+      <name value="Presc-ParacetamolCodeine-500mg30mg"/>
+      <description value="paracétamol+codéine 500 mg+30 mg, 1 à 7h et 18h per os, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-PerfDobutamine-Qsp40mL"/>
+      </reference>
+      <name value="Presc-PerfDobutamine-Qsp40mL"/>
+      <description value="dobutamine 200 mg dans soluté=G5 qsp 40 mL, 400 µg/min pendant 1j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-PerfGl-NaCl-KCl-1l"/>
+      </reference>
+      <name value="Presc-PerfGl-NaCl-KCl-1l"/>
+      <description value="Perfusion Glucose 5% 1L avec Sodium chlorure 3g et Potassium chlorure 2g, à 10h et 22h sur 12h, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-PerfGl-NaCl-KCl-500ml"/>
+      </reference>
+      <name value="Presc-PerfGl-NaCl-KCl-500ml"/>
+      <description value="Perfusion Glucose 5% 500 mL avec Sodium chlorure 2g et Potassium chlorure 1g, à 10h et 22h sur 12h, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"/>
+      </reference>
+      <name value="Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"/>
+      <description value="BIONOLYTE® G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrRangeMedication"/>
+      </reference>
+      <name value="Range with UCUM or EDQM codes if code is used"/>
+      <description value="Range with low and high unit UCUM or EDQM codes if code is used"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrRatioMedication"/>
+      </reference>
+      <name value="Ratio with UCUM or EDQM codes if code is used"/>
+      <description value="Ratio with numerator and denominator unit UCUM or EDQM encoded if code is used"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-medicationrequest-note-scope"/>
+      </reference>
+      <name value="Scope for note element in MedicationRequest"/>
+      <description value="Scope of a note associated in a MedicationRequest resource"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrSimpleQuantityMedication"/>
+      </reference>
+      <name value="SimpleQuantity with UCUM or EDQM codes or code not used"/>
+      <description value="simple quantity datatype requiring a UCUM or EDQM code or no code (only unti)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-strength-codeableconcept"/>
+      </reference>
+      <name value="Strength CodeableConcept"/>
+      <description value="Additional non unit value for strength"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE"/>
+      </reference>
+      <name value="TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE"/>
+      <description value="METFORMINE® ou GLICLAZIDE® en cas d'intolérance digestive à la METFORMINE - Traduction de PN13"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-Presc-DOLIPRANE"/>
+      </reference>
+      <name value="TradPN13FHIR-Presc-DOLIPRANE"/>
+      <description value="DOLIPRANE® 1000mg 3x/j pdt 2j - Traduction de PN13 sans interpretation du code de fréquence"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-Presc-DOLIPRANE-Interpret"/>
+      </reference>
+      <name value="TradPN13FHIR-Presc-DOLIPRANE-Interpret"/>
+      <description value="DOLIPRANE® 1000mg 3x/j pdt 2j - Traduction de PN13 en interprétant le code de fréquence"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-Presc-Morphine-PCA"/>
+      </reference>
+      <name value="TradPN13FHIR-Presc-Morphine-PCA"/>
+      <description value="PCA Morphine 120 mg/24h Bolus 10 mg Période refractaire 2h -- À partir du 07/05/2025 à 17:30 jusqu'au 11/05/2025 à 17h30 - Traduction de PN13"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-Presc-Paracetamol"/>
+      </reference>
+      <name value="TradPN13FHIR-Presc-Paracetamol"/>
+      <description value="PARACETAMOL MYLAN CONSEIL 1000 MG, COMPRIME  (Voie orale) - Si douleur :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-Presc-Paracetamol-SiDouleur"/>
+      </reference>
+      <name value="TradPN13FHIR-Presc-Paracetamol-SiDouleur"/>
+      <description value="PARACETAMOL (Voie orale) si douleur:  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours - Traduction de PN13"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/TradPN13FHIR-Presc-perfusion-6-composants"/>
+      </reference>
+      <name value="TradPN13FHIR-Presc-perfusion-6-composants"/>
+      <description value="Perf  6composants en UCD en continu sur 12h00 par jour - Traduction de PN13"/>
+      <exampleCanonical value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-uf-role"/>
+      </reference>
+      <name value="UF Role"/>
+      <description value="Caracterization of the role of a functionnal unit for the patient encounter"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-additional-when-codes"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes additionnels pour l'élément when"/>
+      <description value="Le jeu de valeurs à utiliser pour coder des périodes d'occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-code"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes identifiant les médicaments"/>
+      <description value="Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-substance-code"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes identifiant les substances"/>
+      <description value="Le jeu de valeurs à utiliser pour indiquer un ingrédient composant un médicament dans Medication.ingredient.itemCodeableConcept.coding.code"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-note-scope-codes-vs"/>
+      </reference>
+      <name value="value set Interop'Santé - Codes pour le périmètre des notes"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le périmètre des notes par exemple lors de la transformation de message PN13 en ressources FHIR"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-reconciliation-outcome"/>
+      </reference>
+      <name value="value set Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT"/>
+      <description value="Le jeu de valeurs à utiliser pour coder la gravité de l'erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-reconciliation-qualified-discrepancy"/>
+      </reference>
+      <name value="value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT"/>
+      <description value="Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-reconciliation-resolution"/>
+      </reference>
+      <name value="value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT"/>
+      <description value="Un jeu de valeurs à utiliser pour coder la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-reconciliation-status"/>
+      </reference>
+      <name value="value set Interop'Santé - Statut d'une ligne de traitement d'une FCT"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le statut d'une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-editorial-status"/>
+      </reference>
+      <name value="value set Interop'Santé - Statut éditorial d'une valeur"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le statut éditorial d'une valeur."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-reconciliation-type"/>
+      </reference>
+      <name value="value set Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le type d'écart/erreur sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-current-medication-document-type"/>
+      </reference>
+      <name value="value set Interop'Santé - type de document de la ressource Composition d'une FCT"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une liste des Traitements Médicamenteux Courants."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-reconciliation-document-type"/>
+      </reference>
+      <name value="value set Interop'Santé - type de document de la ressource Composition d'une FCT"/>
+      <description value="Le jeu de valeurs à utiliser pour coder le type de document de la ressource *Composition* d'une FCT (Fiche de Conciliation des Traitements médicamenteux)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-uf-role-code-for-prescription"/>
+      </reference>
+      <name value="value set Interop'Santé - Types de rôle d’une UF par rapport à un séjour patient dans une prescription"/>
+      <description value="Le jeu de valeurs à utiliser dans l'extension pour indiquer le type d'UF référencée dans Medication.supportingInfo"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-medication-history-source-type"/>
+      </reference>
+      <name value="value set SIPh - Nature des sources d'un Bilan Médicamenteux"/>
+      <description value="Un jeu de valeurs à utiliser pour coder les sources d'un Bilan Médicamenteux."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Accueil"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conciliation-Intro.html"/>
+        </extension>
+        <nameUrl value="conciliation-Intro.html"/>
+        <title value="La conciliation - Introduction"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conciliation-VueEnsemble.html"/>
+        </extension>
+        <nameUrl value="conciliation-VueEnsemble.html"/>
+        <title value="La conciliation - Vue d'ensemble"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conciliation-CasUsage.html"/>
+        </extension>
+        <nameUrl value="conciliation-CasUsage.html"/>
+        <title value="La conciliation - Cas d'usage"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conciliation-Implementation.html"/>
+        </extension>
+        <nameUrl value="conciliation-Implementation.html"/>
+        <title value="La conciliation - Implémentation"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conciliation-Exemples.html"/>
+        </extension>
+        <nameUrl value="conciliation-Exemples.html"/>
+        <title value="La conciliation - Exemples"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="prescription-Intro.html"/>
+        </extension>
+        <nameUrl value="prescription-Intro.html"/>
+        <title value="La prescription - Introduction"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="prescription-VueEnsemble.html"/>
+        </extension>
+        <nameUrl value="prescription-VueEnsemble.html"/>
+        <title value="La prescription - Vue d'ensemble"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="prescription-CasUsage.html"/>
+        </extension>
+        <nameUrl value="prescription-CasUsage.html"/>
+        <title value="La prescription - Cas d'usage"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="prescription-Exemples.html"/>
+        </extension>
+        <nameUrl value="prescription-Exemples.html"/>
+        <title value="La prescription - Exemples"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dispensation-Intro.html"/>
+        </extension>
+        <nameUrl value="dispensation-Intro.html"/>
+        <title value="La dispensation - Introduction"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dispensation-RessourceMedicationDispense.html"/>
+        </extension>
+        <nameUrl value="dispensation-RessourceMedicationDispense.html"/>
+        <title value="La dispensation - Ressource MedicationDispense"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dispensation-DelivrancePlusSimple.html"/>
+        </extension>
+        <nameUrl value="dispensation-DelivrancePlusSimple.html"/>
+        <title value="La dispensation - La délivrance la plus simple"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dispensation-DispensationNominativeDelivranceReglobalisee.html"/>
+        </extension>
+        <nameUrl value="dispensation-DispensationNominativeDelivranceReglobalisee.html"/>
+        <title value="La dispensation - La dispensation nominative à délivrance reglobalisée"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dispensation-Discussion.html"/>
+        </extension>
+        <nameUrl value="dispensation-Discussion.html"/>
+        <title value="La dispensation - Discussion"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="transformationPN13-FHIR-Intro.html"/>
+        </extension>
+        <nameUrl value="transformationPN13-FHIR-Intro.html"/>
+        <title value="Transformation de PN13 en FHIR"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="transformation-PN13-vers-FHIR.html"/>
+        </extension>
+        <nameUrl value="transformation-PN13-vers-FHIR.html"/>
+        <title value="Transformation de PN13 vers FHIR"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="transformation-FHIR-vers-PN13.html"/>
+        </extension>
+        <nameUrl value="transformation-FHIR-vers-PN13.html"/>
+        <title value="Transformation de FHIR vers PN13"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-exemples-intro.html"/>
+        </extension>
+        <nameUrl value="PN13-exemples-intro.html"/>
+        <title value="Exemples PN13 - Introduction"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-DC.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-DC.html"/>
+        <title value="Prescription PN13 médicament simple en DC"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-specialite.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-specialite.html"/>
+        <title value="Prescription PN13 médicament simple en spécialité"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-compound.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-compound.html"/>
+        <title value="Prescription PN13 médicament composite"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="PN13-prescription-MV.html"/>
+        </extension>
+        <nameUrl value="PN13-prescription-MV.html"/>
+        <title value="Prescription PN13 médicament virtuel"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="Téléchargements et usages"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="suivitravaux.html"/>
+        </extension>
+        <nameUrl value="suivitravaux.html"/>
+        <title value="Historique des travaux"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <Medication>
+        <id value="medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"> </a><p class="res-header-id"><b>Narratif généré : Médication medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h</b></p><a name="medication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"> </a><a name="hcmedication-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-medication-noncompound.html">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title="Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893093542}">BIONOLYTE® G5, sol pr perf, flac 500 mL</span></p><p><b>form</b>: <span title="Codes:{http://standardterms.edqm.eu 11210000}">solution pour perfusion</span></p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://data.esante.gouv.fr/ansm/medicament/UCD"/>
+            <code value="3400893093542"/>
+            <display value="BIONOLYTE G5 INJ FPE500ML"/>
+          </coding>
+          <text value="BIONOLYTE® G5, sol pr perf, flac 500 mL"/>
+        </code>
+        <form>
+          <coding>
+            <system value="http://standardterms.edqm.eu"/>
+            <code value="11210000"/>
+            <display value="solution pour perfusion"/>
+          </coding>
+          <text value="solution pour perfusion"/>
+        </form>
+      </Medication>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"> </a><p class="res-header-id"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h</b></p><a name="medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"> </a><a name="hcmedicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-medicationrequest.html">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h</code></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-29 17:29:27+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-71482713">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14630</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20045000}">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Rate[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}">Ordered</span></td><td>1 flacon<span style="background: LightGoldenRodYellow"> (Details: standardterms.edqm.eu  code15009000 = 'Bottle')</span>/12 h<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeh = 'h')</span></td></tr></table></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <medicationReference>
+          <reference value="#medicationrequest-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <authoredOn value="2021-07-29T17:29:27.603Z"/>
+        <requester>
+          <reference value="Practitioner/smart-Practitioner-71482713"/>
+        </requester>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-14630"/>
+        </groupIdentifier>
+        <dosageInstruction>
+          <sequence value="1"/>
+          <timing>
+            <repeat>
+              <boundsPeriod>
+                <start value="2021-07-29T17:29:00Z"/>
+                <end value="2021-08-03T17:28:59Z"/>
+              </boundsPeriod>
+              <timeOfDay value="10:00:00"/>
+              <timeOfDay value="22:00:00"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20045000"/>
+              <display value="Voie intraveineuse"/>
+            </coding>
+            <text value="Voie intraveineuse"/>
+          </route>
+          <doseAndRate>
+            <type>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                <code value="ordered"/>
+                <display value="Ordered"/>
+              </coding>
+              <text value="Ordered"/>
+            </type>
+            <rateRatio>
+              <numerator>
+                <value value="1"/>
+                <unit value="flacon"/>
+                <system value="http://standardterms.edqm.eu"/>
+                <code value="15009000"/>
+              </numerator>
+              <denominator>
+                <value value="12"/>
+                <unit value="h"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="h"/>
+              </denominator>
+            </rateRatio>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+</Bundle>

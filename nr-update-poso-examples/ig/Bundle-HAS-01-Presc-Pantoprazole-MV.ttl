@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Bundle/HAS-01-Presc-Pantoprazole-MV> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HAS-01-Presc-Pantoprazole-MV"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:MedicationRequest ;
+       fhir:id [ fhir:v "medicationrequest-HAS-1-Presc-Pantoprazole-MV" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest>
+         ] )
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "extensions" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-1-Presc-Pantoprazole-MV\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-1-Presc-Pantoprazole-MV</b></p><a name=\"medicationrequest-HAS-1-Presc-Pantoprazole-MV\"> </a><a name=\"hcmedicationrequest-HAS-1-Presc-Pantoprazole-MV\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medicationrequest.html\">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>40 mg le soir</p>\n</div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://BogusSystemMedicabase.com MV00000792}\">PANTOPRAZOLE 40 mg comprimé</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Evening, Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>40 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+       ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:markdown ;
+           fhir:v "40 mg le soir"
+         ]
+       ] ) ;
+       fhir:status [ fhir:v "active" ] ;
+       fhir:intent [ fhir:v "order" ] ;
+       fhir:priority [ fhir:v "routine" ] ;
+       fhir:medication [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://BogusSystemMedicabase.com"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "MV00000792" ] ;
+           fhir:display [ fhir:v "PANTOPRAZOLE 40 mg comprimé" ]
+         ] )
+       ] ;
+       fhir:subject [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Patient/14602> ;
+         fhir:reference [ fhir:v "Patient/14602" ]
+       ] ;
+       fhir:requester [
+         fhir:link <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-71482713> ;
+         fhir:reference [ fhir:v "Practitioner/smart-Practitioner-71482713" ]
+       ] ;
+       fhir:note ( [
+         fhir:text [ fhir:v "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir" ]
+       ] ) ;
+       fhir:dosageInstruction ( [
+         fhir:timing [
+           fhir:repeat [
+             fhir:when ( [ fhir:v "EVE" ] )
+           ]
+         ] ;
+         fhir:doseAndRate ( [
+           fhir:dose [
+             a fhir:Quantity ;
+             fhir:value [ fhir:v "40"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
