@@ -6,11 +6,21 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 // Posologie
 * doseEtDebit 0..* Base "Quantité de médicament administrée par prise"
   * dose[x] 0..1 Quantity or Range "La quantité de médicament administrée par prise"
-  * dose[x] ^example[0].label = "- 1 comprimé, 2-3 comprimés, 20ml"
+  * dose[x] ^example[0].label = "- 20mg"
   * dose[x] ^example[0].valueQuantity.value = 20
   * dose[x] ^example[0].valueQuantity.unit = "mg"
   * dose[x] ^example[0].valueQuantity.system = "http://unitsofmeasure.org"
   * dose[x] ^example[0].valueQuantity.code = #mg
+  * dose[x] ^example[1].label = "- 1 à 3 comprimés"
+  * dose[x] ^example[1].valueRange.low.value = 1
+  * dose[x] ^example[1].valueRange.low.unit = "Comprimé"
+  * dose[x] ^example[1].valueRange.low.system = "http://standardterms.edqm.eu"
+  * dose[x] ^example[1].valueRange.low.code = #15054000
+  * dose[x] ^example[1].valueRange.high.value = 3
+  * dose[x] ^example[1].valueRange.high.unit = "Comprimé"
+  * dose[x] ^example[1].valueRange.high.system = "http://standardterms.edqm.eu"
+  * dose[x] ^example[1].valueRange.high.code = #15054000
+
 
   * rate[x] 0..1 Ratio or Quantity or Range "Période temporelle pendant laquelle une dose définie est administrée (pendant 1 heure, entre 5 et 10 minutes)"
   * rate[x] ^example[0].label = "- pendant 1 heure, entre 5 et 10 minutes"
