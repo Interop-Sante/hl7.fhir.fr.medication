@@ -1,7 +1,7 @@
 Logical: Posologie				
 Id: fr-posologie				
 Title: "Posologie"				
-Description:  """Structuration d'une posologie en fonction des critères de la HAS. Cette structuration prend en compte le modèle de donnée [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD)"""
+Description:  """Structuration d'une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle de donnée [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD)"""
 
 // Posologie
 * doseEtDebit 0..* Base "Quantité de médicament administrée par prise"
