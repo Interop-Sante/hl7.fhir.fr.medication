@@ -70,8 +70,8 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * precision 0..1 string "Instruction additionelle"
 
 // durée utilisable en ville et à l'hôpital - ou rythme d'administration
-* dureeAdministration 0..1 Base "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence"
-* dureeAdministration ^example[0].label = "- La durée d'administration est par exemple utile dans le cas des perfusion : durée de 10 minutes"
+* dureeAdministration 0..1 Base "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)"
+* dureeAdministration ^example[0].label = "- Administration pendant 10 minutes"
   * duree 0..1 decimal "Durée de l'administration"
   * dureeUnite 0..1 code "Unité de la durée d'administration"
   * dureeMax 0..1 decimal "Durée maximale de l'administration"
