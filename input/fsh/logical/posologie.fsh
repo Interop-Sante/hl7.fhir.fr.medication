@@ -49,7 +49,7 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 // En FHIR, il y a également une quantité max par administration et par durée de vie
 * quantiteMaxParPeriode 0..* Base "Quantité maximale par unité de temps"
   * quantite 0..1 SimpleQuantity "Quantité maximale à administrer pour l'unité de temps donnée"
-  * duree 0..1 duration "Durée pour laquelle il y a une quantité maximale administrable" 
+  * duree 0..1 Quantity "Durée pour laquelle il y a une quantité maximale administrable" 
   * duree ^example[0].label = "- Par jour, par semaine, par mois, ..."
 
 * conditionDePrise 0..* CodeableConcept "Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs)."
@@ -76,7 +76,7 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * dureeUnite 0..1 code "Unité de la durée d'administration"
   * dureeMax 0..1 decimal "Durée maximale de l'administration"
 
-* date[x] 0..1 Period or duration or Range "Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)"
+* date[x] 0..1 Period or Quantity or Range "Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)"
 * date[x] ^example[0].label = "- La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours))"
 // * datePeriod 0..1 Period "Date de début et de fin de la séquence de traitement"
 // * dateDuration 0..1 Quantity "Durée du traitement (ex : pendant 5 jours)"
