@@ -3,6 +3,8 @@ Id: fr-posologie
 Title: "Posologie"				
 Description:  """Structuration d'une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle de donnée [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD)"""
 
+* sequence 0..1 decimal "Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
+
 // Posologie
 * doseEtDebit 0..* Base "Quantité de médicament administrée par prise"
   * dose[x] 0..1 Quantity or Range "La quantité de médicament administrée par prise"
@@ -34,8 +36,6 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * rate[x] ^example[0].valueRatio.denominator.system = "http://unitsofmeasure.org"
   * rate[x] ^example[0].valueRatio.denominator.code = #h
 
-* sequence 0..1 decimal "Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
-
 * voieAdministration 0..1 code "Voie d'administration du traitement"
 * siteAdministration 0..1 code "Région anatomique d'administration du traitement"
 
@@ -45,9 +45,8 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * valeurMax 0..1 decimal "Quantité maximale à prendre par prise"
   * unite 0..1 code "Unité de la quantité prescrite (ex : comprimé, mg, ...)"
 
-// Quantité maximale pour une période donnée
 // En FHIR, il y a également une quantité max par administration et par durée de vie
-* quantiteMaxParPeriode 0..* Base "Quantité maximale par unité de temps"
+* quantiteMaxParPeriode 0..* Base "Quantité maximale pour un temps donné (exemple : prise maximale pour 24h)."
   * quantite 0..1 SimpleQuantity "Quantité maximale à administrer pour l'unité de temps donnée"
   * duree 0..1 Quantity "Durée pour laquelle il y a une quantité maximale administrable" 
   * duree ^example[0].label = "- Par jour, par semaine, par mois, ..."
@@ -62,12 +61,11 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 
 // Une fréquence par séquence
 * frequence 0..1 Base "Description de fréquence de prise"
-  * valeur 0..1 decimal "Nombre de prise de la quantité \"quantitePrescrite\" par période"
-  * repetitionPeriode 0..1 code "nombre de prise par période (ex : le 3 dans une fois tous les trois jours)"
-  * unitePeriode 0..1 code "unité de la période (ex : jour dans le 3 dans une fois tous les trois jours)"
+  * nombreDeRepetition 0..1 decimal "Nombre de prise de la quantité \"quantitePrescrite\" par période (ex : *une fois* dans une fois tous les trois jours)"
+  * periode 0..1 Quantity "Durée sur laquelle la fréquence s'applique (ex : *tous les trois jours* une fois tous les trois jours)"
   * jourSemaine 0..* code "Jour de la semaine de la prise"
   * heurePrise 0..1 time "Heure de la prise"
-  * precision 0..1 string "Instruction additionelle"
+  * instructionAdditionnelle 0..1 string "Instruction additionnelle"
 
 // durée utilisable en ville et à l'hôpital - ou rythme d'administration
 * dureeAdministration 0..1 Base "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)"
