@@ -39,13 +39,6 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * rate[x] ^example[0].valueRatio.denominator.code = #min
 
 
-// Une quantité poso par séquence commenté car doublon avec dose[x]
-// * quantitePrescrite 0..* Base "Quantité de traitement prescrite"
-//   * valeur 0..1 decimal "Quantité à prendre par prise"
-//   * valeurMax 0..1 decimal "Quantité maximale à prendre par prise"
-//   * unite 0..1 code "Unité de la quantité prescrite (ex : comprimé, mg, ...)"
-
-
 // **********
 // * TIMING *
 // **********
