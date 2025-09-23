@@ -17,3 +17,5 @@ Description:  """Structuration d'une ligne de prescription [WIP - à compléter]
 * dateFin 0..1 dateTime "Date de fin de la ligne de prescription"
 
 * posologie 0..* Posologie "Structure de la posologie par séquences de prise."
+
+* quantitePrescrite 0..* Quantity "Quantité totale de traitement prescrite, indépendamment des séquences. Cela permet d'aider la dispensation dans le cas d'une unité non convertible (exemple : crème avec une posologie en \"application\")"
