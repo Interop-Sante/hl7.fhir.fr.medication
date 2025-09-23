@@ -1,7 +1,7 @@
 Logical: Posologie				
 Id: fr-posologie				
 Title: "Posologie"				
-Description:  """Structuration d'une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle de donnée [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD)"""
+Description:  """Structuration d'une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle européen [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD)"""
 
 * sequence 0..1 decimal "Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément."
 
