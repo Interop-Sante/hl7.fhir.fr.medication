@@ -16,7 +16,7 @@ Dans le cas où ils représentent des spécificités pour les prescriptions de m
 - [CODOLIPRANE® 500 mg/30 mg, cpr, 1 à 7h et 18h per os, pendant 5j](Bundle-Presc-CODOLIPRANE-MedCodeableConcept.html)
 - [DOLIPRANE® 2.4% ss sucre, 20 dose-kg à 7h et 18h per os, pendant 5j](Bundle-Presc-DOLIPRANE-20DoseParKG.html)
 - [DIPROSONE® 0.05%, 1 application cutanée à 8h, pendant 5j](Bundle-Presc-DIPROSONE-AppCut.html)
-- [NICOREETESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](Bundle-Presc-NICOREETESKIN-patch.html)
+- [NICORETTESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](Bundle-Presc-NICORETTESKIN-patch.html)
 - [MATRIFEN® 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j](Bundle-Presc-MATRIFEN-patch-TL72h.html)
 - [BIONOLYTE® G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html)
 - [HAS - ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours (id_poso=5)](Bundle-HAS-05-2-Presc-ACTISKENAN.html)

@@ -1,15 +1,15 @@
-Instance: Presc-NICOREETESKIN-patch
+Instance: Presc-NICORETTESKIN-patch
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "NICOREETESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
+Description: "NICORETTESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines"
 * type = #searchset
-* entry[0].resource = medication-Presc-NICOREETESKIN-patch
-* entry[+].resource = medicationrequest-Presc-NICOREETESKIN-patch
+* entry[0].resource = medication-Presc-NICORETTESKIN-patch
+* entry[+].resource = medicationrequest-Presc-NICORETTESKIN-patch
 
-Instance: medication-Presc-NICOREETESKIN-patch
+Instance: medication-Presc-NICORETTESKIN-patch
 InstanceOf: fr-medication-noncompound
 Usage: #inline
-* id = "medication-Presc-NICOREETESKIN-patch"
+* id = "medication-Presc-NICORETTESKIN-patch"
 * meta.profile = Canonical(fr-medication-noncompound)
 * code = $UCD#3400893539354 "NICORETTESKIN 15MG/16H DISP"
 * code.text = "NICORETTESKIN® 15MG/16H DISP"
@@ -21,14 +21,14 @@ Usage: #inline
 * ingredient.strength.numerator = 15 $unitsofmeasure#mg "mg"
 * ingredient.strength.denominator.value = 1
 
-Instance: medicationrequest-Presc-NICOREETESKIN-patch
+Instance: medicationrequest-Presc-NICORETTESKIN-patch
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #inline
 * meta.profile[0] = Canonical(fr-inpatient-medicationrequest)
 * status = #active
 * intent = #order
 * priority = #routine
-* medicationReference.reference = "#medication-Presc-NICOREETESKIN-patch"
+* medicationReference.reference = "#medication-Presc-NICORETTESKIN-patch"
 * subject.reference = "Patient/14602"
 * authoredOn = "2021-07-29T13:27:21.531Z"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
@@ -37,16 +37,12 @@ Usage: #inline
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-29T13:27:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-12T13:26:59Z"
+* dosageInstruction.timing.repeat.duration = 16
+* dosageInstruction.timing.repeat.durationUnit = #h
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
-* dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate[0].type = $dose-rate-type#ordered "Ordered"
-* dosageInstruction.doseAndRate[=].type.text = "Ordered"
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.value = 1
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.unit = "patch"
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.system = $EDQM
-* dosageInstruction.doseAndRate[=].rateRatio.numerator.code = #15036000
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.value = 16
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.unit = "h"
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.system = $unitsofmeasure
-* dosageInstruction.doseAndRate[=].rateRatio.denominator.code = #h
+* dosageInstruction.doseAndRate.type = $dose-rate-type#ordered "Ordered"
+* dosageInstruction.doseAndRate.doseQuantity.value = 1
+* dosageInstruction.doseAndRate.doseQuantity.unit = "patch"
+* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
+* dosageInstruction.doseAndRate.doseQuantity.code = #15036000
