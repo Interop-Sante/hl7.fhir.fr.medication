@@ -26,17 +26,17 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
   * dose[x] ^example[1].valueRange.high.code = #15054000
 
 
-  * rate[x] 0..1 Ratio or Quantity or Range "Période temporelle pendant laquelle une dose définie est administrée, typiquement pour les perfusions ou les patchs"
-  * rate[x] ^example[0].label = "- 15mg pendant 16h heure (patch)"
-  * rate[x] ^example[0].valueRatio.numerator.value = 15
-  * rate[x] ^example[0].valueRatio.numerator.unit = "mg"
+  * rate[x] 0..1 Ratio or Quantity or Range "Période temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple."
+  * rate[x] ^example[0].label = "- 400µg pendant une minute (perfusion)"
+  * rate[x] ^example[0].valueRatio.numerator.value = 400
+  * rate[x] ^example[0].valueRatio.numerator.unit = "µg"
   * rate[x] ^example[0].valueRatio.numerator.system = "http://unitsofmeasure.org"
-  * rate[x] ^example[0].valueRatio.numerator.code = #mg
+  * rate[x] ^example[0].valueRatio.numerator.code = #µg
   
-  * rate[x] ^example[0].valueRatio.denominator.value = 16
-  * rate[x] ^example[0].valueRatio.denominator.unit = "h"
+  * rate[x] ^example[0].valueRatio.denominator.value = 1
+  * rate[x] ^example[0].valueRatio.denominator.unit = "min"
   * rate[x] ^example[0].valueRatio.denominator.system = "http://unitsofmeasure.org"
-  * rate[x] ^example[0].valueRatio.denominator.code = #h
+  * rate[x] ^example[0].valueRatio.denominator.code = #min
 
 
 // Une quantité poso par séquence commenté car doublon avec dose[x]
