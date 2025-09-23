@@ -62,7 +62,6 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 // * dateRange 0..1 Range "Un intervalle de durée de traitement (ex : 5 à 10 jours)"
 
 
-
 // durée utilisable en ville et à l'hôpital - ou rythme d'administration
 * dureeAdministration 0..1 Base "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)"
 * dureeAdministration ^example[0].label = "- Administration pendant 10 minutes"
@@ -90,9 +89,9 @@ Description:  """Structuration d'une posologie en fonction des critères de la H
 * siteAdministration 0..1 code "Région anatomique d'administration du traitement"
 
 
-* quantiteMaxParPeriode 0..* Base "Quantité maximale pour un temps donné (exemple : prise maximale pour 24h)."
-  * quantite 0..1 SimpleQuantity "Quantité maximale à administrer pour l'unité de temps donnée"
-  * duree 0..1 Quantity "Durée pour laquelle il y a une quantité maximale administrable" 
+* doseMaxParPeriode 0..* Base "Dose maximale pour un temps donné (exemple : prise maximale pour 24h)."
+  * quantite 0..1 SimpleQuantity "Dose maximale à administrer pour l'unité de temps donnée"
+  * duree 0..1 Quantity "Durée pour laquelle il y a une dose maximale administrable" 
   * duree ^example[0].label = "- Par jour, par semaine, par mois, ..."
-* quantiteMaxParAdministration 0..1 Quantity "Quantité maximale pour une administration"
-* quantiteMaxVie 0..1  Quantity "Quantité maximale sur une vie"
+* doseMaxParAdministration 0..1 Quantity "Dose maximale pour une administration"
+* doseMaxVie 0..1  Quantity "Dose maximale sur une vie"
