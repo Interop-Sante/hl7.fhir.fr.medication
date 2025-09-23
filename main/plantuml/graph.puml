@@ -77,6 +77,7 @@ package IG #DDDDDD{
 
         class FRInpatientMedicationRequest{
 
+             MedicationRequest => [None..None]
              MedicationRequest.supportingInformation.extension:UFRole => <&plus>[0..1]
              MedicationRequest.note.extension:noteScope => <&plus>[0..1]
              MedicationRequest.dispenseRequest.dispenseInterval => [None..0]
@@ -99,6 +100,7 @@ package IG #DDDDDD{
              fr-ligne-prescription.dateDebut => [0..1]
              fr-ligne-prescription.dateFin => [0..1]
              fr-ligne-prescription.posologie => [0..*]
+             fr-ligne-prescription.quantitePrescrite => [0..*]
         } 
 
         class FrRedicationCompound{
@@ -327,38 +329,35 @@ package IG #DDDDDD{
         class Posologie{
 
              fr-posologie => [None..None]
+             fr-posologie.sequence => [0..1]
+             fr-posologie.instructionPatient => [0..1]
              fr-posologie.doseEtDebit => [0..*]
              fr-posologie.doseEtDebit.dose[x] => [0..1]
              fr-posologie.doseEtDebit.rate[x] => [0..1]
-             fr-posologie.sequence => [0..1]
-             fr-posologie.voieAdministration => [0..1]
-             fr-posologie.siteAdministration => [0..1]
-             fr-posologie.quantitePrescrite => [0..*]
-             fr-posologie.quantitePrescrite.valeur => [0..1]
-             fr-posologie.quantitePrescrite.valeurMax => [0..1]
-             fr-posologie.quantitePrescrite.unite => [0..1]
-             fr-posologie.quantiteMaxParPeriode => [0..*]
-             fr-posologie.quantiteMaxParPeriode.quantite => [0..1]
-             fr-posologie.quantiteMaxParPeriode.duree => [0..1]
+             fr-posologie.dateDePrise => [0..*]
              fr-posologie.conditionDePrise => [0..*]
-             fr-posologie.instructionPatient => [0..1]
-             fr-posologie.frequence => [0..1]
-             fr-posologie.frequence.valeur => [0..1]
-             fr-posologie.frequence.repetitionPeriode => [0..1]
-             fr-posologie.frequence.unitePeriode => [0..1]
-             fr-posologie.frequence.jourSemaine => [0..*]
-             fr-posologie.frequence.heurePrise => [0..1]
-             fr-posologie.frequence.precision => [0..1]
+             fr-posologie.date[x] => [0..1]
              fr-posologie.dureeAdministration => [0..1]
              fr-posologie.dureeAdministration.duree => [0..1]
              fr-posologie.dureeAdministration.dureeUnite => [0..1]
              fr-posologie.dureeAdministration.dureeMax => [0..1]
-             fr-posologie.date[x] => [0..1]
-             fr-posologie.dateDePrise => [0..*]
+             fr-posologie.frequence => [0..1]
+             fr-posologie.frequence.nombreDeRepetition => [0..1]
+             fr-posologie.frequence.periode => [0..1]
+             fr-posologie.frequence.jourSemaine => [0..*]
+             fr-posologie.frequence.heurePrise => [0..1]
+             fr-posologie.frequence.instructionAdditionnelle => [0..1]
              fr-posologie.momentDePrise => [0..*]
              fr-posologie.momentDePrise.code => [0..1]
              fr-posologie.momentDePrise.offset => [0..1]
              fr-posologie.evenementFinSequence => [0..1]
+             fr-posologie.voieAdministration => [0..1]
+             fr-posologie.siteAdministration => [0..1]
+             fr-posologie.doseMaxParPeriode => [0..*]
+             fr-posologie.doseMaxParPeriode.quantite => [0..1]
+             fr-posologie.doseMaxParPeriode.duree => [0..1]
+             fr-posologie.doseMaxParAdministration => [0..1]
+             fr-posologie.doseMaxVie => [0..1]
         } 
 
         class FRPrescriptionBundleForExample{
