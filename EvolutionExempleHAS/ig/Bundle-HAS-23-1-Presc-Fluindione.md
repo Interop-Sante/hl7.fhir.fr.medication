@@ -1,0 +1,179 @@
+# HAS-23-1-Presc-Fluindione - Guide d'implémentation du médicament v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **HAS-23-1-Presc-Fluindione**
+
+## Example Bundle: HAS-23-1-Presc-Fluindione
+
+Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
+
+Bundle HAS-23-1-Presc-Fluindione de type searchset
+
+-------
+
+Entry 1
+
+Ressource MedicationRequest :
+
+> 
+
+Profil: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+
+**Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0**:
+
+0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois
+
+**status**: Active**intent**: Order**priority**: Routine**subject**:[Patient/14602](Patient/14602)**authoredOn**: 2025-07-23 10:33:00+0100**requester**:[Practitioner/smart-Practitioner-71482713](Practitioner/smart-Practitioner-71482713)**note**:
+> 
+
+Prescription textuelle: FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois.
+
+
+> **dosageInstruction****additionalInstruction**:le premier jour du cycle de 2 jours**timing**: Once per 2 days
+
+### DoseAndRates
+
+| | |
+| :--- | :--- |
+| - | **Dose[x]** |
+| * | 0.5 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
+
+
+> **dosageInstruction****additionalInstruction**:le second jour du cycle de 2 jours**timing**: Once per 2 days
+
+### DoseAndRates
+
+| | |
+| :--- | :--- |
+| - | **Dose[x]** |
+| * | 0.75 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
+
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "HAS-23-1-Presc-Fluindione",
+  "meta" : {
+    "profile" : [
+      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    ]
+  },
+  "type" : "searchset",
+  "entry" : [
+    {
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "id" : "medicationrequest-HAS-23-1-Presc-Fluindione",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest"
+          ]
+        },
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-23-1-Presc-Fluindione\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-23-1-Presc-Fluindione</b></p><a name=\"medicationrequest-HAS-23-1-Presc-Fluindione\"> </a><a name=\"hcmedicationrequest-HAS-23-1-Presc-Fluindione\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medicationrequest.html\">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois</p>\n</div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://BogusSystemMedicabase.com MV00001070}\">FLUINDIONE 20 mg comprimé quadrisécable</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2025-07-23 10:33:00+0100</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois.</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstruction</b>: <span title=\"Codes:\">le premier jour du cycle de 2 jours</span></p><p><b>timing</b>: Once per 2 days</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>0.5 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span></td></tr></table></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstruction</b>: <span title=\"Codes:\">le second jour du cycle de 2 jours</span></p><p><b>timing</b>: Once per 2 days</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>0.75 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
+        },
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
+            "valueMarkdown" : "0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois"
+          }
+        ],
+        "status" : "active",
+        "intent" : "order",
+        "priority" : "routine",
+        "medicationCodeableConcept" : {
+          "coding" : [
+            {
+              "system" : "http://BogusSystemMedicabase.com",
+              "code" : "MV00001070",
+              "display" : "FLUINDIONE 20 mg comprimé quadrisécable"
+            }
+          ]
+        },
+        "subject" : {
+          "reference" : "Patient/14602"
+        },
+        "authoredOn" : "2025-07-23T10:33:00+01:00",
+        "requester" : {
+          "reference" : "Practitioner/smart-Practitioner-71482713"
+        },
+        "note" : [
+          {
+            "text" : "Prescription textuelle: FLUINDIONE 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois."
+          }
+        ],
+        "dosageInstruction" : [
+          {
+            "additionalInstruction" : [
+              {
+                "text" : "le premier jour du cycle de 2 jours"
+              }
+            ],
+            "timing" : {
+              "repeat" : {
+                "boundsDuration" : {
+                  "value" : 1,
+                  "unit" : "mois",
+                  "system" : "http://unitsofmeasure.org",
+                  "code" : "mo"
+                },
+                "frequency" : 1,
+                "period" : 2,
+                "periodUnit" : "d"
+              }
+            },
+            "doseAndRate" : [
+              {
+                "doseQuantity" : {
+                  "value" : 0.5,
+                  "unit" : "Comprimé",
+                  "system" : "http://standardterms.edqm.eu",
+                  "code" : "15054000"
+                }
+              }
+            ]
+          },
+          {
+            "additionalInstruction" : [
+              {
+                "text" : "le second jour du cycle de 2 jours"
+              }
+            ],
+            "timing" : {
+              "repeat" : {
+                "boundsDuration" : {
+                  "value" : 1,
+                  "unit" : "mois",
+                  "system" : "http://unitsofmeasure.org",
+                  "code" : "mo"
+                },
+                "frequency" : 1,
+                "period" : 2,
+                "periodUnit" : "d"
+              }
+            },
+            "doseAndRate" : [
+              {
+                "doseQuantity" : {
+                  "value" : 0.75,
+                  "unit" : "Comprimé",
+                  "system" : "http://standardterms.edqm.eu",
+                  "code" : "15054000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```

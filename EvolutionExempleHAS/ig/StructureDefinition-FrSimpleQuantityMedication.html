@@ -347,7 +347,7 @@
         
           Draft
           
-            as of 2025-09-23
+            as of 2025-10-23
           
         
       </td>
@@ -429,7 +429,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A fixed quantity (no comparator) with UCUM or EDQM code or no code<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="system SHALL be UCUM or EDQM if code is used" class="constraint">fr-med-smpl-quant-1</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="system SHALL not be used if code is not used" class="constraint">fr-med-smpl-quant-2</span><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f780fb05-cb92-4677-84da-5fdebc967866
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // e3f3d716-4443-46b4-998b-6646cd42c5ac
 document.getElementById('cbFrSimpleQuantityMedicationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrSimpleQuantityMedicationK'), 'binding', document.getElementById('cbFrSimpleQuantityMedicationK-binding').checked, document.getElementById('ppFrSimpleQuantityMedicationK'));
 document.getElementById('cbFrSimpleQuantityMedicationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -446,13 +446,71 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationK'), 'obligation',
             <a name="inv-key"> </a>
               <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Détails</b></td><td><b>Requirements</b></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-1</td><td>error</td><td>Quantity</td><td>system SHALL be UCUM or EDQM if code is used<br/>: code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-2</td><td>error</td><td>Quantity</td><td>system SHALL not be used if code is not used<br/>: code.empty() implies system.empty()</td><td></td></tr>
-<tr><td>qty-3</td><td>error</td><td>Quantity</td><td>If a code for the unit is present, the system SHALL also be present<br/>: code.empty() or system.exists()</td><td></td></tr>
-<tr><td>sqty-1</td><td>error</td><td>Quantity</td><td>The comparator is not used on a SimpleQuantity<br/>: comparator.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL be UCUM or EDQM if code is used</td>
+    <td>
+      <code>code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-2</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL not be used if code is not used</td>
+    <td>
+      <code>code.empty() implies system.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>qty-3</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>If a code for the unit is present, the system SHALL also be present</td>
+    <td>
+      <code>code.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>sqty-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>The comparator is not used on a SimpleQuantity</td>
+    <td>
+      <code>comparator.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -471,7 +529,7 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationK'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A fixed quantity (no comparator) with UCUM or EDQM code or no code<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="system SHALL be UCUM or EDQM if code is used" class="constraint">fr-med-smpl-quant-1</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="system SHALL not be used if code is not used" class="constraint">fr-med-smpl-quant-2</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f780fb05-cb92-4677-84da-5fdebc967866
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // e3f3d716-4443-46b4-998b-6646cd42c5ac
 document.getElementById('cbFrSimpleQuantityMedicationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrSimpleQuantityMedicationD'), 'binding', document.getElementById('cbFrSimpleQuantityMedicationD-binding').checked, document.getElementById('ppFrSimpleQuantityMedicationD'));
 document.getElementById('cbFrSimpleQuantityMedicationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -489,11 +547,51 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationD'), 'obligation',
             <a name="inv-diff"> </a>
               <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Détails</b></td><td><b>Requirements</b></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Quantity</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-1</td><td>error</td><td>Quantity</td><td>system SHALL be UCUM or EDQM if code is used<br/>: code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-2</td><td>error</td><td>Quantity</td><td>system SHALL not be used if code is not used<br/>: code.empty() implies system.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL be UCUM or EDQM if code is used</td>
+    <td>
+      <code>code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-2</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL not be used if code is not used</td>
+    <td>
+      <code>code.empty() implies system.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -540,7 +638,7 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationD'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f780fb05-cb92-4677-84da-5fdebc967866
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // e3f3d716-4443-46b4-998b-6646cd42c5ac
 document.getElementById('cbFrSimpleQuantityMedicationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrSimpleQuantityMedicationS'), 'binding', document.getElementById('cbFrSimpleQuantityMedicationS-binding').checked, document.getElementById('ppFrSimpleQuantityMedicationS'));
 document.getElementById('cbFrSimpleQuantityMedicationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -557,14 +655,82 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationS'), 'obligation',
             <a name="inv-snap"> </a>
               <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Détails</b></td><td><b>Requirements</b></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-1</td><td>error</td><td>Quantity</td><td>system SHALL be UCUM or EDQM if code is used<br/>: code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-2</td><td>error</td><td>Quantity</td><td>system SHALL not be used if code is not used<br/>: code.empty() implies system.empty()</td><td></td></tr>
-<tr><td>qty-3</td><td>error</td><td>Quantity</td><td>If a code for the unit is present, the system SHALL also be present<br/>: code.empty() or system.exists()</td><td></td></tr>
-<tr><td>sqty-1</td><td>error</td><td>Quantity</td><td>The comparator is not used on a SimpleQuantity<br/>: comparator.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL be UCUM or EDQM if code is used</td>
+    <td>
+      <code>code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-2</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL not be used if code is not used</td>
+    <td>
+      <code>code.empty() implies system.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>qty-3</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>If a code for the unit is present, the system SHALL also be present</td>
+    <td>
+      <code>code.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>sqty-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>The comparator is not used on a SimpleQuantity</td>
+    <td>
+      <code>comparator.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -641,7 +807,7 @@ Résumé
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A fixed quantity (no comparator) with UCUM or EDQM code or no code<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="system SHALL be UCUM or EDQM if code is used" class="constraint">fr-med-smpl-quant-1</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="system SHALL not be used if code is not used" class="constraint">fr-med-smpl-quant-2</span><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f780fb05-cb92-4677-84da-5fdebc967866
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // e3f3d716-4443-46b4-998b-6646cd42c5ac
 document.getElementById('cbFrSimpleQuantityMedicationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrSimpleQuantityMedicationKA'), 'binding', document.getElementById('cbFrSimpleQuantityMedicationKA-binding').checked, document.getElementById('ppFrSimpleQuantityMedicationKA'));
 document.getElementById('cbFrSimpleQuantityMedicationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -658,13 +824,71 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationKA'), 'obligation'
             <a name="inv-all-key"> </a>
               <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Détails</b></td><td><b>Requirements</b></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-1</td><td>error</td><td>Quantity</td><td>system SHALL be UCUM or EDQM if code is used<br/>: code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-2</td><td>error</td><td>Quantity</td><td>system SHALL not be used if code is not used<br/>: code.empty() implies system.empty()</td><td></td></tr>
-<tr><td>qty-3</td><td>error</td><td>Quantity</td><td>If a code for the unit is present, the system SHALL also be present<br/>: code.empty() or system.exists()</td><td></td></tr>
-<tr><td>sqty-1</td><td>error</td><td>Quantity</td><td>The comparator is not used on a SimpleQuantity<br/>: comparator.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL be UCUM or EDQM if code is used</td>
+    <td>
+      <code>code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-2</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL not be used if code is not used</td>
+    <td>
+      <code>code.empty() implies system.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>qty-3</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>If a code for the unit is present, the system SHALL also be present</td>
+    <td>
+      <code>code.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>sqty-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>The comparator is not used on a SimpleQuantity</td>
+    <td>
+      <code>comparator.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -683,7 +907,7 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationKA'), 'obligation'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A fixed quantity (no comparator) with UCUM or EDQM code or no code<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="system SHALL be UCUM or EDQM if code is used" class="constraint">fr-med-smpl-quant-1</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="system SHALL not be used if code is not used" class="constraint">fr-med-smpl-quant-2</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f780fb05-cb92-4677-84da-5fdebc967866
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // e3f3d716-4443-46b4-998b-6646cd42c5ac
 document.getElementById('cbFrSimpleQuantityMedicationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrSimpleQuantityMedicationDA'), 'binding', document.getElementById('cbFrSimpleQuantityMedicationDA-binding').checked, document.getElementById('ppFrSimpleQuantityMedicationDA'));
 document.getElementById('cbFrSimpleQuantityMedicationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -700,11 +924,51 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationDA'), 'obligation'
             <a name="inv-all-diff"> </a>
               <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Détails</b></td><td><b>Requirements</b></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Quantity</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-1</td><td>error</td><td>Quantity</td><td>system SHALL be UCUM or EDQM if code is used<br/>: code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-2</td><td>error</td><td>Quantity</td><td>system SHALL not be used if code is not used<br/>: code.empty() implies system.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL be UCUM or EDQM if code is used</td>
+    <td>
+      <code>code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-2</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL not be used if code is not used</td>
+    <td>
+      <code>code.empty() implies system.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -751,7 +1015,7 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationDA'), 'obligation'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // f780fb05-cb92-4677-84da-5fdebc967866
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // e3f3d716-4443-46b4-998b-6646cd42c5ac
 document.getElementById('cbFrSimpleQuantityMedicationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrSimpleQuantityMedicationSA'), 'binding', document.getElementById('cbFrSimpleQuantityMedicationSA-binding').checked, document.getElementById('ppFrSimpleQuantityMedicationSA'));
 document.getElementById('cbFrSimpleQuantityMedicationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -768,14 +1032,82 @@ filterDesc(document.getElementById('FrSimpleQuantityMedicationSA'), 'obligation'
             <a name="inv-all-snap"> </a>
               <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Détails</b></td><td><b>Requirements</b></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-1</td><td>error</td><td>Quantity</td><td>system SHALL be UCUM or EDQM if code is used<br/>: code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</td><td></td></tr>
-<tr><td>fr-med-smpl-quant-2</td><td>error</td><td>Quantity</td><td>system SHALL not be used if code is not used<br/>: code.empty() implies system.empty()</td><td></td></tr>
-<tr><td>qty-3</td><td>error</td><td>Quantity</td><td>If a code for the unit is present, the system SHALL also be present<br/>: code.empty() or system.exists()</td><td></td></tr>
-<tr><td>sqty-1</td><td>error</td><td>Quantity</td><td>The comparator is not used on a SimpleQuantity<br/>: comparator.empty()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL be UCUM or EDQM if code is used</td>
+    <td>
+      <code>code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))</code>
+    </td>
+  </tr>
+  <tr>
+    <td>fr-med-smpl-quant-2</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>system SHALL not be used if code is not used</td>
+    <td>
+      <code>code.empty() implies system.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>qty-3</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>If a code for the unit is present, the system SHALL also be present</td>
+    <td>
+      <code>code.empty() or system.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>sqty-1</td>
+    <td>error</td>
+    <td>Quantity</td>
+    <td>The comparator is not used on a SimpleQuantity</td>
+    <td>
+      <code>comparator.empty()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -889,7 +1221,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 23, 2025 14:37+0000">2025-09-23</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 23, 2025 12:46+0000">2025-10-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

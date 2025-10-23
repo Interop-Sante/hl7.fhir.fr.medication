@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="HAS-04b-Presc-DAFALGANCODEINE"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-HAS-4b-Presc-DAFALGANCODEINE"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-HAS-4b-Presc-DAFALGANCODEINE"> </a><p class="res-header-id"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-4b-Presc-DAFALGANCODEINE</b></p><a name="medicationrequest-HAS-4b-Presc-DAFALGANCODEINE"> </a><a name="hcmedicationrequest-HAS-4b-Presc-DAFALGANCODEINE"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-medicationrequest.html">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>
+</div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title="Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891479287}">DAFALGAN CODEINE CPR</span></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>authoredOn</b>: 2025-07-23 10:33:00+0100</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>
+</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstruction</b>: <span title="Codes:">Selon l'intensité des douleurs. STOP SI NAUSEE</span></p><p><b>timing</b>: Once per 12 hours</p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>1-2 Comprimé</td></tr></table><p><b>maxDosePerPeriod</b>: 4 Comprimé<span style="background: LightGoldenRodYellow"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span>/1 Jour<span style="background: LightGoldenRodYellow"> (Details: UCUM  coded = 'd')</span></p><p><b>maxDosePerAdministration</b>: 2 Comprimé<span style="background: LightGoldenRodYellow"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span></p></blockquote></div>
+        </text>
+        <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction">
+          <valueMarkdown value="un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES"/>
+        </extension>
+        <status value="active"/>
+        <intent value="option"/>
+        <priority value="routine"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://data.esante.gouv.fr/ansm/medicament/UCD"/>
+            <code value="3400891479287"/>
+            <display value="DAFALGAN CODEINE CPR"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <authoredOn value="2025-07-23T10:33:00+01:00"/>
+        <requester>
+          <identifier>
+            <system value="urn:oid:1.2.250.1.71.4.2.1"/>
+            <value value="899999999999"/>
+          </identifier>
+        </requester>
+        <note>
+          <text value="Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES"/>
+        </note>
+        <dosageInstruction>
+          <additionalInstruction>
+            <text value="Selon l'intensité des douleurs. STOP SI NAUSEE"/>
+          </additionalInstruction>
+          <timing>
+            <repeat>
+              <boundsDuration>
+                <value value="10"/>
+                <unit value="jour"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+              </boundsDuration>
+              <frequency value="1"/>
+              <period value="12"/>
+              <periodUnit value="h"/>
+            </repeat>
+          </timing>
+          <doseAndRate>
+            <doseRange>
+              <low>
+                <value value="1"/>
+                <unit value="Comprimé"/>
+                <system value="http://standardterms.edqm.eu"/>
+                <code value="15054000"/>
+              </low>
+              <high>
+                <value value="2"/>
+                <unit value="Comprimé"/>
+                <system value="http://standardterms.edqm.eu"/>
+                <code value="15054000"/>
+              </high>
+            </doseRange>
+          </doseAndRate>
+          <maxDosePerPeriod>
+            <numerator>
+              <value value="4"/>
+              <unit value="Comprimé"/>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="15054000"/>
+            </numerator>
+            <denominator>
+              <value value="1"/>
+              <unit value="Jour"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="d"/>
+            </denominator>
+          </maxDosePerPeriod>
+          <maxDosePerAdministration>
+            <value value="2"/>
+            <unit value="Comprimé"/>
+            <system value="http://standardterms.edqm.eu"/>
+            <code value="15054000"/>
+          </maxDosePerAdministration>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+</Bundle>
