@@ -5,7 +5,7 @@ Description: "GLUCOPHAGE® 500 mg comprimé : 1 comprimé matin et 1 comprimé s
 * type = #searchset
 * entry.resource = medicationrequest-HAS-27-1-presc-GLUCOPHAGE
 
-Instance: medicationrequest-HAS-27-1-prescGLUCOPHAGE
+Instance: medicationrequest-HAS-27-1-presc-GLUCOPHAGE
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)
