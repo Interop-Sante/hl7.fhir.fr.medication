@@ -27,7 +27,7 @@ Dans le cas où ils représentent des spécificités pour les prescriptions de m
 - [HAS - enoxaparine sodique 6000 UI (LOVENOX®), solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR de l'AVK soit dans la zone thérapeutique cible (id_poso=29)](Bundle-HAS-29-Presc-LOVENOX.html)
 - [HAS - DUROGESIC® dispositif transdermique 25 μg : un dispositif transdermique de vingt-cinq microgrammes à changer toutes les soixante-douze heures, pendant deux semaines (id_poso=31)](Bundle-HAS-31-Presc-DUROGESIC.html)
 - [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie (LOVENOX®): 1 injection en sous-cutanée par jour pendant 1 semaine (id_poso=32)](Bundle-HAS-32-1-Presc-LOVENOX.html)
-- [HAS - ULTIBRO BREEZ® 85/43 µg gélule : 1 gélule à administrer par voie inhalée à la même heure chaque jour pendant 1 mois (id_poso=32)](Bundle-HAS-32-2-Presc-ULTIBRO_BREES.html)
+- [HAS - ULTIBRO BREEZ® 85/43 µg gélule : 1 gélule à administrer par voie inhalée à la même heure chaque jour pendant 1 mois (id_poso=32)](Bundle-HAS-32-2-Presc-ULTIBRO-BREES.html)
 - [HAS - VERSATIS ® 700 mg emplâtre médicamenteux: 1 emplâtre par jour à 20 h, à laisser pendant 12h sur la peau (id_poso=33)](Bundle-HAS-33-Presc-VERSATIS.html)
 
 ###### Médicament simple en DC
