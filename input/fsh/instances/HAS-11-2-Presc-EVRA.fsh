@@ -23,10 +23,9 @@ Usage: #inline
 * dosageInstruction.timing.repeat.boundsDuration.unit = "mois"
 * dosageInstruction.timing.repeat.boundsDuration.system = $unitsofmeasure
 * dosageInstruction.timing.repeat.boundsDuration.code = #mo
+* dosageInstruction.timing.repeat.duration = 7
+* dosageInstruction.timing.repeat.durationUnit = #d
 * dosageInstruction.timing.repeat.frequency = 3
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #mo
-* dosageInstruction.doseAndRate.doseQuantity.value = 1
-* dosageInstruction.doseAndRate.doseQuantity.unit = "dispositif transdermique"
-* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
-* dosageInstruction.doseAndRate.doseQuantity.code = #15036000
+* dosageInstruction.doseAndRate.doseQuantity = 1 $EDQM#15036000 "dispositif transdermique"

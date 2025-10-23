@@ -60,6 +60,8 @@ Usage: #inline
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-10-15T10:25:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-10-16T10:24:59Z"
+* dosageInstruction.timing.repeat.duration = 1
+* dosageInstruction.timing.repeat.durationUnit = #d
 * dosageInstruction.route = $EDQM#20045000 "Voie intraveineuse"
 * dosageInstruction.route.text = "Voie intraveineuse"
 * dosageInstruction.doseAndRate.extension[fr-basis-of-dose-component].valueReference.reference = "#medication-1-Presc-PerfDobutamine-Qsp40mL"

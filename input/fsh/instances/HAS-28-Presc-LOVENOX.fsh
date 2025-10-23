@@ -1,27 +1,11 @@
-Instance: HAS-28-Presc-Enoxaparine
+Instance: HAS-28-Presc-LOVENOX
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."
+Description: "ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX®), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."
 * type = #searchset
-* entry[0].resource = medication-HAS-28-Presc-Enoxaparine
-* entry[+].resource = medicationrequest-HAS-28-Presc-Enoxaparine
+* entry.resource = medicationrequest-HAS-28-Presc-LOVENOX
 
-Instance: medication-HAS-28-Presc-Enoxaparine
-InstanceOf: fr-medication-noncompound
-Usage: #inline
-* id = "medication-HAS-28-Presc-Enoxaparine"
-* meta.profile = Canonical(fr-medication-noncompound)
-* code = $SMS#100000090152 "énoxaparine sodique"
-* form = $EDQM#11201000 "Solution injectable"
-* ingredient.itemCodeableConcept = $SMS#100000090152 "énoxaparine sodique"
-* ingredient.strength.numerator.value = 4000
-* ingredient.strength.numerator.unit = "UI"
-* ingredient.strength.denominator.value = 0.4
-* ingredient.strength.denominator.unit = "ml"
-* ingredient.strength.denominator.system = $unitsofmeasure
-* ingredient.strength.denominator.code = #mL
-
-Instance: medicationrequest-HAS-28-Presc-Enoxaparine
+Instance: medicationrequest-HAS-28-Presc-LOVENOX
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)
@@ -29,8 +13,8 @@ Usage: #inline
 * status = #active
 * intent = #order
 * priority = #routine
-* note.text = "Prescription textuelle: ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."
-* medicationReference.reference = "#medication-HAS-28-Presc-Enoxaparine"
+* note.text = "Prescription textuelle: ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX®), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention."
+* medicationCodeableConcept = $UCD#3400892669236 "LOVENOX 4000UI SRG0,4ML +ERIS"
 * subject.reference = "Patient/14602"
 * authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"

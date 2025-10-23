@@ -1,11 +1,11 @@
-Instance: HAS-24-Topiramate
+Instance: HAS-24-1-presc-Topiramate
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "TOPIRAMATE 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote"
 * type = #searchset
-* entry.resource = medicationrequest-HAS-24-Topiramate
+* entry.resource = medicationrequest-HAS-24-1-Presc-Topiramate
 
-Instance: medicationrequest-HAS-24-Topiramate
+Instance: medicationrequest-HAS-24-1-Presc-Topiramate
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)

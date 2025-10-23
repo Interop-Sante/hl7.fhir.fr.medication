@@ -1,11 +1,11 @@
-Instance: HAS-04-1-Presc-Paracetamol
+Instance: HAS-04a-Presc-Paracetamol
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs"
 * type = #searchset
-* entry.resource = medicationrequest-HAS-4-1-Presc-Paracetamol
+* entry.resource = medicationrequest-HAS-4a-Presc-Paracetamol
 
-Instance: medicationrequest-HAS-4-1-Presc-Paracetamol
+Instance: medicationrequest-HAS-4a-Presc-Paracetamol
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)

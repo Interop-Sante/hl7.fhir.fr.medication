@@ -30,8 +30,9 @@ Usage: #inline
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-19T18:33:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-02T18:32:59Z"
+* dosageInstruction.timing.repeat.duration = 16
+* dosageInstruction.timing.repeat.durationUnit = #h
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 15 $unitsofmeasure#mg "mg"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 16 $unitsofmeasure#h "h"
+* dosageInstruction.doseAndRate.doseQuantity = 15 $unitsofmeasure#mg "mg"

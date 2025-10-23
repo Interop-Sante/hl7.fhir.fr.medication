@@ -62,11 +62,11 @@ Certains éléments de posologie ne peuvent pas être représentés de manière 
 ***Exemples d'éléments de posologie non structurés***
 
 - indication spécifique de prise.
-  - ex: "administrer le contenu avec un peu de compote" [HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)](Bundle-HAS-24-Topiramate.html)
+  - ex: "administrer le contenu avec un peu de compote" [HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)](Bundle-HAS-24-1-Topiramate.html)
 - moment de prise non codé dans le jeu de valeurs FHIR [event-timing](https://hl7.org/fhir/R4/valueset-event-timing.html) associé à l'élément `MedicationRequest.dosageInstruction.timing.repeat.when` ni dans le jeu de valeurs complémentaire [fr-additional-when-codes](ValueSet-fr-additional-when-codes.html) associé à l'extension [fr-additional-when-values](StructureDefinition-fr-additional-when-values.html)
-  - ex: "à débuter 12 heures avant l'intervention chirurgicale" [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention. (id_poso=28)](Bundle-HAS-28-Presc-Enoxaparine)
+  - ex: "à débuter 12 heures avant l'intervention chirurgicale" [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX®), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention. (id_poso=28)](Bundle-HAS-28-Presc-LOVENOX)
 - multiplicité des caractéristiques de moment de prise qui ne peuvent pas être codés dans `MedicationRequest.dosageInstruction.timing.repeat.when` qui est monovalué
-  - ex: "matin et soir, au cours ou à la fin des repas​" [HAS - metformine 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)](Bundle-HAS-27-1-Metformine.html)
+  - ex: "matin et soir, au cours ou à la fin des repas​" [HAS - GLUCOPHAGE® 500 mg comprimé : 1 comprimé matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)](Bundle-HAS-27-1-Presc-GLUCOPHAGE.html)
 - indication de condition de prise qui n'est pas facilement codable dans l'élément `MedicationRequest.dosageInstruction.asNeededCodeableConcept`
   - ex: "en fonction de la gène allergique" [HAS - desloratadine 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique (id_poso=13)](Bundle-HAS-13-Presc-Desloratadine.html)
 - contrainte calendaire ne pouvant pas être exprimée en FHIR
@@ -79,7 +79,7 @@ Certains éléments de posologie ne peuvent pas être représentés de manière 
 
 Dans le cas d'une dose calculée, si elle est fournie en plus de la valeur absolue, la valeur relative (ex. formule de calcul) doit être indiquée textuellement dans `MedicationRequest.doseInstruction.additionalInstruction.text` et non indiquée dans la partie structurée.
 
-- ex: "soit 170UI anti-Xa /kg" [HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-Tinzaparine.html)
+- ex: "soit 170UI anti-Xa /kg" [HAS - INNOHEP® 14 000 UI anti-Xa/0,7 ml (tinzaparine sodique) solution injectable : 12 000UI anti-Xa (soit 170 UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-INNOHEP.html)
 
 **Version textuelle de la posologie**
 

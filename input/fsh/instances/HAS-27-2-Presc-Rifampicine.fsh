@@ -1,11 +1,11 @@
-Instance: HAS-27-2-Rifampicine
+Instance: HAS-27-2-presc-Rifampicine
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "RIFAMPICINE 300 mg en gélule 2 gélules le matin 30 minutes avant le petit-déjeuner"
 * type = #searchset
-* entry.resource = medicationrequest-HAS-27-2-Rifampicine
+* entry.resource = medicationrequest-HAS-27-2-presc-Rifampicine
 
-Instance: medicationrequest-HAS-27-2-Rifampicine
+Instance: medicationrequest-HAS-27-2-presc-Rifampicine
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)

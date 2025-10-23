@@ -1,11 +1,11 @@
-Instance: HAS-04-2-Presc-DAFALGANCODEINE
+Instance: HAS-04b-Presc-DAFALGANCODEINE
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES"
 * type = #searchset
-* entry.resource = medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE
+* entry.resource = medicationrequest-HAS-4b-Presc-DAFALGANCODEINE
 
-Instance: medicationrequest-HAS-4-2-Presc-DAFALGANCODEINE
+Instance: medicationrequest-HAS-4b-Presc-DAFALGANCODEINE
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)

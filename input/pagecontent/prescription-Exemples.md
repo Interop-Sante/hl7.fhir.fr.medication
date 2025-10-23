@@ -19,7 +19,16 @@ Dans le cas où ils représentent des spécificités pour les prescriptions de m
 - [NICORETTESKIN® 15 mg/16h, patch, 1 à 7h, pendant 2 semaines](Bundle-Presc-NICORETTESKIN-patch.html)
 - [MATRIFEN® 75 ug/h, patch, 1 à 7h, toutes les 72h, pendant 8j](Bundle-Presc-MATRIFEN-patch-TL72h.html)
 - [BIONOLYTE® G5, sol pr perf,poche 500 mL, 1 à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-SolPrPerf-BIONOLYTE-G5-500mL-Sur12h.html)
-- [HAS - ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours (id_poso=5)](Bundle-HAS-05-2-Presc-ACTISKENAN.html)
+- [HAS - INNOHEP® 14 000 UI anti-Xa/0,7 ml (tinzaparine sodique) solution injectable : 12 000UI anti-Xa (soit 170 UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-INNOHEP.html)
+- [HAS - ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours (id_poso=5b)](Bundle-HAS-05b-Presc-ACTISKENAN.html)
+- [HAS - EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique (id_poso=11)](Bundle-HAS-11-2-Presc-EVRA.html)
+- [HAS - GLUCOPHAGE® 500 mg comprimé : 1 comprimé matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)](Bundle-HAS-27-1-presc-GLUCOPHAGE.html)
+- [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX®), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention (id_poso=28)](Bundle-HAS-28-Presc-LOVENOX.html)
+- [HAS - enoxaparine sodique 6000 UI (LOVENOX®), solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR de l'AVK soit dans la zone thérapeutique cible (id_poso=29)](Bundle-HAS-29-Presc-LOVENOX.html)
+- [HAS - DUROGESIC® dispositif transdermique 25 μg : un dispositif transdermique de vingt-cinq microgrammes à changer toutes les soixante-douze heures, pendant deux semaines (id_poso=31)](Bundle-HAS-31-Presc-DUROGESIC.html)
+- [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie (LOVENOX®): 1 injection en sous-cutanée par jour pendant 1 semaine (id_poso=32)](Bundle-HAS-32-1-Presc-LOVENOX.html)
+- [HAS - ULTIBRO BREEZ® 85/43 µg gélule : 1 gélule à administrer par voie inhalée à la même heure chaque jour pendant 1 mois (id_poso=32)](Bundle-HAS-32-2-Presc-ULTIBRO_BREES.html)
+- [HAS - VERSATIS ® 700 mg emplâtre médicamenteux: 1 emplâtre par jour à 20 h, à laisser pendant 12h sur la peau (id_poso=33)](Bundle-HAS-33-Presc-VERSATIS.html)
 
 ###### Médicament simple en DC
 
@@ -41,11 +50,13 @@ Dans le cas où ils représentent des spécificités pour les prescriptions de m
 
 - [HAS - pantoprazole 40 mg comprimé: 40 mg le soir en MV (id_poso=1)](Bundle-HAS-01-Presc-Pantoprazole-MV.html)
 - [HAS - fluindione 20 mg comprimé : 0,5 comprimé par jour (id_poso=2)](Bundle-HAS-02-Presc-Fluindione.html)
-- [HAS - Ropinirole comprimé 1mg : 1 comprimé à 7h, 12h 18h (id_poso=9)](Bundle-HAS-09-Presc-Ropinirole.html)
-- [HAS - Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de budesonide  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023 (id_poso=17)](Bundle-HAS-17-Presc-Budesonide.html)
-- [HAS - Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h jusqu'au 16/03/2023 (id_poso=18)](Bundle-HAS-18-Presc-Budesonide-MV.html)
+- [HAS - ropinirole comprimé 1mg : 1 comprimé à 7h, 12h 18h (id_poso=9)](Bundle-HAS-09-Presc-Ropinirole.html)
+- [HAS - budesonide  1mg/2mL, suspension pour inhalation par nébuliseur en récipient unidose : 1 récipient unidose de 1 mg 4 fois par jour selon les modalités d'administration suivantes (Préparation pour nébuliseur ultrasonique : 3 mL Eau Pour Préparation Injectable + 1 récipient unidose (soit 2 mL) de BUDESONIDE 1mg/2mL) suspension pour inhalation par nébuliseur) A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023 (id_poso=17)](Bundle-HAS-17-Presc-Budesonide.html)
+- [HAS - budesonide  1mg/2mL, suspension pour inhalation par nébuliseur en récipient unidose : 1 récipient unidose de 1 mg 4 fois par jour selon les modalités d'administration suivantes (Préparation pour nébuliseur ultrasonique : 3 mL Eau Pour Préparation Injectable + 1 récipient unidose (soit 2 mL) de BUDESONIDE 1mg/2mL) suspension pour inhalation par nébuliseur) A administrer en 20 min à 8h, 14h, 18h, et 22h  jusqu'au 26/03/2023 (id_poso=18)](Bundle-HAS-18-Presc-Budesonide-MV.html)
 - [HAS - morphine sulfate LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours (id_poso=15)](Bundle-HAS-15-Presc-Morphine.html)
-- [HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)](Bundle-HAS-24-Topiramate.html)
+- [HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l'ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)](Bundle-HAS-24-1-Topiramate.html)
+- [HAS - hydrocortisone 10 mg : 1 comprimé matin et 1 comprimé midi. En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à : 2 comprimés matin et 2 comprimés midi. En cas de fièvre > 40°C passer à : 2 comprimés matin, 2 comprimés midi et 2 comprimés à 16h. Avec un maximum de 6 comprimés par jour. QSP 6 mois (id_poso=30)](Bundle-HAS-30-1-Presc-Hydrocortisone.html)
+- [HAS - cetirizine 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire) (id_poso=30)](Bundle-HAS-30-2-Presc-Cetirizine.html)
 - [glucose 5%+sodium chlorure 2g+potassium chlorure 1g x 500mL, 1 à 10h et 22h sur 12h, pendant 5j](Bundle-Presc-MV-PerfGl-NaCl-KCl.html)
   - Note : Il s'agit de la prescription d'une perfusion préfabriquée, prête à l'emploi, d'un médicament associant deux électrolytes à du glucose 5%. C'est une association de substances. À la différence du médicament composé qui est un assemblage extemporané de médicaments simples.
 
@@ -65,20 +76,20 @@ Les niveaux de complexité supplémentaires adressent
     - 2/3 : 0.666667
     - 3/4 : 0.75
   - ***spécificité ville*** les doses rationelles doivent pouvoir être exprimées en toutes lettres dans la posologie textuelle (i.e. dans l'extension `renderedDosageInstruction`)
-    - [HAS - fluindione 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé) (id_poso=5)](Bundle-HAS-05-1-Presc-Fluindione.html)
+    - [HAS - fluindione 20 mg comprimé quadrisécable : 3/4 cpr par jour (trois-quart de comprimé) (id_poso=5a)](Bundle-HAS-05a-Presc-Fluindione.html)
 - les doses différentes entre horaires
   - [CLARADOL® 500 mg, 2 cpr à 7h et 1 cpr à 18h per os, pendant 5j](Bundle-Presc-CLARADOL-DoseDiffParHoraire.html)
   - [paracétamol, 1 g à 7h et 500 mg à 18h per os, pendant 5j](Bundle-Presc-Paracetamol-DoseEvolutive.html)
   - [HAS - hydrocortisone 10 mg comprimé: 20 mg à 8h et 10 mg à 12h (id_poso=20)](Bundle-HAS-20-Presc-Hydrocortisone.html)
 - les moments de prise en fonction du rythme nycthéméral et/ou des activités de la vie quotidienne et/ou d'événements externes
-  - [HAS - metformine 700 mg comprimé: 1 comprimé le matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)](Bundle-HAS-27-1-Metformine.html)
-  - [HAS - rifampicine 300 mg en gélule 2 gélules le matin 30 minutes avant le petit-déjeuner (id_poso=27)](Bundle-HAS-27-2-Rifampicine.html)
+  - [HAS - GLUCOPHAGE® 500 mg comprimé : 1 comprimé matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)](Bundle-HAS-27-1-presc-GLUCOPHAGE.html)
+  - [HAS - rifampicine 300 mg en gélule 2 gélules le matin 30 minutes avant le petit-déjeuner (id_poso=27)](Bundle-HAS-27-2-presc-Rifampicine.html)
   - Note: l'élément utilisé en FHIR (`when`) est associé à un vocabulaire limité et obligatoire. L'extension *FrAdditionalWhenValues* a été créée pour référencer les moments de prises les plus usuels qui ne sont pas dans le vocabulaire FHIR. Cependant, tous les moments de prise n'ont pas pu être listé. Dans le cas d'un moment de prise non présent dans le vocabulaire FHIR ni dans le vocabulaire associé à l'extension *FrAdditionalWhenValues*, le moment de prise est à exprimer en toutes lettres dans une partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`)
-    - [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention. (id_poso=28)](Bundle-HAS-28-Presc-Enoxaparine)
+    - [HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX®), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l'intervention chirurgicale. à poursuivre pendant 10 jours après l'intervention. (id_poso=28)](Bundle-HAS-28-Presc-LOVENOX)
 - les arrêts de prise en fonction d'un événement
-  - [HAS - enoxaparine sodique 6000 UI, solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible (id_poso=29)](Bundle-HAS-29-Presc-Enoxaparine.html)
+  - [HAS - enoxaparine sodique 6000 UI (LOVENOX®), solution injectable en seringue préremplie : 1 injection en SC par jour jusqu’à ce que l’INR soit dans la zone thérapeutique cible (id_poso=29)](Bundle-HAS-29-Presc-LOVENOX.html)
 - les fourchettes de doses
-  - [HAS - DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES (id_poso=4)](Bundle-HAS-04-2-Presc-DAFALGANCODEINE.html)
+  - [HAS - DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES (id_poso=4b)](Bundle-HAS-04b-Presc-DAFALGANCODEINE.html)
   - [HAS - cetirizine 10 mg : 1 à 4 comprimés par jour selon les symptômes (urticaire) (id_poso=30)](Bundle-HAS-30-2-Presc-Cetirizine.html)
 - les maximales autorisées par prise, par période et en durée
   - [HAS - CODOLIPRANE®: 1 comprimé si douleur, avec un maximum de 2 cp/prise, avec un maximum de 8 cp/jour, en respectant 4 heures minimales entre 2 prises (id_poso=14)](Bundle-HAS-14-1-Presc-CODOLIPRANE.html)
@@ -91,7 +102,7 @@ Les niveaux de complexité supplémentaires adressent
 - les fréquences inférieures à la journée
   - [CLARADOL® 500 mg, 1 cpr toutes les 6h per os, pendant 5j](Bundle-Presc-CLARADOL-TL6h-MedCodeableConcept.html)
   - [paracétamol, 500 mg toutes les 6 h per os, pendant 5j](Bundle-Presc-Paracetamol-TL6h.html)
-  - [HAS - paracetamol 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs (id_poso=4)](Bundle-HAS-04-1-Presc-Paracetamol.html)
+  - [HAS - paracetamol 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs (id_poso=4a)](Bundle-HAS-04a-Presc-Paracetamol.html)
   - [HAS - enoxoparine  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée (id_poso=12)](Bundle-HAS-12-3-Presc-Enoxaparine.html)
 - les fréquences calendaires
   - [CLARADOL® 500 mg, 1 cpr à 18h tous les mardis et vendredis, per os, pendant 3 mois](Bundle-Presc-CLARADOL-TLMardisVendredis.html)
@@ -111,8 +122,8 @@ Les niveaux de complexité supplémentaires adressent
 - les prescriptions conditionnelles simples
   - [CLARADOL® 500 mg, 1 cpr si douleur, 2 cpr max par prise, 6 cpr max par 24h, 4h délais min entre deux prises, pendant 5j](Bundle-Presc-CLARADOL-SiDouleur-MaxPrise-DelaisMin.html)
   - [paracétamol, 500 mg per os si douleur, 1 g max par prise, 3 g max par 24h, 4h délais min entre deux prises, pendant 5j](Bundle-Presc-Paracetamol-SiDouleur-MaxPrise-DelaisMin.html)
-  - [HAS - paracetamol 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs (id_poso=4)](Bundle-HAS-04-1-Presc-Paracetamol.html)
-  - [HAS - DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES (id_poso=4)](Bundle-HAS-04-2-Presc-DAFALGANCODEINE.html)
+  - [HAS - paracetamol 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs (id_poso=4a)](Bundle-HAS-04a-Presc-Paracetamol.html)
+  - [HAS - DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES (id_poso=4b)](Bundle-HAS-04b-Presc-DAFALGANCODEINE.html)
   - [HAS - paracetamol 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)(id_poso=7)](Bundle-HAS-07-Presc-Paracetamol.html)
   - [HAS - diazepam 10 mg comprimé bisécable (VALIUM®): 1 comprimé toutes les 6 heures - si agitation (id_poso=26)](Bundle-HAS-26-Diazepam.html)
 - les doses progessives ou dégressives par palier
@@ -128,7 +139,7 @@ Les niveaux de complexité supplémentaires adressent
 - l'expression d'une dose réelle pertinente à partir d'une dose théorique fonction de paramètres patient
   - [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Bundle-Presc-Capecitabine-Dose-Calculee.html)
   - ***spécifité ville*** La dose réélle pertinente (valeur aboslue) doit être la seule indiquée dans la partie structurée de la posologie. La dose théorique en fonction de paramètres patient (valeur relative) peut être exprimée dans une partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`)
-    - [HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-Tinzaparine.html)
+    - [HAS - INNOHEP® 14 000 UI anti-Xa/0,7 ml (tinzaparine sodique) solution injectable : 12 000UI anti-Xa (soit 170 UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-INNOHEP.html)
 - les modulation de doses
   - [HAS - NOVORAPID Flexpen® 100 UI / mL : A administrer avant chaque repas en fonction de la glycémie 6 U si glycémie entre 1,5 et 2 g/L​ 8 U si glycémie entre 2 et 2,5 g/L 10 U si glycémie supérieure à 2,5 g/L (id_poso=25)](Bundle-HAS-25-NOVORAPID.html)
   - [HAS - hydrocortisone 10 mg : 1 comprimé matin et 1 comprimé midi. En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à  : 2 comprimés matin et 2 comprimés le midi ou 2 comprimés matin, 2 comprimés le midi et 2 comprimés à 16h. Avec un maximum de 6 comprimés par jour. (id_poso=30)](Bundle-HAS-30-1-Presc-Hydrocortisone.html)
@@ -346,6 +357,8 @@ En R5 l'élément amount est renommé **totalVolume** pour lever toute ambiguit�
 - soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsDuration`si aucune date de début n'est mentionée
 - soit par `MedicationRequest.dosageInstruction.timing.repeat.bondsPeriod.end` si une date de début est mentionnée
 
+Voir exemple [HAS - hydrocortisone 10 mg : 1 comprimé matin et 1 comprimé midi. En cas de fièvre, de forte chaleur, d'infection, de diarrhée, de stress important, augmenter la quantité pour passer à : 2 comprimés matin et 2 comprimés midi. En cas de fièvre > 40°C passer à : 2 comprimés matin, 2 comprimés midi et 2 comprimés à 16h. Avec un maximum de 6 comprimés par jour. QSP 6 mois (id_poso=30)](Bundle-HAS-30-1-Presc-Hydrocortisone.html)
+
 #### Patchs
 
 ##### Propriétés du patch
@@ -361,15 +374,15 @@ Un patch est un médicament incluant un dispositif intégré garantissant
 
 Ces informations sont des propriétés du médicament prescrit.
 
-Elles s'expriment dans la ressource *Medication* référencée par l'élément medication qui décrit l'unité de médicament prescrit dans la ressource *MedicationRequest*.
+Soit elles font partie intégrante du médicament prescrit dans le cas d'une prescription en spécialité ou d'une prescription de médicament virtuel, soit s'expriment dans la ressource *Medication* référencée par l'élément medication qui décrit l'unité de médicament prescrit dans la ressource *MedicationRequest*.
 
 ##### Propriété de la dose
 
 La durée d'administration du patch est un choix du prescipteur.
 
-Il **DOIT** être exprimé en tant que tel au dénominateur de la dose prescrite, même si elle est identique à la durée maximale garantie par le dispositif intégré.
+Elle **DOIT** être exprimée en tant que telle dans les éléments `dosageInstruction.timing.repeat.duration` et `dosageInstruction.timing.repeat.durationUnit`, même si elle est identique à la durée maximale garantie par le dispositif intégré.
 
-Le guide d'implémentation n'assigne à la durée d'administration, aucune valeur par défaut qui serait particulière aux patchs.
+Voir exemple [HAS - EVRA® 203 µg/24h + 33,9µg/24h dispositif transdermique : Pendant 6 mois poser/remplacer un dispositif aux 1er, 8e et 15e jours du cycle ; La quatrième semaine à partir du 22ème jour est un intervalle libre sans dispositif transdermique (id_poso=11)](Bundle-HAS-11-2-Presc-EVRA.html)
 
 #### Dose calculée / dose prescrite
 
@@ -424,7 +437,7 @@ Ces deux valeurs de la dose prescrite sont transmises dans deux éléments doseA
 
 Voir exemple [capécitabine 1800 mg (1000 mg/m²), 7h et 18h per os, pendant 14j](Bundle-Presc-Capecitabine-Dose-Calculee.html)
 
-***spécifité ville*** La dose réélle pertinente (valeur absolue) doit être la seule indiquée dans la partie structurée de la posologie. La dose théorique en fonction de paramètres patient (valeur relative) peut être exprimée dans la partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`). Voir exemple [HAS - Tinzaparine sodique 10 000 UI anti-Xa/0,5 ml solution injectable : 12 000UI anti-Xa (soit 170UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-Tinzaparine.html)
+***spécifité ville*** La dose réélle pertinente (valeur absolue) doit être la seule indiquée dans la partie structurée de la posologie. La dose théorique en fonction de paramètres patient (valeur relative) peut être exprimée dans la partie textuelle (i.e. dans `MedicationRequest.dosageInstruction.additionalInstruction.text`). Voir exemple [HAS - INNOHEP® 14 000 UI anti-Xa/0,7 ml (tinzaparine sodique) solution injectable : 12 000UI anti-Xa (soit 170 UI anti-Xa /kg) , 1 fois/jour - voie sous-cutanée (id_poso=3)](Bundle-HAS-03-Presc-INNOHEP.html)
 
 **Note**:
 Il est tout à fait possible de prescrire plus simplement capécitabine 1000 mg/m², accompagnée de la `surface corporelle` (1,85 m²), voire seulement de la `taille` (1,75 m) et du `poids` (70 kg) du patient dans des ressources *Observation* référencées par `MedicationRequest.supportingInfoormation`.
