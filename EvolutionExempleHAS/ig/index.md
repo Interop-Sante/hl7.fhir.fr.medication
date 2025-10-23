@@ -83,7 +83,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2025-10-23T12:45:10+00:00",
+  "date" : "2025-10-23T14:53:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

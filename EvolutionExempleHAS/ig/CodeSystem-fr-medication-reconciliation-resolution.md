@@ -37,7 +37,7 @@ Le système de codage de la résolution d’une divergence sur une ligne de trai
   "title" : "code system Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-23T12:45:10+00:00",
+  "date" : "2025-10-23T14:53:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

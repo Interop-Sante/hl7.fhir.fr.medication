@@ -12,7 +12,7 @@
 La **prescription la plus simple**
 
 * en spécialité: [EFFERALGAN 1 000 mg, cpr, 1 à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-InLine-Presc-EFFERALGAN.md)
-* en DC: [paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-InLine-presc-Paracetamol.md)
+* en DC: [paracétamol, 1 g à 7h, 12h et 18h per os, pendant 5j](MedicationRequest-InLine-presc-Paracetamol1.md)
 
 La **délivrance la plus simple**
 

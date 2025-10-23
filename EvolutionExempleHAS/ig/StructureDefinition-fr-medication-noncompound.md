@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-noncom
   "title" : "FR Medication Non Compound",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-23T12:45:10+00:00",
+  "date" : "2025-10-23T14:53:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

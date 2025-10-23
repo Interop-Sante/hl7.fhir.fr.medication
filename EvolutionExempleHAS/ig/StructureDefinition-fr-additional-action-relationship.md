@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-additional-action
   "name" : "FrAdditionalActionRelationship",
   "title" : "Additional relatedAction relationship",
   "status" : "draft",
-  "date" : "2025-10-23T12:45:10+00:00",
+  "date" : "2025-10-23T14:53:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -48,7 +48,7 @@ Mapping from https://interopsante.org/pn13/SIPh_sexe to [http://hl7.org/fhir/adm
   "name" : "FrPN13FHIRGenderConceptMap",
   "title" : "Conversion PN13 FHIR des code de sexe administratif",
   "status" : "draft",
-  "date" : "2025-10-23T12:45:10+00:00",
+  "date" : "2025-10-23T14:53:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
