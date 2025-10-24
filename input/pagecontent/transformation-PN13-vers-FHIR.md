@@ -1,6 +1,6 @@
 ### Transformation PN13 vers FHIR
 
-La transformation de messages PN13 en ressources FHIR se fait à partir de *ConceptMap* indiquant la correspondance entre les éléments XML des messages PN13 et les attributs des ressources FHIR. Elle dépend de certains éléments du message PN13 (ex. nombre d'élément `Composant_prescrit`, présence d'élément `Elément_lié` pour la prescription) et dans le cas du sens PN13 vers FHIR de la préexistance des instances de ressources pour les ressources référencées (ex. *Patient*, *Practitioner*, *Encounter*).
+La transformation de messages PN13 en ressources FHIR se fait à partir de *ConceptMap* indiquant la correspondance entre les éléments XML des messages PN13 et les attributs des ressources FHIR. Elle dépend de certains éléments du message PN13 (ex. nombre d'élément `Composant_prescrit`, présence d'élément `Elément_lié` pour la prescription) et dans le cas du sens PN13 vers FHIR de la préexistence des instances de ressources pour les ressources référencées (ex. *Patient*, *Practitioner*, *Encounter*).
 
 #### La conciliation
 
@@ -9,7 +9,7 @@ Prévu pour une version ultérieure de ce guide.
 #### La prescription
 
 La traduction d'un message de prescription PN13 en ressources FHIR résulte en plusieurs ressources FHIR qui peuvent être constituées à l'aide des ressources *ConceptMap* fournies dans ce guide.
-La manière dont les ressources FHIR résultantes sont mises à disposition dépends du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de `_include` et de `_revInclude`). Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d'une recherche de prescription par identifiant (i.e. élément `groupIndentifier` cf. section suivante sur la notion de prescription multiligne) sous forme de *Bundle* de type `searchset`.
+La manière dont les ressources FHIR résultantes sont mises à disposition dépend du serveur FHIR (ex. operation spécifique pour la recherche de prescription par identifiant, mise en oeuvre de `_include` et de `_revInclude`). Pour des raisons de lisibilité, les exemples présentés en FHIR sont considérés comme le résultat d'une recherche de prescription par identifiant (i.e. élément `groupIndentifier` cf. section suivante sur la notion de prescription multiligne) sous forme de *Bundle* de type `searchset`.
 
 ##### La notion de prescription multiligne
 
@@ -67,7 +67,7 @@ Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Rens_com
 
 Dans le message PN13, à partir des sous-éléments de `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur` ou `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur` identifier si une ressource *Practioner* existe déjà:
 
-- S'il existe une ressource *Practictioner* correspondante, récupérer `Ppractitioner.id` pour alimenter `MedicationRequest.requester.reference`.
+- S'il existe une ressource *Practictioner* correspondante, récupérer `Practitioner.id` pour alimenter `MedicationRequest.requester.reference`.
 - S'il n'exite pas de ressource *Practitioner* correspondante:
   - Si l'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Id_prescripteur` est fourni, l'utiliser pour alimenter `MedicationRequest.requester.identifier.value` cf. ressource *ConceptMap* [PN13-FHIR-prescmed-practitioner-id-seul-conceptmap].
   - Si l'élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant` est fourni seul ou avec uniquement `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification`, utiliser `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Identifiant` pour alimenter `MedicationRequest.requester.identifier.value`et éventuellement `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Identification_prescripteur/Domaine_identification` pour alimenter `MedicationRequest.requester.identifier.system` en le transformant si nécessaire pour être au format uri accepté par FHIR.
@@ -76,8 +76,8 @@ Dans le message PN13, à partir des sous-éléments de `Message/M_Prescription_m
 ###### Medication
 
 - Pour chaque élément `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` dans le message PN13:
-  - si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d'information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament, il est possible d'utiliser le code du médicament soit dans `MedicationRequest.medicationCodeableConcept`(dans le cas d'un médicament simple) soit dans `Medication.ingredient.itemCodeableConcept` (dans le cas d'un médicament composé cf. item 2) ou de créer une ressource *Medication* pour ce médicament (cf. item suivant sur la création de la ressource *Medication*);
-  - si le composant prescrit porte des information complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l'information isVehicule...) une ressource *Medication* **DOIT** être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationnoncompound-conceptmap]. 
+  - si le composant prescrit (prescrit en spécialité ou en DC) ne porte pas d'informations complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament, il est possible d'utiliser le code du médicament soit dans `MedicationRequest.medicationCodeableConcept`(dans le cas d'un médicament simple) soit dans `Medication.ingredient.itemCodeableConcept` (dans le cas d'un médicament composé cf. item 2) ou de créer une ressource *Medication* pour ce médicament (cf. item suivant sur la création de la ressource *Medication*);
+  - si le composant prescrit porte des informations complémentaires aux informations présentes dans le Référentiel Unique d'Interopérabilité du Médicament (ex. la forme pour un médicament prescrit en DC, l'information isVehicule...) une ressource *Medication* **DOIT** être créée en suivant le profil [fr-medication-noncompound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationnoncompound-conceptmap]. 
 - Si le message PN13 comporte plusieurs éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` créer une ressource *Medication* suivant le profil [fr-medication-compound] en utilisant la ressource *ConceptMap* [PN13-FHIR-prescmed-medicationcomp-conceptmap] :
   - qui référence chaque ressource créée à partir des éléments `Message/M_Prescription_médicaments/Prescription/Elément_prescr_médic/Composant_prescrit` via `Medication.ingredient.itemReference.reference`;
   - qui indique le code du médicament via `Medication.ingredient.itemCodeableConcept`. 

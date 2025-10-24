@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: PARACETAMOL 1000 mg comprimé: 1 comprimé,  3 prises par jour, espacés d’au moins 4 heures."
 * medicationCodeableConcept = $Medicabase#MV00002414 "PARACETAMOL 1000 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.frequency = 3
 * dosageInstruction.timing.repeat.period = 1

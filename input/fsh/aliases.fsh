@@ -25,7 +25,7 @@ Alias: $FrCoreEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-cor
 Alias: $FrCorePractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner
 Alias: $FrCorePractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role
 Alias: $FrCorePatient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient
-Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins
+Alias: $FrCorePatientINS = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins 
 Alias: $FrCoreRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person
 
 // Mapping PN13 aliases

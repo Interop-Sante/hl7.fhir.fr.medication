@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: RACECADOTRIL 100 mg gélule: 1 gélule 3 fois par jour au début de chaque repas. A poursuivre tant que la diarrhée persiste avec un maximum de 7 jours."
 * medicationCodeableConcept = $Medicabase#MV00000139 "RACECADOTRIL 100 mg gélule"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "A poursuivre tant que la diarrhée persiste"
 * dosageInstruction.timing.repeat.countMax = 21

@@ -32,6 +32,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: ENOXAPARINE  4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie : 1 seringue, 1 fois toutes les 12 heures - voie sous-cutanée"
 * medicationReference.reference = "#medication-HAS-12-3-Presc-Enoxaparine"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 12

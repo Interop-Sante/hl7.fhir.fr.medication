@@ -1,11 +1,11 @@
-Instance: HAS-05-2-Presc-ACTISKENAN
+Instance: HAS-05b-Presc-ACTISKENAN
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
 Description: "ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours"
 * type = #searchset
-* entry.resource = medicationrequest-HAS-5-2-Presc-ACTISKENAN
+* entry.resource = medicationrequest-HAS-5b-Presc-ACTISKENAN
 
-Instance: medicationrequest-HAS-5-2-Presc-ACTISKENAN
+Instance: medicationrequest-HAS-5b-Presc-ACTISKENAN
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)
@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: ACTISKENAN® 10 mg gélule : dix milligrammes par jour pendant sept jours"
 * medicationCodeableConcept = $UCD#3400892083926 "ACTISKENAN 10MG GELU"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.boundsDuration.value = 7
 * dosageInstruction.timing.repeat.boundsDuration.unit = "jour"

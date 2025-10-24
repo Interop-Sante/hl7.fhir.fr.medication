@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: DESLORATADINE 5 mg comprimé 1 comprimé « 1 à  2 fois par jour » en fonction de la gêne allergique"
 * medicationCodeableConcept = $Medicabase#MV00000161 "DESLORATADINE 5 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.additionalInstruction.text = "en fonction de la gêne allergique"
 * dosageInstruction.timing.repeat.frequency = 1

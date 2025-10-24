@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
 * medicationCodeableConcept = $Medicabase#MV00000557 "PARACETAMOL 500 mg gélule"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.asNeededCodeableConcept = $sct#22253000 "douleur"
 * dosageInstruction.asNeededCodeableConcept.text = "Si douleurs"

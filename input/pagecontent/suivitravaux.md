@@ -1,5 +1,23 @@
 ### Suivi des versions
 
+#### Version 1.2 - Prochaine version prévue
+
+##### La conciliation v1.2
+
+Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR et la prise en compte du  [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med) pour l'analyse pharmaceutique.
+
+#### Version 1.1 - Version en cours
+
+##### La prescription v1.1
+
+Les travaux du GT PN13 - FHIR sur la prescription se sont déroulés de janvier 2024 à septembre 2025
+La concertation publique a lieu du XXX au XXX
+Ils ont portés sur:
+Le mapping des données PN13 - FHIR
+L’intégration des extensions FrIsVehicle et  FrBasisOfDoseComponent dans les profils
+Prise en compte du [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med)
+Le prise en compte des travaux de la HAS sur la structuration de la posologie
+
 #### Version 1.0 - Version Initiale publiée en janvier 2022
 
 ##### La conciliation v1.0
@@ -32,24 +50,122 @@ Toute remarque, commentaire ou suggestion est bienvenu sur la [mailing list PN13
 
 La communauté SIPh met à disposition les travaux préliminaires qu'elle entreprend sur la dispensation dans le cadre de la prise en charge médicamenteuse en DC.
 
-#### Version 1.1 - Version en cours
-
-##### La prescription v1.1
-
-Les travaux du GT PN13 - FHIR sur la prescription se sont déroulés de janvier 2024 à XXX
-La concertation publique a eu lieu du XXX au XXX
-Ils ont portés sur:
-Le mapping des données PN13 - FHIR
-L’intégration des extensions FrIsVehicle et  FrBasisOfDoseComponent dans les profils
-Prise en compte du [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med)
-
-#### Version 1.2 - Prochaine version prévue
-
-##### La conciliation v1.2
-
-Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR et la prise en compte du  [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med) pour la conciliation.
 
 #### Liste des contributeurs
+
+##### Version 1.1
+
+- Lifen
+  - Manuel Metz
+- Phast
+  - Guillame Arras
+  - Julien Montreuil
+  - Michel Blondel
+- UseShare
+  - Anne Maheust
+  - François Macary
+- Posos
+  - Eliott Toutois
+  - Pierre Luce
+  - Eric Ros
+- ANS
+  - Nicolas Riss
+  - Yann Briand
+  - Isabelle Gibaud
+  - Abdelali Boussadi
+  - Yohann Poiron
+  - Alain Perié
+  - Elisabeth Serrot-Damalte
+- Enovacom
+  - Georges-Alexandre Chastin
+- Vidal
+  - Cloé Demars
+  - Alexandre Frérot
+  - Marine Rodriguez
+  - Frédéric Doc
+  - Thierry Mitouard
+- HAS
+  - Mirojane Mohammad
+  - Pierre Liot
+  - Julie Marc
+  - Philippe Zimmerman
+- Dedalus
+  - Mathieu Grivois
+  - Vincent Gagnaire
+  - Jean-Christophe Cauvin
+- Kereval
+  - Tristan Rieu
+  - Fanny Serre
+  - Sarah Leroy
+  - Alain Ribault
+  - Nolween Lebuhan
+- APHP
+  - David Ouagne
+  - Malek Mouazier
+  - Catherine Duclos
+  - Benoit Tissot
+- Bimedoc
+  - Aymeric Boffa
+- CHU de Toulouse
+  - Paul Ortéga
+- Incare
+  - Samuel Simeon
+- Cegisanté
+  - Pascal André
+- CHU de Rennes
+  - Frédéric Laurent
+  - Denis Delamarre
+  - Baptiste Guilbert
+  - Baptiste Houede
+- CNOP
+  - Patrick Mazaud
+- Selic
+  - Eric Dufour
+- Ordoclic
+  - Maxime Guerreiro
+- Xperis
+  - Alexandre Grosbois
+  - Jean-Daniel Larcheveque
+- Evolucare
+  - Jean-Michel Estrade
+- Magellan Consulting
+  - Cassandre Piraud
+- Maincare
+  - Emmanuel Delvas
+- APHM
+  - Marjorie Roudot
+- Normand'e-Santé
+  - Thomas Hacquet
+- Unicancer
+  - Claire Fournier
+  - Paloma Mouyade
+- Bowmedical
+  - Alexandre Petit
+- CH Tours
+  - Julie Jalleau
+- CHU Nantes
+  - Julien Moynard
+- Collective Thinking
+  - Lucy Laporte
+- Galeon
+  - Loïc Brotons
+- MaPUI
+  - Nawra Georgi
+- Nammu Lab
+  - Christophe Brucker
+- Pharmia
+  - Mathilde Carca
+- Santé Service Bayonne
+  - Thierry Morvan
+- Softway medical
+  - William Degryse
+- Synapse
+  - Charlotte Reby
+  - Théo Cervera
+- Urbansih
+  - Damien Mazoyer
+- Xtrem Santé
+  - Yohann Poiron
 
 ##### Version 1.0
 
@@ -82,109 +198,3 @@ Les prochains travaux prévus sur l’IG portent sur la mapping des données PN1
 - Clara Subts - Dedalus
 - Clotaire Thocquenne - Evolucare
 
-##### Version 1.1
-
-- Lifen
-  - Manuel Metz
-- Phast
-  - Guillame Arras
-  - Julien Montreuil
-  - Michel Blondel
-- Posos
-  - Eliott Toutois
-  - Pierre Luce
-  - Eric Ros
-- UseShare
-  - Anne Maheust
-  - François Macary
-- ANS
-  - Nicolas Riss
-  - Yann Briand
-  - Isabelle Gibaud
-  - Abdelali Boussadi
-  - Yohann Poiron
-  - Alain Perié
-  - Elisabeth Serrot-Damalte
-- Enovacom
-  - Georges-Alexandre Chastin
-- Vidal
-  - Alexandre Frérot
-  - Cloé Demars
-  - Marine Rodriguez
-  - Frédéric Doc
-  - Thierry Mitouard
-- HAS
-  - Mirojane Mohammad
-  - Pierre Liot
-  - Julie Marc
-  - Philippe Zimmerman
-- Kereval
-  - Tristan Rieu
-  - Sarah Leroy
-  - Fanny Serre
-  - Nolween Lebuhan
-  - Alain Ribault
-- APHP
-  - David Ouagne
-  - Malek Mouazier
-  - Catherine Duclos
-  - Benoit Tissot
-- Dedalus
-  - Mathieu Grivois
-  - Vincent Gagnaire
-  - Jean-Christophe Cauvin
-- Bimedoc
-  - Aymeric Boffa
-- Incare
-  - Samuel Simeon
-- Cegisanté
-  - Pascal André
-- CHU de Rennes
-  - Frédéric Laurent
-  - Denis Delamarre
-  - Baptiste Guilbert
-  - Baptiste Houede
-- CHU de Toulouse
-  - Paul Ortéga
-- CNOP
-  - Patrick Mazaud
-- Selic
-  - Eric Dufour
-- Ordoclic
-  - Maxime Guerreiro
-- Xperis
-  - Alexandre Grosbois
-  - Jean-Daniel Larcheveque
-- Evolucare
-  - Jean-Michel Estrade
-- Magellan Consulting
-  - Cassandre Piraud
-- Maincare
-  - Emmanuel Delvas
-- APHM
-  - Marjorie Roudot
-- Normand'e-Santé
-  - Thomas Hacquet
-- Unicancer
-  - Claire Fournier
-  - Paloma Mouyade
-- Bowmedical
-  - Alexandre Petit
-- Collective Thinking
-  - Lucy Laporte
-- Galeon
-  - Loïc Brotons
-- MaPUI
-  - Nawra Georgi
-- Nammu Lab
-  - Christophe Brucker
-- Pharmia
-  - Mathilde Carca
-- Santé Service Bayonne
-  - Thierry Morvan
-- Softway medical
-  - William Degryse
-- Urbansih
-  - Damien Mazoyer
-- Xtrem Santé
-  - Yohann Poiron

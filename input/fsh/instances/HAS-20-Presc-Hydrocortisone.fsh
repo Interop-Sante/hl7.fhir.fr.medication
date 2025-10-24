@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: HYDROCORTISONE 10 mg comprimé: 20 mg à 8h et 10 mg à 12h"
 * medicationCodeableConcept = $Medicabase#MV00000089 "HYDROCORTISONE 10 mg comprimé"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction[0].timing.repeat.timeOfDay = "08:00:00"
 * dosageInstruction[=].doseAndRate.doseQuantity = 20 $unitsofmeasure#mg "mg"

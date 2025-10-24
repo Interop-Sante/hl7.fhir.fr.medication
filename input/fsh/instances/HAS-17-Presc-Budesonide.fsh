@@ -1,7 +1,14 @@
 Instance: HAS-17-Presc-Budesonide
 InstanceOf: fr-prescription-bundle-for-example
 Usage: #example
-Description: "Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
+Description: "BUDESONIDE  1mg/2mL, suspension pour inhalation par nébuliseur en récipient unidose 
+1 récipient unidose de 1 mg 4 fois par jour selon les modalités d'administration  suivantes : 
+
+Préparation pour nébuliseur ultrasonique : 
+     - 3 mL Eau Pour Préparation Injectable 
+     - 1 récipient unidose (soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur
+
+A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
 * type = #searchset
 * entry.resource = medicationrequest-HAS-17-Presc-Budesonide
 
@@ -9,13 +16,21 @@ Instance: medicationrequest-HAS-17-Presc-Budesonide
 InstanceOf: fr-medicationrequest
 Usage: #inline
 * meta.profile = Canonical(fr-medicationrequest)
-* extension[renderedDosageInstruction].valueMarkdown = "A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
+* extension[renderedDosageInstruction].valueMarkdown = "A administrer en 20 min à 8h, 14h, 18h, et 22h"
 * status = #active
 * intent = #order
 * priority = #routine
-* note.text = "Prescription textuelle: Préparation pour nébuliseur ultrasonique: 1 récipient unidose (soit 2 mL de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur à compléter par de l’eau pour préparation injectable si nécessaire en fonction du modèle de nébuliseur. A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
+* note.text = "Prescription textuelle: BUDESONIDE  1mg/2mL, suspension pour inhalation par nébuliseur en récipient unidose 
+1 récipient unidose de 1 mg 4 fois par jour selon les modalités d'administration  suivantes : 
+
+Préparation pour nébuliseur ultrasonique : 
+     - 3 mL Eau Pour Préparation Injectable 
+     - 1 récipient unidose (soit 2 mL) de BUDESONIDE  1mg/2mL) suspension pour inhalation par nébuliseur
+
+A administrer en 20 min à 8h, 14h, 18h, et 22h à partir du 16/03/2023"
 * medicationCodeableConcept = $Medicabase#MV00004231 "Budésonide 1 mg/2 ml (0,5 mg/ml) suspension pour inhalation par nébuliseur en récipient unidose"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2023-03-16"
 * dosageInstruction.timing.repeat.duration = 20

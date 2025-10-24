@@ -37,13 +37,12 @@ Usage: #inline
 * dosageInstruction.sequence = 1
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2021-07-29T16:14:00Z"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2021-08-06T16:13:59Z"
+* dosageInstruction.timing.repeat.duration = 72
+* dosageInstruction.timing.repeat.durationUnit = #h
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 72
 * dosageInstruction.timing.repeat.periodUnit = #h
 * dosageInstruction.timing.repeat.timeOfDay = "07:00:00"
 * dosageInstruction.route = $EDQM#20070000 "Voie transdermique"
 * dosageInstruction.route.text = "Voie transdermique"
-* dosageInstruction.doseAndRate.doseQuantity.value = 1
-* dosageInstruction.doseAndRate.doseQuantity.unit = "Patch"
-* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
-* dosageInstruction.doseAndRate.doseQuantity.code = #15036000
+* dosageInstruction.doseAndRate.doseQuantity = 1 $EDQM#15036000 "patch"

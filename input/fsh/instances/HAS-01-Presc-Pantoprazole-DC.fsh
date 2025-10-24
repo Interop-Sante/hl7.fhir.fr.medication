@@ -28,6 +28,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: PANTOPRAZOLE 40 mg comprimé: 40 mg le soir"
 * medicationReference.reference = "#medication-HAS-1-Presc-Pantoprazole-DC"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.when = #EVE
 * dosageInstruction.doseAndRate.doseQuantity.value = 40

@@ -16,6 +16,7 @@ Usage: #inline
 * note.text = "Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"
 * medicationCodeableConcept = $Medicabase#MV00001636 "MORPHINE LP 10mg gélule microgranulé à libération prolongée"
 * subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
 * requester.reference = "Practitioner/smart-Practitioner-71482713"
 * dosageInstruction.timing.repeat.boundsDuration = 8 $unitsofmeasure#d "jour"
 * dosageInstruction.timing.repeat.timeOfDay = "20:00:00"
