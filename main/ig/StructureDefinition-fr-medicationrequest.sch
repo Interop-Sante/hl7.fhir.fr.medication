@@ -14,6 +14,7 @@
     <sch:rule context="f:MedicationRequest">
       <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent']) &lt;= 1">extension with URL = 'https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:authoredOn) &gt;= 1">authoredOn: minimum cardinality of 'authoredOn' is 1</sch:assert>
       <sch:assert test="count(f:requester) &gt;= 1">requester: minimum cardinality of 'requester' is 1</sch:assert>
       <sch:assert test="count(f:dosageInstruction) &gt;= 1">dosageInstruction: minimum cardinality of 'dosageInstruction' is 1</sch:assert>
     </sch:rule>

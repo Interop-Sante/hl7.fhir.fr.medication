@@ -1,0 +1,167 @@
+# Presc-Betamethasone-ApplCut - Guide d'implémentation du médicament v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Presc-Betamethasone-ApplCut**
+
+## Example Bundle: Presc-Betamethasone-ApplCut
+
+Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
+
+Bundle Presc-Betamethasone-ApplCut de type searchset
+
+-------
+
+Entry 1
+
+Ressource Medication :
+
+> 
+
+Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
+
+**code**:BETAMETHASONE
+
+-------
+
+Entry 2
+
+Ressource MedicationRequest :
+
+> 
+
+Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
+
+**groupIdentifier**:`https://somehospital.fr/Prescrption-ID`/Presc-14620**status**: Active**intent**: Order**priority**: Routine**subject**:[Patient/14602](Patient/14602)**authoredOn**: 2021-07-13 08:48:39+0000**requester**:[Practitioner/smart-Practitioner-71482713](Practitioner/smart-Practitioner-71482713)
+> **dosageInstruction****sequence**: 1**timing**: Once**route**:Voie cutanée
+
+### DoseAndRates
+
+| | |
+| :--- | :--- |
+| - | **Dose[x]** |
+| * | 1 Appln |
+
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "Presc-Betamethasone-ApplCut",
+  "meta" : {
+    "profile" : [
+      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    ]
+  },
+  "type" : "searchset",
+  "entry" : [
+    {
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "medication-Presc-Betamethasone-ApplCut",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-Presc-Betamethasone-ApplCut\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-Presc-Betamethasone-ApplCut</b></p><a name=\"medication-Presc-Betamethasone-ApplCut\"> </a><a name=\"hcmedication-Presc-Betamethasone-ApplCut\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091947}\">BETAMETHASONE</span></p><p><b>amount</b>: 0.5 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/ g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span></p></div>"
+        },
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+              "code" : "100000091947",
+              "display" : "bétaméthasone"
+            }
+          ],
+          "text" : "BETAMETHASONE"
+        },
+        "amount" : {
+          "numerator" : {
+            "value" : 0.5,
+            "unit" : "mg",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mg"
+          },
+          "denominator" : {
+            "unit" : "g",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "g"
+          }
+        }
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "id" : "medicationrequest-Presc-Betamethasone-ApplCut",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-Betamethasone-ApplCut\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-Betamethasone-ApplCut</b></p><a name=\"medicationrequest-Presc-Betamethasone-ApplCut\"> </a><a name=\"hcmedicationrequest-Presc-Betamethasone-ApplCut\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#edication-Presc-Betamethasone-ApplCut</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-13 08:48:39+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14620</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20003000}\">Voie cutanée</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Appln</td></tr></table></blockquote></div>"
+        },
+        "status" : "active",
+        "intent" : "order",
+        "priority" : "routine",
+        "medicationReference" : {
+          "reference" : "#edication-Presc-Betamethasone-ApplCut"
+        },
+        "subject" : {
+          "reference" : "Patient/14602"
+        },
+        "authoredOn" : "2021-07-13T08:48:39.825Z",
+        "requester" : {
+          "reference" : "Practitioner/smart-Practitioner-71482713"
+        },
+        "groupIdentifier" : {
+          "system" : "https://somehospital.fr/Prescrption-ID",
+          "value" : "Presc-14620"
+        },
+        "dosageInstruction" : [
+          {
+            "sequence" : 1,
+            "timing" : {
+              "repeat" : {
+                "boundsPeriod" : {
+                  "start" : "2021-07-13T08:48:00Z",
+                  "end" : "2021-07-18T08:47:59Z"
+                },
+                "timeOfDay" : ["08:00:00"]
+              }
+            },
+            "route" : {
+              "coding" : [
+                {
+                  "system" : "http://standardterms.edqm.eu",
+                  "code" : "20003000",
+                  "display" : "Voie cutanée"
+                }
+              ],
+              "text" : "Voie cutanée"
+            },
+            "doseAndRate" : [
+              {
+                "doseQuantity" : {
+                  "value" : 1,
+                  "unit" : "Appln"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```
