@@ -1,118 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Historique des travaux - Guide d&#39;implémentation du médicament v0.1.0</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Historique des travaux - Guide d'implémentation du médicament v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
-<link href="assets/css/hl7fr.css" rel="stylesheet"/>
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7fr.css"/>
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"24"}
-    h3,h4,h5,h6{--heading-prefix:"24"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"25"}
+    h3,h4,h5,h6{--heading-prefix:"25"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 <div id="project-nav">
-  <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
+  <a no-external="true" id="hl7-logo" href="http://interopsante.org/"><img src="assets/images/IS_LOGO.png" alt="Interop'Santé Logo" height="50"/></a>
 </div>
 
 <div id="family-nav">
-  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
 </div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Guide d&#39;implémentation du médicament</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d'implémentation du médicament</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="conciliation-Intro.html">Introdution</a>
-      </li>
-      <li>
-        <a href="conciliation-VueEnsemble.html">Vue d&apos;ensemble</a>
-      </li>
-      <li>
-        <a href="conciliation-CasUsage.html">Cas d&apos;usage</a>
-      </li>
-      <li>
-        <a href="conciliation-Ressources.html">Ressources</a>
-      </li>
-      <li>
-        <a href="conciliation-Implementation.html">Implémentation</a>
-      </li>
-      <li>
-        <a href="conciliation-Exemples.html">Exemples</a>
-      </li>
-    </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Prescription
@@ -123,22 +102,13 @@
         <a href="prescription-Intro.html">Introduction</a>
       </li>
       <li>
-        <a href="prescription-VueEnsemble.html">Vue d&apos;ensemble</a>
+        <a href="prescription-VueEnsemble.html">Vue d'ensemble</a>
       </li>
       <li>
-        <a href="prescription-CasUsage.html">Cas d&apos;usage</a>
-      </li>
-      <li>
-        <a href="prescription-Ressources.html">Ressources</a>
-      </li>
-      <li>
-        <a href="prescription-Implementation.html">Implémentation</a>
+        <a href="prescription-CasUsage.html">Cas d'usage</a>
       </li>
       <li>
         <a href="prescription-Exemples.html">Exemples</a>
-      </li>
-      <li>
-        <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>
       </li>
     </ul>
   </li>
@@ -151,7 +121,7 @@
         <a href="dispensation-Intro.html">Introduction</a>
       </li>
       <li>
-        <a href="dispensation-RessourceMedicationDispense.html">Ressource *MedicationDispense*</a>
+        <a href="dispensation-RessourceMedicationDispense.html">Ressource MedicationDispense</a>
       </li>
       <li>
         <a href="dispensation-DelivrancePlusSimple.html">La délivrance la plus simple</a>
@@ -161,6 +131,28 @@
       </li>
       <li>
         <a href="dispensation-Discussion.html">Discussion</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conciliation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conciliation-Intro.html">Introdution</a>
+      </li>
+      <li>
+        <a href="conciliation-VueEnsemble.html">Vue d'ensemble</a>
+      </li>
+      <li>
+        <a href="conciliation-CasUsage.html">Cas d'usage</a>
+      </li>
+      <li>
+        <a href="conciliation-Implementation.html">Implémentation</a>
+      </li>
+      <li>
+        <a href="conciliation-Exemples.html">Exemples</a>
       </li>
     </ul>
   </li>
@@ -180,6 +172,28 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l315">​</a>
+        <a href="PN13-exemples-Intro.html">Inroduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-DC.html">Prescription PN13 médicament simple en DC</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-specialite.html">Prescription PN13 médicament simple en spécialité</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-compound.html">Prescription PN13 médicament composite</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
@@ -195,34 +209,44 @@
         <a href="downloads.html">Téléchargements et usages</a>
       </li>
       <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://hl7.fr">Site HL7 </a>
+        <a href="https://hl7.fr" target="_blank">Site HL7 </a>
       </li>
     </ul>
   </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Historique des travaux</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Historique des travaux</b></li>
+
+          <span style="float:right;">
+
+            <a href="downloads.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="artifacts.html">next&gt;</a>
+
+          </span>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
@@ -234,7 +258,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d'implémentation du médicament - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://hl7.fr/fhir/fr/medication/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">Guide d'implémentation du médicament - version de développement local (v0.1.0) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://hl7.fr/ig/fhir/medication/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
   <h2>Historique des travaux</h2>
   
 
@@ -249,51 +273,45 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-    <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#suivi-des-versions" id="markdown-toc-suivi-des-versions">Suivi des versions</a>    <ul>
-      <li><a href="#version-10---version-initiale-publiée-en-janvier-2022" id="markdown-toc-version-10---version-initiale-publiée-en-janvier-2022">Version 1.0 - Version Initiale publiée en janvier 2022</a>        <ul>
-          <li><a href="#la-conciliation-v10" id="markdown-toc-la-conciliation-v10">La conciliation v1.0</a></li>
-          <li><a href="#la-prescription-v10" id="markdown-toc-la-prescription-v10">La prescription v1.0</a></li>
-          <li><a href="#la-dispensation-v10" id="markdown-toc-la-dispensation-v10">La dispensation v1.0</a></li>
-        </ul>
-      </li>
-      <li><a href="#version-11---version-en-cours" id="markdown-toc-version-11---version-en-cours">Version 1.1 - Version en cours</a>        <ul>
-          <li><a href="#la-prescription-v11" id="markdown-toc-la-prescription-v11">La prescription v1.1</a></li>
-        </ul>
-      </li>
-      <li><a href="#version-12---prochaine-version-prévue" id="markdown-toc-version-12---prochaine-version-prévue">Version 1.2 - Prochaine version prévue</a>        <ul>
-          <li><a href="#la-conciliation-v12" id="markdown-toc-la-conciliation-v12">La conciliation v1.2</a></li>
-        </ul>
-      </li>
-      <li><a href="#liste-des-contributeurs" id="markdown-toc-liste-des-contributeurs">Liste des contributeurs</a>        <ul>
-          <li><a href="#version-10" id="markdown-toc-version-10">Version 1.0</a></li>
-          <li><a href="#version-11" id="markdown-toc-version-11">Version 1.1</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
-<h1 id="suivi-des-versions">Suivi des versions</h1>
+<h3 id="suivi-des-versions">Suivi des versions</h3>
 
-<h2 id="version-10---version-initiale-publiée-en-janvier-2022">Version 1.0 - Version Initiale publiée en janvier 2022</h2>
+<h4 id="version-12---prochaine-version-prévue">Version 1.2 - Prochaine version prévue</h4>
 
-<h3 id="la-conciliation-v10">La conciliation v1.0</h3>
+<h5 id="la-conciliation-v12">La conciliation v1.2</h5>
+
+<p>Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR et la prise en compte du  <a href="https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med">Référentiel Unique d’Interopérabilité du Médicament</a> pour l’analyse pharmaceutique.</p>
+
+<h4 id="version-11---version-en-cours">Version 1.1 - Version en cours</h4>
+
+<h5 id="la-prescription-v11">La prescription v1.1</h5>
+
+<p>Les travaux du GT PN13 - FHIR sur la prescription se sont déroulés de janvier 2024 à septembre 2025
+La concertation publique a lieu du XXX au XXX
+Ils ont portés sur:
+Le mapping des données PN13 - FHIR
+L’intégration des extensions FrIsVehicle et  FrBasisOfDoseComponent dans les profils
+Prise en compte du <a href="https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med">Référentiel Unique d’Interopérabilité du Médicament</a>
+Le prise en compte des travaux de la HAS sur la structuration de la posologie</p>
+
+<h4 id="version-10---version-initiale-publiée-en-janvier-2022">Version 1.0 - Version Initiale publiée en janvier 2022</h4>
+
+<h5 id="la-conciliation-v10">La conciliation v1.0</h5>
 
 <p>Les travaux ont été initiés au sein de la communauté SIPh le 13 septembre 2018. Ils ont produit la version initiale des ressources dédiées à la conciliation. Le détail du suivi des travaux est consultable sur le <a href="https://siph.phast.fr/gt-fhir-prise-en-charge-medicamenteuse-du-patient/">site de la communauté SIPh</a>. Fin 2020, le fruit de ces travaux a été dévolu à l’association InterOp’Santé pour qu’elle en assure la promotion, le développement et la maintenance.
 Les ressources publiées sont au statut draft, en attente de retours des premières implémentations.</p>
 
-<h3 id="la-prescription-v10">La prescription v1.0</h3>
+<h5 id="la-prescription-v10">La prescription v1.0</h5>
 
 <p>Les travaux ont été initiés également au sein de la communauté SIPh en 2019. Mais ils n’ont pas abouti à un premier niveau de ressources FHIR livrables.
 En 2021 le groupe Pharmacie d’InterOp’Santé a repris le projet pour aboutir à un profilage de la ressource MedicationRequest et de la ressource Medication adpaté à la prescription en DC et en spécialité identifiée par le code UCD.
 Cette première version, en date du 31 janvier 2022, voit ses ressources publiées au statut draft, en attente de retours des premières implémentations.
 Toute remarque, commentaire ou suggestion est bienvenu sur la <a href="https://groups.google.com/g/pn13-is---interopsante">mailing list PN13-FHIR</a> animée par InterOp’Santé.</p>
 
-<h4 id="déroulé-des-travaux">Déroulé des travaux</h4>
+<h6 id="déroulé-des-travaux">Déroulé des travaux</h6>
 
 <ul>
   <li>Le 16 août 2021, une version préliminaire est mise en concertation.</li>
@@ -314,37 +332,253 @@ Toute remarque, commentaire ou suggestion est bienvenu sur la <a href="https://g
       </li>
       <li>Le 31 janvier 2022, la version draft finalel est publiée.
         <ul>
-          <li>L’étude d’un seul profil slicé de la ressource Medication n’a pas abouti à une solution valide (voir la page <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>).</li>
+          <li><a name="l574">​</a>L’étude d’un seul profil slicé de la ressource Medication n’a pas abouti à une solution valide (voir la page <a href="prescription-EtudeComplementaire.html">Etude complémentaire</a>).</li>
         </ul>
       </li>
     </ul>
   </li>
 </ul>
 
-<h3 id="la-dispensation-v10">La dispensation v1.0</h3>
+<h5 id="la-dispensation-v10">La dispensation v1.0</h5>
 
 <p>La communauté SIPh met à disposition les travaux préliminaires qu’elle entreprend sur la dispensation dans le cadre de la prise en charge médicamenteuse en DC.</p>
 
-<h2 id="version-11---version-en-cours">Version 1.1 - Version en cours</h2>
+<h4 id="liste-des-contributeurs">Liste des contributeurs</h4>
 
-<h3 id="la-prescription-v11">La prescription v1.1</h3>
+<h5 id="version-11">Version 1.1</h5>
 
-<p>Les travaux du GT PN13 - FHIR sur la prescription se sont déroulés de janvier 2024 à XXX
-La concertation publique a eu lieu du XXX au XXX
-Ils ont portés sur:
-Le mapping des données PN13 - FHIR
-L’intégration des extensions FrIsVehicle et  FrBasisOfDoseComponent dans les profils
-Prise en compte du <a href="https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med">Référentiel Unique d’Interopérabilité du Médicament</a></p>
+<ul>
+  <li>Lifen
+    <ul>
+      <li>Manuel Metz</li>
+    </ul>
+  </li>
+  <li>Phast
+    <ul>
+      <li>Guillame Arras</li>
+      <li>Julien Montreuil</li>
+      <li>Michel Blondel</li>
+    </ul>
+  </li>
+  <li>UseShare
+    <ul>
+      <li>Anne Maheust</li>
+      <li>François Macary</li>
+    </ul>
+  </li>
+  <li>Posos
+    <ul>
+      <li>Eliott Toutois</li>
+      <li>Pierre Luce</li>
+      <li>Eric Ros</li>
+    </ul>
+  </li>
+  <li>ANS
+    <ul>
+      <li>Nicolas Riss</li>
+      <li>Yann Briand</li>
+      <li>Isabelle Gibaud</li>
+      <li>Abdelali Boussadi</li>
+      <li>Yohann Poiron</li>
+      <li>Alain Perié</li>
+      <li>Elisabeth Serrot-Damalte</li>
+    </ul>
+  </li>
+  <li>Enovacom
+    <ul>
+      <li>Georges-Alexandre Chastin</li>
+    </ul>
+  </li>
+  <li>Vidal
+    <ul>
+      <li>Cloé Demars</li>
+      <li>Alexandre Frérot</li>
+      <li>Marine Rodriguez</li>
+      <li>Frédéric Doc</li>
+      <li>Thierry Mitouard</li>
+    </ul>
+  </li>
+  <li>HAS
+    <ul>
+      <li>Mirojane Mohammad</li>
+      <li>Pierre Liot</li>
+      <li>Julie Marc</li>
+      <li>Philippe Zimmerman</li>
+    </ul>
+  </li>
+  <li>Dedalus
+    <ul>
+      <li>Mathieu Grivois</li>
+      <li>Vincent Gagnaire</li>
+      <li>Jean-Christophe Cauvin</li>
+    </ul>
+  </li>
+  <li>Kereval
+    <ul>
+      <li>Tristan Rieu</li>
+      <li>Fanny Serre</li>
+      <li>Sarah Leroy</li>
+      <li>Alain Ribault</li>
+      <li>Nolween Lebuhan</li>
+    </ul>
+  </li>
+  <li>APHP
+    <ul>
+      <li>David Ouagne</li>
+      <li>Malek Mouazier</li>
+      <li>Catherine Duclos</li>
+      <li>Benoit Tissot</li>
+    </ul>
+  </li>
+  <li>Bimedoc
+    <ul>
+      <li>Aymeric Boffa</li>
+    </ul>
+  </li>
+  <li>CHU de Toulouse
+    <ul>
+      <li>Paul Ortéga</li>
+    </ul>
+  </li>
+  <li>Incare
+    <ul>
+      <li>Samuel Simeon</li>
+    </ul>
+  </li>
+  <li>Cegisanté
+    <ul>
+      <li>Pascal André</li>
+    </ul>
+  </li>
+  <li>CHU de Rennes
+    <ul>
+      <li>Frédéric Laurent</li>
+      <li>Denis Delamarre</li>
+      <li>Baptiste Guilbert</li>
+      <li>Baptiste Houede</li>
+    </ul>
+  </li>
+  <li>CNOP
+    <ul>
+      <li>Patrick Mazaud</li>
+    </ul>
+  </li>
+  <li>Selic
+    <ul>
+      <li>Eric Dufour</li>
+    </ul>
+  </li>
+  <li>Ordoclic
+    <ul>
+      <li>Maxime Guerreiro</li>
+    </ul>
+  </li>
+  <li>Xperis
+    <ul>
+      <li>Alexandre Grosbois</li>
+      <li>Jean-Daniel Larcheveque</li>
+    </ul>
+  </li>
+  <li>Evolucare
+    <ul>
+      <li>Jean-Michel Estrade</li>
+    </ul>
+  </li>
+  <li>Magellan Consulting
+    <ul>
+      <li>Cassandre Piraud</li>
+    </ul>
+  </li>
+  <li>Maincare
+    <ul>
+      <li>Emmanuel Delvas</li>
+    </ul>
+  </li>
+  <li>APHM
+    <ul>
+      <li>Marjorie Roudot</li>
+    </ul>
+  </li>
+  <li>Normand’e-Santé
+    <ul>
+      <li>Thomas Hacquet</li>
+    </ul>
+  </li>
+  <li>Unicancer
+    <ul>
+      <li>Claire Fournier</li>
+      <li>Paloma Mouyade</li>
+    </ul>
+  </li>
+  <li>Bowmedical
+    <ul>
+      <li>Alexandre Petit</li>
+    </ul>
+  </li>
+  <li>CH Tours
+    <ul>
+      <li>Julie Jalleau</li>
+    </ul>
+  </li>
+  <li>CHU Nantes
+    <ul>
+      <li>Julien Moynard</li>
+    </ul>
+  </li>
+  <li>Collective Thinking
+    <ul>
+      <li>Lucy Laporte</li>
+    </ul>
+  </li>
+  <li>Galeon
+    <ul>
+      <li>Loïc Brotons</li>
+    </ul>
+  </li>
+  <li>MaPUI
+    <ul>
+      <li>Nawra Georgi</li>
+    </ul>
+  </li>
+  <li>Nammu Lab
+    <ul>
+      <li>Christophe Brucker</li>
+    </ul>
+  </li>
+  <li>Pharmia
+    <ul>
+      <li>Mathilde Carca</li>
+    </ul>
+  </li>
+  <li>Santé Service Bayonne
+    <ul>
+      <li>Thierry Morvan</li>
+    </ul>
+  </li>
+  <li>Softway medical
+    <ul>
+      <li>William Degryse</li>
+    </ul>
+  </li>
+  <li>Synapse
+    <ul>
+      <li>Charlotte Reby</li>
+      <li>Théo Cervera</li>
+    </ul>
+  </li>
+  <li>Urbansih
+    <ul>
+      <li>Damien Mazoyer</li>
+    </ul>
+  </li>
+  <li>Xtrem Santé
+    <ul>
+      <li>Yohann Poiron</li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="version-12---prochaine-version-prévue">Version 1.2 - Prochaine version prévue</h2>
-
-<h3 id="la-conciliation-v12">La conciliation v1.2</h3>
-
-<p>Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR et la prise en compte du  <a href="https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med">Référentiel Unique d’Interopérabilité du Médicament</a> pour la conciliation.</p>
-
-<h2 id="liste-des-contributeurs">Liste des contributeurs</h2>
-
-<h3 id="version-10">Version 1.0</h3>
+<h5 id="version-10">Version 1.0</h5>
 
 <ul>
   <li>Alicia Bel-Létoile - Synapse Médecine</li>
@@ -377,82 +611,48 @@ Prise en compte du <a href="https://smt.esante.gouv.fr/explorer-les-concepts/ter
   <li>Clotaire Thocquenne - Evolucare</li>
 </ul>
 
-<h3 id="version-11">Version 1.1</h3>
-
-<ul>
-  <li>Pascal André - Cegisanté</li>
-  <li>Guillaume Arras - PHAST</li>
-  <li>Michel Blondel - PHAST</li>
-  <li>Aymeric Boffa - Bimedoc</li>
-  <li>Abdellali Boussadi - ANS</li>
-  <li>Yann Briand - ANS</li>
-  <li>Loïc Brotons - Galeon</li>
-  <li>Christophe Brucker - Nammu Lab</li>
-  <li>Mathilde Carca - Pharmia</li>
-  <li>Georges-Alexandre Chastin - Enovacom</li>
-  <li>Jean-Christophe Cauvin - Dedalus</li>
-  <li>Frédéric Dechanet Maincare</li>
-  <li>Denis Delamarre - CHU Rennes</li>
-  <li>Emmanuel Delvas - Maincaire</li>
-  <li>Cloé Demars - Vidal</li>
-  <li>Catherine Duclos - APHP</li>
-  <li>Eric Dufour - Selic</li>
-  <li>Jean-Michel Estrade - Evolucare</li>
-  <li>Alexandre Frerot - Vidal</li>
-  <li>Nawra Georgi - MaPUI</li>
-  <li>Isabelle Gibaud - ANS</li>
-  <li>Mathieu Grivois - Dedalus</li>
-  <li>Alexandre Grosbois - Xperis</li>
-  <li>Maxime Guerreiro - Ordoclic</li>
-  <li>Baptiste Guilbert - CHU Rennes</li>
-  <li>Thomas Haquet - Normand’e-Santé</li>
-  <li>Lucy Laporte - Collective Thinking</li>
-  <li>Frédéric Laurent - CHU Rennes</li>
-  <li>Nolwenn Le Buhan - Kereval</li>
-  <li>Sarah Leroy - Kereval</li>
-  <li>Pierre Liot - HAS</li>
-  <li>Pierre Luce - Posos</li>
-  <li>François Macary - Use&amp;Share</li>
-  <li>Anne Maheust - Use&amp;Share</li>
-  <li>Patrick Mazaud - CNOP</li>
-  <li>Manuel Metz - Lifen</li>
-  <li>Thierry Mitouard - Vidal</li>
-  <li>Mirojane Mohammad - HAS</li>
-  <li>Malek Mouazer - APHP</li>
-  <li>Julien Monteuil - PHAST</li>
-  <li>Thierry Morvand - Santé Service Bayonne</li>
-  <li>Alexandre Petit - Bowmedical</li>
-  <li>Alain Perie - ANS</li>
-  <li>Cassandre Piraud - Magellan Consulting</li>
-  <li>Yohann Poiron - Xtrem Santé puis ANS</li>
-  <li>Alain Ribault - Kereval</li>
-  <li>Tristan Rieu - Kereval</li>
-  <li>Nicolas Riss - ANS</li>
-  <li>Fanny Serre Kereval</li>
-  <li>Benoit Tissot - APHP</li>
-  <li>Eliott Tourtois - Posos</li>
-</ul>
-
 
 
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="downloads.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="artifacts.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 10, 2025 15:36+0000">2025-04-10</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 08:54+0000">2026-01-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -461,33 +661,32 @@ Prise en compte du <a href="https://smt.esante.gouv.fr/explorer-les-concepts/ter
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7.fr/fhir/fr/medication/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.fr/ig/fhir/medication/history.html" target="_blank">Historique des versions </a>
                  
                 
 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-

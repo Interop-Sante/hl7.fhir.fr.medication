@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Presc-MV-PerfGl-NaCl-KCl"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-Presc-MV-PerfGl-NaCl-KCl"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-Presc-MV-PerfGl-NaCl-KCl"> </a><p class="res-header-id"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-MV-PerfGl-NaCl-KCl</b></p><a name="medicationrequest-Presc-MV-PerfGl-NaCl-KCl"> </a><a name="hcmedicationrequest-Presc-MV-PerfGl-NaCl-KCl"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-medicationrequest.html">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title="Codes :{http://BogusSystemMedicabase.com MV00004216}">GLUCOSE 5 % + POTASSIUM CHLORURE 0,2 % + SODIUM CHLORURE 0,4 % sol p perf</span></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-30 11:42:16+0000</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-71482713">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14631</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Une fois</p><p><b>route</b>: <span title="Codes :{http://standardterms.edqm.eu 20045000}">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Rate[x]</b></td></tr><tr><td style="display: none">*</td><td>500 ml<span style="background: LightGoldenRodYellow"> (Détails : code UCUMmL = 'mL')</span>/12 h<span style="background: LightGoldenRodYellow"> (Détails : code UCUMh = 'h')</span></td></tr></table></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://BogusSystemMedicabase.com"/>
+            <code value="MV00004216"/>
+            <display value="GLUCOSE 5 % + POTASSIUM CHLORURE 0,2 % + SODIUM CHLORURE 0,4 % sol p perf"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <authoredOn value="2021-07-30T11:42:16.592Z"/>
+        <requester>
+          <reference value="Practitioner/smart-Practitioner-71482713"/>
+        </requester>
+        <groupIdentifier>
+          <system value="https://somehospital.fr/Prescrption-ID"/>
+          <value value="Presc-14631"/>
+        </groupIdentifier>
+        <dosageInstruction>
+          <timing>
+            <repeat>
+              <boundsPeriod>
+                <start value="2021-07-30T11:42:00Z"/>
+                <end value="2021-08-04T11:41:59Z"/>
+              </boundsPeriod>
+              <timeOfDay value="10:00:00"/>
+              <timeOfDay value="22:00:00"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20045000"/>
+              <display value="Voie intraveineuse"/>
+            </coding>
+            <text value="Voie intraveineuse"/>
+          </route>
+          <doseAndRate>
+            <rateRatio>
+              <numerator>
+                <value value="500"/>
+                <unit value="ml"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mL"/>
+              </numerator>
+              <denominator>
+                <value value="12"/>
+                <unit value="h"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="h"/>
+              </denominator>
+            </rateRatio>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+</Bundle>

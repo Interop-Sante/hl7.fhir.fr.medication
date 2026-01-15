@@ -1,0 +1,288 @@
+# Presc-PerfGl-NaCl-KCl-500ml - Guide d'implémentation du médicament v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Presc-PerfGl-NaCl-KCl-500ml**
+
+## Example Bundle: Presc-PerfGl-NaCl-KCl-500ml
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "Presc-PerfGl-NaCl-KCl-500ml",
+  "meta" : {
+    "profile" : [
+      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"
+    ]
+  },
+  "type" : "searchset",
+  "entry" : [
+    {
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "medication-1-Presc-PerfGl-NaCl-KCl-500ml",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-1-Presc-PerfGl-NaCl-KCl-500ml\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-1-Presc-PerfGl-NaCl-KCl-500ml</b></p><a name=\"medication-1-Presc-PerfGl-NaCl-KCl-500ml\"> </a><a name=\"hcmedication-1-Presc-PerfGl-NaCl-KCl-500ml\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000078171}\">GLUCOSE</span></p><p><b>form</b>: <span title=\"Codes :{http://standardterms.edqm.eu 11210000}\">solution pour perfusion</span></p><p><b>amount</b>: 500 mL<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMmL = 'mL')</span>/1</p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000078171}\">GLUCOSE</span></td><td>50 mg<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMmg = 'mg')</span>/1 mL<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMmL = 'mL')</span></td></tr></table></div>"
+        },
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+              "code" : "100000078171",
+              "display" : "glucose"
+            }
+          ],
+          "text" : "GLUCOSE"
+        },
+        "form" : {
+          "coding" : [
+            {
+              "system" : "http://standardterms.edqm.eu",
+              "code" : "11210000",
+              "display" : "solution pour perfusion"
+            }
+          ],
+          "text" : "solution pour perfusion"
+        },
+        "amount" : {
+          "numerator" : {
+            "value" : 500,
+            "unit" : "mL",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mL"
+          },
+          "denominator" : {
+            "value" : 1
+          }
+        },
+        "ingredient" : [
+          {
+            "itemCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+                  "code" : "100000078171",
+                  "display" : "glucose"
+                }
+              ],
+              "text" : "GLUCOSE"
+            },
+            "strength" : {
+              "numerator" : {
+                "value" : 50,
+                "unit" : "mg",
+                "system" : "http://unitsofmeasure.org",
+                "code" : "mg"
+              },
+              "denominator" : {
+                "value" : 1,
+                "unit" : "mL",
+                "system" : "http://unitsofmeasure.org",
+                "code" : "mL"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "medication-2-Presc-PerfGl-NaCl-KCl-500ml",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-2-Presc-PerfGl-NaCl-KCl-500ml\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-2-Presc-PerfGl-NaCl-KCl-500ml</b></p><a name=\"medication-2-Presc-PerfGl-NaCl-KCl-500ml\"> </a><a name=\"hcmedication-2-Presc-PerfGl-NaCl-KCl-500ml\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000092115}\">SODIUM CHLORURE</span></p><p><b>amount</b>: 2 g<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMg = 'g')</span>/1</p></div>"
+        },
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+              "code" : "100000092115",
+              "display" : "chlorure de sodium"
+            }
+          ],
+          "text" : "SODIUM CHLORURE"
+        },
+        "amount" : {
+          "numerator" : {
+            "value" : 2,
+            "unit" : "g",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "g"
+          },
+          "denominator" : {
+            "value" : 1
+          }
+        }
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "medication-3-Presc-PerfGl-NaCl-KCl-500ml",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-3-Presc-PerfGl-NaCl-KCl-500ml\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-3-Presc-PerfGl-NaCl-KCl-500ml</b></p><a name=\"medication-3-Presc-PerfGl-NaCl-KCl-500ml\"> </a><a name=\"hcmedication-3-Presc-PerfGl-NaCl-KCl-500ml\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091807}\">POTASSIUM CHLORURE</span></p><p><b>amount</b>: 1 g<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMg = 'g')</span>/1</p></div>"
+        },
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+              "code" : "100000091807",
+              "display" : "chlorure de potassium"
+            }
+          ],
+          "text" : "POTASSIUM CHLORURE"
+        },
+        "amount" : {
+          "numerator" : {
+            "value" : 1,
+            "unit" : "g",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "g"
+          },
+          "denominator" : {
+            "value" : 1
+          }
+        }
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "medication-C-Presc-PerfGl-NaCl-KCl-500ml",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-compound"
+          ]
+        },
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-C-Presc-PerfGl-NaCl-KCl-500ml\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-C-Presc-PerfGl-NaCl-KCl-500ml</b></p><a name=\"medication-C-Presc-PerfGl-NaCl-KCl-500ml\"> </a><a name=\"hcmedication-C-Presc-PerfGl-NaCl-KCl-500ml\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-compound.html\">FR Medication Compound</a></p></div><p><b>code</b>: <span title=\"Codes :\">G5 500mL + NaCl 2g + KCl 1g</span></p><blockquote><p><b>ingredient</b></p><p><b>Medication component which is the vehicle of the compound Medication</b>: true</p><p><b>item</b>: <code>#medication-1-Presc-PerfGl-NaCl-KCl-500ml</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-2-Presc-PerfGl-NaCl-KCl-500ml</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-3-Presc-PerfGl-NaCl-KCl-500ml</code></p></blockquote></div>"
+        },
+        "code" : {
+          "text" : "G5 500mL + NaCl 2g + KCl 1g"
+        },
+        "ingredient" : [
+          {
+            "extension" : [
+              {
+                "url" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle",
+                "valueBoolean" : true
+              }
+            ],
+            "itemReference" : {
+              "reference" : "#medication-1-Presc-PerfGl-NaCl-KCl-500ml"
+            }
+          },
+          {
+            "itemReference" : {
+              "reference" : "#medication-2-Presc-PerfGl-NaCl-KCl-500ml"
+            }
+          },
+          {
+            "itemReference" : {
+              "reference" : "#medication-3-Presc-PerfGl-NaCl-KCl-500ml"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "id" : "medicationrequest-Presc-PerfGl-NaCl-KCl-500ml",
+        "meta" : {
+          "profile" : [
+            "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-PerfGl-NaCl-KCl-500ml\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-PerfGl-NaCl-KCl-500ml</b></p><a name=\"medicationrequest-Presc-PerfGl-NaCl-KCl-500ml\"> </a><a name=\"hcmedicationrequest-Presc-PerfGl-NaCl-KCl-500ml\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-C-Presc-PerfGl-NaCl-KCl-500ml</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-08-02 16:27:47+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14637</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Une fois</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Rate[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Poche<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15005000 = 'Bag')</span>/12 h<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMh = 'h')</span></td></tr></table></blockquote></div>"
+        },
+        "status" : "active",
+        "intent" : "order",
+        "priority" : "routine",
+        "medicationReference" : {
+          "reference" : "#medication-C-Presc-PerfGl-NaCl-KCl-500ml"
+        },
+        "subject" : {
+          "reference" : "Patient/14602"
+        },
+        "authoredOn" : "2021-08-02T16:27:47.623Z",
+        "requester" : {
+          "reference" : "Practitioner/smart-Practitioner-71482713"
+        },
+        "groupIdentifier" : {
+          "system" : "https://somehospital.fr/Prescrption-ID",
+          "value" : "Presc-14637"
+        },
+        "dosageInstruction" : [
+          {
+            "sequence" : 1,
+            "timing" : {
+              "repeat" : {
+                "boundsPeriod" : {
+                  "start" : "2021-08-02T16:27:00Z",
+                  "end" : "2021-08-07T16:26:59Z"
+                },
+                "timeOfDay" : ["10:00:00", "22:00:00"]
+              }
+            },
+            "route" : {
+              "coding" : [
+                {
+                  "system" : "http://standardterms.edqm.eu",
+                  "code" : "20045000",
+                  "display" : "Voie intraveineuse"
+                }
+              ],
+              "text" : "Voie intraveineuse"
+            },
+            "doseAndRate" : [
+              {
+                "rateRatio" : {
+                  "numerator" : {
+                    "value" : 1,
+                    "unit" : "Poche",
+                    "system" : "http://standardterms.edqm.eu",
+                    "code" : "15005000"
+                  },
+                  "denominator" : {
+                    "value" : 12,
+                    "unit" : "h",
+                    "system" : "http://unitsofmeasure.org",
+                    "code" : "h"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```
