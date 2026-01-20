@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder le statut éditorial d’une valeur.
   "title" : "value set Interop'Santé - Statut éditorial d'une valeur",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T09:44:19+00:00",
+  "date" : "2026-01-20T11:00:00+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

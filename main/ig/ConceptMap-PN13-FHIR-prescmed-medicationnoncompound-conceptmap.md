@@ -27,7 +27,7 @@ ConceptMap pour la conversion PN13 vers FHIR d’un médicament non composé d�
   "name" : "FrPN13FHIRMedicationNonCompoundConceptMap",
   "title" : "Conversion PN13 vers FHIR pour un médicament non composé d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2026-01-20T09:44:19+00:00",
+  "date" : "2026-01-20T11:00:00+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

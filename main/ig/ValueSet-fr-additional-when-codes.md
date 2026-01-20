@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne son
   "title" : "value set Interop'Santé - Codes additionnels pour l'élément when",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T09:44:19+00:00",
+  "date" : "2026-01-20T11:00:00+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

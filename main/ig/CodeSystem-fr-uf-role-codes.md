@@ -37,7 +37,7 @@ Le système de codage pour les types de rôle qu’une UF peut avoir par rapport
   "title" : "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T09:44:19+00:00",
+  "date" : "2026-01-20T11:00:00+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

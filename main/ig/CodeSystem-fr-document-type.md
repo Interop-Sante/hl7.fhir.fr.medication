@@ -38,7 +38,7 @@ Le système de codage SIPh du type de document d’une ressource**Composition**d
   "title" : "code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T09:44:19+00:00",
+  "date" : "2026-01-20T11:00:00+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
