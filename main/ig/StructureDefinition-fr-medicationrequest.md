@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationRequest |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationRequest |
 
  
 French medication request profile 
 
-**Usages:**
+**Utilisations:**
 
-* Derived from this Profile: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
+* Dérivé de ce Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medicationrequest)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medicationrequest
   "name" : "FRMedicationRequest",
   "title" : "FR Medication Request",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

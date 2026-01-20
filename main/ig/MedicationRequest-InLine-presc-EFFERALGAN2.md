@@ -20,14 +20,14 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
 
 **requester**: [Practitioner/smart-Practitioner-71482713](Practitioner/smart-Practitioner-71482713)
 
-> **dosageInstruction****timing**: Once**route**:Voie orale
+> **dosageInstruction****timing**: Une fois**route**:Voie orale
 
 ### DoseAndRates
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 1 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
+| * | Ordered | 1 Comprimé(Détails : code EDQM Standard Terms15054000 = 'Tablet') |
 
 
 

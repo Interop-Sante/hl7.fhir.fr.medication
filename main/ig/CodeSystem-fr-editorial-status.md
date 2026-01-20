@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-editorial-status | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrEditorialStatus |
+| Draft as of 2026-01-20 | *Computable Name*:FrEditorialStatus |
 
  
 Le système de codage du statut éditorial d’une valeur. 
@@ -37,7 +37,7 @@ Le système de codage du statut éditorial d’une valeur.
   "title" : "code system Interop'Santé - Statut éditorial d'une valeur",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

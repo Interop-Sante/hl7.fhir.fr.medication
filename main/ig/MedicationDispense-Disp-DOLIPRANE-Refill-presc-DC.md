@@ -25,22 +25,22 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
 
 **type**: Refill - Part
 
-**quantity**: 6 1(Details: UCUM code1 = '1')
+**quantity**: 6 1(Détails : code UCUM1 = '1')
 
-**daysSupply**: 2 jour(Details: UCUM coded = 'd')
+**daysSupply**: 2 jour(Détails : code UCUMd = 'd')
 
 **whenPrepared**: 2021-07-16 10:10:00+0000
 
 **whenHandedOver**: 2021-07-16 10:24:00+0000
 
-> **dosageInstruction****sequence**: 1**timing**: Once**route**:Voie orale
+> **dosageInstruction****sequence**: 1**timing**: Une fois**route**:Voie orale
 
 ### DoseAndRates
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 2 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
+| * | Ordered | 2 Comprimé(Détails : code EDQM Standard Terms15054000 = 'Tablet') |
 
 
 

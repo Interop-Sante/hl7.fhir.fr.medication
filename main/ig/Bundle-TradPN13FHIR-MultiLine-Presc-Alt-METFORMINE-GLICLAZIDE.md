@@ -6,129 +6,6 @@
 
 ## Example Bundle: TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE
 
-Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
-
-Bundle TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE de type searchset
-
--------
-
-Entry 1
-
-Ressource Patient :
-
-> **Narratif généré : Patient patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE**
-
-Profil: [FR Core Patient INS Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html)
-
-ARASGAIN Female, Date de Naissance :1989-01-02 ( Identifiant interne: 6032486 (use: usual, ))
--------
-
-| | |
-| :--- | :--- |
-| Other Id: | NIR définitif/289062913400149 (use: official, ) |
-| Nom alternatif : | MARSALI CUIMEANACH (Official) |
-| [Patient Birth Place](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html) |  |
-| FR Core Patient Ident Reliability Extension: | * identityStatus: [FR Core CodeSystem v2-0445 VALI](https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI): Identité validée
- |
-
-
--------
-
-Entry 2
-
-Ressource MedicationRequest :
-
-> **Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Trad-Presc-Alt-METFORMINE**
-
-Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
-
-**identifier**: https://somehospital.fr/Medication-ID**status**: Active**intent**: Option**priority**: Routine**medication**:METFORMINE ACC 1000MG CPR**subject**:`#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE`**encounter**: Identifier:`https://somehospital.fr/Sejour`/765093464568**supportingInformation**:
-* Identifier: `https://somehospital.fr/UF`/603
-* Identifier: `https://somehospital.fr/UF`/506
-**authoredOn**: 2025-05-02 14:48:44+0200**requester**: Identifier:`urn:oid:1.2.250.1.71.4.2.1`/899999999999**groupIdentifier**:`https://somehospital.fr/Prescrption-ID`/10543744**note**:
-> 
-
-Prescription textuelle: Par voie orale : METFORMINE 1000MG 0,5 comprimé 2 fois par jour avec les repas -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00
-
-
-> **dosageInstruction****timing**: aux repas, 2**route**:Voie orale
-
-### DoseAndRates
-
-| | |
-| :--- | :--- |
-| - | **Dose[x]** |
-| * | 0.5 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
-
-
-
--------
-
-Entry 3
-
-Ressource MedicationRequest :
-
-> **Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Trad-Presc-Alt-GLICLAZIDE**
-
-Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
-
-**identifier**: https://somehospital.fr/Medication-ID**status**: Active**intent**: Option**priority**: Routine**medication**:GLICLAZIDE ARW 30MG CPR LM**subject**:`#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE`**encounter**: Identifier:`https://somehospital.fr/Sejour`/765093464568**supportingInformation**:
-* Identifier: `https://somehospital.fr/UF`/603
-* Identifier: `https://somehospital.fr/UF`/506
-**authoredOn**: 2025-05-02 14:48:44+0200**requester**: Identifier:`urn:oid:1.2.250.1.71.4.2.1`/899999999999**groupIdentifier**:`https://somehospital.fr/Prescrption-ID`/10543744**note**:
-> 
-
-Prescription textuelle: Par voie orale : GLICLAZIDE 30MG 3 comprimés au petit déjeuner -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00
-
-
-> **dosageInstruction****timing**: au petit déjeuner, Once**route**:Voie orale
-
-### DoseAndRates
-
-| | |
-| :--- | :--- |
-| - | **Dose[x]** |
-| * | 3 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
-
-
-
--------
-
-Entry 4
-
-Ressource RequestGroup :
-
-> **Narratif généré : RequestGroup requestgroup-Trad-Presc-Alt-METFORMINE-GLICLAZIDE**
-
-Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-for-prescription.md)
-
-**groupIdentifier**:`https://somehospital.fr/Prescrption-ID`/10543744**status**: Active**intent**: Order**priority**: Routine**subject**:`#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE`
-> **action**
-> **id**20250502144844570
-**description**: En cas d'intolérance digestive au METFORMINE
-
-### RelatedActions
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| - | **Extension** | **ActionId** | **Relationship** |
-| * |  | 20250502144844569 | Concurrent |
-
-**resource**:`#medicationrequest-Trad-Presc-Alt-GLICLAZIDE`
-
-> **action**
-> **id**20250502144844569
-**description**: Sans intolérance digestive au METFORMINE
-
-### RelatedActions
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| - | **Extension** | **ActionId** | **Relationship** |
-| * |  | 20250502144844570 | Concurrent |
-
-**resource**:`#medicationrequest-Trad-Presc-Alt-METFORMINE`
-
 
 
 ## Resource Content
@@ -155,7 +32,7 @@ Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-f
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE\"> </a><p class=\"res-header-id\"><b>Narratif généré : Patient patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE</b></p><a name=\"patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE\"> </a><a name=\"hcpatient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html\">FR Core Patient INS Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">ARASGAIN  Female, Date de Naissance :1989-01-02 ( Identifiant interne: 6032486 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">NIR définitif/289062913400149 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Noms alternatifs (voir plus bas)\">Nom alternatif :</td><td colspan=\"3\">MARSALI CUIMEANACH (Official)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\"></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI\">FR Core CodeSystem v2-0445 VALI</a>: Identité validée</li></ul></td></tr></table></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE\"> </a><p class=\"res-header-id\"><b>Narratif généré : Patient patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE</b></p><a name=\"patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE\"> </a><a name=\"hcpatient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html\">FR Core Patient INS Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">ARASGAIN  Female, Date de Naissance :1989-01-02 ( Identifiant interne: 6032486 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Autre identifiant (voir ci-dessus)\">Autre identifiant :</td><td colspan=\"3\">NIR définitif/289062913400149 (utilisation : official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Noms alternatifs (voir plus bas)\">Nom alternatif :</td><td colspan=\"3\">MARSALI CUIMEANACH (Official)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\"></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI\">FR Core CodeSystem v2-0445: VALI</a> (Identité validée)</li></ul></td></tr></table></div>"
         },
         "extension" : [
           {
@@ -247,7 +124,7 @@ Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-f
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Trad-Presc-Alt-METFORMINE\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Trad-Presc-Alt-METFORMINE</b></p><a name=\"medicationrequest-Trad-Presc-Alt-METFORMINE\"> </a><a name=\"hcmedicationrequest-Trad-Presc-Alt-METFORMINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: https://somehospital.fr/Medication-ID</p><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400890020275}\">METFORMINE ACC 1000MG CPR</span></p><p><b>subject</b>: <code>#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/765093464568</p><p><b>supportingInformation</b>: </p><ul><li>Identifier: <code>https://somehospital.fr/UF</code>/603</li><li>Identifier: <code>https://somehospital.fr/UF</code>/506</li></ul><p><b>authoredOn</b>: 2025-05-02 14:48:44+0200</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/10543744</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Par voie orale : METFORMINE 1000MG 0,5 comprimé 2 fois par jour avec les repas -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: aux repas, 2</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>0.5 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Trad-Presc-Alt-METFORMINE\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Trad-Presc-Alt-METFORMINE</b></p><a name=\"medicationrequest-Trad-Presc-Alt-METFORMINE\"> </a><a name=\"hcmedicationrequest-Trad-Presc-Alt-METFORMINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: https://somehospital.fr/Medication-ID</p><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400890020275}\">METFORMINE ACC 1000MG CPR</span></p><p><b>subject</b>: <code>#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/765093464568</p><p><b>supportingInformation</b>: </p><ul><li>Identifier: <code>https://somehospital.fr/UF</code>/603</li><li>Identifier: <code>https://somehospital.fr/UF</code>/506</li></ul><p><b>authoredOn</b>: 2025-05-02 14:48:44+0200</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/10543744</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Par voie orale : METFORMINE 1000MG 0,5 comprimé 2 fois par jour avec les repas -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: aux repas, 2</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>0.5 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
         },
         "identifier" : [
           {
@@ -373,7 +250,7 @@ Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-f
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Trad-Presc-Alt-GLICLAZIDE\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Trad-Presc-Alt-GLICLAZIDE</b></p><a name=\"medicationrequest-Trad-Presc-Alt-GLICLAZIDE\"> </a><a name=\"hcmedicationrequest-Trad-Presc-Alt-GLICLAZIDE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: https://somehospital.fr/Medication-ID</p><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893541364}\">GLICLAZIDE ARW 30MG CPR LM</span></p><p><b>subject</b>: <code>#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/765093464568</p><p><b>supportingInformation</b>: </p><ul><li>Identifier: <code>https://somehospital.fr/UF</code>/603</li><li>Identifier: <code>https://somehospital.fr/UF</code>/506</li></ul><p><b>authoredOn</b>: 2025-05-02 14:48:44+0200</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/10543744</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Par voie orale : GLICLAZIDE 30MG 3 comprimés au petit déjeuner -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: au petit déjeuner, Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>3 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Trad-Presc-Alt-GLICLAZIDE\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Trad-Presc-Alt-GLICLAZIDE</b></p><a name=\"medicationrequest-Trad-Presc-Alt-GLICLAZIDE\"> </a><a name=\"hcmedicationrequest-Trad-Presc-Alt-GLICLAZIDE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: https://somehospital.fr/Medication-ID</p><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893541364}\">GLICLAZIDE ARW 30MG CPR LM</span></p><p><b>subject</b>: <code>#patient-Trad-Presc-Alt-METFORMINE-GLICLAZIDE</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/765093464568</p><p><b>supportingInformation</b>: </p><ul><li>Identifier: <code>https://somehospital.fr/UF</code>/603</li><li>Identifier: <code>https://somehospital.fr/UF</code>/506</li></ul><p><b>authoredOn</b>: 2025-05-02 14:48:44+0200</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/10543744</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Par voie orale : GLICLAZIDE 30MG 3 comprimés au petit déjeuner -- À partir du 02/05/2025 à 19:00 jusqu'au 31/05/2025 à 19h00</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: au petit déjeuner, Une fois</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>3 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15054000 = 'Tablet')</span></td></tr></table></blockquote></div>"
         },
         "identifier" : [
           {

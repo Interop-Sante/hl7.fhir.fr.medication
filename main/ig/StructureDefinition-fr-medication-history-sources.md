@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-sources | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationHistorySources |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationHistorySources |
 
 Sources des lignes du Bilan Médicamenteux que représente la ressource **Composition** ou de chacune de ses lignes que représente la ressource **MedicationStatement** référencée par l’élément **entry** de la ressource **Composition** (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)
 
@@ -19,9 +19,9 @@ propriétés du sourcing de la ressource MedicationStatement définies selon les
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [FR Medication History Composition](StructureDefinition-fr-medication-history-composition.md) and [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md)
+* Utiliser ce Extension: [FR Medication History Composition](StructureDefinition-fr-medication-history-composition.md) and [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication-history-sources)
 
@@ -33,9 +33,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-fr-medication-history-sources.csv), [Excel](StructureDefinition-fr-medication-history-sources.xlsx), [Schematron](StructureDefinition-fr-medication-history-sources.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "version" : "0.1.0",
   "name" : "FRMedicationHistorySources",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

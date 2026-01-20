@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationNonCompound |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationNonCompound |
 
  
 Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined. 
@@ -17,9 +17,9 @@ Simple prescribed, dispensed, administered or used medication composed of one to
  
 Simple medication description, include those composed of many substances. 
 
-**Usages:**
+**Utilisations:**
 
-* Refer to this Profile: [FR Medication Compound](StructureDefinition-fr-medication-compound.md) and [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+* Référer à ce Profil: [FR Medication Compound](StructureDefinition-fr-medication-compound.md) and [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication-noncompound)
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-noncom
   "title" : "FR Medication Non Compound",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

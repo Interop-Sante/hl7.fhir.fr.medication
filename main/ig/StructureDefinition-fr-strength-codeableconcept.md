@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-strength-codeableconcept | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrStrengthCodeableConcept |
+| Draft as of 2026-01-20 | *Computable Name*:FrStrengthCodeableConcept |
 
 Additional non unit value for strength
 
@@ -17,9 +17,9 @@ Additional non unit value for strength
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* This Extension is not used by any profiles in this Implementation Guide
+* Ce Extension nest utilisé par aucun profil dans ce guide dimplémentation
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-strength-codeableconcept)
 
@@ -31,9 +31,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-fr-strength-codeableconcept.csv), [Excel](StructureDefinition-fr-strength-codeableconcept.xlsx), [Schematron](StructureDefinition-fr-strength-codeableconcept.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-strength-codeable
   "name" : "FrStrengthCodeableConcept",
   "title" : "Strength CodeableConcept",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

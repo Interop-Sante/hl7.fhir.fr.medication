@@ -20,14 +20,14 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
 
 **requester**: [Practitioner/smart-Practitioner-71482713](Practitioner/smart-Practitioner-71482713)
 
-> **dosageInstruction****timing**: Once**route**:Voie orale
+> **dosageInstruction****timing**: Une fois**route**:Voie orale
 
 ### DoseAndRates
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 500 mg(Details: UCUM codemg = 'mg') |
+| * | Ordered | 500 mg(Détails : code UCUMmg = 'mg') |
 
 
 

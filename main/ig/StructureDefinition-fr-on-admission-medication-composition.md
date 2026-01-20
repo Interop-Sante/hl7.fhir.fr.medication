@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-medication-composition | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FROnAdmissionMedicationComposition |
+| Draft as of 2026-01-20 | *Computable Name*:FROnAdmissionMedicationComposition |
 
  
 Profil de la ressource**Composition**du traitement médicamenteux prescrit à l’admission. 
 
-**Usages:**
+**Utilisations:**
 
-* Refer to this Profile: [FR On Admission Retroactive Reconciliation Composition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md)
+* Référer à ce Profil: [FR On Admission Retroactive Reconciliation Composition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-on-admission-medication-composition)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-on-admission-medi
   "name" : "FROnAdmissionMedicationComposition",
   "title" : "FR On Admission Medication Composition",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

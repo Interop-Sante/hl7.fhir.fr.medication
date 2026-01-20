@@ -6,52 +6,6 @@
 
 ## Example Bundle: Presc-NICORETTESKIN-patch
 
-Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
-
-Bundle Presc-NICORETTESKIN-patch de type searchset
-
--------
-
-Entry 1
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:NICORETTESKIN® 15MG/16H DISP
-
-### Ingredients
-
-| | |
-| :--- | :--- |
-| - | **IsActive** |
-| * | true |
-
-
--------
-
-Entry 2
-
-Ressource MedicationRequest :
-
-> 
-
-Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
-
-**groupIdentifier**:`https://somehospital.fr/Prescrption-ID`/Presc-14628**status**: Active**intent**: Order**priority**: Routine**subject**:[Patient/14602](Patient/14602)**authoredOn**: 2021-07-29 13:27:21+0000**requester**:[Practitioner/smart-Practitioner-71482713](Practitioner/smart-Practitioner-71482713)
-> **dosageInstruction****sequence**: 1**timing**: Durée 16?? , Once**route**:Voie transdermique
-
-### DoseAndRates
-
-| | | |
-| :--- | :--- | :--- |
-| - | **Type** | **Dose[x]** |
-| * | Ordered | 1 patch(Details: EDQM Standard Terms code15036000 = 'Patch') |
-
-
-
 
 
 ## Resource Content
@@ -78,7 +32,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-Presc-NICORETTESKIN-patch\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-Presc-NICORETTESKIN-patch</b></p><a name=\"medication-Presc-NICORETTESKIN-patch\"> </a><a name=\"hcmedication-Presc-NICORETTESKIN-patch\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893539354}\">NICORETTESKIN® 15MG/16H DISP</span></p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 10519000}\">dispositif transdermique</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000079991}\">NICOTINE</span></td><td>true</td><td>15 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/1</td></tr></table></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-Presc-NICORETTESKIN-patch\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-Presc-NICORETTESKIN-patch</b></p><a name=\"medication-Presc-NICORETTESKIN-patch\"> </a><a name=\"hcmedication-Presc-NICORETTESKIN-patch\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893539354}\">NICORETTESKIN® 15MG/16H DISP</span></p><p><b>form</b>: <span title=\"Codes :{http://standardterms.edqm.eu 10519000}\">dispositif transdermique</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000079991}\">NICOTINE</span></td><td>true</td><td>15 mg<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMmg = 'mg')</span>/1</td></tr></table></div>"
         },
         "code" : {
           "coding" : [
@@ -139,7 +93,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-NICORETTESKIN-patch\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-NICORETTESKIN-patch</b></p><a name=\"medicationrequest-Presc-NICORETTESKIN-patch\"> </a><a name=\"hcmedicationrequest-Presc-NICORETTESKIN-patch\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-NICORETTESKIN-patch</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-29 13:27:21+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14628</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Durée 16?? , Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20070000}\">Voie transdermique</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>1 patch<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15036000 = 'Patch')</span></td></tr></table></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-Presc-NICORETTESKIN-patch\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-Presc-NICORETTESKIN-patch</b></p><a name=\"medicationrequest-Presc-NICORETTESKIN-patch\"> </a><a name=\"hcmedicationrequest-Presc-NICORETTESKIN-patch\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-Presc-NICORETTESKIN-patch</code></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2021-07-29 13:27:21+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/Presc-14628</p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>timing</b>: Durée 16?? , Une fois</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20070000}\">Voie transdermique</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :{http://terminology.hl7.org/CodeSystem/dose-rate-type ordered}\">Ordered</span></td><td>1 patch<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15036000 = 'Patch')</span></td></tr></table></blockquote></div>"
         },
         "status" : "active",
         "intent" : "order",

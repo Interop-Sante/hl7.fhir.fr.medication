@@ -6,195 +6,6 @@
 
 ## Example Bundle: TradPN13FHIR-Presc-perfusion-6-composants
 
-Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
-
-Bundle TradPN13FHIR-Presc-perfusion-6-composants de type searchset
-
--------
-
-Entry 1
-
-Ressource Patient :
-
-> 
-
-Profil: [FR Core Patient Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html)
-
-HENRY Male, Date de Naissance :2000-01-01 ( Identifiant interne: 1234567891235000001820 (use: usual, ))
--------
-
--------
-
-Entry 2
-
-Ressource Practitioner :
-
-> 
-
-Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html)
-
-**identifier**: Employee number/12345678910**name**: Charles DUPONT , Charles (Official)
-
--------
-
-Entry 3
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:NUTRYELT, sol à diluer pr perf, amp 10 mL
-
--------
-
-Entry 4
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL
-
--------
-
-Entry 5
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL
-
--------
-
-Entry 6
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL
-
--------
-
-Entry 7
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:CERNEVIT, pdr pr sol inj ou pr perf
-
--------
-
-Entry 8
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-
-**code**:SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)
-
--------
-
-Entry 9
-
-Ressource Medication :
-
-> 
-
-Profil: [FR Medication Compound](StructureDefinition-fr-medication-compound.md)
-
-**code**:NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)
-
-### Ingredients
-
-| | |
-| :--- | :--- |
-| - | **Extension** |
-| * |  |
-| * |  |
-| * |  |
-| * |  |
-| * |  |
-| * |  |
-
-
--------
-
-Entry 10
-
-Ressource Observation :
-
-> 
-
-Profil: [FR Core Observation Body Height Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-observation-body-height.html)
-
-**status**: Final**category**:Vital Signs**code**:Taille du patient [Longueur] Patient ; Numérique**subject**:`#patient-TradPN13FHIR-Presc-perfusion-6-composants`**effective**: 2023-05-03 11:30:00+0200**value**: 181 cm(Details: UCUM codecm = 'cm')
-
--------
-
-Entry 11
-
-Ressource Observation :
-
-> 
-
-Profil: [FR Core Observation Body Weight Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-observation-body-weight.html)
-
-**status**: Final**category**:Vital Signs**code**:Poids corporel [Masse] Patient ; Numérique**subject**:`#patient-TradPN13FHIR-Presc-perfusion-6-composants`**effective**: 2023-05-03 11:30:00+0200**value**: 79 kg(Details: UCUM codekg = 'kg')
-
--------
-
-Entry 12
-
-Ressource Observation :
-
-> **status**: Final**category**:Vital Signs**code**:Créatinine clairance [Volume/Temps] Temps non précisé ; Urine+Sérum/Plasma ; Numérique**subject**:`#patient-TradPN13FHIR-Presc-perfusion-6-composants`**effective**: 2023-05-03 11:30:00+0200**value**: 0 µmol/l(Details: UCUM codeumol/L = 'umol/L')
-
--------
-
-Entry 13
-
-Ressource MedicationRequest :
-
-> 
-
-Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
-
-**identifier**:`https://somehospital.fr/PrescrptionLine-ID`/6166**groupIdentifier**:`https://somehospital.fr/Prescrption-ID`/IdentifiantAttribuéPourLaTraductionEnFHIR**status**: Active**intent**: Order**priority**: Routine**subject**:`#patient-TradPN13FHIR-Presc-perfusion-6-composants`**encounter**: Identifier:`https://somehospital.fr/Sejour`/3**supportingInformation**:
-* `#observation-1-TradPN13FHIR-Presc-perfusion-6-composants`
-* `#observation-2-TradPN13FHIR-Presc-perfusion-6-composants`
-* `#observation-3-TradPN13FHIR-Presc-perfusion-6-composants`
-**authoredOn**: 2023-05-03 11:30:00+0200**requester**:`#practitioner-TradPN13FHIR-Presc-perfusion-6-composants`**note**:
-> 
-
-**Prescription textuelle:** 1 préparation en continu sur 12h00 par jour
-
-
-> **dosageInstruction****timing**: Durée 720hours , Once per 12 hours**route**:Voie intraveineuse
-
-### DoseAndRates
-
-| | |
-| :--- | :--- |
-| - | **Dose[x]** |
-| * | 1 Poche(Details: EDQM Standard Terms code15005000 = 'Bag') |
-
-
-
 
 
 ## Resource Content
@@ -304,7 +115,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-1-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400894061175}\">NUTRYELT, sol à diluer pr perf, amp 10 mL</span></p><p><b>amount</b>: 1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15002000 = 'Ampoule')</span>/1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-1-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400894061175}\">NUTRYELT, sol à diluer pr perf, amp 10 mL</span></p><p><b>amount</b>: 1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15002000 = 'Ampoule')</span>/1</p></div>"
         },
         "code" : {
           "coding" : [
@@ -340,7 +151,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-2-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892834719}\">POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL</span></p><p><b>amount</b>: 1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15002000 = 'Ampoule')</span>/1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-2-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892834719}\">POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL</span></p><p><b>amount</b>: 1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15002000 = 'Ampoule')</span>/1</p></div>"
         },
         "code" : {
           "coding" : [
@@ -376,7 +187,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-3-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892614236}\">MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL</span></p><p><b>amount</b>: 1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15002000 = 'Ampoule')</span>/1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-3-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400892614236}\">MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL</span></p><p><b>amount</b>: 1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15002000 = 'Ampoule')</span>/1</p></div>"
         },
         "code" : {
           "coding" : [
@@ -412,7 +223,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-4-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-4-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-4-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-4-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893149416}\">LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL</span></p><p><b>amount</b>: 1 Flacon<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15060000 = 'Vial')</span>/1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-4-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-4-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-4-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-4-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893149416}\">LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL</span></p><p><b>amount</b>: 1 Flacon<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15060000 = 'Vial')</span>/1</p></div>"
         },
         "code" : {
           "coding" : [
@@ -448,7 +259,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-5-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-5-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-5-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-5-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891343281}\">CERNEVIT, pdr pr sol inj ou pr perf</span></p><p><b>amount</b>: 1 Flacon<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15060000 = 'Vial')</span>/1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-5-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-5-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-5-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-5-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891343281}\">CERNEVIT, pdr pr sol inj ou pr perf</span></p><p><b>amount</b>: 1 Flacon<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15060000 = 'Vial')</span>/1</p></div>"
         },
         "code" : {
           "coding" : [
@@ -484,7 +295,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-6-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-6-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-6-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-6-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891780475}\">SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)</span></p><p><b>amount</b>: 1 Poche<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15005000 = 'Bag')</span>/1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-6-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-6-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medication-6-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedication-6-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-noncompound.html\">FR Medication Non Compound</a></p></div><p><b>code</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891780475}\">SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)</span></p><p><b>amount</b>: 1 Poche<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15005000 = 'Bag')</span>/1</p></div>"
         },
         "code" : {
           "coding" : [
@@ -520,7 +331,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "extensions",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-C-prescr-perf-6-exemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-C-prescr-perf-6-exemple</b></p><a name=\"medication-C-prescr-perf-6-exemple\"> </a><a name=\"hcmedication-C-prescr-perf-6-exemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-compound.html\">FR Medication Compound</a></p></div><p><b>code</b>: <span title=\"Codes:\">NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-1-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-2-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-3-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-4-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-5-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>Medication component which is the vehicle of the compound Medication</b>: true</p><p><b>item</b>: <code>#medication-6-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-C-prescr-perf-6-exemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : Médication medication-C-prescr-perf-6-exemple</b></p><a name=\"medication-C-prescr-perf-6-exemple\"> </a><a name=\"hcmedication-C-prescr-perf-6-exemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medication-compound.html\">FR Medication Compound</a></p></div><p><b>code</b>: <span title=\"Codes :\">NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-1-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-2-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-3-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-4-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <code>#medication-5-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>Medication component which is the vehicle of the compound Medication</b>: true</p><p><b>item</b>: <code>#medication-6-TradPN13FHIR-Presc-perfusion-6-composants</code></p></blockquote></div>"
         },
         "code" : {
           "text" : "NUTRYELT, sol à diluer pr perf, amp 10 mL + POTASSIUM CHLORURE 1 g (10% Labo COOPER), sol à diluer pr perf, amp 10 mL + MAGNESIUM CHLORURE 1 g (Labo LAVOISIER), sol inj, IV, amp 10 mL + LEVOFOLINATE DE CALCIUM 25 mg (Labo ZENTIVA), sol inj, IM IV, flac 2.5 mL + CERNEVIT, pdr pr sol inj ou pr perf + SODIUM CHLORURE 0.9% (Labo B BRAUN), sol pr perf, poche 500 mL (ECOFLAC)"
@@ -576,7 +387,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Observation observation-1-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"observation-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcobservation-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-observation-body-height.html\">FR Core Observation Body Height Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8302-2}\">Taille du patient [Longueur] Patient ; Numérique</span></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>effective</b>: 2023-05-03 11:30:00+0200</p><p><b>value</b>: 181 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Observation observation-1-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"observation-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcobservation-1-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-observation-body-height.html\">FR Core Observation Body Height Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes :{http://loinc.org 8302-2}\">Taille du patient [Longueur] Patient ; Numérique</span></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>effective</b>: 2023-05-03 11:30:00+0200</p><p><b>value</b>: 181 cm<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMcm = 'cm')</span></p></div>"
         },
         "status" : "final",
         "category" : [
@@ -620,7 +431,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Observation observation-2-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"observation-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcobservation-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-observation-body-weight.html\">FR Core Observation Body Weight Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29463-7}\">Poids corporel [Masse] Patient ; Numérique</span></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>effective</b>: 2023-05-03 11:30:00+0200</p><p><b>value</b>: 79 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Observation observation-2-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"observation-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcobservation-2-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-observation-body-weight.html\">FR Core Observation Body Weight Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes :{http://loinc.org 29463-7}\">Poids corporel [Masse] Patient ; Numérique</span></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>effective</b>: 2023-05-03 11:30:00+0200</p><p><b>value</b>: 79 kg<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMkg = 'kg')</span></p></div>"
         },
         "status" : "final",
         "category" : [
@@ -659,7 +470,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         "id" : "observation-3-TradPN13FHIR-Presc-perfusion-6-composants",
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Observation observation-3-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"observation-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcobservation-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33558-8}\">Créatinine clairance [Volume/Temps] Temps non précisé ; Urine+Sérum/Plasma ; Numérique</span></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>effective</b>: 2023-05-03 11:30:00+0200</p><p><b>value</b>: 0 µmol/l<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeumol/L = 'umol/L')</span></p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : Observation observation-3-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"observation-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcobservation-3-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes :{http://loinc.org 33558-8}\">Créatinine clairance [Volume/Temps] Temps non précisé ; Urine+Sérum/Plasma ; Numérique</span></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>effective</b>: 2023-05-03 11:30:00+0200</p><p><b>value</b>: 0 µmol/l<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMumol/L = 'umol/L')</span></p></div>"
         },
         "status" : "final",
         "category" : [
@@ -703,7 +514,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedicationrequest-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: <code>https://somehospital.fr/PrescrptionLine-ID</code>/6166</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-C-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/3</p><p><b>supportingInformation</b>: </p><ul><li><code>#observation-1-TradPN13FHIR-Presc-perfusion-6-composants</code></li><li><code>#observation-2-TradPN13FHIR-Presc-perfusion-6-composants</code></li><li><code>#observation-3-TradPN13FHIR-Presc-perfusion-6-composants</code></li></ul><p><b>authoredOn</b>: 2023-05-03 11:30:00+0200</p><p><b>requester</b>: <code>#practitioner-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/IdentifiantAttribuéPourLaTraductionEnFHIR</p><p><b>note</b>: </p><blockquote><div><p><strong>Prescription textuelle:</strong> 1 préparation en continu sur 12h00 par jour</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Durée 720hours , Once per 12 hours</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Poche<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15005000 = 'Bag')</span></td></tr></table></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants</b></p><a name=\"medicationrequest-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><a name=\"hcmedicationrequest-TradPN13FHIR-Presc-perfusion-6-composants\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>identifier</b>: <code>https://somehospital.fr/PrescrptionLine-ID</code>/6166</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <code>#medication-C-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>subject</b>: <code>#patient-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>encounter</b>: Identifier: <code>https://somehospital.fr/Sejour</code>/3</p><p><b>supportingInformation</b>: </p><ul><li><code>#observation-1-TradPN13FHIR-Presc-perfusion-6-composants</code></li><li><code>#observation-2-TradPN13FHIR-Presc-perfusion-6-composants</code></li><li><code>#observation-3-TradPN13FHIR-Presc-perfusion-6-composants</code></li></ul><p><b>authoredOn</b>: 2023-05-03 11:30:00+0200</p><p><b>requester</b>: <code>#practitioner-TradPN13FHIR-Presc-perfusion-6-composants</code></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescrption-ID</code>/IdentifiantAttribuéPourLaTraductionEnFHIR</p><p><b>note</b>: </p><blockquote><div><p><strong>Prescription textuelle:</strong> 1 préparation en continu sur 12h00 par jour</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Durée 720hours , Une fois par 12 hours</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20045000}\">Voie intraveineuse</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Poche<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15005000 = 'Bag')</span></td></tr></table></blockquote></div>"
         },
         "identifier" : [
           {

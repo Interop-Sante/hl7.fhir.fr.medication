@@ -25,22 +25,22 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
 
 **type**: First Fill - Complete
 
-**quantity**: 15 1(Details: UCUM code1 = '1')
+**quantity**: 15 1(Détails : code UCUM1 = '1')
 
-**daysSupply**: 5 jours(Details: UCUM coded = 'd')
+**daysSupply**: 5 jours(Détails : code UCUMd = 'd')
 
 **whenPrepared**: 2021-07-28 15:25:00+0000
 
 **whenHandedOver**: 2021-07-28 16:41:00+0000
 
-> **dosageInstruction****sequence**: 1**timing**: Once**route**:Voie orale
+> **dosageInstruction****sequence**: 1**timing**: Une fois**route**:Voie orale
 
 ### DoseAndRates
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 1 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
+| * | Ordered | 1 Comprimé(Détails : code EDQM Standard Terms15054000 = 'Tablet') |
 
 
 

@@ -19,11 +19,7 @@ Medication Ingredient Strength Codes
 
 * [Strength CodeableConcept](StructureDefinition-fr-strength-codeableconcept.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include tous les codes définis dans [`http://hl7.org/fhir/CodeSystem/medication-ingredientstrength`](CodeSystem-medication-ingredient-strength-codes.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
@@ -77,7 +73,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "version" : "0.1.0",
   "name" : "MedicationIngredientStrengthCodes",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -6,41 +6,6 @@
 
 ## Example Bundle: HAS-04b-Presc-DAFALGANCODEINE
 
-Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
-
-Bundle HAS-04b-Presc-DAFALGANCODEINE de type searchset
-
--------
-
-Entry 1
-
-Ressource MedicationRequest :
-
-> 
-
-Profil: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
-
-**Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0**:
-
-un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES
-
-**status**: Active**intent**: Option**priority**: Routine**subject**:[Patient/14602](Patient/14602)**authoredOn**: 2025-07-23 10:33:00+0100**requester**: Identifier:`urn:oid:1.2.250.1.71.4.2.1`/899999999999**note**:
-> 
-
-Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES
-
-
-> **dosageInstruction****additionalInstruction**:Selon l'intensité des douleurs. STOP SI NAUSEE**timing**: Once per 12 hours
-
-### DoseAndRates
-
-| | |
-| :--- | :--- |
-| - | **Dose[x]** |
-| * | 1-2 Comprimé |
-
-**maxDosePerPeriod**: 4 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet')/1 Jour(Details: UCUM coded = 'd')**maxDosePerAdministration**: 2 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet')
-
 
 
 ## Resource Content
@@ -67,7 +32,7 @@ Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés tout
         },
         "text" : {
           "status" : "extensions",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-4b-Presc-DAFALGANCODEINE\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-4b-Presc-DAFALGANCODEINE</b></p><a name=\"medicationrequest-HAS-4b-Presc-DAFALGANCODEINE\"> </a><a name=\"hcmedicationrequest-HAS-4b-Presc-DAFALGANCODEINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medicationrequest.html\">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>\n</div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891479287}\">DAFALGAN CODEINE CPR</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2025-07-23 10:33:00+0100</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstruction</b>: <span title=\"Codes:\">Selon l'intensité des douleurs. STOP SI NAUSEE</span></p><p><b>timing</b>: Once per 12 hours</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1-2 Comprimé</td></tr></table><p><b>maxDosePerPeriod</b>: 4 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span>/1 Jour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p><p><b>maxDosePerAdministration</b>: 2 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Details: EDQM Standard Terms  code15054000 = 'Tablet')</span></p></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-HAS-4b-Presc-DAFALGANCODEINE\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-4b-Presc-DAFALGANCODEINE</b></p><a name=\"medicationrequest-HAS-4b-Presc-DAFALGANCODEINE\"> </a><a name=\"hcmedicationrequest-HAS-4b-Presc-DAFALGANCODEINE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-medicationrequest.html\">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>\n</div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400891479287}\">DAFALGAN CODEINE CPR</span></p><p><b>subject</b>: <a href=\"Patient/14602\">Patient/14602</a></p><p><b>authoredOn</b>: 2025-07-23 10:33:00+0100</p><p><b>requester</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/899999999999</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: DAFALGAN CODEINE®, comprimé un à deux comprimés toutes les 12 h pendant 10 jours, selon l’intensité de la douleur, avec un maximum à 2 comprimés par prise et de 4 comprimés par jour. STOP SI NAUSEES</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstruction</b>: <span title=\"Codes :\">Selon l'intensité des douleurs. STOP SI NAUSEE</span></p><p><b>timing</b>: Une fois par 12 hours</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1-2 Comprimé</td></tr></table><p><b>maxDosePerPeriod</b>: 4 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15054000 = 'Tablet')</span>/1 Jour<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMd = 'd')</span></p><p><b>maxDosePerAdministration</b>: 2 Comprimé<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15054000 = 'Tablet')</span></p></blockquote></div>"
         },
         "extension" : [
           {

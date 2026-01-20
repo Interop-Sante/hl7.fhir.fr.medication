@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-medicationstatement | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationHistoryMedicationStatement |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationHistoryMedicationStatement |
 
  
 Profil de la ressource**MedicationStatement**du Bilan médicamenteux. Medication History MedicationStatement resource profile 
@@ -17,9 +17,9 @@ Profil de la ressource**MedicationStatement**du Bilan médicamenteux. Medication
  
 Ce profil est utilisé pour les ressources MedicationStatement figurant dans un bilan médicamenteux. Chaque ressource MeciationStatement y représente une ligne de médicament du Bilan. 
 
-**Usages:**
+**Utilisations:**
 
-* Refer to this Profile: [FR Medication History Composition](StructureDefinition-fr-medication-history-composition.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
+* Référer à ce Profil: [FR Medication History Composition](StructureDefinition-fr-medication-history-composition.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication-history-medicationstatement)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "name" : "FRMedicationHistoryMedicationStatement",
   "title" : "FR Medication History MedicationStatement",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

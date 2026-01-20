@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrAdditionalActionRelationship |
+| Draft as of 2026-01-20 | *Computable Name*:FrAdditionalActionRelationship |
 
 Extension to specify relationship between action in a RequestGroup
 
@@ -17,10 +17,10 @@ Extension to specify relationship between action in a RequestGroup
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-for-prescription.md)
-* Examples for this Extension: [Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE](Bundle-MultiLine-Presc-METFORMINE-GLICLAZIDE.md) and [Bundle/TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE](Bundle-TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE.md)
+* Utiliser ce Extension: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-for-prescription.md)
+* Exemples pour ce Extension: [Bundle/MultiLine-Presc-METFORMINE-GLICLAZIDE](Bundle-MultiLine-Presc-METFORMINE-GLICLAZIDE.md) and [Bundle/TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE](Bundle-TradPN13FHIR-MultiLine-Presc-Alt-METFORMINE-GLICLAZIDE.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-additional-action-relationship)
 
@@ -32,9 +32,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-fr-additional-action-relationship.csv), [Excel](StructureDefinition-fr-additional-action-relationship.xlsx), [Schematron](StructureDefinition-fr-additional-action-relationship.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-additional-action
   "name" : "FrAdditionalActionRelationship",
   "title" : "Additional relatedAction relationship",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-history-source-type | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationHistorySourceType |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationHistorySourceType |
 
  
 Le système de codage des sources d’un Bilan Médicamenteux. 
@@ -37,7 +37,7 @@ Le système de codage des sources d’un Bilan Médicamenteux.
   "title" : "code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

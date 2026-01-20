@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-additional-when-codes | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrAdditionalWhenCodes |
+| Draft as of 2026-01-20 | *Computable Name*:FrAdditionalWhenCodes |
 
  
 Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing. 
@@ -18,11 +18,7 @@ Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne son
 
 * [Additional values for when element](StructureDefinition-fr-additional-when-values.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include tous les codes définis dans [`https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-when-codes`](CodeSystem-fr-additional-when-codes.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
@@ -58,7 +54,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "value set Interop'Santé - Codes additionnels pour l'élément when",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

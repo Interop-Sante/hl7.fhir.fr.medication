@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-current-medication-medicationstatement | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRCurrentMedicationMedicationStatement |
+| Draft as of 2026-01-20 | *Computable Name*:FRCurrentMedicationMedicationStatement |
 
  
 Profil de la ressource**MedicationStatement**du traitement médicamenteux courant. Current Medication MedicationStatement resource profile 
@@ -48,9 +48,9 @@ When interpreting a medicationStatement, the value of the status and NotTaken ne
 1. Status=In Error + NotTaken=N/A = In Error.
  
 
-**Usages:**
+**Utilisations:**
 
-* Refer to this Profile: [FR Current Medication Composition](StructureDefinition-fr-current-medication-composition.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
+* Référer à ce Profil: [FR Current Medication Composition](StructureDefinition-fr-current-medication-composition.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-current-medication-medicationstatement)
 
@@ -75,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-current-medicatio
   "name" : "FRCurrentMedicationMedicationStatement",
   "title" : "FR Current Medication MedicationStatement",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

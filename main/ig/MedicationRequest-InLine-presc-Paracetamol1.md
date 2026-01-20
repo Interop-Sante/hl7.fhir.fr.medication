@@ -22,14 +22,14 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
 
 **groupIdentifier**: Presc-24625
 
-> **dosageInstruction****sequence**: 1**timing**: Once**route**:Voie orale
+> **dosageInstruction****sequence**: 1**timing**: Une fois**route**:Voie orale
 
 ### DoseAndRates
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 1 g(Details: UCUM codeg = 'g') |
+| * | Ordered | 1 g(Détails : code UCUMg = 'g') |
 
 
 

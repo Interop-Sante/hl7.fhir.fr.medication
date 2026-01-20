@@ -17,7 +17,7 @@ Profil: [FR Medication](StructureDefinition-fr-medication.md)
 | | | | |
 | :--- | :--- | :--- | :--- |
 | - | **Item[x]** | **IsActive** | **Strength** |
-| * | PARACETAMOL | true | 500 mg(Details: UCUM codemg = 'mg')/1 |
+| * | PARACETAMOL | true | 500 mg(Détails : code UCUMmg = 'mg')/1 |
 
 
 

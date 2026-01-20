@@ -24,14 +24,14 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
 
 **groupIdentifier**: `https://somehospital.fr/Prescrption-ID`/Presc-24624
 
-> **dosageInstruction****timing**: Once**route**:Voie orale
+> **dosageInstruction****timing**: Une fois**route**:Voie orale
 
 ### DoseAndRates
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 1 Comprimé(Details: EDQM Standard Terms code15054000 = 'Tablet') |
+| * | Ordered | 1 Comprimé(Détails : code EDQM Standard Terms15054000 = 'Tablet') |
 
 
 

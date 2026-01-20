@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-current-medication-document-type | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrCurrentMedicationDocumentType |
+| Draft as of 2026-01-20 | *Computable Name*:FrCurrentMedicationDocumentType |
 
  
 Le jeu de valeurs à utiliser pour coder le type de document de la ressource**Composition**d’une liste des Traitements Médicamenteux Courants. 
@@ -18,11 +18,7 @@ Le jeu de valeurs à utiliser pour coder le type de document de la ressource**Co
 
 * [FR Current Medication Composition](StructureDefinition-fr-current-medication-composition.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include codes provenant de[`https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type`](CodeSystem-fr-document-type.md)version 📦0.1.0 où isCurrentMedication = true
+### Définition logique (CLD)
 
  
 
@@ -58,7 +54,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

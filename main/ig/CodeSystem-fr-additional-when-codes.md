@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-when-codes | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrAdditionalWhenCodes |
+| Draft as of 2026-01-20 | *Computable Name*:FrAdditionalWhenCodes |
 
  
 Le système de codage pour des périodes d’occurrence qui ne sont pas définies dans FHIR. 
@@ -37,7 +37,7 @@ Le système de codage pour des périodes d’occurrence qui ne sont pas définie
   "title" : "code system Interop'Santé - Codes additionnels pour l'élément when",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

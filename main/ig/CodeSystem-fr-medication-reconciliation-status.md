@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-status | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationReconciliationStatus |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationReconciliationStatus |
 
  
 Le système de codage du statut d’une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -37,7 +37,7 @@ Le système de codage du statut d’une ligne de traitement d’une FCT (Fiche d
   "title" : "code system Interop'Santé - Statut d'une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

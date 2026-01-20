@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-current-medication-composition | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRCurrentMedicationComposition |
+| Draft as of 2026-01-20 | *Computable Name*:FRCurrentMedicationComposition |
 
  
 Profil de la ressource Composition du traitement médicamenteux courant. 
@@ -17,10 +17,10 @@ Profil de la ressource Composition du traitement médicamenteux courant.
  
 Ce profil est utilisé pour la ressource**Composition**de tout document FHIR**Traitement médicamenteux courant**. Par exemple, celui résultant de la prescription d’admission intitulé**Ordonnance Médicale d’Admission**(OMA). 
 
-**Usages:**
+**Utilisations:**
 
-* Derived from this Profile: [FR On Admission Medication Composition](StructureDefinition-fr-on-admission-medication-composition.md)
-* Refer to this Profile: [FR Medication Reconciliation Composition](StructureDefinition-fr-medication-reconciliation-composition.md)
+* Dérivé de ce Profil: [FR On Admission Medication Composition](StructureDefinition-fr-on-admission-medication-composition.md)
+* Référer à ce Profil: [FR Medication Reconciliation Composition](StructureDefinition-fr-medication-reconciliation-composition.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-current-medication-composition)
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-current-medicatio
   "name" : "FRCurrentMedicationComposition",
   "title" : "FR Current Medication Composition",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

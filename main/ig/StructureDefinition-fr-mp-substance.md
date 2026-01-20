@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-mp-substance | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMPSubstance |
+| Draft as of 2026-01-20 | *Computable Name*:FRMPSubstance |
 
  
 code for the medicinal product substance 
 
-**Usages:**
+**Utilisations:**
 
-* Use this DataType Profile: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
+* Utiliser ce Profil de type de données: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-mp-substance)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-mp-substance.csv)
   "title" : "FR Meditinal Product Substance",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

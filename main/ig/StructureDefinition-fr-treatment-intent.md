@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrTeatmentIntent |
+| Draft as of 2026-01-20 | *Computable Name*:FrTeatmentIntent |
 
 The overall intention of the treatment
 
@@ -17,9 +17,9 @@ The overall intention of the treatment
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+* Utiliser ce Extension: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-treatment-intent)
 
@@ -31,9 +31,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-fr-treatment-intent.csv), [Excel](StructureDefinition-fr-treatment-intent.xlsx), [Schematron](StructureDefinition-fr-treatment-intent.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-treatment-intent.
   "name" : "FrTeatmentIntent",
   "title" : "MedicationRequest overall treatment intent",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

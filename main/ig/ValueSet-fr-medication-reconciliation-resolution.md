@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-resolution | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationReconciliationResolution |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationReconciliationResolution |
 
  
 Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -18,11 +18,7 @@ Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur u
 
 * [FRMedicationStatementReconciliationProperties](StructureDefinition-fr-medicationstatement-reconciliation-properties.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include tous les codes définis dans [`https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-resolution`](CodeSystem-fr-medication-reconciliation-resolution.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
@@ -58,7 +54,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

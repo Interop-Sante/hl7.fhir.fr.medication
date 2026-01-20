@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationstatement-reconciliation-properties | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationStatementReconciliationProperties |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationStatementReconciliationProperties |
 
 Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)
 
@@ -17,9 +17,9 @@ Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource Me
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
+* Utiliser ce Extension: [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medicationstatement-reconciliation-properties)
 
@@ -31,9 +31,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-fr-medicationstatement-reconciliation-properties.csv), [Excel](StructureDefinition-fr-medicationstatement-reconciliation-properties.xlsx), [Schematron](StructureDefinition-fr-medicationstatement-reconciliation-properties.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medicationstateme
   "version" : "0.1.0",
   "name" : "FRMedicationStatementReconciliationProperties",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

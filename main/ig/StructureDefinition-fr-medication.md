@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedication |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedication |
 
  
 profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp’Santé 
@@ -17,10 +17,10 @@ profil de la ressource Medication décrivant le médicament dans une ressource M
  
 décrit le médicament figurant dans une ressource InterOp’Santé (fr) MedicationStatement (Bilan Médicamenteux, Conciliation) ou MedicationRequest (prescription) 
 
-**Usages:**
+**Utilisations:**
 
-* Refer to this Profile: [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md), [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md), [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
-* Examples for this Profile: [Medication/InLine-DOLIPRANE](Medication-InLine-DOLIPRANE.md), [Medication/InLine-med-EFFERALGAN](Medication-InLine-med-EFFERALGAN.md) and [Medication/InLine-med-Paracetamol](Medication-InLine-med-Paracetamol.md)
+* Référer à ce Profil: [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md), [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md), [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
+* Exemples pour ce Profil: [Medication/InLine-DOLIPRANE](Medication-InLine-DOLIPRANE.md), [Medication/InLine-med-EFFERALGAN](Medication-InLine-med-EFFERALGAN.md) and [Medication/InLine-med-Paracetamol](Medication-InLine-med-Paracetamol.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication)
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication.csv), 
   "name" : "FRMedication",
   "title" : "FR Medication",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

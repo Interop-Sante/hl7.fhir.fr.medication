@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-drug-characteristic | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrDrugCharacteristic |
+| Draft as of 2026-01-20 | *Computable Name*:FrDrugCharacteristic |
 
 Specifies descriptive properties of the medicine
 
@@ -17,9 +17,9 @@ Specifies descriptive properties of the medicine
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md) and [FR Medication Virtual](StructureDefinition-fr-medication-virtual.md)
+* Utiliser ce Extension: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md) and [FR Medication Virtual](StructureDefinition-fr-medication-virtual.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-drug-characteristic)
 
@@ -31,9 +31,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-fr-drug-characteristic.csv), [Excel](StructureDefinition-fr-drug-characteristic.xlsx), [Schematron](StructureDefinition-fr-drug-characteristic.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-drug-characterist
   "name" : "FrDrugCharacteristic",
   "title" : "Medication descriptive properties",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

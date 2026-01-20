@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-composition | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationHistoryComposition |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationHistoryComposition |
 
  
 Profil de la ressource Composition du Bilan Médicamenteux. Medication Assessment Composition resource profile. 
@@ -17,9 +17,9 @@ Profil de la ressource Composition du Bilan Médicamenteux. Medication Assessmen
  
 Ce profil est utilisé pour la Composition du Bundle portant le document FHIR Bilan Médicamenteux. 
 
-**Usages:**
+**Utilisations:**
 
-* Refer to this Profile: [FR Medication Reconciliation Composition](StructureDefinition-fr-medication-reconciliation-composition.md)
+* Référer à ce Profil: [FR Medication Reconciliation Composition](StructureDefinition-fr-medication-reconciliation-composition.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication-history-composition)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "name" : "FRMedicationHistoryComposition",
   "title" : "FR Medication History Composition",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-mp-dose-form | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrMpDoseForm |
+| Draft as of 2026-01-20 | *Computable Name*:FrMpDoseForm |
 
  
 Le jeu de valeurs à utiliser pour coder l’élément**doseForm**des ressources**FrMedication**. 
@@ -20,11 +20,7 @@ Le jeu de valeurs à utiliser pour coder l’élément**doseForm**des ressources
 * [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
 * [FR Medication Virtual](StructureDefinition-fr-medication-virtual.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include tous les codes définis dans [`http://standardterms.edqm.eu`](http://tx.fhir.org/r4)version ⏿5 February 2025
+### Définition logique (CLD)
 
  
 
@@ -60,7 +56,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "French Medicinal product Dose form",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

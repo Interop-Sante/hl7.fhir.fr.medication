@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-additional-action-relationship-type-value-set | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrAdditionalRequestGroupRelationshipValueSet |
+| Draft as of 2026-01-20 | *Computable Name*:FrAdditionalRequestGroupRelationshipValueSet |
 
  
 Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type. 
@@ -18,11 +18,7 @@ Codes to specify relationship between action in a RequestGroup that are not in t
 
 * [Additional relatedAction relationship](StructureDefinition-fr-additional-action-relationship.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include tous les codes définis dans [`https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-action-relationship-type`](CodeSystem-fr-additional-action-relationship-type.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
@@ -58,7 +54,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "Interop'Santé value set - Additional codes for relationship between action",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

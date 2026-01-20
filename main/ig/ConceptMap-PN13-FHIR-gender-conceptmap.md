@@ -9,31 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-gender-conceptmap | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrPN13FHIRGenderConceptMap |
+| Draft as of 2026-01-20 | *Computable Name*:FrPN13FHIRGenderConceptMap |
 
  
 ConceptMap pour la conversion des codes de sexe administratif entre PN13 et FHIR 
-
-Mapping from https://interopsante.org/pn13/SIPh_sexe to [http://hl7.org/fhir/administrative-gender](http://hl7.org/fhir/R4/codesystem-administrative-gender.html)
-
-**Group 1**Mapping from `unspecified code system` to `unspecified code system`
-
-* **Source Code**: M (Mâle)
-  * **relation**: [is equal to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal)
-  * **Target Code**: male
-  * **Commentaire**: 
-* **Source Code**: F (Femelle)
-  * **relation**: [is equal to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal)
-  * **Target Code**: female
-  * **Commentaire**: 
-* **Source Code**: U (Non connu)
-  * **relation**: [is equal to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal)
-  * **Target Code**: unknown
-  * **Commentaire**: 
-* **Source Code**: O (Autre)
-  * **relation**: [maps loosely to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#inexact)
-  * **Target Code**: unknown
-  * **Commentaire**: La terminologie FHIR pour le sexe administratif n'a pas d'équivalent pour le concept autre. Le mapping sur unknown est proposé pour permettre un passage de PN13 à FHIR
 
 
 
@@ -48,7 +27,7 @@ Mapping from https://interopsante.org/pn13/SIPh_sexe to [http://hl7.org/fhir/adm
   "name" : "FrPN13FHIRGenderConceptMap",
   "title" : "Conversion PN13 FHIR des code de sexe administratif",
   "status" : "draft",
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

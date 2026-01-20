@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-code | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FRMedicationCodes |
+| Draft as of 2026-01-20 | *Computable Name*:FRMedicationCodes |
 
  
 Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code 
@@ -19,19 +19,13 @@ Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.
 * [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
 * [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
 
-### Logical Definition (CLD)
-
-Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
-
-* Inclut tous les codes définis dans `http://data.esante.gouv.fr/ansm/medicament/UCD`version Not Stated (use latest from terminology server)
-* Inclut tous les codes définis dans `http://data.esante.gouv.fr/ansm/medicament/codeSMS`version Not Stated (use latest from terminology server)
-* Inclut tous les codes définis dans `http://data.esante.gouv.fr/ansm/medicament/substance`version Not Stated (use latest from terminology server)
+### Définition logique (CLD)
 
  
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+No Expansion for this valueset (not supported by Publication Tooling)
 
 -------
 
@@ -60,7 +54,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "value set Interop'Santé - Codes identifiant les médicaments",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

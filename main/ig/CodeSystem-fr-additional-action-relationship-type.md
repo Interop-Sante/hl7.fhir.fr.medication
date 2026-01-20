@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-action-relationship-type | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrAdditionalActionRelationshipType |
+| Draft as of 2026-01-20 | *Computable Name*:FrAdditionalActionRelationshipType |
 
  
 Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type. 
@@ -37,7 +37,7 @@ Codes to specify relationship between action in a RequestGroup that are not in t
   "title" : "Interop'Santé code system - Additional codes for relationship between action",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

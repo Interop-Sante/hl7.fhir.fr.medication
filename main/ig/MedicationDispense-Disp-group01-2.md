@@ -35,9 +35,9 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
 
 **type**: Refill - Part
 
-**quantity**: 14 1(Details: UCUM code1 = '1')
+**quantity**: 14 1(Détails : code UCUM1 = '1')
 
-**daysSupply**: 2 jours(Details: UCUM coded = 'd')
+**daysSupply**: 2 jours(Détails : code UCUMd = 'd')
 
 **whenPrepared**: 2021-07-16 10:10:00+0000
 

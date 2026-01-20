@@ -6,81 +6,6 @@
 
 ## Example Bundle: MultiLine-Presc-Sucralfate-Paracetamol
 
-Profil: [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md)
-
-Bundle MultiLine-Presc-Sucralfate-Paracetamol de type searchset
-
--------
-
-Entry 1
-
-Ressource MedicationRequest :
-
-> **Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-MultiLine-Presc-Sucralfate**
-
-Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
-
-**status**: Active**intent**: Option**priority**: Routine**medication**:sucralfate**subject**:[Patient/30004](Patient/30004)**authoredOn**: 2025-05-02 14:48:44+0000**requester**:[Practitioner/smart-Practitioner-3004](Practitioner/smart-Practitioner-3004)**groupIdentifier**:`https://somehospital.fr/Prescription-ID`/Presc-30004
-> **dosageInstruction****timing**: 60min , avant le petit-déjeuner, avant le dîner, Once**route**:Voie orale
-
-### DoseAndRates
-
-| | |
-| :--- | :--- |
-| - | **Dose[x]** |
-| * | 1 g(Details: UCUM codeg = 'g') |
-
-
-
--------
-
-Entry 2
-
-Ressource MedicationRequest :
-
-> **Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-MultiLine-Presc-Paracetamol**
-
-Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
-
-**status**: Active**intent**: Option**priority**: Routine**medication**:paracétamol**subject**:[Patient/30004](Patient/30004)**authoredOn**: 2025-05-02 14:48:44+0000**requester**:[Practitioner/smart-Practitioner-3004](Practitioner/smart-Practitioner-3004)**groupIdentifier**:`https://somehospital.fr/Prescription-ID`/Presc-30004
-> **dosageInstruction****timing**: Once per 4 hours**route**:Voie orale
-
-### DoseAndRates
-
-| | |
-| :--- | :--- |
-| - | **Dose[x]** |
-| * | 500 mg(Details: UCUM codemg = 'mg') |
-
-**maxDosePerPeriod**: 3 g(Details: UCUM codeg = 'g')/1 d(Details: UCUM coded = 'd')
-
--------
-
-Entry 3
-
-Ressource RequestGroup :
-
-> **Narratif généré : RequestGroup requestgroup-Presc-Sucralfate-Paracetamol**
-
-Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-for-prescription.md)
-
-**groupIdentifier**:`https://somehospital.fr/Prescription-ID`/Presc-30004**status**: Active**intent**: Order**priority**: Routine**subject**:[Patient/30004](Patient/30004)
-> **action**
-> **id**Action1
-
-### RelatedActions
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| - | **ActionId** | **Relationship** | **Offset[x]** |
-| * | Action2 | After | No display for Duration (value : 2; unit : h; system : http://unitsofmeasure.org; code : h) |
-
-**resource**:`#medicationrequest-MultiLine-Presc-Paracetamol`
-
-> **action**
-> **id**Action2
-**resource**:`#medicationrequest-MultiLinePresc-Sucralfate`
-
 
 
 ## Resource Content
@@ -107,7 +32,7 @@ Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-f
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-MultiLine-Presc-Sucralfate\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-MultiLine-Presc-Sucralfate</b></p><a name=\"medicationrequest-MultiLine-Presc-Sucralfate\"> </a><a name=\"hcmedicationrequest-MultiLine-Presc-Sucralfate\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091545}\">sucralfate</span></p><p><b>subject</b>: <a href=\"Patient/30004\">Patient/30004</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-3004\">Practitioner/smart-Practitioner-3004</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescription-ID</code>/Presc-30004</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: 60min , avant le petit-déjeuner, avant le dîner, Once</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span></td></tr></table></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-MultiLine-Presc-Sucralfate\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-MultiLine-Presc-Sucralfate</b></p><a name=\"medicationrequest-MultiLine-Presc-Sucralfate\"> </a><a name=\"hcmedicationrequest-MultiLine-Presc-Sucralfate\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000091545}\">sucralfate</span></p><p><b>subject</b>: <a href=\"Patient/30004\">Patient/30004</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-3004\">Practitioner/smart-Practitioner-3004</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescription-ID</code>/Presc-30004</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: 60min , avant le petit-déjeuner, avant le dîner, Une fois</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 g<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMg = 'g')</span></td></tr></table></blockquote></div>"
         },
         "status" : "active",
         "intent" : "option",
@@ -179,7 +104,7 @@ Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-f
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-MultiLine-Presc-Paracetamol\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-MultiLine-Presc-Paracetamol</b></p><a name=\"medicationrequest-MultiLine-Presc-Paracetamol\"> </a><a name=\"hcmedicationrequest-MultiLine-Presc-Paracetamol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes:{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000090270}\">paracétamol</span></p><p><b>subject</b>: <a href=\"Patient/30004\">Patient/30004</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-3004\">Practitioner/smart-Practitioner-3004</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescription-ID</code>/Presc-30004</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 4 hours</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 3 g<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg = 'g')</span>/1 d<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  coded = 'd')</span></p></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_medicationrequest-MultiLine-Presc-Paracetamol\"> </a><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-MultiLine-Presc-Paracetamol</b></p><a name=\"medicationrequest-MultiLine-Presc-Paracetamol\"> </a><a name=\"hcmedicationrequest-MultiLine-Presc-Paracetamol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/codeSMS 100000090270}\">paracétamol</span></p><p><b>subject</b>: <a href=\"Patient/30004\">Patient/30004</a></p><p><b>authoredOn</b>: 2025-05-02 14:48:44+0000</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-3004\">Practitioner/smart-Practitioner-3004</a></p><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescription-ID</code>/Presc-30004</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Une fois par 4 hours</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20053000}\">Voie orale</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMmg = 'mg')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 3 g<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMg = 'g')</span>/1 d<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMd = 'd')</span></p></blockquote></div>"
         },
         "status" : "active",
         "intent" : "option",
@@ -266,7 +191,7 @@ Profil: [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-f
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RequestGroup_requestgroup-Presc-Sucralfate-Paracetamol\"> </a><p class=\"res-header-id\"><b>Narratif généré : RequestGroup requestgroup-Presc-Sucralfate-Paracetamol</b></p><a name=\"requestgroup-Presc-Sucralfate-Paracetamol\"> </a><a name=\"hcrequestgroup-Presc-Sucralfate-Paracetamol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-requestgroup-for-prescription.html\">FR RequestGroup For Prescription</a></p></div><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescription-ID</code>/Presc-30004</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>subject</b>: <a href=\"Patient/30004\">Patient/30004</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action1</blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td><td><b>Offset[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Action2</td><td>After</td><td>No display for Duration  (value : 2; unit : h; system : http://unitsofmeasure.org; code : h)</td></tr></table><p><b>resource</b>: <code>#medicationrequest-MultiLine-Presc-Paracetamol</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action2</blockquote><p><b>resource</b>: <code>#medicationrequest-MultiLinePresc-Sucralfate</code></p></blockquote></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RequestGroup_requestgroup-Presc-Sucralfate-Paracetamol\"> </a><p class=\"res-header-id\"><b>Narratif généré : RequestGroup requestgroup-Presc-Sucralfate-Paracetamol</b></p><a name=\"requestgroup-Presc-Sucralfate-Paracetamol\"> </a><a name=\"hcrequestgroup-Presc-Sucralfate-Paracetamol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-requestgroup-for-prescription.html\">FR RequestGroup For Prescription</a></p></div><p><b>groupIdentifier</b>: <code>https://somehospital.fr/Prescription-ID</code>/Presc-30004</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>subject</b>: <a href=\"Patient/30004\">Patient/30004</a></p><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action1</blockquote><h3>RelatedActions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ActionId</b></td><td><b>Relationship</b></td><td><b>Offset[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Action2</td><td>After</td><td>Pas daffichage pour {0}  (value : 2; unit : h; system : http://unitsofmeasure.org; code : h)</td></tr></table><p><b>resource</b>: <code>#medicationrequest-MultiLine-Presc-Paracetamol</code></p></blockquote><blockquote><p><b>action</b></p><blockquote><p><b>id</b></p>Action2</blockquote><p><b>resource</b>: <code>#medicationrequest-MultiLinePresc-Sucralfate</code></p></blockquote></div>"
         },
         "groupIdentifier" : {
           "system" : "https://somehospital.fr/Prescription-ID",

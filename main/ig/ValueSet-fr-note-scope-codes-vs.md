@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-note-scope-codes-vs | *Version*:0.1.0 |
-| Draft as of 2025-10-24 | *Computable Name*:FrNoteScopeCodeValueSet |
+| Draft as of 2026-01-20 | *Computable Name*:FrNoteScopeCodeValueSet |
 
  
 Le jeu de valeurs à utiliser pour coder le périmètre des notes par exemple lors de la transformation de message PN13 en ressources FHIR 
@@ -18,11 +18,7 @@ Le jeu de valeurs à utiliser pour coder le périmètre des notes par exemple lo
 
 * [Scope for note element in MedicationRequest](StructureDefinition-fr-medicationrequest-note-scope.md)
 
-### Logical Definition (CLD)
-
-Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
-
-* Include tous les codes définis dans [`https://hl7.fr/ig/fhir/medication/CodeSystem/fr-note-scope-codes`](CodeSystem-fr-note-scope-codes.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
@@ -58,7 +54,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "value set Interop'Santé - Codes pour le périmètre des notes",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-24T13:47:42+00:00",
+  "date" : "2026-01-20T09:44:19+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
