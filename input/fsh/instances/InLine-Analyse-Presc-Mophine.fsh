@@ -1,0 +1,21 @@
+Instance: InLine-Analyse-Presc-Morphine
+InstanceOf: fr-inpatient-medicationrequest
+Usage: #example
+Description: "Prescription de Paracétamol pour exemple de dispensation"
+* extension[renderedDosageInstruction].valueMarkdown = "une gélule le soir (à 20h) pendant huit jours"
+* status = #active
+* intent = #order
+* priority = #routine
+* note.text = "Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"
+* medicationCodeableConcept = $Medicabase#MV00001636 "MORPHINE LP 10mg gélule microgranulé à libération prolongée"
+* subject.reference = "Patient/14602"
+* authoredOn = "2025-07-23T10:33:00+01:00"
+* requester.reference = "Practitioner/smart-Practitioner-71482713"
+* groupIdentifier.value = "Presc-3657"
+* dosageInstruction.timing.repeat.boundsDuration = 8 $unitsofmeasure#d "jour"
+* dosageInstruction.timing.repeat.timeOfDay = "20:00:00"
+* dosageInstruction.timing.repeat.when = #EVE
+* dosageInstruction.doseAndRate.doseQuantity.value = 1
+* dosageInstruction.doseAndRate.doseQuantity.unit = "gélule"
+* dosageInstruction.doseAndRate.doseQuantity.system = $EDQM
+* dosageInstruction.doseAndRate.doseQuantity.code = #15012000

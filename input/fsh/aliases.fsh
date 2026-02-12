@@ -40,6 +40,10 @@ Alias: $PN13Schema-Posologie = https://interopsante.org/pn13/xsd/M_prescription_
 Alias: $FhirDosage = https://hl7.org/fhir/R4/dosage
 Alias: $FhirObservation = https://hl7.org/fhir/R4/observation
 
-
 // R5 aliases
 Alias: $medicationrequest-rendereddosageinstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction
+
+// ANS terminologies aliases
+Alias: $TRE-G15-ProfessionSante = https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante
+Alias: $TRE-G16-ProfessionFormation = https://mos.esante.gouv.fr/NOS/TRE_G16-ProfessionFormation/FHIR/TRE-G16-ProfessionFormation
+Alias: $TRE-R85-RolePriseCharge = https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge
