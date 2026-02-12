@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="HAS-04a-Presc-Paracetamol"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example"/>
+  </meta>
+  <type value="searchset"/>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="medicationrequest-HAS-4a-Presc-Paracetamol"/>
+        <meta>
+          <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_medicationrequest-HAS-4a-Presc-Paracetamol"> </a><p class="res-header-id"><b>Narratif généré : PrescriptionMédicamenteuseTODO medicationrequest-HAS-4a-Presc-Paracetamol</b></p><a name="medicationrequest-HAS-4a-Presc-Paracetamol"> </a><a name="hcmedicationrequest-HAS-4a-Presc-Paracetamol"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-medicationrequest.html">FR Medication Request</a></p></div><p><b>Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0</b>: </p><div><p>2 gélules toutes les 6 h pendant 10 jours si douleurs</p>
+</div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title="Codes :{http://BogusSystemMedicabase.com MV00000557}">PARACETAMOL 500 mg gélule</span></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>authoredOn</b>: 2025-06-06 14:48:44+0200</p><p><b>requester</b>: Identifier: 899999999999</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: Prescription textuelle: PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs</p>
+</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Une fois par 6 hours</p><p><b>asNeeded</b>: <span title="Codes :{http://snomed.info/sct 22253000}">Si douleurs</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>2 gélule ou capsule molle<span style="background: LightGoldenRodYellow"> (Détails : code EDQM Standard Terms15012000 = 'Capsule')</span></td></tr></table></blockquote></div>
+        </text>
+        <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction">
+          <valueMarkdown value="2 gélules toutes les 6 h pendant 10 jours si douleurs"/>
+        </extension>
+        <status value="active"/>
+        <intent value="order"/>
+        <priority value="routine"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://BogusSystemMedicabase.com"/>
+            <code value="MV00000557"/>
+            <display value="PARACETAMOL 500 mg gélule"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/14602"/>
+        </subject>
+        <authoredOn value="2025-06-06T14:48:44+02:00"/>
+        <requester>
+          <identifier>
+            <value value="899999999999"/>
+          </identifier>
+        </requester>
+        <note>
+          <text value="Prescription textuelle: Prescription textuelle: PARACETAMOL 500mg gélule - 2 gélules toutes les 6 h pendant 10 jours si douleurs"/>
+        </note>
+        <dosageInstruction>
+          <timing>
+            <repeat>
+              <boundsDuration>
+                <value value="10"/>
+                <unit value="jour"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+              </boundsDuration>
+              <frequency value="1"/>
+              <period value="6"/>
+              <periodUnit value="h"/>
+            </repeat>
+          </timing>
+          <asNeededCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="22253000"/>
+              <display value="douleur"/>
+            </coding>
+            <text value="Si douleurs"/>
+          </asNeededCodeableConcept>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="2"/>
+              <unit value="gélule ou capsule molle"/>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="15012000"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+</Bundle>

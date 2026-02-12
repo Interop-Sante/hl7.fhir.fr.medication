@@ -1,0 +1,1444 @@
+# Mapping Free Set CIO-DC VOIE - Guide d'implémentation du médicament v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Mapping Free Set CIO-DC VOIE**
+
+## ConceptMap: Mapping Free Set CIO-DC VOIE 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-voie-conceptmap | *Version*:0.1.0 |
+| Draft as of 2025-02-10 | *Computable Name*:FrPN13FHIRFreeSetCIODCVoieConceptMap |
+
+ 
+ConceptMap pour la conversion des codes voies d’administration des médicaments entre CIO et terminologies EQDM Standard Terms et SNOMED-CT 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "PN13-FHIR-FreeSetCIODC-Voie-ConceptMap",
+  "language" : "fr-FR",
+  "url" : "https://hl7.fr/fhir/fr/medication/ConceptMap/PN13-FHIR-voie-conceptmap",
+  "version" : "0.1.0",
+  "name" : "FrPN13FHIRFreeSetCIODCVoieConceptMap",
+  "title" : "Mapping Free Set CIO-DC VOIE",
+  "status" : "draft",
+  "date" : "2025-02-10T11:15:38Z",
+  "publisher" : "Interop'Santé",
+  "contact" : [
+    {
+      "name" : "Interop'Santé",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "http://interopsante.org/"
+        }
+      ]
+    }
+  ],
+  "description" : "ConceptMap pour la conversion des codes voies d'administration des médicaments entre CIO et terminologies EQDM Standard Terms et SNOMED-CT",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }
+      ]
+    }
+  ],
+  "group" : [
+    {
+      "source" : "https://www.phast.fr/ciodm/",
+      "sourceVersion" : "2025",
+      "target" : "http://standardterms.edqm.eu",
+      "element" : [
+        {
+          "code" : "12",
+          "target" : [
+            {
+              "code" : "20015000",
+              "display" : "Hémodialyse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "18",
+          "target" : [
+            {
+              "code" : "20001000",
+              "display" : "Voie auriculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "19",
+          "target" : [
+            {
+              "code" : "20054000",
+              "display" : "Voie buccale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "20",
+          "target" : [
+            {
+              "code" : "20003000",
+              "display" : "Voie cutanée",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "21",
+          "target" : [
+            {
+              "code" : "20004000",
+              "display" : "Voie dentaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "22",
+          "target" : [
+            {
+              "code" : "20006000",
+              "display" : "Voie endocervicale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "23",
+          "target" : [
+            {
+              "code" : "20007000",
+              "display" : "Voie endosinusale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "24",
+          "target" : [
+            {
+              "code" : "20008000",
+              "display" : "Voie endotrachéobronchique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "25",
+          "target" : [
+            {
+              "code" : "20011000",
+              "display" : "Voie extra-amniotique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "26",
+          "target" : [
+            {
+              "code" : "20013000",
+              "display" : "Voie gastro-entérale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "27",
+          "target" : [
+            {
+              "code" : "20014000",
+              "display" : "Voie gingivale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "28",
+          "target" : [
+            {
+              "code" : "20022000",
+              "display" : "Voie intraamniotique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "29",
+          "target" : [
+            {
+              "code" : "20023000",
+              "display" : "Voie intraartérielle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "30",
+          "target" : [
+            {
+              "code" : "20024000",
+              "display" : "Voie intraarticulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "31",
+          "target" : [
+            {
+              "code" : "20025000",
+              "display" : "Voie intrabursale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "32",
+          "target" : [
+            {
+              "code" : "20026000",
+              "display" : "Voie intracardiaque",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "33",
+          "target" : [
+            {
+              "code" : "20027000",
+              "display" : "Voie intracaverneuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "34",
+          "target" : [
+            {
+              "code" : "20028000",
+              "display" : "Voie intracervicale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "35",
+          "target" : [
+            {
+              "code" : "20029000",
+              "display" : "Voie intracoronaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "36",
+          "target" : [
+            {
+              "code" : "20030000",
+              "display" : "Voie intradermique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "37",
+          "target" : [
+            {
+              "code" : "20031000",
+              "display" : "Voie intradiscale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "38",
+          "target" : [
+            {
+              "code" : "20032000",
+              "display" : "Voie intralésionnelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "39",
+          "target" : [
+            {
+              "code" : "20033000",
+              "display" : "Voie intralymphatique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "41",
+          "target" : [
+            {
+              "code" : "20035000",
+              "display" : "Voie intramusculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "42",
+          "target" : [
+            {
+              "code" : "20036000",
+              "display" : "Voie intraoculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "43",
+          "target" : [
+            {
+              "code" : "20038000",
+              "display" : "Voie intrapéritonéale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "44",
+          "target" : [
+            {
+              "code" : "20039000",
+              "display" : "Voie intrapleurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "47",
+          "target" : [
+            {
+              "code" : "20041000",
+              "display" : "Voie intrasternale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "48",
+          "target" : [
+            {
+              "code" : "20044000",
+              "display" : "Voie intra-utérine",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "49",
+          "target" : [
+            {
+              "code" : "20045000",
+              "display" : "Voie intraveineuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "50",
+          "target" : [
+            {
+              "code" : "20046000",
+              "display" : "Voie intravésicale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "51",
+          "target" : [
+            {
+              "code" : "20049000",
+              "display" : "Voie nasale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "53",
+          "target" : [
+            {
+              "code" : "20051000",
+              "display" : "Voie ophtalmique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "54",
+          "target" : [
+            {
+              "code" : "20053000",
+              "display" : "Voie orale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "56",
+          "target" : [
+            {
+              "code" : "20057000",
+              "display" : "Voie périarticulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "57",
+          "target" : [
+            {
+              "code" : "20009000",
+              "display" : "Voie péridurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "58",
+          "target" : [
+            {
+              "code" : "20058000",
+              "display" : "Voie périneurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "59",
+          "target" : [
+            {
+              "code" : "20061000",
+              "display" : "Voie rectale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "61",
+          "target" : [
+            {
+              "code" : "20065000",
+              "display" : "Voie sous-conjonctivale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "62",
+          "target" : [
+            {
+              "code" : "20066000",
+              "display" : "Voie sous-cutanée",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "63",
+          "target" : [
+            {
+              "code" : "20070000",
+              "display" : "Voie transdermique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "64",
+          "target" : [
+            {
+              "code" : "20071000",
+              "display" : "Voie urétrale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "65",
+          "target" : [
+            {
+              "code" : "20072000",
+              "display" : "Voie vaginale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "105",
+          "target" : [
+            {
+              "code" : "20037000",
+              "display" : "Voie intrapéricardiaque",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "106",
+          "target" : [
+            {
+              "code" : "20020000",
+              "display" : "Voie inhalée",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "107",
+          "target" : [
+            {
+              "code" : "20047000",
+              "display" : "Voie intravitréenne",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "108",
+          "target" : [
+            {
+              "code" : "20067000",
+              "display" : "Voie sublinguale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "127",
+          "target" : [
+            {
+              "code" : "20042000",
+              "display" : "Voie intrathécale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "165",
+          "target" : [
+            {
+              "code" : "20036500",
+              "display" : "Voie intraosseuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "166",
+          "target" : [
+            {
+              "code" : "20010000",
+              "display" : "Voie épilésionnelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "167",
+          "target" : [
+            {
+              "code" : "20062000",
+              "display" : "Autre(s)",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "173",
+          "target" : [
+            {
+              "code" : "20080000",
+              "display" : "Voie intracérébroventriculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "174",
+          "target" : [
+            {
+              "code" : "20021000",
+              "display" : "Voie intestinale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "175",
+          "target" : [
+            {
+              "code" : "20043000",
+              "display" : "Voie intratumorale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "177",
+          "target" : [
+            {
+              "code" : "20011500",
+              "display" : "Voie extracorporelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "179",
+          "target" : [
+            {
+              "code" : "20025500",
+              "display" : "Voie intracamérulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "180",
+          "target" : [
+            {
+              "code" : "20059000",
+              "display" : "Voie périodontale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "181",
+          "target" : [
+            {
+              "code" : "20067500",
+              "display" : "Voie sous-muqueuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "183",
+          "target" : [
+            {
+              "code" : "20059400",
+              "display" : "Voie péritumorale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "184",
+          "target" : [
+            {
+              "code" : "20081000",
+              "display" : "Voie subrétinale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "189",
+          "target" : [
+            {
+              "code" : "20086000",
+              "display" : "Voie intraputaminale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "192",
+          "target" : [
+            {
+              "code" : "20028300",
+              "display" : "Voie intracholangiopancréatique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "190",
+          "target" : [
+            {
+              "code" : "20028500",
+              "display" : "Voie intracisternale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "191",
+          "target" : [
+            {
+              "code" : "20031700",
+              "display" : "Voie intraglandulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "188",
+          "target" : [
+            {
+              "code" : "20002500",
+              "display" : "Voie buccogingivale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "187",
+          "target" : [
+            {
+              "code" : "20027010",
+              "display" : "Voie intracérébrale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "185",
+          "target" : [
+            {
+              "code" : "20013500",
+              "display" : "Voie gastrique",
+              "equivalence" : "equal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source" : "https://www.phast.fr/ciodm/",
+      "sourceVersion" : "2025",
+      "target" : "https://www.snomed.org/",
+      "element" : [
+        {
+          "code" : "18",
+          "target" : [
+            {
+              "code" : "10547007",
+              "display" : "Voie auriculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "19",
+          "target" : [
+            {
+              "code" : "54471007",
+              "display" : "Voie buccale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "20",
+          "target" : [
+            {
+              "code" : "448598008",
+              "display" : "Voie cutanée",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "21",
+          "target" : [
+            {
+              "code" : "372449004",
+              "display" : "Voie dentaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "22",
+          "target" : [
+            {
+              "code" : "372450004",
+              "display" : "Voie endocervicale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "23",
+          "target" : [
+            {
+              "code" : "372451000",
+              "display" : "Voie endosinusale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "24",
+          "target" : [
+            {
+              "code" : "372452007",
+              "display" : "Voie endotrachéobronchique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "25",
+          "target" : [
+            {
+              "code" : "372453002",
+              "display" : "Voie extra-amniotique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "177",
+          "target" : [
+            {
+              "code" : "714743009",
+              "display" : "Voie extracorporelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "26",
+          "target" : [
+            {
+              "code" : "372454008",
+              "display" : "Voie gastro-entérale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "27",
+          "target" : [
+            {
+              "code" : "372457001",
+              "display" : "Voie gingivale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "28",
+          "target" : [
+            {
+              "code" : "372458006",
+              "display" : "Voie intra-amniotique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "29",
+          "target" : [
+            {
+              "code" : "58100008",
+              "display" : "Voie intra-artérielle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "30",
+          "target" : [
+            {
+              "code" : "12130007",
+              "display" : "Voie intra-articulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "31",
+          "target" : [
+            {
+              "code" : "372459003",
+              "display" : "Voie intrabursale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "32",
+          "target" : [
+            {
+              "code" : "372460008",
+              "display" : "Voie intracardiaque",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "35",
+          "target" : [
+            {
+              "code" : "372463005",
+              "display" : "Voie intracoronaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "36",
+          "target" : [
+            {
+              "code" : "372464004",
+              "display" : "Voie intradermique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "37",
+          "target" : [
+            {
+              "code" : "372465003",
+              "display" : "Voie intradiscale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "38",
+          "target" : [
+            {
+              "code" : "372466002",
+              "display" : "Voie intralésionnelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "39",
+          "target" : [
+            {
+              "code" : "372467006",
+              "display" : "Voie intralymphatique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "40",
+          "target" : [
+            {
+              "code" : "447121004",
+              "display" : "Voie intramammaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "41",
+          "target" : [
+            {
+              "code" : "78421000",
+              "display" : "Voie intramusculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "105",
+          "target" : [
+            {
+              "code" : "445771006",
+              "display" : "Voie intrapéricardiaque",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "43",
+          "target" : [
+            {
+              "code" : "38239002",
+              "display" : "Voie intrapéritonéale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "44",
+          "target" : [
+            {
+              "code" : "372469009",
+              "display" : "Voie intrapleurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "47",
+          "target" : [
+            {
+              "code" : "372470005",
+              "display" : "Voie intrasternale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "127",
+          "target" : [
+            {
+              "code" : "72607000",
+              "display" : "Voie intrathécale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "175",
+          "target" : [
+            {
+              "code" : "447122006",
+              "display" : "Voie intratumorale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "48",
+          "target" : [
+            {
+              "code" : "62226000",
+              "display" : "Voie intra-utérine",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "49",
+          "target" : [
+            {
+              "code" : "47625008",
+              "display" : "Voie intraveineuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "50",
+          "target" : [
+            {
+              "code" : "372471009",
+              "display" : "Voie intravésicale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "107",
+          "target" : [
+            {
+              "code" : "418401004",
+              "display" : "Voie intravitréenne",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "51",
+          "target" : [
+            {
+              "code" : "46713006",
+              "display" : "Voie nasale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "53",
+          "target" : [
+            {
+              "code" : "54485002",
+              "display" : "Voie ophtalmique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "55",
+          "target" : [
+            {
+              "code" : "419165009",
+              "display" : "Voie paravertébrale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "56",
+          "target" : [
+            {
+              "code" : "372474001",
+              "display" : "Voie périarticulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "57",
+          "target" : [
+            {
+              "code" : "447080003",
+              "display" : "Voie péridurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "59",
+          "target" : [
+            {
+              "code" : "37161004",
+              "display" : "Voie rectale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "61",
+          "target" : [
+            {
+              "code" : "372476004",
+              "display" : "Voie sous-conjonctivale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "108",
+          "target" : [
+            {
+              "code" : "37839007",
+              "display" : "Voie sublinguale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "63",
+          "target" : [
+            {
+              "code" : "45890007",
+              "display" : "Voie transdermique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "64",
+          "target" : [
+            {
+              "code" : "90028008",
+              "display" : "Voie urétrale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "65",
+          "target" : [
+            {
+              "code" : "16857009",
+              "display" : "Voie vaginale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "176",
+          "target" : [
+            {
+              "code" : "418722009",
+              "display" : "Voie péribulbaire ophtalmique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "168",
+          "target" : [
+            {
+              "code" : "127492001",
+              "display" : "Voie nasogastrique",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "180",
+          "target" : [
+            {
+              "code" : "447052000",
+              "display" : "Voie périodontale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "181",
+          "target" : [
+            {
+              "code" : "419874009",
+              "display" : "Voie sous-muqueuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "42",
+          "target" : [
+            {
+              "code" : "372468001",
+              "display" : "voie intraoculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "58",
+          "target" : [
+            {
+              "code" : "447080003",
+              "display" : "voie péridurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "62",
+          "target" : [
+            {
+              "code" : "34206005",
+              "display" : "voie subcutanée",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "165",
+          "target" : [
+            {
+              "code" : "417255000",
+              "display" : "voie intraosseuse",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "169",
+          "target" : [
+            {
+              "code" : "127491008",
+              "display" : "voie jéjunostomie",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "170",
+          "target" : [
+            {
+              "code" : "127490009",
+              "display" : "voie de gastrostomie",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "179",
+          "target" : [
+            {
+              "code" : "418821007",
+              "display" : "voie intracamérulaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "182",
+          "target" : [
+            {
+              "code" : "711378007",
+              "display" : "voie intramurale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "106",
+          "target" : [
+            {
+              "code" : "447694001",
+              "display" : "voie inhalée",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "45",
+          "target" : [
+            {
+              "code" : "72607000",
+              "display" : "voie intrathécale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "166",
+          "target" : [
+            {
+              "code" : "764723001",
+              "display" : "voie épilésionnelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "186",
+          "target" : [
+            {
+              "code" : "418743005",
+              "display" : "par la fistule",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "174",
+          "target" : [
+            {
+              "code" : "58731000052100",
+              "display" : "voie intestinale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "34",
+          "target" : [
+            {
+              "code" : "372462000",
+              "display" : "voie intracervicale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "12",
+          "target" : [
+            {
+              "code" : "766790006",
+              "display" : "voie d'hémodialyse extracorporelle",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "184",
+          "target" : [
+            {
+              "code" : "58831000052108",
+              "display" : "voie sous-rétinienne",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "54",
+          "target" : [
+            {
+              "code" : "26643006",
+              "display" : "voie orale",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "173",
+          "target" : [
+            {
+              "code" : "420719007",
+              "display" : "voie intracérébroventriculaire",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "187",
+          "target" : [
+            {
+              "code" : "446540005",
+              "display" : "Intracerebral route",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "183",
+          "target" : [
+            {
+              "code" : "58811000052103",
+              "display" : "Peritumoral route",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "185",
+          "target" : [
+            {
+              "code" : "445768003",
+              "display" : "Intragastric route",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "33",
+          "target" : [
+            {
+              "code" : "1259221004",
+              "display" : "Intracorporus cavernosum route",
+              "equivalence" : "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+```
