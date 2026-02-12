@@ -7,9 +7,9 @@ Description: "Le système de codage pour le typage de l'intervention pharmaceuti
 * ^experimental = false
 * ^content = #complete
 * ^count = 7
-* #1 "Ajout (prescrption nouvelle)"
+* #1 "Ajout (prescription nouvelle)"
 * #2 "Arrêt"
-* #3 "Substitution/echange"
+* #3 "Substitution/Echange"
 * #4 "Choix de la voie d'administration"
 * #5 "Suivi thérapeutique"
 * #6 "Optimisation modalités d'administration"

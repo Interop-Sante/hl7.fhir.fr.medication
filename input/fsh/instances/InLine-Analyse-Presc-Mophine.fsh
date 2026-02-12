@@ -1,7 +1,7 @@
 Instance: InLine-Analyse-Presc-Morphine
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
-Description: "Prescription de Paracétamol pour exemple de dispensation"
+Description: "Prescription de Paracétamol pour exemple d'analyse pharmaceutique"
 * extension[renderedDosageInstruction].valueMarkdown = "une gélule le soir (à 20h) pendant huit jours"
 * status = #active
 * intent = #order
