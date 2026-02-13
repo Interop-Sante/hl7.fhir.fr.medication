@@ -1,5 +1,5 @@
 Instance: Analyse-Intervention-Demande-Substitution
-InstanceOf: FRPharmaceuticalAnalysisResult
+InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
 Description: "Intervention pharmaceutique type 3 Substitution/echange problème 6.3 Interaction - Association déconseillée"
 * groupIdentifier.value = "Presc-4254"

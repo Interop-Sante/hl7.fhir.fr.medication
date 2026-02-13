@@ -15,9 +15,11 @@
 Cette spécification couvre le partage de données entre système d'informations au sein d'une structure de soin à l'issue d'une analyse pharmaceutique.
 L'analyse pharmaceutique réalisée en officine est principalement au niveau du LGO sans besoin identifié d'échange interopérable avec d'autres systèmes. Elle est donc hors périmètre de cette version de la spécification.
 
-### Origine et alignement
+### Origine et alignements
 
-/!\ A rédiger => Manuel
+Les spécifications sont issues des travaux du groupe de travail Interop'Santé et s'appuient sur:
+
+- la liste des codes définissant l'intervention pharmaceutique 
 
 ### Guide de lecture
 

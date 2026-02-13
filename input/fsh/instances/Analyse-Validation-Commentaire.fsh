@@ -1,5 +1,5 @@
 Instance: Analyse-Validation-Commentaire
-InstanceOf: FRPharmaceuticalAnalysisResult
+InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
 Description: "Validation d'une prescription de morphine avec commentaire"
 * groupIdentifier.value = "Presc-3657"

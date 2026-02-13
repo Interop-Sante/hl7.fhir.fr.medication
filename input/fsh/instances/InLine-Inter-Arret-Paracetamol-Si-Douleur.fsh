@@ -1,12 +1,12 @@
 Instance: InLine-Inter-Arret-Paracetamol-Si-Souleur
-InstanceOf: fr-pharmaceutical-intervention-suggestion
+InstanceOf: fr-inpatient-pharmaceutical-intervention-suggestion
 Usage: #example
 Description: "Proposition d'arrêt dans le cadre d'un intervention pharmaceutique"
 * extension[renderedDosageInstruction].valueMarkdown = "Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
 * status = #active
 * intent = #proposal
 * priority = #routine
-* doNotPerform = 1
+* doNotPerform = true
 * note.text = "Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
 * medicationCodeableConcept = $Medicabase#MV00000557 "PARACETAMOL 500 mg gélule"
 * subject.reference = "Patient/14602"

@@ -1,5 +1,5 @@
 Instance: Analyse-Intervention-Arret
-InstanceOf: FRPharmaceuticalAnalysisResult
+InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
 Description: "Intervention pharmaceutique type 2 Arrêt problème 5 Médicament non indiqué"
 * groupIdentifier.value = "Presc-4130"

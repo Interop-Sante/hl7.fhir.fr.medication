@@ -1,5 +1,5 @@
 Instance: Analyse-Validation-Simple
-InstanceOf: FRPharmaceuticalAnalysisResult
+InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
 Description: "Validation simple d'une prescription de paracétamol"
 * groupIdentifier.value = "Presc-3567"

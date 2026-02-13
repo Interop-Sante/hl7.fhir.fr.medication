@@ -1,6 +1,6 @@
-Profile: FRIPharmaceuticalInterventionSuggestion
+Profile: FRInpatientPharmaceuticalInterventionSuggestionProfile
 Parent: FRInpatientMedicationRequest
-Id: fr-pharmaceutical-intervention-suggestion
+Id: fr-inpatient-pharmaceutical-intervention-suggestion
 Title: "FR Pharmaceutical Intervention Suggestion"
 Description: "Profile de proposition d'évolution de ligne de prescritpion dans le cadre d'une intervention pharmaceutique"
 
@@ -11,7 +11,7 @@ Description: "Profile de proposition d'évolution de ligne de prescritpion dans 
 * supportingInformation ^slicing.rules = #open
 * supportingInformation contains
     updatedLine 0..
-* supportingInformation[updatedLine] Reference(fr-inpatient-medicationrequest) 
+* supportingInformation[updatedLine] Reference(FRInpatientMedicationRequest) 
 
 * requester 1..
 
