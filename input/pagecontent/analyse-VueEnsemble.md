@@ -70,6 +70,6 @@ Lorsque l'intervention pharmaceutique consiste en une suggestion de remplacement
 - chaque ligne remplaçante est fournie sous forme de `MedicationRequest` avec:
   - `MedicationRequest.supportingInformation`avec la/les référence(s) de la / des `MedicationRequest`initiale(s)
 
-#### Prise en compte des suggestions
+#### Prise en compte d'une intervention pharmaceutique
 
-/!\ indiquer comment c'est fait et ce qui est modifié dans les ressources qui représentent la suggestion (completed si accepté, cancelled si rejeté) /!\
+/!\ A décider si on va jusque là /!\
