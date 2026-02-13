@@ -9,6 +9,6 @@ Description: "Validation simple d'une prescription de paracétamol"
 * performerType = $TRE-G15-ProfessionSante#21 "Pharmacien"
 * owner.reference = "Practitioner/smart-Practitioner-27865023"
 * input.type.text = "ligne de prescription analysée"
-* imput.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Paracetamol"
+* input.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Paracetamol"
 * output.type.text = "résultat de l'analyse"
 * output.valueCode = #VALIDATION

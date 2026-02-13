@@ -9,7 +9,7 @@ Description: "Validation d'une prescription de morphine avec commentaire"
 * performerType = $TRE-G15-ProfessionSante#21 "Pharmacien"
 * owner.reference = "Practitioner/smart-Practitioner-27865023"
 * input.type.text = "ligne de prescription analysée"
-* imput.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Morphine"
+* input.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Morphine"
 * output[0].type.text = "résultat de l'analyse"
 * output[=].valueCode = #VALIDATION
 * output[+].type.text = "commentaire"

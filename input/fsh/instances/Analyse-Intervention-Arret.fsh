@@ -9,7 +9,7 @@ Description: "Intervention pharmaceutique type 2 Arrêt problème 5 Médicament 
 * performerType = $TRE-G15-ProfessionSante#21 "Pharmacien"
 * owner.reference = "Practitioner/smart-Practitioner-27865023"
 * input.type.text = "ligne de prescription analysée"
-* imput.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Souleur"
+* input.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Souleur"
 * output[0].type.text = "résultat de l'analyse"
 * output[=].valueCode = #INTERVENTION
 * output[+].type.text = "commentaire"

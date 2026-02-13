@@ -6,6 +6,6 @@ Description: "Le système de codage pour le typage du résultat d'analyse pharma
 * ^status = #draft
 * ^experimental = false
 * ^content = #complete
-* ^count = 7
+* ^count = 2
 * #VALIDATION "Validation pharmaceutique"
 * #INTERVENTION "Intervention pharmaceutique"

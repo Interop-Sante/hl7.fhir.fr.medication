@@ -54,7 +54,7 @@ Que ce soit dans le cadre d'une intervention pharmaceutique ou dans le cadre d'u
 
 ##### Cas particulier de la suggestion de suppression d'une ligne de prescription
 
-Lorsque l'intervention pharmaceutique consiste en une suggestion de suppression d'une ligne de prescription, l'attribut `MedicationRequest.doNotPerform` avec une valeur à `true`est utilisé pour représenter la suggestion de suppression.
+Lorsque l'intervention pharmaceutique consiste en une suggestion de suppression d'une ligne de prescription, l'attribut `MedicationRequest.doNotPerform` avec une valeur à `1` (true) est utilisé pour représenter la suggestion de suppression.
 
 ##### Cas particulier de la suggestion d'ajout d'une ligne de prescription
 
@@ -64,7 +64,7 @@ Lorsque l'intervention pharmaceutique consiste en une suggestion d'ajout de lign
 
 Lorsque l'intervention pharmaceutique consiste en une suggestion de remplacement de ligne(s) de prescription:
 - chaque ligne remplacée est fournie sous forme de `MedicationRequest` avec :
-  - `MedicationRequest.doNotPerform` avec la valeur `true`
+  - `MedicationRequest.doNotPerform` avec la valeur `1`
   - `MedicationRequest.supportingInformation` avec la référence de la `MedicationRequest` initiale
   - les autres attributs de la `MedicationRequest` initiale
 - chaque ligne remplaçante est fournie sous forme de `MedicationRequest` avec:

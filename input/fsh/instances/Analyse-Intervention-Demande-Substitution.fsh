@@ -9,7 +9,7 @@ Description: "Intervention pharmaceutique type 3 Substitution/echange problème 
 * performerType = $TRE-G15-ProfessionSante#21 "Pharmacien"
 * owner.reference = "Practitioner/smart-Practitioner-27865023"
 * input.type.text = "ligne de prescription analysée"
-* imput.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-NEFOPAM"
+* input.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-NEFOPAM"
 * output[0].type.text = "résultat de l'analyse"
 * output[=].valueCode = #INTERVENTION
 * output[+].type.text = "commentaire"
