@@ -18,7 +18,7 @@ Description: "French Pharmaceutical Analysis Result profile"
 * input 1..
 * input.type.text = "ligne de prescription analysée"
 * input.value[x] only Reference
-* input.valueReference Reference(FRInpatientMedicationRequest)
+* input.valueReference Reference( https://interop.esante.gouv.fr/ig/fhir/eprescription/StructureDefinition/fr-inpatient-medicationrequest)
 
 * output 1..
 * output ^slicing.discriminator.type = #value

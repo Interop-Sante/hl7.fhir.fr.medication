@@ -11,7 +11,7 @@ Description: "Profile de proposition d'évolution de ligne de prescritpion dans 
 * supportingInformation ^slicing.rules = #open
 * supportingInformation contains
     updatedLine 0..
-* supportingInformation[updatedLine] Reference(FRInpatientMedicationRequest) 
+* supportingInformation[updatedLine] Reference( https://interop.esante.gouv.fr/ig/fhir/eprescription/StructureDefinition/fr-inpatient-medicationrequest) 
 
 * requester 1..
 

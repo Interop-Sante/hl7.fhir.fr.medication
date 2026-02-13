@@ -13,13 +13,13 @@
 ### Périmètre couvert
 
 Cette spécification couvre le partage de données entre système d'informations au sein d'une structure de soin à l'issue d'une analyse pharmaceutique.
-L'analyse pharmaceutique réalisée en officine est principalement au niveau du LGO sans besoin identifié d'échange interopérable avec d'autres systèmes. Elle est donc hors périmètre de cette version de la spécification.
+L'analyse pharmaceutique réalisée en officine est principalement au niveau du LGO sans besoin identifié d'échange interopérable avec d'autres systèmes. Elle est hors périmètre de cette version de la spécification.
 
 ### Origine et alignements
 
 Les spécifications sont issues des travaux du groupe de travail Interop'Santé et s'appuient sur:
 
-- la liste des codes définissant l'intervention pharmaceutique 
+- les listes des codes qualifiant l'intervention pharmaceutique (problème et type d'intervention) définies par la SFPC pour l'intervention pharmaceutique telles que représentées sur la [fiche d'intervention pharmaceutique hôpital](https://sfpc.eu/wp-content/uploads/2025/10/ActIP-Fiche-intervention-pharmaceutique.pdf)
 
 ### Guide de lecture
 
