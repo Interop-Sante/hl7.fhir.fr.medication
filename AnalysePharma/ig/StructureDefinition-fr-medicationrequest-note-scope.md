@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medicationrequest
   "name" : "FRMedicationRequestNoteScope",
   "title" : "Scope for note element in MedicationRequest",
   "status" : "draft",
-  "date" : "2026-02-16T16:30:02+00:00",
+  "date" : "2026-02-16T17:09:53+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

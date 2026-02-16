@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
   "name" : "FRInpatientPharmaceuticalAnalysisResultProfile",
   "title" : "FR Pharmaceutical Analysis Result",
   "status" : "draft",
-  "date" : "2026-02-16T16:30:02+00:00",
+  "date" : "2026-02-16T17:09:53+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
@@ -144,7 +144,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
         "path" : "Task.input.value[x]",
         "type" : [
           {
-            "code" : "Reference"
+            "code" : "Reference",
+            "targetProfile" : [
+              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+            ]
           }
         ]
       },
@@ -282,7 +285,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
         "path" : "Task.output.value[x]",
         "type" : [
           {
-            "code" : "Reference"
+            "code" : "Reference",
+            "targetProfile" : [
+              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+            ]
           }
         ]
       }

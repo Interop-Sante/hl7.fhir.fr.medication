@@ -16,6 +16,7 @@ Profile de proposition d’évolution de ligne de prescritpion dans le cadre d�
 
 **Utilisations:**
 
+* Référence ce Profil: [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md)
 * Exemples pour ce/t/te Profil: [MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur](MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion)
@@ -41,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
   "name" : "FRInpatientPharmaceuticalInterventionSuggestionProfile",
   "title" : "FR Pharmaceutical Intervention Suggestion",
   "status" : "draft",
-  "date" : "2026-02-16T16:30:02+00:00",
+  "date" : "2026-02-16T17:09:53+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -84,7 +84,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-02-16T16:30:02+00:00",
+  "date" : "2026-02-16T17:09:53+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
@@ -141,6 +141,12 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
       "packageId" : "hl7.fhir.fr.core",
       "version" : "2.1.0"
+    },
+    {
+      "id" : "ans_fhir_fr_eprescription",
+      "uri" : "https://interop.esante.gouv.fr/ig/fhir/eprescription/ImplementationGuide/ans.fhir.fr.eprescription",
+      "packageId" : "ans.fhir.fr.eprescription",
+      "version" : "current"
     }
   ],
   "definition" : {

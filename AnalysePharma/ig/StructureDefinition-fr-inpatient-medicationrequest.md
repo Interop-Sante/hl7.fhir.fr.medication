@@ -17,7 +17,7 @@ French inpatient medication request profile
 **Utilisations:**
 
 * Dérivé de ce Profil: [FR Pharmaceutical Intervention Suggestion](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md)
-* Référence ce Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md)
+* Référence ce Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md) and [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md)
 * Exemples pour ce/t/te Profil: [MedicationRequest/InLine-Analyse-Presc-Morphine](MedicationRequest-InLine-Analyse-Presc-Morphine.md), [MedicationRequest/InLine-Analyse-Presc-NEFOPAM](MedicationRequest-InLine-Analyse-Presc-NEFOPAM.md), [MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Douleur](MedicationRequest-InLine-Analyse-Presc-Paracetamol-Si-Douleur.md), [MedicationRequest/InLine-Analyse-Presc-Paracetamol](MedicationRequest-InLine-Analyse-Presc-Paracetamol.md)... Show 4 more, [MedicationRequest/InLine-Presc-EFFERALGAN](MedicationRequest-InLine-Presc-EFFERALGAN.md), [MedicationRequest/InLine-presc-EFFERALGAN2](MedicationRequest-InLine-presc-EFFERALGAN2.md), [MedicationRequest/InLine-presc-Paracetamol1](MedicationRequest-InLine-presc-Paracetamol1.md) and [MedicationRequest/InLine-presc-Paracetamol2](MedicationRequest-InLine-presc-Paracetamol2.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-inpatient-medicationrequest)
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-medicat
   "name" : "FRInpatientMedicationRequest",
   "title" : "FR Inpatient MedicationRequest",
   "status" : "draft",
-  "date" : "2026-02-16T16:30:02+00:00",
+  "date" : "2026-02-16T17:09:53+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
