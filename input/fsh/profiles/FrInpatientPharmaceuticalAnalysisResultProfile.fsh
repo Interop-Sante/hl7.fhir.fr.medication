@@ -15,10 +15,10 @@ Description: "French Pharmaceutical Analysis Result profile"
 
 * owner 1..
 
-* input 1..
-* input.type.text = "ligne de prescription analysée"
-* input.value[x] only Reference
-* input.valueReference Reference(FRInpatientMedicationRequest)
+// * input 1..
+// * input.type.text = "ligne de prescription analysée"
+// * input.value[x] only Reference
+// * input.valueReference Reference(FRInpatientMedicationRequest)
 
 * output 1..
 * output ^slicing.discriminator.type = #value

@@ -6,12 +6,12 @@ Description: "Profile de proposition d'évolution de ligne de prescritpion dans 
 
 * intent = #proposal
 
-* supportingInformation ^slicing.discriminator.type = #profile
-* supportingInformation ^slicing.discriminator.path = "reference"
-* supportingInformation ^slicing.rules = #open
-* supportingInformation contains
-    updatedLine 0..
-* supportingInformation[updatedLine] Reference(FRInpatientMedicationRequest) 
+// * supportingInformation ^slicing.discriminator.type = #profile
+// * supportingInformation ^slicing.discriminator.path = "reference"
+// * supportingInformation ^slicing.rules = #open
+// * supportingInformation contains
+//     updatedLine 0..
+// * supportingInformation[updatedLine] Reference(FRInpatientMedicationRequest) 
 
 * requester 1..
 
