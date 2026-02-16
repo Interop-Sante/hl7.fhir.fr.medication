@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-outcome | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FRMedicationReconciliationOutcome |
+| Draft as of 2026-02-16 | *Computable Name*:FRMedicationReconciliationOutcome |
 
  
 Le jeu de valeurs à utiliser pour coder la gravité de l’erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder la gravité de l’erreur sur une ligne
   "title" : "value set Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

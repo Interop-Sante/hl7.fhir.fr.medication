@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-medicationstatement | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FRMedicationHistoryMedicationStatement |
+| Draft as of 2026-02-16 | *Computable Name*:FRMedicationHistoryMedicationStatement |
 
  
 Profil de la ressource **MedicationStatement** du Bilan médicamenteux. Medication History MedicationStatement resource profile 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "name" : "FRMedicationHistoryMedicationStatement",
   "title" : "FR Medication History MedicationStatement",
   "status" : "draft",
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-medication-composition | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FROnAdmissionMedicationComposition |
+| Draft as of 2026-02-16 | *Computable Name*:FROnAdmissionMedicationComposition |
 
  
 Profil de la ressource **Composition** du traitement médicamenteux prescrit à l’admission. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-on-admission-medi
   "name" : "FROnAdmissionMedicationComposition",
   "title" : "FR On Admission Medication Composition",
   "status" : "draft",
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

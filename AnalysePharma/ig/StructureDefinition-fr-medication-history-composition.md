@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-composition | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FRMedicationHistoryComposition |
+| Draft as of 2026-02-16 | *Computable Name*:FRMedicationHistoryComposition |
 
  
 Profil de la ressource Composition du Bilan Médicamenteux. Medication Assessment Composition resource profile. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "name" : "FRMedicationHistoryComposition",
   "title" : "FR Medication History Composition",
   "status" : "draft",
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

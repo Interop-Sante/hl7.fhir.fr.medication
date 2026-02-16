@@ -38,6 +38,8 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [FR Observation For Prescription](StructureDefinition-fr-observation-for-prescription.md) | Observation provided as context of the prescription (ex. weight, height…) |
 | [FR On Admission Medication Composition](StructureDefinition-fr-on-admission-medication-composition.md) | Profil de la ressource **Composition** du traitement médicamenteux prescrit à l’admission. |
 | [FR On Admission Retroactive Reconciliation Composition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md) | Profil de la ressource **Composition** de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d’admission. |
+| [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md) | French Pharmaceutical Analysis Result profile |
+| [FR Pharmaceutical Intervention Suggestion](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) | Profile de proposition d’évolution de ligne de prescritpion dans le cadre d’une intervention pharmaceutique |
 | [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md) | Profil de la ressource Bundle pour la constitution d’exemples de prescription. |
 | [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-for-prescription.md) | RequestGroup for expressing links between lines of a prescription |
 
@@ -81,6 +83,10 @@ These define sets of codes used by systems conforming to this implementation gui
 | [French Route of Administration](ValueSet-fr-route-of-administration.md) | Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.route** de la ressource **FRMedicationRequest**. |
 | [French overall intention of the treatment](ValueSet-fr-treatment-intent.md) | Le jeu de valeurs à utiliser pour coder l’élément **treatmentIntent** de la ressource **FRInpatientMedicationRequest**. |
 | [Interop'Santé value set - Additional codes for relationship between action](ValueSet-fr-additional-action-relationship-type-value-set.md) | Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type. |
+| [Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique](ValueSet-fr-pharmaceutical-analysis-perfomer-type-value-set.md) | Codes représentant le type de résultat de l’analyse pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique](ValueSet-fr-pharmaceutical-analysis-result-code-value-set.md) | Codes représentant le type de résultat de l’analyse pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique](ValueSet-fr-pharmaceutical-intervention-problem-code-value-set.md) | Codes représentant le problème identifié dans l’intervention pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes du type d'intervention pharmaceutique](ValueSet-fr-pharmaceutical-intervention-type-code-value-set.md) | Codes représentant le type d’intervention pharmaceutique |
 | [MedicationIngredientStrengthCodes](ValueSet-medication-ingredient-strength-codes.md) | Medication Ingredient Strength Codes |
 | [value set Interop'Santé - Codes additionnels pour l'élément when](ValueSet-fr-additional-when-codes.md) | Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing. |
 | [value set Interop'Santé - Codes identifiant les médicaments](ValueSet-fr-medication-code.md) | Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code |
@@ -116,6 +122,9 @@ These define new code systems used by systems conforming to this implementation 
 | [code system Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT](CodeSystem-fr-medication-reconciliation-type.md) | Le système de codage du type d’écart/erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
 | [code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy](CodeSystem-fr-document-type.md) | Le système de codage SIPh du type de document d’une ressource **Composition** du domaine Pharmacy |
 | [code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT](CodeSystem-fr-medication-reconciliation-discrepancy.md) | Le système de codage de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
+| [code system d'Interop'Santé - Codes de résultat d'analyse pharmaceutique](CodeSystem-fr-pharmaceutical-analysis-result-code.md) | Le système de codage pour le typage du résultat d’analyse pharmaceutique. |
+| [code system d'Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique](CodeSystem-fr-pharmaceutical-intervention-problem-code.md) | Le système de codage pour le typage du problème identifié dans l’intervention pharmaceutique. |
+| [code system d'Interop'Santé - Codes du type d'intervention pharmaceutique](CodeSystem-fr-pharmaceutical-intervention-type-code.md) | Le système de codage pour le typage de l’intervention pharmaceutique. |
 
 ### Terminology: Concept Maps 
 
@@ -145,6 +154,10 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Analyse-Intervention-Arret](Task-Analyse-Intervention-Arret.md) | Intervention pharmaceutique type 2 Arrêt problème 5 Médicament non indiqué |
+| [Analyse-Intervention-Demande-Substitution](Task-Analyse-Intervention-Demande-Substitution.md) | Intervention pharmaceutique type 3 Substitution/echange problème 6.3 Interaction - Association déconseillée |
+| [Analyse-Validation-Commentaire](Task-Analyse-Validation-Commentaire.md) | Validation d’une prescription de morphine avec commentaire |
+| [Analyse-Validation-Simple](Task-Analyse-Validation-Simple.md) | Validation simple d’une prescription de paracétamol |
 | [Disp-DOLIPRANE-Refill-Compl-presc-DC](MedicationDispense-Disp-DOLIPRANE-Refill-Compl-presc-DC.md) | Prescription complémentaire et finale de DOLIPRANE sur une prescription de Paracétamol |
 | [Disp-DOLIPRANE-Refill-Substit](MedicationDispense-Disp-DOLIPRANE-Refill-Substit.md) | Dispensation complémentaire et partielle de DOLIPRANE sur une prescription d’EFFERALGAN |
 | [Disp-DOLIPRANE-Refill-presc-DC](MedicationDispense-Disp-DOLIPRANE-Refill-presc-DC.md) | Dispensation complémentaire et partielle de DOLIPRANE sur une prescription de Paracétamol |
@@ -199,7 +212,12 @@ These are example instances that show what data produced and consumed by systems
 | [HAS-32-1-Presc-LOVENOX](Bundle-HAS-32-1-Presc-LOVENOX.md) | ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie (LOVENOX®): 1 injection en sous-cutanée par jour pendant 1 semaine. |
 | [HAS-32-2-Presc-ULTIBRO-BREES](Bundle-HAS-32-2-Presc-ULTIBRO-BREES.md) | ULTIBRO BREEZ® 85/43 µg gélule : 1 gélule à administrer par voie inhalée à la même heure chaque jour pendant 1 mois. |
 | [HAS-33-Presc-VERSATIS](Bundle-HAS-33-Presc-VERSATIS.md) | VERSATIS® 700 mg emplâtre médicamenteux: 1 emplâtre par jour à 20 h, à laisser pendant 12h sur la peau |
+| [InLine-Analyse-Presc-Morphine](MedicationRequest-InLine-Analyse-Presc-Morphine.md) | Prescription de Paracétamol pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-NEFOPAM](MedicationRequest-InLine-Analyse-Presc-NEFOPAM.md) | Prescription de Paracétamol pour exemple d’intervention pharmaceutique |
+| [InLine-Analyse-Presc-Paracetamol](MedicationRequest-InLine-Analyse-Presc-Paracetamol.md) | Prescription de Paracétamol pour exemple de vaidation pharmaceutique |
+| [InLine-Analyse-Presc-Paracetamol-Si-Douleur](MedicationRequest-InLine-Analyse-Presc-Paracetamol-Si-Douleur.md) | Prescription de Paracétamol pour exemple d’intervention pharmaceutique |
 | [InLine-DOLIPRANE](Medication-InLine-DOLIPRANE.md) | Medication DOLIPRANE® pour exemple de dispensation |
+| [InLine-Inter-Arret-Paracetamol-Si-Douleur](MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur.md) | Proposition d’arrêt dans le cadre d’un intervention pharmaceutique |
 | [InLine-Presc-EFFERALGAN](MedicationRequest-InLine-Presc-EFFERALGAN.md) | Prescription d’EFFERALGAN® pour exemple de dispensation |
 | [InLine-med-EFFERALGAN](Medication-InLine-med-EFFERALGAN.md) | Medication EFFERALGAN® pour exemple de dispensation |
 | [InLine-med-Paracetamol](Medication-InLine-med-Paracetamol.md) | Medication Paracétamol pour exemple de dispensation |

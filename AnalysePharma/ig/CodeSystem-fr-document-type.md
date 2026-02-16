@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-document-type | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FrDocumentType |
+| Draft as of 2026-02-16 | *Computable Name*:FrDocumentType |
 
  
 Le système de codage SIPh du type de document d’une ressource **Composition** du domaine Pharmacy 
@@ -38,7 +38,7 @@ Le système de codage SIPh du type de document d’une ressource **Composition**
   "title" : "code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

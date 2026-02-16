@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-history-source-type | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FRMedicationHistorySourceType |
+| Draft as of 2026-02-16 | *Computable Name*:FRMedicationHistorySourceType |
 
  
 Un jeu de valeurs à utiliser pour coder les sources d’un Bilan Médicamenteux. 
@@ -54,7 +54,7 @@ Un jeu de valeurs à utiliser pour coder les sources d’un Bilan Médicamenteux
   "title" : "value set SIPh - Nature des sources d'un Bilan Médicamenteux",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

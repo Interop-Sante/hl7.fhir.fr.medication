@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FRPrescriptionBundleForExample |
+| Draft as of 2026-02-16 | *Computable Name*:FRPrescriptionBundleForExample |
 
  
 Profil de la ressource Bundle pour la constitution d’exemples de prescription. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-prescription-bund
   "name" : "FRPrescriptionBundleForExample",
   "title" : "FR Prescription Bundle For Example",
   "status" : "draft",
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

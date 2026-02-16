@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-discrepancy | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FRMedicationReconciliationDiscrepancy |
+| Draft as of 2026-02-16 | *Computable Name*:FRMedicationReconciliationDiscrepancy |
 
  
 Le système de codage de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -37,7 +37,7 @@ Le système de codage de la divergence identifiée sur une ligne de traitement d
   "title" : "code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

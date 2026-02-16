@@ -1,0 +1,76 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "InLine-Analyse-Presc-NEFOPAM",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : PrescriptionMédicamenteuseTODO InLine-Analyse-Presc-NEFOPAM</b></p><a name=\"InLine-Analyse-Presc-NEFOPAM\"> </a><a name=\"hcInLine-Analyse-Presc-NEFOPAM\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-medicationrequest.html\">FR Inpatient MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title=\"Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400893485552}\">NEFOPAM VIA 20MG/2ML INJ AMP</span></p><p><b>subject</b>: <a href=\"Patient/25678\">Patient/25678</a></p><p><b>authoredOn</b>: 2026-02-12 17:30:00+0100</p><p><b>requester</b>: <a href=\"Practitioner/smart-Practitioner-71482713\">Practitioner/smart-Practitioner-71482713</a></p><p><b>groupIdentifier</b>: Presc-4254</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Une fois par 6 hours</p><p><b>route</b>: <span title=\"Codes :{http://standardterms.edqm.eu 20035000}\">Voie intramusculaire</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Ampoule<span style=\"background: LightGoldenRodYellow\"> (Détails : code EDQM Standard Terms15002000 = 'Ampoule')</span></td></tr></table><p><b>maxDosePerPeriod</b>: 120 mg<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMmg = 'mg')</span>/24 h<span style=\"background: LightGoldenRodYellow\"> (Détails : code UCUMh = 'h')</span></p></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "order",
+  "priority" : "routine",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+      "code" : "3400893485552",
+      "display" : "NEFOPAM VIA 20MG/2ML INJ AMP"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/25678"
+  },
+  "authoredOn" : "2026-02-12T17:30:00+01:00",
+  "requester" : {
+    "reference" : "Practitioner/smart-Practitioner-71482713"
+  },
+  "groupIdentifier" : {
+    "value" : "Presc-4254"
+  },
+  "dosageInstruction" : [{
+    "timing" : {
+      "repeat" : {
+        "boundsDuration" : {
+          "value" : 2,
+          "unit" : "semaines",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "wk"
+        },
+        "frequency" : 1,
+        "period" : 6,
+        "periodUnit" : "h"
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "20035000",
+        "display" : "Voie intramusculaire"
+      }],
+      "text" : "Voie intramusculaire"
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "Ampoule",
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "15002000"
+      }
+    }],
+    "maxDosePerPeriod" : {
+      "numerator" : {
+        "value" : 120,
+        "unit" : "mg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      },
+      "denominator" : {
+        "value" : 24,
+        "unit" : "h",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "h"
+      }
+    }
+  }]
+}

@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-type-code> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-pharmaceutical-intervention-type-code"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem fr-pharmaceutical-intervention-type-code</b></p><a name=\"fr-pharmaceutical-intervention-type-code\"> </a><a name=\"hcfr-pharmaceutical-intervention-type-code\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This  code system <code>https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-type-code</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Affichage</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"fr-pharmaceutical-intervention-type-code-1\"> </a></td><td>Ajout (prescription nouvelle)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"fr-pharmaceutical-intervention-type-code-2\"> </a></td><td>Arrêt</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"fr-pharmaceutical-intervention-type-code-3\"> </a></td><td>Substitution/Echange</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"fr-pharmaceutical-intervention-type-code-4\"> </a></td><td>Choix de la voie d'administration</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"fr-pharmaceutical-intervention-type-code-5\"> </a></td><td>Suivi thérapeutique</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"fr-pharmaceutical-intervention-type-code-6\"> </a></td><td>Optimisation modalités d'administration</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"fr-pharmaceutical-intervention-type-code-7\"> </a></td><td>Adaptation posologique</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-type-code"^^xsd:anyURI ;
+     fhir:l <https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-type-code>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrPharmaceuticalInterventionTypeCode"] ; # 
+  fhir:title [ fhir:v "code system d'Interop'Santé - Codes du type d'intervention pharmaceutique"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-02-16T16:30:02+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le système de codage pour le typage de l'intervention pharmaceutique."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Ajout (prescription nouvelle)" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Arrêt" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Substitution/Echange" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Choix de la voie d'administration" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "Suivi thérapeutique" ]
+  ] [
+     fhir:code [ fhir:v "6" ] ;
+     fhir:display [ fhir:v "Optimisation modalités d'administration" ]
+  ] [
+     fhir:code [ fhir:v "7" ] ;
+     fhir:display [ fhir:v "Adaptation posologique" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

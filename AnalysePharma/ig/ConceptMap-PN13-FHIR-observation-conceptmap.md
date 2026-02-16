@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-observation-conceptmap | *Version*:0.1.0 |
-| Draft as of 2026-02-12 | *Computable Name*:FrPN13FHIRObservationConceptMap |
+| Draft as of 2026-02-16 | *Computable Name*:FrPN13FHIRObservationConceptMap |
 
  
 ConceptMap pour la conversion PN13 vers FHIR d’un renseignement complémentare d’une prescritpion de médicament 
@@ -27,7 +27,7 @@ ConceptMap pour la conversion PN13 vers FHIR d’un renseignement complémentare
   "name" : "FrPN13FHIRObservationConceptMap",
   "title" : "Conversion PN13 vers FHIR pour les renseignements complémentaires d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2026-02-12T09:56:07+00:00",
+  "date" : "2026-02-16T16:30:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
