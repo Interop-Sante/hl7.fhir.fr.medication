@@ -1,4 +1,4 @@
-Instance: InLine-Analyse-Presc-Paracetamol-Si-Souleur
+Instance: InLine-Analyse-Presc-Paracetamol-Si-Douleur
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
 Description: "Prescription de Paracétamol pour exemple d'intervention pharmaceutique"

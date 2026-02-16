@@ -18,7 +18,7 @@ Description: "French Pharmaceutical Analysis Result profile"
 * input 1..
 * input.type.text = "ligne de prescription analysée"
 * input.value[x] only Reference
-* input.valueReference Profile: FRInpatientMedicationRequest
+//* input.valueReference Profile: FRInpatientMedicationRequest
 
 * output 1..
 * output ^slicing.discriminator.type = #value
@@ -44,4 +44,4 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[problem].valueCodeableConcept from FrPharmaceuticalInterventionProblemCodeValueSet (extensible)
 * output[suggestion].type.text = "proposition"
 * output[suggestion].value[x] only Reference
-* output[suggestion].valueReference Profile: FRInpatientPharmaceuticalInterventionSuggestionProfile
+//* output[suggestion].valueReference Profile: FRInpatientPharmaceuticalInterventionSuggestionProfile
