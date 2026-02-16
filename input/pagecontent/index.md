@@ -15,6 +15,7 @@ Ce guide d'implémentation (IG) a pour vocation à spécifier les flux d'informa
 Trois cas d'usage sont pris en compte dans la version actuelle de cet IG:
 
 1. [La prescription](prescription-Intro.html)
+1. [L'analyse pharmaceutique](analyse-Intro.html)
 1. [La dispensation](dispensation-Intro.html)
 1. [La concilation](conciliation-Intro.html)
 
