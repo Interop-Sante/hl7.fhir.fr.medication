@@ -1,4 +1,4 @@
-Instance: InLine-Inter-Arret-Paracetamol-Si-Souleur
+Instance: InLine-Inter-Arret-Paracetamol-Si-Douleur
 InstanceOf: fr-inpatient-pharmaceutical-intervention-suggestion
 Usage: #example
 Description: "Proposition d'arrêt dans le cadre d'un intervention pharmaceutique"
