@@ -44,4 +44,4 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[problem].valueCodeableConcept from FrPharmaceuticalInterventionProblemCodeValueSet (extensible)
 * output[suggestion].type.text = "proposition"
 * output[suggestion].value[x] only Reference
-//* output[suggestion].valueReference Profile: FRInpatientPharmaceuticalInterventionSuggestionProfile
+* output[suggestion].valueReference Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
