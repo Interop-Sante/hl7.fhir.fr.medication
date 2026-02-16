@@ -15,9 +15,9 @@ Description: "French Pharmaceutical Analysis Result profile"
 
 * owner 1..
 
-// * input 1..
-// * input.type.text = "ligne de prescription analysée"
-// * input.value[x] only Reference
+* input 1..
+* input.type.text = "ligne de prescription analysée"
+* input.value[x] only Reference
 // * input.valueReference Reference(FRInpatientMedicationRequest)
 
 * output 1..
@@ -37,11 +37,11 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[comment].type.text = "commentaire"
 * output[comment].value[x] only string
 * output[type].type.text = "type d'intervention"
-* output[type].value[x] only codeableConcept
+* output[type].value[x] only CodeableConcept
 * output[type].valueCodeableConcept from FrPharmaceuticalInterventionTypeCodeValueSet (extensible)
 * output[problem].type.text = "type de problème"
-* output[problem].value[x] only codeableConcept
+* output[problem].value[x] only CodeableConcept
 * output[problem].valueCodeableConcept from FrPharmaceuticalInterventionProblemCodeValueSet (extensible)
 * output[suggestion].type.text = "proposition"
-* output[suggestion].value[x] only reference
-* output[suggestion].valueReference Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
+* output[suggestion].value[x] only Reference
+..* output[suggestion].valueReference Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
