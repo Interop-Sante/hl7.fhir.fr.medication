@@ -37,7 +37,7 @@ Le système de codage pour le typage du problème identifié dans l’interventi
   "title" : "code system d'Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T09:04:14+00:00",
+  "date" : "2026-02-17T09:55:45+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

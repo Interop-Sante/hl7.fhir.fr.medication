@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-reconc
   "name" : "FRMedicationReconciliationComposition",
   "title" : "FR Medication Reconciliation Composition",
   "status" : "draft",
-  "date" : "2026-02-17T09:04:14+00:00",
+  "date" : "2026-02-17T09:55:45+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

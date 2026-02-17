@@ -42,7 +42,7 @@ En plus des éléments communs à tous les résultats d’analyse pharmaceutique
 
 ### Propositions suite à une analyse pharmaceutique
 
-Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource `MedicationRequest`suivant le profil [FrInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) qui hérite du profil **FRInpatientMedicationRequest** avec les attributs suivants:
+Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource `MedicationRequest`suivant le profil [FrInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) qui hérite du profil [FRMedicationRequest](/StructureDefinition-fr-medicationrequest.md) avec les attributs suivants:
 
 * `MedicationRequest.status` = `active`
 * `MedicationRequest.intent` = `proposal`
