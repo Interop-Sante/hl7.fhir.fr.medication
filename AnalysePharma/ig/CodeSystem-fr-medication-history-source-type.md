@@ -37,7 +37,7 @@ Le système de codage des sources d’un Bilan Médicamenteux.
   "title" : "code system Interop'Santé - Nature des sources d'un Bilan Médicamenteux",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T09:55:45+00:00",
+  "date" : "2026-02-17T10:22:56+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

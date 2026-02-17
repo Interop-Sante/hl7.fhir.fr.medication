@@ -27,7 +27,7 @@ ConceptMap pour la conversion PN13 vers FHIR d’un séjour d’une prescritpion
   "name" : "FrPN13FHIRMedicationPrescriptionEncounterConceptMap",
   "title" : "Conversion PN13 vers FHIR pour un séjour d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2026-02-17T09:55:45+00:00",
+  "date" : "2026-02-17T10:22:56+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

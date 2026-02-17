@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
   "name" : "FRInpatientPharmaceuticalInterventionSuggestionProfile",
   "title" : "FR Pharmaceutical Intervention Suggestion",
   "status" : "draft",
-  "date" : "2026-02-17T09:55:45+00:00",
+  "date" : "2026-02-17T10:22:56+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
