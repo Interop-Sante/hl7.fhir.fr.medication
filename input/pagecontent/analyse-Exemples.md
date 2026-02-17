@@ -12,11 +12,19 @@
 
 #### Validation simple
 
+[Validation simple d'une prescription de paracetamol](Task-Analyse-Validation-Simple.html)
+
 #### Validation avec commentaire
+
+[Validation avec commentaire d'une prescritpion de morphine](Task-Analyse-Validation-Commentaire.html)
 
 #### Validation avec proposition
 
 ### Intervention pharmaceutique
+
+#### Intervention pharmaceutique avec commentaire sans proposition
+
+[Intervention pharmaceutique avec commentaire demandant la prescription d'un autre antalgique que le NEFOPAM](Task-Analyse-Intervention-Demande-Substitution.html)
 
 #### Intervention pharmaceutique avec proposition de modification d'une ligne de prescription
 
@@ -36,5 +44,7 @@
 ##### Remplacement 1 pour X
 
 #### Intervention pharmaceutique avec proposition de suppression d'une ligne de prescription
+
+[Intervention pharmaceutique avec proposition d'arrêt d'une prescription de paracetamol](Task-Analyse-Intervention-Arret.html)
 
 #### Intervention pharmaceutique avec proposition d'ajout de ligne de prescritpion
