@@ -10,7 +10,7 @@ Description: "Profile de proposition d'évolution de ligne de prescritpion dans 
 * supportingInformation ^slicing.discriminator.path = "reference"
 * supportingInformation ^slicing.rules = #open
 * supportingInformation contains
-     updatedLine 0..
+     updatedLine 0.. and
      pharmInter 1..1
 * supportingInformation[updatedLine] only Reference(FRInpatientMedicationRequest)
 * supportingInformation[pharmInter] only Reference(FRInpatientPharmaceuticalAnalysisResultProfile) 
