@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.route
   "title" : "French Route of Administration",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T08:04:39+00:00",
+  "date" : "2026-02-17T08:46:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

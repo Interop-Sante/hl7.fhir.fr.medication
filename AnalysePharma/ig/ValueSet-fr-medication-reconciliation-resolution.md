@@ -54,7 +54,7 @@ Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur u
   "title" : "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T08:04:39+00:00",
+  "date" : "2026-02-17T08:46:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

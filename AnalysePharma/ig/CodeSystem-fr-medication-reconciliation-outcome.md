@@ -37,7 +37,7 @@ Le système de codage de la gravité de l’erreur sur une ligne de traitement d
   "title" : "code system Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T08:04:39+00:00",
+  "date" : "2026-02-17T08:46:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

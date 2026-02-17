@@ -7,17 +7,17 @@
 
 >  **Attention !** la partie analyse pharmaceutique est en cours d'élaboration et n'a pas été éprouvée. 
 
-### Cas d’usage
+## Cas d’usage
 
-#### Validation pharmaceutique
+### Validation pharmaceutique
 
 /!\ mettre cas d’usage de validation simple, validation avec commentaire et validation avec suggestion
 
-#### Intervention pharmaceutique
+### Intervention pharmaceutique
 
 /!\ mettre cas d’usage d’intervention avec modification de ligne de prescription (les différents cas selon les codes d’intervention), simplement des commentaires pour la dispensation/administration, remplacement de ligne, suppression de ligne ou ajout de ligne
 
-#### Prise en compte de l’intervention pharmaceutique
+### Prise en compte de l’intervention pharmaceutique
 
-/!\ mettre cas où c’est ignoré, pris en compte tel que suggeré ou pris en compte mais avec d’autre modification.
+/!\ A décider si on va jusque là /!\
 

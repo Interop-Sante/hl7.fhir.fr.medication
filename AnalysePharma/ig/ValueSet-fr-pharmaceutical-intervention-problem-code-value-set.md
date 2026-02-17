@@ -54,7 +54,7 @@ Codes représentant le problème identifié dans l’intervention pharmaceutique
   "title" : "Jeu de valeurs Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T08:04:39+00:00",
+  "date" : "2026-02-17T08:46:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

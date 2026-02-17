@@ -293,8 +293,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p>  <!-- white space is critical inside of capture --></p>
-<div>
-  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#vue-densemble" id="markdown-toc-vue-densemble">Vue d’ensemble</a>    <ul>
+      <li><a href="#validation-pharmaceutique" id="markdown-toc-validation-pharmaceutique">Validation pharmaceutique</a></li>
+      <li><a href="#intervention-pharmaceutique" id="markdown-toc-intervention-pharmaceutique">Intervention pharmaceutique</a></li>
+      <li><a href="#propositions-suite-à-une-analyse-pharmaceutique" id="markdown-toc-propositions-suite-à-une-analyse-pharmaceutique">Propositions suite à une analyse pharmaceutique</a></li>
+      <li><a href="#prise-en-compte-dune-intervention-pharmaceutique" id="markdown-toc-prise-en-compte-dune-intervention-pharmaceutique">Prise en compte d’une intervention pharmaceutique</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <div style="width: 65%">
     <blockquote class="stu-note">
@@ -304,9 +313,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </blockquote>
 </div>
 
-<h3 id="vue-densemble">Vue d’ensemble</h3>
+<h2 id="vue-densemble">Vue d’ensemble</h2>
 
-<p>Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmaceutique ou une intervention pharmaceutique, est toujours représenté par une ressource <code class="language-plaintext highlighter-rouge">Task</code> suivant le profil <em>FrPharmaceuticalAnalysisResult</em> avec les attributs suivants:</p>
+<p>Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmaceutique ou une intervention pharmaceutique, est toujours représenté par une ressource <code class="language-plaintext highlighter-rouge">Task</code> suivant le profil <em>FrPharmaceuticalAnalysisResultProfile</em> avec les attributs suivants:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Task.groupIdentifier</code>renseigné avec le <code class="language-plaintext highlighter-rouge">groupIdentifier</code>de la/des ressource(s) <code class="language-plaintext highlighter-rouge">MedicationRequest</code> représentant la/les ligne(s) de prescription analysée(s)</li>
@@ -321,9 +330,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><em>Note 1:</em> L’analyse pharmaceutique est réalisée sur une prescription représentée par le <code class="language-plaintext highlighter-rouge">groupIdentifier</code>. Cependant, si nécessaire, elle peut s’appuyer sur des lignes de prescription provenant d’autres prescrptions. Les cas échéant, ces lignes sont listées dans <code class="language-plaintext highlighter-rouge">Task.input.valueReference</code>.</p>
 
-<p><em>Note 2:</em> Certaines implémentations rendent nécessaire la réalisation d’une analyse pharmaceutique avant de permettre la dispensation. Cet usage est hors périmètre de cet IG. Il peut cependant être outiller en utilisant une ressource <code class="language-plaintext highlighter-rouge">Task</code> suivant le profil <em>FrPharmaceuticalAnalysisResult</em> avec <code class="language-plaintext highlighter-rouge">Task.status</code> à <code class="language-plaintext highlighter-rouge">requested</code> pour représenter la demande d’analyse pharmaceutique. Afin de permettre cet usage, le profil <em>FrPharmaceuticalAnalysisResult</em> ne fixe pas <code class="language-plaintext highlighter-rouge">Task.status</code>à <code class="language-plaintext highlighter-rouge">completed</code>.</p>
+<p><em>Note 2:</em> Certaines implémentations rendent nécessaire la réalisation d’une analyse pharmaceutique avant de permettre la dispensation. Cet usage est hors périmètre de cet IG. Il peut cependant être outiller en utilisant une ressource <code class="language-plaintext highlighter-rouge">Task</code> suivant le profil <em>FrPharmaceuticalAnalysisResultProfile</em> avec <code class="language-plaintext highlighter-rouge">Task.status</code> à <code class="language-plaintext highlighter-rouge">requested</code> pour représenter la demande d’analyse pharmaceutique. Afin de permettre cet usage, le profil <em>FrPharmaceuticalAnalysisResultProfile</em> ne fixe pas <code class="language-plaintext highlighter-rouge">Task.status</code>à <code class="language-plaintext highlighter-rouge">completed</code>.</p>
 
-<h4 id="validation-pharmaceutique">Validation pharmaceutique</h4>
+<h3 id="validation-pharmaceutique">Validation pharmaceutique</h3>
 
 <p>En plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section <strong>Vue d’ensemble</strong>, une ressource <code class="language-plaintext highlighter-rouge">Task</code> représentant une validation pharmaceutique peut inclure:</p>
 
@@ -332,7 +341,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>une ou plusieurs eventuelle(s) instance(s) de <code class="language-plaintext highlighter-rouge">Task.output.valueReference</code>pour d’éventuelle(s) suggestion(s) complémentaire(s) à la validation</li>
 </ul>
 
-<h4 id="intervention-pharmaceutique">Intervention pharmaceutique</h4>
+<h3 id="intervention-pharmaceutique">Intervention pharmaceutique</h3>
 
 <p>En plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section <strong>Vue d’ensemble</strong>, une ressource <code class="language-plaintext highlighter-rouge">Task</code> représentant une intervention pharmaceutique inclut:</p>
 
@@ -343,9 +352,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>une ou plusieurs instance(s) de <code class="language-plaintext highlighter-rouge">Task.output.valueReference</code>pour les suggestions de l’intervention pharmaceutique</li>
 </ul>
 
-<h4 id="suggestions-suite-à-une-analyse-pharmaceutique">Suggestions suite à une analyse pharmaceutique</h4>
+<h3 id="propositions-suite-à-une-analyse-pharmaceutique">Propositions suite à une analyse pharmaceutique</h3>
 
-<p>Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une suggestion est représentée par une ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code>suivant le profil <em>/!\ Profil à indiquer /!* qui hérite du profil *FRInpatientMedicationRequest</em> avec les attributs suivants:</p>
+<p>Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code>suivant le profil <em>FrInpatientPharmaceuticalInterventionSuggestionProfile</em> qui hérite du profil <em>FRInpatientMedicationRequest</em> avec les attributs suivants:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">MedicationRequest.status</code> = <code class="language-plaintext highlighter-rouge">active</code></li>
@@ -358,15 +367,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><em>Note:</em> Etant donné qu’il est possible d’avoir des cas de suggestion de remplacement de plusieurs lignes par une ligne et même si le cas est rare, il a été choisi d’utiliser <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> plutôt que <code class="language-plaintext highlighter-rouge">MedicationRequest.priorPrescription</code>pour indiquer la/les ligne(s) de prescription sur laquel/lesquelles porte l’intervention pharmaceutique.</p>
 
-<h5 id="cas-particulier-de-la-suggestion-de-suppression-dune-ligne-de-prescription">Cas particulier de la suggestion de suppression d’une ligne de prescription</h5>
+<h4 id="cas-particulier-de-la-proposition-de-suppression-dune-ligne-de-prescription">Cas particulier de la proposition de suppression d’une ligne de prescription</h4>
 
 <p>Lorsque l’intervention pharmaceutique consiste en une suggestion de suppression d’une ligne de prescription, l’attribut <code class="language-plaintext highlighter-rouge">MedicationRequest.doNotPerform</code> avec une valeur à <code class="language-plaintext highlighter-rouge">1</code> (true) est utilisé pour représenter la suggestion de suppression.</p>
 
-<h5 id="cas-particulier-de-la-suggestion-dajout-dune-ligne-de-prescription">Cas particulier de la suggestion d’ajout d’une ligne de prescription</h5>
+<h4 id="cas-particulier-de-la-proposition-dajout-dune-ligne-de-prescription">Cas particulier de la proposition d’ajout d’une ligne de prescription</h4>
 
 <p>Lorsque l’intervention pharmaceutique consiste en une suggestion d’ajout de ligne de prescritpion sans modification d’autre ligne, l’attribut <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code>n’est pas utilisé.</p>
 
-<h5 id="cas-particulier-de-la-suggestion-de-remplacement">Cas particulier de la suggestion de remplacement</h5>
+<h4 id="cas-particulier-de-la-proposition-de-remplacement">Cas particulier de la proposition de remplacement</h4>
 
 <p>Lorsque l’intervention pharmaceutique consiste en une suggestion de remplacement de ligne(s) de prescription:</p>
 <ul>
@@ -384,7 +393,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h4 id="prise-en-compte-dune-intervention-pharmaceutique">Prise en compte d’une intervention pharmaceutique</h4>
+<h3 id="prise-en-compte-dune-intervention-pharmaceutique">Prise en compte d’une intervention pharmaceutique</h3>
 
 <p>/!\ A décider si on va jusque là /!\</p>
 
@@ -428,7 +437,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 08:04+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 08:46+0000">2026-02-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

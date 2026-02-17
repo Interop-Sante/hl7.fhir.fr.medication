@@ -27,7 +27,7 @@ ConceptMap pour la conversion PN13 vers FHIR d’un renseignement complémentare
   "name" : "FrPN13FHIRObservationConceptMap",
   "title" : "Conversion PN13 vers FHIR pour les renseignements complémentaires d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2026-02-17T08:04:39+00:00",
+  "date" : "2026-02-17T08:46:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

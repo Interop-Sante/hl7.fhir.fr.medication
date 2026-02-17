@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medicationstateme
   "version" : "0.1.0",
   "name" : "FRMedicationStatementReconciliationProperties",
   "status" : "draft",
-  "date" : "2026-02-17T08:04:39+00:00",
+  "date" : "2026-02-17T08:46:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
