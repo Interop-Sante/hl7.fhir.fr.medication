@@ -1,7 +1,7 @@
 MED : Validation Results
 =========================================
 
-err = 1136, warn = 2083, info = 117
+err = 1138, warn = 2083, info = 117
 $--
 Generated $--. FHIR version $-- for hl7.fhir.fr.medication#$-- (canonical = https://hl7.fr/ig/fhir/medication)
  Build Errors : 1455 / 4 / 0
@@ -137,7 +137,7 @@ Generated $--. FHIR version $-- for hl7.fhir.fr.medication#$-- (canonical = http
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-Analyse-Presc-NEFOPAM : 5 / 2 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-Analyse-Presc-Paracetamol : 6 / 2 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-Analyse-Presc-Paracetamol-Si-Douleur : 5 / 2 / 1
- /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur : 7 / 2 / 1
+ /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur : 9 / 2 / 1
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-Presc-EFFERALGAN : 5 / 1 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-presc-EFFERALGAN2 : 5 / 0 / 2
  /home/runner/work/hl7.fhir.fr.medication/hl7.fhir.fr.medication/igSource/fsh-generated/resources/MedicationRequest-InLine-presc-Paracetamol1 : 5 / 0 / 2
@@ -4876,6 +4876,8 @@ ERROR: MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Douleur: Medication
 ERROR: MedicationRequest.text.div: Hyperlink 'Patient/14602' at 'div/p/a' for 'Patient/14602' does not resolve
 ERROR: MedicationRequest.text.div: Hyperlink 'Practitioner/smart-Practitioner-71482713' at 'div/p/a' for 'Practitioner/smart-Practitioner-71482713' does not resolve
 == fsh-generated/resources/MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur.json ==
+ERROR: MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur: MedicationRequest.supportingInformation[0]: Profile https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion|0.1.0, Element matches more than one slice - updatedLine, pharmInter
+ERROR: MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur: MedicationRequest: Slice 'MedicationRequest.supportingInformation:pharmInter': a matching slice is required, but not found (from https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion|0.1.0). Note that other slices are allowed in addition to this required slice
 WARNING: MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur: MedicationRequest.medication.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://BogusSystemMedicabase.com' could not be found, so the code cannot be validated
 ERROR: MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur: MedicationRequest.medication.ofType(CodeableConcept): None of the codings provided are in the value set 'value set Interop'Santé - Codes identifiant les médicaments' (https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-code|0.1.0), and a coding from this value set is required) (codes = http://BogusSystemMedicabase.com#MV00000557)
 WARNING: MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur: MedicationRequest.medication.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://BogusSystemMedicabase.com' could not be found, so the code cannot be validated

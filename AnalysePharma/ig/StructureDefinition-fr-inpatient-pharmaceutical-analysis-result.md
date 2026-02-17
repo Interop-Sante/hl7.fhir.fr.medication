@@ -9,13 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:FRInpatientPharmaceuticalAnalysisResultProfile |
+| Draft as of 2026-02-17 | *Computable Name*:FRInpatientPharmaceuticalAnalysisResultProfile |
 
  
 French Pharmaceutical Analysis Result profile 
 
 **Utilisations:**
 
+* Référence ce Profil: [FR Pharmaceutical Intervention Suggestion](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md)
 * Exemples pour ce/t/te Profil: [Task/Analyse-Intervention-Arret](Task-Analyse-Intervention-Arret.md), [Task/Analyse-Intervention-Demande-Substitution](Task-Analyse-Intervention-Demande-Substitution.md), [Task/Analyse-Validation-Commentaire](Task-Analyse-Validation-Commentaire.md) and [Task/Analyse-Validation-Simple](Task-Analyse-Validation-Simple.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result)
@@ -41,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
   "name" : "FRInpatientPharmaceuticalAnalysisResultProfile",
   "title" : "FR Pharmaceutical Analysis Result",
   "status" : "draft",
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

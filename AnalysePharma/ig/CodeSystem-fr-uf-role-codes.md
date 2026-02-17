@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-uf-role-codes | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:FrUFRoleCodes |
+| Draft as of 2026-02-17 | *Computable Name*:FrUFRoleCodes |
 
  
 Le système de codage pour les types de rôle qu’une UF peut avoir par rapport à un séjour patient. 
@@ -37,7 +37,7 @@ Le système de codage pour les types de rôle qu’une UF peut avoir par rapport
   "title" : "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-document-type | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:FRMedicationReconciliationDocumentType |
+| Draft as of 2026-02-17 | *Computable Name*:FRMedicationReconciliationDocumentType |
 
  
 Le jeu de valeurs à utiliser pour coder le type de document de la ressource **Composition** d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder le type de document de la ressource **C
   "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

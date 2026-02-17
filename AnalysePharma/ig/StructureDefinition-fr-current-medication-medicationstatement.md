@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-current-medication-medicationstatement | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:FRCurrentMedicationMedicationStatement |
+| Draft as of 2026-02-17 | *Computable Name*:FRCurrentMedicationMedicationStatement |
 
  
 Profil de la ressource **MedicationStatement** du traitement médicamenteux courant. Current Medication MedicationStatement resource profile 
@@ -75,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-current-medicatio
   "name" : "FRCurrentMedicationMedicationStatement",
   "title" : "FR Current Medication MedicationStatement",
   "status" : "draft",
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

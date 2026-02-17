@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:FRInpatientPharmaceuticalInterventionSuggestionProfile |
+| Draft as of 2026-02-17 | *Computable Name*:FRInpatientPharmaceuticalInterventionSuggestionProfile |
 
  
 Profile de proposition d’évolution de ligne de prescritpion dans le cadre d’une intervention pharmaceutique 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
   "name" : "FRInpatientPharmaceuticalInterventionSuggestionProfile",
   "title" : "FR Pharmaceutical Intervention Suggestion",
   "status" : "draft",
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
@@ -110,6 +110,50 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-pharmac
         "id" : "MedicationRequest.intent",
         "path" : "MedicationRequest.intent",
         "patternCode" : "proposal"
+      },
+      {
+        "id" : "MedicationRequest.supportingInformation",
+        "path" : "MedicationRequest.supportingInformation",
+        "slicing" : {
+          "discriminator" : [
+            {
+              "type" : "profile",
+              "path" : "reference"
+            }
+          ],
+          "rules" : "open"
+        },
+        "min" : 1
+      },
+      {
+        "id" : "MedicationRequest.supportingInformation:updatedLine",
+        "path" : "MedicationRequest.supportingInformation",
+        "sliceName" : "updatedLine",
+        "min" : 0,
+        "max" : "*",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "MedicationRequest.supportingInformation:pharmInter",
+        "path" : "MedicationRequest.supportingInformation",
+        "sliceName" : "pharmInter",
+        "min" : 1,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+            ]
+          }
+        ]
       },
       {
         "id" : "MedicationRequest.groupIdentifier",

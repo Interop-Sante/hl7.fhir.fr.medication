@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-reconciliation-composition | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:FRMedicationReconciliationComposition |
+| Draft as of 2026-02-17 | *Computable Name*:FRMedicationReconciliationComposition |
 
  
 Profil de la ressource **Composition** la Fiche de Conciliation des Traitements médicamenteux (FCT). 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-reconc
   "name" : "FRMedicationReconciliationComposition",
   "title" : "FR Medication Reconciliation Composition",
   "status" : "draft",
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

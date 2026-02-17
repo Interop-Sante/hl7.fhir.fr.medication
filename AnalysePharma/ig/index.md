@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:MED |
+| Draft as of 2026-02-17 | *Computable Name*:MED |
 
 ### Introduction
 
@@ -84,7 +84,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-02-16T17:09:53+00:00",
+  "date" : "2026-02-17T08:04:39+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
