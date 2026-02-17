@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-on-admission-medi
   "name" : "FROnAdmissionMedicationComposition",
   "title" : "FR On Admission Medication Composition",
   "status" : "draft",
-  "date" : "2026-02-17T08:46:02+00:00",
+  "date" : "2026-02-17T09:04:14+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {

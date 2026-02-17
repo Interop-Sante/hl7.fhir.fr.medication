@@ -9,7 +9,7 @@
 
 ## Vue d’ensemble
 
-Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmaceutique ou une intervention pharmaceutique, est toujours représenté par une ressource `Task` suivant le profil **FrPharmaceuticalAnalysisResultProfile** avec les attributs suivants:
+Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmaceutique ou une intervention pharmaceutique, est toujours représenté par une ressource `Task` suivant le profil [FrPharmaceuticalAnalysisResultProfile](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md) avec les attributs suivants:
 
 * `Task.groupIdentifier`renseigné avec le `groupIdentifier`de la/des ressource(s) `MedicationRequest` représentant la/les ligne(s) de prescription analysée(s)
 * `Task.status` = `completed`
@@ -42,7 +42,7 @@ En plus des éléments communs à tous les résultats d’analyse pharmaceutique
 
 ### Propositions suite à une analyse pharmaceutique
 
-Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource `MedicationRequest`suivant le profil **FrInpatientPharmaceuticalInterventionSuggestionProfile** qui hérite du profil **FRInpatientMedicationRequest** avec les attributs suivants:
+Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource `MedicationRequest`suivant le profil [FrInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) qui hérite du profil **FRInpatientMedicationRequest** avec les attributs suivants:
 
 * `MedicationRequest.status` = `active`
 * `MedicationRequest.intent` = `proposal`

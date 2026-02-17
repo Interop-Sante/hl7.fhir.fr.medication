@@ -54,7 +54,7 @@ Codes représentant le type d’intervention pharmaceutique
   "title" : "Jeu de valeurs Interop'Santé - Codes du type d'intervention pharmaceutique",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T08:46:02+00:00",
+  "date" : "2026-02-17T09:04:14+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [
     {
