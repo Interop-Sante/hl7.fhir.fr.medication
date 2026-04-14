@@ -11,5 +11,5 @@ Description:  """Structure du résultat d'analyse pharmaceutique (validation ou 
 * resultatAnalyse.commentaire 0..1 string "Commentaire de validation ou d'intervention pharmaceutique"
 * resultatAnalyse.proposition 0..* Reference "Proposition de ajout/modofcation/suppression de ligne de prescription"
 * resultatAnalyse.typeIntervention 0..1 code "Dans le cas d'une intervention pharmaceutique, type d'intervention"
-* resultatAnalyse.typeProblème 0..1 code "Dans le cas d'une intervention pharmaceutique, type de problème détecté"
+* resultatAnalyse.typeProbleme 0..1 code "Dans le cas d'une intervention pharmaceutique, type de problème détecté"
 * resultatAnalyse.devenirIntervention 0..1 code "Dans le cas d'une intervention pharmaceutique, devenir de l'intervention"
