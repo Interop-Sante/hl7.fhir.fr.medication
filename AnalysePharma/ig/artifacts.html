@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"30"}
-    h3,h4,h5,h6{--heading-prefix:"30.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"39"}
+    h3,h4,h5,h6{--heading-prefix:"39.0"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
 
@@ -63,7 +63,7 @@
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  FRANCE
 
 
             </span>
@@ -196,7 +196,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l350">​</a>
+      <li><a name="l348">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -210,6 +210,47 @@
       </li>
       <li>
         <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformation-PN13-vers-FHIR-AnalysePharma.html">Transformation PN13 vers FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="PN13-exemples-AnalysePharma-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-pour-exemple-analyse-pharma.html">Prescription initale PN13 pour exemples de resultats d'analyse pharmaceutique</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-sans-commentaire.html">Validation pharmaceutique PN13 sans commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-commentaire.html">Validation pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-suggestion.html">Validation pharmaceutique PN13 avec suggestion</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-commentaire.html">Intervention pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-modification.html">Intervention pharmaceutique PN13 avec proposition de modification</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-substitution.html">Intervention pharmaceutique PN13 avec proposition de substitution</a>
       </li>
     </ul>
   </li>
@@ -333,6 +374,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Structuration d’une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle européen <a href="https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html">Xt-EHR</a> (CI-BUILD)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-analyse-pharmaceutique-logical.html" title="StructureDefinition/fr-analyse-pharmaceutique-logical">Résultat d'analyse pharmaceutique</a>
+            </td>
+            <td>
+<p>Structure du résultat d’analyse pharmaceutique (validation ou intervention pharmacetique)</p>
 </td>
          </tr>
       </tbody>
@@ -692,6 +741,14 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.html" title="ValueSet/fr-pharmaceutical-intervention-devenir-code-value-set">Jeu de valeurs Interop'Santé - Codes de devenir de l'intervention pharmaceutique</a>
+            </td>
+            <td>
+<p>Codes représentant le devenir de l’intervention pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-fr-pharmaceutical-analysis-perfomer-type-value-set.html" title="ValueSet/fr-pharmaceutical-analysis-perfomer-type-value-set">Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique</a>
             </td>
             <td>
@@ -956,6 +1013,14 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-fr-pharmaceutical-intervention-devenir-code.html" title="CodeSystem/fr-pharmaceutical-intervention-devenir-code">code system d'Interop'Santé - Codes de devenir de l'intervention pharmaceutique</a>
+            </td>
+            <td>
+<p>Le système de codage pour le typage du devenir l’intervention pharmaceutique.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-fr-pharmaceutical-analysis-result-code.html" title="CodeSystem/fr-pharmaceutical-analysis-result-code">code system d'Interop'Santé - Codes de résultat d'analyse pharmaceutique</a>
             </td>
             <td>
@@ -1032,6 +1097,14 @@ Medication History MedicationStatement resource profile</p>
             </td>
             <td>
 <p>ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d’une prescritpion de médicament avec uniquement un identifiant fourni</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PN13-FHIR-analpharm-conceptmap.html" title="ConceptMap/PN13-FHIR-analpharm-conceptmap">Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique</a>
+            </td>
+            <td>
+<p>ConceptMap pour la conversion PN13 vers FHIR d’un résultat d’une analyse pharmaceutique</p>
 </td>
          </tr>
          <tr>
@@ -1116,23 +1189,191 @@ Medication History MedicationStatement resource profile</p>
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Task-Analyse-Intervention-Arret.html" title="Task/Analyse-Intervention-Arret">Analyse-Intervention-Arret</a>
+               <a href="Task-Analyse-Intervention-Acceptee.html" title="Task/Analyse-Intervention-Acceptee">Analyse-Intervention-Acceptee</a>
             </td>
             <td>
-<p>Intervention pharmaceutique type 2 Arrêt problème 5 Médicament non indiqué</p>
+<p>Acceptation de l’arrêt de paracétamol proposé par l’intervention pharmaceutique</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Task-Analyse-Intervention-Demande-Substitution.html" title="Task/Analyse-Intervention-Demande-Substitution">Analyse-Intervention-Demande-Substitution</a>
+               <a href="Task-Analyse-Intervention-Acceptee-Modifiee.html" title="Task/Analyse-Intervention-Acceptee-Modifiee">Analyse-Intervention-Acceptee-Modifiee</a>
             </td>
             <td>
-<p>Intervention pharmaceutique type 3 Substitution/echange problème 6.3 Interaction - Association déconseillée</p>
+<p>Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Task-Analyse-Validation-Commentaire.html" title="Task/Analyse-Validation-Commentaire">Analyse-Validation-Commentaire</a>
+               <a href="Task-Analyse-Intervention-Commentaire-Trad-PN13-FHIR.html" title="Task/Analyse-Intervention-Commentaire-Trad-PN13-FHIR">Analyse-Intervention-Commentaire-Trad-PN13-FHIR</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-NonAcceptee.html" title="Task/Analyse-Intervention-NonAcceptee">Analyse-Intervention-NonAcceptee</a>
+            </td>
+            <td>
+<p>Validation d’un dosage dont l’intervention pharmaceutique demandait confirmation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Proposition-Trad-PN13-FHIR.html" title="Task/Analyse-Intervention-Proposition-Trad-PN13-FHIR">Analyse-Intervention-Proposition-Trad-PN13-FHIR</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Substitution-Trad-PN13-FHIR.html" title="Task/Analyse-Intervention-Substitution-Trad-PN13-FHIR">Analyse-Intervention-Substitution-Trad-PN13-FHIR</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique avec proposition de substitution pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type1-DOSTINEX.html" title="Task/Analyse-Intervention-Type1-DOSTINEX">Analyse-Intervention-Type1-DOSTINEX</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type1-METFORMINE.html" title="Task/Analyse-Intervention-Type1-METFORMINE">Analyse-Intervention-Type1-METFORMINE</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 2 Indication non traitée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type2-Arret-Paracetamol.html" title="Task/Analyse-Intervention-Type2-Arret-Paracetamol">Analyse-Intervention-Type2-Arret-Paracetamol</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type 2: Arrêt - Problème 5: Médicament non indiqué</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM.html" title="Task/Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM">Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 6.3 Interaction - Association déconseillée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type3-ELIQUIS.html" title="Task/Analyse-Intervention-Type3-ELIQUIS">Analyse-Intervention-Type3-ELIQUIS</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 4 Surdosage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type3-ESOMEPRAZOLE.html" title="Task/Analyse-Intervention-Type3-ESOMEPRAZOLE">Analyse-Intervention-Type3-ESOMEPRAZOLE</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type3-Remplacement1pour2-INEGY.html" title="Task/Analyse-Intervention-Type3-Remplacement1pour2-INEGY">Analyse-Intervention-Type3-Remplacement1pour2-INEGY</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type3-Remplacement2pour1-COTAREG.html" title="Task/Analyse-Intervention-Type3-Remplacement2pour1-COTAREG">Analyse-Intervention-Type3-Remplacement2pour1-COTAREG</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type4-CETAFEN-INJ.html" title="Task/Analyse-Intervention-Type4-CETAFEN-INJ">Analyse-Intervention-Type4-CETAFEN-INJ</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 4 Choix de la voie d’administration - Problème: 8 Voie/administration inappropriée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type5-DOSTINEX.html" title="Task/Analyse-Intervention-Type5-DOSTINEX">Analyse-Intervention-Type5-DOSTINEX</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 7 Effet indésirable</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type5-INNOHEP.html" title="Task/Analyse-Intervention-Type5-INNOHEP">Analyse-Intervention-Type5-INNOHEP</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 10 Monitorage à suivre</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type6-CALCIDOSE.html" title="Task/Analyse-Intervention-Type6-CALCIDOSE">Analyse-Intervention-Type6-CALCIDOSE</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 6 Optimisation modalités d’administration - Problème: 6.2 Interaction - Précaution d’emploi</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type6-LOXAPAC.html" title="Task/Analyse-Intervention-Type6-LOXAPAC">Analyse-Intervention-Type6-LOXAPAC</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 6 Optimisation modalités d’administration - Problème: 8 Voie/administration inappropriée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Intervention-Type7-BINOCRIT.html" title="Task/Analyse-Intervention-Type7-BINOCRIT">Analyse-Intervention-Type7-BINOCRIT</a>
+            </td>
+            <td>
+<p>Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 3 Sous-dosage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Ajout-Morphine.html" title="Task/Analyse-Validation-Ajout-Morphine">Analyse-Validation-Ajout-Morphine</a>
+            </td>
+            <td>
+<p>Validation d’une prescription de morphine avec proposition d’ajout</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Commentaire-Diazepam.html" title="Task/Analyse-Validation-Commentaire-Diazepam">Analyse-Validation-Commentaire-Diazepam</a>
+            </td>
+            <td>
+<p>Validation d’une prescription de diazépam avec commentaire</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Commentaire-LACRIFLUID.html" title="Task/Analyse-Validation-Commentaire-LACRIFLUID">Analyse-Validation-Commentaire-LACRIFLUID</a>
+            </td>
+            <td>
+<p>Validation d’une prescription de LACRIFLUID avec commentaire</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Commentaire-Morphine.html" title="Task/Analyse-Validation-Commentaire-Morphine">Analyse-Validation-Commentaire-Morphine</a>
             </td>
             <td>
 <p>Validation d’une prescription de morphine avec commentaire</p>
@@ -1140,7 +1381,31 @@ Medication History MedicationStatement resource profile</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Task-Analyse-Validation-Simple.html" title="Task/Analyse-Validation-Simple">Analyse-Validation-Simple</a>
+               <a href="Task-Analyse-Validation-Commentaire-Trad-PN13-FHIR.html" title="Task/Analyse-Validation-Commentaire-Trad-PN13-FHIR">Analyse-Validation-Commentaire-Trad-PN13-FHIR</a>
+            </td>
+            <td>
+<p>Validation pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Proposition-Trad-PN13-FHIR.html" title="Task/Analyse-Validation-Proposition-Trad-PN13-FHIR">Analyse-Validation-Proposition-Trad-PN13-FHIR</a>
+            </td>
+            <td>
+<p>Validation pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR.html" title="Task/Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR">Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR</a>
+            </td>
+            <td>
+<p>Validation pharmaceutique sans commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-Analyse-Validation-Simple-paracetamol.html" title="Task/Analyse-Validation-Simple-paracetamol">Analyse-Validation-Simple-paracetamol</a>
             </td>
             <td>
 <p>Validation simple d’une prescription de paracétamol</p>
@@ -1596,6 +1861,190 @@ Avec un maximum de 6 comprimés par jour. QSP 6 mois.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-BINOCRIT.html" title="MedicationRequest/InLine-Analyse-Presc-BINOCRIT">InLine-Analyse-Presc-BINOCRIT</a>
+            </td>
+            <td>
+<p>Prescription de BINOCRIT pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-CALCIDOSE.html" title="MedicationRequest/InLine-Analyse-Presc-CALCIDOSE">InLine-Analyse-Presc-CALCIDOSE</a>
+            </td>
+            <td>
+<p>Prescription de CALCIDOSE pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-CELLUVISC.html" title="MedicationRequest/InLine-Analyse-Presc-CELLUVISC">InLine-Analyse-Presc-CELLUVISC</a>
+            </td>
+            <td>
+<p>Prescription de CELLUVISC pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR.html" title="MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR">InLine-Analyse-Presc-CETAFEN-CPR</a>
+            </td>
+            <td>
+<p>Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR-Modifiee.html" title="MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-Modifiee">InLine-Analyse-Presc-CETAFEN-CPR-Modifiee</a>
+            </td>
+            <td>
+<p>Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique acceptée avec modification de la proposition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR-SousDose.html" title="MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-SousDose">InLine-Analyse-Presc-CETAFEN-CPR-SousDose</a>
+            </td>
+            <td>
+<p>Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique sous dosée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-CETAFEN-INJ.html" title="MedicationRequest/InLine-Analyse-Presc-CETAFEN-INJ">InLine-Analyse-Presc-CETAFEN-INJ</a>
+            </td>
+            <td>
+<p>Prescription de CETAFEN en perfusion pour exemple d’intervention pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-COTAREG.html" title="MedicationRequest/InLine-Analyse-Presc-COTAREG">InLine-Analyse-Presc-COTAREG</a>
+            </td>
+            <td>
+<p>Prescription de COTAREG pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-DOSTINEX.html" title="MedicationRequest/InLine-Analyse-Presc-DOSTINEX">InLine-Analyse-Presc-DOSTINEX</a>
+            </td>
+            <td>
+<p>Prescription de DOSTINEX pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-Diazepam.html" title="MedicationRequest/InLine-Analyse-Presc-Diazepam">InLine-Analyse-Presc-Diazepam</a>
+            </td>
+            <td>
+<p>Prescription de Diazépam pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-ELIQUIS-25.html" title="MedicationRequest/InLine-Analyse-Presc-ELIQUIS-25">InLine-Analyse-Presc-ELIQUIS-25</a>
+            </td>
+            <td>
+<p>Prescription de ELIQUS 2,5 MG pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-ELIQUIS-50.html" title="MedicationRequest/InLine-Analyse-Presc-ELIQUIS-50">InLine-Analyse-Presc-ELIQUIS-50</a>
+            </td>
+            <td>
+<p>Prescription de ELIQUIS 5MG pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-ESIDREX.html" title="MedicationRequest/InLine-Analyse-Presc-ESIDREX">InLine-Analyse-Presc-ESIDREX</a>
+            </td>
+            <td>
+<p>Prescription d’ESIDREX pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-ESOMEPRAZOLE.html" title="MedicationRequest/InLine-Analyse-Presc-ESOMEPRAZOLE">InLine-Analyse-Presc-ESOMEPRAZOLE</a>
+            </td>
+            <td>
+<p>Prescription de ESOMEPTAZOLE pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-EZETIMIBE.html" title="MedicationRequest/InLine-Analyse-Presc-EZETIMIBE">InLine-Analyse-Presc-EZETIMIBE</a>
+            </td>
+            <td>
+<p>Prescription de EZETIMIBE pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-INEGY.html" title="MedicationRequest/InLine-Analyse-Presc-INEGY">InLine-Analyse-Presc-INEGY</a>
+            </td>
+            <td>
+<p>Prescription de INEGY pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-INNOHEP.html" title="MedicationRequest/InLine-Analyse-Presc-INNOHEP">InLine-Analyse-Presc-INNOHEP</a>
+            </td>
+            <td>
+<p>Prescription de INNOHEP pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-LACRIFLUID.html" title="MedicationRequest/InLine-Analyse-Presc-LACRIFLUID">InLine-Analyse-Presc-LACRIFLUID</a>
+            </td>
+            <td>
+<p>Prescription de LACRIFLUID pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-LANSOPRAZOLE.html" title="MedicationRequest/InLine-Analyse-Presc-LANSOPRAZOLE">InLine-Analyse-Presc-LANSOPRAZOLE</a>
+            </td>
+            <td>
+<p>Prescription de LANSOPRAZOLE pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-LEVOTHYROX.html" title="MedicationRequest/InLine-Analyse-Presc-LEVOTHYROX">InLine-Analyse-Presc-LEVOTHYROX</a>
+            </td>
+            <td>
+<p>Prescription de LACRIFLUID pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-LOXAPAC.html" title="MedicationRequest/InLine-Analyse-Presc-LOXAPAC">InLine-Analyse-Presc-LOXAPAC</a>
+            </td>
+            <td>
+<p>Prescription de LOXAPAC pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-MACROGOL.html" title="MedicationRequest/InLine-Analyse-Presc-MACROGOL">InLine-Analyse-Presc-MACROGOL</a>
+            </td>
+            <td>
+<p>Prescription de MACROGOL pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-METFORMINE.html" title="MedicationRequest/InLine-Analyse-Presc-METFORMINE">InLine-Analyse-Presc-METFORMINE</a>
+            </td>
+            <td>
+<p>Prescription de METFORMINE pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="MedicationRequest-InLine-Analyse-Presc-Morphine.html" title="MedicationRequest/InLine-Analyse-Presc-Morphine">InLine-Analyse-Presc-Morphine</a>
             </td>
             <td>
@@ -1607,7 +2056,7 @@ Avec un maximum de 6 comprimés par jour. QSP 6 mois.</p>
                <a href="MedicationRequest-InLine-Analyse-Presc-NEFOPAM.html" title="MedicationRequest/InLine-Analyse-Presc-NEFOPAM">InLine-Analyse-Presc-NEFOPAM</a>
             </td>
             <td>
-<p>Prescription de Paracétamol pour exemple d’intervention pharmaceutique</p>
+<p>Prescription de NEFOPMA pour exemple d’intervention pharmaceutique</p>
 </td>
          </tr>
          <tr>
@@ -1628,6 +2077,22 @@ Avec un maximum de 6 comprimés par jour. QSP 6 mois.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-SIMVASTATINE.html" title="MedicationRequest/InLine-Analyse-Presc-SIMVASTATINE">InLine-Analyse-Presc-SIMVASTATINE</a>
+            </td>
+            <td>
+<p>Prescription de SIMVASTATINE pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Analyse-Presc-TAREG.html" title="MedicationRequest/InLine-Analyse-Presc-TAREG">InLine-Analyse-Presc-TAREG</a>
+            </td>
+            <td>
+<p>Prescription de TAREG pour exemple d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Medication-InLine-DOLIPRANE.html" title="Medication/InLine-DOLIPRANE">InLine-DOLIPRANE</a>
             </td>
             <td>
@@ -1644,10 +2109,50 @@ Avec un maximum de 6 comprimés par jour. QSP 6 mois.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-InLine-Observation-poids-Avion.html" title="Observation/InLine-Observation-poids-Avion">InLine-Observation-poids-Avion</a>
+            </td>
+            <td>
+<p>Poids du patient pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="MedicationRequest-InLine-Presc-EFFERALGAN.html" title="MedicationRequest/InLine-Presc-EFFERALGAN">InLine-Presc-EFFERALGAN</a>
             </td>
             <td>
 <p>Prescription d’EFFERALGAN&reg; pour exemple de dispensation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition.html" title="MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition">InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition</a>
+            </td>
+            <td>
+<p>Proposition associée à intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution.html" title="MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution">InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution</a>
+            </td>
+            <td>
+<p>Proposition de substitution associée à intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol.html" title="MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol">InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol</a>
+            </td>
+            <td>
+<p>Prescription initale pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition.html" title="MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition">InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition</a>
+            </td>
+            <td>
+<p>Proposition associée à validation pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
 </td>
          </tr>
          <tr>
@@ -1668,10 +2173,34 @@ Avec un maximum de 6 comprimés par jour. QSP 6 mois.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-InLine-observation-taille-Avion.html" title="Observation/InLine-observation-taille-Avion">InLine-observation-taille-Avion</a>
+            </td>
+            <td>
+<p>Taille du patient pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-InLine-patient-Avion.html" title="Patient/InLine-patient-Avion">InLine-patient-Avion</a>
+            </td>
+            <td>
+<p>Patient pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Group-InLine-patient-group-01.html" title="Group/InLine-patient-group-01">InLine-patient-group-01</a>
             </td>
             <td>
 <p>Groupe de patient pour exemple de délivrance reglobalisée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-InLine-practitioner-Luiggi.html" title="Practitioner/InLine-practitioner-Luiggi">InLine-practitioner-Luiggi</a>
+            </td>
+            <td>
+<p>Practitioner prescripteur pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique</p>
 </td>
          </tr>
          <tr>
@@ -2044,7 +2573,7 @@ Avec un maximum de 6 comprimés par jour. QSP 6 mois.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 10:22+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 15:08+0000">2026-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

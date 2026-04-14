@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-pharmaceutical-analysis-perfomer-type-value-set | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrPharmaceuticalAnalysisPerformerTypeValueSet |
+| Draft as of 2026-04-14 | *Computable Name*:FrPharmaceuticalAnalysisPerformerTypeValueSet |
 
  
 Codes représentant le type de résultat de l’analyse pharmaceutique 
@@ -54,62 +54,46 @@ Codes représentant le type de résultat de l’analyse pharmaceutique
   "title" : "Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Codes représentant le type de résultat de l'analyse pharmaceutique",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
-        "concept" : [
-          {
-            "code" : "21",
-            "display" : "Pharmacien"
-          }
-        ]
-      },
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_G16-ProfessionFormation/FHIR/TRE-G16-ProfessionFormation",
-        "concept" : [
-          {
-            "code" : "21",
-            "display" : "Pharmacien en formation"
-          }
-        ]
-      },
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
-        "concept" : [
-          {
-            "code" : "316",
-            "display" : "Préparateur en pharmacie hospitalière"
-          }
-        ]
-      }
-    ]
+    "include" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "concept" : [{
+        "code" : "21",
+        "display" : "Pharmacien"
+      }]
+    },
+    {
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_G16-ProfessionFormation/FHIR/TRE-G16-ProfessionFormation",
+      "concept" : [{
+        "code" : "21",
+        "display" : "Pharmacien en formation"
+      }]
+    },
+    {
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+      "concept" : [{
+        "code" : "316",
+        "display" : "Préparateur en pharmacie hospitalière"
+      }]
+    }]
   }
 }
 

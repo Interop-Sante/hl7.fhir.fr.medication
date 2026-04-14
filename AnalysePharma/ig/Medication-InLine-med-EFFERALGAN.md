@@ -28,56 +28,46 @@ Profil: [FR Medication](StructureDefinition-fr-medication.md)
   "resourceType" : "Medication",
   "id" : "InLine-med-EFFERALGAN",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"]
   },
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
-        "code" : "3400893766521",
-        "display" : "EFFERALGANMED 1000MG CPR"
-      }
-    ],
+    "coding" : [{
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+      "code" : "3400893766521",
+      "display" : "EFFERALGANMED 1000MG CPR"
+    }],
     "text" : "EFFERALGAN® 1 000 mg, cpr"
   },
   "form" : {
-    "coding" : [
-      {
-        "system" : "http://standardterms.edqm.eu",
-        "code" : "10219000",
-        "display" : "Comprimé"
-      }
-    ],
+    "coding" : [{
+      "system" : "http://standardterms.edqm.eu",
+      "code" : "10219000",
+      "display" : "Comprimé"
+    }],
     "text" : "comprimé"
   },
-  "ingredient" : [
-    {
-      "itemCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
-            "code" : "100000090270",
-            "display" : "paracétamol"
-          }
-        ],
-        "text" : "PARACETAMOL"
+  "ingredient" : [{
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+        "code" : "100000090270",
+        "display" : "paracétamol"
+      }],
+      "text" : "PARACETAMOL"
+    },
+    "isActive" : true,
+    "strength" : {
+      "numerator" : {
+        "value" : 1000,
+        "unit" : "mg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
       },
-      "isActive" : true,
-      "strength" : {
-        "numerator" : {
-          "value" : 1000,
-          "unit" : "mg",
-          "system" : "http://unitsofmeasure.org",
-          "code" : "mg"
-        },
-        "denominator" : {
-          "value" : 1
-        }
+      "denominator" : {
+        "value" : 1
       }
     }
-  ]
+  }]
 }
 
 ```

@@ -51,27 +51,21 @@ Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise 
   "resourceType" : "MedicationRequest",
   "id" : "InLine-Analyse-Presc-Paracetamol-Si-Douleur",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
-      "valueMarkdown" : "Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
+    "valueMarkdown" : "Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
+  }],
   "status" : "active",
   "intent" : "order",
   "priority" : "routine",
   "medicationCodeableConcept" : {
-    "coding" : [
-      {
-        "system" : "http://BogusSystemMedicabase.com",
-        "code" : "MV00000557",
-        "display" : "PARACETAMOL 500 mg gélule"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://BogusSystemMedicabase.com",
+      "code" : "MV00000557",
+      "display" : "PARACETAMOL 500 mg gélule"
+    }]
   },
   "subject" : {
     "reference" : "Patient/14602"
@@ -83,45 +77,39 @@ Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise 
   "groupIdentifier" : {
     "value" : "Presc-4130"
   },
-  "note" : [
-    {
-      "text" : "Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
-    }
-  ],
-  "dosageInstruction" : [
-    {
-      "asNeededCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://snomed.info/sct",
-            "code" : "22253000",
-            "display" : "douleur"
-          }
-        ],
-        "text" : "Si douleurs"
-      },
-      "maxDosePerPeriod" : {
-        "numerator" : {
-          "value" : 4000,
-          "unit" : "mg",
-          "system" : "http://unitsofmeasure.org",
-          "code" : "mg"
-        },
-        "denominator" : {
-          "value" : 24,
-          "unit" : "h",
-          "system" : "http://unitsofmeasure.org",
-          "code" : "h"
-        }
-      },
-      "maxDosePerAdministration" : {
-        "value" : 1000,
+  "note" : [{
+    "text" : "Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)"
+  }],
+  "dosageInstruction" : [{
+    "asNeededCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "22253000",
+        "display" : "douleur"
+      }],
+      "text" : "Si douleurs"
+    },
+    "maxDosePerPeriod" : {
+      "numerator" : {
+        "value" : 4000,
         "unit" : "mg",
         "system" : "http://unitsofmeasure.org",
         "code" : "mg"
+      },
+      "denominator" : {
+        "value" : 24,
+        "unit" : "h",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "h"
       }
+    },
+    "maxDosePerAdministration" : {
+      "value" : 1000,
+      "unit" : "mg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg"
     }
-  ]
+  }]
 }
 
 ```

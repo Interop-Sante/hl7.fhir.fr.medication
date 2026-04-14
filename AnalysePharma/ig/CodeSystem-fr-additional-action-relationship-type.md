@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-action-relationship-type | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrAdditionalActionRelationshipType |
+| Draft as of 2026-04-14 | *Computable Name*:FrAdditionalActionRelationshipType |
 
  
 Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type. 
@@ -27,9 +27,7 @@ Codes to specify relationship between action in a RequestGroup that are not in t
   "resourceType" : "CodeSystem",
   "id" : "fr-additional-action-relationship-type",
   "meta" : {
-    "profile" : [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
   },
   "url" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-action-relationship-type",
   "version" : "0.1.0",
@@ -37,39 +35,29 @@ Codes to specify relationship between action in a RequestGroup that are not in t
   "title" : "Interop'Santé code system - Additional codes for relationship between action",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "content" : "complete",
   "count" : 1,
-  "concept" : [
-    {
-      "code" : "ALT",
-      "display" : "Si l'action ne peut pas être réalisée, l'action reliée peut être réalisée à la place."
-    }
-  ]
+  "concept" : [{
+    "code" : "ALT",
+    "display" : "Si l'action ne peut pas être réalisée, l'action reliée peut être réalisée à la place."
+  }]
 }
 
 ```

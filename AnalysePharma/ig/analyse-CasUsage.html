@@ -63,7 +63,7 @@
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  FRANCE
 
 
             </span>
@@ -196,7 +196,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l350">​</a>
+      <li><a name="l348">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -210,6 +210,47 @@
       </li>
       <li>
         <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformation-PN13-vers-FHIR-AnalysePharma.html">Transformation PN13 vers FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="PN13-exemples-AnalysePharma-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-pour-exemple-analyse-pharma.html">Prescription initale PN13 pour exemples de resultats d'analyse pharmaceutique</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-sans-commentaire.html">Validation pharmaceutique PN13 sans commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-commentaire.html">Validation pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-suggestion.html">Validation pharmaceutique PN13 avec suggestion</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-commentaire.html">Intervention pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-modification.html">Intervention pharmaceutique PN13 avec proposition de modification</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-substitution.html">Intervention pharmaceutique PN13 avec proposition de substitution</a>
       </li>
     </ul>
   </li>
@@ -316,15 +357,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="validation-pharmaceutique">Validation pharmaceutique</h3>
 
-<p>/!\ mettre cas d’usage de validation simple, validation avec commentaire et validation avec suggestion</p>
+<p>Un professionnel effectue une ananlyse pharmaceutique et valide une/des ligne(s) de prescription. Cette validation peut être:</p>
+<ul>
+  <li>sans commentaire</li>
+  <li>avec un/des commentaire(s)</li>
+  <li>avec une/des proposition(s) de prescription complémentaire(s) pour amélioré la prise en charge du patient (ex. prescription complémentaire de laxatif dans le cas d’un traitement à la morphine)</li>
+</ul>
 
 <h3 id="intervention-pharmaceutique">Intervention pharmaceutique</h3>
 
-<p>/!\ mettre cas d’usage d’intervention avec modification de ligne de prescription (les différents cas selon les codes d’intervention), simplement des commentaires pour la dispensation/administration, remplacement de ligne, suppression de ligne ou ajout de ligne</p>
+<p>Un professionnel effectue une analyse pharmaceutique et réalise une intervention pharmaceutique sur une/des ligne(s) de prescription suite à la détection d’un problème. L’intervention pharmaceutique peut:</p>
+<ul>
+  <li>être soumise seule avec un commentaire expliquant la raison de l’intervention (ex. demande de confirmation d’un dosage qui semble surprenant étant donné le contexte patient)</li>
+  <li>être associée à une/des proposition(s) de modification/annulation de ligne de prescription (ex. un médicament prescrit n’est pas au livret, proposition de remplacer par un médicament au livret) et/ou une/des proposition(s) d’annulation de ligne de prescription.</li>
+</ul>
 
 <h3 id="prise-en-compte-de-lintervention-pharmaceutique">Prise en compte de l’intervention pharmaceutique</h3>
 
-<p>/!\ A décider si on va jusque là /!\</p>
+<p>Le prescripteur de la / des ligne(s) de prescription ayant fait l’objet d’une intervention pharmaceutique ainsi que l’éventuelle(s) proposition(s) associée(s) puis décide:</p>
+<ul>
+  <li>d’accepter l’intervention pharmaceutique</li>
+  <li>de ne pas accepter l’intervention pharmaceutique</li>
+  <li>d’accepter l’intervention pharmaceutique mais de modifier la proposition associée</li>
+</ul>
 
 
 
@@ -366,7 +421,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 10:22+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 15:08+0000">2026-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

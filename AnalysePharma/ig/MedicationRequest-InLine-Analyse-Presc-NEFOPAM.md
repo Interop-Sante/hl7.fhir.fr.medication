@@ -44,21 +44,17 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "resourceType" : "MedicationRequest",
   "id" : "InLine-Analyse-Presc-NEFOPAM",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
   },
   "status" : "active",
   "intent" : "order",
   "priority" : "routine",
   "medicationCodeableConcept" : {
-    "coding" : [
-      {
-        "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
-        "code" : "3400893485552",
-        "display" : "NEFOPAM VIA 20MG/2ML INJ AMP"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD",
+      "code" : "3400893485552",
+      "display" : "NEFOPAM VIA 20MG/2ML INJ AMP"
+    }]
   },
   "subject" : {
     "reference" : "Patient/25678"
@@ -70,57 +66,51 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "groupIdentifier" : {
     "value" : "Presc-4254"
   },
-  "dosageInstruction" : [
-    {
-      "timing" : {
-        "repeat" : {
-          "boundsDuration" : {
-            "value" : 2,
-            "unit" : "semaines",
-            "system" : "http://unitsofmeasure.org",
-            "code" : "wk"
-          },
-          "frequency" : 1,
-          "period" : 6,
-          "periodUnit" : "h"
-        }
-      },
-      "route" : {
-        "coding" : [
-          {
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "20035000",
-            "display" : "Voie intramusculaire"
-          }
-        ],
-        "text" : "Voie intramusculaire"
-      },
-      "doseAndRate" : [
-        {
-          "doseQuantity" : {
-            "value" : 1,
-            "unit" : "Ampoule",
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "15002000"
-          }
-        }
-      ],
-      "maxDosePerPeriod" : {
-        "numerator" : {
-          "value" : 120,
-          "unit" : "mg",
+  "dosageInstruction" : [{
+    "timing" : {
+      "repeat" : {
+        "boundsDuration" : {
+          "value" : 2,
+          "unit" : "semaines",
           "system" : "http://unitsofmeasure.org",
-          "code" : "mg"
+          "code" : "wk"
         },
-        "denominator" : {
-          "value" : 24,
-          "unit" : "h",
-          "system" : "http://unitsofmeasure.org",
-          "code" : "h"
-        }
+        "frequency" : 1,
+        "period" : 6,
+        "periodUnit" : "h"
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "20035000",
+        "display" : "Voie intramusculaire"
+      }],
+      "text" : "Voie intramusculaire"
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "Ampoule",
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "15002000"
+      }
+    }],
+    "maxDosePerPeriod" : {
+      "numerator" : {
+        "value" : 120,
+        "unit" : "mg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      },
+      "denominator" : {
+        "value" : 24,
+        "unit" : "h",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "h"
       }
     }
-  ]
+  }]
 }
 
 ```

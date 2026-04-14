@@ -26,23 +26,21 @@
   "id" : "InLine-patient-group-01",
   "type" : "person",
   "actual" : true,
-  "member" : [
-    {
-      "entity" : {
-        "reference" : "Patient/14602"
-      }
-    },
-    {
-      "entity" : {
-        "reference" : "Patient/14603"
-      }
-    },
-    {
-      "entity" : {
-        "reference" : "Patient/14604"
-      }
+  "member" : [{
+    "entity" : {
+      "reference" : "Patient/14602"
     }
-  ]
+  },
+  {
+    "entity" : {
+      "reference" : "Patient/14603"
+    }
+  },
+  {
+    "entity" : {
+      "reference" : "Patient/14604"
+    }
+  }]
 }
 
 ```

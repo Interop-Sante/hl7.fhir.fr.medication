@@ -77,13 +77,19 @@ L’intervention pharmaceutique dans le contexte hospitalier est outillé par un
 
 ### Modélisation du résultat de l’analyse pharmaceutique
 
-#### Modélisation de la validation pharmaceutique
+Pour faciliter la compréhension par les professionnels de santé, des **modèles métier** ont été élaborés pour décrire les données qui constituent le résultat d’une analyse pharmaceutique.
 
-/!\ A rédiger => Manuel
+Ces modèles utilisent le formalisme des **“modèles logiques”** d’HL7, qui permettent de représenter les concepts métier de façon indépendante des contraintes techniques de FHIR. Contrairement aux profils FHIR techniques destinés aux développeurs, ces modèles logiques offrent une vision métier claire et accessible, facilitant le dialogue entre professionnels de santé, éditeurs de logiciels et experts FHIR.
 
-#### Modélisation de l’intervention pharmaceutique
+**Avantages pour les professionnels de santé :**
 
-/!\ A rédiger => Manuel
+* Vue d’ensemble complète des informations du résultat d’une analyse pharmaceutique
+* Langage commun entre les professionnels réalisant les analyses pharmaceutiques et les équipes informatiques
+* Référentiel métier pour valider que tous les besoins sont bien couverts
+
+**Modèles disponibles :**
+
+* [Modélisation du résultat d’une analyse pharmaceutique](StructureDefinition-fr-analyse-pharmaceutique-logical.md)
 
 ### Sommaire de la spécification technique
 

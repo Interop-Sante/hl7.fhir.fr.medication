@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-analysis-result-code | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrPharmaceuticalAnalysisResultCode |
+| Draft as of 2026-04-14 | *Computable Name*:FrPharmaceuticalAnalysisResultCode |
 
  
 Le système de codage pour le typage du résultat d’analyse pharmaceutique. 
@@ -27,9 +27,7 @@ Le système de codage pour le typage du résultat d’analyse pharmaceutique.
   "resourceType" : "CodeSystem",
   "id" : "fr-pharmaceutical-analysis-result-code",
   "meta" : {
-    "profile" : [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
   },
   "url" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-analysis-result-code",
   "version" : "0.1.0",
@@ -37,43 +35,33 @@ Le système de codage pour le typage du résultat d’analyse pharmaceutique.
   "title" : "code system d'Interop'Santé - Codes de résultat d'analyse pharmaceutique",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le système de codage pour le typage du résultat d'analyse pharmaceutique.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "content" : "complete",
   "count" : 2,
-  "concept" : [
-    {
-      "code" : "VALIDATION",
-      "display" : "Validation pharmaceutique"
-    },
-    {
-      "code" : "INTERVENTION",
-      "display" : "Intervention pharmaceutique"
-    }
-  ]
+  "concept" : [{
+    "code" : "VALIDATION",
+    "display" : "Validation pharmaceutique"
+  },
+  {
+    "code" : "INTERVENTION",
+    "display" : "Intervention pharmaceutique"
+  }]
 }
 
 ```

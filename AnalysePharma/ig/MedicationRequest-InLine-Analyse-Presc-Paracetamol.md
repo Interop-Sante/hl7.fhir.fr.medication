@@ -41,20 +41,16 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "resourceType" : "MedicationRequest",
   "id" : "InLine-Analyse-Presc-Paracetamol",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
   },
   "status" : "active",
   "intent" : "order",
   "medicationCodeableConcept" : {
-    "coding" : [
-      {
-        "system" : "http://BogusSystemMedicabase.com",
-        "code" : "MV00000557",
-        "display" : "PARACETAMOL 500 mg gélule"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://BogusSystemMedicabase.com",
+      "code" : "MV00000557",
+      "display" : "PARACETAMOL 500 mg gélule"
+    }]
   },
   "subject" : {
     "reference" : "Patient/14602"
@@ -66,39 +62,33 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "groupIdentifier" : {
     "value" : "Presc-3567"
   },
-  "dosageInstruction" : [
-    {
-      "sequence" : 1,
-      "timing" : {
-        "repeat" : {
-          "boundsPeriod" : {
-            "start" : "2021-07-13T08:48:00Z",
-            "end" : "2021-07-18T08:47:59Z"
-          },
-          "timeOfDay" : ["07:00:00", "12:00:00", "18:00:00"]
-        }
-      },
-      "route" : {
-        "coding" : [
-          {
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "20053000",
-            "display" : "Voie orale"
-          }
-        ]
-      },
-      "doseAndRate" : [
-        {
-          "doseQuantity" : {
-            "value" : 1,
-            "unit" : "g",
-            "system" : "http://unitsofmeasure.org",
-            "code" : "g"
-          }
-        }
-      ]
-    }
-  ]
+  "dosageInstruction" : [{
+    "sequence" : 1,
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2021-07-13T08:48:00Z",
+          "end" : "2021-07-18T08:47:59Z"
+        },
+        "timeOfDay" : ["07:00:00", "12:00:00", "18:00:00"]
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "20053000",
+        "display" : "Voie orale"
+      }]
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "g",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "g"
+      }
+    }]
+  }]
 }
 
 ```

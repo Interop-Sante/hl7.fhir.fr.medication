@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/FrRangeMedication | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrRangeMedication |
+| Draft as of 2026-04-14 | *Computable Name*:FrRangeMedication |
 
  
 Range with low and high unit UCUM or EDQM codes if code is used 
@@ -41,83 +41,63 @@ Other representations of profile: [CSV](StructureDefinition-FrRangeMedication.cs
   "name" : "FrRangeMedication",
   "title" : "Range with UCUM or EDQM codes if code is used",
   "status" : "draft",
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Range with low and high unit UCUM or EDQM codes if code is used",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
   "type" : "Range",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Range",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Range",
-        "path" : "Range",
-        "short" : "Set of values bounded by precise low and high fixed quantity (no comparator)",
-        "definition" : "A set of ordered Quantities defined by a precise low and high limit defined by a fixed quantity (no comparator)",
-        "comment" : "The stated low and high value are assumed to have arbitrarily high precision when it comes to determining which values are in the range. I.e. 1.99 is not in the range 2 -> 3. Low and high limit are precisely defined, no element 'comparator' in the simpleQuantity defining each bound. The limits are defined by a fixed quantity (no comparator)."
-      },
-      {
-        "id" : "Range.low",
-        "path" : "Range.low",
-        "type" : [
-          {
-            "code" : "Quantity",
-            "profile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "Range.high",
-        "path" : "Range.high",
-        "type" : [
-          {
-            "code" : "Quantity",
-            "profile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"
-            ]
-          }
-        ]
-      }
-    ]
+    "element" : [{
+      "id" : "Range",
+      "path" : "Range",
+      "short" : "Set of values bounded by precise low and high fixed quantity (no comparator)",
+      "definition" : "A set of ordered Quantities defined by a precise low and high limit defined by a fixed quantity (no comparator)",
+      "comment" : "The stated low and high value are assumed to have arbitrarily high precision when it comes to determining which values are in the range. I.e. 1.99 is not in the range 2 -> 3. Low and high limit are precisely defined, no element 'comparator' in the simpleQuantity defining each bound. The limits are defined by a fixed quantity (no comparator)."
+    },
+    {
+      "id" : "Range.low",
+      "path" : "Range.low",
+      "type" : [{
+        "code" : "Quantity",
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"]
+      }]
+    },
+    {
+      "id" : "Range.high",
+      "path" : "Range.high",
+      "type" : [{
+        "code" : "Quantity",
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"]
+      }]
+    }]
   }
 }
 

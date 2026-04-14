@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrSimpleQuantityMedication |
+| Draft as of 2026-04-14 | *Computable Name*:FrSimpleQuantityMedication |
 
  
 simple quantity datatype requiring a UCUM or EDQM code or no code (only unti) 
@@ -41,83 +41,69 @@ Other representations of profile: [CSV](StructureDefinition-FrSimpleQuantityMedi
   "name" : "FrSimpleQuantityMedication",
   "title" : "SimpleQuantity with UCUM or EDQM codes or code not used",
   "status" : "draft",
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "simple quantity datatype requiring a UCUM or EDQM code or no code (only unti)",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
   "type" : "Quantity",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/SimpleQuantity",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
+    "element" : [{
+      "id" : "Quantity",
+      "path" : "Quantity",
+      "short" : "A fixed quantity (no comparator) with UCUM or EDQM code or no code",
+      "definition" : "The comparator is not used on a SimpleQuantity. The code SHALL be a UCUM or EDQM code if used.",
+      "comment" : "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use explicitely excludes the use of the simpleQuantity \"comparator\" element.",
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "Quantity"
+      },
       {
-        "id" : "Quantity",
-        "path" : "Quantity",
-        "short" : "A fixed quantity (no comparator) with UCUM or EDQM code or no code",
-        "definition" : "The comparator is not used on a SimpleQuantity. The code SHALL be a UCUM or EDQM code if used.",
-        "comment" : "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use explicitely excludes the use of the simpleQuantity \"comparator\" element.",
-        "constraint" : [
-          {
-            "key" : "ele-1",
-            "severity" : "error",
-            "human" : "All FHIR elements must have a @value or children",
-            "expression" : "hasValue() or (children().count() > id.count())",
-            "xpath" : "@value|f:*|h:div",
-            "source" : "Quantity"
-          },
-          {
-            "key" : "fr-med-smpl-quant-1",
-            "severity" : "error",
-            "human" : "system SHALL be UCUM or EDQM if code is used",
-            "expression" : "code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))",
-            "source" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"
-          },
-          {
-            "key" : "fr-med-smpl-quant-2",
-            "severity" : "error",
-            "human" : "system SHALL not be used if code is not used",
-            "expression" : "code.empty() implies system.empty()",
-            "source" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"
-          }
-        ]
-      }
-    ]
+        "key" : "fr-med-smpl-quant-1",
+        "severity" : "error",
+        "human" : "system SHALL be UCUM or EDQM if code is used",
+        "expression" : "code.exists() implies (system.exists() and (system = 'http://standardterms.edqm.eu' or system = 'http://unitsofmeasure.org'))",
+        "source" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"
+      },
+      {
+        "key" : "fr-med-smpl-quant-2",
+        "severity" : "error",
+        "human" : "system SHALL not be used if code is not used",
+        "expression" : "code.empty() implies system.empty()",
+        "source" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication"
+      }]
+    }]
   }
 }
 

@@ -1,0 +1,77 @@
+{
+  "resourceType" : "Task",
+  "id" : "Analyse-Intervention-Type6-CALCIDOSE",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Task Analyse-Intervention-Type6-CALCIDOSE</b></p><a name=\"Analyse-Intervention-Type6-CALCIDOSE\"> </a><a name=\"hcAnalyse-Intervention-Type6-CALCIDOSE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html\">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260320161000</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-20 17:24:00+0100</p><p><b>performerType</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}\">Pharmacien</span></p><p><b>owner</b>: <a href=\"Practitioner/smart-Practitioner-27865023\">Practitioner/smart-Practitioner-27865023</a></p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes :\">ligne de prescription analysée</span></p><p><b>value</b>: <a href=\"MedicationRequest-InLine-Analyse-Presc-LEVOTHYROX.html\">MedicationRequest : extension = 1 comprimé une heure avant le petit déjeuner; status = active; intent = order; priority = routine; medication[x] = LEVOTHYROX 38µG CPR; authoredOn = 2026-03-20 16:10:00+0100; groupIdentifier = Presc-20260320161000; note = Prescription textuelle: LEVOTHYROX 38µG: 1 comprimé une heure avant le petit déjeuner</a></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes :\">ligne de prescription analysée</span></p><p><b>value</b>: <a href=\"MedicationRequest-InLine-Analyse-Presc-CALCIDOSE.html\">MedicationRequest : extension = 1 sachet au petit déjeuner; status = active; intent = order; priority = routine; medication[x] = CALCIDOSE D3 500MG/800U SACH; authoredOn = 2026-03-20 16:10:00+0100; groupIdentifier = Presc-20260320161000; note = Prescription textuelle: CALCIDOSE D3 500MG/800UI: 1 sachet au petit déjeuner</a></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">commentaire</span></p><p><b>value</b>: Interaction avec le Lévothyrox. Pouvez-vous prescrire le Calcidose vit D3 à distance de la prise de Lévothyrox, soit le midi ou le soir?</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type d'intervention</span></p><p><b>value</b>: <span title=\"Codes :\">Optimisation modalités d'administration</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type de problème</span></p><p><b>value</b>: <span title=\"Codes :\">Interaction - Précaution d'emploi</span></p></blockquote></div>"
+  },
+  "groupIdentifier" : {
+    "value" : "Presc-20260320161000"
+  },
+  "status" : "completed",
+  "intent" : "proposal",
+  "authoredOn" : "2026-03-20T17:24:00+01:00",
+  "performerType" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "code" : "21",
+      "display" : "Pharmacien"
+    }]
+  }],
+  "owner" : {
+    "reference" : "Practitioner/smart-Practitioner-27865023"
+  },
+  "input" : [{
+    "type" : {
+      "text" : "ligne de prescription analysée"
+    },
+    "valueReference" : {
+      "reference" : "MedicationRequest/InLine-Analyse-Presc-LEVOTHYROX"
+    }
+  },
+  {
+    "type" : {
+      "text" : "ligne de prescription analysée"
+    },
+    "valueReference" : {
+      "reference" : "MedicationRequest/InLine-Analyse-Presc-CALCIDOSE"
+    }
+  }],
+  "output" : [{
+    "type" : {
+      "text" : "résultat de l'analyse"
+    },
+    "valueCode" : "INTERVENTION"
+  },
+  {
+    "type" : {
+      "text" : "commentaire"
+    },
+    "valueString" : "Interaction avec le Lévothyrox. Pouvez-vous prescrire le Calcidose vit D3 à distance de la prise de Lévothyrox, soit le midi ou le soir?"
+  },
+  {
+    "type" : {
+      "text" : "type d'intervention"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "code" : "6",
+        "display" : "Optimisation modalités d'administration"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "text" : "type de problème"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "code" : "6.2",
+        "display" : "Interaction - Précaution d'emploi"
+      }]
+    }
+  }]
+}

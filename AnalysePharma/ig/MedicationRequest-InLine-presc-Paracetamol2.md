@@ -39,9 +39,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "resourceType" : "MedicationRequest",
   "id" : "InLine-presc-Paracetamol2",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
   },
   "status" : "active",
   "intent" : "order",
@@ -55,49 +53,41 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "requester" : {
     "reference" : "Practitioner/smart-Practitioner-71482713"
   },
-  "dosageInstruction" : [
-    {
-      "timing" : {
-        "repeat" : {
-          "boundsPeriod" : {
-            "start" : "2021-07-14T09:07:00Z",
-            "end" : "2021-07-17T09:06:59Z"
-          },
-          "timeOfDay" : ["07:00:00", "18:00:00"]
-        }
+  "dosageInstruction" : [{
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2021-07-14T09:07:00Z",
+          "end" : "2021-07-17T09:06:59Z"
+        },
+        "timeOfDay" : ["07:00:00", "18:00:00"]
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "20053000",
+        "display" : "Voie orale"
+      }],
+      "text" : "Voie orale"
+    },
+    "doseAndRate" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+          "code" : "ordered",
+          "display" : "Ordered"
+        }],
+        "text" : "Ordered"
       },
-      "route" : {
-        "coding" : [
-          {
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "20053000",
-            "display" : "Voie orale"
-          }
-        ],
-        "text" : "Voie orale"
-      },
-      "doseAndRate" : [
-        {
-          "type" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                "code" : "ordered",
-                "display" : "Ordered"
-              }
-            ],
-            "text" : "Ordered"
-          },
-          "doseQuantity" : {
-            "value" : 500,
-            "unit" : "mg",
-            "system" : "http://unitsofmeasure.org",
-            "code" : "mg"
-          }
-        }
-      ]
-    }
-  ]
+      "doseQuantity" : {
+        "value" : 500,
+        "unit" : "mg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      }
+    }]
+  }]
 }
 
 ```

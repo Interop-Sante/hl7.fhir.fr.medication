@@ -63,7 +63,7 @@
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  FRANCE
 
 
             </span>
@@ -196,7 +196,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l350">​</a>
+      <li><a name="l348">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -210,6 +210,47 @@
       </li>
       <li>
         <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformation-PN13-vers-FHIR-AnalysePharma.html">Transformation PN13 vers FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="PN13-exemples-AnalysePharma-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-pour-exemple-analyse-pharma.html">Prescription initale PN13 pour exemples de resultats d'analyse pharmaceutique</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-sans-commentaire.html">Validation pharmaceutique PN13 sans commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-commentaire.html">Validation pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-suggestion.html">Validation pharmaceutique PN13 avec suggestion</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-commentaire.html">Intervention pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-modification.html">Intervention pharmaceutique PN13 avec proposition de modification</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-substitution.html">Intervention pharmaceutique PN13 avec proposition de substitution</a>
       </li>
     </ul>
   </li>
@@ -299,7 +340,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#validation-pharmaceutique" id="markdown-toc-validation-pharmaceutique">Validation pharmaceutique</a></li>
       <li><a href="#intervention-pharmaceutique" id="markdown-toc-intervention-pharmaceutique">Intervention pharmaceutique</a></li>
       <li><a href="#propositions-suite-à-une-analyse-pharmaceutique" id="markdown-toc-propositions-suite-à-une-analyse-pharmaceutique">Propositions suite à une analyse pharmaceutique</a></li>
-      <li><a href="#prise-en-compte-dune-intervention-pharmaceutique" id="markdown-toc-prise-en-compte-dune-intervention-pharmaceutique">Prise en compte d’une intervention pharmaceutique</a></li>
+      <li><a href="#prise-en-compte-du-résultat-dune-analyse-pharmaceutique" id="markdown-toc-prise-en-compte-du-résultat-dune-analyse-pharmaceutique">Prise en compte du résultat d’une analyse pharmaceutique</a></li>
     </ul>
   </li>
 </ul>
@@ -315,7 +356,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="vue-densemble">Vue d’ensemble</h2>
 
-<p>Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmaceutique ou une intervention pharmaceutique, est toujours représenté par une ressource <code class="language-plaintext highlighter-rouge">Task</code> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrPharmaceuticalAnalysisResultProfile</a> avec les attributs suivants:</p>
+<p>Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmaceutique ou une intervention pharmaceutique, est toujours représenté par une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrPharmaceuticalAnalysisResultProfile</a> avec les attributs suivants:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Task.groupIdentifier</code>renseigné avec le <code class="language-plaintext highlighter-rouge">groupIdentifier</code>de la/des ressource(s) <code class="language-plaintext highlighter-rouge">MedicationRequest</code> représentant la/les ligne(s) de prescription analysée(s)</li>
@@ -330,11 +371,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><em>Note 1:</em> L’analyse pharmaceutique est réalisée sur une prescription représentée par le <code class="language-plaintext highlighter-rouge">groupIdentifier</code>. Cependant, si nécessaire, elle peut s’appuyer sur des lignes de prescription provenant d’autres prescrptions. Les cas échéant, ces lignes sont listées dans <code class="language-plaintext highlighter-rouge">Task.input.valueReference</code>.</p>
 
-<p><em>Note 2:</em> Certaines implémentations rendent nécessaire la réalisation d’une analyse pharmaceutique avant de permettre la dispensation. Cet usage est hors périmètre de cet IG. Il peut cependant être outiller en utilisant une ressource <code class="language-plaintext highlighter-rouge">Task</code> suivant le profil <em>FrPharmaceuticalAnalysisResultProfile</em> avec <code class="language-plaintext highlighter-rouge">Task.status</code> à <code class="language-plaintext highlighter-rouge">requested</code> pour représenter la demande d’analyse pharmaceutique. Afin de permettre cet usage, le profil <em>FrPharmaceuticalAnalysisResultProfile</em> ne fixe pas <code class="language-plaintext highlighter-rouge">Task.status</code>à <code class="language-plaintext highlighter-rouge">completed</code>.</p>
+<p><em>Note 2:</em> Certaines implémentations rendent nécessaire la réalisation d’une analyse pharmaceutique avant de permettre la dispensation. Cet usage est hors périmètre de cet IG. Il peut cependant être outiller en utilisant une ressource <em>Task</em> suivant le profil <em>FrPharmaceuticalAnalysisResultProfile</em> avec <code class="language-plaintext highlighter-rouge">Task.status</code> à <code class="language-plaintext highlighter-rouge">requested</code> pour représenter la demande d’analyse pharmaceutique. Afin de permettre cet usage, le profil <em>FrPharmaceuticalAnalysisResultProfile</em> ne fixe pas <code class="language-plaintext highlighter-rouge">Task.status</code>à <code class="language-plaintext highlighter-rouge">completed</code>.</p>
 
 <h3 id="validation-pharmaceutique">Validation pharmaceutique</h3>
 
-<p>En plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section <strong>Vue d’ensemble</strong>, une ressource <code class="language-plaintext highlighter-rouge">Task</code> représentant une validation pharmaceutique peut inclure:</p>
+<p>En plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section <strong>Vue d’ensemble</strong>, une ressource <em>Task</em> représentant une validation pharmaceutique peut inclure:</p>
 
 <ul>
   <li>une éventuelle instance de <code class="language-plaintext highlighter-rouge">Task.output.valueString</code>pour un éventuel commentaire de validation</li>
@@ -343,7 +384,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="intervention-pharmaceutique">Intervention pharmaceutique</h3>
 
-<p>En plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section <strong>Vue d’ensemble</strong>, une ressource <code class="language-plaintext highlighter-rouge">Task</code> représentant une intervention pharmaceutique inclut:</p>
+<p>Une ressource <em>Task</em> représentant une intervention pharmaceutique inclut ,en plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section <strong>Vue d’ensemble</strong>:</p>
 
 <ul>
   <li>une instance de <code class="language-plaintext highlighter-rouge">Task.output.codeableConcept</code> renseignée avec le code représentant le type d’intervention pharmaceutique</li>
@@ -354,13 +395,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="propositions-suite-à-une-analyse-pharmaceutique">Propositions suite à une analyse pharmaceutique</h3>
 
-<p>Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource <code class="language-plaintext highlighter-rouge">MedicationRequest</code>suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.html">FrInpatientPharmaceuticalInterventionSuggestionProfile</a> qui hérite du profil <em>FRMedicationRequest</em> avec les attributs suivants:</p>
+<p>Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource <em>MedicationRequest</em>suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.html">FrInpatientPharmaceuticalInterventionSuggestionProfile</a> qui hérite du profil <em>FRMedicationRequest</em> avec les attributs suivants:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">MedicationRequest.status</code> = <code class="language-plaintext highlighter-rouge">active</code></li>
   <li><code class="language-plaintext highlighter-rouge">MedicationRequest.intent</code> = <code class="language-plaintext highlighter-rouge">proposal</code></li>
   <li><code class="language-plaintext highlighter-rouge">MedicationRequest.requester</code> renseigné avec la référence de l’utilisateur ayant réalisé l’intervention pharmaceutique (référence à une ressource FHIR ou référence par identifier)</li>
-  <li>Eventuellement <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> renseigné avec la/les référence(s) de la/des ligne(s) de prescription que la suggestion propose de modifier/supprimer</li>
+  <li><code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code>renseigné avec la référence de la ressource <em>Task</em> représentant le résultat de l’analyse pharmaceutique</li>
+  <li>Eventuellement un ou plusieurs autre(s) <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> renseigné(s) avec la/les référence(s) de la/des ligne(s) de prescription que la suggestion propose de modifier/supprimer</li>
   <li><code class="language-plaintext highlighter-rouge">MedicationRequest.groupIdentifier</code>renseigné avec le même <code class="language-plaintext highlighter-rouge">groupIdentifier</code>que la/les ligne(s) de prescription sur laquel/lesquelles porte l’intervention pharmaceutique</li>
   <li>Tous les attributs nécessaires. En particulier, si la proposition est une modification/suppression, reprise de tous les attributs de la ligne de prescription référencée même s’ils ne sont pas modifiés.</li>
 </ul>
@@ -373,7 +415,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="cas-particulier-de-la-proposition-dajout-dune-ligne-de-prescription">Cas particulier de la proposition d’ajout d’une ligne de prescription</h4>
 
-<p>Lorsque l’intervention pharmaceutique consiste en une suggestion d’ajout de ligne de prescritpion sans modification d’autre ligne, l’attribut <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code>n’est pas utilisé.</p>
+<p>Lorsque l’intervention pharmaceutique consiste en une suggestion d’ajout de ligne de prescritpion sans modification d’autre ligne, l’attribut <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> n’est utilisé que pour référencer la ressource <em>Task</em> représentant le résultat de l’analyse pharmaceutique, il n’y a pas de <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> référençant de ligne de prescription.</p>
 
 <h4 id="cas-particulier-de-la-proposition-de-remplacement">Cas particulier de la proposition de remplacement</h4>
 
@@ -382,20 +424,62 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>chaque ligne remplacée est fournie sous forme de <code class="language-plaintext highlighter-rouge">MedicationRequest</code> avec :
     <ul>
       <li><code class="language-plaintext highlighter-rouge">MedicationRequest.doNotPerform</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code></li>
-      <li><code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> avec la référence de la <code class="language-plaintext highlighter-rouge">MedicationRequest</code> initiale</li>
-      <li>les autres attributs de la <code class="language-plaintext highlighter-rouge">MedicationRequest</code> initiale</li>
+      <li><code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code> avec la référence de la <code class="language-plaintext highlighter-rouge">MedicationRequest</code> initiale et la référence à la ressource <em>Task</em> représentant le resultat de l’analyse pharmaceutique</li>
+      <li>les autres attributs de la ressource <em>MedicationRequest</em> initiale</li>
     </ul>
   </li>
-  <li>chaque ligne remplaçante est fournie sous forme de <code class="language-plaintext highlighter-rouge">MedicationRequest</code> avec:
+  <li>chaque ligne remplaçante est fournie sous forme de ressource <em>MedicationRequest</em> avec:
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code>avec la/les référence(s) de la / des <code class="language-plaintext highlighter-rouge">MedicationRequest</code>initiale(s)</li>
+      <li><code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code>avec la/les référence(s) de la / des ressource(s) <em>MedicationRequest</em> initiale(s) et la référence à la ressource <em>Task</em> représentant le resultat de l’analyse pharmaceutique</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="prise-en-compte-dune-intervention-pharmaceutique">Prise en compte d’une intervention pharmaceutique</h3>
+<h3 id="prise-en-compte-du-résultat-dune-analyse-pharmaceutique">Prise en compte du résultat d’une analyse pharmaceutique</h3>
 
-<p>/!\ A décider si on va jusque là /!\</p>
+<p>La prise en compte du résultat d’une analyse pharmaceutique est codée via l’attribut <code class="language-plaintext highlighter-rouge">Task.businessStatus</code>.
+Elle repose sur le jeu de valeurs <a href="ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.html">FrPharmaceuticalInterventionDevenirCodeValueSet</a> qui reprend les valeurs du formulaire d’intervention pharmaceutique de la SFPC en ajoutant une valeur pour “Acceptée avec modification de proposition” dans le cas où la/les proposition(s) associée(s) est/sont modifiée(s) lors de la prise en compte.</p>
+
+<p>Le système utilisé par le prescripteur pour traiter le résultat d’une analyse pharmaceutique met à jour l’attribut <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> de la ressource <em>Task</em> correspondante selon les cas présentés dans la section suivante.</p>
+
+<h4 id="valeur-de-taskbusinessstatus-en-fonction-des-cas">Valeur de <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> en fonction des cas</h4>
+
+<ul>
+  <li>Validation pharmaceutique sans commentaire =&gt; <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> n’est pas utilisé</li>
+  <li>Validation pharmaceutique avec commentaire =&gt; En fonction du choix d’implémentation
+    <ul>
+      <li>de manière générale, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> n’est pas utilisée</li>
+      <li>si l’implémentation veut permettre le suivie de la consultation des commentaires de valitation pharmaceutique par le prescripteur, possibilité d’utiliser <code class="language-plaintext highlighter-rouge">Task.businessStatus</code>avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée” pour indiquer que le commentaire a été consulté</li>
+    </ul>
+  </li>
+  <li>Validation pharmaceutique avec proposition =&gt; En fonction de l’acceptation de la proposition
+    <ul>
+      <li>si la proposition n’est pas acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">2</code> “Non acceptée”</li>
+      <li>si la proposition est acceptée sans modification, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
+      <li>si la proposition est modifiée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">4</code> “Acceptée avec modification de proposition(s)”</li>
+    </ul>
+  </li>
+  <li>Intervention pharmaceutique sans proposition =&gt; En fonction de l’acceptation de l’intervention
+    <ul>
+      <li>si l’intervention n’est pas acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">2</code> “Non acceptée”</li>
+      <li>si l’intervention est acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
+    </ul>
+  </li>
+  <li>Intervention pharmaceutique avec proposition =&gt; En fonction de l’acceptation de l’intervention
+    <ul>
+      <li>si l’intervention n’est pas acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">2</code> “Non acceptée”</li>
+      <li>si l’intervention est acceptée sans modification de proposition(s), <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
+      <li>si l’intervention est acceptée avec modification de proposition(s), <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">4</code> “Acceptée avec modification de proposition(s)”</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Que les propositions soient acceptées avec ou sans modification, elles font l’objet de nouvelles ressources <code class="language-plaintext highlighter-rouge">MedicationRequest</code> avec:</p>
+<ul>
+  <li>le même <code class="language-plaintext highlighter-rouge">MedicationRequest.groupIdentifier</code>que la prescription initiale</li>
+  <li>la référence à la ressource <em>Task</em> représentant le resultat de l’analyse pharmaceutique dans <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code></li>
+</ul>
+
 
 
 
@@ -437,7 +521,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 10:22+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 15:08+0000">2026-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

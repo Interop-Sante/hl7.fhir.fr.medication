@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-note-scope-codes | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrNoteScopeCodes |
+| Draft as of 2026-04-14 | *Computable Name*:FrNoteScopeCodes |
 
  
 Le système de codage pour la qualification du périmètre des notes en FHIR. 
@@ -27,9 +27,7 @@ Le système de codage pour la qualification du périmètre des notes en FHIR.
   "resourceType" : "CodeSystem",
   "id" : "fr-note-scope-codes",
   "meta" : {
-    "profile" : [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
   },
   "url" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-note-scope-codes",
   "version" : "0.1.0",
@@ -37,71 +35,61 @@ Le système de codage pour la qualification du périmètre des notes en FHIR.
   "title" : "code system Interop'Santé - Codes pour le périmètre des notes",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le système de codage pour la qualification du périmètre des notes en FHIR.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "content" : "complete",
   "count" : 9,
-  "concept" : [
-    {
-      "code" : "PRESCCOM",
-      "display" : "Commentaire au niveau de la prescription"
-    },
-    {
-      "code" : "LIPRESCTXT",
-      "display" : "Formulation textuelle d'une ligne de prescription par le prescripteur (vs élément .text généré automatiquement)"
-    },
-    {
-      "code" : "LIPRESCIND",
-      "display" : "Indication textuelle au niveau de la ligne de prescription"
-    },
-    {
-      "code" : "LIPRESCCOMM",
-      "display" : "Commentaire au niveau de la ligne de prescription"
-    },
-    {
-      "code" : "LIPRESCRENSCOMP",
-      "display" : "Renseignement complémentaire textuel"
-    },
-    {
-      "code" : "MEDIND",
-      "display" : "Indication au niveau du médicament prescrit"
-    },
-    {
-      "code" : "MEDCOM",
-      "display" : "Commentaire au niveau du médicament prescrit"
-    },
-    {
-      "code" : "LIPRESCCONDAPPL",
-      "display" : "Conditions d’application de la ligne de prescription"
-    },
-    {
-      "code" : "LIPRESCLIBMED",
-      "display" : "Libellé textuel du médicament prescrit"
-    }
-  ]
+  "concept" : [{
+    "code" : "PRESCCOM",
+    "display" : "Commentaire au niveau de la prescription"
+  },
+  {
+    "code" : "LIPRESCTXT",
+    "display" : "Formulation textuelle d'une ligne de prescription par le prescripteur (vs élément .text généré automatiquement)"
+  },
+  {
+    "code" : "LIPRESCIND",
+    "display" : "Indication textuelle au niveau de la ligne de prescription"
+  },
+  {
+    "code" : "LIPRESCCOMM",
+    "display" : "Commentaire au niveau de la ligne de prescription"
+  },
+  {
+    "code" : "LIPRESCRENSCOMP",
+    "display" : "Renseignement complémentaire textuel"
+  },
+  {
+    "code" : "MEDIND",
+    "display" : "Indication au niveau du médicament prescrit"
+  },
+  {
+    "code" : "MEDCOM",
+    "display" : "Commentaire au niveau du médicament prescrit"
+  },
+  {
+    "code" : "LIPRESCCONDAPPL",
+    "display" : "Conditions d’application de la ligne de prescription"
+  },
+  {
+    "code" : "LIPRESCLIBMED",
+    "display" : "Libellé textuel du médicament prescrit"
+  }]
 }
 
 ```

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-uf-role-codes | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FrUFRoleCodes |
+| Draft as of 2026-04-14 | *Computable Name*:FrUFRoleCodes |
 
  
 Le système de codage pour les types de rôle qu’une UF peut avoir par rapport à un séjour patient. 
@@ -27,9 +27,7 @@ Le système de codage pour les types de rôle qu’une UF peut avoir par rapport
   "resourceType" : "CodeSystem",
   "id" : "fr-uf-role-codes",
   "meta" : {
-    "profile" : [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
   },
   "url" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-uf-role-codes",
   "version" : "0.1.0",
@@ -37,47 +35,37 @@ Le système de codage pour les types de rôle qu’une UF peut avoir par rapport
   "title" : "code system Interop'Santé - Codes pour typer le rôle des UF par rapport à un séjour patient",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le système de codage pour les types de rôle qu'une UF peut avoir par rapport à un séjour patient.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "content" : "complete",
   "count" : 3,
-  "concept" : [
-    {
-      "code" : "UFSOIN",
-      "display" : "UF de responsabilité des soins"
-    },
-    {
-      "code" : "UFMED",
-      "display" : "UF de responsabilité médicale"
-    },
-    {
-      "code" : "UFHEB",
-      "display" : "UF d'hébergement"
-    }
-  ]
+  "concept" : [{
+    "code" : "UFSOIN",
+    "display" : "UF de responsabilité des soins"
+  },
+  {
+    "code" : "UFMED",
+    "display" : "UF de responsabilité médicale"
+  },
+  {
+    "code" : "UFHEB",
+    "display" : "UF d'hébergement"
+  }]
 }
 
 ```

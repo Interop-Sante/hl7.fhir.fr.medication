@@ -41,9 +41,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "resourceType" : "MedicationRequest",
   "id" : "InLine-presc-Paracetamol1",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
   },
   "status" : "active",
   "intent" : "order",
@@ -60,49 +58,41 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
   "groupIdentifier" : {
     "value" : "Presc-24625"
   },
-  "dosageInstruction" : [
-    {
-      "sequence" : 1,
-      "timing" : {
-        "repeat" : {
-          "boundsPeriod" : {
-            "start" : "2021-07-13T08:48:00Z",
-            "end" : "2021-07-18T08:47:59Z"
-          },
-          "timeOfDay" : ["07:00:00", "12:00:00", "18:00:00"]
-        }
+  "dosageInstruction" : [{
+    "sequence" : 1,
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2021-07-13T08:48:00Z",
+          "end" : "2021-07-18T08:47:59Z"
+        },
+        "timeOfDay" : ["07:00:00", "12:00:00", "18:00:00"]
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "20053000",
+        "display" : "Voie orale"
+      }]
+    },
+    "doseAndRate" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+          "code" : "ordered",
+          "display" : "Ordered"
+        }],
+        "text" : "Ordered"
       },
-      "route" : {
-        "coding" : [
-          {
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "20053000",
-            "display" : "Voie orale"
-          }
-        ]
-      },
-      "doseAndRate" : [
-        {
-          "type" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                "code" : "ordered",
-                "display" : "Ordered"
-              }
-            ],
-            "text" : "Ordered"
-          },
-          "doseQuantity" : {
-            "value" : 1,
-            "unit" : "g",
-            "system" : "http://unitsofmeasure.org",
-            "code" : "g"
-          }
-        }
-      ]
-    }
-  ]
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "g",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "g"
+      }
+    }]
+  }]
 }
 
 ```

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-retroactive-reconciliation-composition | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FROnAdmissionRetroactiveReconciliationComposition |
+| Draft as of 2026-04-14 | *Computable Name*:FROnAdmissionRetroactiveReconciliationComposition |
 
  
 Profil de la ressource **Composition** de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d’admission. 
@@ -64,109 +64,91 @@ Other representations of profile: [CSV](StructureDefinition-fr-on-admission-retr
   "name" : "FROnAdmissionRetroactiveReconciliationComposition",
   "title" : "FR On Admission Retroactive Reconciliation Composition",
   "status" : "draft",
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "purpose" : "Ce profil est utilisé pour la *Composition* du document FHIR *Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission*\\.",
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "cda",
-      "uri" : "http://hl7.org/v3/cda",
-      "name" : "CDA (R2)"
-    },
-    {
-      "identity" : "fhirdocumentreference",
-      "uri" : "http://hl7.org/fhir/documentreference",
-      "name" : "FHIR DocumentReference"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "fhirdocumentreference",
+    "uri" : "http://hl7.org/fhir/documentreference",
+    "name" : "FHIR DocumentReference"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Composition",
   "baseDefinition" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-reconciliation-composition",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Composition",
-        "path" : "Composition",
-        "short" : "Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission"
-      },
-      {
-        "id" : "Composition.type",
-        "path" : "Composition.type",
-        "patternCodeableConcept" : {
-          "coding" : [
-            {
-              "system" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type",
-              "code" : "10000002",
-              "display" : "FCT rétroactive d'admission"
-            }
-          ]
-        }
-      },
-      {
-        "id" : "Composition.section:CurrentMedication",
-        "path" : "Composition.section",
-        "sliceName" : "CurrentMedication",
-        "short" : "Ordonnance Médicale d'admission (OMA)",
-        "definition" : "La liste des traitements médicamenteux prescrit à l'admission (Ordonnance Médicale d'admission - OMA), confrontée au Bilan Médicamenteux et qui l'objet de la conciliation des traitements.",
-        "requirements" : "Référencer l'Ordonnance Médicale d'Admission qui fait l'objet de cette conciliation des traitements."
-      },
-      {
-        "id" : "Composition.section:CurrentMedication.entry",
-        "path" : "Composition.section.entry",
-        "short" : "La composition de l'Ordonnance Médicale d'Admission (OMA) attachée",
-        "definition" : "La référence à la ressource *Composition* de l'Ordonnance Médicale d'Admission (OMA). Cette Ordonnance peut, formellement, être vide si le patient n'a aucun médicament prescrit à son admission.",
-        "comment" : "Une Ordonnance Médicale d'Admission (OMA), même vide si la patient n'a aucun médicament prescrit lors de son admission, doit être attachée à la FCT (Fiche de Concimaition des Traitements médicamenteux).",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-medication-composition"
-            ]
-          }
-        ]
+    "element" : [{
+      "id" : "Composition",
+      "path" : "Composition",
+      "short" : "Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission"
+    },
+    {
+      "id" : "Composition.type",
+      "path" : "Composition.type",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://hl7.fr/fhir/fr/medication/CodeSystem/fr-document-type",
+          "code" : "10000002",
+          "display" : "FCT rétroactive d'admission"
+        }]
       }
-    ]
+    },
+    {
+      "id" : "Composition.section:CurrentMedication",
+      "path" : "Composition.section",
+      "sliceName" : "CurrentMedication",
+      "short" : "Ordonnance Médicale d'admission (OMA)",
+      "definition" : "La liste des traitements médicamenteux prescrit à l'admission (Ordonnance Médicale d'admission - OMA), confrontée au Bilan Médicamenteux et qui l'objet de la conciliation des traitements.",
+      "requirements" : "Référencer l'Ordonnance Médicale d'Admission qui fait l'objet de cette conciliation des traitements."
+    },
+    {
+      "id" : "Composition.section:CurrentMedication.entry",
+      "path" : "Composition.section.entry",
+      "short" : "La composition de l'Ordonnance Médicale d'Admission (OMA) attachée",
+      "definition" : "La référence à la ressource *Composition* de l'Ordonnance Médicale d'Admission (OMA). Cette Ordonnance peut, formellement, être vide si le patient n'a aucun médicament prescrit à son admission.",
+      "comment" : "Une Ordonnance Médicale d'Admission (OMA), même vide si la patient n'a aucun médicament prescrit lors de son admission, doit être attachée à la FCT (Fiche de Concimaition des Traitements médicamenteux).",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-medication-composition"]
+      }]
+    }]
   }
 }
 

@@ -24,6 +24,21 @@ package IG #DDDDDD{
              Quantity => [None..None]
         } 
 
+        class FrAnalysePharmaceutiqueLogical{
+
+             fr-analyse-pharmaceutique-logical => [None..None]
+             fr-analyse-pharmaceutique-logical.date => [1..1]
+             fr-analyse-pharmaceutique-logical.auteur => [1..1]
+             fr-analyse-pharmaceutique-logical.lignePrescriptionAnalysee => [1..*]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse => [1..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.type => [1..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.commentaire => [0..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.proposition => [0..*]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.typeIntervention => [0..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.typeProbleme => [0..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.devenirIntervention => [0..1]
+        } 
+
         class FRCurrentMedicationComposition{
 
              Composition.implicitRules => [None..0]
@@ -91,6 +106,7 @@ package IG #DDDDDD{
         class FRInpatientPharmaceuticalAnalysisResultProfile{
 
              Task.groupIdentifier => [1..None]
+             Task.businessStatus => [None..None]
              Task.intent => [None..None]
              Task.authoredOn => [1..None]
              Task.performerType => [None..None]
@@ -114,6 +130,9 @@ package IG #DDDDDD{
              Task.output:suggestion => [0..*]
              Task.output:suggestion.type.text => [1..None]
              Task.output:suggestion.value[x] => [None..None]
+             Task.output:suggestionUpdated => [0..*]
+             Task.output:suggestionUpdated.type.text => [1..None]
+             Task.output:suggestionUpdated.value[x] => [None..None]
         } 
 
         class FRInpatientPharmaceuticalInterventionSuggestionProfile{
@@ -701,6 +720,10 @@ package IG #DDDDDD{
 
      FRCurrentMedicationComposition -[#black,dotted,thickness=2]-> FrCurrentMedicationDocumentType
 
+        class FrPharmaceuticalInterventionDevenirCodeValueSet  
+
+     FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalInterventionDevenirCodeValueSet
+
         class FrPharmaceuticalAnalysisPerformerTypeValueSet  
 
      FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalAnalysisPerformerTypeValueSet
@@ -835,6 +858,10 @@ package "Ressources de base" #palegreen {
  class "SimpleQuantity" as  class2c391528ab21e799798c2a3a4ed7eed2 
 
     class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityMedication
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FrAnalysePharmaceutiqueLogical
 
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 

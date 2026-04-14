@@ -63,7 +63,7 @@
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  FRANCE
 
 
             </span>
@@ -196,7 +196,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l350">​</a>
+      <li><a name="l348">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -210,6 +210,47 @@
       </li>
       <li>
         <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformation-PN13-vers-FHIR-AnalysePharma.html">Transformation PN13 vers FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="PN13-exemples-AnalysePharma-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-pour-exemple-analyse-pharma.html">Prescription initale PN13 pour exemples de resultats d'analyse pharmaceutique</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-sans-commentaire.html">Validation pharmaceutique PN13 sans commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-commentaire.html">Validation pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-suggestion.html">Validation pharmaceutique PN13 avec suggestion</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-commentaire.html">Intervention pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-modification.html">Intervention pharmaceutique PN13 avec proposition de modification</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-substitution.html">Intervention pharmaceutique PN13 avec proposition de substitution</a>
       </li>
     </ul>
   </li>
@@ -374,17 +415,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>indication spécifique de prise.
     <ul>
-      <li><a name="l942">​</a>ex: “administrer le contenu avec un peu de compote” <a href="Bundle-HAS-24-1-Topiramate.html">HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l’ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)</a></li>
+      <li><a name="l1016">​</a>ex: “administrer le contenu avec un peu de compote” <a href="Bundle-HAS-24-1-Topiramate.html">HAS - topiramate 15 mg gélule: 1 gélule par jour. Si difficulté à prendre la gélule, l’ouvrir et en administrer le contenu avec un peu de compote (id_poso=24)</a></li>
     </ul>
   </li>
   <li>moment de prise non codé dans le jeu de valeurs FHIR <a href="https://hl7.org/fhir/R4/valueset-event-timing.html">event-timing</a> associé à l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.timing.repeat.when</code> ni dans le jeu de valeurs complémentaire <a href="ValueSet-fr-additional-when-codes.html">fr-additional-when-codes</a> associé à l’extension <a href="StructureDefinition-fr-additional-when-values.html">fr-additional-when-values</a>
     <ul>
-      <li><a name="l965">​</a>ex: “à débuter 12 heures avant l’intervention chirurgicale” <a href="Bundle-HAS-28-Presc-LOVENOX">HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX&reg;), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l’intervention chirurgicale. à poursuivre pendant 10 jours après l’intervention. (id_poso=28)</a></li>
+      <li><a name="l1039">​</a>ex: “à débuter 12 heures avant l’intervention chirurgicale” <a href="Bundle-HAS-28-Presc-LOVENOX">HAS - enoxaparine sodique 4 000 UI (40 mg)/0,4 mL (LOVENOX&reg;), solution injectable en seringue préremplie: 1 seringue, 1 fois par jour en sous-cutanée, à débuter 12 heures avant l’intervention chirurgicale. à poursuivre pendant 10 jours après l’intervention. (id_poso=28)</a></li>
     </ul>
   </li>
   <li>multiplicité des caractéristiques de moment de prise qui ne peuvent pas être codés dans <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.timing.repeat.when</code> qui est monovalué
     <ul>
-      <li><a name="l979">​</a>ex: “matin et soir, au cours ou à la fin des repas​” <a href="Bundle-HAS-27-1-Presc-GLUCOPHAGE.html">HAS - GLUCOPHAGE&reg; 500 mg comprimé : 1 comprimé matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)</a></li>
+      <li><a name="l1053">​</a>ex: “matin et soir, au cours ou à la fin des repas​” <a href="Bundle-HAS-27-1-Presc-GLUCOPHAGE.html">HAS - GLUCOPHAGE&reg; 500 mg comprimé : 1 comprimé matin et 1 comprimé soir, au cours ou à la fin des repas (id_poso=27)</a></li>
     </ul>
   </li>
   <li>indication de condition de prise qui n’est pas facilement codable dans l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.dosageInstruction.asNeededCodeableConcept</code>
@@ -400,7 +441,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
   <li>l’alternance de doses ne pouvant pas être représentée en FHIR
     <ul>
-      <li><a name="l1020">​</a>“0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours” <a href="Bundle-HAS-23-1-Presc-Fluindione">HAS - fluindione 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois (id_poso=23)</a></li>
+      <li><a name="l1094">​</a>“0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours” <a href="Bundle-HAS-23-1-Presc-Fluindione">HAS - fluindione 20 mg comprimé quadrisécable: 0,5 comprimé au jour 1, et puis 0,75 comprimé au jour 2. Recommencer le cycle de 2 jours, à répéter sur le mois (id_poso=23)</a></li>
     </ul>
   </li>
 </ul>
@@ -717,7 +758,7 @@ L’utilisation de la ressource <code class="language-plaintext highlighter-roug
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 10:22+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 15:08+0000">2026-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -52,9 +52,7 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   "resourceType" : "MedicationDispense",
   "id" : "Disp-DOLIPRANE-Refill-Compl-presc-DC",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"]
   },
   "status" : "completed",
   "medicationReference" : {
@@ -63,26 +61,20 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   "subject" : {
     "reference" : "Patient/14603"
   },
-  "performer" : [
-    {
-      "actor" : {
-        "reference" : "Practitioner/smart-Practitioner-7148xxxx"
-      }
+  "performer" : [{
+    "actor" : {
+      "reference" : "Practitioner/smart-Practitioner-7148xxxx"
     }
-  ],
-  "authorizingPrescription" : [
-    {
-      "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
-    }
-  ],
+  }],
+  "authorizingPrescription" : [{
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
+  }],
   "type" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "code" : "RFC",
-        "display" : "Refill - Complete"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "RFC",
+      "display" : "Refill - Complete"
+    }]
   },
   "quantity" : {
     "value" : 2,
@@ -97,50 +89,42 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   },
   "whenPrepared" : "2021-07-16T10:10:00Z",
   "whenHandedOver" : "2021-07-16T10:24:00Z",
-  "dosageInstruction" : [
-    {
-      "sequence" : 1,
-      "timing" : {
-        "repeat" : {
-          "boundsPeriod" : {
-            "start" : "2021-07-16T10:10:00Z",
-            "end" : "2021-07-17T10:09:59Z"
-          },
-          "timeOfDay" : ["07:00:00", "18:00:00"]
-        }
+  "dosageInstruction" : [{
+    "sequence" : 1,
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2021-07-16T10:10:00Z",
+          "end" : "2021-07-17T10:09:59Z"
+        },
+        "timeOfDay" : ["07:00:00", "18:00:00"]
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "20053000",
+        "display" : "Voie orale"
+      }],
+      "text" : "Voie orale"
+    },
+    "doseAndRate" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+          "code" : "ordered",
+          "display" : "Ordered"
+        }],
+        "text" : "Ordered"
       },
-      "route" : {
-        "coding" : [
-          {
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "20053000",
-            "display" : "Voie orale"
-          }
-        ],
-        "text" : "Voie orale"
-      },
-      "doseAndRate" : [
-        {
-          "type" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                "code" : "ordered",
-                "display" : "Ordered"
-              }
-            ],
-            "text" : "Ordered"
-          },
-          "doseQuantity" : {
-            "value" : 1,
-            "unit" : "Comprimé",
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "15054000"
-          }
-        }
-      ]
-    }
-  ]
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "Comprimé",
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "15054000"
+      }
+    }]
+  }]
 }
 
 ```

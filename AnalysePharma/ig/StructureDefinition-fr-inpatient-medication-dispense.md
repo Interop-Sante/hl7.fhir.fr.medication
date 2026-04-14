@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FRInpatientMedicationDispense |
+| Draft as of 2026-04-14 | *Computable Name*:FRInpatientMedicationDispense |
 
  
 French medication dispense profile 
@@ -41,135 +41,103 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-medicat
   "name" : "FRInpatientMedicationDispense",
   "title" : "FR Inpatient MedicationDispense",
   "status" : "draft",
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "French medication dispense profile",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "rx-dispense-rmim",
-      "uri" : "http://www.hl7.org/v3/PORX_RM020070UV",
-      "name" : "V3 Pharmacy Dispense RMIM"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "rx-dispense-rmim",
+    "uri" : "http://www.hl7.org/v3/PORX_RM020070UV",
+    "name" : "V3 Pharmacy Dispense RMIM"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "MedicationDispense",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "MedicationDispense",
-        "path" : "MedicationDispense"
+    "element" : [{
+      "id" : "MedicationDispense",
+      "path" : "MedicationDispense"
+    },
+    {
+      "id" : "MedicationDispense.medication[x]",
+      "path" : "MedicationDispense.medication[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
       },
       {
-        "id" : "MedicationDispense.medication[x]",
-        "path" : "MedicationDispense.medication[x]",
-        "type" : [
-          {
-            "code" : "CodeableConcept"
-          },
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "MedicationDispense.subject",
-        "path" : "MedicationDispense.subject",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "MedicationDispense.performer.actor",
-        "path" : "MedicationDispense.performer.actor",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "MedicationDispense.authorizingPrescription",
-        "path" : "MedicationDispense.authorizingPrescription",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "MedicationDispense.receiver",
-        "path" : "MedicationDispense.receiver",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"
-            ]
-          }
-        ]
-      }
-    ]
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"]
+      }]
+    },
+    {
+      "id" : "MedicationDispense.subject",
+      "path" : "MedicationDispense.subject",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Group",
+        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
+      }]
+    },
+    {
+      "id" : "MedicationDispense.performer.actor",
+      "path" : "MedicationDispense.performer.actor",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"]
+      }]
+    },
+    {
+      "id" : "MedicationDispense.authorizingPrescription",
+      "path" : "MedicationDispense.authorizingPrescription",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+      }]
+    },
+    {
+      "id" : "MedicationDispense.receiver",
+      "path" : "MedicationDispense.receiver",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"]
+      }]
+    }]
   }
 }
 

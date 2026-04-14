@@ -63,7 +63,7 @@
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  FRANCE
 
 
             </span>
@@ -196,7 +196,7 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="l350">​</a>
+      <li><a name="l348">​</a>
         <a href="PN13-exemples-Intro.html">Inroduction</a>
       </li>
       <li>
@@ -210,6 +210,47 @@
       </li>
       <li>
         <a href="PN13-prescription-MV.html">Prescritpion PN13 médicament virtuel</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transformation PN13-FHIR Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="transformation-PN13-vers-FHIR-AnalysePharma.html">Transformation PN13 vers FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fichiers PN13 exemples Analyse Pharmaceutique
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="PN13-exemples-AnalysePharma-Intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="PN13-prescription-pour-exemple-analyse-pharma.html">Prescription initale PN13 pour exemples de resultats d'analyse pharmaceutique</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-sans-commentaire.html">Validation pharmaceutique PN13 sans commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-commentaire.html">Validation pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-validation-pharma-avec-suggestion.html">Validation pharmaceutique PN13 avec suggestion</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-commentaire.html">Intervention pharmaceutique PN13 avec commentaire</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-modification.html">Intervention pharmaceutique PN13 avec proposition de modification</a>
+      </li>
+      <li>
+        <a href="PN13-intervention-pharma-avec-substitution.html">Intervention pharmaceutique PN13 avec proposition de substitution</a>
       </li>
     </ul>
   </li>
@@ -298,6 +339,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#exemples" id="markdown-toc-exemples">Exemples</a>    <ul>
       <li><a href="#validation-pharmaceutique" id="markdown-toc-validation-pharmaceutique">Validation pharmaceutique</a></li>
       <li><a href="#intervention-pharmaceutique" id="markdown-toc-intervention-pharmaceutique">Intervention pharmaceutique</a></li>
+      <li><a href="#prise-en-compte-dintervention-pharmaceutique" id="markdown-toc-prise-en-compte-dintervention-pharmaceutique">Prise en compte d’intervention pharmaceutique</a></li>
     </ul>
   </li>
 </ul>
@@ -317,42 +359,74 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="validation-simple">Validation simple</h4>
 
-<p><a href="Task-Analyse-Validation-Simple.html">Validation simple d’une prescription de paracetamol</a></p>
+<p><a href="Task-Analyse-Validation-Simple-paracetamol.html">Validation simple d’une prescription de paracetamol</a></p>
 
 <h4 id="validation-avec-commentaire">Validation avec commentaire</h4>
 
-<p><a href="Task-Analyse-Validation-Commentaire.html">Validation avec commentaire d’une prescritpion de morphine</a></p>
+<p><a href="Task-Analyse-Validation-Commentaire-Morphine.html">Validation avec commentaire d’une prescritpion de morphine</a>
+<a href="Task-Analyse-Validation-Commentaire-LACRIFLUID.html">Validation d’une prescription de LACRIFLUID avec commentaire</a>
+<a href="Task-Analyse-Validation-Commentaire-Diazepam.html">Validation d’une prescription de diazépam avec commentaire</a></p>
 
 <h4 id="validation-avec-proposition">Validation avec proposition</h4>
 
+<p><a href="Task-Analyse-Validation-Ajout-Morphine.html">Validation d’une prescription de morphine avec proposition d’ajout</a></p>
+
 <h3 id="intervention-pharmaceutique">Intervention pharmaceutique</h3>
 
-<h4 id="intervention-pharmaceutique-avec-commentaire-sans-proposition">Intervention pharmaceutique avec commentaire sans proposition</h4>
+<h4 id="intervention-type-1-ajout-prescription-nouvelle">Intervention type 1: Ajout (prescription nouvelle)</h4>
 
-<p><a href="Task-Analyse-Intervention-Demande-Substitution.html">Intervention pharmaceutique avec commentaire demandant la prescription d’un autre antalgique que le NEFOPAM</a></p>
+<p><a href="Task-Analyse-Intervention-Type1-METFORMINE.html">Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 2 Indication non traitée</a>
+<a href="Task-Analyse-Intervention-Type1-DOSTINEX.html">Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu</a></p>
 
-<h4 id="intervention-pharmaceutique-avec-proposition-de-modification-dune-ligne-de-prescription">Intervention pharmaceutique avec proposition de modification d’une ligne de prescription</h4>
+<h4 id="intervention-type-2-arrêt">Intervention type 2: Arrêt</h4>
 
-<h5 id="adaptation-de-posologie">Adaptation de posologie</h5>
+<p><a href="Task-Analyse-Intervention-Type2-Arret-Paracetamol.html">Intervention pharmaceutique Type 2: Arrêt - Problème 5: Médicament non indiqué</a></p>
 
-<h5 id="choix-de-la-voie-dadministration">Choix de la voie d’administration</h5>
+<h4 id="intervention-type-3-substitutionechange">Intervention type 3: Substitution/Echange</h4>
 
-<h5 id="améliorer-les-méthodes-de-dispensation--dadministration">Améliorer les méthodes de dispensation / d’administration</h5>
-<p>/!\ demander exemple /!\ Est-ce que ce n’est pas un commentaire pour demander à ce que ce soit préciser? ou est-ce qu’il peut y avoir aussi une suggestion dans ce cas? Y compris juste des commentaires pour la dispensation/administration?</p>
-
-<h4 id="intervention-pharmaceutique-avec-proposition-de-remplacement-de-ligne-de-prescription">Intervention pharmaceutique avec proposition de remplacement de ligne de prescription</h4>
-
-<h5 id="remplacement-1-pour-1">Remplacement 1 pour 1</h5>
+<p><a href="Task-Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM.html">Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 6.3 Interaction - Association déconseillée</a>
+<a href="Task-Analyse-Intervention-Type3-ESOMEPRAZOLE.html">Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels</a></p>
 
 <h5 id="remplacement-x-pour-1">Remplacement X pour 1</h5>
 
+<p><a href="Task-Analyse-Intervention-Type3-Remplacement2pour1-COTAREG.html">Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels</a></p>
+
 <h5 id="remplacement-1-pour-x">Remplacement 1 pour X</h5>
 
-<h4 id="intervention-pharmaceutique-avec-proposition-de-suppression-dune-ligne-de-prescription">Intervention pharmaceutique avec proposition de suppression d’une ligne de prescription</h4>
+<p><a href="Task-Analyse-Intervention-Type3-Remplacement1pour2-INEGY.html">Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels</a></p>
 
-<p><a href="Task-Analyse-Intervention-Arret.html">Intervention pharmaceutique avec proposition d’arrêt d’une prescription de paracetamol</a></p>
+<h4 id="intervention-type-4-choix-de-la-voie-dadministration">Intervention type 4: Choix de la voie d’administration</h4>
 
-<h4 id="intervention-pharmaceutique-avec-proposition-dajout-de-ligne-de-prescritpion">Intervention pharmaceutique avec proposition d’ajout de ligne de prescritpion</h4>
+<p><a href="Task-Analyse-Intervention-Type4-CETAFEN-INJ.html">Intervention pharmaceutique Type: 4 Choix de la voie d’administration - Problème: 8 Voie/administration inappropriée</a></p>
+
+<h4 id="intervention-type-5-suivi-thérapeutique">Intervention type 5: Suivi thérapeutique</h4>
+
+<p><a href="Task-Analyse-Intervention-Type5-DOSTINEX.html">Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 7 Effet indésirable</a>
+<a href="Task-Analyse-Intervention-Type5-INNOHEP.html">Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 10 Monitorage à suivre</a></p>
+
+<h4 id="intervention-type-6-optimisation-modalités-dadministration">Intervention type 6: Optimisation modalités d’administration</h4>
+
+<p><a href="Task-Analyse-Intervention-Type6-CALCIDOSE.html">Intervention pharmaceutique Type: 6 Optimisation modalités d’administration - Problème: 6.2 Interaction - Précaution d’emploi</a>
+<a href="Task-Analyse-Intervention-Type6-LOXAPAC.html">Intervention pharmaceutique Type: 6 Optimisation modalités d’administration - Problème: 8 Voie/administration inappropriée</a></p>
+
+<h4 id="intervention-type-7-adaptation-posologique">Intervention type 7: Adaptation posologique</h4>
+
+<p><a href="Task-Analyse-Intervention-Type7-BINOCRIT.html">Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 3 Sous-dosage</a>
+<a href="Task-Analyse-Intervention-Type3-ELIQUIS.html">Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 4 Surdosage</a></p>
+
+<h3 id="prise-en-compte-dintervention-pharmaceutique">Prise en compte d’intervention pharmaceutique</h3>
+
+<h4 id="intervention-non-acceptée">Intervention non acceptée</h4>
+
+<p><a href="Task-Analyse-Intervention-NonAcceptee.html">Validation d’un dosage dont l’intervention pharmaceutique demandait confirmation</a></p>
+
+<h4 id="intervention-acceptée">Intervention acceptée</h4>
+
+<p><a href="Task-Analyse-Intervention-Acceptee.html">Acceptation de l’arrêt de paracétamol proposé par l’intervention pharmaceutique</a></p>
+
+<h4 id="intervention-acceptée-avec-modification-de-proposition">Intervention acceptée avec modification de proposition</h4>
+
+<p><a href="Task-Analyse-Intervention-Acceptee-Modifiee.html">Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage</a></p>
 
 
 
@@ -395,7 +469,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 10:22+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 15:08+0000">2026-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

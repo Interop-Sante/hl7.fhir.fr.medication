@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FRPrescriptionBundleForExample |
+| Draft as of 2026-04-14 | *Computable Name*:FRPrescriptionBundleForExample |
 
  
 Profil de la ressource Bundle pour la constitution d’exemples de prescription. 
@@ -44,84 +44,72 @@ Other representations of profile: [CSV](StructureDefinition-fr-prescription-bund
   "name" : "FRPrescriptionBundleForExample",
   "title" : "FR Prescription Bundle For Example",
   "status" : "draft",
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Profil de la ressource Bundle pour la constitution d'exemples de prescription.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "purpose" : "Ce profil est utilisé pour la constitution d'exemples de prescription en FHIR. Toutes les prescriptions en FHIR ne sont pas forcément présentées sous la forme de ressource Bundle suivant ce profil, la représentation dépend de l'architecture du (ou des) serveur(s) FHIR interrogé(s). Cf. section 21 de la page sur la transformation PN13 vers FHIR pour plus de détail.",
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "cda",
-      "uri" : "http://hl7.org/v3/cda",
-      "name" : "CDA (R2)"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Bundle",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Bundle",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Bundle",
-        "path" : "Bundle",
-        "short" : "Bundle exemple de prescription",
-        "definition" : "Exemple de prescription contenant l'ensemble des ressources issus d'une traduction d'un message PN13 de prescription en FHIR"
-      },
-      {
-        "id" : "Bundle.implicitRules",
-        "path" : "Bundle.implicitRules",
-        "max" : "0"
-      },
-      {
-        "id" : "Bundle.language",
-        "path" : "Bundle.language",
-        "defaultValueCode" : "fr-FR"
-      },
-      {
-        "id" : "Bundle.type",
-        "path" : "Bundle.type",
-        "defaultValueCode" : "searchset"
-      }
-    ]
+    "element" : [{
+      "id" : "Bundle",
+      "path" : "Bundle",
+      "short" : "Bundle exemple de prescription",
+      "definition" : "Exemple de prescription contenant l'ensemble des ressources issus d'une traduction d'un message PN13 de prescription en FHIR"
+    },
+    {
+      "id" : "Bundle.implicitRules",
+      "path" : "Bundle.implicitRules",
+      "max" : "0"
+    },
+    {
+      "id" : "Bundle.language",
+      "path" : "Bundle.language",
+      "defaultValueCode" : "fr-FR"
+    },
+    {
+      "id" : "Bundle.type",
+      "path" : "Bundle.type",
+      "defaultValueCode" : "searchset"
+    }]
   }
 }
 

@@ -10,7 +10,7 @@ Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medica
 
 **Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0**: 
 
-une gélule le soir (à 20h) pendant huit jours
+une gélule le soir (à 20h)
 
 **status**: Active
 
@@ -32,7 +32,7 @@ une gélule le soir (à 20h) pendant huit jours
 
 > 
 
-Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours
+Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h)
 
 
 > **dosageInstruction****timing**: Soir, Une fois
@@ -54,27 +54,21 @@ Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libér
   "resourceType" : "MedicationRequest",
   "id" : "InLine-Analyse-Presc-Morphine",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
-      "valueMarkdown" : "une gélule le soir (à 20h) pendant huit jours"
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
+    "valueMarkdown" : "une gélule le soir (à 20h)"
+  }],
   "status" : "active",
   "intent" : "order",
   "priority" : "routine",
   "medicationCodeableConcept" : {
-    "coding" : [
-      {
-        "system" : "http://BogusSystemMedicabase.com",
-        "code" : "MV00001636",
-        "display" : "MORPHINE LP 10mg gélule microgranulé à libération prolongée"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://BogusSystemMedicabase.com",
+      "code" : "MV00001636",
+      "display" : "MORPHINE LP 10mg gélule microgranulé à libération prolongée"
+    }]
   },
   "subject" : {
     "reference" : "Patient/14602"
@@ -86,37 +80,25 @@ Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libér
   "groupIdentifier" : {
     "value" : "Presc-3657"
   },
-  "note" : [
-    {
-      "text" : "Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h) pendant huit jours"
-    }
-  ],
-  "dosageInstruction" : [
-    {
-      "timing" : {
-        "repeat" : {
-          "boundsDuration" : {
-            "value" : 8,
-            "unit" : "jour",
-            "system" : "http://unitsofmeasure.org",
-            "code" : "d"
-          },
-          "timeOfDay" : ["20:00:00"],
-          "when" : ["EVE"]
-        }
-      },
-      "doseAndRate" : [
-        {
-          "doseQuantity" : {
-            "value" : 1,
-            "unit" : "gélule",
-            "system" : "http://standardterms.edqm.eu",
-            "code" : "15012000"
-          }
-        }
-      ]
-    }
-  ]
+  "note" : [{
+    "text" : "Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h)"
+  }],
+  "dosageInstruction" : [{
+    "timing" : {
+      "repeat" : {
+        "timeOfDay" : ["20:00:00"],
+        "when" : ["EVE"]
+      }
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "gélule",
+        "system" : "http://standardterms.edqm.eu",
+        "code" : "15012000"
+      }
+    }]
+  }]
 }
 
 ```

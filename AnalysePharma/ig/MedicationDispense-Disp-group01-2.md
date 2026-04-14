@@ -52,9 +52,7 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   "resourceType" : "MedicationDispense",
   "id" : "Disp-group01-2",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"]
   },
   "status" : "completed",
   "medicationReference" : {
@@ -63,43 +61,35 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   "subject" : {
     "reference" : "Group/InLine-patient-group01"
   },
-  "supportingInformation" : [
-    {
-      "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
-    },
-    {
-      "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"
-    },
-    {
-      "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Substit"
+  "supportingInformation" : [{
+    "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
+  },
+  {
+    "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"
+  },
+  {
+    "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Substit"
+  }],
+  "performer" : [{
+    "actor" : {
+      "reference" : "Practitioner/smart-Practitioner-7148xxxx"
     }
-  ],
-  "performer" : [
-    {
-      "actor" : {
-        "reference" : "Practitioner/smart-Practitioner-7148xxxx"
-      }
-    }
-  ],
-  "authorizingPrescription" : [
-    {
-      "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
-    },
-    {
-      "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
-    },
-    {
-      "reference" : "MedicationRequest/InLine-presc-EFFERALGAN2"
-    }
-  ],
+  }],
+  "authorizingPrescription" : [{
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
+  },
+  {
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
+  },
+  {
+    "reference" : "MedicationRequest/InLine-presc-EFFERALGAN2"
+  }],
   "type" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "code" : "RFP",
-        "display" : "Refill - Part"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "RFP",
+      "display" : "Refill - Part"
+    }]
   },
   "quantity" : {
     "value" : 14,

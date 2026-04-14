@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:FRMedicationVirtual |
+| Draft as of 2026-04-14 | *Computable Name*:FRMedicationVirtual |
 
  
 Virtual medication composed of one to many substances. 
@@ -42,123 +42,101 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-virtua
   "title" : "FR Medication Virtual",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-02-17T10:22:56+00:00",
+  "date" : "2026-04-14T15:08:12+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Virtual medication composed of one to many substances.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "script10.6",
-      "uri" : "http://ncpdp.org/SCRIPT10_6",
-      "name" : "Mapping to NCPDP SCRIPT 10.6"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "script10.6",
+    "uri" : "http://ncpdp.org/SCRIPT10_6",
+    "name" : "Mapping to NCPDP SCRIPT 10.6"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Medication",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Medication",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Medication",
-        "path" : "Medication"
-      },
-      {
-        "id" : "Medication.extension",
-        "path" : "Medication.extension",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "url"
-            }
-          ],
-          "rules" : "open"
-        }
-      },
-      {
-        "id" : "Medication.extension:drugCharacteristic",
-        "path" : "Medication.extension",
-        "sliceName" : "drugCharacteristic",
-        "short" : "descriptive properties of the medicine",
-        "min" : 0,
-        "max" : "*",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-drug-characteristic"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "Medication.form",
-        "path" : "Medication.form",
-        "comment" : "When branded medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When branded medication is referenced within MedicationAdministration, this is administered form.",
-        "min" : 1,
-        "binding" : {
-          "strength" : "extensible",
-          "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-mp-dose-form"
-        }
-      },
-      {
-        "id" : "Medication.ingredient",
-        "path" : "Medication.ingredient",
-        "min" : 1
-      },
-      {
-        "id" : "Medication.ingredient.strength",
-        "path" : "Medication.ingredient.strength",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "Ratio",
-            "profile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/FrRatioMedication"
-            ]
-          }
-        ]
+    "element" : [{
+      "id" : "Medication",
+      "path" : "Medication"
+    },
+    {
+      "id" : "Medication.extension",
+      "path" : "Medication.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "rules" : "open"
       }
-    ]
+    },
+    {
+      "id" : "Medication.extension:drugCharacteristic",
+      "path" : "Medication.extension",
+      "sliceName" : "drugCharacteristic",
+      "short" : "descriptive properties of the medicine",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-drug-characteristic"]
+      }]
+    },
+    {
+      "id" : "Medication.form",
+      "path" : "Medication.form",
+      "comment" : "When branded medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When branded medication is referenced within MedicationAdministration, this is administered form.",
+      "min" : 1,
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-mp-dose-form"
+      }
+    },
+    {
+      "id" : "Medication.ingredient",
+      "path" : "Medication.ingredient",
+      "min" : 1
+    },
+    {
+      "id" : "Medication.ingredient.strength",
+      "path" : "Medication.ingredient.strength",
+      "min" : 1,
+      "type" : [{
+        "code" : "Ratio",
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/FrRatioMedication"]
+      }]
+    }]
   }
 }
 
