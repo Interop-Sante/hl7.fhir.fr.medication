@@ -12,39 +12,71 @@
 
 #### Validation simple
 
-[Validation simple d'une prescription de paracetamol](Task-Analyse-Validation-Simple.html)
+[Validation simple d'une prescription de paracetamol](Task-Analyse-Validation-Simple-paracetamol.html)
 
 #### Validation avec commentaire
 
-[Validation avec commentaire d'une prescritpion de morphine](Task-Analyse-Validation-Commentaire.html)
+[Validation avec commentaire d'une prescritpion de morphine](Task-Analyse-Validation-Commentaire-Morphine.html)
+[Validation d'une prescription de LACRIFLUID avec commentaire](Task-Analyse-Validation-Commentaire-LACRIFLUID.html)
+[Validation d'une prescription de diazépam avec commentaire](Task-Analyse-Validation-Commentaire-Diazepam.html)
 
 #### Validation avec proposition
 
+[Validation d'une prescription de morphine avec proposition d'ajout](Task-Analyse-Validation-Ajout-Morphine.html)
+
 ### Intervention pharmaceutique
 
-#### Intervention pharmaceutique avec commentaire sans proposition
+#### Intervention type 1: Ajout (prescription nouvelle)
 
-[Intervention pharmaceutique avec commentaire demandant la prescription d'un autre antalgique que le NEFOPAM](Task-Analyse-Intervention-Demande-Substitution.html)
+[Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 2 Indication non traitée](Task-Analyse-Intervention-Type1-METFORMINE.html)
+[Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu](Task-Analyse-Intervention-Type1-DOSTINEX.html)
 
-#### Intervention pharmaceutique avec proposition de modification d'une ligne de prescription
+#### Intervention type 2: Arrêt
 
-##### Adaptation de posologie
+[Intervention pharmaceutique Type 2: Arrêt - Problème 5: Médicament non indiqué](Task-Analyse-Intervention-Type2-Arret-Paracetamol.html)
 
-##### Choix de la voie d'administration
+#### Intervention type 3: Substitution/Echange
 
-##### Améliorer les méthodes de dispensation / d'administration
-/!\ demander exemple /!\ Est-ce que ce n'est pas un commentaire pour demander à ce que ce soit préciser? ou est-ce qu'il peut y avoir aussi une suggestion dans ce cas? Y compris juste des commentaires pour la dispensation/administration?
-
-#### Intervention pharmaceutique avec proposition de remplacement de ligne de prescription
-
-##### Remplacement 1 pour 1
+[Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 6.3 Interaction - Association déconseillée](Task-Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM.html)
+[Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels](Task-Analyse-Intervention-Type3-ESOMEPRAZOLE.html)
 
 ##### Remplacement X pour 1
 
+[Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels](Task-Analyse-Intervention-Type3-Remplacement2pour1-COTAREG.html)
+
 ##### Remplacement 1 pour X
 
-#### Intervention pharmaceutique avec proposition de suppression d'une ligne de prescription
+[Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels](Task-Analyse-Intervention-Type3-Remplacement1pour2-INEGY.html)
 
-[Intervention pharmaceutique avec proposition d'arrêt d'une prescription de paracetamol](Task-Analyse-Intervention-Arret.html)
+#### Intervention type 4: Choix de la voie d'administration
 
-#### Intervention pharmaceutique avec proposition d'ajout de ligne de prescritpion
+[Intervention pharmaceutique Type: 4 Choix de la voie d'administration - Problème: 8 Voie/administration inappropriée](Task-Analyse-Intervention-Type4-CETAFEN-INJ.html)
+
+#### Intervention type 5: Suivi thérapeutique
+
+[Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 7 Effet indésirable](Task-Analyse-Intervention-Type5-DOSTINEX.html)
+[Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 10 Monitorage à suivre](Task-Analyse-Intervention-Type5-INNOHEP.html)
+
+#### Intervention type 6: Optimisation modalités d'administration
+
+[Intervention pharmaceutique Type: 6 Optimisation modalités d'administration - Problème: 6.2 Interaction - Précaution d'emploi](Task-Analyse-Intervention-Type6-CALCIDOSE.html)
+[Intervention pharmaceutique Type: 6 Optimisation modalités d'administration - Problème: 8 Voie/administration inappropriée](Task-Analyse-Intervention-Type6-LOXAPAC.html)
+
+#### Intervention type 7: Adaptation posologique
+
+[Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 3 Sous-dosage](Task-Analyse-Intervention-Type7-BINOCRIT.html)
+[Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 4 Surdosage](Task-Analyse-Intervention-Type3-ELIQUIS.html)
+
+### Prise en compte d'intervention pharmaceutique
+
+#### Intervention non acceptée
+
+[Validation d'un dosage dont l'intervention pharmaceutique demandait confirmation](Task-Analyse-Intervention-NonAcceptee.html)
+
+#### Intervention acceptée
+
+[Acceptation de l'arrêt de paracétamol proposé par l'intervention pharmaceutique](Task-Analyse-Intervention-Acceptee.html)
+
+#### Intervention acceptée avec modification de proposition
+
+[Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage](Task-Analyse-Intervention-Acceptee-Modifiee.html)

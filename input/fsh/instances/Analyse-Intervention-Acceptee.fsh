@@ -1,9 +1,10 @@
-Instance: Analyse-Intervention-Arret
+Instance: Analyse-Intervention-Acceptee
 InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
-Description: "Intervention pharmaceutique type 2 Arrêt problème 5 Médicament non indiqué"
+Description: "Acceptation de l'arrêt de paracétamol proposé par l'intervention pharmaceutique"
 * groupIdentifier.value = "Presc-4130"
 * status = #completed
+* businessStatus = #1 "Acceptée"
 * intent = #proposal
 * authoredOn = "2025-07-23T11:06:00+01:00"
 * performerType = $TRE-G15-ProfessionSante#21 "Pharmacien"

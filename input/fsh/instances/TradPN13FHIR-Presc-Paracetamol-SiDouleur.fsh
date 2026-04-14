@@ -126,7 +126,7 @@ Usage: #inline
 * dosageInstruction[=].doseAndRate[=].doseQuantity.system = $unitsofmeasure
 * dosageInstruction[=].doseAndRate[=].doseQuantity.code = #mg
 * dosageInstruction[=].doseAndRate[=].doseQuantity.unit = "mg"
-* dosageInstruction[=].maxDosePerPeriod.numerator.value = 4
+* dosageInstruction[=].maxDosePerPeriod.numerator.value = 4000.0
 * dosageInstruction[=].maxDosePerPeriod.numerator.system = $unitsofmeasure
 * dosageInstruction[=].maxDosePerPeriod.numerator.code = #mg
 * dosageInstruction[=].maxDosePerPeriod.numerator.unit = "mg"

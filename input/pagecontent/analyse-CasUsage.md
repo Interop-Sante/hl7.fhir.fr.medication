@@ -10,12 +10,20 @@
 
 ### Validation pharmaceutique
 
-/!\ mettre cas d'usage de validation simple, validation avec commentaire et validation avec suggestion
+Un professionnel effectue une ananlyse pharmaceutique et valide une/des ligne(s) de prescription. Cette validation peut être:
+- sans commentaire
+- avec un/des commentaire(s)
+- avec une/des proposition(s) de prescription complémentaire(s) pour amélioré la prise en charge du patient (ex. prescription complémentaire de laxatif dans le cas d'un traitement à la morphine) 
 
 ### Intervention pharmaceutique
 
-/!\ mettre cas d'usage d'intervention avec modification de ligne de prescription (les différents cas selon les codes d'intervention), simplement des commentaires pour la dispensation/administration, remplacement de ligne, suppression de ligne ou ajout de ligne
+Un professionnel effectue une analyse pharmaceutique et réalise une intervention pharmaceutique sur une/des ligne(s) de prescription suite à la détection d'un problème. L'intervention pharmaceutique peut:
+- être soumise seule avec un commentaire expliquant la raison de l'intervention (ex. demande de confirmation d'un dosage qui semble surprenant étant donné le contexte patient)
+- être associée à une/des proposition(s) de modification/annulation de ligne de prescription (ex. un médicament prescrit n'est pas au livret, proposition de remplacer par un médicament au livret) et/ou une/des proposition(s) d'annulation de ligne de prescription.
 
 ### Prise en compte de l'intervention pharmaceutique
 
-/!\ A décider si on va jusque là /!\
+Le prescripteur de la / des ligne(s) de prescription ayant fait l'objet d'une intervention pharmaceutique ainsi que l'éventuelle(s) proposition(s) associée(s) puis décide:
+- d'accepter l'intervention pharmaceutique
+- de ne pas accepter l'intervention pharmaceutique
+- d'accepter l'intervention pharmaceutique mais de modifier la proposition associée

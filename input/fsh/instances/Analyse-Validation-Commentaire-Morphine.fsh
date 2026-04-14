@@ -1,4 +1,4 @@
-Instance: Analyse-Validation-Commentaire
+Instance: Analyse-Validation-Commentaire-Morphine
 InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
 Description: "Validation d'une prescription de morphine avec commentaire"

@@ -1,7 +1,7 @@
-Instance: Analyse-Intervention-Demande-Substitution
+Instance: Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM
 InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
-Description: "Intervention pharmaceutique type 3 Substitution/echange problème 6.3 Interaction - Association déconseillée"
+Description: "Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 6.3 Interaction - Association déconseillée"
 * groupIdentifier.value = "Presc-4254"
 * status = #completed
 * intent = #proposal
@@ -13,7 +13,7 @@ Description: "Intervention pharmaceutique type 3 Substitution/echange problème 
 * output[0].type.text = "résultat de l'analyse"
 * output[=].valueCode = #INTERVENTION
 * output[+].type.text = "commentaire"
-* output[=].valueString = "L'utilisation du Nefopam est déconseillée chez le sujet âgé (plus de 75ans) à cause des effets anticholinergiques du nefopam. Pouvez-vous prescrire un autre antalgique?"
+* output[=].valueString = "L'utilisation du Nefopam est déconseillée chez le sujet âgé (plus de 75ans) à cause des effets anticholinergiques du Nefopam. Pouvez-vous prescrire un autre antalgique?"
 * output[+].type.text = "type d'intervention"
 * output[=].valueCodeableConcept = #3 "Substitution/Echange"
 * output[+].type.text = "type de problème"

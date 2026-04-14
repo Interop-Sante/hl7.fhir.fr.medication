@@ -7,6 +7,8 @@ Description: "French Pharmaceutical Analysis Result profile"
 * groupIdentifier 1..
 * groupIdentifier ^short = "Identifiant de la prescription contenant la ligne de prescription analysée"
 
+* businessStatus from FrPharmaceuticalInterventionDevenirCodeValueSet (extensible)
+
 * intent = #proposal
 
 * authoredOn 1..
@@ -30,7 +32,8 @@ Description: "French Pharmaceutical Analysis Result profile"
     comment 0..1 and
     type 0..1 and
     problem 0..1 and
-    suggestion 0..
+    suggestion 0.. and
+    suggestionUpdated 0..
 * output[result].type.text = "résultat de l'analyse"
 * output[result].value[x] only code
 * output[result].valueCode from FrPharmaceuticalAnalysisResultCodeValueSet (required)
@@ -45,3 +48,6 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[suggestion].type.text = "proposition"
 * output[suggestion].value[x] only Reference
 * output[suggestion].valueReference only Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
+* output[suggestion].type.text = "proposition modifiée"
+* output[suggestion].value[x] only Reference
+* output[suggestion].valueReference only Reference(FRInpatientMedicationRequest)

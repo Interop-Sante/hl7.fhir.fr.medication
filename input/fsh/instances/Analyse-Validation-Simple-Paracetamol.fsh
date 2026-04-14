@@ -1,4 +1,4 @@
-Instance: Analyse-Validation-Simple
+Instance: Analyse-Validation-Simple-paracetamol
 InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
 Description: "Validation simple d'une prescription de paracétamol"

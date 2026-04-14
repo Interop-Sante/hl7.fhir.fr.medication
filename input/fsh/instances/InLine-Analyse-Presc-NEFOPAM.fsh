@@ -1,7 +1,7 @@
 Instance: InLine-Analyse-Presc-NEFOPAM
 InstanceOf: fr-inpatient-medicationrequest
 Usage: #example
-Description: "Prescription de Paracétamol pour exemple d'intervention pharmaceutique"
+Description: "Prescription de NEFOPMA pour exemple d'intervention pharmaceutique"
 * status = #active
 * intent = #order
 * priority = #routine
