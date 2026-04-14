@@ -61,10 +61,6 @@ Les spécifications sont issues des travaux du groupe de travail Interop’Sant�
 
 * les listes des codes qualifiant l’intervention pharmaceutique (problème et type d’intervention) définies par la SFPC pour l’intervention pharmaceutique telles que représentées sur la [fiche d’intervention pharmaceutique hôpital](https://sfpc.eu/wp-content/uploads/2025/10/ActIP-Fiche-intervention-pharmaceutique.pdf)
 
-### Guide de lecture
-
-/!\ A rédiger une fois l’ensemble des parties stabilisées /!\
-
 ### Exemple d’informations portées par le résultat de l’analyse pharmaceutique
 
 #### Exemple d’informations portées par la validation pharmaceutique

@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder le statut d’une ligne de traitement d
   "title" : "value set Interop'Santé - Statut d'une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-14T15:08:12+00:00",
+  "date" : "2026-04-14T15:34:16+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

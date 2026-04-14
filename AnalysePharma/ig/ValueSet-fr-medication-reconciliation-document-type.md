@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder le type de document de la ressource **C
   "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-14T15:08:12+00:00",
+  "date" : "2026-04-14T15:34:16+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
