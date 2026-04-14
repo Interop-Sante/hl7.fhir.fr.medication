@@ -14,5 +14,5 @@ Description: "Validation d'une prescription de LACRIFLUID avec commentaire"
 * output[=].valueCode = #VALIDATION
 * output[+].type.text = "commentaire"
 * output[=].valueString = "Le LACRIFLUID n'est pas référencé au livret thérapeutique. La spécialité référencée est le CELLUVISC. Cependant, le CELLUVISC est en cours de réapprovisionnement. La prescription de LACRIFLUID est validée en traitement personnel jusqu'à réapprovisionnement du CELLUVISC. Proposition jointe avec du CELLUVISC lorsque celui-ci sera disponible"
-* ouptut[+].type.text = "proposition"
-* output[=].valueReference = "MedicationRequest/InLine-Analyse-Presc-CELLUVISC"
+* output[+].type.text = "proposition"
+* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-CELLUVISC"

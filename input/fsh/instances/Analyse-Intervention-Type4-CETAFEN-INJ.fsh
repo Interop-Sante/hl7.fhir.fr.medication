@@ -19,4 +19,4 @@ Description: "Intervention pharmaceutique Type: 4 Choix de la voie d'administrat
 * output[+].type.text = "type de problème"
 * output[=].valueCodeableConcept = #8 "Voie/administration inappropriée"
 * output[+].type.text = "proposition"
-* output[=].valueReference = "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR"
+* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR"

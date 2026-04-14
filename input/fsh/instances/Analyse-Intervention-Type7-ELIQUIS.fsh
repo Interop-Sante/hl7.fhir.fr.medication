@@ -19,4 +19,4 @@ Description: "Intervention pharmaceutique Type: 7 Adaptation posologique - Probl
 * output[+].type.text = "type de problème"
 * output[=].valueCodeableConcept = #4 "Surdosage"
 * output[+].type.text = "proposition"
-* output[=].valueReference = "MedicationRequest/InLine-Analyse-Presc-ELIQUIS-25"
+* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-ELIQUIS-25"

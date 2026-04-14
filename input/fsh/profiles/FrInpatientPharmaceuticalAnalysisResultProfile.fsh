@@ -48,6 +48,6 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[suggestion].type.text = "proposition"
 * output[suggestion].value[x] only Reference
 * output[suggestion].valueReference only Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
-* output[suggestion].type.text = "proposition modifiée"
-* output[suggestion].value[x] only Reference
-* output[suggestion].valueReference only Reference(FRInpatientMedicationRequest)
+* output[suggestionUpdated].type.text = "proposition modifiée"
+* output[suggestionUpdated].value[x] only Reference
+* output[suggestionUpdated].valueReference only Reference(FRInpatientMedicationRequest)

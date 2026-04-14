@@ -22,6 +22,6 @@ Description: "Intervention pharmaceutique acceptée mais proposition modifiée p
 * output[+].type.text = "type de problème"
 * output[=].valueCodeableConcept = #8 "Voie/administration inappropriée"
 * output[+].type.text = "proposition"
-* output[=].valueReference = "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-SousDose"
+* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-SousDose"
 * output[+].type.text = "proposition modifiée"
-* output[=].valueReference = "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-Modifiee"
+* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-Modifiee"

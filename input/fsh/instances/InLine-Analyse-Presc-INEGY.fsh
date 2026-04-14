@@ -1,5 +1,5 @@
 Instance: InLine-Analyse-Presc-INEGY
-InstanceOf: fr-inpatient-pharmaceutical-intervention-suggestiont
+InstanceOf: fr-inpatient-pharmaceutical-intervention-suggestion
 Usage: #example
 Description: "Prescription de INEGY pour exemple d'analyse pharmaceutique"
 * meta.profile = Canonical(fr-inpatient-pharmaceutical-intervention-suggestion)

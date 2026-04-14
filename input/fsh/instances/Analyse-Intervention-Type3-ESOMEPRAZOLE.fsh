@@ -19,4 +19,4 @@ Description: "Intervention pharmaceutique Type: 3 Substitution/Echange - Problè
 * output[+].type.text = "type de problème"
 * output[=].valueCodeableConcept = #1 "Non conformité aux référentiels / Contre-indication"
 * output[+].type.text = "proposition"
-* output[=].valueReference = "MedicationRequest/InLine-Analyse-Presc-LANSOPRAZOLE"
+* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-LANSOPRAZOLE"

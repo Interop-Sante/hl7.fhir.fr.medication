@@ -54,13 +54,13 @@ Usage: #definition
 * group[+].element[0].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Id_élément_prescr
 * group[=].element[=].target[0].code = #Task.input.valueReference
 * group[=].element[=].target[=].equivalence = #relatedto
-* group[=].element[=].target[=].commentaire = "Permet de retrouver la ressource MedicationRequest analysée via MedicationRequest.identifier.value"
+* group[=].element[=].target[=].comment = "Permet de retrouver la ressource MedicationRequest analysée via MedicationRequest.identifier.value"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Cré_arr_mod_val
 * group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
 * group[+].element[0].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Id_élément_prescr
 * group[=].element[=].target[0].code = #Task.output.valueReference
 * group[=].element[=].target[=].equivalence = #relatedto
-* group[=].element[=].target[=].commentaire = "Permet de lier à la ressource MedicationRequest portant la proposition via MedicationRequest.identifier.value"
+* group[=].element[=].target[=].comment = "Permet de lier à la ressource MedicationRequest portant la proposition via MedicationRequest.identifier.value"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Cré_arr_mod_val
 * group[=].element[=].target[=].dependsOn[=].value = "C"
 * group[=].element[=].target[=].product[0].property = #Task.output.type.text
@@ -80,7 +80,7 @@ Usage: #definition
 * group[=].element[=].target[=].product[=].value = "Substitution/Echange"
 * group[=].element[+].target[0].code = #Task.output
 * group[=].element[=].target[=].equivalence = #unmatched
-* group[=].element[=].target[=].commentaire = "Les types d'intervention pharmaceutique autres que Substitution/echange ne sont pas caractérisés dans les messages PN13"
+* group[=].element[=].target[=].comment = "Les types d'intervention pharmaceutique autres que Substitution/echange ne sont pas caractérisés dans les messages PN13"
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Cré_arr_mod_val
 * group[=].element[=].target[=].dependsOn[=].value = "C"
 * group[=].element[=].target[=].dependsOn[+].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Proposition_pharm
