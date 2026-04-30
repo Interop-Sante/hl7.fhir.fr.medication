@@ -76,7 +76,3 @@
 #### Intervention acceptée
 
 [Acceptation de l'arrêt de paracétamol proposé par l'intervention pharmaceutique](Task-Analyse-Intervention-Acceptee.html)
-
-#### Intervention acceptée avec modification de proposition
-
-[Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage](Task-Analyse-Intervention-Acceptee-Modifiee.html)

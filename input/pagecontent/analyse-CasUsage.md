@@ -26,4 +26,3 @@ Un professionnel effectue une analyse pharmaceutique et réalise une interventio
 Le prescripteur de la / des ligne(s) de prescription ayant fait l'objet d'une intervention pharmaceutique ainsi que l'éventuelle(s) proposition(s) associée(s) puis décide:
 - d'accepter l'intervention pharmaceutique
 - de ne pas accepter l'intervention pharmaceutique
-- d'accepter l'intervention pharmaceutique mais de modifier la proposition associée

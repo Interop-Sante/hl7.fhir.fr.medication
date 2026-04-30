@@ -6,8 +6,6 @@ Description: "Le système de codage pour le typage du devenir l'intervention pha
 * ^status = #draft
 * ^experimental = false
 * ^content = #complete
-* ^count = 4
+* ^count = 2
 * #1 "Acceptée"
 * #2 "Non-acceptée"
-* #3 "Non renseigné"
-* #4 "Acceptée avec modification de proposition(s)"

@@ -32,8 +32,7 @@ Description: "French Pharmaceutical Analysis Result profile"
     comment 0..1 and
     type 0..1 and
     problem 0..1 and
-    suggestion 0.. and
-    suggestionUpdated 0..
+    suggestion 0.. 
 * output[result].type.text = "résultat de l'analyse"
 * output[result].value[x] only code
 * output[result].valueCode from FrPharmaceuticalAnalysisResultCodeValueSet (required)
@@ -48,6 +47,3 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[suggestion].type.text = "proposition"
 * output[suggestion].value[x] only Reference
 * output[suggestion].valueReference only Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
-* output[suggestionUpdated].type.text = "proposition modifiée"
-* output[suggestionUpdated].value[x] only Reference
-* output[suggestionUpdated].valueReference only Reference(FRInpatientMedicationRequest)

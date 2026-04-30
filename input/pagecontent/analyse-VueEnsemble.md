@@ -74,7 +74,7 @@ Lorsque l'intervention pharmaceutique consiste en une suggestion de remplacement
 ### Prise en compte du résultat d'une analyse pharmaceutique
 
 La prise en compte du résultat d'une analyse pharmaceutique est codée via l'attribut `Task.businessStatus`.
-Elle repose sur le jeu de valeurs [FrPharmaceuticalInterventionDevenirCodeValueSet](ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.html) qui reprend les valeurs du formulaire d'intervention pharmaceutique de la SFPC en ajoutant une valeur pour "Acceptée avec modification de proposition" dans le cas où la/les proposition(s) associée(s) est/sont modifiée(s) lors de la prise en compte.
+Elle repose sur le jeu de valeurs [FrPharmaceuticalInterventionDevenirCodeValueSet](ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.html) qui reprend les valeurs du formulaire d'intervention pharmaceutique de la SFPC sans la valeur "Non renseigné" qui est le statut par défaut lorsqu'il n'y a pas d'information sur la prise en compte du résultat d'une analyse pharmaceutique et donc correspond à une absence d'utilisation de l'attribut `Task.businessStatus`.
 
 Le système utilisé par le prescripteur pour traiter le résultat d'une analyse pharmaceutique met à jour l'attribut `Task.businessStatus` de la ressource *Task* correspondante selon les cas présentés dans la section suivante. 
 
@@ -86,17 +86,12 @@ Le système utilisé par le prescripteur pour traiter le résultat d'une analyse
   - si l'implémentation veut permettre le suivie de la consultation des commentaires de valitation pharmaceutique par le prescripteur, possibilité d'utiliser `Task.businessStatus`avec la valeur `1` "Acceptée" pour indiquer que le commentaire a été consulté
 - Validation pharmaceutique avec proposition => En fonction de l'acceptation de la proposition
   - si la proposition n'est pas acceptée, `Task.businessStatus` avec la valeur `2` "Non acceptée"
-  - si la proposition est acceptée sans modification, `Task.businessStatus` avec la valeur `1` "Acceptée"
-  - si la proposition est modifiée, `Task.businessStatus` avec la valeur `4` "Acceptée avec modification de proposition(s)"
-- Intervention pharmaceutique sans proposition => En fonction de l'acceptation de l'intervention
+  - si la proposition est acceptée, `Task.businessStatus` avec la valeur `1` "Acceptée"
+- Intervention pharmaceutique => En fonction de l'acceptation de l'intervention
   - si l'intervention n'est pas acceptée, `Task.businessStatus` avec la valeur `2` "Non acceptée"
   - si l'intervention est acceptée, `Task.businessStatus` avec la valeur `1` "Acceptée"
-- Intervention pharmaceutique avec proposition => En fonction de l'acceptation de l'intervention
-  - si l'intervention n'est pas acceptée, `Task.businessStatus` avec la valeur `2` "Non acceptée"
-  - si l'intervention est acceptée sans modification de proposition(s), `Task.businessStatus` avec la valeur `1` "Acceptée"
-  - si l'intervention est acceptée avec modification de proposition(s), `Task.businessStatus` avec la valeur `4` "Acceptée avec modification de proposition(s)"
 
-Que les propositions soient acceptées avec ou sans modification, elles font l'objet de nouvelles ressources `MedicationRequest` avec:
+Qu'une proposition soit acceptée avec ou sans modification, elle fait l'objet d'une/de nouvelle(s) ressource(s) `MedicationRequest` avec:
 - le même `MedicationRequest.groupIdentifier`que la prescription initiale
 - la référence à la ressource *Task* représentant le resultat de l'analyse pharmaceutique dans `MedicationRequest.supportingInformation`
  
