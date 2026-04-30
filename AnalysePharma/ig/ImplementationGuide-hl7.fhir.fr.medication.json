@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -54,6 +54,12 @@
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
     "version" : "2.1.0"
+  },
+  {
+    "id" : "hl7_fhir_uv_xver_r5_r4",
+    "uri" : "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+    "packageId" : "hl7.fhir.uv.xver-r5.r4",
+    "version" : "0.1.0"
   },
   {
     "id" : "ans_fhir_fr_eprescription",
@@ -722,18 +728,6 @@
       },
       "name" : "Analyse-Intervention-Acceptee",
       "description" : "Acceptation de l'arrêt de paracétamol proposé par l'intervention pharmaceutique",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Task"
-      }],
-      "reference" : {
-        "reference" : "Task/Analyse-Intervention-Acceptee-Modifiee"
-      },
-      "name" : "Analyse-Intervention-Acceptee-Modifiee",
-      "description" : "Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
     },
     {
@@ -2402,30 +2396,6 @@
       },
       "name" : "InLine-Analyse-Presc-CETAFEN-CPR",
       "description" : "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationRequest"
-      }],
-      "reference" : {
-        "reference" : "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-Modifiee"
-      },
-      "name" : "InLine-Analyse-Presc-CETAFEN-CPR-Modifiee",
-      "description" : "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique acceptée avec modification de la proposition",
-      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationRequest"
-      }],
-      "reference" : {
-        "reference" : "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-SousDose"
-      },
-      "name" : "InLine-Analyse-Presc-CETAFEN-CPR-SousDose",
-      "description" : "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique sous dosée",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
     },
     {

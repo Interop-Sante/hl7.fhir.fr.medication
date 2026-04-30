@@ -159,7 +159,6 @@ These are example instances that show what data produced and consumed by systems
 | | |
 | :--- | :--- |
 | [Analyse-Intervention-Acceptee](Task-Analyse-Intervention-Acceptee.md) | Acceptation de l’arrêt de paracétamol proposé par l’intervention pharmaceutique |
-| [Analyse-Intervention-Acceptee-Modifiee](Task-Analyse-Intervention-Acceptee-Modifiee.md) | Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage |
 | [Analyse-Intervention-Commentaire-Trad-PN13-FHIR](Task-Analyse-Intervention-Commentaire-Trad-PN13-FHIR.md) | Intervention pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
 | [Analyse-Intervention-NonAcceptee](Task-Analyse-Intervention-NonAcceptee.md) | Validation d’un dosage dont l’intervention pharmaceutique demandait confirmation |
 | [Analyse-Intervention-Proposition-Trad-PN13-FHIR](Task-Analyse-Intervention-Proposition-Trad-PN13-FHIR.md) | Intervention pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
@@ -244,8 +243,6 @@ These are example instances that show what data produced and consumed by systems
 | [InLine-Analyse-Presc-CALCIDOSE](MedicationRequest-InLine-Analyse-Presc-CALCIDOSE.md) | Prescription de CALCIDOSE pour exemple d’analyse pharmaceutique |
 | [InLine-Analyse-Presc-CELLUVISC](MedicationRequest-InLine-Analyse-Presc-CELLUVISC.md) | Prescription de CELLUVISC pour exemple d’analyse pharmaceutique |
 | [InLine-Analyse-Presc-CETAFEN-CPR](MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR.md) | Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique |
-| [InLine-Analyse-Presc-CETAFEN-CPR-Modifiee](MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR-Modifiee.md) | Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique acceptée avec modification de la proposition |
-| [InLine-Analyse-Presc-CETAFEN-CPR-SousDose](MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR-SousDose.md) | Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique sous dosée |
 | [InLine-Analyse-Presc-CETAFEN-INJ](MedicationRequest-InLine-Analyse-Presc-CETAFEN-INJ.md) | Prescription de CETAFEN en perfusion pour exemple d’intervention pharmaceutique |
 | [InLine-Analyse-Presc-COTAREG](MedicationRequest-InLine-Analyse-Presc-COTAREG.md) | Prescription de COTAREG pour exemple d’analyse pharmaceutique |
 | [InLine-Analyse-Presc-DOSTINEX](MedicationRequest-InLine-Analyse-Presc-DOSTINEX.md) | Prescription de DOSTINEX pour exemple d’analyse pharmaceutique |

@@ -16,7 +16,7 @@
   <name value="FRInpatientPharmaceuticalInterventionSuggestionProfile"/>
   <title value="FR Pharmaceutical Intervention Suggestion"/>
   <status value="draft"/>
-  <date value="2026-04-14T15:34:16+00:00"/>
+  <date value="2026-04-30T09:49:26+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -359,7 +359,8 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="renderedDosageInstruction"/>
       <short value="Full representation of the dosage instructions"/>
-      <definition value="Optional Extension Element - found in all resources."/>
+      <definition value="R5: `MedicationRequest.renderedDosageInstruction` (new:markdown)"/>
+      <comment value="Element `MedicationRequest.renderedDosageInstruction` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.&#xA;Element `MedicationRequest.renderedDosageInstruction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -378,7 +379,7 @@
         <human value="All FHIR elements must have a @value or children"/>
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element|4.0.1"/>
       </constraint>
       <constraint>
         <key value="ext-1"/>
@@ -386,18 +387,10 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
     </element>
     <element id="MedicationRequest.extension:treatmentIntent">
       <path value="MedicationRequest.extension"/>

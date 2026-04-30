@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-current-medication-document-type | *Version*:0.1.0 |
-| Draft as of 2026-04-14 | *Computable Name*:FrCurrentMedicationDocumentType |
+| Draft as of 2026-04-30 | *Computable Name*:FrCurrentMedicationDocumentType |
 
  
 Le jeu de valeurs à utiliser pour coder le type de document de la ressource **Composition** d’une liste des Traitements Médicamenteux Courants. 
@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder le type de document de la ressource **C
   "title" : "value set Interop'Santé - type de document de la ressource Composition d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

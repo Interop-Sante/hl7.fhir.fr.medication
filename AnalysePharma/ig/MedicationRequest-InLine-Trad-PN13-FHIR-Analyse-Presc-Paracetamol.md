@@ -8,7 +8,7 @@
 
 Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
 
-**Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0**: 
+**R5: Full representation of the dosage instructions (new)**: 
 
 1000 mg /prise, 4000 mg max/j, respecter 6h entre 2 prises pendant 2 jours
 

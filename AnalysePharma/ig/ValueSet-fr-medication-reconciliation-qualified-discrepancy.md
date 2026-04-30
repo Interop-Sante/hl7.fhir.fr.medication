@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-qualified-discrepancy | *Version*:0.1.0 |
-| Draft as of 2026-04-14 | *Computable Name*:FRMedicationReconciliationQualifiedDiscrepancy |
+| Draft as of 2026-04-30 | *Computable Name*:FRMedicationReconciliationQualifiedDiscrepancy |
 
  
 Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder la qualification de la divergence ident
   "title" : "value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

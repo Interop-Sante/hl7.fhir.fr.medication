@@ -30,5 +30,4 @@ Le prescripteur de la / des ligne(s) de prescription ayant fait l’objet d’un
 
 * d’accepter l’intervention pharmaceutique
 * de ne pas accepter l’intervention pharmaceutique
-* d’accepter l’intervention pharmaceutique mais de modifier la proposition associée
 

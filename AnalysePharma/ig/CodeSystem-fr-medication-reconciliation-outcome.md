@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-outcome | *Version*:0.1.0 |
-| Draft as of 2026-04-14 | *Computable Name*:FRMedicationReconciliationOutcome |
+| Draft as of 2026-04-30 | *Computable Name*:FRMedicationReconciliationOutcome |
 
  
 Le système de codage de la gravité de l’erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -35,7 +35,7 @@ Le système de codage de la gravité de l’erreur sur une ligne de traitement d
   "title" : "code system Interop'Santé - Gravité de l'erreur sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-14T15:34:16+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-30T09:49:26+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -87,6 +87,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
      fhir:version [ fhir:v "2.1.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_xver_r5_r4" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.xver-r5.r4" ] ;
+     fhir:version [ fhir:v "0.1.0" ]
   ] [
      fhir:id [ fhir:v "ans_fhir_fr_eprescription" ] ;
      fhir:uri [
@@ -1520,28 +1528,6 @@
        ] ;
        fhir:name [ fhir:v "Analyse-Intervention-Acceptee" ] ;
        fhir:description [ fhir:v "Acceptation de l'arrêt de paracétamol proposé par l'intervention pharmaceutique" ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Task"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://hl7.fr/ig/fhir/medication/Task/Analyse-Intervention-Acceptee-Modifiee> ;
-         fhir:reference [ fhir:v "Task/Analyse-Intervention-Acceptee-Modifiee" ]
-       ] ;
-       fhir:name [ fhir:v "Analyse-Intervention-Acceptee-Modifiee" ] ;
-       fhir:description [ fhir:v "Intervention pharmaceutique acceptée mais proposition modifiée pour cause de sous dosage" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
@@ -4545,50 +4531,6 @@
        ] ;
        fhir:name [ fhir:v "InLine-Analyse-Presc-CETAFEN-CPR" ] ;
        fhir:description [ fhir:v "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique" ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "MedicationRequest"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-Modifiee> ;
-         fhir:reference [ fhir:v "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-Modifiee" ]
-       ] ;
-       fhir:name [ fhir:v "InLine-Analyse-Presc-CETAFEN-CPR-Modifiee" ] ;
-       fhir:description [ fhir:v "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique acceptée avec modification de la proposition" ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "MedicationRequest"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-SousDose> ;
-         fhir:reference [ fhir:v "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR-SousDose" ]
-       ] ;
-       fhir:name [ fhir:v "InLine-Analyse-Presc-CETAFEN-CPR-SousDose" ] ;
-       fhir:description [ fhir:v "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique sous dosée" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"^^xsd:anyURI ;

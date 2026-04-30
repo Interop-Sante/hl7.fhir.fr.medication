@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-reconciliation-statement | *Version*:0.1.0 |
-| Draft as of 2026-04-14 | *Computable Name*:FRMedicationReconciliationMedicationStatement |
+| Draft as of 2026-04-30 | *Computable Name*:FRMedicationReconciliationMedicationStatement |
 
  
 Profil de la ressource **MedicationStatement** référencée dans la ressource **Composition** de la Fiche de Conciliation des Traitements médicamenteux (FCT). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-reconc
   "name" : "FRMedicationReconciliationMedicationStatement",
   "title" : "FR Medication Reconciliation MedicationStatement",
   "status" : "draft",
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

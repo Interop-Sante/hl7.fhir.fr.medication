@@ -8,7 +8,7 @@
 
 Profil: [FR Pharmaceutical Intervention Suggestion](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md)
 
-**Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0**: 
+**R5: Full representation of the dosage instructions (new)**: 
 
 800 mg toutes les 12 heures pendant 2 jours, 2400 mg max/j
 

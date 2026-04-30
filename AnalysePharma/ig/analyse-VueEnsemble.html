@@ -438,7 +438,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="prise-en-compte-du-résultat-dune-analyse-pharmaceutique">Prise en compte du résultat d’une analyse pharmaceutique</h3>
 
 <p>La prise en compte du résultat d’une analyse pharmaceutique est codée via l’attribut <code class="language-plaintext highlighter-rouge">Task.businessStatus</code>.
-Elle repose sur le jeu de valeurs <a href="ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.html">FrPharmaceuticalInterventionDevenirCodeValueSet</a> qui reprend les valeurs du formulaire d’intervention pharmaceutique de la SFPC en ajoutant une valeur pour “Acceptée avec modification de proposition” dans le cas où la/les proposition(s) associée(s) est/sont modifiée(s) lors de la prise en compte.</p>
+Elle repose sur le jeu de valeurs <a href="ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.html">FrPharmaceuticalInterventionDevenirCodeValueSet</a> qui reprend les valeurs du formulaire d’intervention pharmaceutique de la SFPC sans la valeur “Non renseigné” qui est le statut par défaut lorsqu’il n’y a pas d’information sur la prise en compte du résultat d’une analyse pharmaceutique et donc correspond à une absence d’utilisation de l’attribut <code class="language-plaintext highlighter-rouge">Task.businessStatus</code>.</p>
 
 <p>Le système utilisé par le prescripteur pour traiter le résultat d’une analyse pharmaceutique met à jour l’attribut <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> de la ressource <em>Task</em> correspondante selon les cas présentés dans la section suivante.</p>
 
@@ -455,26 +455,18 @@ Elle repose sur le jeu de valeurs <a href="ValueSet-fr-pharmaceutical-interventi
   <li>Validation pharmaceutique avec proposition =&gt; En fonction de l’acceptation de la proposition
     <ul>
       <li>si la proposition n’est pas acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">2</code> “Non acceptée”</li>
-      <li>si la proposition est acceptée sans modification, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
-      <li>si la proposition est modifiée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">4</code> “Acceptée avec modification de proposition(s)”</li>
+      <li>si la proposition est acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
     </ul>
   </li>
-  <li>Intervention pharmaceutique sans proposition =&gt; En fonction de l’acceptation de l’intervention
+  <li>Intervention pharmaceutique =&gt; En fonction de l’acceptation de l’intervention
     <ul>
       <li>si l’intervention n’est pas acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">2</code> “Non acceptée”</li>
       <li>si l’intervention est acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
     </ul>
   </li>
-  <li>Intervention pharmaceutique avec proposition =&gt; En fonction de l’acceptation de l’intervention
-    <ul>
-      <li>si l’intervention n’est pas acceptée, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">2</code> “Non acceptée”</li>
-      <li>si l’intervention est acceptée sans modification de proposition(s), <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">1</code> “Acceptée”</li>
-      <li>si l’intervention est acceptée avec modification de proposition(s), <code class="language-plaintext highlighter-rouge">Task.businessStatus</code> avec la valeur <code class="language-plaintext highlighter-rouge">4</code> “Acceptée avec modification de proposition(s)”</li>
-    </ul>
-  </li>
 </ul>
 
-<p>Que les propositions soient acceptées avec ou sans modification, elles font l’objet de nouvelles ressources <code class="language-plaintext highlighter-rouge">MedicationRequest</code> avec:</p>
+<p>Qu’une proposition soit acceptée avec ou sans modification, elle fait l’objet d’une/de nouvelle(s) ressource(s) <code class="language-plaintext highlighter-rouge">MedicationRequest</code> avec:</p>
 <ul>
   <li>le même <code class="language-plaintext highlighter-rouge">MedicationRequest.groupIdentifier</code>que la prescription initiale</li>
   <li>la référence à la ressource <em>Task</em> représentant le resultat de l’analyse pharmaceutique dans <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation</code></li>
@@ -521,7 +513,7 @@ Elle repose sur le jeu de valeurs <a href="ValueSet-fr-pharmaceutical-interventi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 15:34+0000">2026-04-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 30, 2026 09:49+0000">2026-04-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -8,7 +8,7 @@
 
 Profil: [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md)
 
-**Extension Definition for MedicationRequest.renderedDosageInstruction for Version 5.0**: 
+**R5: Full representation of the dosage instructions (new)**: 
 
 Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)
 

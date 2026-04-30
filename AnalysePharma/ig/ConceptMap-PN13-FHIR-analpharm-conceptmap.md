@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-analpharm-conceptmap | *Version*:0.1.0 |
-| Draft as of 2026-04-14 | *Computable Name*:FrPN13FHIRPharmaceuticalAnalysisConceptMap |
+| Draft as of 2026-04-30 | *Computable Name*:FrPN13FHIRPharmaceuticalAnalysisConceptMap |
 
  
 ConceptMap pour la conversion PN13 vers FHIR d’un résultat d’une analyse pharmaceutique 
@@ -27,7 +27,7 @@ ConceptMap pour la conversion PN13 vers FHIR d’un résultat d’une analyse ph
   "name" : "FrPN13FHIRPharmaceuticalAnalysisConceptMap",
   "title" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique",
   "status" : "draft",
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

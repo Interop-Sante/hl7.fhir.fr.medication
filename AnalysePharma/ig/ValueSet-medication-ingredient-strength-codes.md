@@ -69,7 +69,7 @@ Medication Ingredient Strength Codes
   "version" : "0.1.0",
   "name" : "MedicationIngredientStrengthCodes",
   "status" : "draft",
-  "date" : "2026-04-14T15:34:16+00:00",
+  "date" : "2026-04-30T09:49:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -88,7 +88,8 @@ Medication Ingredient Strength Codes
   }],
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength"
+      "system" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+      "version" : "5.0.0"
     }]
   }
 }

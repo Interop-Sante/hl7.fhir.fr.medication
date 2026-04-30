@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "FRInpatientMedicationRequest"] ; # 
   fhir:title [ fhir:v "FR Inpatient MedicationRequest"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-14T15:34:16+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-30T09:49:26+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -470,7 +470,8 @@
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "renderedDosageInstruction" ] ;
        fhir:short [ fhir:v "Full representation of the dosage instructions" ] ;
-       fhir:definition [ fhir:v "Optional Extension Element - found in all resources." ] ;
+       fhir:definition [ fhir:v "R5: `MedicationRequest.renderedDosageInstruction` (new:markdown)" ] ;
+       fhir:comment [ fhir:v "Element `MedicationRequest.renderedDosageInstruction` has a context of MedicationRequest based on following the parent source element upwards and mapping to `MedicationRequest`.\nElement `MedicationRequest.renderedDosageInstruction` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -496,8 +497,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/Element?version=4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -506,19 +507,12 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/Extension?version=4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
-       fhir:isSummary [ fhir:v false ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] )
+       fhir:isSummary [ fhir:v false ]
      ] [
        fhir:id [ fhir:v "MedicationRequest.extension:treatmentIntent" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
