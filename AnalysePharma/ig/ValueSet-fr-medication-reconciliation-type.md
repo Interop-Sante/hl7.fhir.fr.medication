@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder le type d’écart/erreur sur une ligne
   "title" : "value set Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-12T12:57:02+00:00",
+  "date" : "2026-05-12T16:45:43+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
