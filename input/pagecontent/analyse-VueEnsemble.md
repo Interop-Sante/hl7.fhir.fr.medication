@@ -19,9 +19,9 @@ Le résultat d'une analyse pharmaceutique, que ce soit une validation pharmaceut
 - `Task.input.valueReference`renseigné avec la/les référence(s) de la/des ligne(s) de prescription analysée(s)
 - `Task.ouput.valueCode`renseigné avec un code représentant le résultat de l'analyse pharmaceutique: validation ou intervention pharmaceutique
 
-*Note 1:* L'analyse pharmaceutique est réalisée sur une prescription représentée par le `groupIdentifier`. Cependant, si nécessaire, elle peut s'appuyer sur des lignes de prescription provenant d'autres prescrptions. Les cas échéant, ces lignes sont listées dans `Task.input.valueReference`.
+*Note 1:* L'analyse pharmaceutique est réalisée sur une prescription représentée par le `groupIdentifier`. Cependant, si nécessaire, elle peut s'appuyer sur des lignes de prescription provenant d'autres prescriptions. Les cas échéant, ces lignes sont listées dans `Task.input.valueReference`.
 
-*Note 2:* Certaines implémentations rendent nécessaire la réalisation d'une analyse pharmaceutique avant de permettre la dispensation. Cet usage est hors périmètre de cet IG. Il peut cependant être outiller en utilisant une ressource *Task* suivant le profil *FrPharmaceuticalAnalysisResultProfile* avec `Task.status` à `requested` pour représenter la demande d'analyse pharmaceutique. Afin de permettre cet usage, le profil *FrPharmaceuticalAnalysisResultProfile* ne fixe pas `Task.status`à `completed`.
+*Note 2:* Certaines implémentations rendent nécessaire la réalisation d'une analyse pharmaceutique avant de permettre la dispensation. Cet usage est hors périmètre de cet IG. Il peut cependant être outillé en utilisant une ressource *Task* suivant le profil *FrPharmaceuticalAnalysisResultProfile* avec `Task.status` à `requested` pour représenter la demande d'analyse pharmaceutique. Afin de permettre cet usage, le profil *FrPharmaceuticalAnalysisResultProfile* ne fixe pas `Task.status`à `completed`.
 
 ### Validation pharmaceutique
 
