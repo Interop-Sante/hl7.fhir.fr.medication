@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-type | *Version*:0.1.0 |
-| Draft as of 2026-04-30 | *Computable Name*:FRMedicationReconciliationType |
+| Draft as of 2026-05-12 | *Computable Name*:FRMedicationReconciliationType |
 
  
 Le système de codage du type d’écart/erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -35,7 +35,7 @@ Le système de codage du type d’écart/erreur sur une ligne de traitement d’
   "title" : "code system Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-30T09:49:26+00:00",
+  "date" : "2026-05-12T12:57:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

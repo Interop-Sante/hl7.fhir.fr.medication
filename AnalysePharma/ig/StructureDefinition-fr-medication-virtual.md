@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual | *Version*:0.1.0 |
-| Draft as of 2026-04-30 | *Computable Name*:FRMedicationVirtual |
+| Draft as of 2026-05-12 | *Computable Name*:FRMedicationVirtual |
 
  
 Virtual medication composed of one to many substances. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-virtua
   "title" : "FR Medication Virtual",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-04-30T09:49:26+00:00",
+  "date" : "2026-05-12T12:57:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

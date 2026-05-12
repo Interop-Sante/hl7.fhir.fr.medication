@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle | *Version*:0.1.0 |
-| Draft as of 2026-04-30 | *Computable Name*:FrIsVehicle |
+| Draft as of 2026-05-12 | *Computable Name*:FrIsVehicle |
 
 Medication component which is the vehicle of the compound Medication
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-is-vehicle.csv), 
   "name" : "FrIsVehicle",
   "title" : "Medication component which is the vehicle of the compound Medication",
   "status" : "draft",
-  "date" : "2026-04-30T09:49:26+00:00",
+  "date" : "2026-05-12T12:57:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

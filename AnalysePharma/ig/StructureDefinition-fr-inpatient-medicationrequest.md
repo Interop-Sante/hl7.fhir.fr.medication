@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest | *Version*:0.1.0 |
-| Draft as of 2026-04-30 | *Computable Name*:FRInpatientMedicationRequest |
+| Draft as of 2026-05-12 | *Computable Name*:FRInpatientMedicationRequest |
 
  
 French inpatient medication request profile 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-medicat
   "name" : "FRInpatientMedicationRequest",
   "title" : "FR Inpatient MedicationRequest",
   "status" : "draft",
-  "date" : "2026-04-30T09:49:26+00:00",
+  "date" : "2026-05-12T12:57:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

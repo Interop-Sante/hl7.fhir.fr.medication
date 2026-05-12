@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-sources | *Version*:0.1.0 |
-| Draft as of 2026-04-30 | *Computable Name*:FRMedicationHistorySources |
+| Draft as of 2026-05-12 | *Computable Name*:FRMedicationHistorySources |
 
 Sources des lignes du Bilan Médicamenteux que représente la ressource **Composition** ou de chacune de ses lignes que représente la ressource **MedicationStatement** référencée par l’élément **entry** de la ressource **Composition** (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "version" : "0.1.0",
   "name" : "FRMedicationHistorySources",
   "status" : "draft",
-  "date" : "2026-04-30T09:49:26+00:00",
+  "date" : "2026-05-12T12:57:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
