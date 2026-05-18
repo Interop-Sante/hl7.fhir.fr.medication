@@ -13,7 +13,7 @@ Description: "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) 
 * output[0].type.text = "résultat de l'analyse"
 * output[=].valueCode = #INTERVENTION
 * output[+].type.text = "commentaire"
-* output[=].valueString = "La patiente souffre égaleemnt d'hypertension mais aucun médicament hypertenseur n'a été prescrit à l'hospitalisation."
+* output[=].valueString = "La patiente souffre également d'hypertension mais aucun médicament hypertenseur n'a été prescrit à l'hospitalisation."
 * output[+].type.text = "type d'intervention"
 * output[=].valueCodeableConcept = #1 "Ajout (prescription nouvelle)"
 * output[+].type.text = "type de problème"

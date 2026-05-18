@@ -1,12 +1,12 @@
-Instance: PN13-FHIR-analpharm-conceptmap
+Instance: PN13-FHIR-analpharm-interv-avec-prop-conceptmap
 InstanceOf: ConceptMap
 Usage: #definition
-* name = "FrPN13FHIRPharmaceuticalAnalysisConceptMap"
-* title = "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique"
+* name = "FrPN13FHIRPharmaceuticalAnalysisInterventionSansPropositionConceptMap"
+* title = "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type intervention pharmaceutique avec proposition"
 * status = #draft
 * version = "0.1"
 * publisher = "Interop'Santé"
-* description = "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique"
+* description = "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique avec proposition"
 * jurisdiction[0].coding[0].code = $ISO3166#FRA
 * jurisdiction[0].coding[0].display = "France"
 // A voir quel uri peut être utiliser pour le schema XSD PN13 idéalement une url sous le domaine interopsante.org. L'url indiquée n'est qu'un exemple, elle est à modifier pour mettre une url officielle
@@ -19,21 +19,13 @@ Usage: #definition
 * group[=].element[+].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Identification_pharmacien
 * group[=].element[=].target[0].code = #Task.owner
 * group[=].element[=].target[=].equivalence = #relatedto
+* group[=].element[=].target[=].comment = "La référence Task.owner est à constituer à partir des sous-éléments <Identifiant> et <Domaine_identification>"
 * group[=].element[+].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Id_pharmacien
 * group[=].element[=].target[0].code = #Task.owner
 * group[=].element[=].target[=].equivalence = #relatedto
+* group[=].element[=].target[=].comment = "La référence Task.owner est à constituer à partir de l'élément <Id_pharmacien>"
 * group[+].element[0].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Validation_pharm
 * group[=].element[=].target[0].code = #Task.output
-* group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Validation_pharm
-* group[=].element[=].target[=].dependsOn[=].value = "1"
-* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Cré_arr_mod_val
-* group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
-* group[=].element[=].target[=].product[0].property = #Task.output.type.text
-* group[=].element[=].target[=].product[=].value = "résultat de l'analyse"
-* group[=].element[=].target[=].product[+].property = #Task.output.valueCode
-* group[=].element[=].target[=].product[=].value = "VALIDATION"
-* group[=].element[+].target[0].code = #Task.output
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Validation_pharm
 * group[=].element[=].target[=].dependsOn[=].value = "2"
@@ -51,12 +43,12 @@ Usage: #definition
 * group[=].element[=].target[=].equivalence = #equal
 * group[=].element[=].target[=].product[0].property = #Task.output.type.text
 * group[=].element[=].target[=].product[=].value = "commentaire"
-* group[+].element[0].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Id_élément_prescr
+* group[+].element[0].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Elément_lié/Id_Elément_lié
 * group[=].element[=].target[0].code = #Task.input.valueReference
 * group[=].element[=].target[=].equivalence = #relatedto
-* group[=].element[=].target[=].comment = "Permet de retrouver la ressource MedicationRequest analysée via MedicationRequest.identifier.value"
-* group[=].element[=].target[=].dependsOn[0].property = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Cré_arr_mod_val
-* group[=].element[=].target[=].dependsOn[=].value = "{Absent}"
+* group[=].element[=].target[=].comment = "Permet de retrouver la/les ressource(s) MedicationRequest analysée(s) via MedicationRequest.identifier.value"
+* group[=].element[=].target[=].product[0].property = #Task.input.type.text
+* group[=].element[=].target[=].product[=].value = "ligne de prescription analysée"
 * group[+].element[0].code = $PN13Schema#Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Id_élément_prescr
 * group[=].element[=].target[0].code = #Task.output.valueReference
 * group[=].element[=].target[=].equivalence = #relatedto

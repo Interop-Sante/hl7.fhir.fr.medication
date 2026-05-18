@@ -12,7 +12,5 @@ Description: "Validation d'une prescription de morphine avec proposition d'ajout
 * input.valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-Morphine"
 * output[0].type.text = "résultat de l'analyse"
 * output[=].valueCode = #VALIDATION
-* output[+].type.text = "commentaire"
-* output[=].valueString = "Administration de laxatif recommandée pour les traitements à la morphine"
-* output[+].type.text = "proposition"
-* output[=].valueReference.reference = "MedicationRequest/InLine-Analyse-Presc-MACROGOL"
+* output[+].type.text = "intervention pharmaceutique liée"
+* output[=].valueReference.reference = "Task/Analyse-Intervention-Type1-MACROGOL"

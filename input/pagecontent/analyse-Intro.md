@@ -8,14 +8,17 @@
 
 ## L'analyse pharmaceutique
 
-Le processus d'analyse pharmaceutique d'une presctipion comporte
+L'analyse pharmaceutique est définie dans le lexique de Pharmacie Clinique 2025 de la SFPC de la manière suivante:
+"L'analyse pharmaceutique de l'ordonnance (ou de la prescription) ou l'analyse pharmaceutique liée à une demande de médicament ou autre produit de santé à prescription médicale facultative fait partie intégrante de l'acte de dispensation et permet la vérification, des posologies, des doses, des durées de traitement, du mode et des rythmes d'administration, de l'absence de contre-indications, d'interactions et de redondances médicamenteuses. Le contenu d'une ordonnance est défini dans l'article R5132-3. L'analyse pharmaceutique de l'ordonnance peut s'inscrire dans la démarche d'expertise pharmaceutique clinique, dans un objectif commun de détection d'éventuels problèmes lies a la thérapeutique. 
+À ne pas confondre avec le terme «validation pharmaceutique» qui correspond à une action interne à une pharmacie concluant une analyse pharmaceutique, autorisant la délivrance de produits de santé."
+
+Le processus d'analyse pharmaceutique d'une presctipion comporte donc
 
 - Une analyse règlementaire selon article R5194 du CSP vérifiant que la prescription comporte: le nom, la qualité du prescripteur, son identifiant, …, les nom et prénoms, le sexe et l'âge du malade et, si nécessaire, sa taille et son poids, la dénomination du médicament ou du produit prescrit, ou le principe actif du médicament désigné par sa dénomination commune, la posologie et …, la durée de traitement ou .., le nombre de renouvellements de la prescription
-- Une analyse pharmaco-thérapeutique de l’ordonnance : elle évalue la pertinence de la prescription en lien avec les objectifs thérapeutiques. Elle est réalisée sur les posologies, les contre-indications physiopathologiques, les interactions médicamenteuses, l’adaptation à la fonction rénale, etc.
+- Une analyse pharmaco-thérapeutique de l’ordonnance : elle évalue la pertinence de la prescription en lien avec les objectifs thérapeutiques. Elle s'assure du respect des posologies, et contrôle les contre-indications physiopathologiques, les interactions médicamenteuses, l’adaptation à la fonction rénale, etc.
 
 Le pharmacien ayant réalisé l'analyse peut ensuite réaliser une optimisation pharmaceutique de la prise en charge médicamenteuse en formulant un avis pharmaceutique.
 
-Dans le contexte hospitalier, le pharmacien peut rédiger une intervention pharmaceutique (IP) afin de transmettre au prescripteur un problème détecté lors de l’analyse. L’analyse peut se faire de manière centralisée à la PUI ou décentralisée directement dans le service de soin.   
 
 ### Périmètre couvert
 
@@ -24,20 +27,13 @@ L'analyse pharmaceutique réalisée en officine est principalement au niveau du 
 
 ### L'analyse pharmaceutique dans le contexte hospitalier
 
-Dans le contexte hospitalier, pour des raisons opérationnelles, l'analyse pharmaceutique peut être réalisée en amont de la dispensation/administration du traitement ou lorsque le traitement a déjà débuté.
+Dans le contexte hospitalier l'analyse pharmaceutique peut se faire de manière centralisée à la PUI ou décentralisée directement dans le service de soin. Et,pour des raisons opérationnelles, elle peut être réalisée en amont de la dispensation/administration du traitement ou lorsque le traitement a déjà débuté.
+ 
+L'analyse pharmaceutique se traduit par un avis sur les lignes de prescription analysées. L'avis peut être:
 
-L'analyse pharmaceutique peut avoir différents niveaux de profondeur:
-
-- **Niveau 1** Analyse d'une ligne de prescription prioritaire (médicaments soumis à validation pharmaceutique ex. médicaments à risque, anticoagulants, inhibiteurs ou inducteurs enzymatiques puissants, antiinfectieux, médicaments remboursés en sus du GHS, chimiothérapies orales…) même si elle prend globalement le contexte de l’ensemble de la prescription.
-- **Niveau 2** Analyse de la prescription dans son ensemble mais pas forcément de manière exhaustive sur l’ensemble du contexte patient (en fonction des critères d’analyse mis en œuvre)
-- **Niveau 3** L’ensemble des éléments disponibles sur le patient: ensemble des traitements (y compris historique et conciliation médicamenteuse), pathologies, antécédents, objectifs thérapeutiques
-
-Quel que soit le niveau de l'analyse pharmaceutique elle se traduit par un avis sur les lignes de prescription analysées. L'avis peut être:
-
-- une validation
-  - valisation simple (avec ou sans commentaire)
-  - validation (avec ou sans commentaire) associée à une ou plusieurs proposition(s)
-- une intervention pharmaceutique
+- une validation simple (avec ou sans commentaire)
+- une validation associée à une ou plusieurs intervention(s) pharmaceutique(s) de type ajout
+- une intervention pharmaceutique sans validation
 
 #### Intervention pharmaceutique
 

@@ -1,7 +1,7 @@
-Instance: Analyse-Validation-Proposition-Trad-PN13-FHIR
+Instance: Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR
 InstanceOf: FRInpatientPharmaceuticalAnalysisResultProfile
 Usage: #example
-Description: "Validation pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique"
+Description: "Intervention pharmaceutique associée à une validation pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique"
 * groupIdentifier.value = "10723"
 * status = #completed
 * intent = #proposal
@@ -11,7 +11,7 @@ Description: "Validation pharmaceutique avec proposition pour exemple traduction
 * input.type.text = "ligne de prescription analysée"
 * input.valueReference.reference = "MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol"
 * output[0].type.text = "résultat de l'analyse"
-* output[=].valueCode = #VALIDATION
+* output[=].valueCode = #INTERVENTION
 * output[+].type.text = "commentaire"
 * output[=].valueString = "Suggestion pour éviter le dépassement de la limite journalière par le patient"
 * output[+].type.text = "proposition"

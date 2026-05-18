@@ -17,7 +17,6 @@ Description: "French Pharmaceutical Analysis Result profile"
 
 * owner 1..
 
-* input 1..
 * input.type.text = "ligne de prescription analysée"
 * input.value[x] only Reference
 * input.valueReference only Reference(FRInpatientMedicationRequest)
@@ -32,7 +31,8 @@ Description: "French Pharmaceutical Analysis Result profile"
     comment 0..1 and
     type 0..1 and
     problem 0..1 and
-    suggestion 0.. 
+    suggestion 0.. and
+    intervention 0..
 * output[result].type.text = "résultat de l'analyse"
 * output[result].value[x] only code
 * output[result].valueCode from FrPharmaceuticalAnalysisResultCodeValueSet (required)
@@ -47,3 +47,6 @@ Description: "French Pharmaceutical Analysis Result profile"
 * output[suggestion].type.text = "proposition"
 * output[suggestion].value[x] only Reference
 * output[suggestion].valueReference only Reference(FRInpatientPharmaceuticalInterventionSuggestionProfile)
+* output[intervention].type.text = "intervention pharmaceutique liée"
+* output[intervention].value[x] only Reference
+* output[intervention].valueReference only Reference(FRInpatientPharmaceuticalAnalysisResultProfile)
