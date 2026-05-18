@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="PN13-FHIR-analpharm-interv-sans-prop-conceptmap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CarteDeConcepts PN13-FHIR-analpharm-interv-sans-prop-conceptmap</b></p><a name="PN13-FHIR-analpharm-interv-sans-prop-conceptmap"> </a><a name="hcPN13-FHIR-analpharm-interv-sans-prop-conceptmap"> </a><p>Mapping de https://interopsante.org/pn13/xsd vers <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FR Pharmaceutical Analysis Result</a></p><br/><p><b>Groupe 1 </b>Mapping de <code>terminologie de référence (CodeSystem) non spécifiée</code> to <code>terminologie de référence (CodeSystem) non spécifiée</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Dh_validation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Task.authoredOn</td><td>La date et l'heure sont à mettre au format FHIR avec offset</td></tr><tr><td>Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Identification_pharmacien</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Task.owner</td><td>La référence Task.owner est à constituer à partir des sous-éléments &lt;Identifiant&gt; et &lt;Domaine_identification&gt;</td></tr><tr><td>Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Id_pharmacien</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Task.owner</td><td>La référence Task.owner est à constituer à partir de l'élément &lt;Id_pharmacien&gt;</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>terminologie de référence (CodeSystem) non spécifiée</code> to <code>terminologie de référence (CodeSystem) non spécifiée</code></p><table class="grid"><tr><td colspan="4"><b>Détails du concept source</b></td><td><b>relation</b></td><td colspan="4"><b>Détails du concept cible</b></td></tr><tr><td colspan="2"><b>Codes</b> de </td><td><b>Validation_pharm</b></td><td><b>Cré_arr_mod_val</b></td><td/><td colspan="2"><b>Codes</b> de </td><td><b>Task.output.type.text</b></td><td><b>Task.output.valueCode</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Validation_pharm</td><td style="border-left-width: 0px"/><td>2</td><td>{Absent ou vide}</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">Task.output</td><td style="border-left-width: 0px"/><td>résultat de l'analyse</td><td>INTERVENTION</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>terminologie de référence (CodeSystem) non spécifiée</code> to <code>terminologie de référence (CodeSystem) non spécifiée</code></p><table class="grid"><tr><td colspan="2"><b>Détails du concept source</b></td><td><b>relation</b></td><td colspan="3"><b>Détails du concept cible</b></td></tr><tr><td colspan="2"><b>Codes</b> de </td><td/><td colspan="2"><b>Codes</b> de </td><td><b>Task.output.type.text</b></td></tr><tr><td style="border-right-width: 0px">Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Commentaire_pharmacien</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Task.output.valueString</td><td style="border-left-width: 0px"/><td>commentaire</td></tr><tr><td style="border-right-width: 0px">Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Commentaire_structuré/Texte</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal" title="equal">is equal to</a></td><td style="border-right-width: 0px">Task.output.valueString</td><td style="border-left-width: 0px"/><td>commentaire</td></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>terminologie de référence (CodeSystem) non spécifiée</code> to <code>terminologie de référence (CodeSystem) non spécifiée</code></p><table class="grid"><tr><td colspan="2"><b>Détails du concept source</b></td><td><b>relation</b></td><td colspan="3"><b>Détails du concept cible</b></td><td><b>Commentaire</b></td></tr><tr><td colspan="2"><b>Codes</b> de </td><td/><td colspan="2"><b>Codes</b> de </td><td><b>Task.input.type.text</b></td><td/></tr><tr><td style="border-right-width: 0px">Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Id_élément_prescr</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td style="border-right-width: 0px">Task.input.valueReference</td><td style="border-left-width: 0px"/><td>ligne de prescription analysée</td><td>Permet de retrouver la ressource MedicationRequest analysée via MedicationRequest.identifier.value</td></tr></table></div>
+  </text>
+  <url value="https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-analpharm-interv-sans-prop-conceptmap"/>
+  <version value="0.1.0"/>
+  <name value="FrPN13FHIRPharmaceuticalAnalysisInterventionSansPropositionConceptMap"/>
+  <title value="Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition"/>
+  <status value="draft"/>
+  <date value="2026-05-18T17:19:20+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <description value="ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <sourceUri value="https://interopsante.org/pn13/xsd"/>
+  <targetUri value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"/>
+  <group>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Dh_validation"/>
+      <target>
+        <code value="Task.authoredOn"/>
+        <equivalence value="equivalent"/>
+        <comment value="La date et l'heure sont à mettre au format FHIR avec offset"/>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Identification_pharmacien"/>
+      <target>
+        <code value="Task.owner"/>
+        <equivalence value="relatedto"/>
+        <comment value="La référence Task.owner est à constituer à partir des sous-éléments &lt;Identifiant&gt; et &lt;Domaine_identification&gt;"/>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Id_pharmacien"/>
+      <target>
+        <code value="Task.owner"/>
+        <equivalence value="relatedto"/>
+        <comment value="La référence Task.owner est à constituer à partir de l'élément &lt;Id_pharmacien&gt;"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Validation_pharm"/>
+      <target>
+        <code value="Task.output"/>
+        <equivalence value="equivalent"/>
+        <dependsOn>
+          <property value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Validation_pharm"/>
+          <value value="2"/>
+        </dependsOn>
+        <dependsOn>
+          <property value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Cré_arr_mod_val"/>
+          <value value="{Absent ou vide}"/>
+        </dependsOn>
+        <product>
+          <property value="Task.output.type.text"/>
+          <value value="résultat de l'analyse"/>
+        </product>
+        <product>
+          <property value="Task.output.valueCode"/>
+          <value value="INTERVENTION"/>
+        </product>
+      </target>
+    </element>
+  </group>
+  <group>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Commentaire_pharmacien"/>
+      <target>
+        <code value="Task.output.valueString"/>
+        <equivalence value="equal"/>
+        <product>
+          <property value="Task.output.type.text"/>
+          <value value="commentaire"/>
+        </product>
+      </target>
+    </element>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Commentaire_structuré/Texte"/>
+      <target>
+        <code value="Task.output.valueString"/>
+        <equivalence value="equal"/>
+        <product>
+          <property value="Task.output.type.text"/>
+          <value value="commentaire"/>
+        </product>
+      </target>
+    </element>
+  </group>
+  <group>
+    <element>
+      <code value="Messages/M_Compte_rendu_analyse/Compte_rendu_pharm/Elément_prescr_parm/Id_élément_prescr"/>
+      <target>
+        <code value="Task.input.valueReference"/>
+        <equivalence value="relatedto"/>
+        <comment value="Permet de retrouver la ressource MedicationRequest analysée via MedicationRequest.identifier.value"/>
+        <product>
+          <property value="Task.input.type.text"/>
+          <value value="ligne de prescription analysée"/>
+        </product>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

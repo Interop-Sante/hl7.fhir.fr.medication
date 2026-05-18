@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-analyse-pharmaceutique-logical | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FrAnalysePharmaceutiqueLogical |
+| Draft as of 2026-05-18 | *Computable Name*:FrAnalysePharmaceutiqueLogical |
 
  
 Structure du résultat d’analyse pharmaceutique (validation ou intervention pharmacetique) 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-analyse-pharmaceu
   "name" : "FrAnalysePharmaceutiqueLogical",
   "title" : "Résultat d'analyse pharmaceutique",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

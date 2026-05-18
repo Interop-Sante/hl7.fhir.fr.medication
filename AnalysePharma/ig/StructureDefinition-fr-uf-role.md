@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-uf-role | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FrUFRole |
+| Draft as of 2026-05-18 | *Computable Name*:FrUFRole |
 
 Caracterization of the role of a functionnal unit for the patient encounter
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-uf-role.csv), [Ex
   "name" : "FrUFRole",
   "title" : "UF Role",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

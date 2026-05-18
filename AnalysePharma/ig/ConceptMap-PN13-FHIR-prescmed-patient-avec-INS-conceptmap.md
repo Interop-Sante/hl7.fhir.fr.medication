@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-prescmed-patient-avec-INS-conceptmap | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FrPN13FHIRMedicationPrescriptionPatientINSConceptMap |
+| Draft as of 2026-05-18 | *Computable Name*:FrPN13FHIRMedicationPrescriptionPatientINSConceptMap |
 
  
 ConceptMap pour la conversion PN13 vers FHIR d’un patient avec INS qualifiée d’une prescritpion de médicament 
@@ -27,7 +27,7 @@ ConceptMap pour la conversion PN13 vers FHIR d’un patient avec INS qualifiée 
   "name" : "FrPN13FHIRMedicationPrescriptionPatientINSConceptMap",
   "title" : "Conversion PN13 vers FHIR pour un patient avec INS qualifiée d'une prescription de médicaments",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

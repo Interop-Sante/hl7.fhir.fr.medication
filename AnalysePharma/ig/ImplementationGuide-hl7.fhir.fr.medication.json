@@ -10,7 +10,7 @@
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -748,6 +748,18 @@
         "valueString" : "Task"
       }],
       "reference" : {
+        "reference" : "Task/Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR",
+      "description" : "Intervention pharmaceutique associée à une validation pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
         "reference" : "Task/Analyse-Intervention-NonAcceptee"
       },
       "name" : "Analyse-Intervention-NonAcceptee",
@@ -788,6 +800,18 @@
       },
       "name" : "Analyse-Intervention-Type1-DOSTINEX",
       "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type1-MACROGOL"
+      },
+      "name" : "Analyse-Intervention-Type1-MACROGOL",
+      "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 7 Effet indésirable",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
     },
     {
@@ -1012,10 +1036,10 @@
         "valueString" : "Task"
       }],
       "reference" : {
-        "reference" : "Task/Analyse-Validation-Proposition-Trad-PN13-FHIR"
+        "reference" : "Task/Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR"
       },
-      "name" : "Analyse-Validation-Proposition-Trad-PN13-FHIR",
-      "description" : "Validation pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "name" : "Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR",
+      "description" : "Validation pharmaceutique associée à une intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
     },
     {
@@ -1300,10 +1324,34 @@
         "valueString" : "ConceptMap"
       }],
       "reference" : {
-        "reference" : "ConceptMap/PN13-FHIR-analpharm-conceptmap"
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-interv-sans-prop-conceptmap"
       },
-      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique",
-      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique",
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-interv-avec-prop-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type intervention pharmaceutique avec proposition",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique avec proposition",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-val-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type validation",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type validation",
       "exampleBoolean" : false
     },
     {

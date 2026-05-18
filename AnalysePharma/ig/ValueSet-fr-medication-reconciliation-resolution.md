@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-resolution | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FRMedicationReconciliationResolution |
+| Draft as of 2026-05-18 | *Computable Name*:FRMedicationReconciliationResolution |
 
  
 Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -54,7 +54,7 @@ Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur u
   "title" : "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

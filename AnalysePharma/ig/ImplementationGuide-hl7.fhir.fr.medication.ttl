@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "MED"] ; # 
   fhir:title [ fhir:v "Guide d'implémentation du médicament"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-05-12T16:45:43+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-05-18T17:19:20+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -78,7 +78,7 @@
        fhir:l <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
-     fhir:version [ fhir:v "5.2.0" ]
+     fhir:version [ fhir:v "5.3.0" ]
   ] [
      fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
      fhir:uri [
@@ -1567,6 +1567,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <https://hl7.fr/ig/fhir/medication/Task/Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR> ;
+         fhir:reference [ fhir:v "Task/Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR" ] ;
+       fhir:description [ fhir:v "Intervention pharmaceutique associée à une validation pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
+         fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <https://hl7.fr/ig/fhir/medication/Task/Analyse-Intervention-NonAcceptee> ;
          fhir:reference [ fhir:v "Task/Analyse-Intervention-NonAcceptee" ]
        ] ;
@@ -1638,6 +1660,28 @@
        ] ;
        fhir:name [ fhir:v "Analyse-Intervention-Type1-DOSTINEX" ] ;
        fhir:description [ fhir:v "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
+         fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://hl7.fr/ig/fhir/medication/Task/Analyse-Intervention-Type1-MACROGOL> ;
+         fhir:reference [ fhir:v "Task/Analyse-Intervention-Type1-MACROGOL" ]
+       ] ;
+       fhir:name [ fhir:v "Analyse-Intervention-Type1-MACROGOL" ] ;
+       fhir:description [ fhir:v "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 7 Effet indésirable" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
@@ -2051,11 +2095,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://hl7.fr/ig/fhir/medication/Task/Analyse-Validation-Proposition-Trad-PN13-FHIR> ;
-         fhir:reference [ fhir:v "Task/Analyse-Validation-Proposition-Trad-PN13-FHIR" ]
+         fhir:l <https://hl7.fr/ig/fhir/medication/Task/Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR> ;
+         fhir:reference [ fhir:v "Task/Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR" ]
        ] ;
-       fhir:name [ fhir:v "Analyse-Validation-Proposition-Trad-PN13-FHIR" ] ;
-       fhir:description [ fhir:v "Validation pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique" ] ;
+       fhir:name [ fhir:v "Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR" ] ;
+       fhir:description [ fhir:v "Validation pharmaceutique associée à une intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
@@ -2558,11 +2602,53 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-analpharm-conceptmap> ;
-         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-analpharm-conceptmap" ]
+         fhir:l <https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-analpharm-interv-sans-prop-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-analpharm-interv-sans-prop-conceptmap" ]
        ] ;
-       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique" ] ;
-       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique" ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-analpharm-interv-avec-prop-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-analpharm-interv-avec-prop-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type intervention pharmaceutique avec proposition" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique avec proposition" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://hl7.fr/ig/fhir/medication/ConceptMap/PN13-FHIR-analpharm-val-conceptmap> ;
+         fhir:reference [ fhir:v "ConceptMap/PN13-FHIR-analpharm-val-conceptmap" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type validation" ] ;
+       fhir:description [ fhir:v "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type validation" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

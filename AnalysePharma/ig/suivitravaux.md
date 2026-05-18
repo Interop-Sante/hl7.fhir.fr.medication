@@ -64,12 +64,12 @@ La communauté SIPh met à disposition les travaux préliminaires qu’elle entr
 * ANS 
 * Nicolas Riss
  
+* Dedalus 
+* Mathieu Grivois
+ 
 * Phast 
 * Guillame Arras
 * Julien Montreuil
- 
-* Dedalus 
-* Mathieu Grivois
  
 * Enovacom 
 * Georges-Alexandre Chastin
@@ -90,8 +90,14 @@ La communauté SIPh met à disposition les travaux préliminaires qu’elle entr
 * CHU de Tours 
 * Julie Jalleau
  
+* Doctolib 
+* Marine Rodriguez
+ 
 * Logipren 
 * Aurore Berthe-Aucejo
+ 
+* APHM 
+* Marjorie Roudot
  
 * APHP 
 * David Ouagne

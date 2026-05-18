@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-on-admission-retroactive-reconciliation-composition | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FROnAdmissionRetroactiveReconciliationComposition |
+| Draft as of 2026-05-18 | *Computable Name*:FROnAdmissionRetroactiveReconciliationComposition |
 
  
 Profil de la ressource **Composition** de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d’admission. 
@@ -64,7 +64,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-on-admission-retr
   "name" : "FROnAdmissionRetroactiveReconciliationComposition",
   "title" : "FR On Admission Retroactive Reconciliation Composition",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

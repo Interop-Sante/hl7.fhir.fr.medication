@@ -29,9 +29,7 @@ Profil: [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pha
 
 > **output****type**: résultat de l'analyse**value**: VALIDATION
 
-> **output****type**: commentaire**value**: Administration de laxatif recommandée pour les traitements à la morphine
-
-> **output****type**: proposition**value**: [MedicationRequest : extension = 1 sachet par jour le matin; status = active; intent = proposal; priority = routine; medication[x] = MACROGOL BGA 10G BUV SACH; authoredOn = 2025-07-23 10:56:00+0100; groupIdentifier = Presc-3657; note = Prescription textuelle: MACROGOL 10G : 1 sachet par jour le matin](MedicationRequest-InLine-Analyse-Presc-MACROGOL.md)
+> **output****type**: intervention pharmaceutique liée**value**: [Task : groupIdentifier = Presc-3657; status = completed; intent = proposal; authoredOn = 2025-07-23 10:56:00+0100; performerType = Pharmacien](Task-Analyse-Intervention-Type1-MACROGOL.md)
 
 
 
@@ -76,16 +74,10 @@ Profil: [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pha
   },
   {
     "type" : {
-      "text" : "commentaire"
-    },
-    "valueString" : "Administration de laxatif recommandée pour les traitements à la morphine"
-  },
-  {
-    "type" : {
-      "text" : "proposition"
+      "text" : "intervention pharmaceutique liée"
     },
     "valueReference" : {
-      "reference" : "MedicationRequest/InLine-Analyse-Presc-MACROGOL"
+      "reference" : "Task/Analyse-Intervention-Type1-MACROGOL"
     }
   }]
 }

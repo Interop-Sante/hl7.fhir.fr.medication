@@ -343,7 +343,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Elle résulte en:</p>
 <ul>
-  <li>une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a></li>
+  <li>une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a> pour le résultat de l’analyse</li>
+  <li>éventuellement une à plusieur(s) ressource(s) <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a> pour la/les intervention(s) pharmaceutique de type ajout en complément de validation</li>
   <li>éventuellement une ou plusieurs ressource(s) <em>MedicationRequest</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.html">FrInpatientPharmaceuticalInterventionSuggestionProfile</a> si une ou plusieurs propositions est/sont associée(s) au résultat de l’analyse pharmaceutique (que le resulta soit une validation pharmaceutique ou une intervention pharmaceutique).</li>
 </ul>
 
@@ -356,7 +357,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>La/les ligne(s) de prescription analysée(s) sont représentées par les éléments <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code> pour lesquels l’élément <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Cré_arr_mod_val</code> est absent ou vide.
 Même si l’ensemble de la ligne de prescription est reprise dans l’élément <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code>, le seul élément à prendre en compte est <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Id_élement_prescr</code> afin de pouvoir retrouver la ressource <em>MedicationRequest</em> correspondante créée lors de la prescription initiale afin d’y faire référence dans la ressource <em>Task</em> créée pour représenter le resultat de l’analyse pharmaceutique.</p>
 
-<h5 id="etape-2-créer-lales-éventuelles-ressources-medicationrequest-correspondant-àaux-éventuelles-propositions">Etape 2: créer la/les éventuelle(s) ressource(s) <em>MedicationRequest</em> correspondant à/aux éventuelle(s) proposition(s)</h5>
+<h5 id="etape-2-créer-lales-éventuelles-ressources-medicationrequest-correspondant-àaux-éventuelles-propositions-de-lintervention-pharmaceutique">Etape 2: créer la/les éventuelle(s) ressource(s) <em>MedicationRequest</em> correspondant à/aux éventuelle(s) proposition(s) de l’intervention pharmaceutique</h5>
 
 <p>La/les éventuelle(s) proposition(s) sont représentées par les éléments <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code> pour lesquels l’élément <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Cré_arr_mod_val</code> a pour valeur <code class="language-plaintext highlighter-rouge">C</code>.</p>
 
@@ -372,20 +373,40 @@ Même si l’ensemble de la ligne de prescription est reprise dans l’élément
   <li>un élément <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation.refence</code> doit être prévu pour référencer la ressource <em>Task</em> représentant le resultat de l’analyse pharmaceutique (cf. étape 4)</li>
 </ul>
 
-<h5 id="etape-3-créer-la-ressource-task-correspondant-au-résultat-de-lanalyse-pharmaceutique">Etape 3: créer la ressource <em>Task</em> correspondant au résultat de l’analyse pharmaceutique</h5>
+<p><strong>Note1</strong>: La valeur <code class="language-plaintext highlighter-rouge">A</code> de <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Cré_arr_mod_val</code> n’est utilisée que dans le cas de substitution automatique sans analyse pharmaceutique. Elle n’est donc pas prise en compte ici.</p>
+
+<h5 id="etape-3-créer-lales-ressources-task-correspondant-aux-résultats-de-lanalyse-pharmaceutique">Etape 3: créer la/les ressource(s) <em>Task</em> correspondant au(x) résultat(s) de l’analyse pharmaceutique</h5>
+
+<h6 id="etape-31-sil-y-a-au-moins-un-messagem_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharm-avec-messagem_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmvalidation_pharm-avec-comme-valeur-1-et-messagem_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmcré_arr_mod_val-absent-ou-vide">Etape 3.1: S’il y a au moins un <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code> avec <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Validation_pharm</code> avec comme valeur 1 et <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Cré_arr_mod_val</code> absent ou vide</h6>
 
 <ul>
-  <li>Créer une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-analpharm-conceptmap]</li>
-  <li>Pour chaque ligne de prescription analysée, renseigner un attribut <code class="language-plaintext highlighter-rouge">Task.input</code> avec
+  <li>Créer une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-analpharm-val-conceptmap]</li>
+  <li>Pour chaque ligne de prescription analysée et validée (i.e. avec <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Validation_pharm</code> à la valeur 1 et <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Cré_arr_mod_val</code> absent ou vide), renseigner un attribut <code class="language-plaintext highlighter-rouge">Task.input</code> avec
     <ul>
       <li><code class="language-plaintext highlighter-rouge">Task.input.type.text</code> renseigné avec <code class="language-plaintext highlighter-rouge">ligne de prescription analysée</code></li>
-      <li><code class="language-plaintext highlighter-rouge">Task.input.reference</code> renseigné avec la référence de la ressource <em>MedicationRequest</em> correspondant à la ligne analysée (cf. étape 1)</li>
+      <li><code class="language-plaintext highlighter-rouge">Task.input.reference</code> renseigné avec la référence de la ressource <em>MedicationRequest</em> correspondant à la ligne analysée et validée (cf. étape 1 sur comment retrouver la référence)</li>
     </ul>
   </li>
-  <li>Pour chaque proposition, renseigner un attribut <code class="language-plaintext highlighter-rouge">Task.output</code>avec
+</ul>
+
+<h6 id="etape-32-pour-chaque-messagem_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharm-avec-messagem_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmvalidation_pharm-avec-comme-valeur-2-et-messagem_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmelément_lié-absent-ou-m_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmelément_liétype_liaison_élément-avec-une-valeur-différente-de-1-5-6-ou-7">Etape 3.2: Pour chaque <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code> avec <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Validation_pharm</code> avec comme valeur 2 et (<code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Elément_lié</code> absent ou <code class="language-plaintext highlighter-rouge">M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Elément_lié/Type_liaison_élément</code> avec une valeur différente de 1, 5, 6 ou 7)</h6>
+
+<ul>
+  <li>Créer une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-analpharm-interv-sans-prop-conceptmap]</li>
+</ul>
+
+<h6 id="etape-33-si-m_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmelément_lié-est-présent-et-m_compte_rendu_analyse_pharmcompte_rendu_pharmelément_prescr_pharmelément_liétype_liaison_élément-a-pour-valeur-1-5-6-ou-7">Etape 3.3: Si <code class="language-plaintext highlighter-rouge">M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Elément_lié</code> est présent et <code class="language-plaintext highlighter-rouge">M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Elément_lié/Type_liaison_élément</code> a pour valeur 1, 5, 6 ou 7</h6>
+
+<ul>
+  <li>Pour chaque <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code> pour lesquels l’élément <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm/Cré_arr_mod_val</code> a pour valeur <code class="language-plaintext highlighter-rouge">C</code>:
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Task.output.type.text</code> renseigné avec <code class="language-plaintext highlighter-rouge">proposition</code></li>
-      <li><code class="language-plaintext highlighter-rouge">Task.output.reference</code> renseigné avec la référence de la ressource <em>MedicationRequest</em> correspondant à la proposition (cf. étape 2)</li>
+      <li>créer une ressource <em>Task</em> suivant le profil <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FrInpatientPharmaceuticalAnalysisResultProfile</a> en utilisant la ressource <em>ConceptMap</em> [PN13-FHIR-analpharm-interv-avec-prop-conceptmap]</li>
+      <li>si l’élément est lié à un <code class="language-plaintext highlighter-rouge">Message/M_Compte_rendu_analyse_pharm/Compte_rendu_pharm/Elément_prescr_pharm</code> traité à l’étape 3.1, ajouter à la ressource <em>Task</em> créée lors de l’étape 3.1 un élément output avec:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">output.type.text</code> à la valeur “intervention pharmaceutique liée”</li>
+          <li><code class="language-plaintext highlighter-rouge">output.valueReference</code> la référence à la ressource <em>Task</em> qui est créée à cette étape (étape 3.3)</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -395,7 +416,7 @@ Même si l’ensemble de la ligne de prescription est reprise dans l’élément
 
 <h5 id="etape-4-mettre-à-jour-lales-éventuelles-ressources-medicationrequest-correspondant-àaux-éventuelles-propositions">Etape 4: mettre à jour la/les éventuelle(s) ressource(s) <em>MedicationRequest</em> correspondant à/aux éventuelle(s) proposition(s)</h5>
 
-<p>Renseigner l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation.refence</code> prévu pour référencer la ressource <em>Task</em> représentant le resultat de l’analyse pharmaceutique (cf. étape 2) avec la référence vers la ressource <em>Task</em> créée à l’étape 3.</p>
+<p>Renseigner l’élément <code class="language-plaintext highlighter-rouge">MedicationRequest.supportingInformation.refence</code> prévu pour référencer la ressource <em>Task</em> représentant l’intervention pharmaceutique (cf. étape 2) avec la référence vers la ressource <em>Task</em> créée à l’étape 3.3.</p>
 
 
 
@@ -438,7 +459,7 @@ Même si l’ensemble de la ligne de prescription est reprise dans l’élément
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 12, 2026 16:45+0000">2026-05-12</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.medication#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 18, 2026 17:19+0000">2026-05-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

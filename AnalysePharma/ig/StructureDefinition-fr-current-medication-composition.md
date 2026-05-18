@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-current-medication-composition | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FRCurrentMedicationComposition |
+| Draft as of 2026-05-18 | *Computable Name*:FRCurrentMedicationComposition |
 
  
 Profil de la ressource Composition du traitement médicamenteux courant. 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-current-medicatio
   "name" : "FRCurrentMedicationComposition",
   "title" : "FR Current Medication Composition",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

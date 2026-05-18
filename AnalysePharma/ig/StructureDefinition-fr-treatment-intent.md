@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FrTeatmentIntent |
+| Draft as of 2026-05-18 | *Computable Name*:FrTeatmentIntent |
 
 The overall intention of the treatment
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-treatment-intent.
   "name" : "FrTeatmentIntent",
   "title" : "MedicationRequest overall treatment intent",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:MED |
+| Draft as of 2026-05-18 | *Computable Name*:MED |
 
 ### Introduction
 
@@ -34,13 +34,14 @@ L’IG intègre également une partie indiquant [comment passer de flux PN13 à 
 
 
 
+
 #### Propriété intellectuelle
 
 Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [FRCurrentMedicationComposition](StructureDefinition-fr-current-medication-composition.md), [FRCurrentMedicationMedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md)... Show 88 more, [FRInpatientMedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md), [FRInpatientMedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md), [FRInpatientPharmaceuticalAnalysisResultProfile](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md), [FRInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md), [FRMPSubstance](StructureDefinition-fr-mp-substance.md), [FRMedication](StructureDefinition-fr-medication.md), [FRMedicationCodes](ValueSet-fr-medication-code.md), [FRMedicationHistoryComposition](StructureDefinition-fr-medication-history-composition.md), [FRMedicationHistoryMedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md), [FRMedicationHistorySourceType](ValueSet-fr-medication-history-source-type.md), [FRMedicationHistorySources](StructureDefinition-fr-medication-history-sources.md), [FRMedicationNonCompound](StructureDefinition-fr-medication-noncompound.md), [FRMedicationReconciliationComposition](StructureDefinition-fr-medication-reconciliation-composition.md), [FRMedicationReconciliationDiscrepancy](CodeSystem-fr-medication-reconciliation-discrepancy.md), [FRMedicationReconciliationDocumentType](ValueSet-fr-medication-reconciliation-document-type.md), [FRMedicationReconciliationMedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md), [FRMedicationReconciliationOutcome](ValueSet-fr-medication-reconciliation-outcome.md), [FRMedicationReconciliationQualifiedDiscrepancy](ValueSet-fr-medication-reconciliation-qualified-discrepancy.md), [FRMedicationReconciliationResolution](ValueSet-fr-medication-reconciliation-resolution.md), [FRMedicationReconciliationStatus](ValueSet-fr-medication-reconciliation-status.md), [FRMedicationReconciliationType](ValueSet-fr-medication-reconciliation-type.md), [FRMedicationRequest](StructureDefinition-fr-medicationrequest.md), [FRMedicationRequestNoteScope](StructureDefinition-fr-medicationrequest-note-scope.md), [FRMedicationStatementReconciliationProperties](StructureDefinition-fr-medicationstatement-reconciliation-properties.md), [FRMedicationVirtual](StructureDefinition-fr-medication-virtual.md), [FRObservationForPrescription](StructureDefinition-fr-observation-for-prescription.md), [FROnAdmissionMedicationComposition](StructureDefinition-fr-on-admission-medication-composition.md), [FROnAdmissionRetroactiveReconciliationComposition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md), [FRPrescriptionBundleForExample](StructureDefinition-fr-prescription-bundle-for-example.md), [FRRequestGroupForPrescription](StructureDefinition-fr-requestgroup-for-prescription.md), [FrAdditionalActionRelationship](StructureDefinition-fr-additional-action-relationship.md), [FrAdditionalActionRelationshipType](CodeSystem-fr-additional-action-relationship-type.md), [FrAdditionalRequestGroupRelationshipValueSet](ValueSet-fr-additional-action-relationship-type-value-set.md), [FrAdditionalWhenCodes](ValueSet-fr-additional-when-codes.md), [FrAdditionalWhenValues](StructureDefinition-fr-additional-when-values.md), [FrAnalysePharmaceutiqueLogical](StructureDefinition-fr-analyse-pharmaceutique-logical.md), [FrBasisOfDoseComponent](StructureDefinition-fr-basis-of-dose-component.md), [FrCurrentMedicationDocumentType](ValueSet-fr-current-medication-document-type.md), [FrDocumentType](CodeSystem-fr-document-type.md), [FrDrugCharacteristic](StructureDefinition-fr-drug-characteristic.md), [FrEditorialStatus](ValueSet-fr-editorial-status.md), [FrIsVehicle](StructureDefinition-fr-is-vehicle.md), [FrMethodOfAdministration](ValueSet-FrMethodOfAdministration.md), [FrMpDoseForm](ValueSet-fr-mp-dose-form.md), [FrNoteScopeCodeValueSet](ValueSet-fr-note-scope-codes-vs.md), [FrNoteScopeCodes](CodeSystem-fr-note-scope-codes.md), [FrPN13FHIRFreeSetCIODCFormeConceptMap](ConceptMap-PN13-FHIR-FreeSetCIODC-Forme-ConceptMap.md), [FrPN13FHIRFreeSetCIODCUniteConceptMap](ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.md), [FrPN13FHIRFreeSetCIODCVoieConceptMap](ConceptMap-PN13-FHIR-FreeSetCIODC-Voie-ConceptMap.md), [FrPN13FHIRGenderConceptMap](ConceptMap-PN13-FHIR-gender-conceptmap.md), [FrPN13FHIRMedicationNonCompoundConceptMap](ConceptMap-PN13-FHIR-prescmed-medicationnoncompound-conceptmap.md), [FrPN13FHIRMedicationPrescriptionDosageInstructiontConceptMap](ConceptMap-PN13-FHIR-prescmed-dosageinstruction-conceptmap.md), [FrPN13FHIRMedicationPrescriptionEncounterConceptMap](ConceptMap-PN13-FHIR-prescmed-encounter-conceptmap.md), [FrPN13FHIRMedicationPrescriptionMedicationCompConceptMap](ConceptMap-PN13-FHIR-prescmed-medicationcomp-conceptmap.md), [FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPatientINSConceptMap](ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPatientIdSeulConceptMap](ConceptMap-PN13-FHIR-prescmed-patient-id-seul-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPatientSansINSConceptMap](ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPractitionerIdSeulConceptMap](ConceptMap-PN13-FHIR-prescmed-practitioner-id-seul-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPractitionerIdentiteConceptMap](ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.md), [FrPN13FHIRObservationConceptMap](ConceptMap-PN13-FHIR-observation-conceptmap.md), [FrPN13FHIRPharmaceuticalAnalysisConceptMap](ConceptMap-PN13-FHIR-analpharm-conceptmap.md), [FrPharmaceuticalAnalysisPerformerTypeValueSet](ValueSet-fr-pharmaceutical-analysis-perfomer-type-value-set.md), [FrPharmaceuticalAnalysisResultCode](CodeSystem-fr-pharmaceutical-analysis-result-code.md), [FrPharmaceuticalAnalysisResultCodeValueSet](ValueSet-fr-pharmaceutical-analysis-result-code-value-set.md), [FrPharmaceuticalInterventionDevenirCode](CodeSystem-fr-pharmaceutical-intervention-devenir-code.md), [FrPharmaceuticalInterventionDevenirCodeValueSet](ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.md), [FrPharmaceuticalInterventionProblemCode](CodeSystem-fr-pharmaceutical-intervention-problem-code.md), [FrPharmaceuticalInterventionProblemCodeValueSet](ValueSet-fr-pharmaceutical-intervention-problem-code-value-set.md), [FrPharmaceuticalInterventionTypeCode](CodeSystem-fr-pharmaceutical-intervention-type-code.md), [FrPharmaceuticalInterventionTypeCodeValueSet](ValueSet-fr-pharmaceutical-intervention-type-code-value-set.md), [FrRangeMedication](StructureDefinition-FrRangeMedication.md), [FrRatioMedication](StructureDefinition-FrRatioMedication.md), [FrRedicationCompound](StructureDefinition-fr-medication-compound.md), [FrRouteOfAdministration](ValueSet-fr-route-of-administration.md), [FrSimpleQuantityMedication](StructureDefinition-FrSimpleQuantityMedication.md), [FrStrengthCodeableConcept](StructureDefinition-fr-strength-codeableconcept.md), [FrSubstanceCode](ValueSet-fr-substance-code.md), [FrTeatmentIntent](StructureDefinition-fr-treatment-intent.md), [FrTreatmentIntent](ValueSet-fr-treatment-intent.md), [FrUFRole](StructureDefinition-fr-uf-role.md), [FrUFRoleCodes](CodeSystem-fr-uf-role-codes.md), [FrUfRoleCodesForPrescriptionValueSet](ValueSet-fr-uf-role-code-for-prescription.md), [LignePrescription](StructureDefinition-fr-ligne-prescription.md), [MED](index.md), [MedicationIngredientStrengthCodes](ValueSet-medication-ingredient-strength-codes.md), [Medication_Ingredient_Strength_Codes](CodeSystem-medication-ingredient-strength-codes.md) and [Posologie](StructureDefinition-fr-posologie.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [FRCurrentMedicationComposition](StructureDefinition-fr-current-medication-composition.md), [FRCurrentMedicationMedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md)... Show 89 more, [FRInpatientMedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md), [FRInpatientMedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md), [FRInpatientPharmaceuticalAnalysisResultProfile](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md), [FRInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md), [FRMPSubstance](StructureDefinition-fr-mp-substance.md), [FRMedication](StructureDefinition-fr-medication.md), [FRMedicationCodes](ValueSet-fr-medication-code.md), [FRMedicationHistoryComposition](StructureDefinition-fr-medication-history-composition.md), [FRMedicationHistoryMedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md), [FRMedicationHistorySourceType](ValueSet-fr-medication-history-source-type.md), [FRMedicationHistorySources](StructureDefinition-fr-medication-history-sources.md), [FRMedicationNonCompound](StructureDefinition-fr-medication-noncompound.md), [FRMedicationReconciliationComposition](StructureDefinition-fr-medication-reconciliation-composition.md), [FRMedicationReconciliationDiscrepancy](CodeSystem-fr-medication-reconciliation-discrepancy.md), [FRMedicationReconciliationDocumentType](ValueSet-fr-medication-reconciliation-document-type.md), [FRMedicationReconciliationMedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md), [FRMedicationReconciliationOutcome](ValueSet-fr-medication-reconciliation-outcome.md), [FRMedicationReconciliationQualifiedDiscrepancy](ValueSet-fr-medication-reconciliation-qualified-discrepancy.md), [FRMedicationReconciliationResolution](ValueSet-fr-medication-reconciliation-resolution.md), [FRMedicationReconciliationStatus](ValueSet-fr-medication-reconciliation-status.md), [FRMedicationReconciliationType](ValueSet-fr-medication-reconciliation-type.md), [FRMedicationRequest](StructureDefinition-fr-medicationrequest.md), [FRMedicationRequestNoteScope](StructureDefinition-fr-medicationrequest-note-scope.md), [FRMedicationStatementReconciliationProperties](StructureDefinition-fr-medicationstatement-reconciliation-properties.md), [FRMedicationVirtual](StructureDefinition-fr-medication-virtual.md), [FRObservationForPrescription](StructureDefinition-fr-observation-for-prescription.md), [FROnAdmissionMedicationComposition](StructureDefinition-fr-on-admission-medication-composition.md), [FROnAdmissionRetroactiveReconciliationComposition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md), [FRPrescriptionBundleForExample](StructureDefinition-fr-prescription-bundle-for-example.md), [FRRequestGroupForPrescription](StructureDefinition-fr-requestgroup-for-prescription.md), [FrAdditionalActionRelationship](StructureDefinition-fr-additional-action-relationship.md), [FrAdditionalActionRelationshipType](CodeSystem-fr-additional-action-relationship-type.md), [FrAdditionalRequestGroupRelationshipValueSet](ValueSet-fr-additional-action-relationship-type-value-set.md), [FrAdditionalWhenCodes](ValueSet-fr-additional-when-codes.md), [FrAdditionalWhenValues](StructureDefinition-fr-additional-when-values.md), [FrAnalysePharmaceutiqueLogical](StructureDefinition-fr-analyse-pharmaceutique-logical.md), [FrBasisOfDoseComponent](StructureDefinition-fr-basis-of-dose-component.md), [FrCurrentMedicationDocumentType](ValueSet-fr-current-medication-document-type.md), [FrDocumentType](CodeSystem-fr-document-type.md), [FrDrugCharacteristic](StructureDefinition-fr-drug-characteristic.md), [FrEditorialStatus](ValueSet-fr-editorial-status.md), [FrIsVehicle](StructureDefinition-fr-is-vehicle.md), [FrMethodOfAdministration](ValueSet-FrMethodOfAdministration.md), [FrMpDoseForm](ValueSet-fr-mp-dose-form.md), [FrNoteScopeCodeValueSet](ValueSet-fr-note-scope-codes-vs.md), [FrNoteScopeCodes](CodeSystem-fr-note-scope-codes.md), [FrPN13FHIRFreeSetCIODCFormeConceptMap](ConceptMap-PN13-FHIR-FreeSetCIODC-Forme-ConceptMap.md), [FrPN13FHIRFreeSetCIODCUniteConceptMap](ConceptMap-PN13-FHIR-FreeSetCIODC-Unite-ConceptMap.md), [FrPN13FHIRFreeSetCIODCVoieConceptMap](ConceptMap-PN13-FHIR-FreeSetCIODC-Voie-ConceptMap.md), [FrPN13FHIRGenderConceptMap](ConceptMap-PN13-FHIR-gender-conceptmap.md), [FrPN13FHIRMedicationNonCompoundConceptMap](ConceptMap-PN13-FHIR-prescmed-medicationnoncompound-conceptmap.md), [FrPN13FHIRMedicationPrescriptionDosageInstructiontConceptMap](ConceptMap-PN13-FHIR-prescmed-dosageinstruction-conceptmap.md), [FrPN13FHIRMedicationPrescriptionEncounterConceptMap](ConceptMap-PN13-FHIR-prescmed-encounter-conceptmap.md), [FrPN13FHIRMedicationPrescriptionMedicationCompConceptMap](ConceptMap-PN13-FHIR-prescmed-medicationcomp-conceptmap.md), [FrPN13FHIRMedicationPrescriptionMedicationRequestConceptMap](ConceptMap-PN13-FHIR-prescmed-medicationrequest-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPatientINSConceptMap](ConceptMap-PN13-FHIR-prescmed-patient-avec-INS-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPatientIdSeulConceptMap](ConceptMap-PN13-FHIR-prescmed-patient-id-seul-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPatientSansINSConceptMap](ConceptMap-PN13-FHIR-prescmed-patient-sans-INS-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPractitionerIdSeulConceptMap](ConceptMap-PN13-FHIR-prescmed-practitioner-id-seul-conceptmap.md), [FrPN13FHIRMedicationPrescriptionPractitionerIdentiteConceptMap](ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.md), [FrPN13FHIRObservationConceptMap](ConceptMap-PN13-FHIR-observation-conceptmap.md), [FrPN13FHIRPharmaceuticalAnalysisInterventionSansPropositionConceptMap](ConceptMap-PN13-FHIR-analpharm-interv-sans-prop-conceptmap.md), [FrPN13FHIRPharmaceuticalAnalysisValidationConceptMap](ConceptMap-PN13-FHIR-analpharm-val-conceptmap.md), [FrPharmaceuticalAnalysisPerformerTypeValueSet](ValueSet-fr-pharmaceutical-analysis-perfomer-type-value-set.md), [FrPharmaceuticalAnalysisResultCode](CodeSystem-fr-pharmaceutical-analysis-result-code.md), [FrPharmaceuticalAnalysisResultCodeValueSet](ValueSet-fr-pharmaceutical-analysis-result-code-value-set.md), [FrPharmaceuticalInterventionDevenirCode](CodeSystem-fr-pharmaceutical-intervention-devenir-code.md), [FrPharmaceuticalInterventionDevenirCodeValueSet](ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.md), [FrPharmaceuticalInterventionProblemCode](CodeSystem-fr-pharmaceutical-intervention-problem-code.md), [FrPharmaceuticalInterventionProblemCodeValueSet](ValueSet-fr-pharmaceutical-intervention-problem-code-value-set.md), [FrPharmaceuticalInterventionTypeCode](CodeSystem-fr-pharmaceutical-intervention-type-code.md), [FrPharmaceuticalInterventionTypeCodeValueSet](ValueSet-fr-pharmaceutical-intervention-type-code-value-set.md), [FrRangeMedication](StructureDefinition-FrRangeMedication.md), [FrRatioMedication](StructureDefinition-FrRatioMedication.md), [FrRedicationCompound](StructureDefinition-fr-medication-compound.md), [FrRouteOfAdministration](ValueSet-fr-route-of-administration.md), [FrSimpleQuantityMedication](StructureDefinition-FrSimpleQuantityMedication.md), [FrStrengthCodeableConcept](StructureDefinition-fr-strength-codeableconcept.md), [FrSubstanceCode](ValueSet-fr-substance-code.md), [FrTeatmentIntent](StructureDefinition-fr-treatment-intent.md), [FrTreatmentIntent](ValueSet-fr-treatment-intent.md), [FrUFRole](StructureDefinition-fr-uf-role.md), [FrUFRoleCodes](CodeSystem-fr-uf-role-codes.md), [FrUfRoleCodesForPrescriptionValueSet](ValueSet-fr-uf-role-code-for-prescription.md), [LignePrescription](StructureDefinition-fr-ligne-prescription.md), [MED](index.md), [MedicationIngredientStrengthCodes](ValueSet-medication-ingredient-strength-codes.md), [Medication_Ingredient_Strength_Codes](CodeSystem-medication-ingredient-strength-codes.md) and [Posologie](StructureDefinition-fr-posologie.md)
 
 
 * The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
@@ -85,7 +86,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -122,7 +123,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -823,6 +824,18 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "valueString" : "Task"
       }],
       "reference" : {
+        "reference" : "Task/Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR",
+      "description" : "Intervention pharmaceutique associée à une validation pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
         "reference" : "Task/Analyse-Intervention-NonAcceptee"
       },
       "name" : "Analyse-Intervention-NonAcceptee",
@@ -863,6 +876,18 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       },
       "name" : "Analyse-Intervention-Type1-DOSTINEX",
       "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type1-MACROGOL"
+      },
+      "name" : "Analyse-Intervention-Type1-MACROGOL",
+      "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 7 Effet indésirable",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
     },
     {
@@ -1087,10 +1112,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "valueString" : "Task"
       }],
       "reference" : {
-        "reference" : "Task/Analyse-Validation-Proposition-Trad-PN13-FHIR"
+        "reference" : "Task/Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR"
       },
-      "name" : "Analyse-Validation-Proposition-Trad-PN13-FHIR",
-      "description" : "Validation pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "name" : "Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR",
+      "description" : "Validation pharmaceutique associée à une intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
     },
     {
@@ -1375,10 +1400,34 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "valueString" : "ConceptMap"
       }],
       "reference" : {
-        "reference" : "ConceptMap/PN13-FHIR-analpharm-conceptmap"
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-interv-sans-prop-conceptmap"
       },
-      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique",
-      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique",
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-interv-avec-prop-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type intervention pharmaceutique avec proposition",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique avec proposition",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-val-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type validation",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type validation",
       "exampleBoolean" : false
     },
     {

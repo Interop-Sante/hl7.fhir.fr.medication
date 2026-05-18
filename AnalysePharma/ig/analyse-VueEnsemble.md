@@ -15,10 +15,10 @@ Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmace
 * `Task.status` = `completed`
 * `Task.intent` = `proposal`
 * `Task.authoredOn`renseigné avec la date et l’heure d’analyse
-* `Task.performerType` renseigné avec la profession de l’utilisateur ayant réalisé l’analyse
 * `Task.owner`renseigné avec la référence de l’utilisateur ayant réalisé l’analyse (référence à une ressource FHIR ou référence par identifier)
-* `Task.input.valueReference`renseigné avec la/les référence(s) de la/des ligne(s) de prescription analysée(s)
 * `Task.ouput.valueCode`renseigné avec un code représentant le résultat de l’analyse pharmaceutique: validation ou intervention pharmaceutique
+* éventuellement `Task.performerType` renseigné avec la profession de l’utilisateur ayant réalisé l’analyse
+* éventuellement `Task.businessStatus` indiquant la prise en compte (cf. section **Prise en compte du résultat d’une analyse pharmaceutique**)
 
 **Note 1:** L’analyse pharmaceutique est réalisée sur une prescription représentée par le `groupIdentifier`. Cependant, si nécessaire, elle peut s’appuyer sur des lignes de prescription provenant d’autres prescriptions. Les cas échéant, ces lignes sont listées dans `Task.input.valueReference`.
 
@@ -28,31 +28,33 @@ Le résultat d’une analyse pharmaceutique, que ce soit une validation pharmace
 
 En plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section **Vue d’ensemble**, une ressource **Task** représentant une validation pharmaceutique peut inclure:
 
+* une ou plusieurs instance(s) de `Task.input.valueReference`renseignée(s) avec la/les référence(s) de la/des ligne(s) de prescription analysée(s)
 * une éventuelle instance de `Task.output.valueString`pour un éventuel commentaire de validation
-* une ou plusieurs eventuelle(s) instance(s) de `Task.output.valueReference`pour d’éventuelle(s) suggestion(s) complémentaire(s) à la validation
+* une ou plusieurs eventuelle(s) instance(s) de `Task.output.valueReference` référençant une/des ressource(s) **Task** représentant d’éventuelle(s) Intervention(s) Pharmaceutique(s) de type Ajout (type 1)
 
 ### Intervention pharmaceutique
 
 Une ressource **Task** représentant une intervention pharmaceutique inclut ,en plus des éléments communs à tous les résultats d’analyse pharmaceutique présentés dans la section **Vue d’ensemble**:
 
+* une ou plusieurs instance(s) de `Task.input.valueReference`renseignée(s) avec la/les référence(s) de la/des ligne(s) de prescription analysée(s)
 * une instance de `Task.output.codeableConcept` renseignée avec le code représentant le type d’intervention pharmaceutique
 * une instance de `Task.output.codeableConcept` renseignée avec le code représentant le problème détecté
-* une éventuelle instance de `Task.ouput.valueString`pour un éventuel commentaire complémentaire au type d’intervention pharmaceutique
-* une ou plusieurs instance(s) de `Task.output.valueReference`pour les suggestions de l’intervention pharmaceutique
+* une éventuelle instance de `Task.ouput.valueString` pour un éventuel commentaire complémentaire au type d’intervention pharmaceutique
+* une ou plusieurs éventuelle(s) instance(s) de `Task.output.valueReference` pour la/les éventuelle(s) proposition(s)
 
-### Propositions suite à une analyse pharmaceutique
+### Propositions dans le cadre d’une intervention pharmaceutique
 
-Que ce soit dans le cadre d’une intervention pharmaceutique ou dans le cadre d’une validation pharmaceutique, une proposition est représentée par une ressource **MedicationRequest**suivant le profil [FrInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) qui hérite du profil **FRMedicationRequest** avec les attributs suivants:
+Une proposition est représentée par une ressource **MedicationRequest**suivant le profil [FrInpatientPharmaceuticalInterventionSuggestionProfile](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) qui hérite du profil **FRMedicationRequest** avec les attributs suivants:
 
 * `MedicationRequest.status` = `active`
 * `MedicationRequest.intent` = `proposal`
 * `MedicationRequest.requester` renseigné avec la référence de l’utilisateur ayant réalisé l’intervention pharmaceutique (référence à une ressource FHIR ou référence par identifier)
-* `MedicationRequest.supportingInformation`renseigné avec la référence de la ressource **Task** représentant le résultat de l’analyse pharmaceutique
+* `MedicationRequest.supportingInformation`renseigné avec la référence de la ressource **Task** représentant l’intervention pharmaceutique
 * Eventuellement un ou plusieurs autre(s) `MedicationRequest.supportingInformation` renseigné(s) avec la/les référence(s) de la/des ligne(s) de prescription que la suggestion propose de modifier/supprimer
 * `MedicationRequest.groupIdentifier`renseigné avec le même `groupIdentifier`que la/les ligne(s) de prescription sur laquel/lesquelles porte l’intervention pharmaceutique
-* Tous les attributs nécessaires. En particulier, si la proposition est une modification/suppression, reprise de tous les attributs de la ligne de prescription référencée même s’ils ne sont pas modifiés.
+* Tous les autres attributs nécessaires. En particulier, si la proposition est une modification/suppression, reprise de tous les attributs de la ligne de prescription référencée même s’ils ne sont pas modifiés.
 
-**Note:** Etant donné qu’il est possible d’avoir des cas de suggestion de remplacement de plusieurs lignes par une ligne et même si le cas est rare, il a été choisi d’utiliser `MedicationRequest.supportingInformation` plutôt que `MedicationRequest.priorPrescription`pour indiquer la/les ligne(s) de prescription sur laquel/lesquelles porte l’intervention pharmaceutique.
+**Note:** Etant donné qu’il est possible d’avoir des cas de suggestion de remplacement de plusieurs lignes par une ligne, même si le cas est rare, il a été choisi d’utiliser `MedicationRequest.supportingInformation` plutôt que `MedicationRequest.priorPrescription`pour indiquer la/les ligne(s) de prescription sur laquel/lesquelles porte l’intervention pharmaceutique.
 
 #### Cas particulier de la proposition de suppression d’une ligne de prescription
 
@@ -87,10 +89,6 @@ Le système utilisé par le prescripteur pour traiter le résultat d’une analy
 * Validation pharmaceutique avec commentaire => En fonction du choix d’implémentation 
 * de manière générale, `Task.businessStatus` n’est pas utilisée
 * si l’implémentation veut permettre le suivie de la consultation des commentaires de valitation pharmaceutique par le prescripteur, possibilité d’utiliser `Task.businessStatus`avec la valeur `1` “Acceptée” pour indiquer que le commentaire a été consulté
- 
-* Validation pharmaceutique avec proposition => En fonction de l’acceptation de la proposition 
-* si la proposition n’est pas acceptée, `Task.businessStatus` avec la valeur `2` “Non acceptée”
-* si la proposition est acceptée, `Task.businessStatus` avec la valeur `1` “Acceptée”
  
 * Intervention pharmaceutique => En fonction de l’acceptation de l’intervention 
 * si l’intervention n’est pas acceptée, `Task.businessStatus` avec la valeur `2` “Non acceptée”

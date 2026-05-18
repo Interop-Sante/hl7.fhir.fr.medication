@@ -29,7 +29,7 @@ Profil: [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pha
 
 > **output****type**: résultat de l'analyse**value**: INTERVENTION
 
-> **output****type**: commentaire**value**: La patiente souffre égaleemnt d'hypertension mais aucun médicament hypertenseur n'a été prescrit à l'hospitalisation.
+> **output****type**: commentaire**value**: La patiente souffre également d'hypertension mais aucun médicament hypertenseur n'a été prescrit à l'hospitalisation.
 
 > **output****type**: type d'intervention**value**: Ajout (prescription nouvelle)
 
@@ -80,7 +80,7 @@ Profil: [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pha
     "type" : {
       "text" : "commentaire"
     },
-    "valueString" : "La patiente souffre égaleemnt d'hypertension mais aucun médicament hypertenseur n'a été prescrit à l'hospitalisation."
+    "valueString" : "La patiente souffre également d'hypertension mais aucun médicament hypertenseur n'a été prescrit à l'hospitalisation."
   },
   {
     "type" : {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/FrSimpleQuantityMedication | *Version*:0.1.0 |
-| Draft as of 2026-05-12 | *Computable Name*:FrSimpleQuantityMedication |
+| Draft as of 2026-05-18 | *Computable Name*:FrSimpleQuantityMedication |
 
  
 simple quantity datatype requiring a UCUM or EDQM code or no code (only unti) 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSimpleQuantityMedi
   "name" : "FrSimpleQuantityMedication",
   "title" : "SimpleQuantity with UCUM or EDQM codes or code not used",
   "status" : "draft",
-  "date" : "2026-05-12T16:45:43+00:00",
+  "date" : "2026-05-18T17:19:20+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

@@ -32,7 +32,7 @@ Profil: [FR Pharmaceutical Intervention Suggestion](StructureDefinition-fr-inpat
 * [Observation Poids corporel [Masse] Patient ; Numérique](Observation-InLine-Observation-poids-Avion.md)
 * [Observation Taille du patient [Longueur] Patient ; Numérique](Observation-InLine-observation-taille-Avion.md)
 * [MedicationRequest : extension = 1000 mg /prise, 4000 mg max/j, respecter 6h entre 2 prises pendant 2 jours; identifier = https://somehospital.fr/PrescrptionLine-ID#31626; status = active; intent = order; priority = routine; medication[x] = paracétamol; authoredOn = 2022-04-11 16:42:53+0200; groupIdentifier = https://somehospital.fr/Prescrption-ID#10723; note = Prescription textuelle: PARACETAMOL (Voie orale) A la demande : 1000 mg /prise, 4000 mg max/j, respecter 6h entre 2 prises pendant 2 jours,Indication: En cas de douleur](MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol.md)
-* [Task : groupIdentifier = 10723; status = completed; intent = proposal; authoredOn = 2022-04-11 17:30:53+0200](Task-Analyse-Validation-Proposition-Trad-PN13-FHIR.md)
+* [Task/Analyse-Validation-Proposition-Trad-PN13-FHIR](Task/Analyse-Validation-Proposition-Trad-PN13-FHIR)
 
 **authoredOn**: 2022-04-11 17:30:53+0200
 
