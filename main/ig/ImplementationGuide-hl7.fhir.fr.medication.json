@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.fr.medication",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><h2>MED</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.medication</b></p><a name=\"hl7.fhir.fr.medication\"> </a><a name=\"hchl7.fhir.fr.medication\"> </a><h2>MED</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication</pre></div>"
   },
   "url" : "https://hl7.fr/ig/fhir/medication/ImplementationGuide/hl7.fhir.fr.medication",
   "version" : "0.1.0",
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -37,7 +37,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.1"
+    "version" : "7.1.0"
   },
   {
     "id" : "hl7ext",
@@ -47,13 +47,25 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
     "version" : "2.1.0"
+  },
+  {
+    "id" : "hl7_fhir_uv_xver_r5_r4",
+    "uri" : "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+    "packageId" : "hl7.fhir.uv.xver-r5.r4",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "ans_fhir_fr_eprescription",
+    "uri" : "https://interop.esante.gouv.fr/ig/fhir/eprescription/ImplementationGuide/ans.fhir.fr.eprescription",
+    "packageId" : "ans.fhir.fr.eprescription",
+    "version" : "current"
   }],
   "definition" : {
     "extension" : [{
@@ -372,7 +384,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{
@@ -709,6 +721,402 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Acceptee"
+      },
+      "name" : "Analyse-Intervention-Acceptee",
+      "description" : "Acceptation de l'arrêt de paracétamol proposé par l'intervention pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Commentaire-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Intervention-Commentaire-Trad-PN13-FHIR",
+      "description" : "Intervention pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR",
+      "description" : "Intervention pharmaceutique associée à une validation pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-NonAcceptee"
+      },
+      "name" : "Analyse-Intervention-NonAcceptee",
+      "description" : "Validation d'un dosage dont l'intervention pharmaceutique demandait confirmation",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Proposition-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Intervention-Proposition-Trad-PN13-FHIR",
+      "description" : "Intervention pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Substitution-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Intervention-Substitution-Trad-PN13-FHIR",
+      "description" : "Intervention pharmaceutique avec proposition de substitution pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type1-DOSTINEX"
+      },
+      "name" : "Analyse-Intervention-Type1-DOSTINEX",
+      "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type1-MACROGOL"
+      },
+      "name" : "Analyse-Intervention-Type1-MACROGOL",
+      "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 7 Effet indésirable",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type1-METFORMINE"
+      },
+      "name" : "Analyse-Intervention-Type1-METFORMINE",
+      "description" : "Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 2 Indication non traitée",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type2-Arret-Paracetamol"
+      },
+      "name" : "Analyse-Intervention-Type2-Arret-Paracetamol",
+      "description" : "Intervention pharmaceutique Type 2: Arrêt - Problème 5: Médicament non indiqué",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM"
+      },
+      "name" : "Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM",
+      "description" : "Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 6.3 Interaction - Association déconseillée",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type3-ELIQUIS"
+      },
+      "name" : "Analyse-Intervention-Type3-ELIQUIS",
+      "description" : "Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 4 Surdosage",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type3-ESOMEPRAZOLE"
+      },
+      "name" : "Analyse-Intervention-Type3-ESOMEPRAZOLE",
+      "description" : "Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type3-Remplacement1pour2-INEGY"
+      },
+      "name" : "Analyse-Intervention-Type3-Remplacement1pour2-INEGY",
+      "description" : "Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type3-Remplacement2pour1-COTAREG"
+      },
+      "name" : "Analyse-Intervention-Type3-Remplacement2pour1-COTAREG",
+      "description" : "Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type4-CETAFEN-INJ"
+      },
+      "name" : "Analyse-Intervention-Type4-CETAFEN-INJ",
+      "description" : "Intervention pharmaceutique Type: 4 Choix de la voie d'administration - Problème: 8 Voie/administration inappropriée",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type5-DOSTINEX"
+      },
+      "name" : "Analyse-Intervention-Type5-DOSTINEX",
+      "description" : "Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 7 Effet indésirable",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type5-INNOHEP"
+      },
+      "name" : "Analyse-Intervention-Type5-INNOHEP",
+      "description" : "Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 10 Monitorage à suivre",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type6-CALCIDOSE"
+      },
+      "name" : "Analyse-Intervention-Type6-CALCIDOSE",
+      "description" : "Intervention pharmaceutique Type: 6 Optimisation modalités d'administration - Problème: 6.2 Interaction - Précaution d'emploi",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type6-LOXAPAC"
+      },
+      "name" : "Analyse-Intervention-Type6-LOXAPAC",
+      "description" : "Intervention pharmaceutique Type: 6 Optimisation modalités d'administration - Problème: 8 Voie/administration inappropriée",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Intervention-Type7-BINOCRIT"
+      },
+      "name" : "Analyse-Intervention-Type7-BINOCRIT",
+      "description" : "Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 3 Sous-dosage",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Ajout-Morphine"
+      },
+      "name" : "Analyse-Validation-Ajout-Morphine",
+      "description" : "Validation d'une prescription de morphine avec proposition d'ajout",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Commentaire-Diazepam"
+      },
+      "name" : "Analyse-Validation-Commentaire-Diazepam",
+      "description" : "Validation d'une prescription de diazépam avec commentaire",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Commentaire-LACRIFLUID"
+      },
+      "name" : "Analyse-Validation-Commentaire-LACRIFLUID",
+      "description" : "Validation d'une prescription de LACRIFLUID avec commentaire",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Commentaire-Morphine"
+      },
+      "name" : "Analyse-Validation-Commentaire-Morphine",
+      "description" : "Validation d'une prescription de morphine avec commentaire",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Commentaire-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Validation-Commentaire-Trad-PN13-FHIR",
+      "description" : "Validation pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR",
+      "description" : "Validation pharmaceutique associée à une intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR"
+      },
+      "name" : "Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR",
+      "description" : "Validation pharmaceutique sans commentaire pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Analyse-Validation-Simple-paracetamol"
+      },
+      "name" : "Analyse-Validation-Simple-paracetamol",
+      "description" : "Validation simple d'une prescription de paracétamol",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/fr-pharmaceutical-intervention-devenir-code"
+      },
+      "name" : "code system d'Interop'Santé - Codes de devenir de l'intervention pharmaceutique",
+      "description" : "Le système de codage pour le typage du devenir l'intervention pharmaceutique.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/fr-pharmaceutical-analysis-result-code"
+      },
+      "name" : "code system d'Interop'Santé - Codes de résultat d'analyse pharmaceutique",
+      "description" : "Le système de codage pour le typage du résultat d'analyse pharmaceutique.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/fr-pharmaceutical-intervention-problem-code"
+      },
+      "name" : "code system d'Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique",
+      "description" : "Le système de codage pour le typage du problème identifié dans l'intervention pharmaceutique.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/fr-pharmaceutical-intervention-type-code"
+      },
+      "name" : "code system d'Interop'Santé - Codes du type d'intervention pharmaceutique",
+      "description" : "Le système de codage pour le typage de l'intervention pharmaceutique.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -908,6 +1316,42 @@
       },
       "name" : "Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni",
       "description" : "ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d'une prescritpion de médicament avec uniquement un identifiant fourni",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-interv-sans-prop-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-interv-avec-prop-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type intervention pharmaceutique avec proposition",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type intervention pharmaceutique avec proposition",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/PN13-FHIR-analpharm-val-conceptmap"
+      },
+      "name" : "Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type validation",
+      "description" : "ConceptMap pour la conversion PN13 vers FHIR d'un résultat d'une analyse pharmaceutique de type validation",
       "exampleBoolean" : false
     },
     {
@@ -1268,6 +1712,30 @@
       },
       "name" : "FR On Admission Retroactive Reconciliation Composition",
       "description" : "Profil de la ressource *Composition* de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d'admission.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"
+      },
+      "name" : "FR Pharmaceutical Analysis Result",
+      "description" : "French Pharmaceutical Analysis Result profile",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+      },
+      "name" : "FR Pharmaceutical Intervention Suggestion",
+      "description" : "Profile de proposition d'évolution de ligne de prescritpion dans le cadre d'une intervention pharmaceutique",
       "exampleBoolean" : false
     },
     {
@@ -1933,6 +2401,330 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-BINOCRIT"
+      },
+      "name" : "InLine-Analyse-Presc-BINOCRIT",
+      "description" : "Prescription de BINOCRIT pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-CALCIDOSE"
+      },
+      "name" : "InLine-Analyse-Presc-CALCIDOSE",
+      "description" : "Prescription de CALCIDOSE pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-CELLUVISC"
+      },
+      "name" : "InLine-Analyse-Presc-CELLUVISC",
+      "description" : "Prescription de CELLUVISC pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR"
+      },
+      "name" : "InLine-Analyse-Presc-CETAFEN-CPR",
+      "description" : "Prescription de CETAFEN en comprimé pour exemple d'intervention pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-CETAFEN-INJ"
+      },
+      "name" : "InLine-Analyse-Presc-CETAFEN-INJ",
+      "description" : "Prescription de CETAFEN en perfusion pour exemple d'intervention pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-COTAREG"
+      },
+      "name" : "InLine-Analyse-Presc-COTAREG",
+      "description" : "Prescription de COTAREG pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-Diazepam"
+      },
+      "name" : "InLine-Analyse-Presc-Diazepam",
+      "description" : "Prescription de Diazépam pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-DOSTINEX"
+      },
+      "name" : "InLine-Analyse-Presc-DOSTINEX",
+      "description" : "Prescription de DOSTINEX pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-ELIQUIS-25"
+      },
+      "name" : "InLine-Analyse-Presc-ELIQUIS-25",
+      "description" : "Prescription de ELIQUS 2,5 MG pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-ELIQUIS-50"
+      },
+      "name" : "InLine-Analyse-Presc-ELIQUIS-50",
+      "description" : "Prescription de ELIQUIS 5MG pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-ESIDREX"
+      },
+      "name" : "InLine-Analyse-Presc-ESIDREX",
+      "description" : "Prescription d'ESIDREX pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-ESOMEPRAZOLE"
+      },
+      "name" : "InLine-Analyse-Presc-ESOMEPRAZOLE",
+      "description" : "Prescription de ESOMEPTAZOLE pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-EZETIMIBE"
+      },
+      "name" : "InLine-Analyse-Presc-EZETIMIBE",
+      "description" : "Prescription de EZETIMIBE pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-INEGY"
+      },
+      "name" : "InLine-Analyse-Presc-INEGY",
+      "description" : "Prescription de INEGY pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-INNOHEP"
+      },
+      "name" : "InLine-Analyse-Presc-INNOHEP",
+      "description" : "Prescription de INNOHEP pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-LACRIFLUID"
+      },
+      "name" : "InLine-Analyse-Presc-LACRIFLUID",
+      "description" : "Prescription de LACRIFLUID pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-LANSOPRAZOLE"
+      },
+      "name" : "InLine-Analyse-Presc-LANSOPRAZOLE",
+      "description" : "Prescription de LANSOPRAZOLE pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-LEVOTHYROX"
+      },
+      "name" : "InLine-Analyse-Presc-LEVOTHYROX",
+      "description" : "Prescription de LACRIFLUID pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-LOXAPAC"
+      },
+      "name" : "InLine-Analyse-Presc-LOXAPAC",
+      "description" : "Prescription de LOXAPAC pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-MACROGOL"
+      },
+      "name" : "InLine-Analyse-Presc-MACROGOL",
+      "description" : "Prescription de MACROGOL pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-METFORMINE"
+      },
+      "name" : "InLine-Analyse-Presc-METFORMINE",
+      "description" : "Prescription de METFORMINE pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-Morphine"
+      },
+      "name" : "InLine-Analyse-Presc-Morphine",
+      "description" : "Prescription de Paracétamol pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-NEFOPAM"
+      },
+      "name" : "InLine-Analyse-Presc-NEFOPAM",
+      "description" : "Prescription de NEFOPMA pour exemple d'intervention pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-Paracetamol"
+      },
+      "name" : "InLine-Analyse-Presc-Paracetamol",
+      "description" : "Prescription de Paracétamol pour exemple de vaidation pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Douleur"
+      },
+      "name" : "InLine-Analyse-Presc-Paracetamol-Si-Douleur",
+      "description" : "Prescription de Paracétamol pour exemple d'intervention pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-SIMVASTATINE"
+      },
+      "name" : "InLine-Analyse-Presc-SIMVASTATINE",
+      "description" : "Prescription de SIMVASTATINE pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Analyse-Presc-TAREG"
+      },
+      "name" : "InLine-Analyse-Presc-TAREG",
+      "description" : "Prescription de TAREG pour exemple d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Medication"
       }],
       "reference" : {
@@ -1941,6 +2733,18 @@
       "name" : "InLine-DOLIPRANE",
       "description" : "Medication DOLIPRANE® pour exemple de dispensation",
       "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur"
+      },
+      "name" : "InLine-Inter-Arret-Paracetamol-Si-Douleur",
+      "description" : "Proposition d'arrêt dans le cadre d'un intervention pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
     },
     {
       "extension" : [{
@@ -1969,6 +2773,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/InLine-Observation-poids-Avion"
+      },
+      "name" : "InLine-Observation-poids-Avion",
+      "description" : "Poids du patient pour exemples traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/InLine-observation-taille-Avion"
+      },
+      "name" : "InLine-observation-taille-Avion",
+      "description" : "Taille du patient pour exemples traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/InLine-patient-Avion"
+      },
+      "name" : "InLine-patient-Avion",
+      "description" : "Patient pour exemples traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Group"
       }],
       "reference" : {
@@ -1976,6 +2816,18 @@
       },
       "name" : "InLine-patient-group-01",
       "description" : "Groupe de patient pour exemple de délivrance reglobalisée",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/InLine-practitioner-Luiggi"
+      },
+      "name" : "InLine-practitioner-Luiggi",
+      "description" : "Practitioner prescripteur pour exemples traduction PN13-FHIR de resultats d'analyse pharmaceutique",
       "exampleBoolean" : true
     },
     {
@@ -2029,6 +2881,54 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition"
+      },
+      "name" : "InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition",
+      "description" : "Proposition associée à intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution"
+      },
+      "name" : "InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution",
+      "description" : "Proposition de substitution associée à intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol"
+      },
+      "name" : "InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol",
+      "description" : "Prescription initale pour exemples traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition"
+      },
+      "name" : "InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition",
+      "description" : "Proposition associée à validation pharmaceutique pour exemple traduction PN13-FHIR de resultats d'analyse pharmaceutique",
+      "exampleCanonical" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -2048,6 +2948,66 @@
       },
       "name" : "Interop'Santé value set - Additional codes for relationship between action",
       "description" : "Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-pharmaceutical-intervention-devenir-code-value-set"
+      },
+      "name" : "Jeu de valeurs Interop'Santé - Codes de devenir de l'intervention pharmaceutique",
+      "description" : "Codes représentant le devenir de l'intervention pharmaceutique",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-pharmaceutical-analysis-perfomer-type-value-set"
+      },
+      "name" : "Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique",
+      "description" : "Codes représentant le type de résultat de l'analyse pharmaceutique",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-pharmaceutical-analysis-result-code-value-set"
+      },
+      "name" : "Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique",
+      "description" : "Codes représentant le type de résultat de l'analyse pharmaceutique",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-pharmaceutical-intervention-problem-code-value-set"
+      },
+      "name" : "Jeu de valeurs Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique",
+      "description" : "Codes représentant le problème identifié dans l'intervention pharmaceutique",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-pharmaceutical-intervention-type-code-value-set"
+      },
+      "name" : "Jeu de valeurs Interop'Santé - Codes du type d'intervention pharmaceutique",
+      "description" : "Codes représentant le type d'intervention pharmaceutique",
       "exampleBoolean" : false
     },
     {
@@ -2580,6 +3540,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-analyse-pharmaceutique-logical"
+      },
+      "name" : "Résultat d'analyse pharmaceutique",
+      "description" : "Structure du résultat d'analyse pharmaceutique (validation ou intervention pharmacetique)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -2978,6 +3950,42 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "analyse-Intro.html"
+        }],
+        "nameUrl" : "analyse-Intro.html",
+        "title" : "L'analyse pharmaceutique - Introduction",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "analyse-VueEnsemble.html"
+        }],
+        "nameUrl" : "analyse-VueEnsemble.html",
+        "title" : "L'analyse pharmaceutique - Vue d'ensemble",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "analyse-CasUsage.html"
+        }],
+        "nameUrl" : "analyse-CasUsage.html",
+        "title" : "L'analyse pharmaceutique - Cas d'usage",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "analyse-Exemples.html"
+        }],
+        "nameUrl" : "analyse-Exemples.html",
+        "title" : "L'analyse pharmaceutique - Exemples",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "dispensation-Intro.html"
         }],
         "nameUrl" : "dispensation-Intro.html",
@@ -3090,6 +4098,87 @@
         }],
         "nameUrl" : "PN13-prescription-MV.html",
         "title" : "Prescription PN13 médicament virtuel",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "transformation-PN13-vers-FHIR-AnalysePharma.html"
+        }],
+        "nameUrl" : "transformation-PN13-vers-FHIR-AnalysePharma.html",
+        "title" : "Tranformation d'un message PN13 compte-rendu d'analyse pharmaceutique en FHIR",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-exemples-AnalysePharma-Intro.html"
+        }],
+        "nameUrl" : "PN13-exemples-AnalysePharma-Intro.html",
+        "title" : "Exemples PN13 de CR d'analyse pharmaceutique - Introduction",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-prescription-pour-exemple-analyse-pharma.html"
+        }],
+        "nameUrl" : "PN13-prescription-pour-exemple-analyse-pharma.html",
+        "title" : "Prescription initale PN13 pour exemples de resultats d'analyse pharmaceutique",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-validation-pharma-sans-commentaire.html"
+        }],
+        "nameUrl" : "PN13-validation-pharma-sans-commentaire.html",
+        "title" : "Validation pharmaceutique PN13 sans commentaire",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-validation-pharma-avec-commentaire.html"
+        }],
+        "nameUrl" : "PN13-validation-pharma-avec-commentaire.html",
+        "title" : "Validation pharmaceutique PN13 avec commentaire",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-validation-pharma-avec-suggestion.html"
+        }],
+        "nameUrl" : "PN13-validation-pharma-avec-suggestion.html",
+        "title" : "Validation pharmaceutique PN13 avec suggestion",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-intervention-pharma-avec-commentaire.html"
+        }],
+        "nameUrl" : "PN13-intervention-pharma-avec-commentaire.html",
+        "title" : "Intervention pharmaceutique PN13 avec commentaire",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-intervention-pharma-avec-modification.html"
+        }],
+        "nameUrl" : "PN13-intervention-pharma-avec-modification.html",
+        "title" : "Intervention pharmaceutique PN13 avec proposition de modification",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PN13-intervention-pharma-avec-substitution.html"
+        }],
+        "nameUrl" : "PN13-intervention-pharma-avec-substitution.html",
+        "title" : "Intervention pharmaceutique PN13 avec proposition de substitution",
         "generation" : "markdown"
       },
       {

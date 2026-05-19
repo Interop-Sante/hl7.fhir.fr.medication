@@ -172,13 +172,13 @@ Elle est liée aux deux paramètres précédents. Quand ces trois paramètres so
 
 Les unités UCUM suivantes sont utilisées :
 
-1. **jour**(code = d) : égale 24h.
+1. **jour** (code = d) : égale 24h.
 * Ce n’est pas le **jour calendaire**.
 * Ainsi, 3 jours à partir de J0 07:12:34 donne comme **date de fin** J3 07:12:33.
 * Et non pas J2 23:59:59 correspondant au décompte de 3 jours calendaires.
 
 1. **semaine**(code = wk) : égale 7 jours.
-1. **mois**(code = mo) : égale 28, 29, 30 ou 31 jours selon les mois impliqués.
+1. **mois** (code = mo) : égale 28, 29, 30 ou 31 jours selon les mois impliqués.
 * Ce n’est pas le **mois julien moyen** de 30,4375 jours défini par UCUM.
 * Ainsi, 3 mois à partir du 2021-02-14T12:34:56 donne comme **date de fin** 2021-05-14T12:34:55.
 * Et non pas 2021-04-16T20:04:55, correspondant à 2021-02-14T12:34:56 + 91 jours 7 heures 30 minutes, découlant de 3*365,25/12=91,3125 jours.

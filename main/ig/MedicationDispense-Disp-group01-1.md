@@ -35,9 +35,9 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
 
 **type**: Refill - Part
 
-**quantity**: 14 1(Détails : code UCUM1 = '1')
+**quantity**: 14 1 (Détails : code UCUM1 = '1')
 
-**daysSupply**: 2 jours(Détails : code UCUMd = 'd')
+**daysSupply**: 2 jours (Détails : code UCUMd = 'd')
 
 **whenPrepared**: 2021-07-16 10:10:00+0000
 
@@ -52,30 +52,26 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   "resourceType" : "MedicationDispense",
   "id" : "Disp-group01-1",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
-      "valueReference" : {
-        "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
-      }
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
-      "valueReference" : {
-        "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"
-      }
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
-      "valueReference" : {
-        "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Substit"
-      }
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+    "valueReference" : {
+      "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-presc-DC"
     }
-  ],
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+    "valueReference" : {
+      "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Compl-presc-DC"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+    "valueReference" : {
+      "reference" : "MedicationDispense/Disp-DOLIPRANE-Refill-Substit"
+    }
+  }],
   "status" : "completed",
   "medicationReference" : {
     "reference" : "Medication/InLine-med-DOLIPRANE"
@@ -83,32 +79,26 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
   "subject" : {
     "reference" : "Group/InLine-patient-group01"
   },
-  "performer" : [
-    {
-      "actor" : {
-        "reference" : "Practitioner/smart-Practitioner-7148xxxx"
-      }
+  "performer" : [{
+    "actor" : {
+      "reference" : "Practitioner/smart-Practitioner-7148xxxx"
     }
-  ],
-  "authorizingPrescription" : [
-    {
-      "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
-    },
-    {
-      "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
-    },
-    {
-      "reference" : "MedicationRequest/InLine-presc-EFFERALGAN2"
-    }
-  ],
+  }],
+  "authorizingPrescription" : [{
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol1"
+  },
+  {
+    "reference" : "MedicationRequest/InLine-presc-Paracetamol2"
+  },
+  {
+    "reference" : "MedicationRequest/InLine-presc-EFFERALGAN2"
+  }],
   "type" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "code" : "RFP",
-        "display" : "Refill - Part"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "RFP",
+      "display" : "Refill - Part"
+    }]
   },
   "quantity" : {
     "value" : 14,

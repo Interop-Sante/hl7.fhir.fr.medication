@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-qualified-discrepancy | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FRMedicationReconciliationQualifiedDiscrepancy |
+| Draft as of 2026-05-19 | *Computable Name*:FRMedicationReconciliationQualifiedDiscrepancy |
 
  
 Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -54,45 +54,33 @@ Le jeu de valeurs à utiliser pour coder la qualification de la divergence ident
   "title" : "value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-discrepancy",
-        "filter" : [
-          {
-            "property" : "isQualified",
-            "op" : "=",
-            "value" : "true"
-          }
-        ]
-      }
-    ]
+    "include" : [{
+      "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-discrepancy",
+      "filter" : [{
+        "property" : "isQualified",
+        "op" : "=",
+        "value" : "true"
+      }]
+    }]
   }
 }
 

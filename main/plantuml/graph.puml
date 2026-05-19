@@ -24,6 +24,21 @@ package IG #DDDDDD{
              Quantity => [None..None]
         } 
 
+        class FrAnalysePharmaceutiqueLogical{
+
+             fr-analyse-pharmaceutique-logical => [None..None]
+             fr-analyse-pharmaceutique-logical.date => [1..1]
+             fr-analyse-pharmaceutique-logical.auteur => [1..1]
+             fr-analyse-pharmaceutique-logical.lignePrescriptionAnalysee => [1..*]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse => [1..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.type => [1..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.commentaire => [0..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.proposition => [0..*]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.typeIntervention => [0..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.typeProbleme => [0..1]
+             fr-analyse-pharmaceutique-logical.resultatAnalyse.devenirIntervention => [0..1]
+        } 
+
         class FRCurrentMedicationComposition{
 
              Composition.implicitRules => [None..0]
@@ -86,6 +101,47 @@ package IG #DDDDDD{
              MedicationRequest.dispenseRequest.quantity => [None..0]
              MedicationRequest.dispenseRequest.expectedSupplyDuration.comparator => [None..0]
              MedicationRequest.dispenseRequest.performer => [None..0]
+        } 
+
+        class FRInpatientPharmaceuticalAnalysisResultProfile{
+
+             Task.groupIdentifier => [1..None]
+             Task.businessStatus => [None..None]
+             Task.intent => [None..None]
+             Task.authoredOn => [1..None]
+             Task.performerType => [None..None]
+             Task.owner => [1..None]
+             Task.input.type.text => [None..None]
+             Task.input.value[x] => [None..None]
+             Task.output => [1..None]
+             Task.output:result => [1..1]
+             Task.output:result.type.text => [1..None]
+             Task.output:result.value[x] => [None..None]
+             Task.output:comment => [0..1]
+             Task.output:comment.type.text => [1..None]
+             Task.output:comment.value[x] => [None..None]
+             Task.output:type => [0..1]
+             Task.output:type.type.text => [1..None]
+             Task.output:type.value[x] => [None..None]
+             Task.output:problem => [0..1]
+             Task.output:problem.type.text => [1..None]
+             Task.output:problem.value[x] => [None..None]
+             Task.output:suggestion => [0..*]
+             Task.output:suggestion.type.text => [1..None]
+             Task.output:suggestion.value[x] => [None..None]
+             Task.output:intervention => [0..*]
+             Task.output:intervention.type.text => [1..None]
+             Task.output:intervention.value[x] => [None..None]
+        } 
+
+        class FRInpatientPharmaceuticalInterventionSuggestionProfile{
+
+             MedicationRequest => [None..None]
+             MedicationRequest.intent => [None..None]
+             MedicationRequest.supportingInformation => [1..None]
+             MedicationRequest.supportingInformation:updatedLine => [0..*]
+             MedicationRequest.supportingInformation:pharmInter => [1..1]
+             MedicationRequest.groupIdentifier => [1..None]
         } 
 
         class LignePrescription{
@@ -663,6 +719,26 @@ package IG #DDDDDD{
 
      FRCurrentMedicationComposition -[#black,dotted,thickness=2]-> FrCurrentMedicationDocumentType
 
+        class FrPharmaceuticalInterventionDevenirCodeValueSet  
+
+     FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalInterventionDevenirCodeValueSet
+
+        class FrPharmaceuticalAnalysisPerformerTypeValueSet  
+
+     FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalAnalysisPerformerTypeValueSet
+
+        class FrPharmaceuticalAnalysisResultCodeValueSet  
+
+     FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalAnalysisResultCodeValueSet
+
+        class FrPharmaceuticalInterventionTypeCodeValueSet  
+
+     FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalInterventionTypeCodeValueSet
+
+        class FrPharmaceuticalInterventionProblemCodeValueSet  
+
+     FRInpatientPharmaceuticalAnalysisResultProfile -[#black,dotted,thickness=2]-> FrPharmaceuticalInterventionProblemCodeValueSet
+
         class FrMpDoseForm  
 
      FrRedicationCompound -[#black,dotted,thickness=2]-> FrMpDoseForm
@@ -782,6 +858,10 @@ package "Ressources de base" #palegreen {
 
     class2c391528ab21e799798c2a3a4ed7eed2 --> FrSimpleQuantityMedication
 
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FrAnalysePharmaceutiqueLogical
+
  class "Composition" as  class53eff24a355b7ae55f0aa2bef39bb24c 
 
     class53eff24a355b7ae55f0aa2bef39bb24c --> FRCurrentMedicationComposition
@@ -797,6 +877,14 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest" as  classa097ae705bc1e870b0e6eef094e7f797 
 
     classa097ae705bc1e870b0e6eef094e7f797 --> FRInpatientMedicationRequest
+
+ class "Task" as  classeaeb30f9f18e0c50b178676f3eaef45f 
+
+    classeaeb30f9f18e0c50b178676f3eaef45f --> FRInpatientPharmaceuticalAnalysisResultProfile
+
+ class "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest" as  classe712750a92b45cae7bb1ae21b82a8aed 
+
+    classe712750a92b45cae7bb1ae21b82a8aed --> FRInpatientPharmaceuticalInterventionSuggestionProfile
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 

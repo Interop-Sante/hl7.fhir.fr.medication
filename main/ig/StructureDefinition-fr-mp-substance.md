@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-mp-substance | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FRMPSubstance |
+| Draft as of 2026-05-19 | *Computable Name*:FRMPSubstance |
 
  
 code for the medicinal product substance 
 
 **Utilisations:**
 
-* Utiliser ce Profil de type de données: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
+* Utilise ce/t/te profil de type de données: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-mp-substance)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-mp-substance)
 
 ### Formal Views of Profile Content
 
@@ -42,99 +42,81 @@ Other representations of profile: [CSV](StructureDefinition-fr-mp-substance.csv)
   "title" : "FR Meditinal Product Substance",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "code for the medicinal product substance",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "orim",
-      "uri" : "http://hl7.org/orim",
-      "name" : "Ontological RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "orim",
+    "uri" : "http://hl7.org/orim",
+    "name" : "Ontological RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
   "type" : "CodeableConcept",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/CodeableConcept",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "CodeableConcept",
-        "path" : "CodeableConcept",
-        "short" : "RIUM Medicinal Product Substance",
-        "example" : [
-          {
-            "label" : "Glucose",
-            "valueCodeableConcept" : {
-              "coding" : [
-                {
-                  "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
-                  "code" : "100000078171",
-                  "display" : "glucose"
-                }
-              ],
-              "text" : "glucose"
-            }
-          },
-          {
-            "label" : "Périndopril tert-butylamine",
-            "valueCodeableConcept" : {
-              "coding" : [
-                {
-                  "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
-                  "code" : "100000091602",
-                  "display" : "périndopril tert-butylamine"
-                }
-              ],
-              "text" : "périndopril tert-butylamine"
-            }
-          }
-        ]
+    "element" : [{
+      "id" : "CodeableConcept",
+      "path" : "CodeableConcept",
+      "short" : "RIUM Medicinal Product Substance",
+      "example" : [{
+        "label" : "Glucose",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+            "code" : "100000078171",
+            "display" : "glucose"
+          }],
+          "text" : "glucose"
+        }
       },
       {
-        "id" : "CodeableConcept.coding",
-        "path" : "CodeableConcept.coding",
-        "binding" : {
-          "strength" : "required",
-          "description" : "Medicinal product Substance",
-          "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-substance-code"
+        "label" : "Périndopril tert-butylamine",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+            "code" : "100000091602",
+            "display" : "périndopril tert-butylamine"
+          }],
+          "text" : "périndopril tert-butylamine"
         }
+      }]
+    },
+    {
+      "id" : "CodeableConcept.coding",
+      "path" : "CodeableConcept.coding",
+      "binding" : {
+        "strength" : "required",
+        "description" : "Medicinal product Substance",
+        "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-substance-code"
       }
-    ]
+    }]
   }
 }
 

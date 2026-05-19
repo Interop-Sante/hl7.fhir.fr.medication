@@ -9,7 +9,7 @@
 | | | |
 | :--- | :--- | :--- |
 | *Official URL*:http://hl7.org/fhir/ValueSet/medication-ingredientstrength | *Version*:0.1.0 | |
-| *Standards status:*[Draft](http://hl7.org/fhir/R4/versions.html#std-process) | [Maturity Level](http://hl7.org/fhir/versions.html#maturity): 1 | *Computable Name*:MedicationIngredientStrengthCodes |
+| * Standards status: *[Draft](http://hl7.org/fhir/R4/versions.html#std-process) | [Maturity Level](http://hl7.org/fhir/versions.html#maturity): 1 | *Computable Name*:MedicationIngredientStrengthCodes |
 | *Other Identifiers:*OID:2.16.840.1.113883.4.642.3.1426 | | |
 
  
@@ -49,61 +49,48 @@ Medication Ingredient Strength Codes
   "meta" : {
     "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-      "valueCode" : "phx"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-      "valueCode" : "draft"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger" : 1
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "phx"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  }],
   "url" : "http://hl7.org/fhir/ValueSet/medication-ingredientstrength",
-  "identifier" : [
-    {
-      "system" : "urn:ietf:rfc:3986",
-      "value" : "urn:oid:2.16.840.1.113883.4.642.3.1426"
-    }
-  ],
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.3.1426"
+  }],
   "version" : "0.1.0",
   "name" : "MedicationIngredientStrengthCodes",
   "status" : "draft",
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Medication Ingredient Strength Codes",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength"
-      }
-    ]
+    "include" : [{
+      "system" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+      "version" : "5.0.0"
+    }]
   }
 }
 

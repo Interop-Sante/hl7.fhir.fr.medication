@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-strength-codeableconcept | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrStrengthCodeableConcept |
+| Draft as of 2026-05-19 | *Computable Name*:FrStrengthCodeableConcept |
 
 Additional non unit value for strength
 
@@ -19,9 +19,9 @@ Additional non unit value for strength
 
 **Utilisations:**
 
-* Ce Extension nest utilisé par aucun profil dans ce guide dimplémentation
+* Ce Extension n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-strength-codeableconcept)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-strength-codeableconcept)
 
 ### Formal Views of Extension Content
 
@@ -48,82 +48,66 @@ Other representations of profile: [CSV](StructureDefinition-fr-strength-codeable
   "name" : "FrStrengthCodeableConcept",
   "title" : "Strength CodeableConcept",
   "status" : "draft",
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Additional non unit value for strength",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Medication.ingredient.strength"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Medication.ingredient.strength"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "codeable ingredient'strength",
-        "definition" : "codeable ingredient's strength"
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-strength-codeableconcept"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "type" : [
-          {
-            "code" : "CodeableConcept"
-          }
-        ],
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://hl7.org/fhir/ValueSet/medication-ingredientstrength"
-        }
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "codeable ingredient'strength",
+      "definition" : "codeable ingredient's strength"
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-strength-codeableconcept"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/medication-ingredientstrength"
       }
-    ]
+    }]
   }
 }
 

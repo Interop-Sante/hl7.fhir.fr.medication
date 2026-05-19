@@ -19,18 +19,14 @@ Profil: [FR Medication](StructureDefinition-fr-medication.md)
   "resourceType" : "Medication",
   "id" : "InLine-med-Paracetamol",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication"]
   },
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
-        "code" : "100000090270",
-        "display" : "paracétamol"
-      }
-    ],
+    "coding" : [{
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
+      "code" : "100000090270",
+      "display" : "paracétamol"
+    }],
     "text" : "PARACETAMOL"
   }
 }

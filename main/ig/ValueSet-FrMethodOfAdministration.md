@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/FrMethodOfAdministration | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrMethodOfAdministration |
+| Draft as of 2026-05-19 | *Computable Name*:FrMethodOfAdministration |
 
  
-Le jeu de valeurs à utiliser pour coder l’élément**dosageInstruction.method**de la ressource**FRMedicationRequest**. 
+Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.method** de la ressource **FRMedicationRequest**. 
 
  **References** 
 
@@ -54,38 +54,28 @@ Le jeu de valeurs à utiliser pour coder l’élément**dosageInstruction.method
   "title" : "French Method Of Administration",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le jeu de valeurs à utiliser pour coder l'élément *dosageInstruction.method* de la ressource *FRMedicationRequest*.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://standardterms.edqm.eu"
-      }
-    ]
+    "include" : [{
+      "system" : "http://standardterms.edqm.eu"
+    }]
   }
 }
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrTeatmentIntent |
+| Draft as of 2026-05-19 | *Computable Name*:FrTeatmentIntent |
 
 The overall intention of the treatment
 
@@ -19,9 +19,9 @@ The overall intention of the treatment
 
 **Utilisations:**
 
-* Utiliser ce Extension: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+* Utilise ce/t/te Extension: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-treatment-intent)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-treatment-intent)
 
 ### Formal Views of Extension Content
 
@@ -48,86 +48,70 @@ Other representations of profile: [CSV](StructureDefinition-fr-treatment-intent.
   "name" : "FrTeatmentIntent",
   "title" : "MedicationRequest overall treatment intent",
   "status" : "draft",
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "The overall intention of the treatment",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "MedicationRequest"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "MedicationRequest"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "MedicationRequest overall treatment intent",
-        "definition" : "The overall intention of the treatment"
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "label" : "TreatmentIntent",
-        "short" : "Value of overall treatment intent",
-        "definition" : "overall intention of treatment Coding. SNOMED CT code minimal value set for overall intention of treatment (extensible)",
-        "type" : [
-          {
-            "code" : "CodeableConcept"
-          }
-        ],
-        "binding" : {
-          "strength" : "extensible",
-          "description" : "SNOMED CT encoded treatment overall intent",
-          "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-treatment-intent"
-        }
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "MedicationRequest overall treatment intent",
+      "definition" : "The overall intention of the treatment"
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "label" : "TreatmentIntent",
+      "short" : "Value of overall treatment intent",
+      "definition" : "overall intention of treatment Coding. SNOMED CT code minimal value set for overall intention of treatment (extensible)",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "SNOMED CT encoded treatment overall intent",
+        "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-treatment-intent"
       }
-    ]
+    }]
   }
 }
 

@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Practitioner/InLine-practitioner-Luiggi> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "InLine-practitioner-Luiggi"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien InLine-practitioner-Luiggi</b></p><a name=\"InLine-practitioner-Luiggi\"> </a><a name=\"hcInLine-practitioner-Luiggi\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html\">FR Core Practitioner Profile</a></p></div><p><b>identifier</b>: Employee number/P082443</p><p><b>name</b>: DENIS LUIGGI , DENIS LUIGGI (Official)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "EI" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://somehospital.fr/EI"^^xsd:anyURI ;
+       fhir:l <https://somehospital.fr/EI>
+     ] ;
+     fhir:value [ fhir:v "P082443" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "LUIGGI" ] ;
+     fhir:given ( [ fhir:v "DENIS" ] )
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "LUIGGI" ] ;
+     fhir:given ( [ fhir:v "DENIS" ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

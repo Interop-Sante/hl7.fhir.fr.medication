@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FRRequestGroupForPrescription |
+| Draft as of 2026-05-19 | *Computable Name*:FRRequestGroupForPrescription |
 
  
 RequestGroup for expressing links between lines of a prescription 
 
 **Utilisations:**
 
-* Ce Profil nest utilisé par aucun profil dans ce guide dimplémentation
+* Ce Profil n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-requestgroup-for-prescription)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-requestgroup-for-prescription)
 
 ### Formal Views of Profile Content
 
@@ -42,97 +42,79 @@ Other representations of profile: [CSV](StructureDefinition-fr-requestgroup-for-
   "title" : "FR RequestGroup For Prescription",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "RequestGroup for expressing links between lines of a prescription",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "RequestGroup",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/RequestGroup",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "RequestGroup",
-        "path" : "RequestGroup"
-      },
-      {
-        "id" : "RequestGroup.groupIdentifier",
-        "path" : "RequestGroup.groupIdentifier",
-        "min" : 1
-      },
-      {
-        "id" : "RequestGroup.action.relatedAction.extension",
-        "path" : "RequestGroup.action.relatedAction.extension",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "url"
-            }
-          ],
-          "ordered" : false,
-          "rules" : "open"
-        }
-      },
-      {
-        "id" : "RequestGroup.action.relatedAction.extension:additionalRelationship",
-        "path" : "RequestGroup.action.relatedAction.extension",
-        "sliceName" : "additionalRelationship",
-        "short" : "Additional relatedAction relationship",
-        "definition" : "If the extension is used, RequestGroup.action.relatedAction.relationship shall be concurrent",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship"
-            ]
-          }
-        ]
+    "element" : [{
+      "id" : "RequestGroup",
+      "path" : "RequestGroup"
+    },
+    {
+      "id" : "RequestGroup.groupIdentifier",
+      "path" : "RequestGroup.groupIdentifier",
+      "min" : 1
+    },
+    {
+      "id" : "RequestGroup.action.relatedAction.extension",
+      "path" : "RequestGroup.action.relatedAction.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
       }
-    ]
+    },
+    {
+      "id" : "RequestGroup.action.relatedAction.extension:additionalRelationship",
+      "path" : "RequestGroup.action.relatedAction.extension",
+      "sliceName" : "additionalRelationship",
+      "short" : "Additional relatedAction relationship",
+      "definition" : "If the extension is used, RequestGroup.action.relatedAction.relationship shall be concurrent",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship"]
+      }]
+    }]
   }
 }
 

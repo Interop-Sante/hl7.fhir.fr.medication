@@ -5,7 +5,7 @@
 
 ## La conciliation - Cas d'usage
 
-> **Attention !**la partie conciliation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+>  **Attention !** la partie conciliation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin. 
 
 ### Cas d’usage
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="Analyse-Intervention-Type4-CETAFEN-INJ"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Task Analyse-Intervention-Type4-CETAFEN-INJ</b></p><a name="Analyse-Intervention-Type4-CETAFEN-INJ"> </a><a name="hcAnalyse-Intervention-Type4-CETAFEN-INJ"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260320174600</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-20 18:53:00+0100</p><p><b>performerType</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}">Pharmacien</span></p><p><b>owner</b>: <a href="Practitioner/smart-Practitioner-27865023">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :">ligne de prescription analysée</span></td><td><a href="MedicationRequest-InLine-Analyse-Presc-CETAFEN-INJ.html">MedicationRequest : extension = 1 flacon en perfusion de 15 mn toutes les 12 heures; status = active; intent = order; priority = routine; medication[x] = CETAFEN 10MG/3MG/ML FL100ML; authoredOn = 2026-03-20 17:46:00+0100; groupIdentifier = Presc-20260320174600; note = Prescription textuelle: CETAFEN 10MG/3MG/ML FL100ML : 1 flacon en perfusion de 15 mn toutes les 12 heures</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">commentaire</span></p><p><b>value</b>: La patiente est en capacité de déglutir, voie orale à privilégier</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type d'intervention</span></p><p><b>value</b>: <span title="Codes :">Choix de la voie d'administration</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type de problème</span></p><p><b>value</b>: <span title="Codes :">Voie/administration inappropriée</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">proposition</span></p><p><b>value</b>: <a href="MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR.html">MedicationRequest : extension = 2 comprimés toutes les 12 heures; status = active; intent = proposal; priority = routine; medication[x] = CETAFEN 500MG/150MG CPR; authoredOn = 2026-03-20 18:53:00+0100; groupIdentifier = Presc-20260320174600; note = Prescription textuelle: CETAFEN 500MG/150MG : 2 comprimés toutes les 12 heures</a></p></blockquote></div>
+  </text>
+  <groupIdentifier>
+    <value value="Presc-20260320174600"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <intent value="proposal"/>
+  <authoredOn value="2026-03-20T18:53:00+01:00"/>
+  <performerType>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"/>
+      <code value="21"/>
+      <display value="Pharmacien"/>
+    </coding>
+  </performerType>
+  <owner>
+    <reference value="Practitioner/smart-Practitioner-27865023"/>
+  </owner>
+  <input>
+    <type>
+      <text value="ligne de prescription analysée"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Analyse-Presc-CETAFEN-INJ"/>
+    </valueReference>
+  </input>
+  <output>
+    <type>
+      <text value="résultat de l'analyse"/>
+    </type>
+    <valueCode value="INTERVENTION"/>
+  </output>
+  <output>
+    <type>
+      <text value="commentaire"/>
+    </type>
+    <valueString value="La patiente est en capacité de déglutir, voie orale à privilégier"/>
+  </output>
+  <output>
+    <type>
+      <text value="type d'intervention"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="4"/>
+        <display value="Choix de la voie d'administration"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <text value="type de problème"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="8"/>
+        <display value="Voie/administration inappropriée"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <text value="proposition"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Analyse-Presc-CETAFEN-CPR"/>
+    </valueReference>
+  </output>
+</Task>

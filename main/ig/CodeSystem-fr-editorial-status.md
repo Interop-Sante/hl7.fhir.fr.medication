@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/CodeSystem/fr-editorial-status | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrEditorialStatus |
+| Draft as of 2026-05-19 | *Computable Name*:FrEditorialStatus |
 
  
 Le système de codage du statut éditorial d’une valeur. 
@@ -27,9 +27,7 @@ Le système de codage du statut éditorial d’une valeur.
   "resourceType" : "CodeSystem",
   "id" : "fr-editorial-status",
   "meta" : {
-    "profile" : [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
   },
   "url" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-editorial-status",
   "version" : "0.1.0",
@@ -37,51 +35,41 @@ Le système de codage du statut éditorial d’une valeur.
   "title" : "code system Interop'Santé - Statut éditorial d'une valeur",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le système de codage du statut éditorial d'une valeur.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "content" : "complete",
   "count" : 4,
-  "concept" : [
-    {
-      "code" : "10000001",
-      "display" : "Créé"
-    },
-    {
-      "code" : "10000002",
-      "display" : "Mis-à-jour"
-    },
-    {
-      "code" : "10000003",
-      "display" : "Scellé"
-    },
-    {
-      "code" : "10000004",
-      "display" : "Supprimé"
-    }
-  ]
+  "concept" : [{
+    "code" : "10000001",
+    "display" : "Créé"
+  },
+  {
+    "code" : "10000002",
+    "display" : "Mis-à-jour"
+  },
+  {
+    "code" : "10000003",
+    "display" : "Scellé"
+  },
+  {
+    "code" : "10000004",
+    "display" : "Supprimé"
+  }]
 }
 
 ```

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="InLine-Analyse-Presc-ESIDREX"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-intervention-suggestion"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : PrescriptionMédicamenteuseTODO InLine-Analyse-Presc-ESIDREX</b></p><a name="InLine-Analyse-Presc-ESIDREX"> </a><a name="hcInLine-Analyse-Presc-ESIDREX"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.html">FR Pharmaceutical Intervention Suggestion</a></p></div><p><b>R5: Full representation of the dosage instructions (new)</b>: </p><div><p>0,5 comprimé par jour</p>
+</div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>priority</b>: Routine</p><p><b>medication</b>: <span title="Codes :{http://data.esante.gouv.fr/ansm/medicament/UCD 3400890324380}">ESIDREX 25MG CPR</span></p><p><b>subject</b>: <a href="Patient/14602">Patient/14602</a></p><p><b>supportingInformation</b>: </p><ul><li><a href="MedicationRequest-InLine-Analyse-Presc-COTAREG.html">MedicationRequest : extension = 1 comprimé par jour; status = active; intent = order; priority = routine; medication[x] = COTAREG 160MG/12,5MG CPR; authoredOn = 2026-03-18 16:19:00+0100; groupIdentifier = Presc-20260318161900; note = Prescription textuelle: COTAREG 160MG/12,5MG : 1 comprimé par jour​</a></li><li><a href="Task/Analyse-Intervention-Remplacement2pour1-COTAREG">Task/Analyse-Intervention-Remplacement2pour1-COTAREG</a></li></ul><p><b>authoredOn</b>: 2026-03-18 17:39:00+0100</p><p><b>requester</b>: <a href="Practitioner/smart-Practitioner-27865023">Practitioner/smart-Practitioner-27865023</a></p><p><b>groupIdentifier</b>: Presc-20260318161900</p><p><b>note</b>: </p><blockquote><div><p>Prescription textuelle: ESIDREX 25MG : 0,5 comprimé par jour​</p>
+</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Une fois par 1 day</p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>0.5 Comprimé<span style="background: LightGoldenRodYellow"> (Détails : code EDQM Standard Terms15054000 = 'Tablet')</span></td></tr></table></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction">
+    <valueMarkdown value="0,5 comprimé par jour"/>
+  </extension>
+  <status value="active"/>
+  <intent value="proposal"/>
+  <priority value="routine"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://data.esante.gouv.fr/ansm/medicament/UCD"/>
+      <code value="3400890324380"/>
+      <display value="ESIDREX 25MG CPR"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/14602"/>
+  </subject>
+  <supportingInformation>
+    <reference value="MedicationRequest/InLine-Analyse-Presc-COTAREG"/>
+  </supportingInformation>
+  <supportingInformation>
+    <reference value="Task/Analyse-Intervention-Remplacement2pour1-COTAREG"/>
+  </supportingInformation>
+  <authoredOn value="2026-03-18T17:39:00+01:00"/>
+  <requester>
+    <reference value="Practitioner/smart-Practitioner-27865023"/>
+  </requester>
+  <groupIdentifier>
+    <value value="Presc-20260318161900"/>
+  </groupIdentifier>
+  <note>
+    <text value="Prescription textuelle: ESIDREX 25MG : 0,5 comprimé par jour​"/>
+  </note>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="0.5"/>
+        <unit value="Comprimé"/>
+        <system value="http://standardterms.edqm.eu"/>
+        <code value="15054000"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

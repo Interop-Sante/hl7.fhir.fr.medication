@@ -10,11 +10,11 @@
 
 **actual**: true
 
-> **member****entity**:[Patient/14602](Patient/14602)
+> **member****entity**: [Patient/14602](Patient/14602)
 
-> **member****entity**:[Patient/14603](Patient/14603)
+> **member****entity**: [Patient/14603](Patient/14603)
 
-> **member****entity**:[Patient/14604](Patient/14604)
+> **member****entity**: [Patient/14604](Patient/14604)
 
 
 
@@ -26,23 +26,21 @@
   "id" : "InLine-patient-group-01",
   "type" : "person",
   "actual" : true,
-  "member" : [
-    {
-      "entity" : {
-        "reference" : "Patient/14602"
-      }
-    },
-    {
-      "entity" : {
-        "reference" : "Patient/14603"
-      }
-    },
-    {
-      "entity" : {
-        "reference" : "Patient/14604"
-      }
+  "member" : [{
+    "entity" : {
+      "reference" : "Patient/14602"
     }
-  ]
+  },
+  {
+    "entity" : {
+      "reference" : "Patient/14603"
+    }
+  },
+  {
+    "entity" : {
+      "reference" : "Patient/14604"
+    }
+  }]
 }
 
 ```

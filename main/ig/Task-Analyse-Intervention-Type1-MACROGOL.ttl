@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Task/Analyse-Intervention-Type1-MACROGOL> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Analyse-Intervention-Type1-MACROGOL"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Task Analyse-Intervention-Type1-MACROGOL</b></p><a name=\"Analyse-Intervention-Type1-MACROGOL\"> </a><a name=\"hcAnalyse-Intervention-Type1-MACROGOL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html\">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-3657</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2025-07-23 10:56:00+0100</p><p><b>performerType</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}\">Pharmacien</span></p><p><b>owner</b>: <a href=\"Practitioner/smart-Practitioner-27865023\">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :\">ligne de prescription analysée</span></td><td><a href=\"MedicationRequest-InLine-Analyse-Presc-Morphine.html\">MedicationRequest : extension = une gélule le soir (à 20h); status = active; intent = order; priority = routine; medication[x] = MORPHINE LP 10mg gélule microgranulé à libération prolongée; authoredOn = 2025-07-23 10:33:00+0100; groupIdentifier = Presc-3657; note = Prescription textuelle: MORPHINE SULFATE LP 10 mg gélule microgranule à libération prolongée: une gélule le soir (à 20h)</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">commentaire</span></p><p><b>value</b>: Administration de laxatif recommandée pour les traitements à la morphine</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type d'intervention</span></p><p><b>value</b>: <span title=\"Codes :\">Ajout (prescription nouvelle)</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type de problème</span></p><p><b>value</b>: <span title=\"Codes :\">Effet indésirable</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">proposition</span></p><p><b>value</b>: <a href=\"MedicationRequest-InLine-Analyse-Presc-MACROGOL.html\">MedicationRequest : extension = 1 sachet par jour le matin; status = active; intent = proposal; priority = routine; medication[x] = MACROGOL BGA 10G BUV SACH; authoredOn = 2025-07-23 10:56:00+0100; groupIdentifier = Presc-3657; note = Prescription textuelle: MACROGOL 10G : 1 sachet par jour le matin</a></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:groupIdentifier [
+     fhir:value [ fhir:v "Presc-3657" ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:authoredOn [ fhir:v "2025-07-23T10:56:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performerType ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante>
+       ] ;
+       fhir:code [ fhir:v "21" ] ;
+       fhir:display [ fhir:v "Pharmacien" ]
+     ] )
+  ] ) ; # 
+  fhir:owner [
+     fhir:l <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-27865023> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-27865023" ]
+  ] ; # 
+  fhir:input ( [
+     fhir:type [
+       fhir:text [ fhir:v "ligne de prescription analysée" ]
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-Analyse-Presc-Morphine> ;
+       fhir:reference [ fhir:v "MedicationRequest/InLine-Analyse-Presc-Morphine" ]
+     ]
+  ] ) ; # 
+  fhir:output ( [
+     fhir:type [
+       fhir:text [ fhir:v "résultat de l'analyse" ]
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "INTERVENTION"
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "commentaire" ]
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Administration de laxatif recommandée pour les traitements à la morphine"
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "type d'intervention" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Ajout (prescription nouvelle)" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "type de problème" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:code [ fhir:v "7" ] ;
+         fhir:display [ fhir:v "Effet indésirable" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "proposition" ]
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-Analyse-Presc-MACROGOL> ;
+       fhir:reference [ fhir:v "MedicationRequest/InLine-Analyse-Presc-MACROGOL" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

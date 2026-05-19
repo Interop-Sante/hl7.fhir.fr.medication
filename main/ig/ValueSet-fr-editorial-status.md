@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-editorial-status | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrEditorialStatus |
+| Draft as of 2026-05-19 | *Computable Name*:FrEditorialStatus |
 
  
 Le jeu de valeurs à utiliser pour coder le statut éditorial d’une valeur. 
@@ -54,38 +54,28 @@ Le jeu de valeurs à utiliser pour coder le statut éditorial d’une valeur.
   "title" : "value set Interop'Santé - Statut éditorial d'une valeur",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le jeu de valeurs à utiliser pour coder le statut éditorial d'une valeur.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-editorial-status"
-      }
-    ]
+    "include" : [{
+      "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-editorial-status"
+    }]
   }
 }
 

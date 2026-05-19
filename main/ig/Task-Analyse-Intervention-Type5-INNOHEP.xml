@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="Analyse-Intervention-Type5-INNOHEP"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Task Analyse-Intervention-Type5-INNOHEP</b></p><a name="Analyse-Intervention-Type5-INNOHEP"> </a><a name="hcAnalyse-Intervention-Type5-INNOHEP"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260320173100</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-20 18:38:00+0100</p><p><b>performerType</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}">Pharmacien</span></p><p><b>owner</b>: <a href="Practitioner/smart-Practitioner-27865023">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :">ligne de prescription analysée</span></td><td><a href="MedicationRequest-InLine-Analyse-Presc-INNOHEP.html">MedicationRequest : extension = Deux seringues toutes les 12 heures; status = active; intent = order; priority = routine; medication[x] = NNOHEP 2 500 UI anti-Xa/0,25 ml, solution injectable en seringue préremplie - 10 seringue(s) préremplie(s) en verre de 0,25 ml; authoredOn = 2026-03-20 17:31:00+0100; groupIdentifier = Presc-20260320173100; note = Prescription textuelle: INNOHEP 2 500 UI anti-Xa/0,25 ml : Deux seringues préremplies toutes les 12 heures</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">commentaire</span></p><p><b>value</b>: Il n'y a pas de clairance à la créatinine depuis le début du séjour soit le 05/03. Etant donné que la patiente est sous HBPM, est il possible de programmer cette analyse?</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type d'intervention</span></p><p><b>value</b>: <span title="Codes :">Suivi thérapeutique</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type de problème</span></p><p><b>value</b>: <span title="Codes :">Monitorage à suivre</span></p></blockquote></div>
+  </text>
+  <groupIdentifier>
+    <value value="Presc-20260320173100"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <intent value="proposal"/>
+  <authoredOn value="2026-03-20T18:38:00+01:00"/>
+  <performerType>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"/>
+      <code value="21"/>
+      <display value="Pharmacien"/>
+    </coding>
+  </performerType>
+  <owner>
+    <reference value="Practitioner/smart-Practitioner-27865023"/>
+  </owner>
+  <input>
+    <type>
+      <text value="ligne de prescription analysée"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Analyse-Presc-INNOHEP"/>
+    </valueReference>
+  </input>
+  <output>
+    <type>
+      <text value="résultat de l'analyse"/>
+    </type>
+    <valueCode value="INTERVENTION"/>
+  </output>
+  <output>
+    <type>
+      <text value="commentaire"/>
+    </type>
+    <valueString value="Il n'y a pas de clairance à la créatinine depuis le début du séjour soit le 05/03. Etant donné que la patiente est sous HBPM, est il possible de programmer cette analyse?"/>
+  </output>
+  <output>
+    <type>
+      <text value="type d'intervention"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="5"/>
+        <display value="Suivi thérapeutique"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <text value="type de problème"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="10"/>
+        <display value="Monitorage à suivre"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+</Task>

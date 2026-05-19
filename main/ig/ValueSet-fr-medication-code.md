@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-code | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FRMedicationCodes |
+| Draft as of 2026-05-19 | *Computable Name*:FRMedicationCodes |
 
  
 Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code 
@@ -25,7 +25,7 @@ Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.
 
 ### Expansion
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -54,44 +54,34 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "title" : "value set Interop'Santé - Codes identifiant les médicaments",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD"
-      },
-      {
-        "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS"
-      },
-      {
-        "system" : "http://data.esante.gouv.fr/ansm/medicament/substance"
-      }
-    ]
+    "include" : [{
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/UCD"
+    },
+    {
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/codeSMS"
+    },
+    {
+      "system" : "http://data.esante.gouv.fr/ansm/medicament/substance"
+    }]
   }
 }
 

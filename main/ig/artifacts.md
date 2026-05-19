@@ -14,7 +14,8 @@ These define data models that represent the domain covered by this implementatio
 | | |
 | :--- | :--- |
 | [Ligne de prescription](StructureDefinition-fr-ligne-prescription.md) | Structuration d’une ligne de prescription [WIP - à compléter]. |
-| [Posologie](StructureDefinition-fr-posologie.md) | Structuration d’une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle européen[Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html)(CI-BUILD) |
+| [Posologie](StructureDefinition-fr-posologie.md) | Structuration d’une posologie en fonction des critères de la HAS. Cette structuration a pour objectif de tendre au plus proche du modèle européen [Xt-EHR](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDosaging.html) (CI-BUILD) |
+| [Résultat d'analyse pharmaceutique](StructureDefinition-fr-analyse-pharmaceutique-logical.md) | Structure du résultat d’analyse pharmaceutique (validation ou intervention pharmacetique) |
 
 ### Structures: Resource Profiles 
 
@@ -23,21 +24,23 @@ These define constraints on FHIR resources for systems conforming to this implem
 | | |
 | :--- | :--- |
 | [FR Current Medication Composition](StructureDefinition-fr-current-medication-composition.md) | Profil de la ressource Composition du traitement médicamenteux courant. |
-| [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md) | Profil de la ressource**MedicationStatement**du traitement médicamenteux courant. Current Medication MedicationStatement resource profile |
+| [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md) | Profil de la ressource **MedicationStatement** du traitement médicamenteux courant. Current Medication MedicationStatement resource profile |
 | [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medication-dispense.md) | French medication dispense profile |
 | [FR Inpatient MedicationRequest](StructureDefinition-fr-inpatient-medicationrequest.md) | French inpatient medication request profile |
 | [FR Medication](StructureDefinition-fr-medication.md) | profil de la ressource Medication décrivant le médicament dans une ressource MedicationRequest ou MedicationStatement profilée par InterOp’Santé |
 | [FR Medication Compound](StructureDefinition-fr-medication-compound.md) | A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound. |
 | [FR Medication History Composition](StructureDefinition-fr-medication-history-composition.md) | Profil de la ressource Composition du Bilan Médicamenteux. Medication Assessment Composition resource profile. |
-| [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md) | Profil de la ressource**MedicationStatement**du Bilan médicamenteux. Medication History MedicationStatement resource profile |
+| [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md) | Profil de la ressource **MedicationStatement** du Bilan médicamenteux. Medication History MedicationStatement resource profile |
 | [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md) | Simple prescribed, dispensed, administered or used medication composed of one to many substances. If composed of many substance, the strengh SHALL be defined. |
-| [FR Medication Reconciliation Composition](StructureDefinition-fr-medication-reconciliation-composition.md) | Profil de la ressource**Composition**la Fiche de Conciliation des Traitements médicamenteux (FCT). |
-| [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md) | Profil de la ressource**MedicationStatement**référencée dans la ressource**Composition**de la Fiche de Conciliation des Traitements médicamenteux (FCT). |
+| [FR Medication Reconciliation Composition](StructureDefinition-fr-medication-reconciliation-composition.md) | Profil de la ressource **Composition** la Fiche de Conciliation des Traitements médicamenteux (FCT). |
+| [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md) | Profil de la ressource **MedicationStatement** référencée dans la ressource **Composition** de la Fiche de Conciliation des Traitements médicamenteux (FCT). |
 | [FR Medication Request](StructureDefinition-fr-medicationrequest.md) | French medication request profile |
 | [FR Medication Virtual](StructureDefinition-fr-medication-virtual.md) | Virtual medication composed of one to many substances. |
 | [FR Observation For Prescription](StructureDefinition-fr-observation-for-prescription.md) | Observation provided as context of the prescription (ex. weight, height…) |
-| [FR On Admission Medication Composition](StructureDefinition-fr-on-admission-medication-composition.md) | Profil de la ressource**Composition**du traitement médicamenteux prescrit à l’admission. |
-| [FR On Admission Retroactive Reconciliation Composition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md) | Profil de la ressource**Composition**de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d’admission. |
+| [FR On Admission Medication Composition](StructureDefinition-fr-on-admission-medication-composition.md) | Profil de la ressource **Composition** du traitement médicamenteux prescrit à l’admission. |
+| [FR On Admission Retroactive Reconciliation Composition](StructureDefinition-fr-on-admission-retroactive-reconciliation-composition.md) | Profil de la ressource **Composition** de la Fiche de Conciliation des Traitements médicamenteux (FCT) rétroactive d’admission. |
+| [FR Pharmaceutical Analysis Result](StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.md) | French Pharmaceutical Analysis Result profile |
+| [FR Pharmaceutical Intervention Suggestion](StructureDefinition-fr-inpatient-pharmaceutical-intervention-suggestion.md) | Profile de proposition d’évolution de ligne de prescritpion dans le cadre d’une intervention pharmaceutique |
 | [FR Prescription Bundle For Example](StructureDefinition-fr-prescription-bundle-for-example.md) | Profil de la ressource Bundle pour la constitution d’exemples de prescription. |
 | [FR RequestGroup For Prescription](StructureDefinition-fr-requestgroup-for-prescription.md) | RequestGroup for expressing links between lines of a prescription |
 
@@ -60,7 +63,7 @@ These define constraints on FHIR data types for systems conforming to this imple
 | :--- | :--- |
 | [Additional relatedAction relationship](StructureDefinition-fr-additional-action-relationship.md) | Extension to specify relationship between action in a RequestGroup |
 | [Additional values for when element](StructureDefinition-fr-additional-when-values.md) | Additional values for Timing.repeat.when |
-| [FRMedicationHistorySources](StructureDefinition-fr-medication-history-sources.md) | Sources des lignes du Bilan Médicamenteux que représente la ressource**Composition**ou de chacune de ses lignes que représente la ressource**MedicationStatement**référencée par l’élément**entry**de la ressource**Composition**(nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement) |
+| [FRMedicationHistorySources](StructureDefinition-fr-medication-history-sources.md) | Sources des lignes du Bilan Médicamenteux que représente la ressource **Composition** ou de chacune de ses lignes que représente la ressource **MedicationStatement** référencée par l’élément **entry** de la ressource **Composition** (nombre de sources ET le type de source, défini codé avec, si possible, son auteur, défini ès qualités et, si possible, nominativement) |
 | [FRMedicationStatementReconciliationProperties](StructureDefinition-fr-medicationstatement-reconciliation-properties.md) | Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT) |
 | [Medication component Basis of dose](StructureDefinition-fr-basis-of-dose-component.md) | When the medication element of the resource in which a dose applies is compound, this extension references the Medication resource component of the medication element which is the Basis of the dose quantity or volume. |
 | [Medication component which is the vehicle of the compound Medication](StructureDefinition-fr-is-vehicle.md) | Medication component which is the vehicle of the compound Medication |
@@ -76,11 +79,16 @@ These define sets of codes used by systems conforming to this implementation gui
 
 | | |
 | :--- | :--- |
-| [French Medicinal product Dose form](ValueSet-fr-mp-dose-form.md) | Le jeu de valeurs à utiliser pour coder l’élément**doseForm**des ressources**FrMedication**. |
-| [French Method Of Administration](ValueSet-FrMethodOfAdministration.md) | Le jeu de valeurs à utiliser pour coder l’élément**dosageInstruction.method**de la ressource**FRMedicationRequest**. |
-| [French Route of Administration](ValueSet-fr-route-of-administration.md) | Le jeu de valeurs à utiliser pour coder l’élément**dosageInstruction.route**de la ressource**FRMedicationRequest**. |
-| [French overall intention of the treatment](ValueSet-fr-treatment-intent.md) | Le jeu de valeurs à utiliser pour coder l’élément**treatmentIntent**de la ressource**FRInpatientMedicationRequest**. |
+| [French Medicinal product Dose form](ValueSet-fr-mp-dose-form.md) | Le jeu de valeurs à utiliser pour coder l’élément **doseForm** des ressources **FrMedication**. |
+| [French Method Of Administration](ValueSet-FrMethodOfAdministration.md) | Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.method** de la ressource **FRMedicationRequest**. |
+| [French Route of Administration](ValueSet-fr-route-of-administration.md) | Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.route** de la ressource **FRMedicationRequest**. |
+| [French overall intention of the treatment](ValueSet-fr-treatment-intent.md) | Le jeu de valeurs à utiliser pour coder l’élément **treatmentIntent** de la ressource **FRInpatientMedicationRequest**. |
 | [Interop'Santé value set - Additional codes for relationship between action](ValueSet-fr-additional-action-relationship-type-value-set.md) | Codes to specify relationship between action in a RequestGroup that are not in the valueSet http://hl7.org/fhir/ValueSet/action-relationship-type. |
+| [Jeu de valeurs Interop'Santé - Codes de devenir de l'intervention pharmaceutique](ValueSet-fr-pharmaceutical-intervention-devenir-code-value-set.md) | Codes représentant le devenir de l’intervention pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique](ValueSet-fr-pharmaceutical-analysis-perfomer-type-value-set.md) | Codes représentant le type de résultat de l’analyse pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes de résultat d'analyse pharmaceutique](ValueSet-fr-pharmaceutical-analysis-result-code-value-set.md) | Codes représentant le type de résultat de l’analyse pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique](ValueSet-fr-pharmaceutical-intervention-problem-code-value-set.md) | Codes représentant le problème identifié dans l’intervention pharmaceutique |
+| [Jeu de valeurs Interop'Santé - Codes du type d'intervention pharmaceutique](ValueSet-fr-pharmaceutical-intervention-type-code-value-set.md) | Codes représentant le type d’intervention pharmaceutique |
 | [MedicationIngredientStrengthCodes](ValueSet-medication-ingredient-strength-codes.md) | Medication Ingredient Strength Codes |
 | [value set Interop'Santé - Codes additionnels pour l'élément when](ValueSet-fr-additional-when-codes.md) | Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing. |
 | [value set Interop'Santé - Codes identifiant les médicaments](ValueSet-fr-medication-code.md) | Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.coding.code |
@@ -93,8 +101,8 @@ These define sets of codes used by systems conforming to this implementation gui
 | [value set Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT](ValueSet-fr-medication-reconciliation-type.md) | Le jeu de valeurs à utiliser pour coder le type d’écart/erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
 | [value set Interop'Santé - Types de rôle d’une UF par rapport à un séjour patient dans une prescription](ValueSet-fr-uf-role-code-for-prescription.md) | Le jeu de valeurs à utiliser dans l’extension pour indiquer le type d’UF référencée dans Medication.supportingInfo |
 | [value set Interop'Santé - qualification de la divergence identifiée sur une ligne de traitement d'une FCT](ValueSet-fr-medication-reconciliation-qualified-discrepancy.md) | Le jeu de valeurs à utiliser pour coder la qualification de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
-| [value set Interop'Santé - type de document de la ressource Composition d'une FCT](ValueSet-fr-current-medication-document-type.md) | Le jeu de valeurs à utiliser pour coder le type de document de la ressource**Composition**d’une liste des Traitements Médicamenteux Courants. |
-| [value set Interop'Santé - type de document de la ressource Composition d'une FCT](ValueSet-fr-medication-reconciliation-document-type.md) | Le jeu de valeurs à utiliser pour coder le type de document de la ressource**Composition**d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
+| [value set Interop'Santé - type de document de la ressource Composition d'une FCT](ValueSet-fr-current-medication-document-type.md) | Le jeu de valeurs à utiliser pour coder le type de document de la ressource **Composition** d’une liste des Traitements Médicamenteux Courants. |
+| [value set Interop'Santé - type de document de la ressource Composition d'une FCT](ValueSet-fr-medication-reconciliation-document-type.md) | Le jeu de valeurs à utiliser pour coder le type de document de la ressource **Composition** d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
 | [value set SIPh - Nature des sources d'un Bilan Médicamenteux](ValueSet-fr-medication-history-source-type.md) | Un jeu de valeurs à utiliser pour coder les sources d’un Bilan Médicamenteux. |
 
 ### Terminology: Code Systems 
@@ -114,8 +122,12 @@ These define new code systems used by systems conforming to this implementation 
 | [code system Interop'Santé - Statut d'une ligne de traitement d'une FCT](CodeSystem-fr-medication-reconciliation-status.md) | Le système de codage du statut d’une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
 | [code system Interop'Santé - Statut éditorial d'une valeur](CodeSystem-fr-editorial-status.md) | Le système de codage du statut éditorial d’une valeur. |
 | [code system Interop'Santé - Type d'écart/erreur sur une ligne de traitement d'une FCT](CodeSystem-fr-medication-reconciliation-type.md) | Le système de codage du type d’écart/erreur sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
-| [code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy](CodeSystem-fr-document-type.md) | Le système de codage SIPh du type de document d’une ressource**Composition**du domaine Pharmacy |
+| [code system Interop'Santé - Type de document d'une ressource Composition du domaine Pharmacy](CodeSystem-fr-document-type.md) | Le système de codage SIPh du type de document d’une ressource **Composition** du domaine Pharmacy |
 | [code system Interop'Santé - divergence identifiée sur une ligne de traitement d'une FCT](CodeSystem-fr-medication-reconciliation-discrepancy.md) | Le système de codage de la divergence identifiée sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). |
+| [code system d'Interop'Santé - Codes de devenir de l'intervention pharmaceutique](CodeSystem-fr-pharmaceutical-intervention-devenir-code.md) | Le système de codage pour le typage du devenir l’intervention pharmaceutique. |
+| [code system d'Interop'Santé - Codes de résultat d'analyse pharmaceutique](CodeSystem-fr-pharmaceutical-analysis-result-code.md) | Le système de codage pour le typage du résultat d’analyse pharmaceutique. |
+| [code system d'Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique](CodeSystem-fr-pharmaceutical-intervention-problem-code.md) | Le système de codage pour le typage du problème identifié dans l’intervention pharmaceutique. |
+| [code system d'Interop'Santé - Codes du type d'intervention pharmaceutique](CodeSystem-fr-pharmaceutical-intervention-type-code.md) | Le système de codage pour le typage de l’intervention pharmaceutique. |
 
 ### Terminology: Concept Maps 
 
@@ -129,6 +141,9 @@ These define transformations to convert between codes by systems conforming with
 | [Conversion PN13 vers FHIR pour le patient d'une prescription de médicaments avec uniquement un identifiant fourni](ConceptMap-PN13-FHIR-prescmed-patient-id-seul-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR du patient d’une prescritpion de médicament avec uniquement un identifiant fourni |
 | [Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec d'autres éléments qu'uniquement l'identifiant](ConceptMap-PN13-FHIR-prescmed-practitioner-identite-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d’une prescritpion de médicament avec d’autres éléments qu’uniquement l’identifiant |
 | [Conversion PN13 vers FHIR pour le professionnel prescripteur d'une prescription de médicaments avec uniquement un identifiant fourni](ConceptMap-PN13-FHIR-prescmed-practitioner-id-seul-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR du professionnel prescripteur d’une prescritpion de médicament avec uniquement un identifiant fourni |
+| [Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutique de type intervention pharmaceutique sans proposition](ConceptMap-PN13-FHIR-analpharm-interv-sans-prop-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR d’un résultat d’une analyse pharmaceutique de type intervention pharmaceutique sans proposition |
+| [Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type intervention pharmaceutique avec proposition](ConceptMap-PN13-FHIR-analpharm-interv-avec-prop-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR d’un résultat d’une analyse pharmaceutique de type intervention pharmaceutique avec proposition |
+| [Conversion PN13 vers FHIR pour le résultat d'une analyse pharmaceutiquede type validation](ConceptMap-PN13-FHIR-analpharm-val-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR d’un résultat d’une analyse pharmaceutique de type validation |
 | [Conversion PN13 vers FHIR pour les renseignements complémentaires d'une prescription de médicaments](ConceptMap-PN13-FHIR-observation-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR d’un renseignement complémentare d’une prescritpion de médicament |
 | [Conversion PN13 vers FHIR pour un médicament composé d'une prescription de médicaments](ConceptMap-PN13-FHIR-prescmed-medicationcomp-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR d’un médicament composé d’une prescritpion de médicament |
 | [Conversion PN13 vers FHIR pour un médicament non composé d'une prescription de médicaments](ConceptMap-PN13-FHIR-prescmed-medicationnoncompound-conceptmap.md) | ConceptMap pour la conversion PN13 vers FHIR d’un médicament non composé d’une prescritpion de médicament |
@@ -145,6 +160,35 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Analyse-Intervention-Acceptee](Task-Analyse-Intervention-Acceptee.md) | Acceptation de l’arrêt de paracétamol proposé par l’intervention pharmaceutique |
+| [Analyse-Intervention-Commentaire-Trad-PN13-FHIR](Task-Analyse-Intervention-Commentaire-Trad-PN13-FHIR.md) | Intervention pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR](Task-Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR.md) | Intervention pharmaceutique associée à une validation pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Intervention-NonAcceptee](Task-Analyse-Intervention-NonAcceptee.md) | Validation d’un dosage dont l’intervention pharmaceutique demandait confirmation |
+| [Analyse-Intervention-Proposition-Trad-PN13-FHIR](Task-Analyse-Intervention-Proposition-Trad-PN13-FHIR.md) | Intervention pharmaceutique avec proposition pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Intervention-Substitution-Trad-PN13-FHIR](Task-Analyse-Intervention-Substitution-Trad-PN13-FHIR.md) | Intervention pharmaceutique avec proposition de substitution pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Intervention-Type1-DOSTINEX](Task-Analyse-Intervention-Type1-DOSTINEX.md) | Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 9 Traitement non reçu |
+| [Analyse-Intervention-Type1-MACROGOL](Task-Analyse-Intervention-Type1-MACROGOL.md) | Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 7 Effet indésirable |
+| [Analyse-Intervention-Type1-METFORMINE](Task-Analyse-Intervention-Type1-METFORMINE.md) | Intervention pharmaceutique Type: 1 Ajout (prescription nouvelle) - Problème: 2 Indication non traitée |
+| [Analyse-Intervention-Type2-Arret-Paracetamol](Task-Analyse-Intervention-Type2-Arret-Paracetamol.md) | Intervention pharmaceutique Type 2: Arrêt - Problème 5: Médicament non indiqué |
+| [Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM](Task-Analyse-Intervention-Type3-Demande-Substitution-NEFOPAM.md) | Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 6.3 Interaction - Association déconseillée |
+| [Analyse-Intervention-Type3-ELIQUIS](Task-Analyse-Intervention-Type3-ELIQUIS.md) | Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 4 Surdosage |
+| [Analyse-Intervention-Type3-ESOMEPRAZOLE](Task-Analyse-Intervention-Type3-ESOMEPRAZOLE.md) | Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels |
+| [Analyse-Intervention-Type3-Remplacement1pour2-INEGY](Task-Analyse-Intervention-Type3-Remplacement1pour2-INEGY.md) | Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels |
+| [Analyse-Intervention-Type3-Remplacement2pour1-COTAREG](Task-Analyse-Intervention-Type3-Remplacement2pour1-COTAREG.md) | Intervention pharmaceutique Type: 3 Substitution/Echange - Problème: 1 Non conformité aux référentiels |
+| [Analyse-Intervention-Type4-CETAFEN-INJ](Task-Analyse-Intervention-Type4-CETAFEN-INJ.md) | Intervention pharmaceutique Type: 4 Choix de la voie d’administration - Problème: 8 Voie/administration inappropriée |
+| [Analyse-Intervention-Type5-DOSTINEX](Task-Analyse-Intervention-Type5-DOSTINEX.md) | Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 7 Effet indésirable |
+| [Analyse-Intervention-Type5-INNOHEP](Task-Analyse-Intervention-Type5-INNOHEP.md) | Intervention pharmaceutique Type: 5 Suivi thérapeutique - Problème: 10 Monitorage à suivre |
+| [Analyse-Intervention-Type6-CALCIDOSE](Task-Analyse-Intervention-Type6-CALCIDOSE.md) | Intervention pharmaceutique Type: 6 Optimisation modalités d’administration - Problème: 6.2 Interaction - Précaution d’emploi |
+| [Analyse-Intervention-Type6-LOXAPAC](Task-Analyse-Intervention-Type6-LOXAPAC.md) | Intervention pharmaceutique Type: 6 Optimisation modalités d’administration - Problème: 8 Voie/administration inappropriée |
+| [Analyse-Intervention-Type7-BINOCRIT](Task-Analyse-Intervention-Type7-BINOCRIT.md) | Intervention pharmaceutique Type: 7 Adaptation posologique - Problème: 3 Sous-dosage |
+| [Analyse-Validation-Ajout-Morphine](Task-Analyse-Validation-Ajout-Morphine.md) | Validation d’une prescription de morphine avec proposition d’ajout |
+| [Analyse-Validation-Commentaire-Diazepam](Task-Analyse-Validation-Commentaire-Diazepam.md) | Validation d’une prescription de diazépam avec commentaire |
+| [Analyse-Validation-Commentaire-LACRIFLUID](Task-Analyse-Validation-Commentaire-LACRIFLUID.md) | Validation d’une prescription de LACRIFLUID avec commentaire |
+| [Analyse-Validation-Commentaire-Morphine](Task-Analyse-Validation-Commentaire-Morphine.md) | Validation d’une prescription de morphine avec commentaire |
+| [Analyse-Validation-Commentaire-Trad-PN13-FHIR](Task-Analyse-Validation-Commentaire-Trad-PN13-FHIR.md) | Validation pharmaceutique avec commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR](Task-Analyse-Validation-Intervention-Liee-Trad-PN13-FHIR.md) | Validation pharmaceutique associée à une intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR](Task-Analyse-Validation-Sans-Commentaire-Trad-PN13-FHIR.md) | Validation pharmaceutique sans commentaire pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [Analyse-Validation-Simple-paracetamol](Task-Analyse-Validation-Simple-paracetamol.md) | Validation simple d’une prescription de paracétamol |
 | [Disp-DOLIPRANE-Refill-Compl-presc-DC](MedicationDispense-Disp-DOLIPRANE-Refill-Compl-presc-DC.md) | Prescription complémentaire et finale de DOLIPRANE sur une prescription de Paracétamol |
 | [Disp-DOLIPRANE-Refill-Substit](MedicationDispense-Disp-DOLIPRANE-Refill-Substit.md) | Dispensation complémentaire et partielle de DOLIPRANE sur une prescription d’EFFERALGAN |
 | [Disp-DOLIPRANE-Refill-presc-DC](MedicationDispense-Disp-DOLIPRANE-Refill-presc-DC.md) | Dispensation complémentaire et partielle de DOLIPRANE sur une prescription de Paracétamol |
@@ -199,11 +243,47 @@ These are example instances that show what data produced and consumed by systems
 | [HAS-32-1-Presc-LOVENOX](Bundle-HAS-32-1-Presc-LOVENOX.md) | ENOXAPARINE sodique 4 000 UI (40 mg)/0,4 mL, solution injectable en seringue préremplie (LOVENOX®): 1 injection en sous-cutanée par jour pendant 1 semaine. |
 | [HAS-32-2-Presc-ULTIBRO-BREES](Bundle-HAS-32-2-Presc-ULTIBRO-BREES.md) | ULTIBRO BREEZ® 85/43 µg gélule : 1 gélule à administrer par voie inhalée à la même heure chaque jour pendant 1 mois. |
 | [HAS-33-Presc-VERSATIS](Bundle-HAS-33-Presc-VERSATIS.md) | VERSATIS® 700 mg emplâtre médicamenteux: 1 emplâtre par jour à 20 h, à laisser pendant 12h sur la peau |
+| [InLine-Analyse-Presc-BINOCRIT](MedicationRequest-InLine-Analyse-Presc-BINOCRIT.md) | Prescription de BINOCRIT pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-CALCIDOSE](MedicationRequest-InLine-Analyse-Presc-CALCIDOSE.md) | Prescription de CALCIDOSE pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-CELLUVISC](MedicationRequest-InLine-Analyse-Presc-CELLUVISC.md) | Prescription de CELLUVISC pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-CETAFEN-CPR](MedicationRequest-InLine-Analyse-Presc-CETAFEN-CPR.md) | Prescription de CETAFEN en comprimé pour exemple d’intervention pharmaceutique |
+| [InLine-Analyse-Presc-CETAFEN-INJ](MedicationRequest-InLine-Analyse-Presc-CETAFEN-INJ.md) | Prescription de CETAFEN en perfusion pour exemple d’intervention pharmaceutique |
+| [InLine-Analyse-Presc-COTAREG](MedicationRequest-InLine-Analyse-Presc-COTAREG.md) | Prescription de COTAREG pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-DOSTINEX](MedicationRequest-InLine-Analyse-Presc-DOSTINEX.md) | Prescription de DOSTINEX pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-Diazepam](MedicationRequest-InLine-Analyse-Presc-Diazepam.md) | Prescription de Diazépam pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-ELIQUIS-25](MedicationRequest-InLine-Analyse-Presc-ELIQUIS-25.md) | Prescription de ELIQUS 2,5 MG pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-ELIQUIS-50](MedicationRequest-InLine-Analyse-Presc-ELIQUIS-50.md) | Prescription de ELIQUIS 5MG pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-ESIDREX](MedicationRequest-InLine-Analyse-Presc-ESIDREX.md) | Prescription d’ESIDREX pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-ESOMEPRAZOLE](MedicationRequest-InLine-Analyse-Presc-ESOMEPRAZOLE.md) | Prescription de ESOMEPTAZOLE pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-EZETIMIBE](MedicationRequest-InLine-Analyse-Presc-EZETIMIBE.md) | Prescription de EZETIMIBE pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-INEGY](MedicationRequest-InLine-Analyse-Presc-INEGY.md) | Prescription de INEGY pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-INNOHEP](MedicationRequest-InLine-Analyse-Presc-INNOHEP.md) | Prescription de INNOHEP pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-LACRIFLUID](MedicationRequest-InLine-Analyse-Presc-LACRIFLUID.md) | Prescription de LACRIFLUID pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-LANSOPRAZOLE](MedicationRequest-InLine-Analyse-Presc-LANSOPRAZOLE.md) | Prescription de LANSOPRAZOLE pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-LEVOTHYROX](MedicationRequest-InLine-Analyse-Presc-LEVOTHYROX.md) | Prescription de LACRIFLUID pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-LOXAPAC](MedicationRequest-InLine-Analyse-Presc-LOXAPAC.md) | Prescription de LOXAPAC pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-MACROGOL](MedicationRequest-InLine-Analyse-Presc-MACROGOL.md) | Prescription de MACROGOL pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-METFORMINE](MedicationRequest-InLine-Analyse-Presc-METFORMINE.md) | Prescription de METFORMINE pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-Morphine](MedicationRequest-InLine-Analyse-Presc-Morphine.md) | Prescription de Paracétamol pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-NEFOPAM](MedicationRequest-InLine-Analyse-Presc-NEFOPAM.md) | Prescription de NEFOPMA pour exemple d’intervention pharmaceutique |
+| [InLine-Analyse-Presc-Paracetamol](MedicationRequest-InLine-Analyse-Presc-Paracetamol.md) | Prescription de Paracétamol pour exemple de vaidation pharmaceutique |
+| [InLine-Analyse-Presc-Paracetamol-Si-Douleur](MedicationRequest-InLine-Analyse-Presc-Paracetamol-Si-Douleur.md) | Prescription de Paracétamol pour exemple d’intervention pharmaceutique |
+| [InLine-Analyse-Presc-SIMVASTATINE](MedicationRequest-InLine-Analyse-Presc-SIMVASTATINE.md) | Prescription de SIMVASTATINE pour exemple d’analyse pharmaceutique |
+| [InLine-Analyse-Presc-TAREG](MedicationRequest-InLine-Analyse-Presc-TAREG.md) | Prescription de TAREG pour exemple d’analyse pharmaceutique |
 | [InLine-DOLIPRANE](Medication-InLine-DOLIPRANE.md) | Medication DOLIPRANE® pour exemple de dispensation |
+| [InLine-Inter-Arret-Paracetamol-Si-Douleur](MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur.md) | Proposition d’arrêt dans le cadre d’un intervention pharmaceutique |
+| [InLine-Observation-poids-Avion](Observation-InLine-Observation-poids-Avion.md) | Poids du patient pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique |
 | [InLine-Presc-EFFERALGAN](MedicationRequest-InLine-Presc-EFFERALGAN.md) | Prescription d’EFFERALGAN® pour exemple de dispensation |
+| [InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition](MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Intervention-Proposition.md) | Proposition associée à intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution](MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Intervention-Substitution.md) | Proposition de substitution associée à intervention pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol](MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol.md) | Prescription initale pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition](MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition.md) | Proposition associée à validation pharmaceutique pour exemple traduction PN13-FHIR de resultats d’analyse pharmaceutique |
 | [InLine-med-EFFERALGAN](Medication-InLine-med-EFFERALGAN.md) | Medication EFFERALGAN® pour exemple de dispensation |
 | [InLine-med-Paracetamol](Medication-InLine-med-Paracetamol.md) | Medication Paracétamol pour exemple de dispensation |
+| [InLine-observation-taille-Avion](Observation-InLine-observation-taille-Avion.md) | Taille du patient pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique |
+| [InLine-patient-Avion](Patient-InLine-patient-Avion.md) | Patient pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique |
 | [InLine-patient-group-01](Group-InLine-patient-group-01.md) | Groupe de patient pour exemple de délivrance reglobalisée |
+| [InLine-practitioner-Luiggi](Practitioner-InLine-practitioner-Luiggi.md) | Practitioner prescripteur pour exemples traduction PN13-FHIR de resultats d’analyse pharmaceutique |
 | [InLine-presc-EFFERALGAN2](MedicationRequest-InLine-presc-EFFERALGAN2.md) | Prescription d’EFFERALGAN® pour exemple de dispensation |
 | [InLine-presc-Paracetamol1](MedicationRequest-InLine-presc-Paracetamol1.md) | Prescription de Paracétamol pour exemple de dispensation |
 | [InLine-presc-Paracetamol2](MedicationRequest-InLine-presc-Paracetamol2.md) | Prescription de Paracétamol pour exemple de dispensation |

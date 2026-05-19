@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-medication-reconciliation-resolution | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FRMedicationReconciliationResolution |
+| Draft as of 2026-05-19 | *Computable Name*:FRMedicationReconciliationResolution |
 
  
 Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur une ligne de traitement d’une FCT (Fiche de Conciliation des Traitements médicamenteux). 
@@ -54,38 +54,28 @@ Un jeu de valeurs à utiliser pour coder la résolution d’une divergence sur u
   "title" : "value set Interop'Santé - Résolution d'une divergence sur une ligne de traitement d'une FCT",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Un jeu de valeurs à utiliser pour coder la résolution d'une divergence sur une ligne de traitement d'une FCT (Fiche de Conciliation des Traitements médicamenteux).",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-resolution"
-      }
-    ]
+    "include" : [{
+      "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-medication-reconciliation-resolution"
+    }]
   }
 }
 

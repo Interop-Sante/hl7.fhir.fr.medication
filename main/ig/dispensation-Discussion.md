@@ -5,7 +5,7 @@
 
 ## La dispensation - Discussion
 
-> **Attention !**la partie dispensation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin.
+>  **Attention !** la partie dispensation est en draft et n'a pas été éprouvé, un groupe de travail dédié doit être lancé afin de faire évoluer le besoin. 
 
 ### Discussion
 

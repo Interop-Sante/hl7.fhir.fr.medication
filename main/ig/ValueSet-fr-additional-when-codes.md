@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/fr-additional-when-codes | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrAdditionalWhenCodes |
+| Draft as of 2026-05-19 | *Computable Name*:FrAdditionalWhenCodes |
 
  
 Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing. 
@@ -54,38 +54,28 @@ Le jeu de valeurs à utiliser pour coder des périodes d’occurrence qui ne son
   "title" : "value set Interop'Santé - Codes additionnels pour l'élément when",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "Le jeu de valeurs à utiliser pour coder des périodes d'occurrence qui ne sont pas dans le jeu de valeurs http://hl7.org/fhir/ValueSet/event-timing.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "immutable" : false,
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-when-codes"
-      }
-    ]
+    "include" : [{
+      "system" : "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-additional-when-codes"
+    }]
   }
 }
 

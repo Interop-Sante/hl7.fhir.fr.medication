@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-compound | *Version*:0.1.0 |
-| Draft as of 2026-01-20 | *Computable Name*:FrRedicationCompound |
+| Draft as of 2026-05-19 | *Computable Name*:FrRedicationCompound |
 
  
 A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound. 
@@ -19,9 +19,9 @@ Compound medication description
 
 **Utilisations:**
 
-* Référer à ce Profil: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+* Référence ce Profil: [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication-compound)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-medication-compound)
 
 ### Formal Views of Profile Content
 
@@ -45,150 +45,126 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-compou
   "title" : "FR Medication Compound",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-20T11:00:00+00:00",
+  "date" : "2026-05-19T09:10:48+00:00",
   "publisher" : "Interop'Santé",
-  "contact" : [
-    {
-      "name" : "Interop'Santé",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://interopsante.org/"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  }],
   "description" : "A complex medication composed of two to many simple medication. The simple medications component are described in as many ingredient.itemReference referencing a Medication resource profiled fr-medication-non-compound.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "purpose" : "Compound medication description",
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "script10.6",
-      "uri" : "http://ncpdp.org/SCRIPT10_6",
-      "name" : "Mapping to NCPDP SCRIPT 10.6"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "script10.6",
+    "uri" : "http://ncpdp.org/SCRIPT10_6",
+    "name" : "Mapping to NCPDP SCRIPT 10.6"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Medication",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Medication",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Medication",
-        "path" : "Medication",
-        "short" : "Definition of a Medication compound of a MedicinalRequest, Dispense or Usage",
-        "definition" : "Medication compound of a Medication representing the composition of a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement). For instance, Glucose 5% 1L part of an infusion made of 3 compounds, Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g."
-      },
-      {
-        "id" : "Medication.form",
-        "path" : "Medication.form",
-        "binding" : {
-          "strength" : "extensible",
-          "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-mp-dose-form"
-        }
-      },
-      {
-        "id" : "Medication.ingredient",
-        "path" : "Medication.ingredient",
-        "short" : "Medication component of compound medication",
-        "definition" : "Identifies a medicinal component of the compound medicinal product",
-        "comment" : "The Medication SHALL contain ALL the items of the item element list AND ONLY the items of the item element list.",
-        "min" : 1
-      },
-      {
-        "id" : "Medication.ingredient.extension",
-        "path" : "Medication.ingredient.extension",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "url"
-            }
-          ],
-          "ordered" : false,
-          "rules" : "open"
-        }
-      },
-      {
-        "id" : "Medication.ingredient.extension:IsVehicle",
-        "path" : "Medication.ingredient.extension",
-        "sliceName" : "IsVehicle",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "Medication.ingredient.item[x]",
-        "path" : "Medication.ingredient.item[x]",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "type",
-              "path" : "$this"
-            }
-          ],
-          "ordered" : false,
-          "rules" : "open"
-        },
-        "short" : "The actual compound",
-        "definition" : "The actual compound, either nonproprietary named medication or branded named medication identified by a UCD code."
-      },
-      {
-        "id" : "Medication.ingredient.item[x]:itemReference",
-        "path" : "Medication.ingredient.item[x]",
-        "sliceName" : "itemReference",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "Medication.batch",
-        "path" : "Medication.batch",
-        "max" : "0"
+    "element" : [{
+      "id" : "Medication",
+      "path" : "Medication",
+      "short" : "Definition of a Medication compound of a MedicinalRequest, Dispense or Usage",
+      "definition" : "Medication compound of a Medication representing the composition of a MedicationRequest, a MedicationDispense or a MedicationUsage (pka MedicationStatement). For instance, Glucose 5% 1L part of an infusion made of 3 compounds, Glucose 5% 1L + Sodium chloride 3g + Potassium chloride 2g."
+    },
+    {
+      "id" : "Medication.form",
+      "path" : "Medication.form",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://hl7.fr/ig/fhir/medication/ValueSet/fr-mp-dose-form"
       }
-    ]
+    },
+    {
+      "id" : "Medication.ingredient",
+      "path" : "Medication.ingredient",
+      "short" : "Medication component of compound medication",
+      "definition" : "Identifies a medicinal component of the compound medicinal product",
+      "comment" : "The Medication SHALL contain ALL the items of the item element list AND ONLY the items of the item element list.",
+      "min" : 1
+    },
+    {
+      "id" : "Medication.ingredient.extension",
+      "path" : "Medication.ingredient.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Medication.ingredient.extension:IsVehicle",
+      "path" : "Medication.ingredient.extension",
+      "sliceName" : "IsVehicle",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle"]
+      }]
+    },
+    {
+      "id" : "Medication.ingredient.item[x]",
+      "path" : "Medication.ingredient.item[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "short" : "The actual compound",
+      "definition" : "The actual compound, either nonproprietary named medication or branded named medication identified by a UCD code."
+    },
+    {
+      "id" : "Medication.ingredient.item[x]:itemReference",
+      "path" : "Medication.ingredient.item[x]",
+      "sliceName" : "itemReference",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-noncompound"]
+      }]
+    },
+    {
+      "id" : "Medication.batch",
+      "path" : "Medication.batch",
+      "max" : "0"
+    }]
   }
 }
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Task Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR</b></p><a name="Analyse-Intervention-Liee-Validation-Trad-PN13-FHIR"> </a><a name="hcAnalyse-Intervention-Liee-Validation-Trad-PN13-FHIR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: 10723</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2022-04-11 17:30:53+0200</p><p><b>owner</b>: Identifier: <code>urn:oid:1.2.250.1.71.4.2.1</code>/811102058236</p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :">ligne de prescription analysée</span></td><td><a href="MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol.html">MedicationRequest : extension = 1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours; identifier = https://somehospital.fr/PrescrptionLine-ID#31626; status = active; intent = order; priority = routine; medication[x] = paracétamol; authoredOn = 2022-04-11 16:42:53+0200; groupIdentifier = https://somehospital.fr/Prescrption-ID#10723; note = Prescription textuelle: PARACETAMOL (Voie orale) A la demande :  1000 mg /prise,  4000 mg max/j,  respecter 6h entre 2 prises pendant 2 jours,Indication: En cas de douleur</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">commentaire</span></p><p><b>value</b>: Suggestion pour éviter le dépassement de la limite journalière par le patient</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">proposition</span></p><p><b>value</b>: <a href="MedicationRequest-InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition.html">MedicationRequest : extension = 1000 mg toutes les 6 heures pendant 2 jours, 4000 mg max/j; identifier = https://somehospital.fr/PrescrptionLine-ID#31637; status = active; intent = proposal; priority = routine; medication[x] = paracétamol; authoredOn = 2022-04-11 17:30:53+0200; groupIdentifier = https://somehospital.fr/Prescrption-ID#10723; note = Prescription textuelle: PARACETAMOL (Voie orale) : 1000 mg toutes les 6 heures pendant 2 jours, 4000 mg max/j</a></p></blockquote></div>
+  </text>
+  <groupIdentifier>
+    <value value="10723"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <intent value="proposal"/>
+  <authoredOn value="2022-04-11T17:30:53+02:00"/>
+  <owner>
+    <identifier>
+      <system value="urn:oid:1.2.250.1.71.4.2.1"/>
+      <value value="811102058236"/>
+    </identifier>
+  </owner>
+  <input>
+    <type>
+      <text value="ligne de prescription analysée"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Presc-Paracetamol"/>
+    </valueReference>
+  </input>
+  <output>
+    <type>
+      <text value="résultat de l'analyse"/>
+    </type>
+    <valueCode value="INTERVENTION"/>
+  </output>
+  <output>
+    <type>
+      <text value="commentaire"/>
+    </type>
+    <valueString value="Suggestion pour éviter le dépassement de la limite journalière par le patient"/>
+  </output>
+  <output>
+    <type>
+      <text value="proposition"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Trad-PN13-FHIR-Analyse-Validation-Proposition"/>
+    </valueReference>
+  </output>
+</Task>
