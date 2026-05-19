@@ -2,9 +2,9 @@
 
 #### Version 1.2 - Prochaine version prévue
 
-##### La conciliation v1.2
+##### L'analyse pharamceutique v1.2
 
-Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR et la prise en compte du  [Référentiel Unique d’Interopérabilité du Médicament](https://smt.esante.gouv.fr/explorer-les-concepts/terminologie-ref_interop_med) pour l'analyse pharmaceutique.
+Les prochains travaux prévus sur l’IG portent sur la mapping des données PN13 - FHIR pour l'analyse pharmaceutique.
 
 #### Version 1.1 - Version en cours
 
@@ -52,6 +52,46 @@ La communauté SIPh met à disposition les travaux préliminaires qu'elle entrep
 
 
 #### Liste des contributeurs
+
+##### Version 1.2
+
+- Lifen
+  - Manuel Metz
+- UseShare
+  - Anne Maheust
+- ANS
+  - Nicolas Riss
+- Dedalus
+  - Mathieu Grivois
+- Phast
+  - Guillame Arras
+  - Julien Montreuil
+- Enovacom
+  - Georges-Alexandre Chastin
+- CHU de Nantes
+  - Julien Moynard
+- Vidal
+  - Cloé Demars
+- HAS
+  - Pierre Liot
+  - Mirojane Mohammad
+- CHU de Nice
+  - Jean-Fabien Rey
+- CHU de Tours
+  - Julie Jalleau
+- Doctolib
+  - Marine Rodriguez
+- Logipren
+  - Aurore Berthe-Aucejo
+- APHM
+  - Marjorie Roudot
+- APHP
+  - David Ouagne
+- Bowmedical
+  - Alexandre Petit
+- Posos
+  - Pierre Luce
+
 
 ##### Version 1.1
 
