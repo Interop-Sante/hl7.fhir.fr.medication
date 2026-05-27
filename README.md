@@ -1,8 +1,8 @@
 # Description
 
-Guide d'implémentation du médicament contenant trois domaines : la conciliation, la prescription et la dispensation.
+Guide d'implémentation historique en draft sur les domaines conciliation et dispensation.
 
-Aujourd'hui, uniquement la prescription a été retravaillée, les parties conciliation et dispensation sont en draft et nécessitent des travaux complémentaires.
+Des travaux complémentaires d'alignement sur les profils européens et de traduction de flux PN13 en FHIR sont à mener pour finaliser les spécifications dans les deux domaines. Ces travaux déboucheront notamment sur deux IG à jour, un pour chaque domaine conciliation et dispensation.
 
 # Accès au guide
 
@@ -20,6 +20,4 @@ https://interop-sante.github.io/hl7.fhir.fr.medication/[nom-branche]/ig
 
 ## En version publiée
 
-La version publiée est à utiliser pour les développements. Le guide d'implémentation medication n'étant pas encore publié, le lien n'est pas encore accessible.
-
-https://hl7.fr/ig/fhir/medication
+Ce guide d'implémentation n'a pas vocation a être publié mais donnera deux guides d'implémentation publiés: guide d'implémentation de la conciliation et guide d'implémentation de la dispensation dont les liens seront fournis dans le cadre des travaux sur ces guides.
