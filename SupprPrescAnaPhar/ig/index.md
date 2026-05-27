@@ -14,18 +14,14 @@
 
 >  **Attention !** Cet Implementation Guide n'est pas la version courante. La version courante sera accessible via l'URL canonique (https://hl7.fr/ig/fhir/medication) lorsque celui-ci sera publié. 
 
-Ce guide d’implémentation (IG) a pour vocation à spécifier les flux d’information autour du médicament pour un patient dans un contexte hospitalier dans un premier temps. Trois cas d’usage sont pris en compte dans la version actuelle de cet IG:
+Ce guide d’implémentation (IG) est une version historique en mode draft sur les deux cas d’usage:
 
-1. [La prescription](prescription-Intro.md)
-1. [L’analyse pharmaceutique](analyse-Intro.md)
 1. [La dispensation](dispensation-Intro.md)
 1. [La concilation](conciliation-Intro.md)
 
-Ce domaine est pris en charge par le GT Pharmacie d’HL7 France au sein de l’association [Interop’Santé](https://www.interopsante.org/) après une première version développée au sein de la communauté SIPh. L’historique des versions et des travaux est détaillé dans la page de [suivi des travaux](suivitravaux.md).
+Ces domaines sont pris en charge par le GT Pharmacie d’HL7 France au sein de l’association [Interop’Santé](https://www.interopsante.org/) après une première version développée au sein de la communauté SIPh. L’historique des versions et des travaux est détaillé dans la page de [suivi des travaux](suivitravaux.md).
 
-Cet IG est en développement continu. Certaines sections n’ont pas encore été complètement développées dans cette version. Ces sections sont néanmoins identifiées pour référence.
-
-L’IG intègre également une partie indiquant [comment passer de flux PN13 à des ressources FHIR](transformation-PN13-vers-FHIR.md) et inversement.
+Cet IG a pour vocation à faire l’objet de travaux complémentaires d’alignement sur les profils européens et de traduction de flux PN13 en FHIR. Ces travaux déboucheront notamment sur deux IG à jour, un pour chaque domaine conciliation et dispensation.
 
 #### Dépendances
 
@@ -77,7 +73,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "MED",
   "title" : "Guide d'implémentation du médicament",
   "status" : "draft",
-  "date" : "2026-05-27T07:17:52+00:00",
+  "date" : "2026-05-27T09:20:31+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
