@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/FrRatioMedication | *Version*:0.1.0 |
-| Draft as of 2026-05-19 | *Computable Name*:FrRatioMedication |
+| Draft as of 2026-05-27 | *Computable Name*:FrRatioMedication |
 
  
 Ratio with numerator and denominator unit UCUM or EDQM encoded if code is used 
 
 **Utilisations:**
 
-* Utilise ce/t/te profil de type de données: [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md), [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md), [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md), [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)... Show 3 more, [FR Medication Virtual](StructureDefinition-fr-medication-virtual.md), [FR Medication](StructureDefinition-fr-medication.md) and [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+* Utilise ce/t/te profil de type de données: [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md), [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md), [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md) and [FR Medication](StructureDefinition-fr-medication.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/FrRatioMedication)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrRatioMedication.cs
   "name" : "FrRatioMedication",
   "title" : "Ratio with UCUM or EDQM codes if code is used",
   "status" : "draft",
-  "date" : "2026-05-19T09:10:48+00:00",
+  "date" : "2026-05-27T13:03:41+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

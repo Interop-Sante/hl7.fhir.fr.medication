@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationstatement-reconciliation-properties | *Version*:0.1.0 |
-| Draft as of 2026-05-19 | *Computable Name*:FRMedicationStatementReconciliationProperties |
+| Draft as of 2026-05-27 | *Computable Name*:FRMedicationStatementReconciliationProperties |
 
 Propiétés spécifiques de la ligne de médicament, ajoutée à la ressource MedicationStatement dans la Fiche de Conciliation des Traitements médicamenteux (FCT)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medicationstateme
   "version" : "0.1.0",
   "name" : "FRMedicationStatementReconciliationProperties",
   "status" : "draft",
-  "date" : "2026-05-19T09:10:48+00:00",
+  "date" : "2026-05-27T13:03:41+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

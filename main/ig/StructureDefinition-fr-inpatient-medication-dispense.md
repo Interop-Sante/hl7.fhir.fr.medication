@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medication-dispense | *Version*:0.1.0 |
-| Draft as of 2026-05-19 | *Computable Name*:FRInpatientMedicationDispense |
+| Draft as of 2026-05-27 | *Computable Name*:FRInpatientMedicationDispense |
 
  
 French medication dispense profile 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-medicat
   "name" : "FRInpatientMedicationDispense",
   "title" : "FR Inpatient MedicationDispense",
   "status" : "draft",
-  "date" : "2026-05-19T09:10:48+00:00",
+  "date" : "2026-05-27T13:03:41+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -127,7 +127,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-inpatient-medicat
       "path" : "MedicationDispense.authorizingPrescription",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-medicationrequest"]
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/eprescription/StructureDefinition/fr-inpatient-medicationrequest"]
       }]
     },
     {

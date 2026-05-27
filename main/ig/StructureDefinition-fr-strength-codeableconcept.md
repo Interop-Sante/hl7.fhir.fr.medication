@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-strength-codeableconcept | *Version*:0.1.0 |
-| Draft as of 2026-05-19 | *Computable Name*:FrStrengthCodeableConcept |
+| Draft as of 2026-05-27 | *Computable Name*:FrStrengthCodeableConcept |
 
 Additional non unit value for strength
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-strength-codeable
   "name" : "FrStrengthCodeableConcept",
   "title" : "Strength CodeableConcept",
   "status" : "draft",
-  "date" : "2026-05-19T09:10:48+00:00",
+  "date" : "2026-05-27T13:03:41+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

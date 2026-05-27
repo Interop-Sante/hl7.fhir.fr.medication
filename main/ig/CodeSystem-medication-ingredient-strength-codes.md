@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.org/fhir/CodeSystem/medication-ingredientstrength | *Version*:0.1.0 |
-| Draft as of 2026-05-19 | *Computable Name*:Medication_Ingredient_Strength_Codes |
+| Draft as of 2026-05-27 | *Computable Name*:Medication_Ingredient_Strength_Codes |
 | *Other Identifiers:*OID:2.16.840.1.113883.4.642.1.1427 | |
 
  This Code system is referenced in the content logical definition of the following value sets: 
@@ -40,7 +40,7 @@
   "name" : "Medication_Ingredient_Strength_Codes",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-19T09:10:48+00:00",
+  "date" : "2026-05-27T13:03:41+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

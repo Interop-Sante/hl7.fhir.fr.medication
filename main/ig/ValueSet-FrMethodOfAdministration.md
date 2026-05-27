@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://hl7.fr/ig/fhir/medication/ValueSet/FrMethodOfAdministration | *Version*:0.1.0 |
-| Draft as of 2026-05-19 | *Computable Name*:FrMethodOfAdministration |
+| Draft as of 2026-05-27 | *Computable Name*:FrMethodOfAdministration |
 
  
 Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.method** de la ressource **FRMedicationRequest**. 
 
  **References** 
 
-* [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
 ### Définition logique (CLD)
 
@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.metho
   "title" : "French Method Of Administration",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-19T09:10:48+00:00",
+  "date" : "2026-05-27T13:03:41+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

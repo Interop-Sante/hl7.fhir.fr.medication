@@ -21,7 +21,7 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
 | - | **Actor** |
 | * | [Practitioner/smart-Practitioner-7148xxxx](Practitioner/smart-Practitioner-7148xxxx) |
 
-**authorizingPrescription**: [MedicationRequest : status = active; intent = order; priority = routine; medication[x] = ->#medication-Presc-EFFERALGAN; authoredOn = 2021-07-28 14:52:40+0000; groupIdentifier = https://somehospital.fr/Prescrption-ID#Presc-14624](Bundle-Presc-EFFERALGAN.md#MedicationRequest_medicationrequest-Presc-EFFERALGAN)
+**authorizingPrescription**: [MedicationRequest/medicationrequest-Presc-EFFERALGAN](MedicationRequest/medicationrequest-Presc-EFFERALGAN)
 
 **type**: First Fill - Complete
 
