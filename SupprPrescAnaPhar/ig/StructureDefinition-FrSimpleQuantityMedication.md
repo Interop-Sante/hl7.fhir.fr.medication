@@ -16,7 +16,7 @@ simple quantity datatype requiring a UCUM or EDQM code or no code (only unti)
 
 **Utilisations:**
 
-* Utilise ce/t/te profil de type de données: [Range with UCUM or EDQM codes if code is used](StructureDefinition-FrRangeMedication.md), [Ratio with UCUM or EDQM codes if code is used](StructureDefinition-FrRatioMedication.md), [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md), [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md)... Show 2 more, [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md) and [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+* Utilise ce/t/te profil de type de données: [Range with UCUM or EDQM codes if code is used](StructureDefinition-FrRangeMedication.md), [Ratio with UCUM or EDQM codes if code is used](StructureDefinition-FrRatioMedication.md), [FR Current Medication MedicationStatement](StructureDefinition-fr-current-medication-medicationstatement.md), [FR Medication History MedicationStatement](StructureDefinition-fr-medication-history-medicationstatement.md) and [FR Medication Reconciliation MedicationStatement](StructureDefinition-fr-medication-reconciliation-statement.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/FrSimpleQuantityMedication)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSimpleQuantityMedi
   "name" : "FrSimpleQuantityMedication",
   "title" : "SimpleQuantity with UCUM or EDQM codes or code not used",
   "status" : "draft",
-  "date" : "2026-05-27T07:06:59+00:00",
+  "date" : "2026-05-27T07:17:52+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

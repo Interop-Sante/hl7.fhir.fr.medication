@@ -5,27 +5,6 @@
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship",
-      "title": "Additional relatedAction relationship",
-      "types": [
-        "code"
-      ]
-    },
-    {
-      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-when-values",
-      "title": "Additional values for when element",
-      "types": [
-        "code"
-      ]
-    },
-    {
-      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-basis-of-dose-component",
-      "title": "Medication component Basis of dose",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
       "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-drug-characteristic",
       "title": "Medication descriptive properties",
       "types": [
@@ -85,13 +64,6 @@
         "UsageContext",
         "Dosage",
         "Meta"
-      ]
-    },
-    {
-      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle",
-      "title": "Medication component which is the vehicle of the compound Medication",
-      "types": [
-        "boolean"
       ]
     },
     {
@@ -201,13 +173,6 @@
         "UsageContext",
         "Dosage",
         "Meta"
-      ]
-    },
-    {
-      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope",
-      "title": "Scope for note element in MedicationRequest",
-      "types": [
-        "code"
       ]
     },
     {
@@ -1007,13 +972,6 @@
       "types": [
         "CodeableConcept"
       ]
-    },
-    {
-      "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-uf-role",
-      "title": "UF Role",
-      "types": [
-        "code"
-      ]
     }
   ],
   "profiles": {
@@ -1039,48 +997,14 @@
         "title": "FR Inpatient MedicationDispense"
       }
     ],
-    "MedicationRequest": [
-      {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest",
-        "title": "FR Medication Request"
-      }
-    ],
-    "Task": [
-      {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result",
-        "title": "FR Pharmaceutical Analysis Result"
-      }
-    ],
     "Medication": [
       {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-virtual",
-        "title": "FR Medication Virtual"
-      }
-    ],
-    "Observation": [
-      {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-observation-for-prescription",
-        "title": "FR Observation For Prescription"
-      }
-    ],
-    "Bundle": [
-      {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-prescription-bundle-for-example",
-        "title": "FR Prescription Bundle For Example"
-      }
-    ],
-    "RequestGroup": [
-      {
-        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-requestgroup-for-prescription",
-        "title": "FR RequestGroup For Prescription"
+        "url": "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication",
+        "title": "FR Medication"
       }
     ]
   },
   "usage": {
-    "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction": [
-      "Bundle.entry.resource",
-      "MedicationRequest"
-    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -1098,12 +1022,6 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/event-basedOn": [
       "MedicationDispense"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/patient-birthPlace": [
-      "Bundle.entry.resource"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
@@ -1140,47 +1058,12 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability": [
-      "Bundle.entry.resource"
-    ],
-    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name": [
-      "Bundle.entry.resource.name"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-action-relationship": [
-      "Bundle.entry.resource.action.relatedAction",
-      "RequestGroup.action.relatedAction"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-additional-when-values": [
-      "MedicationRequest.dosageInstruction.timing.repeat"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-basis-of-dose-component": [
-      "Bundle.entry.resource.dosageInstruction.doseAndRate",
-      "MedicationRequest.dosageInstruction.doseAndRate"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-drug-characteristic": [
-      "Medication"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-is-vehicle": [
-      "Bundle.entry.resource.ingredient",
-      "Medication.ingredient"
-    ],
     "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medication-history-sources": [
       "Composition.section",
       "MedicationStatement"
     ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationrequest-note-scope": [
-      "Bundle.entry.resource.note",
-      "MedicationRequest.note"
-    ],
     "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-medicationstatement-reconciliation-properties": [
       "MedicationStatement"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-treatment-intent": [
-      "MedicationRequest"
-    ],
-    "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-uf-role": [
-      "Bundle.entry.resource.supportingInformation",
-      "MedicationRequest.supportingInformation"
     ]
   }
 }

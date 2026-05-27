@@ -40,7 +40,7 @@ Profil: [FR Inpatient MedicationDispense](StructureDefinition-fr-inpatient-medic
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Dose[x]** |
-| * | Ordered | 1 Comprimé (Détails : code EDQM Standard Terms15054000 = 'Tablet') |
+| * | Ordered | 1 Comprimé (Détails : code standardterms.edqm.eu15054000 = 'Tablet') |
 
 
 

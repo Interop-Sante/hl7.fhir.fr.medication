@@ -16,7 +16,7 @@ Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.route
 
  **References** 
 
-* [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
 ### Définition logique (CLD)
 
@@ -54,7 +54,7 @@ Le jeu de valeurs à utiliser pour coder l’élément **dosageInstruction.route
   "title" : "French Route of Administration",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-27T07:06:59+00:00",
+  "date" : "2026-05-27T07:17:52+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

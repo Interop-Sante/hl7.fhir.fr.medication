@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-histor
   "version" : "0.1.0",
   "name" : "FRMedicationHistorySources",
   "status" : "draft",
-  "date" : "2026-05-27T07:06:59+00:00",
+  "date" : "2026-05-27T07:17:52+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

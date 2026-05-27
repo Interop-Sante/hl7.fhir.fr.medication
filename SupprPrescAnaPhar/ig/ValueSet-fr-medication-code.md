@@ -16,8 +16,7 @@ Le jeu de valeurs à utiliser pour indiquer le médicament dans Medication.code.
 
  **References** 
 
-* [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
-* [FR Medication Request](StructureDefinition-fr-medicationrequest.md)
+Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
 ### Définition logique (CLD)
 
@@ -54,7 +53,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "value set Interop'Santé - Codes identifiant les médicaments",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-27T07:06:59+00:00",
+  "date" : "2026-05-27T07:17:52+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

@@ -16,7 +16,7 @@ code for the medicinal product substance
 
 **Utilisations:**
 
-* Utilise ce/t/te profil de type de données: [FR Medication Non Compound](StructureDefinition-fr-medication-noncompound.md)
+* Ce profil de type de données n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.fr.medication|current/StructureDefinition/fr-mp-substance)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-mp-substance.csv)
   "title" : "FR Meditinal Product Substance",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-05-27T07:06:59+00:00",
+  "date" : "2026-05-27T07:17:52+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
