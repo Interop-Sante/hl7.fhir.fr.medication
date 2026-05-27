@@ -1,0 +1,75 @@
+{
+  "resourceType" : "Task",
+  "id" : "Analyse-Intervention-NonAcceptee",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Task Analyse-Intervention-NonAcceptee</b></p><a name=\"Analyse-Intervention-NonAcceptee\"> </a><a name=\"hcAnalyse-Intervention-NonAcceptee\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html\">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260320115000</p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title=\"Codes :\">Non acceptée</span></p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-20 13:34:00+0100</p><p><b>performerType</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}\">Pharmacien</span></p><p><b>owner</b>: <a href=\"Practitioner/smart-Practitioner-27865023\">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :\">ligne de prescription analysée</span></td><td><a href=\"MedicationRequest-InLine-Analyse-Presc-BINOCRIT.html\">MedicationRequest : extension = Une seringue préremplie toutes les deux semaines; status = active; intent = order; priority = routine; medication[x] = BINOCRIT 20000UI INJ S0,5ML +A; authoredOn = 2026-03-20 11:50:00+0100; groupIdentifier = Presc-20260320115000; note = Prescription textuelle: BINOCRIT 20000 UI/0,5ml : Une seringue préremplie toutes les deux semaines</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">commentaire</span></p><p><b>value</b>: Dans la lettre de liaison de la médecine ainsi que dans les antécédents de la fiche d'hospitalisation, il est indiqué que le patient est traité avec du Binocrit 30 000 UI. hors il est prescrit depuis son hospitalisation en médecine du Binocrit 20 000UI. Pouvez-vous nous confirmer que le dosage est le bon?</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type d'intervention</span></p><p><b>value</b>: <span title=\"Codes :\">Adaptation posologique</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type de problème</span></p><p><b>value</b>: <span title=\"Codes :\">Sous-dosage</span></p></blockquote></div>"
+  },
+  "groupIdentifier" : {
+    "value" : "Presc-20260320115000"
+  },
+  "status" : "completed",
+  "businessStatus" : {
+    "coding" : [{
+      "code" : "2",
+      "display" : "Non acceptée"
+    }]
+  },
+  "intent" : "proposal",
+  "authoredOn" : "2026-03-20T13:34:00+01:00",
+  "performerType" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "code" : "21",
+      "display" : "Pharmacien"
+    }]
+  }],
+  "owner" : {
+    "reference" : "Practitioner/smart-Practitioner-27865023"
+  },
+  "input" : [{
+    "type" : {
+      "text" : "ligne de prescription analysée"
+    },
+    "valueReference" : {
+      "reference" : "MedicationRequest/InLine-Analyse-Presc-BINOCRIT"
+    }
+  }],
+  "output" : [{
+    "type" : {
+      "text" : "résultat de l'analyse"
+    },
+    "valueCode" : "INTERVENTION"
+  },
+  {
+    "type" : {
+      "text" : "commentaire"
+    },
+    "valueString" : "Dans la lettre de liaison de la médecine ainsi que dans les antécédents de la fiche d'hospitalisation, il est indiqué que le patient est traité avec du Binocrit 30 000 UI. hors il est prescrit depuis son hospitalisation en médecine du Binocrit 20 000UI. Pouvez-vous nous confirmer que le dosage est le bon?"
+  },
+  {
+    "type" : {
+      "text" : "type d'intervention"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "code" : "7",
+        "display" : "Adaptation posologique"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "text" : "type de problème"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "code" : "5",
+        "display" : "Sous-dosage"
+      }]
+    }
+  }]
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="Analyse-Intervention-Type1-DOSTINEX"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Task Analyse-Intervention-Type1-DOSTINEX</b></p><a name="Analyse-Intervention-Type1-DOSTINEX"> </a><a name="hcAnalyse-Intervention-Type1-DOSTINEX"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260320163100</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-20 17:26:00+0100</p><p><b>performerType</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}">Pharmacien</span></p><p><b>owner</b>: <a href="Practitioner/smart-Practitioner-27865023">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :">ligne de prescription analysée</span></td><td><a href="MedicationRequest-InLine-Analyse-Presc-DOSTINEX.html">MedicationRequest : extension = 1 comprimé par semaine; status = active; intent = order; priority = routine; medication[x] = DOSTINEX 0,5MG CPR; authoredOn = 2026-03-20 16:31:00+0100; groupIdentifier = Presc-20260320163100; note = Prescription textuelle: DOSTINEX 0,5MG: 1 comprimé par semaine</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">commentaire</span></p><p><b>value</b>: Traitement Paroxéline en ville non represcrit à l'hospitalisation</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type d'intervention</span></p><p><b>value</b>: <span title="Codes :">Ajout (prescription nouvelle)</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type de problème</span></p><p><b>value</b>: <span title="Codes :">Traitement non reçu</span></p></blockquote></div>
+  </text>
+  <groupIdentifier>
+    <value value="Presc-20260320163100"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <intent value="proposal"/>
+  <authoredOn value="2026-03-20T17:26:00+01:00"/>
+  <performerType>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"/>
+      <code value="21"/>
+      <display value="Pharmacien"/>
+    </coding>
+  </performerType>
+  <owner>
+    <reference value="Practitioner/smart-Practitioner-27865023"/>
+  </owner>
+  <input>
+    <type>
+      <text value="ligne de prescription analysée"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Analyse-Presc-DOSTINEX"/>
+    </valueReference>
+  </input>
+  <output>
+    <type>
+      <text value="résultat de l'analyse"/>
+    </type>
+    <valueCode value="INTERVENTION"/>
+  </output>
+  <output>
+    <type>
+      <text value="commentaire"/>
+    </type>
+    <valueString value="Traitement Paroxéline en ville non represcrit à l'hospitalisation"/>
+  </output>
+  <output>
+    <type>
+      <text value="type d'intervention"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="1"/>
+        <display value="Ajout (prescription nouvelle)"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <text value="type de problème"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="9"/>
+        <display value="Traitement non reçu"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+</Task>

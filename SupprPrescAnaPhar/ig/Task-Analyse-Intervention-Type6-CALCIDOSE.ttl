@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/Task/Analyse-Intervention-Type6-CALCIDOSE> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Analyse-Intervention-Type6-CALCIDOSE"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Task Analyse-Intervention-Type6-CALCIDOSE</b></p><a name=\"Analyse-Intervention-Type6-CALCIDOSE\"> </a><a name=\"hcAnalyse-Intervention-Type6-CALCIDOSE\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html\">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260320161000</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-20 17:24:00+0100</p><p><b>performerType</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}\">Pharmacien</span></p><p><b>owner</b>: <a href=\"Practitioner/smart-Practitioner-27865023\">Practitioner/smart-Practitioner-27865023</a></p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes :\">ligne de prescription analysée</span></p><p><b>value</b>: <a href=\"MedicationRequest-InLine-Analyse-Presc-LEVOTHYROX.html\">MedicationRequest : extension = 1 comprimé une heure avant le petit déjeuner; status = active; intent = order; priority = routine; medication[x] = LEVOTHYROX 38µG CPR; authoredOn = 2026-03-20 16:10:00+0100; groupIdentifier = Presc-20260320161000; note = Prescription textuelle: LEVOTHYROX 38µG: 1 comprimé une heure avant le petit déjeuner</a></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes :\">ligne de prescription analysée</span></p><p><b>value</b>: <a href=\"MedicationRequest-InLine-Analyse-Presc-CALCIDOSE.html\">MedicationRequest : extension = 1 sachet au petit déjeuner; status = active; intent = order; priority = routine; medication[x] = CALCIDOSE D3 500MG/800U SACH; authoredOn = 2026-03-20 16:10:00+0100; groupIdentifier = Presc-20260320161000; note = Prescription textuelle: CALCIDOSE D3 500MG/800UI: 1 sachet au petit déjeuner</a></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">commentaire</span></p><p><b>value</b>: Interaction avec le Lévothyrox. Pouvez-vous prescrire le Calcidose vit D3 à distance de la prise de Lévothyrox, soit le midi ou le soir?</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type d'intervention</span></p><p><b>value</b>: <span title=\"Codes :\">Optimisation modalités d'administration</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type de problème</span></p><p><b>value</b>: <span title=\"Codes :\">Interaction - Précaution d'emploi</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:groupIdentifier [
+     fhir:value [ fhir:v "Presc-20260320161000" ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:authoredOn [ fhir:v "2026-03-20T17:24:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performerType ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante>
+       ] ;
+       fhir:code [ fhir:v "21" ] ;
+       fhir:display [ fhir:v "Pharmacien" ]
+     ] )
+  ] ) ; # 
+  fhir:owner [
+     fhir:l <https://hl7.fr/ig/fhir/medication/Practitioner/smart-Practitioner-27865023> ;
+     fhir:reference [ fhir:v "Practitioner/smart-Practitioner-27865023" ]
+  ] ; # 
+  fhir:input ( [
+     fhir:type [
+       fhir:text [ fhir:v "ligne de prescription analysée" ]
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-Analyse-Presc-LEVOTHYROX> ;
+       fhir:reference [ fhir:v "MedicationRequest/InLine-Analyse-Presc-LEVOTHYROX" ]
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "ligne de prescription analysée" ]
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <https://hl7.fr/ig/fhir/medication/MedicationRequest/InLine-Analyse-Presc-CALCIDOSE> ;
+       fhir:reference [ fhir:v "MedicationRequest/InLine-Analyse-Presc-CALCIDOSE" ]
+     ]
+  ] ) ; # 
+  fhir:output ( [
+     fhir:type [
+       fhir:text [ fhir:v "résultat de l'analyse" ]
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "INTERVENTION"
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "commentaire" ]
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Interaction avec le Lévothyrox. Pouvez-vous prescrire le Calcidose vit D3 à distance de la prise de Lévothyrox, soit le midi ou le soir?"
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "type d'intervention" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:code [ fhir:v "6" ] ;
+         fhir:display [ fhir:v "Optimisation modalités d'administration" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "type de problème" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:code [ fhir:v "6.2" ] ;
+         fhir:display [ fhir:v "Interaction - Précaution d'emploi" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

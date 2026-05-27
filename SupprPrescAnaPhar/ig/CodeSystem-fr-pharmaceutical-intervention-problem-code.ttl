@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-problem-code> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-pharmaceutical-intervention-problem-code"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem fr-pharmaceutical-intervention-problem-code</b></p><a name=\"fr-pharmaceutical-intervention-problem-code\"> </a><a name=\"hcfr-pharmaceutical-intervention-problem-code\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This  code system <code>https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-problem-code</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Affichage</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"fr-pharmaceutical-intervention-problem-code-1\"> </a></td><td>Non conformité aux référentiels / Contre-indication</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"fr-pharmaceutical-intervention-problem-code-2\"> </a></td><td>Indication non traitée</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"fr-pharmaceutical-intervention-problem-code-3\"> </a></td><td>Sous-dosage</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"fr-pharmaceutical-intervention-problem-code-4\"> </a></td><td>Surdosage</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"fr-pharmaceutical-intervention-problem-code-5\"> </a></td><td>Médicament non indiqué</td></tr><tr><td style=\"white-space:nowrap\">6.1<a name=\"fr-pharmaceutical-intervention-problem-code-6.461\"> </a></td><td>Interaction - A prendre en compte</td></tr><tr><td style=\"white-space:nowrap\">6.2<a name=\"fr-pharmaceutical-intervention-problem-code-6.462\"> </a></td><td>Interaction - Précaution d'emploi</td></tr><tr><td style=\"white-space:nowrap\">6.3<a name=\"fr-pharmaceutical-intervention-problem-code-6.463\"> </a></td><td>Interaction - Association déconseillée</td></tr><tr><td style=\"white-space:nowrap\">6.4<a name=\"fr-pharmaceutical-intervention-problem-code-6.464\"> </a></td><td>Interaction - Association contre-indiquée</td></tr><tr><td style=\"white-space:nowrap\">6.5<a name=\"fr-pharmaceutical-intervention-problem-code-6.465\"> </a></td><td>Interaction - Publiée (=hors GTIAM de l'AFSSAPS)</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"fr-pharmaceutical-intervention-problem-code-7\"> </a></td><td>Effet indésirable</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"fr-pharmaceutical-intervention-problem-code-8\"> </a></td><td>Voie/administration inappropriée</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"fr-pharmaceutical-intervention-problem-code-9\"> </a></td><td>Traitement non reçu</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"fr-pharmaceutical-intervention-problem-code-10\"> </a></td><td>Monitorage à suivre</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-problem-code"^^xsd:anyURI ;
+     fhir:l <https://hl7.fr/ig/fhir/medication/CodeSystem/fr-pharmaceutical-intervention-problem-code>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrPharmaceuticalInterventionProblemCode"] ; # 
+  fhir:title [ fhir:v "code system d'Interop'Santé - Codes du problème identifié dans l'intervention pharmaceutique"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-05-27T07:06:59+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le système de codage pour le typage du problème identifié dans l'intervention pharmaceutique."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "14"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Non conformité aux référentiels / Contre-indication" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Indication non traitée" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Sous-dosage" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Surdosage" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "Médicament non indiqué" ]
+  ] [
+     fhir:code [ fhir:v "6.1" ] ;
+     fhir:display [ fhir:v "Interaction - A prendre en compte" ]
+  ] [
+     fhir:code [ fhir:v "6.2" ] ;
+     fhir:display [ fhir:v "Interaction - Précaution d'emploi" ]
+  ] [
+     fhir:code [ fhir:v "6.3" ] ;
+     fhir:display [ fhir:v "Interaction - Association déconseillée" ]
+  ] [
+     fhir:code [ fhir:v "6.4" ] ;
+     fhir:display [ fhir:v "Interaction - Association contre-indiquée" ]
+  ] [
+     fhir:code [ fhir:v "6.5" ] ;
+     fhir:display [ fhir:v "Interaction - Publiée (=hors GTIAM de l'AFSSAPS)" ]
+  ] [
+     fhir:code [ fhir:v "7" ] ;
+     fhir:display [ fhir:v "Effet indésirable" ]
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "Voie/administration inappropriée" ]
+  ] [
+     fhir:code [ fhir:v "9" ] ;
+     fhir:display [ fhir:v "Traitement non reçu" ]
+  ] [
+     fhir:code [ fhir:v "10" ] ;
+     fhir:display [ fhir:v "Monitorage à suivre" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="Analyse-Intervention-Type2-Arret-Paracetamol"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Task Analyse-Intervention-Type2-Arret-Paracetamol</b></p><a name="Analyse-Intervention-Type2-Arret-Paracetamol"> </a><a name="hcAnalyse-Intervention-Type2-Arret-Paracetamol"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-4130</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2025-07-23 11:06:00+0100</p><p><b>performerType</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}">Pharmacien</span></p><p><b>owner</b>: <a href="Practitioner/smart-Practitioner-27865023">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :">ligne de prescription analysée</span></td><td><a href="MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Souleur">MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Souleur</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">commentaire</span></p><p><b>value</b>: Indication non retrouvée dans le dossier du patient. Médicament prescrit en Si Besoin depuis son entrée et instaurée lors du dernier séjour en juillet, pas de prise par le patient depuis 15 jours. Peux-tu arrêter ce traitement?</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type d'intervention</span></p><p><b>value</b>: <span title="Codes :">Arrêt</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">type de problème</span></p><p><b>value</b>: <span title="Codes :">Médicament non indiqué</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Codes :">proposition</span></p><p><b>value</b>: <a href="MedicationRequest-InLine-Inter-Arret-Paracetamol-Si-Douleur.html">MedicationRequest : extension = Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules); status = active; intent = proposal; priority = routine; doNotPerform = true; medication[x] = PARACETAMOL 500 mg gélule; authoredOn = 2025-07-23 11:06:00+0100; groupIdentifier = Presc-4130; note = Prescription textuelle: PARACETAMOL 500 mg gélule : Si douleur -dose max/prise de 1000 mg (soit 2 gélules) -4000 mg maximum par jour (soit 8 gélules)</a></p></blockquote></div>
+  </text>
+  <groupIdentifier>
+    <value value="Presc-4130"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <intent value="proposal"/>
+  <authoredOn value="2025-07-23T11:06:00+01:00"/>
+  <performerType>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"/>
+      <code value="21"/>
+      <display value="Pharmacien"/>
+    </coding>
+  </performerType>
+  <owner>
+    <reference value="Practitioner/smart-Practitioner-27865023"/>
+  </owner>
+  <input>
+    <type>
+      <text value="ligne de prescription analysée"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Analyse-Presc-Paracetamol-Si-Souleur"/>
+    </valueReference>
+  </input>
+  <output>
+    <type>
+      <text value="résultat de l'analyse"/>
+    </type>
+    <valueCode value="INTERVENTION"/>
+  </output>
+  <output>
+    <type>
+      <text value="commentaire"/>
+    </type>
+    <valueString value="Indication non retrouvée dans le dossier du patient. Médicament prescrit en Si Besoin depuis son entrée et instaurée lors du dernier séjour en juillet, pas de prise par le patient depuis 15 jours. Peux-tu arrêter ce traitement?"/>
+  </output>
+  <output>
+    <type>
+      <text value="type d'intervention"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="2"/>
+        <display value="Arrêt"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <text value="type de problème"/>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <code value="5"/>
+        <display value="Médicament non indiqué"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <text value="proposition"/>
+    </type>
+    <valueReference>
+      <reference value="MedicationRequest/InLine-Inter-Arret-Paracetamol-Si-Douleur"/>
+    </valueReference>
+  </output>
+</Task>

@@ -1,0 +1,77 @@
+{
+  "resourceType" : "Task",
+  "id" : "Analyse-Intervention-Type3-ELIQUIS",
+  "meta" : {
+    "profile" : ["https://hl7.fr/ig/fhir/medication/StructureDefinition/fr-inpatient-pharmaceutical-analysis-result"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Task Analyse-Intervention-Type3-ELIQUIS</b></p><a name=\"Analyse-Intervention-Type3-ELIQUIS\"> </a><a name=\"hcAnalyse-Intervention-Type3-ELIQUIS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-inpatient-pharmaceutical-analysis-result.html\">FR Pharmaceutical Analysis Result</a></p></div><p><b>groupIdentifier</b>: Presc-20260322163400</p><p><b>status</b>: Completed</p><p><b>intent</b>: proposal</p><p><b>authoredOn</b>: 2026-03-22 18:07:00+0100</p><p><b>performerType</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 21}\">Pharmacien</span></p><p><b>owner</b>: <a href=\"Practitioner/smart-Practitioner-27865023\">Practitioner/smart-Practitioner-27865023</a></p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :\">ligne de prescription analysée</span></td><td><a href=\"MedicationRequest-InLine-Analyse-Presc-ELIQUIS-50.html\">MedicationRequest : extension = 2 comprimés par jour; status = active; intent = order; priority = routine; medication[x] = ELIQUIS 5MG CPR; authoredOn = 2026-03-22 16:34:00+0100; groupIdentifier = Presc-20260322163400; note = Prescription textuelle: ELIQUIS 5MG : 2 comprimés par jour​</a></td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">résultat de l'analyse</span></p><p><b>value</b>: INTERVENTION</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">commentaire</span></p><p><b>value</b>: Il est prescrit de l'apixaban à 5 mg x2 par jour. Ce médicament est indiqué dans la prévention des évènements thromboemboliques chez un patient présentant une ACFA. Or cette patiente a plus de 80 ans et pèse moins de 60 kg. La dose recommandée de ce médicament est de 2,5 mg deux fois par jour pour ce type de patient.</p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type d'intervention</span></p><p><b>value</b>: <span title=\"Codes :\">Adaptation posologique</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">type de problème</span></p><p><b>value</b>: <span title=\"Codes :\">Surdosage</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Codes :\">proposition</span></p><p><b>value</b>: <a href=\"MedicationRequest-InLine-Analyse-Presc-ELIQUIS-25.html\">MedicationRequest : extension = 2 comprimés par jour; status = active; intent = proposal; priority = routine; medication[x] = ELIQUIS 2,5MG CPR; authoredOn = 2026-03-22 18:07:00+0100; groupIdentifier = Presc-20260322163400; note = Prescription textuelle: ELIQUIS 2,5MG : 2 comprimés par jour​</a></p></blockquote></div>"
+  },
+  "groupIdentifier" : {
+    "value" : "Presc-20260322163400"
+  },
+  "status" : "completed",
+  "intent" : "proposal",
+  "authoredOn" : "2026-03-22T18:07:00+01:00",
+  "performerType" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "code" : "21",
+      "display" : "Pharmacien"
+    }]
+  }],
+  "owner" : {
+    "reference" : "Practitioner/smart-Practitioner-27865023"
+  },
+  "input" : [{
+    "type" : {
+      "text" : "ligne de prescription analysée"
+    },
+    "valueReference" : {
+      "reference" : "MedicationRequest/InLine-Analyse-Presc-ELIQUIS-50"
+    }
+  }],
+  "output" : [{
+    "type" : {
+      "text" : "résultat de l'analyse"
+    },
+    "valueCode" : "INTERVENTION"
+  },
+  {
+    "type" : {
+      "text" : "commentaire"
+    },
+    "valueString" : "Il est prescrit de l'apixaban à 5 mg x2 par jour. Ce médicament est indiqué dans la prévention des évènements thromboemboliques chez un patient présentant une ACFA. Or cette patiente a plus de 80 ans et pèse moins de 60 kg. La dose recommandée de ce médicament est de 2,5 mg deux fois par jour pour ce type de patient."
+  },
+  {
+    "type" : {
+      "text" : "type d'intervention"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "code" : "7",
+        "display" : "Adaptation posologique"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "text" : "type de problème"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "code" : "4",
+        "display" : "Surdosage"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "text" : "proposition"
+    },
+    "valueReference" : {
+      "reference" : "MedicationRequest/InLine-Analyse-Presc-ELIQUIS-25"
+    }
+  }]
+}
